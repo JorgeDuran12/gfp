@@ -1,0 +1,1 @@
+se realizo la  estruturacion basica de todas las vistas
