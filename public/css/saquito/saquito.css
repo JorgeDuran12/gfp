@@ -1,0 +1,28 @@
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px auto;
+    width: 50%;
+    height: 150%;
+    background-color: rgb(211, 209, 205);
+}
+
+.descripcion {
+    width: 600px;
+    color: black;
+}
+
+.cont-form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+input {
+    color: black;
+    width: 80%;
+}

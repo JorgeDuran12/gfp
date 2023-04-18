@@ -1,24 +1,25 @@
-<div id="sidebar">
-      <div class="toggle-btn">
-        <span>&#9776</span>
-      </div>
-      <ul>
-        <li>
-          <img src="img/logo.jpg" alt="Logo Fazt" class="logo">
-        </li>
-        <li>Home</li>
-        <li>About</li>
-        <li>Contact</li>
-      </ul>
-    </div>
-    <script>
-        const btnToggle = document.querySelector('.toggle-btn');
 
-btnToggle.addEventListener('click', function () {
-  console.log('clik')
-  document.getElementById('sidebar').classList.toggle('active');
-  
-  console.log(document.getElementById('sidebar'))
-});
+<div class="navbar__container">
+  <a href="<?= base_url('principal')?>">
+    <img 
+    src="<?= base_url('img/gfp.png')?>" 
+    alt="Logo Fazt" 
+    class="navbar__logo"
+    />
+  </a>
 
-    </script>
+  <ul>
+    <li><a href="#"><img src="<?= base_url("icons/home.png")?>"/></a></li>
+    <li><a href="#"><img src="<?= base_url("icons/pay.png")?>"/></a></li>
+    <li><a href="#"><img src="<?= base_url("icons/ambulance.png")?>"/></a></li>
+    <li><a href="#"><img src="<?= base_url("icons/pay.png")?>"/></a></li>
+    <li><a href="#"><img src="<?= base_url("icons/pay.png")?>"/></a></li>
+    <li><a href="#"><img src="<?= base_url("icons/pay.png")?>"/></a></li>
+    <li><a href="#"><img src="<?= base_url("icons/pay.png")?>"/></a></li>
+  </ul>
+
+</div>
+
+
+
+

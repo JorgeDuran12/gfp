@@ -1,0 +1,33 @@
+.principal__container {
+    margin-top: 50px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.principal__cont-1 {
+    display: flex;
+    width: auto;
+}
+
+.principal__cont-2 {
+    display: flex;
+    width: auto;
+}
+
+.div__cont {
+    margin: 30px;
+    width: 400px;
+    height: 200px;
+    background: rgb(255, 255, 255);
+    -webkit-box-shadow: 10px 10px 10px -8px rgba(191, 191, 191, 1);
+    -moz-box-shadow: 10px 10px 10px -8px rgba(191, 191, 191, 1);
+    box-shadow: 10px 10px 10px -8px rgba(191, 191, 191, 1);
+}
+
+.div__cont:nth-child(2) {
+    background: rgb(58, 180, 228);
+}
