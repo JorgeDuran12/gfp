@@ -11,8 +11,12 @@ class Saquito extends BaseController
         $vistaPrincipal = 
         view('componentes/head', $datos)
         .view('componentes/navbar')
-        .view('agenda/pago')
-        .view('fondos/saquito');
+        .view('componentes/header')
+
+        // .view('agenda/pago')
+        .view('fondos/saquito')
+        .view('componentes/footer');
+
         
         return $vistaPrincipal;
     }

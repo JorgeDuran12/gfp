@@ -1,18 +1,6 @@
-primary: #1890ff;
-primary-hover: #0280b3;
-// Text
-text-light: #fff;
-// Background
-background-dark: #051c58;
-background-grey: #f0f3f4;
-background-dark-web: #16212b;
-// Border
-border-grey: #808080;
-// Status
-success: #84b84c;
-error: #9f3a38;
-// Social Color
-youtube: #cd201f;
-twitter: #1da1f2;
-facebook: #3b5998;
-linkedin: #0077b5;
+colorsnavbar:rgb(20, 98, 172);
+colorsDiv:rgb(58, 180, 228);
+colorsButton:;
+-webkit-box-shadow: 10px 10px 10px -8px rgba(191, 191, 191, 1);
+-moz-box-shadow: 10px 10px 10px -8px rgba(191, 191, 191, 1);
+box-shadow: 10px 10px 10px -8px rgba(191, 191, 191, 1);

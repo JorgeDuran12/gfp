@@ -10,10 +10,14 @@ class Login extends BaseController
 
         $vistaPrincipal = 
         view('componentes/head', $datos)
-        .view('componentes/navbar')
+        // .view('componentes/navbar')
         .view('login/login')
         .view('componentes/footer');
         
         return $vistaPrincipal;
     }
+
+    public function registro(){
+        return view('login/registro-cuenta');
+        }    
 }

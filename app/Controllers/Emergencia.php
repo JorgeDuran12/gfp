@@ -11,6 +11,8 @@ class Emergencia extends BaseController
         $vistaPrincipal = 
         view('componentes/head', $datos)
         .view('componentes/navbar')
+        .view('componentes/header')
+
         .view('fondos/emergencia')
         .view('componentes/footer');
         

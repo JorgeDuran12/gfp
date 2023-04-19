@@ -1,10 +1,11 @@
 <body>
-<link rel="stylesheet" href="<?= base_url("/css/registro/movimientos.css")?>">
+<link rel="stylesheet" href="<?= base_url("/css/registro/movimiento.css")?>">
 
 <div class="titulo"> 
-  <h1>Movimientos</h1>
-</div ><br><br><br><br><br><br>
-<div class="registro">
+  <h2>Movimientos</h2>
+</div ><br><br>
+<div  >
+<form action="" class="registro">
 <div class="tm">
       <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
         <option selected class="tl">Tipo De Movimiento</option>
@@ -24,7 +25,7 @@
  </div>  
 <br>
 Valor:
-<div class="tm"">
+<div class="tm">
  <input type="number" class="tl aria-label="Dollar amount (with dot and two decimal places)"  >
  
 </div>
@@ -40,12 +41,21 @@ Valor:
 </div>
 <br>
 
-<div class="btn-group" role="group" aria-label="Basic checkbox toggle button group"></div>
+<div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
   <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
-  <label class="btn btn-outline-primary" for="btncheck3">Registrar Movimiento </label>
+  <label class="btn btn-outline-success" for="btncheck3">Registrar Movimiento </label>
+</div>
+<br>
+<div class="rt">
+  <button class="btn btn-outline-warning">
+ <img src="<?= base_url("icons/file-earmark-spreadsheet-fill.svg") ?>" > 
+    Reporte
+  </button>
+    
+</div> 
+</form>
 </div>
 
-</div>
 </div>
 </div>
 </body>

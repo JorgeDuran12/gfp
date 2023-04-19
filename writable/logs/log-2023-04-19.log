@@ -1,0 +1,250 @@
+CRITICAL - 2023-04-19 14:03:35 --> syntax error, unexpected identifier "gggg", expecting "," or ";"
+in APPPATH\Views\registro\movimientos.php on line 50.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('registro/movimientos', [], true)
+ 3 APPPATH\Controllers\Registro.php(15): view('registro/movimientos')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Registro->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registro))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-19 14:55:15 --> syntax error, unexpected token "."
+in APPPATH\Controllers\Saquito.php on line 18.
+ 1 SYSTEMPATH\Router\Router.php(507): CodeIgniter\Router\AutoRouter->getRoute('Saquito')
+ 2 SYSTEMPATH\Router\Router.php(206): CodeIgniter\Router\Router->autoRoute('Saquito')
+ 3 SYSTEMPATH\CodeIgniter.php(815): CodeIgniter\Router\Router->handle('Saquito')
+ 4 SYSTEMPATH\CodeIgniter.php(449): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-19 14:56:28 --> syntax error, unexpected token "."
+in APPPATH\Controllers\Saquito.php on line 18.
+ 1 SYSTEMPATH\Router\Router.php(507): CodeIgniter\Router\AutoRouter->getRoute('Saquito')
+ 2 SYSTEMPATH\Router\Router.php(206): CodeIgniter\Router\Router->autoRoute('Saquito')
+ 3 SYSTEMPATH\CodeIgniter.php(815): CodeIgniter\Router\Router->handle('Saquito')
+ 4 SYSTEMPATH\CodeIgniter.php(449): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-19 14:56:38 --> syntax error, unexpected token "."
+in APPPATH\Controllers\Saquito.php on line 18.
+ 1 SYSTEMPATH\Router\Router.php(507): CodeIgniter\Router\AutoRouter->getRoute('Saquito')
+ 2 SYSTEMPATH\Router\Router.php(206): CodeIgniter\Router\Router->autoRoute('Saquito')
+ 3 SYSTEMPATH\CodeIgniter.php(815): CodeIgniter\Router\Router->handle('Saquito')
+ 4 SYSTEMPATH\CodeIgniter.php(449): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-19 16:40:49 --> Undefined variable $vistaPrincipal
+in APPPATH\Controllers\Login.php on line 14.
+ 1 APPPATH\Controllers\Login.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $vistaPrincipal', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Login.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Login->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-19 16:40:50 --> Undefined variable $vistaPrincipal
+in APPPATH\Controllers\Login.php on line 14.
+ 1 APPPATH\Controllers\Login.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $vistaPrincipal', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Login.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Login->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-19 16:40:50 --> Undefined variable $vistaPrincipal
+in APPPATH\Controllers\Login.php on line 14.
+ 1 APPPATH\Controllers\Login.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $vistaPrincipal', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Login.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Login->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-19 16:40:50 --> Undefined variable $vistaPrincipal
+in APPPATH\Controllers\Login.php on line 14.
+ 1 APPPATH\Controllers\Login.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $vistaPrincipal', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Login.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Login->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-19 16:40:53 --> Undefined variable $vistaPrincipal
+in APPPATH\Controllers\Login.php on line 14.
+ 1 APPPATH\Controllers\Login.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $vistaPrincipal', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Login.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Login->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-19 16:40:53 --> Undefined variable $vistaPrincipal
+in APPPATH\Controllers\Login.php on line 14.
+ 1 APPPATH\Controllers\Login.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $vistaPrincipal', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Login.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Login->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-19 16:40:53 --> Undefined variable $vistaPrincipal
+in APPPATH\Controllers\Login.php on line 14.
+ 1 APPPATH\Controllers\Login.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $vistaPrincipal', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Login.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Login->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-19 16:40:56 --> Undefined variable $vistaPrincipal
+in APPPATH\Controllers\Login.php on line 14.
+ 1 APPPATH\Controllers\Login.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $vistaPrincipal', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Login.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Login->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-19 16:40:56 --> Undefined variable $vistaPrincipal
+in APPPATH\Controllers\Login.php on line 14.
+ 1 APPPATH\Controllers\Login.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $vistaPrincipal', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Login.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Login->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-19 16:40:56 --> Undefined variable $vistaPrincipal
+in APPPATH\Controllers\Login.php on line 14.
+ 1 APPPATH\Controllers\Login.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $vistaPrincipal', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Login.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Login->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-19 16:40:56 --> Undefined variable $vistaPrincipal
+in APPPATH\Controllers\Login.php on line 14.
+ 1 APPPATH\Controllers\Login.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $vistaPrincipal', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Login.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Login->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-19 16:40:56 --> Undefined variable $vistaPrincipal
+in APPPATH\Controllers\Login.php on line 14.
+ 1 APPPATH\Controllers\Login.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $vistaPrincipal', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Login.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Login->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-19 16:40:57 --> Undefined variable $vistaPrincipal
+in APPPATH\Controllers\Login.php on line 14.
+ 1 APPPATH\Controllers\Login.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $vistaPrincipal', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Login.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Login->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-19 16:41:02 --> Undefined variable $vistaPrincipal
+in APPPATH\Controllers\Login.php on line 14.
+ 1 APPPATH\Controllers\Login.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $vistaPrincipal', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Login.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Login->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-19 16:41:02 --> Undefined variable $vistaPrincipal
+in APPPATH\Controllers\Login.php on line 14.
+ 1 APPPATH\Controllers\Login.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $vistaPrincipal', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Login.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Login->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-19 16:41:02 --> Undefined variable $vistaPrincipal
+in APPPATH\Controllers\Login.php on line 14.
+ 1 APPPATH\Controllers\Login.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $vistaPrincipal', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Login.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Login->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-19 16:41:02 --> Undefined variable $vistaPrincipal
+in APPPATH\Controllers\Login.php on line 14.
+ 1 APPPATH\Controllers\Login.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $vistaPrincipal', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Login.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Login->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-19 16:41:02 --> Undefined variable $vistaPrincipal
+in APPPATH\Controllers\Login.php on line 14.
+ 1 APPPATH\Controllers\Login.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $vistaPrincipal', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Login.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Login->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-19 16:41:03 --> Undefined variable $vistaPrincipal
+in APPPATH\Controllers\Login.php on line 14.
+ 1 APPPATH\Controllers\Login.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $vistaPrincipal', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Login.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Login->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-19 16:41:03 --> Undefined variable $vistaPrincipal
+in APPPATH\Controllers\Login.php on line 14.
+ 1 APPPATH\Controllers\Login.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $vistaPrincipal', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Login.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Login->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-19 16:41:03 --> Undefined variable $vistaPrincipal
+in APPPATH\Controllers\Login.php on line 14.
+ 1 APPPATH\Controllers\Login.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $vistaPrincipal', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Login.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Login->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-19 16:41:03 --> Undefined variable $vistaPrincipal
+in APPPATH\Controllers\Login.php on line 14.
+ 1 APPPATH\Controllers\Login.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $vistaPrincipal', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Login.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Login->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-19 16:41:03 --> Undefined variable $vistaPrincipal
+in APPPATH\Controllers\Login.php on line 14.
+ 1 APPPATH\Controllers\Login.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $vistaPrincipal', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Login.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Login->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-19 16:41:04 --> Undefined variable $vistaPrincipal
+in APPPATH\Controllers\Login.php on line 14.
+ 1 APPPATH\Controllers\Login.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $vistaPrincipal', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Login.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Login->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-19 16:41:04 --> Undefined variable $vistaPrincipal
+in APPPATH\Controllers\Login.php on line 14.
+ 1 APPPATH\Controllers\Login.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $vistaPrincipal', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Login.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Login->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-19 16:41:04 --> Undefined variable $vistaPrincipal
+in APPPATH\Controllers\Login.php on line 14.
+ 1 APPPATH\Controllers\Login.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $vistaPrincipal', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Login.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Login->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-19 16:41:04 --> Undefined variable $vistaPrincipal
+in APPPATH\Controllers\Login.php on line 14.
+ 1 APPPATH\Controllers\Login.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $vistaPrincipal', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Login.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Login->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-19 16:41:04 --> Undefined variable $vistaPrincipal
+in APPPATH\Controllers\Login.php on line 14.
+ 1 APPPATH\Controllers\Login.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $vistaPrincipal', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Login.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Login->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-19 16:41:04 --> Undefined variable $vistaPrincipal
+in APPPATH\Controllers\Login.php on line 14.
+ 1 APPPATH\Controllers\Login.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $vistaPrincipal', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Login.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Login->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-19 16:41:05 --> Undefined variable $vistaPrincipal
+in APPPATH\Controllers\Login.php on line 14.
+ 1 APPPATH\Controllers\Login.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $vistaPrincipal', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Login.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Login->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-19 16:41:05 --> Undefined variable $vistaPrincipal
+in APPPATH\Controllers\Login.php on line 14.
+ 1 APPPATH\Controllers\Login.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $vistaPrincipal', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Login.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Login->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

@@ -11,6 +11,8 @@ class Agenda extends BaseController
         $vistaPrincipal = 
         view('componentes/head', $datos)
         .view('componentes/navbar')
+        .view('componentes/header')
+
         .view('agenda/pago')
         .view('componentes/footer');
         
