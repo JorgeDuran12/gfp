@@ -10,6 +10,16 @@
             <h2>Gestor de Finanzas Personales</h2>
     </div>
     <div class="header__btns__container">
-        <img src="<?= base_url('icons/salida.png')?>" alt="">
+    <p class="icon-image"><a href="<?= base_url('/login')?>"><img src="<?= base_url("icons/salida.png")?>"/></a></p>
     </div>
 </header>
+
+<!-- vercion santiago-->
+<!-- <div class="header__btns__container">
+    <p class="icon-image"><a href="<?= base_url('/login')?>"><img src="<?= base_url("icons/salida.png")?>"/></a></p>
+    </div> -->
+
+<!-- vercion original carlos -->
+   <!-- <div class="header__btns__container">
+        <img src="<?= base_url('icons/salida.png')?>" alt="">
+    </div> -->

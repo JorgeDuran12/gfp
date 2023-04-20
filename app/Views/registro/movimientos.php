@@ -1,5 +1,5 @@
 <body>
-<link rel="stylesheet" href="<?= base_url("/css/registro/movimiento.css")?>">
+<link rel="stylesheet" href="<?= base_url("/css/registro/movimientoss.css")?>">
 
 <div class="titulo"> 
   <h2>Movimientos</h2>
@@ -24,10 +24,10 @@
       </select>
  </div>  
 <br>
-Valor:
-<div class="tm">
- <input type="number" class="tl aria-label="Dollar amount (with dot and two decimal places)"  >
- 
+
+<div class="tx">
+  <input  type="number" class="form-control" id="floatingInput" placeholder="Valor ">
+  <label for="floatingInput"></label>
 </div>
 <br>
 <div class="dc">
@@ -35,19 +35,18 @@ Valor:
    
 </div>
 <br>
-<div class="tm">
+<div class="">
   <input type="date" class="form-control" id="floatingInput" placeholder="name@example.com">
   <label for="floatingInput"></label>
 </div>
-<br>
 
-<div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
-  <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
-  <label class="btn btn-outline-success" for="btncheck3">Registrar Movimiento </label>
+<div class="botondeanti">
+  <button type="button" class="btn btn-success"> <img  class="image" src="<?= base_url("img/Guardar.png") ?> " title="Guardar" >
+    </button>
 </div>
 <br>
 <div class="rt">
-  <button class="btn btn-outline-warning">
+  <button class="btn btn-secondary">
  <img src="<?= base_url("icons/file-earmark-spreadsheet-fill.svg") ?>" > 
     Reporte
   </button>

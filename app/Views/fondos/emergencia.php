@@ -1,5 +1,5 @@
 <body>
-    <link rel="stylesheet" href="<?= base_url("/css/123/123456.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/css/123/12345.css")?>">
 
     <div class="titulo"> 
       <h3>Fondo de emergencia</h3>
@@ -14,32 +14,33 @@
 
 
     <div class="registro">
-      <div>
+      <div class="e a">
          <h4>Asignar cuota </h4>
       </div>
       <br>
-      Valor:
-      <div class="tm">
-        <input type="number" class="tl aria-label="Dollar amount (with dot and two decimal places)"  >
-        
+    
+      <div class="e b">
+      <label > Ingresa un valor</label><br><br>
+        <input type="number" class="tl aria-label="Dollar amount (with dot and two decimal places)"  ><br><br>
+              <div class="botondeanti">
+                  <button type="button" class="btn btn-outline-success">Guardar</button>
+                  <button type="button" class="btn btn-outline-danger">Eliminar</button>
+                  <button type="button" class="btn btn-outline-warning">Editar</button>
+             </div>
       </div>
       <br>
       
       
       
-      <div class="botondeanti">
-        <button type="button" class="btn btn-outline-success">Guardar</button>
-        <button type="button" class="btn btn-outline-danger">Eliminar</button>
-        <button type="button" class="btn btn-outline-warning">Editar</button>
-      </div>
+    
       
-      <div>
+      <div class="e c">
         <label>Presupuesto actual:</label>
 
       </div>
     </div>
+    </body>
     <!-- <--------div of footer, nav-bar and hear -->
     </div>
     </div>
     </div>
-</body>

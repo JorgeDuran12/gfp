@@ -17,7 +17,9 @@ class Login extends BaseController
         return $vistaPrincipal;
     }
 
-    public function registro(){
-        return view('login/registro-cuenta');
-        }    
+    public function registro()
+    {
+
+        return view("login/registro-cuenta");
+    }   
 }

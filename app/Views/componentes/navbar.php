@@ -10,7 +10,7 @@
   <div class="navbar__separator"></div>
   <ul>
     <div class="icon link__last">
-      <li class="icon-image"><a href="<?= base_url('/')?>"><img src="<?= base_url("icons/inicio.png")?>"/></a></li>
+      <li class="icon-image"><a href="<?= base_url('/principal')?>"><img src="<?= base_url("icons/inicio.png")?>"/></a></li>
       <span class="icon-name">Inicio</span>
     </div>
     <div class="navbar__separator"></div>

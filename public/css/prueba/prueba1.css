@@ -1,0 +1,25 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    background: url('editar.png') no-repeat center center fixed;
+    background-size: cover;
+    opacity: 0.8;
+    padding: 20px;
+}
+
+header,
+footer {
+    background-color: #f2f2f2;
+    padding: 10px;
+    text-align: center;
+}
+
+main {
+    padding: 10px;
+    text-align: center;
+}
+
+body {
+    color: black;
+}

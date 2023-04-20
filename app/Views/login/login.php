@@ -52,7 +52,7 @@
 
             <div class="sign-up">
                 No tienes cuenta ?
-                <a href="#">Registrate</a>
+                <a href="<?= base_url('/registro')?>">Registrate</a>
             </div>
         </form>
     </div>

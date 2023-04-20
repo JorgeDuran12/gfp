@@ -1,9 +1,19 @@
-.ss {
-    color: rgb(0, 0, 0);
+.tm {
+    width: 500px;
+    text-align: center;
 }
 
-* {
+.tl {
+    color: rgb(0, 0, 0);
     text-align: center;
+}
+
+.dc {
+    width: 500px;
+    height: 100px;
+    color: black;
+    text-align: center;
+    border-radius: 10px;
 }
 
 .registro {
@@ -19,4 +29,23 @@
     -webkit-box-shadow: 10px 10px 10px -8px rgba(191, 191, 191, 1);
     -moz-box-shadow: 10px 10px 10px -8px rgba(191, 191, 191, 1);
     box-shadow: 10px 10px 10px -8px rgba(191, 191, 191, 1);
+}
+
+.titulo {
+    text-align: center;
+}
+
+.rt {
+    text-align: center;
+}
+
+.tx {
+    text-align: center;
+    width: 120px;
+}
+
+.image {
+    width: auto;
+    height: 25px;
+    border-radius: 7px;
 }
