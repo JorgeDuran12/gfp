@@ -11,15 +11,23 @@
 
 <body>
 
-<div class="titulo"> 
-  <h1>Meta</h1>
-</div ><br><br>
+<br><br>
+
 <div class="input-group mb-3 ">
             <span class="input-group-text" id="inputGroup-sizing-default"><img src="<?= base_url("icons/question-circle-fill.svg")?>"    title="En esta opcion debera digitalizar el dia del mes donde el aplicativo debera descontar de la disponibilidad de la cuota para el saquito">  &nbsp Fecha inicial</span>
             <input type="date" class="ss" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
      </div>
 <div>
 <form action="" class="registro">
+
+<div class="titulo"> 
+  <h1>Meta</h1>
+</div >
+<div class="dc">
+  <textarea class="dc" placeholder="Descripcion" id="floatingTextarea"></textarea>
+   
+</div>
+<br>
 <div class="tm">
 <input  type="date" class="form-control" id="floatingInput" placeholder="fecha inicial: ">
   <label for="floatingInput"></label>
@@ -39,11 +47,8 @@
   <label for="floatingInput"></label>
 </div>
 <br>
-<div class="dc">
-  <textarea class="dc" placeholder="Descripcion" id="floatingTextarea"></textarea>
-   
-</div>
-<br><br> <br> <br> <br>
+
+
 
 
 
