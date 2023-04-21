@@ -19,13 +19,18 @@
 }
 
 .div__cont {
+    display: flex;
     margin: 30px;
     width: 400px;
-    height: 200px;
+    height: auto;
     background: rgb(255, 255, 255);
     -webkit-box-shadow: 10px 10px 10px -8px rgba(191, 191, 191, 1);
     -moz-box-shadow: 10px 10px 10px -8px rgba(191, 191, 191, 1);
     box-shadow: 10px 10px 10px -8px rgba(191, 191, 191, 1);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
 }
 
 .div__cont:nth-child(2) {

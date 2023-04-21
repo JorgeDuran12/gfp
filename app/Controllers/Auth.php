@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-class Login extends BaseController
+class Auth extends BaseController
 {
     public function index()
     {
@@ -11,15 +11,20 @@ class Login extends BaseController
         $vistaPrincipal = 
         view('componentes/head', $datos)
         // .view('componentes/navbar')
-        .view('login/login')
+        .view('usuarios/login')
         .view('componentes/footer');
         
         return $vistaPrincipal;
     }
 
     public function registro()
-    {
+    { 
+        $datos = ['tituloPag' => 'Nuevo Usuario'];
 
-        return view("login/registro-cuenta");
-    }   
+        $vistaRegistro =  
+        view("usuarios/registro_cuenta",$datos)
+        .view("componentes/footer")
+        .view('componentes/head');
+        return $vistaRegistro;
+    } 
 }

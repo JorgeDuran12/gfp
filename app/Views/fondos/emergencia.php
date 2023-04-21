@@ -1,5 +1,5 @@
 <body>
-    <link rel="stylesheet" href="<?= base_url("/css/123/12345.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/css/123/123456.css")?>">
 
     <div class="titulo"> 
       <h3>Fondo de emergencia</h3>
@@ -17,16 +17,21 @@
       <div class="e a">
          <h4>Asignar cuota </h4>
       </div>
-      <br>
+     
     
       <div class="e b">
       <label > Ingresa un valor</label><br><br>
         <input type="number" class="tl aria-label="Dollar amount (with dot and two decimal places)"  ><br><br>
-              <div class="botondeanti">
-                  <button type="button" class="btn btn-outline-success">Guardar</button>
-                  <button type="button" class="btn btn-outline-danger">Eliminar</button>
-                  <button type="button" class="btn btn-outline-warning">Editar</button>
-             </div>
+        <div class="botondeanti">
+               <button type="button" class="btn btn-success"> <img         class="image" src="<?= base_url("img/Guardar.png") ?> " title="Guardar" >
+              </button>
+                <button type="button" class="btn btn-danger"> <img  class="image" src="<?= base_url("img/Eliminar.png") ?> " title="Eliminar" >
+                </button>
+                <button type="button" class="btn btn-warning">
+                <img  class="image" src="<?= base_url("img/editar.png") ?> " title="Editar" >
+    
+  </button>
+</div>
       </div>
       <br>
       

@@ -14,7 +14,8 @@
     width: 700px;
     height: 600px;
     flex-direction: column;
-    border: 1px solid rgb(58, 75, 228);
+    background-color: rgb(58, 180, 228);
+    ;
     border-radius: 20px;
     -webkit-box-shadow: 10px 10px 10px -8px rgba(191, 191, 191, 1);
     -moz-box-shadow: 10px 10px 10px -8px rgba(191, 191, 191, 1);
@@ -38,4 +39,10 @@
     bottom: -160px;
     right: 200px;
     font-size: 20px;
+}
+
+.image {
+    width: auto;
+    height: 25px;
+    border-radius: 7px;
 }

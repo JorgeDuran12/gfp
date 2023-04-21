@@ -1,5 +1,5 @@
 <body>
-<link rel="stylesheet" href="<?= base_url("/css/registro/movimientoss.css")?>">
+<link rel="stylesheet" href="<?= base_url("/css/registro/movimientos.css")?>">
 
 <div class="titulo"> 
   <h2>Movimientos</h2>

@@ -8,7 +8,7 @@
     align-items: center;
     margin: 20px auto;
     width: 700px;
-    height: 620px;
+    height: 680px;
     flex-direction: column;
     background-color: rgb(58, 180, 228);
     border-radius: 20px;
@@ -18,16 +18,16 @@
 }
 
 .dp {
-    width: 550px;
-    height: 100px;
+    width: 400px;
+    height: 90px;
     color: black;
     text-align: center;
     border-radius: 10px;
 }
 
 .sd {
-    width: 300px;
-    height: 70px;
+    width: 400px;
+    height: 90px;
     color: black;
     text-align: center;
     border-radius: 10px;
@@ -43,4 +43,8 @@
     width: auto;
     height: 25px;
     border-radius: 7px;
+}
+
+.tm {
+    width: 200px;
 }

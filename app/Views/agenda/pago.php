@@ -11,14 +11,17 @@
        <div class="titulo"> Mi Recordatorio De Pago Mes a Mes</div>
   <textarea class="dp" placeholder="Descripcion" id="floatingTextarea"></textarea>
 </div>
+ 
+<div class="tm">
+         <input type="date" class="form-control" id="floatingInput"            placeholder="name@example.com">
+         <label for="floatingInput"></label>
+    </div>
+
 <div class="tm">
          <input type="time" class="form-control" id="floatingInput"            placeholder="name@example.com">
          <label for="floatingInput"></label>
     </div>
-    <div class="tm">
-         <input type="date" class="form-control" id="floatingInput"            placeholder="name@example.com">
-         <label for="floatingInput"></label>
-    </div>
+    
 
     <div class="botondeanti">
   <button type="button" class="btn btn-success"> <img  class="image" src="<?= base_url("img/Guardar.png") ?> " title="Editar" >

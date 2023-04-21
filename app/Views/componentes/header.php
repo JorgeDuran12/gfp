@@ -14,12 +14,12 @@
     </div>
 </header>
 
-<!-- vercion santiago-->
+<!-- version santiago-->
 <!-- <div class="header__btns__container">
     <p class="icon-image"><a href="<?= base_url('/login')?>"><img src="<?= base_url("icons/salida.png")?>"/></a></p>
     </div> -->
 
-<!-- vercion original carlos -->
+<!-- version original carlos -->
    <!-- <div class="header__btns__container">
         <img src="<?= base_url('icons/salida.png')?>" alt="">
     </div> -->
