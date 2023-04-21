@@ -14,7 +14,7 @@ class Saquito extends BaseController
         .view('componentes/header')
 
         // .view('agenda/pago')
-        .view('fondos/saquito')
+    .view('fondos/saquito')
         .view('componentes/footer');
 
         

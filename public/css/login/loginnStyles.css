@@ -31,7 +31,7 @@
     list-style: none;
     width: 20px;
     height: 20px;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(185, 129, 129, 0.88);
     animation: animate 25s linear infinite;
     bottom: -150px;
 }
@@ -190,7 +190,7 @@
 }
 
 .login__subtitle-text {
-    font-size: 13px;
+    font-size: 20px;
     max-width: 80%;
     text-align: center;
     line-height: 1.1rem;
@@ -248,6 +248,7 @@
     background: url('../../img/backgroundLogin.jpg');
     background-size: cover;
     width: 100%;
+    position: sticky;
 }
 
 .login__form-footer {
@@ -275,4 +276,19 @@
 
 .login__btn-submit:hover {
     background: #e05311e1;
+}
+
+ 
+.login__form-register {
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}   
+.login__form-register p {
+    font-size: 20px;
+    line-height: 0;
 }

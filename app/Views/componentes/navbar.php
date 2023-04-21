@@ -1,4 +1,3 @@
-
 <div class="navbar__container">
   <a href="#">
     <img 

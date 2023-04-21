@@ -21,7 +21,7 @@
     
       <div class="e b">
       <label > Ingresa un valor</label><br><br>
-        <input type="number" class="tl aria-label="Dollar amount (with dot and two decimal places)"  ><br><br>
+        <input type="number" class="tl aria-label="Dollar amount (with dot and two decimal places)><br><br>
         <div class="botondeanti">
                <button type="button" class="btn btn-success"> <img         class="image" src="<?= base_url("img/Guardar.png") ?> " title="Guardar" >
               </button>

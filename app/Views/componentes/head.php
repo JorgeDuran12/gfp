@@ -7,6 +7,9 @@
 
     <link rel="stylesheet" href="<?= base_url('bootstrap/bootstrap.min.css') ?>">
     <link rel="stylesheet" href="<?= base_url('bootstrap/bootstrap-icons.css') ?>">
+
+    <script href="<?= base_url('bootstrap/bootstrap.min.js') ?>"></script>
+    <script href="<?= base_url('bootstrap/popper.min.js') ?>"></script>
     <script href="<?= base_url('bootstrap/bootstrap.bundle.min.js') ?>"></script>
     <script href="<?= base_url('js/jquery-3.6.0.js') ?>"></script>
 
@@ -15,17 +18,20 @@
     
     <link rel="stylesheet" href="<?= base_url('css/header/headerStyles.css') ?>">
     <link rel="stylesheet" href="<?= base_url('css/general/configuracionStyles.css') ?>">
-    <link rel="stylesheet" href="<?= base_url('css/navbar/navStyless.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('css/navbar/navvStyless.css') ?>">
     <link rel="stylesheet" href="<?= base_url('css/pagina/paginaStyles.css') ?>">
     <link rel="stylesheet" href="<?= base_url('css/piePag/piePagStyles.css') ?>">
     <link rel="stylesheet" href="<?= base_url('css/principal/principalStyless.css') ?>">
-    <link rel="stylesheet" href="<?= base_url("/css/login/loginStyles.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/css/login/loginnStyles.css")?>">
     <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /> --> <!-- Icono -->
 
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
 
     <title><?= $tituloPag?></title>
 </head>

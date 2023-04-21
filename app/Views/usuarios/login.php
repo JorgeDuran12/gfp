@@ -1,21 +1,8 @@
 
-<body class="login__body"></body>
+<body class="login__body">
 
 <!-- Animacion fondo -->
-<div class="login__area">
-    <ul class="login__circles">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
-</div>
+
     
 <div class="login__context">
     <div class="login__container">
@@ -47,13 +34,35 @@
             </a>
             <button class="login__btn-submit">Entrar</button>
         </div>
+        <div class="login__form-register">
+            <p>
+                No te has registrado aún?
+            </p>
+            <button class="btn btn-outline-warning">Crear mi cuenta!</button>
+        </div>
         </form>
     </div>
+    <!-- Background - Dinamico -->
     <div class="login__background-content">
-        asds
+        <div class="login__area">
+            <ul class="login__circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
     </div>
+    <!-- Fin background dinamico -->
 </div>
 
 </div>
-</body>
+
 

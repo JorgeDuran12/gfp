@@ -23,8 +23,12 @@ class Auth extends BaseController
 
         $vistaRegistro =  
         view("usuarios/registro_cuenta",$datos)
+        .view("usuarios/efecto")
         .view("componentes/footer")
         .view('componentes/head');
         return $vistaRegistro;
     } 
 }
+
+
+

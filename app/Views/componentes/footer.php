@@ -11,7 +11,6 @@
         <h5>Información</h5>
         <span>Centro Nacional De Aprendizaje</span>
     </div>
-   
 </footer>
 
 

@@ -8,7 +8,8 @@
     <title>Registro</title>
 </head>
 <body>
-<div>
+
+<div class="registro_cuenta">
 
 <form class="form_container">
 
@@ -16,7 +17,6 @@
       <img src="<?= base_url("../img/gfp.png");?>" alt="logo_gfp">
   </div>
   <div class="title_container">
-    
     <p class="title"> <?= $tituloPag?> </p>
     <span class="subtitle"> <strong>Fortalece tu bolsillo, controla tu futuro: ¡Gestiona tus finanzas hoy!</strong> </span>
   </div>
@@ -34,24 +34,18 @@
   </div>
 
   <div class="input_container">
-    <label class="input_label" for="email_field">Tipo de documento</label>
-
-        <div class="input-group mb-3">
-          <button class="btn btn-outline-secondary dropdown-toggle input_field" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
-          <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Separated link</a></li>
-          </ul>
-          <input type="text" class="form-control input_field" aria-label="Text input with dropdown button">
-    </div>
+  <label class="input_label" for="email_field">Tipo de documento</label>
+  <select id="opcion" class="select">
+    <option value="3" class="option">Opción 3</option>
+      <option value="1" class="option">Opción 1</option>
+      <option value="2" class="option">Opción 2</option>
+  </select>
   </div>
 
   <div class="input_container">
     <label class="input_label" for="email_field">Nombre de usuario</label>
     <img src="<?= base_url("icons/person-check-fill.svg")?>" class="icon">
+    
     <input placeholder="Daniel" name="input-name" type="text" class="input_field" id="usuario">
   </div>
 
@@ -79,10 +73,12 @@
     <input placeholder="Validar contraseña" name="input-name" type="text" class="input_field" id="valid_password">
   </div>
 
-  <!-- <button title="Sign In" type="submit" class="sign-in_btn">
+  <button title="Sign In" type="submit" class="sign-in_btn">
     <span>Crear cuenta</span>
-  </button> -->
+  </button>
 </form>
+
+
 
 </body>
 </html>
