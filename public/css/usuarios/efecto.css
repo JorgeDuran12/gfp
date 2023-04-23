@@ -1,6 +1,5 @@
-.efecto_cont{
-  margin: 30px;
-}
+
+
 
 .piggy-wrapper {
     position: relative;
@@ -8,7 +7,7 @@
     height: 350px;
     display: block;
     margin: 0 auto;
-    margin-top: 0px;
+    margin-top: 5px;
   }
   
   .piggy-wrap {
