@@ -1,5 +1,5 @@
 <head>
-    <link rel="stylesheet" href="<?= base_url('css/login/efecto.css')?>">
+    <link rel="stylesheet" href="<?= base_url('css/usuarios/efecto.css')?>">
 </head>
 
 <div class="efecto_cont">

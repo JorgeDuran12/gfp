@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="<?= base_url('css/pagina/paginaStyles.css') ?>">
     <link rel="stylesheet" href="<?= base_url('css/piePag/piePagStyles.css') ?>">
     <link rel="stylesheet" href="<?= base_url('css/principal/principalStyless.css') ?>">
-    <link rel="stylesheet" href="<?= base_url("/css/login/loginnStyles.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/css/usuarios/loginnStyles.css")?>">
     <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /> --> <!-- Icono -->
 
     <link
