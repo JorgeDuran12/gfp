@@ -34,16 +34,24 @@
       <li class="icon-image"><a href="<?= base_url('Emergencia')?>"><img src="<?= base_url("icons/emergencia.png")?>"/></a></li>
       <span class="icon-name">Fondo emergencia</span>
     </div>
-
     <div class="navbar__separator"></div>
-    
-    <div class="icons__admin">
-      <div class="icon">
-        <li class="icon-image"><a href="#"><img src="<?= base_url("icons/disabled.png")?>"/></a></li>
-        <span class="icon-name">Deshabilitado</span>
+    <div class="navbar__icons">
+        <li class="icon-image"><a href="<?= base_url('Usuario')?>"><img src="<?= base_url("icons/empresario.png")?>"/></a></li>
+        <span class="icon-name">Manejo de usuarios</span>
       </div>
+      <div class="navbar__icons">
+        <li class="icon-image"><a href="<?= base_url('Roles')?>"><img src="<?= base_url("icons/roles.png")?>"/></a></li>
+        <span class="icon-name">Manejo De Roles</span>
+      </div>
+      
+
+
+
+
+    <div class="icons__admin">
+   
       <div class="icon">
-        <li class="icon-image"><a href="#"><img src="<?= base_url("icons/disabled.png")?>"/></a></li>
+        <li class="icon-image"><a href="#"><img src="<?= base_url("icons/disable.png")?>"/></a></li>
         <span class="icon-name">Deshabilitado</span>
       </div>
     </div>

@@ -17,12 +17,12 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     
     <link rel="stylesheet" href="<?= base_url('css/header/headerStyles.css') ?>">
-    <link rel="stylesheet" href="<?= base_url('css/general/configuracionStyles.css') ?>">
-    <link rel="stylesheet" href="<?= base_url('css/navbar/navvStyless.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('css/general/globalStyles.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('css/navbar/navStyles.css') ?>">
     <link rel="stylesheet" href="<?= base_url('css/pagina/paginaStyles.css') ?>">
-    <link rel="stylesheet" href="<?= base_url('css/piePag/piePagStyles.css') ?>">
-    <link rel="stylesheet" href="<?= base_url('css/principal/principalStyless.css') ?>">
-    <link rel="stylesheet" href="<?= base_url("/css/usuarios/loginnStyles.css")?>">
+    <link rel="stylesheet" href="<?= base_url('css/footer/footerStyles.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('css/principal/principalStyles.css') ?>">
+    <link rel="stylesheet" href="<?= base_url("/css/usuarios/loginStyles.css")?>">
     <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /> --> <!-- Icono -->
 
     <link

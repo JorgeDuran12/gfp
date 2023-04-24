@@ -22,7 +22,7 @@
         align-items: center;
         margin: 20px auto;
         width: 700px;
-        height: 600px;
+        height: 650px;
         flex-direction: column;
         background-color: rgb(58, 180, 228);
         border-radius: 20px;
@@ -48,4 +48,12 @@
         width: auto;
         height: 25px;
         border-radius: 7px;
+    }
+    
+    .modal-content {
+        background: linear-gradient(to right, #2c3e50, #4ca1af);
+    }
+    
+    .a {
+        background-color: rgb(172, 40, 40);
     }

@@ -1,0 +1,25 @@
+.titulo {
+    background-color: rgb(255, 0, 0);
+    text-align: center;
+    color: black;
+}
+
+#limite {
+    margin: 40px;
+}
+
+.op {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.form-select {
+    justify-content: center;
+    width: 170px;
+    height: auto;
+}
+
+.select {
+    width: 50px;
+}

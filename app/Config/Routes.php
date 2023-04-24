@@ -31,8 +31,12 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 
 $routes->get('/', 'Auth::index');
+
+/* Rutas Login */
+
+/*  */
 $routes->get('/principal', 'Principal::index');
-$routes->get('registro', 'Auth::registro');
+$routes->get('form', 'Auth::registro');
 
 
 

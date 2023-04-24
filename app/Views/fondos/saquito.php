@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?= base_url("/css/saquito/saquito2.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/css/saquito/saquito3.css")?>">
 
     <title>Saquito</title>
 </head>
 
 <body>
+<div class="titulo">
+
+<h1 > Saquito</h1>
+ 
+</div >
 
 <br><br>
 
@@ -21,29 +26,29 @@
 <form action="" class="registro">
 
 <div class="titulo"> 
-  <h1>Meta</h1>
+  <h2>Meta</h2>
 </div >
 <div class="dc">
-  <textarea class="dc" placeholder="Descripcion" id="floatingTextarea"></textarea>
+  <textarea class="dc" placeholder="Descripcion:" id="floatingTextarea"></textarea>
    
 </div>
 <br>
 <div class="tm">
-<input  type="date" class="form-control" id="floatingInput" placeholder="fecha inicial: ">
+<input  type="date" class="form-control" id="floatingInput" placeholder="Fecha inicial: ">
   <label for="floatingInput"></label>
      
  </div>     
  <br>
  <div class="tm">
- <input  type="number" class="form-control" id="floatingInput" placeholder="Valor ">
+ <input  type="number" class="form-control" id="floatingInput" placeholder="Valor: ">
   <label for="floatingInput"></label>
  </div>  
 <br>
 
 <div class="tx">
-  <input  type="number" class="form-control" id="floatingInput" placeholder="cuotas">
+  <input  type="number" class="form-control" id="floatingInput" placeholder="Cuotas:">
   <label for="floatingInput"></label>
-  <input type="number" class="form-control" id="floatingInput" placeholder="valor cuotas">
+  <input type="number" class="form-control" id="floatingInput" placeholder="Valor cuotas:">
   <label for="floatingInput"></label>
 </div>
 <br>
@@ -53,14 +58,15 @@
 
 
 <div class="botondeanti">
-  <button data-bs-toggle="modal" data-bs-target="#exampleModal" type="button" class="btn btn-success" > <img  class="image" src="<?= base_url("img/Guardar.png") ?> " title="Guardar" >
-</button>
-  <button  data-bs-toggle="modal" data-bs-target="#exampleModal2"type="button" class="btn btn-danger"> <img  class="image" src="<?= base_url("img/Eliminar.png") ?> " title="Eliminar" >
-</button>
-  <button type="button" class="btn btn-warning">
+<button type="button" class="btn btn-warning">
     <img  class="image" src="<?= base_url("img/editar.png") ?> " title="Editar" >
     
   </button>
+  <button  data-bs-toggle="modal" data-bs-target="#exampleModal2"type="button" class="btn btn-danger"> <img  class="image" src="<?= base_url("img/Eliminar.png") ?> " title="Eliminar" >
+</button>
+  
+  <button data-bs-toggle="modal" data-bs-target="#exampleModal" type="button" class="btn btn-success" > <img  class="image" src="<?= base_url("img/Guardar.png") ?> " title="Guardar" >
+</button>
 </div>
     
 </div> 

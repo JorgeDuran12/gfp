@@ -1,0 +1,980 @@
+CRITICAL - 2023-04-24 13:45:15 --> Undefined variable $cargos
+in APPPATH\Views\administrador\administrador.php on line 23.
+ 1 APPPATH\Views\administrador\administrador.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cargos', 'C:\\xampp\\htdocs\\gfp\\app\\Views\\administrador\\administrador.php', 23)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\gfp\\app\\Views\\administrador\\administrador.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('administrador/administrador', [], true)
+ 5 APPPATH\Controllers\Administrador.php(31): view('administrador/administrador')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Administrador->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 13:49:33 --> Undefined array key "id"
+in APPPATH\Views\administrador\administrador.php on line 25.
+ 1 APPPATH\Views\administrador\administrador.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\gfp\\app\\Views\\administrador\\administrador.php', 25)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\gfp\\app\\Views\\administrador\\administrador.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('administrador/administrador', [], true)
+ 5 APPPATH\Controllers\Administrador.php(31): view('administrador/administrador')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Administrador->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 13:50:04 --> Undefined array key "id"
+in APPPATH\Views\administrador\administrador.php on line 25.
+ 1 APPPATH\Views\administrador\administrador.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\gfp\\app\\Views\\administrador\\administrador.php', 25)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\gfp\\app\\Views\\administrador\\administrador.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('administrador/administrador', [], true)
+ 5 APPPATH\Controllers\Administrador.php(31): view('administrador/administrador')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Administrador->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 15:32:37 --> Undefined variable $correo
+in APPPATH\Controllers\Auth.php on line 40.
+ 1 APPPATH\Controllers\Auth.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $correo', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 15:32:44 --> Call to undefined method App\Controllers\Auth::getPost()
+in APPPATH\Controllers\Auth.php on line 37.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 15:34:41 --> Call to undefined method App\Controllers\Auth::getPost()
+in APPPATH\Controllers\Auth.php on line 37.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 15:38:51 --> Undefined property: CodeIgniter\HTTP\IncomingRequest::$getMethod
+in APPPATH\Controllers\Auth.php on line 40.
+ 1 APPPATH\Controllers\Auth.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\HTTP\\IncomingRequest::$getMethod', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 15:38:53 --> Undefined property: CodeIgniter\HTTP\IncomingRequest::$getMethod
+in APPPATH\Controllers\Auth.php on line 40.
+ 1 APPPATH\Controllers\Auth.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\HTTP\\IncomingRequest::$getMethod', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 15:45:24 --> syntax error, unexpected token "}"
+in APPPATH\Controllers\Auth.php on line 44.
+ 1 SYSTEMPATH\Router\Router.php(507): CodeIgniter\Router\AutoRouter->getRoute('Auth/Login')
+ 2 SYSTEMPATH\Router\Router.php(206): CodeIgniter\Router\Router->autoRoute('Auth/Login')
+ 3 SYSTEMPATH\CodeIgniter.php(815): CodeIgniter\Router\Router->handle('Auth/Login')
+ 4 SYSTEMPATH\CodeIgniter.php(449): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 15:46:24 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 46.
+ 1 APPPATH\Controllers\Auth.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 46)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 15:46:26 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 46.
+ 1 APPPATH\Controllers\Auth.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 46)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 15:46:45 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 46.
+ 1 APPPATH\Controllers\Auth.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 46)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 15:46:47 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 46.
+ 1 APPPATH\Controllers\Auth.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 46)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 15:47:42 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 50.
+ 1 APPPATH\Controllers\Auth.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 50)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 15:47:43 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 50.
+ 1 APPPATH\Controllers\Auth.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 50)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 15:48:13 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 50.
+ 1 APPPATH\Controllers\Auth.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 50)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 15:48:15 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 50.
+ 1 APPPATH\Controllers\Auth.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 50)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 15:50:39 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 50.
+ 1 APPPATH\Controllers\Auth.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 50)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 15:51:03 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 50.
+ 1 APPPATH\Controllers\Auth.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 50)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 15:51:05 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 50.
+ 1 APPPATH\Controllers\Auth.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 50)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 15:51:26 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 52.
+ 1 APPPATH\Controllers\Auth.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 52)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 15:51:29 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 52.
+ 1 APPPATH\Controllers\Auth.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 52)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 15:58:39 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 51.
+ 1 APPPATH\Controllers\Auth.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 15:58:41 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 51.
+ 1 APPPATH\Controllers\Auth.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 15:58:42 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 51.
+ 1 APPPATH\Controllers\Auth.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 15:59:19 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 51.
+ 1 APPPATH\Controllers\Auth.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 15:59:21 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 51.
+ 1 APPPATH\Controllers\Auth.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 15:59:45 --> Class "App\Models\UserModel" not found
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 15:59:47 --> Class "App\Models\UserModel" not found
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 15:59:59 --> Class "App\Models\UserModel" not found
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:00:26 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:00:28 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:00:54 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 12.
+ 1 APPPATH\Controllers\Auth.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 12)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:00:56 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 12.
+ 1 APPPATH\Controllers\Auth.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 12)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:01:03 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 12.
+ 1 APPPATH\Controllers\Auth.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 12)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:01:04 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 12.
+ 1 APPPATH\Controllers\Auth.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 12)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:02:31 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 12.
+ 1 APPPATH\Controllers\Auth.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 12)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:02:32 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 12.
+ 1 APPPATH\Controllers\Auth.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 12)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:02:33 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 12.
+ 1 APPPATH\Controllers\Auth.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 12)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:03:46 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 12.
+ 1 APPPATH\Controllers\Auth.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 12)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:03:47 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 12.
+ 1 APPPATH\Controllers\Auth.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 12)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:04:13 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 12.
+ 1 APPPATH\Controllers\Auth.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 12)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:04:13 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 12.
+ 1 APPPATH\Controllers\Auth.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 12)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:04:13 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 12.
+ 1 APPPATH\Controllers\Auth.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 12)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:04:13 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 12.
+ 1 APPPATH\Controllers\Auth.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 12)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:05:11 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:05:12 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:05:12 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:05:23 --> Undefined variable $usuarios
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuarios', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:05:23 --> Undefined variable $usuarios
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuarios', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:05:23 --> Undefined variable $usuarios
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuarios', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:05:23 --> Undefined variable $usuarios
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuarios', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:05:38 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:05:38 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:05:38 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:05:39 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:05:39 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:06:39 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:06:39 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:06:39 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:06:40 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:06:40 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:06:40 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:06:41 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:06:41 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:07:11 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:07:11 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:07:11 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:07:26 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:07:27 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:07:27 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:07:42 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:07:42 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:07:42 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:07:46 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:07:46 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:07:46 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:07:47 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:08:00 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:08:00 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:08:00 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:08:10 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:08:11 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:08:11 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:08:11 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:08:33 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:08:33 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:08:34 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:08:34 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:09:12 --> Cannot redeclare App\Controllers\Auth::$usuario
+in APPPATH\Controllers\Auth.php on line 10.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-04-24 16:09:12 --> Cannot redeclare App\Controllers\Auth::$usuario
+in APPPATH\Controllers\Auth.php on line 10.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-04-24 16:09:17 --> Undefined variable $usuario2
+in APPPATH\Controllers\Auth.php on line 14.
+ 1 APPPATH\Controllers\Auth.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario2', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:09:17 --> Undefined variable $usuario2
+in APPPATH\Controllers\Auth.php on line 14.
+ 1 APPPATH\Controllers\Auth.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario2', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:09:17 --> Undefined variable $usuario2
+in APPPATH\Controllers\Auth.php on line 14.
+ 1 APPPATH\Controllers\Auth.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario2', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:09:17 --> Undefined variable $usuario2
+in APPPATH\Controllers\Auth.php on line 14.
+ 1 APPPATH\Controllers\Auth.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario2', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:09:31 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:09:31 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:09:31 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:09:31 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:09:49 --> syntax error, unexpected token "}"
+in APPPATH\Controllers\Auth.php on line 14.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Auth')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Auth')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Auth', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:09:49 --> syntax error, unexpected token "}"
+in APPPATH\Controllers\Auth.php on line 14.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Auth')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Auth')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Auth', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:10:47 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 51.
+ 1 APPPATH\Controllers\Auth.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:10:50 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 51.
+ 1 APPPATH\Controllers\Auth.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:11:23 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 51.
+ 1 APPPATH\Controllers\Auth.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:11:37 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 51.
+ 1 APPPATH\Controllers\Auth.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:11:38 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 51.
+ 1 APPPATH\Controllers\Auth.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:20:02 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 51.
+ 1 APPPATH\Controllers\Auth.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:20:17 --> syntax error, unexpected token "}"
+in APPPATH\Controllers\Auth.php on line 53.
+ 1 SYSTEMPATH\Router\Router.php(507): CodeIgniter\Router\AutoRouter->getRoute('Auth/login')
+ 2 SYSTEMPATH\Router\Router.php(206): CodeIgniter\Router\Router->autoRoute('Auth/login')
+ 3 SYSTEMPATH\CodeIgniter.php(815): CodeIgniter\Router\Router->handle('Auth/login')
+ 4 SYSTEMPATH\CodeIgniter.php(449): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:20:21 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 51.
+ 1 APPPATH\Controllers\Auth.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:20:22 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 51.
+ 1 APPPATH\Controllers\Auth.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:20:27 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 51.
+ 1 APPPATH\Controllers\Auth.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:20:34 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 51.
+ 1 APPPATH\Controllers\Auth.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:20:38 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 51.
+ 1 APPPATH\Controllers\Auth.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:21:26 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 51.
+ 1 APPPATH\Controllers\Auth.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:21:48 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 51.
+ 1 APPPATH\Controllers\Auth.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:21:58 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 51.
+ 1 APPPATH\Controllers\Auth.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:22:12 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 51.
+ 1 APPPATH\Controllers\Auth.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:22:37 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 51.
+ 1 APPPATH\Controllers\Auth.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:22:47 --> Call to undefined method App\Controllers\Auth::traer_usuario()
+in APPPATH\Controllers\Auth.php on line 51.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:22:54 --> Undefined variable $usuarios
+in APPPATH\Controllers\Auth.php on line 51.
+ 1 APPPATH\Controllers\Auth.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuarios', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:22:57 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 51.
+ 1 APPPATH\Controllers\Auth.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:23:18 --> Object of class App\Models\UsuariosModel could not be converted to string
+in APPPATH\Controllers\Auth.php on line 52.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:23:29 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 52.
+ 1 APPPATH\Controllers\Auth.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 52)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:24:08 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 51.
+ 1 APPPATH\Controllers\Auth.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:24:15 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 51.
+ 1 APPPATH\Controllers\Auth.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:24:19 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 51.
+ 1 APPPATH\Controllers\Auth.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:28:13 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 51.
+ 1 APPPATH\Controllers\Auth.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:28:43 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 51.
+ 1 APPPATH\Controllers\Auth.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:29:09 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 51.
+ 1 APPPATH\Controllers\Auth.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:29:44 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 51.
+ 1 APPPATH\Controllers\Auth.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:29:50 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 51.
+ 1 APPPATH\Controllers\Auth.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:34:59 --> Undefined array key "i_rol"
+in APPPATH\Controllers\Auth.php on line 56.
+ 1 APPPATH\Controllers\Auth.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "i_rol"', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 56)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:35:05 --> session(): Argument #1 ($val) must be of type ?string, array given, called in C:\xampp\htdocs\gfp\app\Controllers\Auth.php on line 58
+in SYSTEMPATH\Common.php on line 986.
+ 1 APPPATH\Controllers\Auth.php(58): session([...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:35:06 --> session(): Argument #1 ($val) must be of type ?string, array given, called in C:\xampp\htdocs\gfp\app\Controllers\Auth.php on line 58
+in SYSTEMPATH\Common.php on line 986.
+ 1 APPPATH\Controllers\Auth.php(58): session([...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:35:35 --> Class "App\Controllers\session" not found
+in APPPATH\Controllers\Auth.php on line 58.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:35:59 --> session(): Argument #1 ($val) must be of type ?string, array given, called in C:\xampp\htdocs\gfp\app\Controllers\Auth.php on line 58
+in SYSTEMPATH\Common.php on line 986.
+ 1 APPPATH\Controllers\Auth.php(58): session([...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:36:34 --> Call to undefined function App\Controllers\val()
+in APPPATH\Controllers\Auth.php on line 52.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:37:37 --> strval() expects exactly 1 argument, 0 given
+in APPPATH\Controllers\Auth.php on line 52.
+ 1 APPPATH\Controllers\Auth.php(52): strval()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:37:41 --> Call to a member function strval() on null
+in APPPATH\Controllers\Auth.php on line 52.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:37:46 --> strval() expects exactly 1 argument, 0 given
+in APPPATH\Controllers\Auth.php on line 52.
+ 1 APPPATH\Controllers\Auth.php(52): strval()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

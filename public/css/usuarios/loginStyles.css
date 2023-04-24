@@ -1,30 +1,34 @@
-/* BACKGROUND DINAMiCO */
-
-.login__context {
-    height: auto;
-    width: 100%;
-    position: absolute;
-    display: flex;
-}
-
-
 /* FORMULARIO */
 
 .login__body {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    width: auto;
+    width: 100vw;
 }
 
 .login__container {
-    background: rgb(1, 37, 20);
-    top: 0;
-    width: 20vw;
+    /* background: #0040C1; */
     height: 100vh;
+    width: 100%;
     display: flex;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #0f53db;
+}
+
+.login__form-container {
+    background: #0040c1;
+    height: auto;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    /* border: 1px solid white; */
+    /* border-radius: 10px; */
 }
 
 .login__form {
@@ -43,7 +47,7 @@
     height: auto;
     /* background-color: rgb(20, 98, 172);
     border: 1px solid #F7F7F8; */
-    filter: drop-shadow(0px 0.5px 0.5px #EFEFEF) drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5));
+    filter: drop-shadow(0px 0.5px 0.5px #ffffff) drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5));
     border-radius: 11px;
     display: flex;
     justify-content: center;
@@ -161,10 +165,10 @@
     background: #e05311e1;
 }
 
-
-/* .login__form-register {
+.login__form-register {
     margin-top: 100px;
     width: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -175,4 +179,4 @@
 .login__form-register p {
     font-size: 20px;
     line-height: 0;
-} */
+}
