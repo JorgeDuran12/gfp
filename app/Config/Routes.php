@@ -36,7 +36,7 @@ $routes->get('/', 'Auth::index');
 
 /*  */
 $routes->get('/principal', 'Principal::index');
-$routes->get('form', 'Auth::registro');
+$routes->get('registro', 'Auth::registroPagina');
 
 
 

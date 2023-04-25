@@ -22,9 +22,9 @@
         align-items: center;
         margin: 20px auto;
         width: 700px;
-        height: 600px;
+        height: 650px;
         flex-direction: column;
-        background-color: rgb(58, 180, 228);
+        background-color: #043391;
         border-radius: 20px;
         -webkit-box-shadow: 10px 10px 10px -8px rgba(191, 191, 191, 1);
         -moz-box-shadow: 10px 10px 10px -8px rgba(191, 191, 191, 1);
@@ -41,7 +41,7 @@
     
     .tx {
         text-align: center;
-        width: 120px;
+        width: 190px;
     }
     
     .image {
@@ -50,27 +50,11 @@
         border-radius: 7px;
     }
     
-    .a {
-        background-color: rgb(172, 40, 40);
-    }
-    
-    .m {
-        background-color: green;
-    }
-    
-    .mb-3 {
-        color: black;
-    }
-    
-    .ms {
-        height: 40px;
-        width: auto;
-    }
-    
     .modal-content {
-        background-color: rgb(67, 162, 221);
+        background: #92b6e7;
+        text-align: center;
     }
     
     .modal-body {
-        color: black;
+        text-align: center;
     }

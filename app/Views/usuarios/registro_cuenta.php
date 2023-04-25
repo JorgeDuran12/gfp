@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?= base_url("/css/usuarios/register.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/css/usuarios/register2.css")?>">
     <title>Registro</title>
 </head>
-<body>
+<body class="registro_cuenta">
+    
+    <div class="rg_container">
 
     <form class="form_container">
 
@@ -17,20 +19,20 @@
         </div>
         <div class="title_container">
             <p class="title"> <?= $tituloPag?> </p>
-            <span class="subtitle"> <strong>Fortalece tu bolsillo, controla tu futuro: Gestiona tus finanzas
-                    hoy </strong> </span>
+            <span class="subtitle"> <strong>Fortalece tu bolsillo, controla tu futuro:
+            Gestiona tus finanzas hoy</strong> </span>
         </div>
 
         <div class="input_container">
             <label class="input_label" for="email_field">Nombre</label>
             <img src="<?= base_url("icons/person-fill.svg")?>" class="icon">
-            <input placeholder="Daniel" name="input-name" type="text" class="input_field" id="nombre">
+            <input placeholder="Ej: Daniel" name="input-name" type="text" class="input_field" id="nombre">
         </div>
 
         <div class="input_container">
             <label class="input_label" for="email_field">Apellidos</label>
             <img src="<?= base_url("icons/person-lines-fill.svg")?>" class="icon">
-            <input placeholder="Banquet" name="input-name" type="text" class="input_field" id="apellidos">
+            <input placeholder="Ej: Banquet" name="input-name" type="text" class="input_field" id="apellidos">
         </div>
 
         <div class="input_container">
@@ -49,25 +51,19 @@
         <div class="input_container">
             <label class="input_label" for="email_field">Numero de documento</label>
             <img src="<?= base_url("icons/person-video.svg")?>" class="icon">
-            <input placeholder="Daniel" name="input-name" type="number" class="input_field" id="nmero_doc">
+            <input placeholder="Ej: 1007 265 547" name="input-name" type="number" class="input_field" id="nmero_doc">
         </div>
 
         <div class="input_container">
             <label class="input_label" for="email_field">Nombre de usuario</label>
             <img src="<?= base_url("icons/person-check-fill.svg")?>" class="icon">
-            <input placeholder="Daniel" name="input-name" type="text" class="input_field" id="usuario">
+            <input placeholder="Ej: Daniel" name="input-name" type="text" class="input_field" id="usuario">
         </div>
 
         <div class="input_container">
             <label class="input_label" for="email_field">Teléfono</label>
             <img src="<?= base_url("icons/telephone-fill.svg")?>" class="icon">
-            <input placeholder="309 156 9347" name="input-name" type="number" class="input_field" id="telefono">
-        </div>
-
-        <div class="input_container">
-            <label class="input_label" for="email_field">Correo electronico</label>
-            <img src="<?= base_url("icons/envelope-fill.svg")?>" class="icon">
-            <input placeholder="name@mail.com" name="input-name" type="email" class="input_field" id="email">
+            <input placeholder="Ej: 309 156 9347" name="input-name" type="number" class="input_field" id="telefono">
         </div>
 
         <div class="input_container">
@@ -82,13 +78,19 @@
             <input placeholder="Validar contraseña" name="input-name" type="text" class="input_field"
                 id="valid_password">
         </div>
+        
+        <div class="input_container">
+            <label class="input_label" for="email_field">Correo electronico</label>
+            <img src="<?= base_url("icons/envelope-fill.svg")?>" class="icon">
+            <input placeholder="Ej: correo@mail.com" name="input-name" type="email" class="input_field" id="email">
+        </div>
 
         <div class="btn_container">                
-                <button type="submit" class="sign-in_btn">
+                <button type="submit" class="bnkl">
                     <span class="span">Crear cuenta</span>
                 </button>
             </div>
     </form>
-
+   </div>
 </body>
 </html>

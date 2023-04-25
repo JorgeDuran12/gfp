@@ -37,17 +37,16 @@ class UsuariosModel extends Model{
 
     // <-----------------------------------funcion eliminar en vista principal----------------------------------->
 
-// public function elimina_usuario($id,$estado){
-//     $datos = $this->update($id, ['estado' => $estado]);         
-//     return $datos;
+ public function elimina_usuario($id,$estado){
+     $datos = $this->update($id, ['estado' => $estado]);         
+    return $datos;
+}
 
-    
-// }
-// public function obtenerusuario(){
-//     $this->select('usuarios.*');
-//       $this->where('estado', 'A');
-//     $datos = $this->findAll();  //nos trae todos los registros que cumplan con una condicion dada 
-//      return $datos;
-//   }
+ public function obtenerusuario(){
+     $this->select('usuarios.*');
+      $this->where('estado', 'A');
+     $datos = $this->findAll();  //nos trae todos los registros que cumplan con una condicion dada 
+      return $datos;
+   }
  
 }

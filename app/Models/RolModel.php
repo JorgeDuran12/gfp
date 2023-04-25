@@ -28,9 +28,9 @@ class RolModel extends Model{
  // <-------------funcion traer_cargo que sera usada en controlador por la funcion  buscar cargo----------------------->
 
  
- public function traer_rol($id){
+ public function traer_rol($clave , $valor){
     $this->select('roles.*');
-    $this->where('id', $id);
+    $this->where($clave, $valor);
     $datos = $this->first();  
     return $datos;
 }

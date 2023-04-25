@@ -1,0 +1,198 @@
+CRITICAL - 2023-04-25 12:11:35 --> Class "App\Models\RolModel" not found
+in APPPATH\Controllers\Rol.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Rol->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-25 12:11:44 --> Class "App\Models\RolModel" not found
+in APPPATH\Controllers\Rol.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Rol->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-25 12:22:02 --> Undefined property: App\Controllers\Usuario::$admistrador
+in APPPATH\Controllers\Usuario.php on line 23.
+ 1 APPPATH\Controllers\Usuario.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Usuario::$admistrador', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Usuario.php', 23)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Usuario->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-25 12:22:35 --> Undefined variable $admin
+in APPPATH\Views\administrador\administrador.php on line 32.
+ 1 APPPATH\Views\administrador\administrador.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $admin', 'C:\\xampp\\htdocs\\gfp\\app\\Views\\administrador\\administrador.php', 32)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\gfp\\app\\Views\\administrador\\administrador.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('administrador/administrador', [], true)
+ 5 APPPATH\Controllers\Usuario.php(31): view('administrador/administrador')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Usuario->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-25 12:23:19 --> syntax error, unexpected variable "$datos", expecting "function" or "const"
+in APPPATH\Models\UsuariosModel.php on line 41.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\gfp\\app\\Models\\UsuariosModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\UsuariosModel')
+ 3 APPPATH\Controllers\Auth.php(13): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\UsuariosModel')
+ 4 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-25 12:23:24 --> syntax error, unexpected variable "$datos", expecting "function" or "const"
+in APPPATH\Models\UsuariosModel.php on line 41.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\gfp\\app\\Models\\UsuariosModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\UsuariosModel')
+ 3 APPPATH\Controllers\Auth.php(13): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\UsuariosModel')
+ 4 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-25 12:23:46 --> Undefined variable $admin
+in APPPATH\Views\administrador\administrador.php on line 32.
+ 1 APPPATH\Views\administrador\administrador.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $admin', 'C:\\xampp\\htdocs\\gfp\\app\\Views\\administrador\\administrador.php', 32)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\gfp\\app\\Views\\administrador\\administrador.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('administrador/administrador', [], true)
+ 5 APPPATH\Controllers\Usuario.php(31): view('administrador/administrador')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Usuario->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-25 12:23:47 --> Undefined variable $admin
+in APPPATH\Views\administrador\administrador.php on line 32.
+ 1 APPPATH\Views\administrador\administrador.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $admin', 'C:\\xampp\\htdocs\\gfp\\app\\Views\\administrador\\administrador.php', 32)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\gfp\\app\\Views\\administrador\\administrador.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('administrador/administrador', [], true)
+ 5 APPPATH\Controllers\Usuario.php(31): view('administrador/administrador')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Usuario->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-25 12:23:48 --> Undefined variable $admin
+in APPPATH\Views\administrador\administrador.php on line 32.
+ 1 APPPATH\Views\administrador\administrador.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $admin', 'C:\\xampp\\htdocs\\gfp\\app\\Views\\administrador\\administrador.php', 32)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\gfp\\app\\Views\\administrador\\administrador.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('administrador/administrador', [], true)
+ 5 APPPATH\Controllers\Usuario.php(31): view('administrador/administrador')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Usuario->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-25 12:23:49 --> Undefined variable $admin
+in APPPATH\Views\administrador\administrador.php on line 32.
+ 1 APPPATH\Views\administrador\administrador.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $admin', 'C:\\xampp\\htdocs\\gfp\\app\\Views\\administrador\\administrador.php', 32)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\gfp\\app\\Views\\administrador\\administrador.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('administrador/administrador', [], true)
+ 5 APPPATH\Controllers\Usuario.php(31): view('administrador/administrador')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Usuario->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-25 12:23:49 --> Undefined variable $admin
+in APPPATH\Views\administrador\administrador.php on line 32.
+ 1 APPPATH\Views\administrador\administrador.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $admin', 'C:\\xampp\\htdocs\\gfp\\app\\Views\\administrador\\administrador.php', 32)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\gfp\\app\\Views\\administrador\\administrador.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('administrador/administrador', [], true)
+ 5 APPPATH\Controllers\Usuario.php(31): view('administrador/administrador')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Usuario->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-25 12:23:49 --> Undefined variable $admin
+in APPPATH\Views\administrador\administrador.php on line 32.
+ 1 APPPATH\Views\administrador\administrador.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $admin', 'C:\\xampp\\htdocs\\gfp\\app\\Views\\administrador\\administrador.php', 32)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\gfp\\app\\Views\\administrador\\administrador.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('administrador/administrador', [], true)
+ 5 APPPATH\Controllers\Usuario.php(31): view('administrador/administrador')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Usuario->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-25 12:23:50 --> Undefined variable $admin
+in APPPATH\Views\administrador\administrador.php on line 32.
+ 1 APPPATH\Views\administrador\administrador.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $admin', 'C:\\xampp\\htdocs\\gfp\\app\\Views\\administrador\\administrador.php', 32)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\gfp\\app\\Views\\administrador\\administrador.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('administrador/administrador', [], true)
+ 5 APPPATH\Controllers\Usuario.php(31): view('administrador/administrador')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Usuario->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-25 12:29:33 --> Class "App\Models\RolModel" not found
+in APPPATH\Controllers\Rol.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Rol->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-25 12:46:51 --> Invalid file: "usuario/usuario.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('usuario/usuario.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('usuario/usuario', [], true)
+ 3 APPPATH\Controllers\Usuario.php(31): view('usuario/usuario')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Usuario->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-25 13:01:42 --> Undefined variable $usuarios
+in APPPATH\Views\roles\rol.php on line 31.
+ 1 APPPATH\Views\roles\rol.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuarios', 'C:\\xampp\\htdocs\\gfp\\app\\Views\\roles\\rol.php', 31)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\gfp\\app\\Views\\roles\\rol.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('roles/rol', [], true)
+ 5 APPPATH\Controllers\Rol.php(31): view('roles/rol')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Rol->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rol))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-25 13:27:12 --> unlink(C:\xampp\htdocs\gfp\writable\debugbar/debugbar_1682429174.357481.json): No such file or directory
+in SYSTEMPATH\Debug\Toolbar\Collectors\History.php on line 76.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\xampp\\htdocs\\gfp\\writable\\debugbar/debugbar_1682429174.357481.json): No such file or directory', 'C:\\xampp\\htdocs\\gfp\\system\\Debug\\Toolbar\\Collectors\\History.php', 76)
+ 2 SYSTEMPATH\Debug\Toolbar\Collectors\History.php(76): unlink('C:\\xampp\\htdocs\\gfp\\writable\\debugbar/debugbar_1682429174.357481.json')
+ 3 SYSTEMPATH\Debug\Toolbar.php(497): CodeIgniter\Debug\Toolbar\Collectors\History->setFiles('1682429231.983390', 20)
+ 4 SYSTEMPATH\Debug\Toolbar.php(474): CodeIgniter\Debug\Toolbar->format([...], 'html')
+ 5 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 6 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 7 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-25 15:07:05 --> Invalid file: "registro/movimientos.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('registro/movimientos.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('registro/movimientos', [], true)
+ 3 APPPATH\Controllers\Registro.php(15): view('registro/movimientos')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Registro->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registro))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-25 15:07:07 --> Invalid file: "registro/movimientos.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('registro/movimientos.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('registro/movimientos', [], true)
+ 3 APPPATH\Controllers\Registro.php(15): view('registro/movimientos')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Registro->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registro))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-25 15:08:34 --> Invalid file: "registro/movimientos.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('registro/movimientos.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('registro/movimientos', [], true)
+ 3 APPPATH\Controllers\Registro.php(15): view('registro/movimientos')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Registro->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registro))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-25 15:23:40 --> unlink(C:\xampp\htdocs\gfp\writable\debugbar/debugbar_1682436070.570821.json): No such file or directory
+in SYSTEMPATH\Debug\Toolbar\Collectors\History.php on line 76.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\xampp\\htdocs\\gfp\\writable\\debugbar/debugbar_1682436070.570821.json): No such file or directory', 'C:\\xampp\\htdocs\\gfp\\system\\Debug\\Toolbar\\Collectors\\History.php', 76)
+ 2 SYSTEMPATH\Debug\Toolbar\Collectors\History.php(76): unlink('C:\\xampp\\htdocs\\gfp\\writable\\debugbar/debugbar_1682436070.570821.json')
+ 3 SYSTEMPATH\Debug\Toolbar.php(497): CodeIgniter\Debug\Toolbar\Collectors\History->setFiles('1682436220.450698', 20)
+ 4 SYSTEMPATH\Debug\Toolbar.php(474): CodeIgniter\Debug\Toolbar->format([...], 'html')
+ 5 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 6 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 7 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

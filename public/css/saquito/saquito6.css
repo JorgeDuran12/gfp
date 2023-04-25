@@ -22,9 +22,9 @@
         align-items: center;
         margin: 20px auto;
         width: 700px;
-        height: 650px;
+        height: 600px;
         flex-direction: column;
-        background-color: rgb(58, 180, 228);
+        background-color: #043391;
         border-radius: 20px;
         -webkit-box-shadow: 10px 10px 10px -8px rgba(191, 191, 191, 1);
         -moz-box-shadow: 10px 10px 10px -8px rgba(191, 191, 191, 1);
@@ -33,6 +33,7 @@
     
     .titulo {
         text-align: center;
+        color: white;
     }
     
     .rt {
@@ -41,7 +42,7 @@
     
     .tx {
         text-align: center;
-        width: 190px;
+        width: 120px;
     }
     
     .image {
@@ -50,10 +51,34 @@
         border-radius: 7px;
     }
     
-    .modal-content {
-        background: linear-gradient(to right, #2c3e50, #4ca1af);
+    .d {
+        color: black;
     }
     
-    .a {
-        background-color: rgb(172, 40, 40);
+    .m {
+        background-color: green;
+    }
+    
+    .mb-3 {
+        color: black;
+    }
+    
+    .ms {
+        height: 40px;
+        width: auto;
+    }
+    
+    .modal-content {
+        background-color: #92b6e7;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .modal-body {
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .tim {
+        text-align: center;
     }

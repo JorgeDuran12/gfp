@@ -1,5 +1,5 @@
 <body>
-<link rel="stylesheet" href="<?= base_url("/css/registro/movimientoss.css")?>">
+<link rel="stylesheet" href="<?= base_url("/css/registro/movimientos.css")?>">
 
 <div class="titulo"> 
   <h2>Movimientos</h2>
@@ -69,10 +69,10 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          Desea Guardar Este Movimiento
+          ¿Desea Guardar Este Movimiento?
         </div>
         <div class="modal-footer">
-          <button type="button" class=" btn a" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class=" btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
           <button type="Submit" class="btn btn-success">Guadar</button>
         </div>
       </div>
@@ -119,7 +119,7 @@
 
         </div>
         <div class="modal-footer">
-          <button type="button" class=" btn a" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class=" btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
           <button type="Submit" class="btn btn-success">Guadar</button>
         </div>
       </div>
@@ -155,7 +155,7 @@
                           <tr>
                             <td>50.000</td>
                             <td>11/6/2023</td>
-                            <td>bancario</td>
+                            <td>Bancario</td>
                             <td>pago del plan pago del plan pago del plan pago del plan pago del plan pago del plan</td>
                             
                           </tr>
@@ -168,7 +168,7 @@
 
         </div>
         <div class="modal-footer">
-          <button type="button" class=" btn a" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class=" btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
           <button type="Submit" class="btn btn-success">Guadar</button>
         </div>
       </div>

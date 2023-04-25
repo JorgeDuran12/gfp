@@ -4,35 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?= base_url("/css/saquito/saquito3.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/css/saquito/saquito6.css")?>">
 
     <title>Saquito</title>
 </head>
 
 <body>
-<div class="titulo">
-
+<div class="tim">
 <h1 > Saquito</h1>
- 
-</div >
+ </div >
 
 <br><br>
 
 <div class="input-group mb-3 ">
             <span class="input-group-text" id="inputGroup-sizing-default"><img src="<?= base_url("icons/question-circle-fill.svg")?>"    title="En esta opcion debera digitalizar el dia del mes donde el aplicativo debera descontar de la disponibilidad de la cuota para el saquito">  &nbsp Fecha inicial</span>
             <input type="date" class="ss" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-     </div>
+</div>
 <div>
 <form action="" class="registro">
 
 <div class="titulo"> 
-  <h2>Meta</h2>
-</div >
+  <h3>Meta</h3>
+</div>
 <div class="dc">
   <textarea class="dc" placeholder="Descripcion:" id="floatingTextarea"></textarea>
    
 </div>
-<br>
+<br> 
 <div class="tm">
 <input  type="date" class="form-control" id="floatingInput" placeholder="Fecha inicial: ">
   <label for="floatingInput"></label>
@@ -79,10 +77,10 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          Desea guardar este registro
+          ¿Desea guardar este registro?
         </div>
         <div class="modal-footer">
-          <button type="button" class=" btn a" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
           <button type="Submit" class="btn btn-success">Guadar</button>
         </div>
       </div>
@@ -97,10 +95,10 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          Desea Eliminar  este registro
+          ¿Desea Eliminar  este registro?
         </div>
         <div class="modal-footer">
-          <button type="button" class=" btn a" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class=" btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
           <button type="Submit" class="btn btn-success">Eliminar</button>
         </div>
       </div>

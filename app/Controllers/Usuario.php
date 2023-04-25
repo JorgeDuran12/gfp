@@ -4,31 +4,31 @@ namespace App\Controllers;
 
 
 use App\Controllers\BaseController;
-use App\Models\AdministradorModel;
+use App\Models\UsuariosModel;
 
 
 
-class Administrador extends BaseController
+class Usuario extends BaseController
 {
-    protected $admistrador;
+    protected $usuario;
 
     public function __construct()
     {
-        $this->admistrador = new AdministradorModel();
+        $this->usuario = new UsuariosModel();
 
     }
 
     public function index()
     {
-        $admistrador = $this->admistrador->where('estado', "A")->findAll();   
-        $datos = ['tituloPag' => 'Administrador','admin'=>$admistrador ];
+        $usuario = $this->usuario->where('estado', "A")->findAll();   
+        $datos = ['tituloPag' => 'Administrador','usuarios'=>$usuario ];
 
         $vistaPrincipal = 
         view('componentes/head', $datos)
         .view('componentes/navbar')
         .view('componentes/header')
 
-        .view('administrador/administrador')
+        .view('usuario/usuario')
         .view('componentes/footer');
         
         return $vistaPrincipal;

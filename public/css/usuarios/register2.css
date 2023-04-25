@@ -1,44 +1,61 @@
-.form_container {
-    width: 900px;
+.registro_cuenta {
+    display: flex;
+    flex-direction: column;
+    /* height: 100vh; */
+    background-color: #e5e5e5;
+}
+
+.rg_container {
+    display: flex;
+    flex-direction: column;
     height: 100vh;
+    /* width: auto; */
+}
+
+.form_container {
+    width: 1000px;
     margin: auto;
     padding: 30px;
     display: grid;
     /* border: #e05311 2px solid; */
-    background-color:#6fb5d4;
+    background-color: #c8a283;
     border-radius: 10px;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 15px;
 }
 
 .logo_container {
-    width: auto;
-    height: 150px;
+    width: 400px;
+    height: 160px;
     display: flex;
     justify-content: center;
     margin: 0 auto;
+    /* border: 2px solid #000000; */
 }
 
 .logo_container img {
     height: 150px;
     width: auto;
+    margin: 3px;
 }
 
 .title_container {
-    border: 1px black solid hidden;
     text-align: center;
     width: 400px;
-    padding-right: 20px;
+    height: 160px;
+    align-items: center;
+    margin: 0 auto;
+    /* border: #000000 2px solid; */
 }
 
 .title {
     /* color: rgb(86, 113, 221); */
-    color: rgb(85, 85, 202);
+    color:#120400;
     font-size: 2.5em;
 }
 
 .subtitle {
-    color: rgb(54, 99, 184);
+    color: rgb(21, 21, 20);
 }
 
 .input_container {
@@ -82,7 +99,7 @@
 }
 
 .input_field:hover {
-    background-color: rgb(241, 240, 240);
+    background: #f2f4de;
 }
 
 .btn_container {
@@ -92,13 +109,20 @@
     margin-top: 15px;
 }
 
-.sign-in_btn {
+.bnkl {
     width: 90%;
     height: 2.8em;
     border-radius: 3em;
-    background-color: #cc3333;
+    background-color: #f2f4de;
     margin-left: 25px;
+    outline: none;
+    border: none;
+}
 
+.bnkl:hover {
+    width: 90%;
+    height: 2.8em;
+    background-color: rgba(242, 244, 222, 0.576);
 }
 
 .select {
@@ -117,12 +141,12 @@
 }
 
 .select:hover {
-    background-color: rgb(241, 240, 240);
+    background-color: #f2f4de;
 }
+
 
 /* @media (width: 900px) {
     .form_container {
         grid-template-columns: repeat(1, 1fr);
     }
-  }
-    */
+} */

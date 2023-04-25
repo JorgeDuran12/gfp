@@ -1,5 +1,6 @@
 .titulo {
     text-align: center;
+    color: white;
 }
 
 .actividad {
@@ -10,7 +11,7 @@
     width: 700px;
     height: 680px;
     flex-direction: column;
-    background-color: rgb(58, 180, 228);
+    background-color: #043391;
     border-radius: 20px;
     -webkit-box-shadow: 10px 10px 10px -8px rgba(191, 191, 191, 1);
     -moz-box-shadow: 10px 10px 10px -8px rgba(191, 191, 191, 1);
@@ -47,4 +48,17 @@
 
 .tm {
     width: 200px;
+}
+
+.modal-content {
+    background: #92b6e7;
+    text-align: center;
+}
+
+.modal-body {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
 }

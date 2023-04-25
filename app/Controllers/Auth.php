@@ -26,7 +26,7 @@ class Auth extends BaseController
         return $vistaPrincipal;
     }
 
-    public function registro()
+    public function registroPagina()
     { 
         $datos = ['tituloPag' => 'Nuevo Usuario'];
 
@@ -38,10 +38,11 @@ class Auth extends BaseController
         return $vistaRegistro;
     } 
 
-
-
-
     /* Metodos */
+    public function registro() {
+        
+    }
+
     public function Login() {
         $username = $this->request->getPost('username');
         $password = $this->request->getPost('password');
@@ -49,7 +50,7 @@ class Auth extends BaseController
         if( $this->request->getMethod() == 'post') {
             if($username && $password ) {
                 $datos = $this->usuario->traerUsuario('usuario', $username);
-                strval($datos['pass']);
+                
 
                 // $infoUsuario = [
                 //     'username' => $datos['usuario'],

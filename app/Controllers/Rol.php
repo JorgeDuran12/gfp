@@ -4,31 +4,31 @@ namespace App\Controllers;
 
 
 use App\Controllers\BaseController;
-use App\Models\AdministradorModel;
+use App\Models\RolModel;
 
 
 
 class Rol extends BaseController
 {
-    protected $admistrador;
+    protected $rol;
 
     public function __construct()
     {
-        $this->admistrador = new AdministradorModel();
+        $this->rol = new RolModel();
 
     }
 
     public function index()
     {
-        $admistrador = $this->admistrador->where('estado', "A")->findAll();   
-        $datos = ['tituloPag' => 'Administrador','admin'=>$admistrador ];
+        $rol = $this->rol->where('estado', "A")->findAll();   
+        $datos = ['tituloPag' => 'Rol','roles'=>$rol];
 
         $vistaPrincipal = 
         view('componentes/head', $datos)
         .view('componentes/navbar')
         .view('componentes/header')
 
-        .view('administrador/administrador')
+        .view('roles/rol')
         .view('componentes/footer');
         
         return $vistaPrincipal;

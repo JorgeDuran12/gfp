@@ -1,5 +1,5 @@
 <body>
-<link rel="stylesheet" href="<?= base_url("/css/actividades/actividades.css")?>">
+<link rel="stylesheet" href="<?= base_url("/css/actividades/actividadess.css")?>">
     <div class="titulo"> 
         <h2>Actividades</h2>
     </div ><br><br>
@@ -58,14 +58,14 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Guardar Actividades</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Guardar Recordatorio</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          Desea Guardar Esta Actividad 
+          ¿Desea guardar este recordatorio diario?
         </div>
         <div class="modal-footer">
-          <button type="button" class=" btn a" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class=" btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
           <button type="Submit" class="btn btn-success">Guadar</button>
         </div>
       </div>
@@ -77,14 +77,14 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Guardar Actividades</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Guardar Recordatorio</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          Desea Guardar Esta Actividad 
+        ¿Desea guardar este recordatorio mensual?
         </div>
         <div class="modal-footer">
-          <button type="button" class=" btn a" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class=" btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
           <button type="Submit" class="btn btn-success">Guadar</button>
         </div>
       </div>
@@ -96,14 +96,14 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Eliminar Registro</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Eliminar Recordatorio</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          Desea Eliminar Este Registro
+          ¿Desea eliminar este recordatorio mensual?
         </div>
         <div class="modal-footer">
-          <button type="button" class=" btn a" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class=" btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
           <button type="Submit" class="btn btn-success">Guadar</button>
         </div>
       </div>
@@ -115,14 +115,14 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Eliminar Registro</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Eliminar Recordatorio </h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          Desea Eliminar Este Registro
+        ¿Desea eliminar este recordatorio diario?
         </div>
         <div class="modal-footer">
-          <button type="button" class=" btn a" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class=" btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
           <button type="Submit" class="btn btn-success">Guadar</button>
         </div>
       </div>
@@ -134,7 +134,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Editar Registro</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Editar Recordatorio Mensual</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -157,7 +157,7 @@
 
          </div>
          <div class="modal-footer">
-            <button type="button" class=" btn a" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class=" btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
             <button type="Submit" class="btn btn-success">Guadar</button>
         </div>
       </div>
@@ -169,7 +169,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Editar Registro</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Editar Recordatorio Diario</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -184,7 +184,7 @@
 
          </div>
          <div class="modal-footer">
-            <button type="button" class=" btn a" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class=" btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
             <button type="Submit" class="btn btn-success">Guadar</button>
         </div>
       </div>

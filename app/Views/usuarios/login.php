@@ -29,15 +29,17 @@
                 <a href="" >
                     ¿Has olvidado tu contraseña?
                 </a>
+                <br>
                 <button class="login__btn-submit" type="submit">Entrar</button>
             </div>
             <div class="login__form-register">
                 <p>No te has registrado aún?</p>
-                <button class="btn btn-outline-warning">">Crear mi cuenta!</button>
+                <a class="btn btn-outline-warning"  href="<?php echo base_url('/registro'); ?>">Crear mi cuenta!</a>
             </div>
             </form>
             </div>
         </div>
     </div>
 
+     
 </div>
