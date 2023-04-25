@@ -1,0 +1,105 @@
+.form_container {
+    width: 900px;
+    margin: 0 auto;
+    /* border: 2px solid #000000; */
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+  }
+
+  .logo_container {
+      width: auto;
+      height: 160px;
+      /* border: #000000 solid 2px; */
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+    }
+   
+    .logo_container img{
+        height: 150px;
+        width: auto;
+    }
+
+    .title_container {
+        border: 1px black solid hidden;
+        text-align: center;
+        width: 400px;
+        padding-right: 20px;
+        }
+    
+    .title{
+        /* color: rgb(86, 113, 221); */
+        color: rgb(86, 86, 221);
+        font-size: 2.5em;
+    }
+
+    .subtitle {
+        color: rgb(221, 86, 111);
+        }
+
+       
+
+
+        .input_container {
+            width: 90%;
+            height: fit-content;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .icon {
+            width: 20px;
+            position: absolute;
+            z-index: 100;
+            left: 12px;
+            bottom: 9px;
+        }
+        .input_label {
+            font-size: 0.75rem;
+            color: #000000;
+            font-weight: 600;
+        }
+        .input_field {
+            width: auto;
+            height: 40px;
+            padding: 0 0 0 40px;
+            border-radius: 8px;
+            outline: none;
+            color: black;
+            border: 1px solid #e5e5e5;
+        }
+        .input_field:focus {
+            border: 1px solid transparent;
+            box-shadow: 0px 0px 0px 2px #242424;
+        }
+        .input_field:hover {
+            background-color: rgb(241, 240, 240);
+        }
+        .sign-in_btn {
+            width: 90%;
+            height: 2.5em;
+            border-radius: 25em;
+            background-color: #e05311;
+            margin-top: 35px;
+        }
+
+.select{
+    width: auto;
+    height: 40px;
+    padding: 0 0 0 40px;
+    border-radius: 8px;
+    outline: none;
+    color: black;
+    border: 1px solid #e5e5e5;
+}
+
+        /* 
+  @media (max-width: 600px) {
+    .form_container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+   */
