@@ -10,7 +10,6 @@
 </head>
 <body>
 
-<div class="form_container_wrapper">
     <form class="form_container">
 
         <div class="logo_container">
@@ -83,11 +82,13 @@
             <input placeholder="Validar contraseña" name="input-name" type="text" class="input_field"
                 id="valid_password">
         </div>
-        <button type="submit" class="sign-in_btn">
-            <span class="span">Crear cuenta</span>
-        </button>
+
+        <div class="btn_container">                
+                <button type="submit" class="sign-in_btn">
+                    <span class="span">Crear cuenta</span>
+                </button>
+            </div>
     </form>
-</div>
 
 </body>
 </html>
