@@ -1,4 +1,3 @@
-
 <body class="login__body">
 
 <!-- Animacion fondo -->
@@ -12,7 +11,7 @@
                 <p class="login__title-text">Iniciar sesión</p>
                 <span class="login__subtitle-text"> <strong>Fortalece tu bolsillo, controla tu futuro: ¡Gestiona tus finanzas hoy!</strong> </span>
             </div>
-    
+    <br>
             <form class="login__form" action="<?= base_url('Auth/login')?>" method="POST">
             <div class="login__input-container">
                 <label class="login__form-input-label" for="email">Correo electronico: </label>
@@ -26,15 +25,14 @@
                 <input placeholder="Ej: **********" name="password" type="text" class="login__form-input-field" id="password">
             </div>
             <div class="login__form-footer">
-                <a href="" >
+                <a href="#" >
                     ¿Has olvidado tu contraseña?
                 </a>
-                <br>
                 <button class="login__btn-submit" type="submit">Entrar</button>
             </div>
             <div class="login__form-register">
                 <p>No te has registrado aún?</p>
-                <a class="btn btn-outline-warning"  href="<?php echo base_url('/registro'); ?>">Crear mi cuenta!</a>
+                <a class=""  href="<?php echo base_url('/registro'); ?>">Crear mi cuenta!</a>
             </div>
             </form>
             </div>

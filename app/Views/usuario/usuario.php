@@ -9,7 +9,7 @@
  
     <div class="op">
       
-    <a href="" onclick="seleccionacargo(<?php echo 1 . ',' . 1 ?>);" class="btn btn-success regresar_Btn" data-bs-toggle="modal" data-bs-target="#agregar-usuario">Crear nuevo usario</a>
+    <a href="" onclick="seleccionausuario(<?php echo 1 . ',' . 1 ?>);" class="btn btn-success regresar_Btn" data-bs-toggle="modal" data-bs-target="#agregar-usuario">Crear nuevo usario</a>
         &nbsp<a href="<?php echo base_url('eliminados_cargo'); ?>"  class="btn btn-secondary regresar_Btn">Eliminados</a>
 
         &nbsp<a href="<?php echo base_url('/principal'); ?>" class="btn btn-primary regresar_Btn">Regresar</a>
@@ -25,7 +25,7 @@
                             <th>Nombre</th>
                             <th>Apellido</th>
                             <th>Contraseña</th>
-                           
+                        
                             <th>estado</th>
                             <th colspan="2">Acciones</th>
                         </tr>
@@ -38,96 +38,116 @@
                             <td> <?php echo $dato['apellido']; ?></td>
                             <td> <?php echo $dato['pass']; ?></td>
                             <td>  <?php if($dato['estado']=="A"){echo "Activo";}else{echo "Eliminado";}?></td>
-                            <td>
-                                <button>sssss</button>
-                            </td>   
-                            
+                            <td>      
+                                    <a  class="btn btn-warning"  href="#" onclick="seleccionausuario(<?php echo $dato['id_usuario'] . ',' . 2 ?>);" data-bs-toggle="modal" data-bs-target="#agregar-usuario"  width="16" height="16" title="Editar Registro">
+                                       <img  class="image" src="<?= base_url("img/editar.png") ?> " title="Editar" >
+                                    </a>     
+                                 
+                                    <button data-bs-toggle="modal" data-bs-target="#eliminaremergenModal" type="button" class="btn btn-danger">
+                                        <img  class="image" src="<?= base_url("img/Eliminar.png") ?> " title="Eliminar" >
+                                    </button>
+                                
+                            </td>                              
                           </tr> 
                         <?php } ?>
                     </tbody>
                 </table>
 
 <!-- <---------------------modal agregar usuario----------->
-<form method="POST" action="<?php echo base_url('/cargos/insertar'); ?>" autocomplete="off">
+<form method="POST" action="<?php echo base_url('/usuario/insertar'); ?>" autocomplete="off">
 
     <div class="modal fade" id="agregar-usuario"tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
 
         <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Modal title</h5>
+      <div class="modal-header">            
+        <h5 class="modal-title">Crear usuario</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-
+     
 
       <!-- lado izquierdo -->
         <div>
+
+        <div class="input_container">
+                  <label class="input_label" for="email_field">selecione rol</label>
+                  <img src="<?= base_url("icons/person-vcard-fill.svg")?>" class="icon">
+                  <select class="select"   name="id_rol" id="id_rol"aria-label="Default select example" required>
+                  <?php foreach ($roles as $data) {?>
+                      <option value="<?php echo $data['id_rol']; ?>"><?php echo $data["nombre"];?></option>
+                <?php } ?>
+            </select>
+        </div>
+       
+
+      
 
               <!-- nombre -->
 
         <div class="input_container">
             <label class="input_label" for="email_field">Nombre</label>
             <img src="<?= base_url("icons/person-fill.svg")?>" class="icon">
-            <input placeholder="Ej: Daniel" name="input-name" type="text" class="input_field" id="nombre">
+            <input placeholder="Ej: Daniel" name="nombre" type="text" class="input_field" id="nombre"  required>
         </div>
       <!-- apellido -->
 
         <div class="input_container">
             <label class="input_label" for="email_field">Apellidos</label>
             <img src="<?= base_url("icons/person-lines-fill.svg")?>" class="icon">
-            <input placeholder="Ej: Banquet" name="input-name" type="text" class="input_field" id="apellidos">
+            <input placeholder="Ej: Banquet" name="apellido" type="text" class="input_field" id="apellido"  required >
         </div>
               <!-- usuario -->
 
-        <div class="input_container">
-            <label class="input_label" for="email_field">Nombre de usuario</label>
-            <img src="<?= base_url("icons/person-check-fill.svg")?>" class="icon">
-            <input placeholder="Ej: Daniel" name="input-name" type="text" class="input_field" id="usuario">
-        </div>
-        
+              
               <!-- tipo de documento -->
-
-        <div class="input_container">
-            <label class="input_label" for="email_field">Tipo de documento</label>
-            <img src="<?= base_url("icons/person-vcard-fill.svg")?>" class="icon">
-            <select class="select">
+              
+              <div class="input_container">
+                  <label class="input_label" for="email_field">Tipo de documento</label>
+                  <img src="<?= base_url("icons/person-vcard-fill.svg")?>" class="icon">
+                  <select class="select"  name="tipo_documento" id="tipo_documento"aria-label="Default select example" required>
                 <option value="" disabled selected> Tipo de documento</option>
-                <option value="cedula" class="option">Cédula de ciudadanía</option>
-                <option value="pasaporte" class="option">Pasaporte</option>
+                <option value="9" class="option">Cédula de ciudadanía</option>
+                <option value="10" class="option">Pasaporte</option>
                 <option value="tarjeta" class="option">Tarjeta de identidad</option>
                 <option value="registro" class="option">Registro civil de nacimiento</option>
                 <option value="licencia" class="option">Licencia de conducción</option>
             </select>
         </div>
-      <!-- numero de documento-->
-
+        <!-- numero de documento-->
+        
         <div class="input_container">
             <label class="input_label" for="email_field">Numero de documento</label>
             <img src="<?= base_url("icons/person-video.svg")?>" class="icon">
-            <input placeholder="Ej: 1007 265 547" name="input-name" type="number" class="input_field" id="nmero_doc">
+            <input placeholder="Ej: 1007 265 547" name="num_documento" type="number" class="input_field" id="num_documento" require>
         </div>
-
         
-        </div>
+        
+    </div>
 <!-- lado derecho -->
-        <div>
-        <div class="input_container">
-            <label class="input_label" for="email_field">Teléfono</label>
-            <img src="<?= base_url("icons/telephone-fill.svg")?>" class="icon">
-            <input placeholder="Ej: 309 156 9347" name="input-name" type="number" class="input_field" id="telefono">
-        </div>
+<div>
+    <div class="input_container">
+        <label class="input_label" for="email_field">Nombre de usuario</label>
+        <img src="<?= base_url("icons/person-check-fill.svg")?>" class="icon">
+        <input placeholder="Ej: Daniel" name="usuario" type="text" class="input_field" id="usuario" require>
+    </div>
 
-        <div class="input_container">
-            <label class="input_label" for="password_field">Contraseña</label>
-            <img src="<?= base_url("icons/person-fill-lock.svg")?>" class="icon">
-            <input placeholder="Contraseña" name="input-name" type="password" class="input_field" id="password">
-        </div>
-
-        <div class="input_container">
-            <label class="input_label" for="email_field">Confirmar contraseña</label>
-            <img src="<?= base_url("icons/shield-lock-fill.svg")?>" class="icon">
-            <input placeholder="Validar contraseña" name="input-name" type="text" class="input_field"
+    <div class="input_container">
+        <label class="input_label" for="email_field">Teléfono</label>
+        <img src="<?= base_url("icons/telephone-fill.svg")?>" class="icon">
+        <input placeholder="Ej: 309 156 9347" name="nun_telefono" type="number" class="input_field" id="nun_telefono">
+    </div>
+    
+    <div class="input_container">
+        <label class="input_label" for="password_field">Contraseña</label>
+        <img src="<?= base_url("icons/person-fill-lock.svg")?>" class="icon">
+        <input placeholder="Contraseña" name="pass" type="password" class="input_field" id="pass"  require >
+    </div>
+    
+    <div class="input_container">
+        <label class="input_label" for="email_field">Confirmar contraseña</label>
+        <img src="<?= base_url("icons/shield-lock-fill.svg")?>" class="icon">
+        <input placeholder="Validar contraseña" name="input-name" type="password"  class="input_field"
                 id="valid_password">
         </div>
         
@@ -138,13 +158,14 @@
         </div>
 
         </div>
-      
+   
 
       </div>
+           <input hidden id="tp" name ="tp" >
+           <input hidden id="id" name ="id" >
       <div class="modal-footer">
 
-          <button type="button" class="btn btn-success">crear usuario</button>
-      </div>
+      <button type="submit" class="btn btn-primary" id="btn_guardar">Guardar</button>      
     </div>
 </div>
 
@@ -155,10 +176,53 @@
             </div>
             </div>
 
-
-
-
-
 <!-- <---------------------div de header y footer-------------------> 
 </div>
 </div>
+
+<script href="<?= base_url('js/jquery-3.6.0.js') ?>"></script>
+
+
+<script>
+   
+
+  function seleccionausuario(id, tp) {
+    if (tp == 2) {
+      dataURL = "<?php echo base_url('/usuario/buscar_usuario'); ?>" + "/" + id;
+      $.ajax({
+         type: "POST",
+         url: dataURL,
+         dataType: "json",
+         success: function(rs) {
+           document.getElementById('exampleModalLabel').innerText = "Actualizar usuario";
+           $("#tp").val(2);
+           $("#id").val(id);
+           $("#usuario").val(rs[0]['usuario']);
+           $("#nombre").val(rs[0]['nombre']);
+           $("#apellido").val(rs[0]['apellido']);
+           $("#tipo_documento").val(rs[0]['tipo_documento']);
+           $("#num_documento").val(rs[0]['num_documento']);
+           $("#id_rol").val(rs[0]['id_rol']);
+           $("#pass").val(rs[0]['pass']);
+           $("#btn_guardar").text('Actualizar');
+           $("#paisModal").modal("show");
+           console.log("editable")
+         }
+      })
+     }else{$("#tp").val(1);
+       document.getElementById('exampleModalLabel').innerText = "Crear usuario"
+       $("#usuario").val('');
+        $("#nombre").val('');
+        $("#apellido").val('');
+        $("#id_rol").val('');
+        $("#tipo_documento").val('');
+        $("#num_documento").val('');
+        $("#pass").val('');
+        $("#btn_guardar").text('Guardar');
+        console.log("enviado")
+     }
+    
+   } ;
+
+   
+</script>

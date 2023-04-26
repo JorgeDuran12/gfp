@@ -1,5 +1,5 @@
 .titulo {
-    background-color: #fa4109;
+    background-color: #39fa09;
     text-align: center;
     color: black;
 }
@@ -54,8 +54,8 @@
 }
 
 .logo_container {
-    width: 400px;
-    height: 160px;
+    width: auto;
+    height: 78px;
     display: flex;
     justify-content: center;
     margin: 0 auto;
@@ -63,7 +63,7 @@
 }
 
 .logo_container img {
-    height: 150px;
+    height: 70px;
     width: auto;
     margin: 3px;
 }
@@ -176,7 +176,7 @@
 .modal-content {
     width: 600px;
     left: -70px;
-    border: 1px solid #e40e0e;
+    background-color: #4771a3;
 }
 
 .modal-footer {
@@ -184,4 +184,10 @@
     align-items: center;
     display: flex;
     justify-content: center;
+}
+
+.image {
+    width: auto;
+    height: 25px;
+    border-radius: 7px;
 }

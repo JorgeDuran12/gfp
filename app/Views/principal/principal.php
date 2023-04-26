@@ -1,7 +1,5 @@
 <?= $this->extend('Layouts/index')?>
 
-<?= view('
-
-') ?> 
+<?= view('') ?> 
 
 

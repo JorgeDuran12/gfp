@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="<?= base_url("/css/123/987654.css")?>">
+<link rel="stylesheet" href="<?= base_url("/css/123/987.css")?>">
 <body>
 
     <div class="titulo"> 

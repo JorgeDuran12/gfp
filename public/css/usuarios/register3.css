@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     /* height: 100vh; */
-    background-color: #e5e5e5;
+    background-color: #ededf2;
 }
 
 .rg_container {
@@ -18,7 +18,7 @@
     padding: 30px;
     display: grid;
     /* border: #e05311 2px solid; */
-    background-color: #c8a283;
+    background-color: #4771a3;
     border-radius: 10px;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 15px;
@@ -50,12 +50,12 @@
 
 .title {
     /* color: rgb(86, 113, 221); */
-    color:#120400;
+    color: #120400;
     font-size: 2.5em;
 }
 
 .subtitle {
-    color: rgb(21, 21, 20);
+    color: white;
 }
 
 .input_container {

@@ -1,5 +1,5 @@
 <body>
-    <link rel="stylesheet" href="<?= base_url("/css/123/123456.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/css/123/1234567.css")?>">
 
     <div class="titulo"> 
       <h3>Fondo de emergencia</h3>

@@ -17,7 +17,6 @@ class Principal extends BaseController
         .view('componentes/header')
         .view('principal/principal')
         .view('componentes/footer');
-        
         return $vistaPrincipal;
     }
 }

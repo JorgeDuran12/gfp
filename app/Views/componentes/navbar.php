@@ -51,7 +51,6 @@
     <div class="icons__admin">
    
       <div class="icon">
-        <li class="icon-image"><a href="#"><img src="<?= base_url("icons/disable.png")?>"/></a></li>
         <span class="icon-name">Deshabilitado</span>
       </div>
     </div>

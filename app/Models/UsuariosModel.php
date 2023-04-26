@@ -13,8 +13,8 @@ class UsuariosModel extends Model{
     protected $returnType     = 'array';  /* forma en que se retornan los datos */
     protected $useSoftDeletes = false; /* si hay eliminacion fisica de registro */
 
-    protected $allowedFields = ['usuario','nombre','apellido','pass','fecha_crea','estado','id_rol','usuario_crea']; /* relacion de campos de la tabla */
-
+    protected $allowedFields = ['usuario','nombre','apellido','pass','fecha_crea','estado','id_rol','usuario_crea','tipo_documento','num_documento']; /* relacion de campos de la tabla */
+    
     protected $useTimestamps = true; /*tipo de tiempo a utilizar */
     protected $createdField  = 'fecha_crea'; /*fecha automatica para la creacion */
     protected $updatedField  = ''; /*fecha automatica para la edicion */
@@ -25,7 +25,7 @@ class UsuariosModel extends Model{
     protected $skipValidation    = false;
 
 
- // <-------------funcion traer_cargo que sera usada en controlador por la funcion  buscar cargo----------------------->
+ // <-------------funcion traer_usuario que sera usada en controlador por la funcion  buscar_usuario----------------------->
 
  
  public function traerUsuario($clave, $valor){
