@@ -1,10 +1,8 @@
-/* FORMULARIO */
-
 .login__container {
-    height: 100vh;
+    height:100vh;
     width: 100%;
     display: flex;
-    /* flex-direction: column; */
+    /* flex-direction: column;  */
     align-items: center;
     justify-content: center;
     background: #ededf2;
@@ -13,13 +11,14 @@
 
 .login__form-container {
     background: #4771a3;
-    height: 700px;
+    height: 700px; 
     width: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 30px;
+    padding: 20px; 
+    /* //hoy en la tarde */
     border-radius: 20px;
     box-sizing: content-box;
 }
@@ -73,6 +72,8 @@
     display: flex;
     flex-direction: column;
     margin-top: 10px;
+    width: 400px;
+    /* border: #000000 2px solid; */
 }
 
 .login__input-container {
@@ -154,9 +155,9 @@
 }
 
 
-/* .login__btn-submit:hover {
-    background: rgba(215, 204, 200, 0.882);
-} */
+.login__btn-submit:hover {
+    background: rgba(194, 132, 110, 0.882);
+} 
 
 .login__form-register {
     margin-top: 40px;
