@@ -1,5 +1,5 @@
 .login__container {
-    height:100vh;
+    height: 100vh;
     width: 100%;
     display: flex;
     /* flex-direction: column;  */
@@ -11,13 +11,13 @@
 
 .login__form-container {
     background: #4771a3;
-    height: 700px; 
+    height: 700px;
     width: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px; 
+    padding: 20px;
     /* //hoy en la tarde */
     border-radius: 20px;
     box-sizing: content-box;
@@ -154,10 +154,9 @@
     border: none;
 }
 
-
 .login__btn-submit:hover {
     background: #e5eddcfc;
-} 
+}
 
 .login__form-register {
     margin-top: 40px;
@@ -178,4 +177,12 @@
 .login__form-register a {
     text-decoration: none;
     color: #ededf2;
+}
+
+.modal-content {
+    background: #e9e9e9;
+    text-align: center;
+    border-color: white;
+    border-width: 1px;
+    border-style: solid;
 }

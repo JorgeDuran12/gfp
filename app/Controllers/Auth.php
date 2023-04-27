@@ -5,7 +5,6 @@ use App\Models\UsuariosModel;
 
 class Auth extends BaseController
 {
-        
     protected $usuario;
     
     public function __construct()
@@ -39,10 +38,6 @@ class Auth extends BaseController
     } 
 
     /* Metodos */
-    public function registro() {
-        
-    }
-
     public function Login() {
         $username = $this->request->getPost('username');
         $password = $this->request->getPost('password');

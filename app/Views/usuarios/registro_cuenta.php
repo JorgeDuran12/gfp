@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?= base_url("/css/usuarios/register4.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/css/usuarios/register6.css")?>">
     <title>Registro</title>
 </head>
 <body class="registro_cuenta">
@@ -57,7 +57,7 @@
         <div class="input_container">
             <label class="input_label" for="email_field">Nombre de usuario</label>
             <img src="<?= base_url("icons/person-check-fill.svg")?>" class="icon">
-            <input placeholder="Ej: Dani pichon" name="input-name" type="text" class="input_field" id="usuario">
+            <input placeholder="Ej: Dani" name="input-name" type="text" class="input_field" id="usuario">
         </div>
 
         <div class="input_container">
@@ -89,8 +89,9 @@
                 <button type="submit" class="bnkl">
                     <span class="span">Crear cuenta</span>
                 </button>
+                <div class="cuenta_register"><p><strong>¿Ya tienes cuenta?</strong> <a href="<?php echo base_url("/")?>">Inicia sesión</a></p></div>
             </div>
-    </form>
+        </form>
    </div>
 </body>
 </html>

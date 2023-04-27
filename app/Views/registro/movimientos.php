@@ -1,8 +1,9 @@
 <body>
-<link rel="stylesheet" href="<?= base_url("/css/registro/movimientoss.css")?>">
+<link rel="stylesheet" href="<?= base_url("/css/registro/movimiento.css")?>">
 
 <div class="titulo"> 
-  <h2>Movimientos</h2>
+  <h1> <img  class="img"src="<?= base_url("img/movimiento.webp")?>" >
+    Movimientos</h1>
 </div ><br><br>
 <div  >
 <form action="" class="registro">

@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head></head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?= base_url("/css/saquito/saquito7.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/css/saquito/saquito8.css")?>">
 
     <title>Saquito</title>
 </head>
 
 <body>
 <div class="tim">
-<h1 > <img  class="img"src="<?= base_url("img/saquito.png")?>" > Saquito</h1>
+<h1 > <img  class="img"src="<?= base_url("img/saquito1.png")?>" > Saquito</h1>
  </div >
 
 <br><br>
 
-<div class="input-group mb-3 ">
+<div class="input-group mb-3 date ">
             <span class="input-group-text" id="inputGroup-sizing-default"><img src="<?= base_url("icons/question-circle-fill.svg")?>"    title="En esta opcion debera digitalizar el dia del mes donde el aplicativo debera descontar de la disponibilidad de la cuota para el saquito">  &nbsp Fecha inicial</span>
             <input  type="date"   class="ss" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
 </div>
@@ -69,6 +69,7 @@
     
 </div> 
 </form>
+<!-- Modal  Guadar-->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -86,7 +87,7 @@
       </div>
     </div>
   </div>
-
+<!-- Modal Eliminar-->
   <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -104,6 +105,7 @@
       </div>
     </div>
   </div>
+  <!-- Modal  Editar-->
   <div class="modal fade" id="editarModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -112,6 +114,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
+       
         <div class="titulo"> 
        <h3>Meta</h3>
        </div>
@@ -146,6 +149,7 @@
       </div>
     </div>
   </div>
+
 </body>
 </div>
 </div>

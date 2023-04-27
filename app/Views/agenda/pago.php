@@ -1,6 +1,6 @@
 <body>
-<link rel="stylesheet" href="<?= base_url("/css/actividades/actividadesss.css")?>">
-    <div class="titulo"> 
+<link rel="stylesheet" href="<?= base_url("/css/actividades/actividades.css")?>">
+    <div class="titu"> 
         <h2>Actividades</h2>
     </div ><br><br>
 
