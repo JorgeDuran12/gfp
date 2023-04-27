@@ -38,13 +38,13 @@ class Auth extends BaseController
     } 
 
     /* Metodos */
-    public function Login() {
-        $username = $this->request->getPost('username');
-        $password = $this->request->getPost('password');
+    // public function Login() {
+    //     $username = $this->request->getPost('username');
+    //     $password = $this->request->getPost('password');
         
-        if( $this->request->getMethod() == 'post') {
-            if($username && $password ) {
-                $datos = $this->usuario->traerUsuario('usuario', $username);
+    //     if( $this->request->getMethod() == 'post') {
+    //         if($username && $password ) {
+    //             $datos = $this->usuario->traerUsuario('usuario', $username);
                 
 
                 // $infoUsuario = [
