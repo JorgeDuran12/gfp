@@ -13,7 +13,7 @@
                         finanzas hoy!</strong> </span>
             </div>
             <br>
-            <form class="login__form" action="<?= base_url('Auth/login')?>" method="POST">
+            <form class="login__form" action="<?= base_url('ValidarUsuario')?>" method="POST">
                 <div class="login__input-container">
                     <label class="login__form-input-label" for="email">Correo electronico: </label>
                     <img src="<?= base_url("icons/envelope-fill.svg")?>" class="login__form-icon">

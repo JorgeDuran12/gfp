@@ -38,7 +38,8 @@ class Auth extends BaseController
     } 
 
     /* Metodos */
-    // public function Login() {
+
+    // public function ValidarUsuario() {
     //     $username = $this->request->getPost('username');
     //     $password = $this->request->getPost('password');
         
@@ -47,16 +48,17 @@ class Auth extends BaseController
     //             $datos = $this->usuario->traerUsuario('usuario', $username);
                 
 
-                // $infoUsuario = [
-                //     'username' => $datos['usuario'],
-                //     'rol' => $datos['id_rol']
-                // ];
-                // $session = session($infoUsuario);
+    //             $infoUsuario = [
+    //                 'username' => $datos['usuario'],
+    //                 'rol' => $datos['id_rol']
+    //             ];
+    //             $session = session($infoUsuario);
 
-            };
-        };
+    //         };
+    //     };
         
-    }
+    // }
+    // https://www.php.net/manual/es/session.customhandler.php
 }
 
 

@@ -33,7 +33,7 @@ $routes->set404Override();
 $routes->get('/', 'Auth::index');
 
 /* Rutas Login */
-
+$routes->post('ValidarUsuario', 'Auth::ValidarUsuario');
 /*  */
 $routes->get('/principal', 'Principal::index');
 $routes->get('registro', 'Auth::registroPagina');
