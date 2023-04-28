@@ -45,10 +45,10 @@ class Usuario extends BaseController
                     'id_rol' => $this->request->getPost('id_rol'),
                     'tipo_documento' => $this->request->getPost('tipo_documento'),
                     'num_documento' => $this->request->getPost('num_documento'),
-                    'pass' => $this->request->getPost('pass'),
+                    'pass' => $this->request->getPost('pass')
                 ]);
             } else {
-                $this->usuario->update($this->request->getPost('id'),[       
+                $this->usuario->update($this->request->getPost('id_usuario'),[       
                     'usuario' => $this->request->getPost('usuario'),             
                     'nombre' => $this->request->getPost('nombre'),
                     'apellido' => $this->request->getPost('apellido'),

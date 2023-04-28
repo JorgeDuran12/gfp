@@ -1,6 +1,7 @@
 <?= $this->extend("layouts/authLayout")?>
 <?= $this->section("contenido")?>
 
+
 <div class="login__container">
     <div class="login__form-container">
         <div class="login__logo-container">
@@ -74,5 +75,6 @@
 
 
 </div>
+
 
 <?= $this->endSection("contenido")?>

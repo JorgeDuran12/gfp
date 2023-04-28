@@ -28,9 +28,10 @@ class UsuariosModel extends Model{
  // <-------------funcion traer_usuario que sera usada en controlador por la funcion  buscar_usuario----------------------->
 
  
- public function traer_usuario($clave, $valor){
+ public function traer_usuario($id){
     $this->select('usuarios.*');
-    $this->where($clave, $valor);
+    $this->where('estado','A');
+    $this->where('id_usuario',$id);
     $datos = $this->first();  
     return $datos;
 }
@@ -42,10 +43,10 @@ class UsuariosModel extends Model{
     return $datos;
 }
 
- public function obtenerusuario(){
+ public function obtener_usuario(){
      $this->select('usuarios.*');
-      $this->where('estado', 'A');
-     $datos = $this->findAll();  //nos trae todos los registros que cumplan con una condicion dada 
+     $this->where('estado', 'A');
+     $datos = $this->findall();  //nos trae todos los registros que cumplan con una condicion dada 
       return $datos;
    }
  

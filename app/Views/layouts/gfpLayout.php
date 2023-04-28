@@ -26,16 +26,16 @@
     <link rel="stylesheet" href="<?= base_url('css/pagina/paginaStyle.css') ?>">
     <link rel="stylesheet" href="<?= base_url('css/footer/footerStyles.css') ?>">
     <link rel="stylesheet" href="<?= base_url('css/principal/principalStyle.css') ?>">
-    <link rel="stylesheet" href="<?= base_url("/css/usuarios/loginStyles.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/css/usuarios/loginStyles2.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/agenda/pagoStyles.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/registro/movimientoss.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/actividades/actividad.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/saquito/saquito1.css")?>">
-    <link rel="stylesheet" href="<?= base_url("/css/registro/movimientos.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/css/registro/movimiento.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/agenda/pagoStyles.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/fullCalendar/fullCalendar.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/123/123456.css")?>">
-    <link rel="stylesheet" href="<?= base_url("/css/123/9876543.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/css/123/987654.css")?>">
 
 
     <!-- Full calendar -->
@@ -43,7 +43,6 @@
 <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/web-component@6.1.6/index.global.min.js'></script>
 <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@6.1.6/index.global.min.js'></script>
 
-    <title><?= $tituloPagina ?></title>
 </head>
 
 <body class="body__container">

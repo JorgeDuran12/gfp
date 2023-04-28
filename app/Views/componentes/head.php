@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="<?= base_url('css/pagina/paginaStyles.css') ?>">
     <link rel="stylesheet" href="<?= base_url('css/footer/footerStyles.css') ?>">
     <link rel="stylesheet" href="<?= base_url('css/principal/principalStyles.css') ?>">
-    <link rel="stylesheet" href="<?= base_url("/css/usuarios/loginStyles8.css")?>">
+    <!-- <link rel="stylesheet" href="<= base_url("/css/usuarios/loginStyles2.css")?>"> -->
     <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /> --> <!-- Icono -->
 
     <link

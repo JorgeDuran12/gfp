@@ -2,7 +2,7 @@
 <?= $this->section("contenido")?>
 
 
-<div class="titulo">
+<div class="tim2">
     <h1> <img class="img" src="<?= base_url("img/saquito1.png")?>"> Saquito</h1>
 </div>
 
@@ -146,7 +146,9 @@
                 <button type="Submit" class="btn btn-success">Guadar</button>
             </div>
         </div>
-    </div>
+ <!-- <---------------------div de header y footer-------------------> 
+ </div>
+
 </div>
 
 

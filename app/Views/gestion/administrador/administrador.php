@@ -17,7 +17,7 @@
     <div id="contenedor">
   <div id="limite">
             <div class="table-responsive">
-                <table class="table table-dark table-sm table-striped" id="dataTable" width="100%" cellspacing="0">
+                <table class="table table-red  table-sm table-striped" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr >
                             <th>Id</th>
@@ -85,7 +85,6 @@
       
 
               <!-- nombre -->
-
         <div class="input_container">
             <label class="input_label" for="email_field">Nombre</label>
             <img src="<?= base_url("icons/person-fill.svg")?>" class="icon">
@@ -157,7 +156,7 @@
         </div>
         
         <input hidden id="tp" name ="tp" >
-        <input hidden id="id" name ="id" >
+        <input hidden id="id_usuario" name ="id_usuario">
 
       </div>
       <div class="modal-footer">
@@ -174,10 +173,6 @@
             </div>
             </div>
 
-<!-- <---------------------div de header y footer-------------------> 
-</div>
-</div>
-
 
 
 
@@ -188,13 +183,13 @@
  
   function seleccionausuario(id, tp) {
     if (tp == 2) {
-      dataURL = "<?php echo base_url('/usuario/buscar_usuario'); ?>" + "/" + id;
+      dataURL = "<?php echo base_url('buscar_usuario'); ?>" + "/" + id;
       $.ajax({
          type: "POST",
          url: dataURL,
          dataType: "json",
          success: function(rs) {
-           document.getElementById('exampleModalLabel').innerht="Actualizar usuario";
+           document.getElementById('exampleModalLabel');           
            $("#tp").val(2);
            $("#id_usuario").val(id);
            $("#usuario").val(rs[0]['usuario']);

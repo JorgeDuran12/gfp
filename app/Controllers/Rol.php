@@ -23,14 +23,6 @@ class Rol extends BaseController
         $rol = $this->rol->where('estado', "A")->findAll();   
         $datos = ['tituloPag' => 'Rol','roles'=>$rol];
 
-        $vistaPrincipal = 
-        view('componentes/head', $datos)
-        .view('componentes/navbar')
-        .view('componentes/header')
-
-        .view('roles/rol')
-        .view('componentes/footer');
-        
-        return $vistaPrincipal;
+        echo view("gestion/roles/rol", $datos);
     }
 }

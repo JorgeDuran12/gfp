@@ -1,4 +1,3 @@
-
 .login__form-container {
     background: #4771a3;
     height: 700px;
@@ -109,14 +108,6 @@
 .login__form-input-field:hover {
     background-color: rgb(241, 240, 240);
 }
-
-
-/* .login__background-content {
-    background: url('../../img/backgroundLogin.jpg');
-    background-size: cover;
-    width: 100%;
-    position: sticky;
-} */
 
 .login__form-footer {
     width: 100%;
