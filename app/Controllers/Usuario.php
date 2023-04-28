@@ -6,34 +6,31 @@ namespace App\Controllers;
 use App\Controllers\BaseController;
 use App\Models\UsuariosModel;
 use App\Models\RolModel;
+use App\Models\ParamentrosModel;
+
 
 
 
 class Usuario extends BaseController
 {
-    protected $usuario,$rol;
+    protected $usuario,$rol,$parametro;
 
     public function __construct()
     {
         $this->usuario = new UsuariosModel();
         $this->rol = new RolModel();
+        $this->parametro = new ParamentrosModel();
 
     }
 
     public function index()
     {
         $usuario = $this->usuario->where('estado', "A")->findAll();   
+        $parametro = $this->parametro->where('estado', "A")->findAll();   
         $rol = $this->rol->where('estado', "A")->findAll();   
-        $datos = ['tituloPag' => 'Administrador','usuarios'=>$usuario, 'roles'=>$rol ];
+        $datos = ['tituloPag' => 'Administrador','usuarios'=>$usuario, 'roles'=>$rol, 'parametros'=>$parametro, 'tituloPagina' => 'Administradores' ];
 
-        $vistaPrincipal = 
-        view('componentes/head', $datos)
-        .view('componentes/navbar')
-        .view('componentes/header')
-        .view('usuario/usuario')
-        .view('componentes/footer');
-        
-        return $vistaPrincipal;
+        echo view("gestion/administrador/administrador", $datos);
     }
 
     public function insertar()
@@ -66,10 +63,10 @@ class Usuario extends BaseController
         }
     }
       // <---------------------------------buscar_usuario del model traer_usuario -------------------------------------->
-      public function buscar_usuario($id)
+      public function buscar_usuario($id_usuario)
       {
           $returnData = array();
-          $usuario_ = $this->usuario->traer_usuario($id);
+          $usuario_ = $this->usuario->traer_usuario($id_usuario);
           if (!empty($usuario_)) {
               array_push($returnData, $usuario_);    
           }

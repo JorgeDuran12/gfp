@@ -10,7 +10,9 @@
             <h2>Gestor de Finanzas Personales</h2>
     </div>
     <div class="header__btns__container">
-        <button class="btn btn-outline-danger">Cerrar sesión</button>
+        <a href="<?= base_url("auth/logout")?>">
+            <button class="btn btn-outline-danger">Cerrar sesión</button>
+        </a>
     </div>
 </header>
 

@@ -6,16 +6,8 @@ class Emergencia extends BaseController
 {
     public function index()
     {
-        $datos = ['tituloPag' => 'Emergencia'];
-
-        $vistaPrincipal = 
-        view('componentes/head', $datos)
-        .view('componentes/navbar')
-        .view('componentes/header')
-
-        .view('fondos/emergencia')
-        .view('componentes/footer');
-        
-        return $vistaPrincipal;
+        echo view("gfp/fondo/emergencia", [
+            'tituloPagina' => 'Fondo de emergencia'
+        ]);
     }
 }

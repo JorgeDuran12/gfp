@@ -6,16 +6,8 @@ class Agenda extends BaseController
 {
     public function index()
     {
-        $datos = ['tituloPag' => 'Agenda'];
-
-        $vistaPrincipal = 
-        view('componentes/head', $datos)
-        .view('componentes/navbar')
-        .view('componentes/header')
-
-        .view('agenda/pago')
-        .view('componentes/footer');
-        
-        return $vistaPrincipal;
+        echo view("gfp/agenda/pago", [
+            'tituloPagina' => 'Agenda de pagos'
+        ]);
     }
 }

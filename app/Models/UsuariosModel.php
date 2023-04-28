@@ -28,7 +28,7 @@ class UsuariosModel extends Model{
  // <-------------funcion traer_usuario que sera usada en controlador por la funcion  buscar_usuario----------------------->
 
  
- public function traerUsuario($clave, $valor){
+ public function traer_usuario($clave, $valor){
     $this->select('usuarios.*');
     $this->where($clave, $valor);
     $datos = $this->first();  

@@ -1,0 +1,43 @@
+.header__container {
+    display: flex;
+    height: 10vh;
+    color: rgba(0, 0, 0, 0.26);
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.891);
+}
+
+
+/*  */
+
+.header__profile__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: dashed;
+    padding-left: 20px;
+}
+
+
+/* .header__profile__container>span {
+    text-decoration: underline;
+    color: red;
+} */
+
+.header__logo {
+    width: 550px;
+    height: 80px;
+}
+
+
+/*  */
+
+.header__btns__container {
+    padding-right: 20px;
+}
+
+.header__icon {
+    width: 40px;
+    font-size: 20px;
+}

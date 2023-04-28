@@ -30,13 +30,26 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 
+/*  Routas Principales (Links)*/
 $routes->get('/', 'Auth::index');
+$routes->get('principal', 'Principal::index');
+$routes->get('agenda_de_pago', 'Agenda::index');
+$routes->get('mi_saquito', 'Saquito::index');
+$routes->get('mis_movimientos', 'Registro::index');
+$routes->get('fondo_de_emergencia', 'Emergencia::index');
+$routes->get('gestion_de_administradores', 'Usuario::index');
+
+
+// rutas de peticion
+
 
 /* Rutas Login */
 $routes->post('ValidarUsuario', 'Auth::ValidarUsuario');
-/*  */
-$routes->get('/principal', 'Principal::index');
+$routes->post('Registrar', 'Auth::guardar');
+
+
 $routes->get('registro', 'Auth::registroPagina');
+
 
 
 
