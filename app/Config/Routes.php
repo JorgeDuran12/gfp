@@ -43,12 +43,10 @@ $routes->get('gestion_de_administradores', 'Usuario::index');
 // rutas de peticion
 $routes->post('buscar_usuario/(:num)','Usuario::buscar_usuario/$1');
 
-/* Rutas Login */
+/* Rutas Login y Registro */
 $routes->post('ValidarUsuario', 'Auth::ValidarUsuario');
+$routes->get('CrearCuenta', 'Auth::registroPagina');
 $routes->post('Registrar', 'Auth::guardar');
-
-
-$routes->get('registro', 'Auth::registroPagina');
 
 
 

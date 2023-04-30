@@ -36,7 +36,7 @@
             </div>
             <div class="login__form-register">
                 <p><strong>¿No te has registrado aún?</strong></p>
-                <a class="" href="<?php echo base_url('/registro'); ?>">Crear mi cuenta!</a>
+                <a class="" href="<?php echo base_url('CrearCuenta'); ?>">Crear mi cuenta!</a>
             </div>
         </form>
 

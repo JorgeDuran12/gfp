@@ -42,19 +42,19 @@ class ParamentrosModel extends Model{
     return $datos;
 }
 
- public function obtener_parametros(){
-     $this->select('parametros_det.*');
-      $this->where('estado', 'A');
-     $datos = $this->findAll();  //nos trae todos los registros que cumplan con una condicion dada 
-      return $datos;
+    public function obtener_parametros(){
+    $this->select('parametros_det.*');
+    $this->where('estado', 'A');
+    $datos = $this->findAll();  //nos trae todos los registros que cumplan con una condicion dada 
+    return $datos;
+    }
+
+    public function obtener_encabezado_3(){
+        $this->select('parametros_det.*, ');
+        $this->where('estado', 'A');
+        $this->where('id_parametro_enc', 3);
+        $datos = $this->findAll();  //nos trae todos los registros que cumplan con una condicion dada 
+        return $datos;
    }
 
-//    public function tipo_dcto_filtro($id_parametro_enc){
-//     $this->select('parametros_det.*');
-//     $this->where('id_parametro_det.id_parametro_enc',$id_parametro_det="3");
-//     $this->where('estado', 'A');
-//     $datos = $this->findAll(); 
-//     return $datos;
-//    }
- 
 }
