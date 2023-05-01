@@ -27,25 +27,45 @@ class EmailsModel extends Model{
 
  // <-------------funcion traer_email que sera usada en controlador por la funcion  buscar_email----------------------->
 
- public function traerEmail($clave, $valor){
+    public function traerEmail($id){
     $this->select('emails.*');
-    $this->where($clave, $valor);
+    $this->where('emails',$id);
+    $this->where('estado','A');
     $datos = $this->first();  
     return $datos;
-}
+    }
 
     // <-----------------------------------funcion eliminar en vista principal----------------------------------->
 
- public function elimina_email($id,$estado){
+    public function elimina_email($id,$estado){
      $datos = $this->update($id, ['estado' => $estado]);         
     return $datos;
-}
+    }
 
- public function obtener_parametros(){
+    public function obtener_parametros(){
      $this->select('emails.*');
       $this->where('estado', 'A');
      $datos = $this->findAll();  //nos trae todos los registros que cumplan con una condicion dada 
       return $datos;
-   }
- 
+    }
+
+    // public function Session_Email($email, $id){
+    //     $this->where('estado', 'A');
+    //     $this->where('id_usuario', $id);
+    //     $this->where('email', $email);
+    //     $datos = $this->first();
+    //     return $datos;
+    // }
+
+    // public function Validar_log($id, $email, $estado){
+    //   $this->select('emails.*, usuarios.id_usuario as id_usuario, usuarios.pass as pass, emails.id_email as id_email, usuarios.usuario as usuario');
+    //   $this->join('emails','usuarios.id_usuario = emails.id_usuario');
+    //   $this->join('usuarios','usuarios.pass = email.pass');
+    //   $this->where('emails.estado', 'A');
+    //   $this->where('usuarios.estado', 'A');
+    //   $this->where('emails.id_email', $id);
+    //   $datos = $this->first();           
+    //   return $datos;
+    // }
+
 }

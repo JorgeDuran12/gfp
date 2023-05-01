@@ -33,7 +33,6 @@
             <img src="<?= base_url("icons/person-vcard-fill.svg")?>" class="icon">
             <select class="select" name="tipo_documento" id="tipo_documento" aria-label="Default select example"
                 required>
-                <!-- <option disabled selected>Tipo de documento</option> -->
                 <?php foreach ($parametros as $data) {?>
                 <option value="<?php echo $data["id_parametro_det"]; ?>"><?php echo $data["nombre"];?></option>
                 <?php } ?>

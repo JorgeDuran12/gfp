@@ -32,7 +32,7 @@ $routes->set404Override();
 
 /*  Routas Principales (Links)*/
 $routes->get('/', 'Auth::index');
-$routes->get('principal', 'Principal::index');
+$routes->get('/principal', 'Principal::index');
 $routes->get('agenda_de_pago', 'Agenda::index');
 $routes->get('mi_saquito', 'Saquito::index');
 $routes->get('mis_movimientos', 'Registro::index');
@@ -44,7 +44,9 @@ $routes->get('gestion_de_administradores', 'Usuario::index');
 $routes->post('buscar_usuario/(:num)','Usuario::buscar_usuario/$1');
 
 /* Rutas Login y Registro */
-$routes->post('ValidarUsuario', 'Auth::ValidarUsuario');
+
+// $routes->post('ValidarUsuario', 'Auth::ValidarUsuario');
+$routes->post('Validar', 'Auth::ValidarUsuario');
 $routes->get('CrearCuenta', 'Auth::registroPagina');
 $routes->post('Registrar', 'Auth::guardar');
 

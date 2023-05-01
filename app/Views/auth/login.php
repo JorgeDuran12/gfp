@@ -4,9 +4,9 @@
 
 <div class="login__container">
     <div class="login__form-container">
-        <div class="login__logo-container">
+        <!-- <div class="login__logo-container">
             <img src="<?= base_url("../img/gfp.png");?>" alt="logo_gfp">
-        </div>
+        </div> -->
 
         <div class="login__title-container">
             <p class="login__title-text">Iniciar sesión</p>
@@ -14,26 +14,27 @@
                     finanzas hoy!</strong> </span>
         </div>
         <br>
-        <form class="login__form" action="<?= base_url('ValidarUsuario')?>" method="POST">
+        <form class="login__form" action="<?php echo base_url('Validar');?>" method="POST">
             <div class="login__input-container">
                 <label class="login__form-input-label" for="email">Correo electronico: </label>
                 <img src="<?= base_url("icons/envelope-fill.svg")?>" class="login__form-icon">
-                <input placeholder="Ej: correo@gmail.com" name="username" type="text" class="login__form-input-field"
-                    id="username">
+                <input placeholder="Ej: correo@gmail.com" name="email" type="email" class="login__form-input-field"
+                    id="email" required>
             </div>
-
             <div class="login__input-container">
                 <label class="login__form-input-label" for="password">Contraseña: </label>
                 <img src="<?= base_url("icons/person-fill-lock.svg")?>" class="login__form-icon">
-                <input placeholder="Ej: **********" name="password" type="text" class="login__form-input-field"
-                    id="password">
+                <input placeholder="Ej: **********" name="password" type="password" class="login__form-input-field"
+                    id="password" required>
             </div>
+
             <div class="login__form-footer">
                 <a data-bs-toggle="modal" data-bs-target="#recuperarModal" href="#">
                     ¿Has olvidado tu contraseña?
                 </a>
                 <button class="login__btn-submit" type="submit">Entrar</button>
             </div>
+
             <div class="login__form-register">
                 <p><strong>¿No te has registrado aún?</strong></p>
                 <a class="" href="<?php echo base_url('CrearCuenta'); ?>">Crear mi cuenta!</a>
@@ -75,6 +76,5 @@
 
 
 </div>
-
 
 <?= $this->endSection("contenido")?>
