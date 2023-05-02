@@ -1,0 +1,862 @@
+ERROR - 2023-05-02 12:16:23 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'gfp_bd' in C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'gfp_bd', 3306, '', 0)
+#1 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\gfp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\gfp\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\gfp\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\gfp\app\Controllers\Rol.php(23): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\gfp\system\CodeIgniter.php(934): App\Controllers\Rol->index()
+#8 C:\xampp\htdocs\gfp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rol))
+#9 C:\xampp\htdocs\gfp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\gfp\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'gfp_bd' in C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\gfp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\gfp\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\gfp\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\gfp\app\Controllers\Rol.php(23): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\gfp\system\CodeIgniter.php(934): App\Controllers\Rol->index()
+#7 C:\xampp\htdocs\gfp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rol))
+#8 C:\xampp\htdocs\gfp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\gfp\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-02 12:16:23 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'gfp_bd'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `roles`
+WHERE `estado` = :estado:', [...], false)
+ 3 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Rol.php(23): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Rol->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rol))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-02 12:20:23 --> mysqli_sql_exception: Duplicate entry 'Alejo2' for key 'usuario' in C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\gfp\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\gfp\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\gfp\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\gfp\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\gfp\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\gfp\app\Controllers\Auth.php(62): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\gfp\system\CodeIgniter.php(934): App\Controllers\Auth->guardar()
+#10 C:\xampp\htdocs\gfp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#11 C:\xampp\htdocs\gfp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\gfp\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-05-02 12:20:23 --> Duplicate entry 'Alejo2' for key 'usuario'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `usuarios` (`usuario`, `nombre`, `apellido`, `tipo_documento`, `num_documento`, `pass`, `fecha_crea`) VALUES (\'Alejo2\', \'alejo\', \'duran\', \'9\', \'2946545\', \'$2y$10$QEsGwCeWP3Ne6I1cpnUBFernubUeCUDkoSysUW2YbDOUcdgjFKGuS\', \'2023-05-02 12:20:23\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuarios` (`usuario`, `nombre`, `apellido`, `tipo_documento`, `num_documento`, `pass`, `fecha_crea`) VALUES (\'Alejo2\', \'alejo\', \'duran\', \'9\', \'2946545\', \'$2y$10$QEsGwCeWP3Ne6I1cpnUBFernubUeCUDkoSysUW2YbDOUcdgjFKGuS\', \'2023-05-02 12:20:23\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuarios` (`usuario`, `nombre`, `apellido`, `tipo_documento`, `num_documento`, `pass`, `fecha_crea`) VALUES (\'Alejo2\', \'alejo\', \'duran\', \'9\', \'2946545\', \'$2y$10$QEsGwCeWP3Ne6I1cpnUBFernubUeCUDkoSysUW2YbDOUcdgjFKGuS\', \'2023-05-02 12:20:23\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuarios` (`usuario`, `nombre`, `apellido`, `tipo_documento`, `num_documento`, `pass`, `fecha_crea`) VALUES (:usuario:, :nombre:, :apellido:, :tipo_documento:, :num_documento:, :pass:, :fecha_crea:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Auth.php(62): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->guardar()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-02 12:20:40 --> mysqli_sql_exception: Duplicate entry 'alejo2' for key 'usuario' in C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\gfp\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\gfp\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\gfp\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\gfp\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\gfp\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\gfp\app\Controllers\Auth.php(62): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\gfp\system\CodeIgniter.php(934): App\Controllers\Auth->guardar()
+#10 C:\xampp\htdocs\gfp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#11 C:\xampp\htdocs\gfp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\gfp\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-05-02 12:20:40 --> Duplicate entry 'alejo2' for key 'usuario'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `usuarios` (`usuario`, `nombre`, `apellido`, `tipo_documento`, `num_documento`, `pass`, `fecha_crea`) VALUES (\'alejo2\', \'alejo\', \'duran\', \'9\', \'2946545\', \'$2y$10$kPn3lE.sUrAjatoTi0aPBeYUTzNsKnUy6TQ1oVMTv/mBZEetR0nT6\', \'2023-05-02 12:20:40\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuarios` (`usuario`, `nombre`, `apellido`, `tipo_documento`, `num_documento`, `pass`, `fecha_crea`) VALUES (\'alejo2\', \'alejo\', \'duran\', \'9\', \'2946545\', \'$2y$10$kPn3lE.sUrAjatoTi0aPBeYUTzNsKnUy6TQ1oVMTv/mBZEetR0nT6\', \'2023-05-02 12:20:40\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuarios` (`usuario`, `nombre`, `apellido`, `tipo_documento`, `num_documento`, `pass`, `fecha_crea`) VALUES (\'alejo2\', \'alejo\', \'duran\', \'9\', \'2946545\', \'$2y$10$kPn3lE.sUrAjatoTi0aPBeYUTzNsKnUy6TQ1oVMTv/mBZEetR0nT6\', \'2023-05-02 12:20:40\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuarios` (`usuario`, `nombre`, `apellido`, `tipo_documento`, `num_documento`, `pass`, `fecha_crea`) VALUES (:usuario:, :nombre:, :apellido:, :tipo_documento:, :num_documento:, :pass:, :fecha_crea:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Auth.php(62): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->guardar()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-02 12:24:55 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`gfp_bd`.`emails`, CONSTRAINT `email_prioridad` FOREIGN KEY (`prioridad`) REFERENCES `parametros_det` (`id_parametro_det`)) in C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `em...', 0)
+#1 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `em...')
+#2 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `em...')
+#3 C:\xampp\htdocs\gfp\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `em...', Array, false)
+#4 C:\xampp\htdocs\gfp\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\gfp\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\gfp\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\gfp\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\gfp\app\Controllers\Auth.php(76): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\gfp\system\CodeIgniter.php(934): App\Controllers\Auth->guardar()
+#10 C:\xampp\htdocs\gfp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#11 C:\xampp\htdocs\gfp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\gfp\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-05-02 12:24:55 --> Cannot add or update a child row: a foreign key constraint fails (`gfp_bd`.`emails`, CONSTRAINT `email_prioridad` FOREIGN KEY (`prioridad`) REFERENCES `parametros_det` (`id_parametro_det`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `emails` (`id_usuario`, `usuario_crea`, `email`, `fecha_crea`) VALUES (48, 48, \'adsofull17@gmail.com\', \'2023-05-02 12:24:55\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `emails` (`id_usuario`, `usuario_crea`, `email`, `fecha_crea`) VALUES (48, 48, \'adsofull17@gmail.com\', \'2023-05-02 12:24:55\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `emails` (`id_usuario`, `usuario_crea`, `email`, `fecha_crea`) VALUES (48, 48, \'adsofull17@gmail.com\', \'2023-05-02 12:24:55\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `emails` (`id_usuario`, `usuario_crea`, `email`, `fecha_crea`) VALUES (:id_usuario:, :usuario_crea:, :email:, :fecha_crea:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Auth.php(76): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->guardar()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-02 12:25:06 --> mysqli_sql_exception: Duplicate entry '6165' for key 'usuario' in C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\gfp\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\gfp\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\gfp\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\gfp\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\gfp\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\gfp\app\Controllers\Auth.php(62): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\gfp\system\CodeIgniter.php(934): App\Controllers\Auth->guardar()
+#10 C:\xampp\htdocs\gfp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#11 C:\xampp\htdocs\gfp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\gfp\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-05-02 12:25:06 --> Duplicate entry '6165' for key 'usuario'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `usuarios` (`usuario`, `nombre`, `apellido`, `tipo_documento`, `num_documento`, `pass`, `fecha_crea`) VALUES (\'6165\', \'nin\', \'ini\', \'9\', \'5489\', \'$2y$10$k9cqVgncfnQ/hlebA/c/6uDbTrDIFpMWE83LDAuIe7lNGZ30rMV7W\', \'2023-05-02 12:25:06\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuarios` (`usuario`, `nombre`, `apellido`, `tipo_documento`, `num_documento`, `pass`, `fecha_crea`) VALUES (\'6165\', \'nin\', \'ini\', \'9\', \'5489\', \'$2y$10$k9cqVgncfnQ/hlebA/c/6uDbTrDIFpMWE83LDAuIe7lNGZ30rMV7W\', \'2023-05-02 12:25:06\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuarios` (`usuario`, `nombre`, `apellido`, `tipo_documento`, `num_documento`, `pass`, `fecha_crea`) VALUES (\'6165\', \'nin\', \'ini\', \'9\', \'5489\', \'$2y$10$k9cqVgncfnQ/hlebA/c/6uDbTrDIFpMWE83LDAuIe7lNGZ30rMV7W\', \'2023-05-02 12:25:06\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuarios` (`usuario`, `nombre`, `apellido`, `tipo_documento`, `num_documento`, `pass`, `fecha_crea`) VALUES (:usuario:, :nombre:, :apellido:, :tipo_documento:, :num_documento:, :pass:, :fecha_crea:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Auth.php(62): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->guardar()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-02 12:25:19 --> mysqli_sql_exception: Duplicate entry '6165' for key 'usuario' in C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\gfp\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\gfp\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\gfp\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\gfp\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\gfp\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\gfp\app\Controllers\Auth.php(62): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\gfp\system\CodeIgniter.php(934): App\Controllers\Auth->guardar()
+#10 C:\xampp\htdocs\gfp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#11 C:\xampp\htdocs\gfp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\gfp\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-05-02 12:25:19 --> Duplicate entry '6165' for key 'usuario'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `usuarios` (`usuario`, `nombre`, `apellido`, `tipo_documento`, `num_documento`, `pass`, `fecha_crea`) VALUES (\'6165\', \'nin\', \'ini\', \'9\', \'5489\', \'$2y$10$hwvPE9KigTKtOk5JLVHtNOtVkbZR56Vh52vU2vyR6PAFYKydAt7M.\', \'2023-05-02 12:25:19\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuarios` (`usuario`, `nombre`, `apellido`, `tipo_documento`, `num_documento`, `pass`, `fecha_crea`) VALUES (\'6165\', \'nin\', \'ini\', \'9\', \'5489\', \'$2y$10$hwvPE9KigTKtOk5JLVHtNOtVkbZR56Vh52vU2vyR6PAFYKydAt7M.\', \'2023-05-02 12:25:19\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuarios` (`usuario`, `nombre`, `apellido`, `tipo_documento`, `num_documento`, `pass`, `fecha_crea`) VALUES (\'6165\', \'nin\', \'ini\', \'9\', \'5489\', \'$2y$10$hwvPE9KigTKtOk5JLVHtNOtVkbZR56Vh52vU2vyR6PAFYKydAt7M.\', \'2023-05-02 12:25:19\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuarios` (`usuario`, `nombre`, `apellido`, `tipo_documento`, `num_documento`, `pass`, `fecha_crea`) VALUES (:usuario:, :nombre:, :apellido:, :tipo_documento:, :num_documento:, :pass:, :fecha_crea:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Auth.php(62): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->guardar()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-02 13:05:47 --> Cannot redeclare App\Controllers\Auth::ValidarUsuario()
+in APPPATH\Controllers\Auth.php on line 120.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-05-02 13:05:52 --> Cannot redeclare App\Controllers\Auth::ValidarUsuario()
+in APPPATH\Controllers\Auth.php on line 120.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-05-02 13:07:25 --> Cannot redeclare App\Controllers\Auth::ValidarUsuario()
+in APPPATH\Controllers\Auth.php on line 120.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-05-02 13:07:26 --> Cannot redeclare App\Controllers\Auth::ValidarUsuario()
+in APPPATH\Controllers\Auth.php on line 120.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-05-02 13:07:26 --> Cannot redeclare App\Controllers\Auth::ValidarUsuario()
+in APPPATH\Controllers\Auth.php on line 120.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-05-02 13:07:41 --> Cannot redeclare App\Controllers\Auth::ValidarUsuario()
+in APPPATH\Controllers\Auth.php on line 120.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-05-02 13:09:56 --> Cannot redeclare App\Controllers\Auth::ValidarUsuario()
+in APPPATH\Controllers\Auth.php on line 120.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-05-02 13:10:19 --> Cannot redeclare App\Controllers\Auth::ValidarUsuario()
+in APPPATH\Controllers\Auth.php on line 120.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-05-02 13:10:42 --> Cannot redeclare App\Controllers\Auth::ValidarUsuario()
+in APPPATH\Controllers\Auth.php on line 120.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-05-02 13:11:35 --> syntax error, unexpected identifier "irect", expecting ";"
+in APPPATH\Controllers\Auth.php on line 115.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Auth')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Auth')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Auth', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-02 13:20:21 --> syntax error, unexpected single-quoted string "as parameter", expecting ")"
+in APPPATH\Models\ParamentrosModel.php on line 55.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\gfp\\app\\Models\\ParamentrosModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\ParamentrosModel')
+ 3 APPPATH\Controllers\Usuario.php(22): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\ParamentrosModel')
+ 4 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Usuario->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-02 13:33:42 --> Undefined array key "detalle"
+in APPPATH\Views\gestion\administrador\administrador.php on line 41.
+ 1 APPPATH\Views\gestion\administrador\administrador.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "detalle"', 'C:\\xampp\\htdocs\\gfp\\app\\Views\\gestion\\administrador\\administrador.php', 41)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\gfp\\app\\Views\\gestion\\administrador\\administrador.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('gestion/administrador/administrador', [], true)
+ 5 APPPATH\Controllers\Usuario.php(33): view('gestion/administrador/administrador', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Usuario->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-02 13:33:43 --> Undefined array key "detalle"
+in APPPATH\Views\gestion\administrador\administrador.php on line 41.
+ 1 APPPATH\Views\gestion\administrador\administrador.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "detalle"', 'C:\\xampp\\htdocs\\gfp\\app\\Views\\gestion\\administrador\\administrador.php', 41)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\gfp\\app\\Views\\gestion\\administrador\\administrador.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('gestion/administrador/administrador', [], true)
+ 5 APPPATH\Controllers\Usuario.php(33): view('gestion/administrador/administrador', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Usuario->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-02 13:33:44 --> Undefined array key "detalle"
+in APPPATH\Views\gestion\administrador\administrador.php on line 41.
+ 1 APPPATH\Views\gestion\administrador\administrador.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "detalle"', 'C:\\xampp\\htdocs\\gfp\\app\\Views\\gestion\\administrador\\administrador.php', 41)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\gfp\\app\\Views\\gestion\\administrador\\administrador.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('gestion/administrador/administrador', [], true)
+ 5 APPPATH\Controllers\Usuario.php(33): view('gestion/administrador/administrador', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Usuario->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-02 13:33:44 --> Undefined array key "detalle"
+in APPPATH\Views\gestion\administrador\administrador.php on line 41.
+ 1 APPPATH\Views\gestion\administrador\administrador.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "detalle"', 'C:\\xampp\\htdocs\\gfp\\app\\Views\\gestion\\administrador\\administrador.php', 41)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\gfp\\app\\Views\\gestion\\administrador\\administrador.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('gestion/administrador/administrador', [], true)
+ 5 APPPATH\Controllers\Usuario.php(33): view('gestion/administrador/administrador', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Usuario->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-02 13:33:44 --> Undefined array key "detalle"
+in APPPATH\Views\gestion\administrador\administrador.php on line 41.
+ 1 APPPATH\Views\gestion\administrador\administrador.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "detalle"', 'C:\\xampp\\htdocs\\gfp\\app\\Views\\gestion\\administrador\\administrador.php', 41)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\gfp\\app\\Views\\gestion\\administrador\\administrador.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('gestion/administrador/administrador', [], true)
+ 5 APPPATH\Controllers\Usuario.php(33): view('gestion/administrador/administrador', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Usuario->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-02 13:33:45 --> Undefined array key "detalle"
+in APPPATH\Views\gestion\administrador\administrador.php on line 41.
+ 1 APPPATH\Views\gestion\administrador\administrador.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "detalle"', 'C:\\xampp\\htdocs\\gfp\\app\\Views\\gestion\\administrador\\administrador.php', 41)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\gfp\\app\\Views\\gestion\\administrador\\administrador.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('gestion/administrador/administrador', [], true)
+ 5 APPPATH\Controllers\Usuario.php(33): view('gestion/administrador/administrador', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Usuario->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-02 13:33:45 --> Undefined array key "detalle"
+in APPPATH\Views\gestion\administrador\administrador.php on line 41.
+ 1 APPPATH\Views\gestion\administrador\administrador.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "detalle"', 'C:\\xampp\\htdocs\\gfp\\app\\Views\\gestion\\administrador\\administrador.php', 41)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\gfp\\app\\Views\\gestion\\administrador\\administrador.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('gestion/administrador/administrador', [], true)
+ 5 APPPATH\Controllers\Usuario.php(33): view('gestion/administrador/administrador', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Usuario->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-02 13:33:46 --> Undefined array key "detalle"
+in APPPATH\Views\gestion\administrador\administrador.php on line 41.
+ 1 APPPATH\Views\gestion\administrador\administrador.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "detalle"', 'C:\\xampp\\htdocs\\gfp\\app\\Views\\gestion\\administrador\\administrador.php', 41)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\gfp\\app\\Views\\gestion\\administrador\\administrador.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('gestion/administrador/administrador', [], true)
+ 5 APPPATH\Controllers\Usuario.php(33): view('gestion/administrador/administrador', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Usuario->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-02 13:33:46 --> Undefined array key "detalle"
+in APPPATH\Views\gestion\administrador\administrador.php on line 41.
+ 1 APPPATH\Views\gestion\administrador\administrador.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "detalle"', 'C:\\xampp\\htdocs\\gfp\\app\\Views\\gestion\\administrador\\administrador.php', 41)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\gfp\\app\\Views\\gestion\\administrador\\administrador.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('gestion/administrador/administrador', [], true)
+ 5 APPPATH\Controllers\Usuario.php(33): view('gestion/administrador/administrador', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Usuario->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-02 13:34:12 --> Undefined array key "detalle"
+in APPPATH\Views\gestion\administrador\administrador.php on line 41.
+ 1 APPPATH\Views\gestion\administrador\administrador.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "detalle"', 'C:\\xampp\\htdocs\\gfp\\app\\Views\\gestion\\administrador\\administrador.php', 41)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\gfp\\app\\Views\\gestion\\administrador\\administrador.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('gestion/administrador/administrador', [], true)
+ 5 APPPATH\Controllers\Usuario.php(33): view('gestion/administrador/administrador', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Usuario->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-02 13:34:13 --> Undefined array key "detalle"
+in APPPATH\Views\gestion\administrador\administrador.php on line 41.
+ 1 APPPATH\Views\gestion\administrador\administrador.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "detalle"', 'C:\\xampp\\htdocs\\gfp\\app\\Views\\gestion\\administrador\\administrador.php', 41)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\gfp\\app\\Views\\gestion\\administrador\\administrador.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('gestion/administrador/administrador', [], true)
+ 5 APPPATH\Controllers\Usuario.php(33): view('gestion/administrador/administrador', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Usuario->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-02 13:34:13 --> Undefined array key "detalle"
+in APPPATH\Views\gestion\administrador\administrador.php on line 41.
+ 1 APPPATH\Views\gestion\administrador\administrador.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "detalle"', 'C:\\xampp\\htdocs\\gfp\\app\\Views\\gestion\\administrador\\administrador.php', 41)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\gfp\\app\\Views\\gestion\\administrador\\administrador.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('gestion/administrador/administrador', [], true)
+ 5 APPPATH\Controllers\Usuario.php(33): view('gestion/administrador/administrador', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Usuario->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-02 13:35:08 --> mysqli_sql_exception: Table 'gfp_bd.parametro_det' doesn't exist in C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `usuario...', 0)
+#1 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `usuario...')
+#2 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `usuario...')
+#3 C:\xampp\htdocs\gfp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `usuario...', Array, false)
+#4 C:\xampp\htdocs\gfp\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\gfp\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\gfp\app\Models\UsuariosModel.php(79): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\gfp\app\Controllers\Usuario.php(28): App\Models\UsuariosModel->obtener_encabezado_3()
+#8 C:\xampp\htdocs\gfp\system\CodeIgniter.php(934): App\Controllers\Usuario->index()
+#9 C:\xampp\htdocs\gfp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+#10 C:\xampp\htdocs\gfp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\gfp\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-05-02 13:35:08 --> Table 'gfp_bd.parametro_det' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `usuarios`.*, `parametros_enc`.`nombre` as `encabezado`, `parametros_det`.`nombre` as `detalle`, `parametros_det`.*
+FROM `usuarios`
+JOIN `parametro_det` ON `parametro_det`.`id_parametro_enc` = `id_parametro_enc`
+WHERE `estado` = \'A\'
+AND `id_parametro_enc` = 3', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `usuarios`.*, `parametros_enc`.`nombre` as `encabezado`, `parametros_det`.`nombre` as `detalle`, `parametros_det`.*
+FROM `usuarios`
+JOIN `parametro_det` ON `parametro_det`.`id_parametro_enc` = `id_parametro_enc`
+WHERE `estado` = \'A\'
+AND `id_parametro_enc` = 3')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `usuarios`.*, `parametros_enc`.`nombre` as `encabezado`, `parametros_det`.`nombre` as `detalle`, `parametros_det`.*
+FROM `usuarios`
+JOIN `parametro_det` ON `parametro_det`.`id_parametro_enc` = `id_parametro_enc`
+WHERE `estado` = \'A\'
+AND `id_parametro_enc` = 3')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `usuarios`.*, `parametros_enc`.`nombre` as `encabezado`, `parametros_det`.`nombre` as `detalle`, `parametros_det`.*
+FROM `usuarios`
+JOIN `parametro_det` ON `parametro_det`.`id_parametro_enc` = `id_parametro_enc`
+WHERE `estado` = :estado:
+AND `id_parametro_enc` = :id_parametro_enc:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\UsuariosModel.php(79): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Usuario.php(28): App\Models\UsuariosModel->obtener_encabezado_3()
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Usuario->index()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-02 13:35:08 --> mysqli_sql_exception: Table 'gfp_bd.parametro_det' doesn't exist in C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `usuario...', 0)
+#1 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `usuario...')
+#2 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `usuario...')
+#3 C:\xampp\htdocs\gfp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `usuario...', Array, false)
+#4 C:\xampp\htdocs\gfp\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\gfp\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\gfp\app\Models\UsuariosModel.php(79): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\gfp\app\Controllers\Usuario.php(28): App\Models\UsuariosModel->obtener_encabezado_3()
+#8 C:\xampp\htdocs\gfp\system\CodeIgniter.php(934): App\Controllers\Usuario->index()
+#9 C:\xampp\htdocs\gfp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+#10 C:\xampp\htdocs\gfp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\gfp\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-05-02 13:35:08 --> Table 'gfp_bd.parametro_det' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `usuarios`.*, `parametros_enc`.`nombre` as `encabezado`, `parametros_det`.`nombre` as `detalle`, `parametros_det`.*
+FROM `usuarios`
+JOIN `parametro_det` ON `parametro_det`.`id_parametro_enc` = `id_parametro_enc`
+WHERE `estado` = \'A\'
+AND `id_parametro_enc` = 3', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `usuarios`.*, `parametros_enc`.`nombre` as `encabezado`, `parametros_det`.`nombre` as `detalle`, `parametros_det`.*
+FROM `usuarios`
+JOIN `parametro_det` ON `parametro_det`.`id_parametro_enc` = `id_parametro_enc`
+WHERE `estado` = \'A\'
+AND `id_parametro_enc` = 3')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `usuarios`.*, `parametros_enc`.`nombre` as `encabezado`, `parametros_det`.`nombre` as `detalle`, `parametros_det`.*
+FROM `usuarios`
+JOIN `parametro_det` ON `parametro_det`.`id_parametro_enc` = `id_parametro_enc`
+WHERE `estado` = \'A\'
+AND `id_parametro_enc` = 3')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `usuarios`.*, `parametros_enc`.`nombre` as `encabezado`, `parametros_det`.`nombre` as `detalle`, `parametros_det`.*
+FROM `usuarios`
+JOIN `parametro_det` ON `parametro_det`.`id_parametro_enc` = `id_parametro_enc`
+WHERE `estado` = :estado:
+AND `id_parametro_enc` = :id_parametro_enc:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\UsuariosModel.php(79): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Usuario.php(28): App\Models\UsuariosModel->obtener_encabezado_3()
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Usuario->index()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-02 13:35:09 --> mysqli_sql_exception: Table 'gfp_bd.parametro_det' doesn't exist in C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `usuario...', 0)
+#1 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `usuario...')
+#2 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `usuario...')
+#3 C:\xampp\htdocs\gfp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `usuario...', Array, false)
+#4 C:\xampp\htdocs\gfp\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\gfp\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\gfp\app\Models\UsuariosModel.php(79): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\gfp\app\Controllers\Usuario.php(28): App\Models\UsuariosModel->obtener_encabezado_3()
+#8 C:\xampp\htdocs\gfp\system\CodeIgniter.php(934): App\Controllers\Usuario->index()
+#9 C:\xampp\htdocs\gfp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+#10 C:\xampp\htdocs\gfp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\gfp\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-05-02 13:35:09 --> Table 'gfp_bd.parametro_det' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `usuarios`.*, `parametros_enc`.`nombre` as `encabezado`, `parametros_det`.`nombre` as `detalle`, `parametros_det`.*
+FROM `usuarios`
+JOIN `parametro_det` ON `parametro_det`.`id_parametro_enc` = `id_parametro_enc`
+WHERE `estado` = \'A\'
+AND `id_parametro_enc` = 3', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `usuarios`.*, `parametros_enc`.`nombre` as `encabezado`, `parametros_det`.`nombre` as `detalle`, `parametros_det`.*
+FROM `usuarios`
+JOIN `parametro_det` ON `parametro_det`.`id_parametro_enc` = `id_parametro_enc`
+WHERE `estado` = \'A\'
+AND `id_parametro_enc` = 3')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `usuarios`.*, `parametros_enc`.`nombre` as `encabezado`, `parametros_det`.`nombre` as `detalle`, `parametros_det`.*
+FROM `usuarios`
+JOIN `parametro_det` ON `parametro_det`.`id_parametro_enc` = `id_parametro_enc`
+WHERE `estado` = \'A\'
+AND `id_parametro_enc` = 3')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `usuarios`.*, `parametros_enc`.`nombre` as `encabezado`, `parametros_det`.`nombre` as `detalle`, `parametros_det`.*
+FROM `usuarios`
+JOIN `parametro_det` ON `parametro_det`.`id_parametro_enc` = `id_parametro_enc`
+WHERE `estado` = :estado:
+AND `id_parametro_enc` = :id_parametro_enc:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\UsuariosModel.php(79): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Usuario.php(28): App\Models\UsuariosModel->obtener_encabezado_3()
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Usuario->index()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-02 13:39:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-02 13:39:17 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 101.
+ 1 APPPATH\Controllers\Auth.php(101): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 101)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->ValidarUsuario()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-02 13:40:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-02 13:40:28 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 101.
+ 1 APPPATH\Controllers\Auth.php(101): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 101)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->ValidarUsuario()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-02 13:40:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-02 13:40:36 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 101.
+ 1 APPPATH\Controllers\Auth.php(101): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 101)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->ValidarUsuario()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-02 13:42:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-02 13:42:42 --> Undefined variable $id
+in APPPATH\Controllers\Auth.php on line 101.
+ 1 APPPATH\Controllers\Auth.php(101): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 101)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->ValidarUsuario()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-02 14:32:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-02 14:32:46 --> Undefined variable $id
+in APPPATH\Controllers\Auth.php on line 101.
+ 1 APPPATH\Controllers\Auth.php(101): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 101)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->ValidarUsuario()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-02 14:33:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-02 14:33:06 --> Undefined variable $id
+in APPPATH\Models\UsuariosModel.php on line 66.
+ 1 APPPATH\Models\UsuariosModel.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'C:\\xampp\\htdocs\\gfp\\app\\Models\\UsuariosModel.php', 66)
+ 2 APPPATH\Controllers\Auth.php(101): App\Models\UsuariosModel->User_Auth()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->ValidarUsuario()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-02 14:33:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-02 14:33:15 --> Undefined variable $id
+in APPPATH\Models\UsuariosModel.php on line 66.
+ 1 APPPATH\Models\UsuariosModel.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'C:\\xampp\\htdocs\\gfp\\app\\Models\\UsuariosModel.php', 66)
+ 2 APPPATH\Controllers\Auth.php(101): App\Models\UsuariosModel->User_Auth()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->ValidarUsuario()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-02 14:33:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-02 14:33:35 --> Undefined variable $id
+in APPPATH\Models\UsuariosModel.php on line 66.
+ 1 APPPATH\Models\UsuariosModel.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'C:\\xampp\\htdocs\\gfp\\app\\Models\\UsuariosModel.php', 66)
+ 2 APPPATH\Controllers\Auth.php(101): App\Models\UsuariosModel->User_Auth()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->ValidarUsuario()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-02 14:33:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-02 14:34:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-02 14:34:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-02 14:34:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-02 14:35:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-02 14:40:52 --> mysqli_sql_exception: Duplicate entry 'Majo' for key 'usuario' in C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\gfp\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\gfp\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\gfp\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\gfp\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\gfp\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\gfp\app\Controllers\Auth.php(62): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\gfp\system\CodeIgniter.php(934): App\Controllers\Auth->guardar()
+#10 C:\xampp\htdocs\gfp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#11 C:\xampp\htdocs\gfp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\gfp\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-05-02 14:40:52 --> Duplicate entry 'Majo' for key 'usuario'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `usuarios` (`usuario`, `nombre`, `apellido`, `tipo_documento`, `num_documento`, `pass`, `fecha_crea`) VALUES (\'Majo\', \'Maria Jose\', \'Cervantes Pineda\', \'9\', \'7111221\', \'$2y$10$.FtUX5ZMUIuv/1qE7aSooePqHD0prNjoa2Ds.QElaES6PD4TiuR1W\', \'2023-05-02 14:40:52\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuarios` (`usuario`, `nombre`, `apellido`, `tipo_documento`, `num_documento`, `pass`, `fecha_crea`) VALUES (\'Majo\', \'Maria Jose\', \'Cervantes Pineda\', \'9\', \'7111221\', \'$2y$10$.FtUX5ZMUIuv/1qE7aSooePqHD0prNjoa2Ds.QElaES6PD4TiuR1W\', \'2023-05-02 14:40:52\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuarios` (`usuario`, `nombre`, `apellido`, `tipo_documento`, `num_documento`, `pass`, `fecha_crea`) VALUES (\'Majo\', \'Maria Jose\', \'Cervantes Pineda\', \'9\', \'7111221\', \'$2y$10$.FtUX5ZMUIuv/1qE7aSooePqHD0prNjoa2Ds.QElaES6PD4TiuR1W\', \'2023-05-02 14:40:52\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuarios` (`usuario`, `nombre`, `apellido`, `tipo_documento`, `num_documento`, `pass`, `fecha_crea`) VALUES (:usuario:, :nombre:, :apellido:, :tipo_documento:, :num_documento:, :pass:, :fecha_crea:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Auth.php(62): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->guardar()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-02 14:41:54 --> mysqli_sql_exception: Duplicate entry 'majo' for key 'usuario' in C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\gfp\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\gfp\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\gfp\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\gfp\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\gfp\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\gfp\app\Controllers\Auth.php(62): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\gfp\system\CodeIgniter.php(934): App\Controllers\Auth->guardar()
+#10 C:\xampp\htdocs\gfp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#11 C:\xampp\htdocs\gfp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\gfp\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-05-02 14:41:54 --> Duplicate entry 'majo' for key 'usuario'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `usuarios` (`usuario`, `nombre`, `apellido`, `tipo_documento`, `num_documento`, `pass`, `fecha_crea`) VALUES (\'majo\', \'Maria Jose\', \'Cervantes Pineda\', \'9\', \'7111221\', \'$2y$10$y1rSGUeCkiiBbEVNik113OJb4dsDqK9R.0JJdj9yYuBwDgBXBefm.\', \'2023-05-02 14:41:54\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuarios` (`usuario`, `nombre`, `apellido`, `tipo_documento`, `num_documento`, `pass`, `fecha_crea`) VALUES (\'majo\', \'Maria Jose\', \'Cervantes Pineda\', \'9\', \'7111221\', \'$2y$10$y1rSGUeCkiiBbEVNik113OJb4dsDqK9R.0JJdj9yYuBwDgBXBefm.\', \'2023-05-02 14:41:54\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuarios` (`usuario`, `nombre`, `apellido`, `tipo_documento`, `num_documento`, `pass`, `fecha_crea`) VALUES (\'majo\', \'Maria Jose\', \'Cervantes Pineda\', \'9\', \'7111221\', \'$2y$10$y1rSGUeCkiiBbEVNik113OJb4dsDqK9R.0JJdj9yYuBwDgBXBefm.\', \'2023-05-02 14:41:54\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuarios` (`usuario`, `nombre`, `apellido`, `tipo_documento`, `num_documento`, `pass`, `fecha_crea`) VALUES (:usuario:, :nombre:, :apellido:, :tipo_documento:, :num_documento:, :pass:, :fecha_crea:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Auth.php(62): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->guardar()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-02 14:42:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-02 14:42:53 --> Call to undefined method App\Models\UsuariosModel::User_Auth
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\Auth.php(101): CodeIgniter\Model->__call('User_Auth', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->ValidarUsuario()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-02 14:43:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-02 14:43:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-02 14:43:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-02 14:43:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-02 14:43:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-02 14:44:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-02 14:44:32 --> Undefined variable $id
+in APPPATH\Controllers\Auth.php on line 101.
+ 1 APPPATH\Controllers\Auth.php(101): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 101)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->ValidarUsuario()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-02 14:45:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-02 14:45:58 --> Call to undefined method App\Models\UsuariosModel::User_Auth
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\Auth.php(101): CodeIgniter\Model->__call('User_Auth', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->ValidarUsuario()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-02 14:59:55 --> Undefined variable $usuario
+in APPPATH\Controllers\Auth.php on line 28.
+ 1 APPPATH\Controllers\Auth.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 28)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-02 15:07:41 --> Cannot redeclare App\Controllers\Auth::ValidarUsuario()
+in APPPATH\Controllers\Auth.php on line 121.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-05-02 15:07:43 --> Cannot redeclare App\Controllers\Auth::ValidarUsuario()
+in APPPATH\Controllers\Auth.php on line 121.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-05-02 15:07:43 --> Cannot redeclare App\Controllers\Auth::ValidarUsuario()
+in APPPATH\Controllers\Auth.php on line 121.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-05-02 15:07:43 --> Cannot redeclare App\Controllers\Auth::ValidarUsuario()
+in APPPATH\Controllers\Auth.php on line 121.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2023-05-02 15:08:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-02 15:08:30 --> Object of class App\Models\EmailsModel could not be converted to string
+in SYSTEMPATH\Database\Query.php on line 335.
+ 1 SYSTEMPATH\Database\Query.php(335): strtr('SELECT *
+FROM `emails`
+WHERE `email` = :email:
+ LIMIT 1', [...])
+ 2 SYSTEMPATH\Database\Query.php(310): CodeIgniter\Database\Query->matchNamedBinds('SELECT *
+FROM `emails`
+WHERE `email` = :email:
+ LIMIT 1', [...])
+ 3 SYSTEMPATH\Database\Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 4 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\Query->getQuery()
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `emails`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 6 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 8 APPPATH\Controllers\Auth.php(134): CodeIgniter\BaseModel->first()
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->ValidarUsuario()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-02 15:09:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-02 15:09:31 --> Object of class App\Models\EmailsModel could not be converted to string
+in SYSTEMPATH\Database\Query.php on line 335.
+ 1 SYSTEMPATH\Database\Query.php(335): strtr('SELECT *
+FROM `emails`
+WHERE `email` = :email:
+ LIMIT 1', [...])
+ 2 SYSTEMPATH\Database\Query.php(310): CodeIgniter\Database\Query->matchNamedBinds('SELECT *
+FROM `emails`
+WHERE `email` = :email:
+ LIMIT 1', [...])
+ 3 SYSTEMPATH\Database\Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 4 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\Query->getQuery()
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `emails`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 6 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 8 APPPATH\Controllers\Auth.php(131): CodeIgniter\BaseModel->first()
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->ValidarUsuario()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-02 15:09:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-02 15:09:40 --> Object of class App\Models\EmailsModel could not be converted to string
+in SYSTEMPATH\Database\Query.php on line 335.
+ 1 SYSTEMPATH\Database\Query.php(335): strtr('SELECT *
+FROM `emails`
+WHERE `email` = :email:
+ LIMIT 1', [...])
+ 2 SYSTEMPATH\Database\Query.php(310): CodeIgniter\Database\Query->matchNamedBinds('SELECT *
+FROM `emails`
+WHERE `email` = :email:
+ LIMIT 1', [...])
+ 3 SYSTEMPATH\Database\Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 4 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\Query->getQuery()
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `emails`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 6 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 8 APPPATH\Controllers\Auth.php(131): CodeIgniter\BaseModel->first()
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->ValidarUsuario()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-02 15:16:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-02 15:16:29 --> Undefined array key "password"
+in APPPATH\Controllers\Auth.php on line 139.
+ 1 APPPATH\Controllers\Auth.php(139): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "password"', 'C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php', 139)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->ValidarUsuario()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-02 15:17:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-02 15:17:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-02 15:19:13 --> syntax error, unexpected identifier "puta"
+in APPPATH\Controllers\Auth.php on line 157.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\gfp\\app\\Controllers\\Auth.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Auth')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Auth')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Auth', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-02 15:19:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-02 15:19:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-02 15:19:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-02 15:20:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-02 15:20:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-02 15:20:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-02 15:21:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-02 15:21:27 --> Call to undefined method App\Models\UsuariosModel::User_Auth
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\Auth.php(101): CodeIgniter\Model->__call('User_Auth', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->ValidarUsuario()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-02 15:21:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-02 15:21:53 --> Cannot use object of type App\Models\UsuariosModel as array
+in APPPATH\Controllers\Auth.php on line 104.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->ValidarUsuario()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-02 15:21:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-02 15:21:54 --> Cannot use object of type App\Models\UsuariosModel as array
+in APPPATH\Controllers\Auth.php on line 104.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->ValidarUsuario()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-02 15:21:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-02 15:21:54 --> Cannot use object of type App\Models\UsuariosModel as array
+in APPPATH\Controllers\Auth.php on line 104.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->ValidarUsuario()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-02 15:21:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-02 15:21:54 --> Cannot use object of type App\Models\UsuariosModel as array
+in APPPATH\Controllers\Auth.php on line 104.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->ValidarUsuario()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-02 15:21:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-02 15:21:54 --> Cannot use object of type App\Models\UsuariosModel as array
+in APPPATH\Controllers\Auth.php on line 104.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->ValidarUsuario()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-02 15:21:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-02 15:21:55 --> Cannot use object of type App\Models\UsuariosModel as array
+in APPPATH\Controllers\Auth.php on line 104.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->ValidarUsuario()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-02 15:22:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-02 15:22:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-02 15:22:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-02 15:23:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-02 15:24:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-02 15:24:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-02 15:24:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-02 15:24:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-02 15:25:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-02 15:26:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-02 15:27:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-02 15:27:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-02 15:30:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-02 15:31:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-02 15:40:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-02 15:41:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-02 15:42:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-02 15:42:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-02 15:43:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-02 15:48:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-02 15:49:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-02 15:50:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-02 15:50:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-02 15:50:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

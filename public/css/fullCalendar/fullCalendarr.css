@@ -1,20 +1,20 @@
 .fc-direction-ltr {
     /* left: 0; top: 0;   */
-    padding: 10px;
     width: calc(100% - 80px);
     position: absolute;
     height: 60%;
-    background-color: rgb(255, 255, 255);
-    border: 2px solid rgb(214, 89, 5);
+    /* background-color: rgb(255, 255, 255); */
+    border: 2px solid #5b88a5;
+    display: flex;
 }
 
 .fc .fc-toolbar.fc-header-toolbar {
-    background: rgb(214, 89, 5);
+    background: #5b88a5;
     height: 150px;
 }
 
 .fc .fc-daygrid-day-number {
-    color: black;
+    color: #f4f4f2;
     text-decoration: none;
 }
 
@@ -34,5 +34,5 @@
 }
 
 .fc .fc-daygrid-day.fc-day-today {
-    background: rgb(24, 216, 17);
+    background: #243a69;
 }

@@ -8,13 +8,13 @@
             /* left: -200px; */
             position: relative;
             display: block;
-            height: 100vh;
+            height: 100vh + 10vh;
             width: 80px;
             transition: all 100ms linear;
             align-items: center;
             justify-content: center;
             text-align: center;
-            background: #0040c1;
+            background: #243a69;
         }
         
         .navbar__logo {

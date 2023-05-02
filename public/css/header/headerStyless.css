@@ -1,0 +1,17 @@
+.header__container {
+    display: flex;
+    height: 10vh;
+    color: #f4f4f2;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    /* background: rgba(255, 255, 255, 0.891); */
+}
+
+
+.header__container>h2 {
+    text-transform: uppercase;
+}
+
+

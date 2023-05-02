@@ -1,19 +1,6 @@
-
-<div class="page__container">
     
 <header class="header__container">
-    <div class="header__profile__container">
-        <img src="<?= base_url('icons/perfilHombre.png')?>" alt="" class="header__icon">
-        <span class="text-uppercase text-info">Ver mi perfil</span>
-    </div>
-        <div>
-            <h2>Gestor de Finanzas Personales</h2>
-    </div>
-    <div class="header__btns__container">
-        <a href="<?= base_url("auth/logout")?>">
-            <button class="btn btn-outline-danger">Cerrar sesión</button>
-        </a>
-    </div>
+    <h2><?= $tituloPagina?></h2>
 </header>
 
 <!-- version santiago-->

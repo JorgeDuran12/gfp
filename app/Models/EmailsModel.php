@@ -48,24 +48,5 @@ class EmailsModel extends Model{
      $datos = $this->findAll();  //nos trae todos los registros que cumplan con una condicion dada 
       return $datos;
     }
-
-    // public function Session_Email($email, $id){
-    //     $this->where('estado', 'A');
-    //     $this->where('id_usuario', $id);
-    //     $this->where('email', $email);
-    //     $datos = $this->first();
-    //     return $datos;
-    // }
-
-    // public function Validar_log($id, $email, $estado){
-    //   $this->select('emails.*, usuarios.id_usuario as id_usuario, usuarios.pass as pass, emails.id_email as id_email, usuarios.usuario as usuario');
-    //   $this->join('emails','usuarios.id_usuario = emails.id_usuario');
-    //   $this->join('usuarios','usuarios.pass = email.pass');
-    //   $this->where('emails.estado', 'A');
-    //   $this->where('usuarios.estado', 'A');
-    //   $this->where('emails.id_email', $id);
-    //   $datos = $this->first();           
-    //   return $datos;
-    // }
-
+ 
 }

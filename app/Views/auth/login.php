@@ -1,12 +1,13 @@
 <?= $this->extend("layouts/authLayout")?>
 <?= $this->section("contenido")?>
 
+<div class="all_container_login">
 
 <div class="login__container">
     <div class="login__form-container">
-        <!-- <div class="login__logo-container">
+        <div class="login__logo-container">
             <img src="<?= base_url("../img/gfp.png");?>" alt="logo_gfp">
-        </div> -->
+        </div> 
 
         <div class="login__title-container">
             <p class="login__title-text">Iniciar sesión</p>
@@ -14,7 +15,7 @@
                     finanzas hoy!</strong> </span>
         </div>
         <br>
-        <form class="login__form" action="<?php echo base_url('Validar');?>" method="POST">
+        <form class="login__form" action="<?php base_url('Validar');?>" method="POST">
             <div class="login__input-container">
                 <label class="login__form-input-label" for="email">Correo electronico: </label>
                 <img src="<?= base_url("icons/envelope-fill.svg")?>" class="login__form-icon">
@@ -76,5 +77,7 @@
 
 
 </div>
+</div>
+
 
 <?= $this->endSection("contenido")?>

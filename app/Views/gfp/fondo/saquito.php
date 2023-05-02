@@ -1,13 +1,6 @@
 <?= $this->extend("layouts/gfpLayout")?>
 <?= $this->section("contenido")?>
 
-
-<div class="tim2">
-    <h1> <img class="img" src="<?= base_url("img/saquito1.png")?>"> Saquito</h1>
-</div>
-
-<br><br>
-
 <div class="input-group mb-3 date ">
     <span class="input-group-text" id="inputGroup-sizing-default"><img
             src="<?= base_url("icons/question-circle-fill.svg")?>"

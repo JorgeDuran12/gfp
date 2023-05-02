@@ -49,23 +49,4 @@ class UsuariosModel extends Model{
      $datos = $this->findall();  //nos trae todos los registros que cumplan con una condicion dada 
       return $datos;
    }
-
-    // public function User_Auth($email){
-    //     $this->select->table('emails');
-    //     $this->select('usuarios.id_usuario, usuarios.usuario, usuarios.password, emails.email');
-    //     $this->join('usuarios', 'usuarios.id_usuario = emails.id_usuario');
-    //     $this->where('emails.email', $email);
-    //     $this->where('estado', "A");
-    //     $datos = $this -> first();
-    //     return $datos;
-    // }
-    public function User_Auth($email){
-    $this->select('usuarios.*, usuarios.id_usuario, usuarios.usuario, usuarios.pass, emails.email');
-    $this->join('emails', 'usuarios.id_usuario = emails.id_usuario');
-    $this->where('emails.email', $email);
-    $this->where('emails.estado', 'A');
-    $this->where('usuarios.estado', 'A');
-    $datos = $this ->first();
-    return $datos;
-    }
 }

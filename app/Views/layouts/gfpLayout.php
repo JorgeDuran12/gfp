@@ -20,20 +20,20 @@
     <script src="<?= base_url('helpers/chartjs.js') ?>"></script>
 
     <!-- Todos los estilos -->
-    <link rel="stylesheet" href="<?= base_url('css/header/headerStyle.css') ?>">
-    <link rel="stylesheet" href="<?= base_url('css/general/globalStyle.css') ?>">
-    <link rel="stylesheet" href="<?= base_url('css/navbar/navStyles.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('css/header/headerStyless.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('css/general/globalStyles.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('css/navbar/navvStyless.css') ?>">
     <link rel="stylesheet" href="<?= base_url('css/pagina/paginaStyle.css') ?>">
     <link rel="stylesheet" href="<?= base_url('css/footer/footerStyles.css') ?>">
-    <link rel="stylesheet" href="<?= base_url('css/principal/principalStyle.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('css/principal/principalStyles.css') ?>">
     <link rel="stylesheet" href="<?= base_url("/css/usuarios/loginStyles2.css")?>">
-    <link rel="stylesheet" href="<?= base_url("/css/agenda/pagoStyles.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/css/agenda/pagoStylees.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/registro/movimientoss.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/actividades/actividad.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/saquito/saquito1.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/registro/movimiento.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/agenda/pagoStyles.css")?>">
-    <link rel="stylesheet" href="<?= base_url("/css/fullCalendar/fullCalendar.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/css/fullCalendar/fullCalendarr.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/123/123456.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/123/987654.css")?>">
 
@@ -59,14 +59,16 @@
             
             <div class="principal__container">
                 <?= $this->renderSection('contenido') ?>
+
+                <footer class="footer__container">
+                    <?= view('componentes/footer')?>
+                </footer>
+
+            </body>
             </div>
         </div>
 
     </div>
             
-        <footer class="footer__container">
-            <?= view('componentes/footer')?>
-        </footer>
-</body>
 </html>
 

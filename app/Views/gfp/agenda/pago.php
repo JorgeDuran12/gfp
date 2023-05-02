@@ -2,12 +2,19 @@
 
 <?=$this->section("contenido")?>
 
+<button class="btn btn-danger" id="agendaPago__btn">+</button>    
 
 <div class="agendaPago__container">
-  <full-calendar/>
-</div>
+  <div class="agendaPago__calendar">
+    <full-calendar/>
+  </div>
+
+  <div class="agendaPago__notas">
     
-    <button class="btn btn-danger" id="agendaPago__btn">+</button>    
+  </div>
+</div>
+
+
 
 
 
