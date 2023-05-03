@@ -18,11 +18,6 @@
 
 <form>
     <div class="registro"></div>
-    <div class="e a">
-        <h4>Asignar Cuota </h4>
-    </div>
-
-
    <!--  <div class="e b">
         <label> Ingresa Un Valor</label><br><br>
         <input type="number" class="tl aria-label=" Dollar amount (with dot and two decimal places)><br><br>
@@ -52,7 +47,7 @@
 
 </form>
 
-<div class="modal fade" id="guardaremergeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- <div class="modal fade" id="guardaremergeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -70,7 +65,7 @@
     </div>
 
 </div>
-</div>
+</div> -->
 
 <!-- 
 <div class="modal fade" id="eliminaremergenModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

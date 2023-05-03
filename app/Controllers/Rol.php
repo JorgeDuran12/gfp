@@ -21,7 +21,7 @@ class Rol extends BaseController
     public function index()
     {
         $rol = $this->rol->where('estado', "A")->findAll();   
-        $datos = ['tituloPag' => 'Rol','roles'=>$rol];
+        $datos = ['tituloPagina' => 'Rol','roles'=>$rol];
 
         echo view("gestion/roles/rol", $datos);
     }

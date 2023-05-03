@@ -1,13 +1,12 @@
 <?= $this->extend("layouts/authLayout")?>
 <?= $this->section("contenido")?>
 
-<div class="all_container_login">
 
 <div class="login__container">
     <div class="login__form-container">
         <div class="login__logo-container">
             <img src="<?= base_url("../img/gfp.png");?>" alt="logo_gfp">
-        </div> 
+        </div>
 
         <div class="login__title-container">
             <p class="login__title-text">Iniciar sesión</p>
@@ -69,15 +68,10 @@
                 </div>
             </div>
         </div>
-
-
     </div>
-</div>
-</div>
+    </div>
 
 
-</div>
-</div>
 
 
 <?= $this->endSection("contenido")?>

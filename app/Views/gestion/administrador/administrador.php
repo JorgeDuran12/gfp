@@ -11,6 +11,7 @@
     <div class="op">
       
     <a href="#" onclick="seleccionausuario(<?php echo 1 . ',' . 1 ?>);" class="btn btn-success regresar_Btn" data-bs-toggle="modal" data-bs-target="#agregar-usuario">Crear nuevo usario</a>
+    &nbsp <a href="<?php echo base_url('eliminados_usuario'); ?>"  class="btn btn-secondary regresar_Btn">Eliminados</a>
 
         &nbsp<a href="<?php echo base_url('/principal'); ?>" class="btn btn-primary regresar_Btn">Regresar</a>
     </div>
@@ -43,9 +44,10 @@
                                        <img  class="image" src="<?= base_url("img/editar.png") ?> " title="Editar" >
                                     </a>     
                                  
-                                    <button data-bs-toggle="modal" data-bs-target="#eliminaremergenModal" type="button" class="btn btn-danger">
-                                        <img  class="image" src="<?= base_url("img/Eliminar.png") ?> " title="Eliminar" >
-                                    </button>
+                                    <a class="btn btn-danger"  href="#" data-href="<?php echo base_url('usuarios/eliminar__usuario'). '/' .$dato['id_usuario']. '/' .'E'; ?>"  data-bs-toggle="modal" data-bs-target="#modal-confirma" src="<?php echo base_url(); ?>/icons/borrar.png" width="16" height="16"  title="Elimina Registro"> 
+                                    <img
+                    class="image" src="<?= base_url("img/Eliminar.png") ?> " title="Eliminar">
+                                   </a>
                                 
                             </td>                              
                           </tr> 
@@ -132,7 +134,7 @@
     <div class="input_container">
         <label class="input_label" for="email_field">Teléfono</label>
         <img src="<?= base_url("icons/telephone-fill.svg")?>" class="icon">
-        <input placeholder="Ej: 309 156 9347" name="nun_telefono" type="number" class="input_field" id="nun_telefono">
+        <input placeholder="Ej: 309 156 9347" name="telefono" type="number" class="input_field" id="telefono">
     </div> 
     
     <div class="input_container">
@@ -150,7 +152,7 @@
          <div class="input_container">
             <label class="input_label" for="email_field">Correo electronico</label>
             <img src="<?= base_url("icons/envelope-fill.svg")?>" class="icon">
-            <input placeholder="Ej: correo@mail.com" name="input-name" type="email" class="input_field" id="email">
+            <input placeholder="Ej: correo@mail.com" name="email" type="email" class="input_field" id="email">
         </div>
 
         </div>
@@ -175,11 +177,41 @@
 
 
 
+<!-- --------------------------------------------Modal Confirma Eliminar ---------------------------------------------------->
+<div class="modal fade" id="modal-confirma" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div style="text-align:center;" class="modaal-header">
+                    <h5  class="modal-title"
+                    
+                        id="exampleModalLabel">Eliminación de Registro<h5>
+                       
+                        
+
+                </div>
+                <div style="text-align:center;font-weight:bold;" class="modal-body">
+                    <p>Seguro Desea Eliminar este Registro?</p>
+                    <tr>
+                           
+                </div>
+                <div class="modal-footer">
+                    <a type="button" class="btn btn-primary close" data-bs-dismiss="modal">No</a>
+                    <a class="btn btn-danger btn-ok">Si</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 <script>
 
-  
-   
+// <---------------modal confirmar eliminacion---------------------------------------------/\
+$('#modal-confirma').on('show.bs.modal', function(e) {                                      
+        $(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));           
+    });                                                                                  
+$('.close').click(function() {$("#modal-confirma").modal("hide");});
+
  
   function seleccionausuario(id, tp) {
     if (tp == 2) {
@@ -197,6 +229,8 @@
            $("#apellido").val(rs[0]['apellido']);
            $("#tipo_documento").val(rs[0]['tipo_documento']);
            $("#num_documento").val(rs[0]['num_documento']);
+           $("#email").val(rs[0]['email']);
+           $("#telefono").val(rs[0]['telefono']);
            $("#id_rol").val(rs[0]['id_rol']);
            $("#pass").val(rs[0]['pass']);
            $("#btn_guardar").text('Actualizar');
@@ -212,6 +246,8 @@
         $("#id_rol").val('');
         $("#tipo_documento").val('');
         $("#num_documento").val('');
+        $("#email").val('');
+        $("#telefono").val('');
         $("#pass").val('');
         $("#btn_guardar").text('Guardar');
         console.log("enviado")

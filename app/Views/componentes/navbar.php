@@ -40,7 +40,7 @@
         <span class="icon-name">Administradores</span>
       </div>
       <div class="navbar__icons">
-        <li class="icon-image"><a href="<?= base_url('Rol')?>"><img src="<?= base_url("icons/roles.png")?>"/></a></li>
+        <li class="icon-image"><a href="<?= base_url('gestion/roles')?>"><img src="<?= base_url("icons/roles.png")?>"/></a></li>
         <span class="icon-name">Manejo De Roles</span>
       </div>
       

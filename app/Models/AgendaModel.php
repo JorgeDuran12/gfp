@@ -4,29 +4,34 @@ namespace App\Models; //Reservamos el espacio de nombre de la ruta app\models
 
 use CodeIgniter\Model;
 
-class SaquitoModel extends Model{
-    protected $table      = 'saquito'; /* nombre de la tabla modelada/*/
-    protected $primaryKey = 'id_saquito';
+class AgendaModel extends Model{
+    protected $table      = 'agenda'; /* nombre de la tabla modelada/*/
+    protected $primaryKey = 'id';
 
     protected $useAutoIncrement = true; /* Si la llave primaria se genera con autoincremento*/
 
     protected $returnType     = 'array';  /* forma en que se retornan los datos */
     protected $useSoftDeletes = false; /* si hay eliminacion fisica de registro */
 
-    protected $allowedFields = ['descripcion','fecha_inicial','valor','numero_cuotas','cuota','estado','fecha_crea','id_usuario_crea']; /* relacion de campos de la tabla */
+    protected $allowedFields = ['title','descripcion','start','end','color']; /* relacion de campos de la tabla */
 
     protected $useTimestamps = true; /*tipo de tiempo a utilizar */
-    protected $createdField  = 'fecha_crea'; /*fecha automatica para la creacion */
+    protected $dateFormat    = 'datetime'; /* Tipo fecha */
+    // protected $createdField  = 'fecha_crea'; /*fecha automatica para la creacion */
     protected $updatedField  = ''; /*fecha automatica para la edicion */
     protected $deletedField  = ''; /*no se usara, es para la eliminacion fisica */
 
     protected $validationRules    = [];
     protected $validationMessages = [];
     protected $skipValidation    = false;
-  
-    function guardar($data){
-        $this->db->insert("saquitos",$data);
-        }
+
+
+
+    public function traer_todos_los_eventos(){
+        $this->select('agenda.*');
+        $datos = $this->findAll();
+        return $datos;
+    }
+
+
 }
-
-

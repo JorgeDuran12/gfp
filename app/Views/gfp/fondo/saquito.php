@@ -1,7 +1,12 @@
 <?= $this->extend("layouts/gfpLayout")?>
 <?= $this->section("contenido")?>
 
+<div class="titulo">
+    <h3><img class="img" src="<?= base_url("img/saquito1.png")?>"> Saquito</h3>
+</div><br>
+
 <div class="input-group mb-3 date ">
+
     <span class="input-group-text" id="inputGroup-sizing-default"><img
             src="<?= base_url("icons/question-circle-fill.svg")?>"
             title="En esta opcion debera digitalizar el dia del mes donde el aplicativo debera descontar de la disponibilidad de la cuota para el saquito">
@@ -9,33 +14,33 @@
     <input type="date" class="ss" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
 </div>
 <div>
-    <form method="POST" action="" class="registro">
+    <form method="POST" action="<?php base_url();?>saquito/guardar" class="registro">
 
         <div class="tim">
             <h3>Meta</h3>
         </div>
         <div class="dc">
-            <textarea class="dc" name="descripcion" placeholder="Descripcion:" id="floatingTextarea"></textarea>
+            <textarea class="dc" name="descripcion" id="descripcion"placeholder="Descripcion:" id="floatingTextarea"></textarea>
 
         </div>
         <br>
         <div class="tm">
-            <input type="date" class="form-control" name="fecha_inicial" id="floatingInput"
+            <input type="date" class="form-control" name="fecha_inicial" id="fecha_inicial"id="floatingInput"
                 placeholder="Fecha inicial: ">
             <label for="floatingInput"></label>
 
         </div>
         <br>
         <div class="tm">
-            <input type="number" class="form-control" name="valor" id="floatingInput" placeholder="Valor: ">
+            <input type="number" class="form-control" name="valor" id="valor"id="floatingInput" placeholder="Valor: ">
             <label for="floatingInput"></label>
         </div>
         <br>
 
         <div class="tx">
-            <input type="number" class="form-control" name="cuota" id="floatingInput" placeholder="Cuotas:">
+            <input type="number" class="form-control" name="cuota" id="couta"id="floatingInput" placeholder="Cuotas:">
             <label for="floatingInput"></label>
-            <input type="number" class="form-control" name="numero_cuotas" id="floatingInput"
+            <input type="number" class="form-control" name="numero_cuotas" id="numero_cuotas"id="floatingInput"
                 placeholder="Valor cuotas:">
             <label for="floatingInput"></label>
         </div>
@@ -54,7 +59,7 @@
                     class="image" src="<?= base_url("img/Eliminar.png") ?> " title="Eliminar">
             </button>
 
-            <button data-bs-toggle="modal" data-bs-target="#exampleModal" type="button" class="btn btn-success"> <img
+            <button data-bs-toggle="modal" data-bs-target="#exampleModal" type="submit" class="btn btn-success"> <img
                     class="image" src="<?= base_url("img/Guardar.png") ?> " title="Guardar">
             </button>
         </div>
@@ -146,3 +151,23 @@
 
 
 <?= $this->endSection("contenido")?>
+
+<script>
+   
+  $(document).on("ready",inicio)
+  function inicio(){
+$("form").submit(function (event){
+   
+    event.preventDefault();
+    $.ajaX({
+        url:("form").attr("action"),
+        type:$("form").attr("method"),
+        data:$("form").serialize(),
+        success:function(respuesta){
+            alert("respuesta")
+        }
+    });
+});
+  }
+ 
+</script>

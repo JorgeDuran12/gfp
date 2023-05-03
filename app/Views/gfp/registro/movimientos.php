@@ -7,7 +7,7 @@
         Movimientos</h1>
 </div><br><br>
 <div>
-    <form action="" class="registro">
+    <form action="" class="registro"><br> <br>
         <div class="tm">
             <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
                 <option selected class="tl">Tipo De Movimiento</option>
@@ -37,7 +37,7 @@
 
         </div>
         <br>
-        <div class="">
+        <div class="tx">
             <input type="date" class="form-control" id="floatingInput" placeholder="name@example.com">
             <label for="floatingInput"></label>
         </div>
@@ -47,7 +47,8 @@
                     class="image" src="<?= base_url("img/Guardar.png") ?> " title="Guardar">
             </button>
         </div>
-        <br>
+        <br><br><br>
+        <div class="hh">
         <div class="rt">
             <button data-bs-toggle="modal" data-bs-target="#reporteingresoModal" type="button"
                 class="btn btn-secondary">
@@ -55,7 +56,8 @@
                 Reporte Ingreso
             </button>
 
-        </div><br>
+        </div>&nbsp&nbsp&nbsp
+        
         <div class="rt">
             <button data-bs-toggle="modal" data-bs-target="#reporteegresoModal" type="button" class="btn btn-secondary">
                 <img src="<?= base_url("icons/file-earmark-spreadsheet-fill.svg") ?>">
@@ -63,8 +65,9 @@
             </button>
 
         </div>
-
+        </div>
     </form>
+
     <div class="modal fade" id="movimientoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -180,6 +183,7 @@
                 <button type="Submit" class="btn btn-success">Guadar</button>
             </div>
         </div>
+    </div>
     </div>
 </div>
 </div>

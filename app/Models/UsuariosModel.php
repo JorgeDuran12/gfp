@@ -38,7 +38,7 @@ class UsuariosModel extends Model{
 
     // <-----------------------------------funcion eliminar en vista principal----------------------------------->
 
- public function elimina_usuario($id,$estado){
+ public function elimina_usu($id,$estado){
      $datos = $this->update($id, ['estado' => $estado]);         
     return $datos;
 }
@@ -59,5 +59,16 @@ class UsuariosModel extends Model{
     return $datos;
 }
 
-   
+// public function Auth_Verify_Usuario($)
+
+//  public function validar($usuario, $pass){
+//     // Buscar al usuario en la base de datos y verificar la contraseña
+//     // Devolver el usuario si las credenciales son válidas, o NULL si no lo son
+
+//     $this->select('usuarios.*');
+//     $this->where('estado', 'A');
+//     $user = $this->where('usuario', $usuario)->first();
+//     return $user;
+//  }
+
 }

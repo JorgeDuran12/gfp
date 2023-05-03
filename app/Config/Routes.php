@@ -32,18 +32,26 @@ $routes->set404Override();
 
 /*  Routas Principales (Links)*/
 $routes->get('/', 'Auth::index');
-$routes->get('/Principal', 'Principal::index');
+$routes->get('Principal', 'Principal::index');
+
+/* Rutas Agenda */
 $routes->get('agenda_de_pago', 'Agenda::index');
+$routes->get('listaDeEventos', 'Agenda::buscar_eventos');
+
+
 $routes->get('mi_saquito', 'Saquito::index');
 $routes->get('mis_movimientos', 'Registro::index');
 $routes->get('fondo_de_emergencia', 'Emergencia::index');
 $routes->get('gestion/roles', 'Rol::index');
 $routes->get('gestion/usuarios', 'Usuario::index');
-// $routes->get('gestion/administradores', 'Usuario::index');
+$routes->get('gestion_de_administradores', 'Usuario::index');
 
 
 // rutas de peticion
 $routes->post('buscar_usuario/(:num)','Usuario::buscar_usuario/$1');
+$routes->get('eliminados_usuario', 'Usuario::eliminados');
+ $routes->get('eliminar__usuario', 'Usuario::eliminar__usuario');
+
 
 /* Rutas Login*/
 $routes->post('AutenticarUsuario','Auth::AutenticarUsuario');

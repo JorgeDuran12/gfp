@@ -18,8 +18,8 @@ class Auth extends BaseController
     public function __construct()
     {
         $this->usuario = new UsuariosModel();
-        $this->email = new EmailsModel();
         $this->parametros = new ParamentrosModel();
+        $this->email = new EmailsModel();
         $this->telefono = new TelefonosModel();
     }
     
@@ -46,52 +46,123 @@ class Auth extends BaseController
         ]);
     }
 
-
-    public function AutenticarUsuario(){
-        if ($this->request->getMethod() == 'post') {
-
-            $email = $this->request->getPost('email');
-            $password = $this->request->getPost('password');
-    
-            $emailModel = new EmailsModel();
-            $user = $emailModel->AuthEmail($email);
-
-    
-            if ($user) {
-
-                $usuarioModel = new UsuariosModel();
-                $usuario = $usuarioModel->Auth_usuario($email);
-
-                if ($usuario && password_verify($password, $usuario['pass'] ?? '')) {
-
-                    $session = session();
-                    $session->set([
-                        'id_usuario' => $usuario['id_usuario'],
-                        'usuario' => $usuario['usuario'],
-                        'email' => $user['email'],
-                        'logged_in' => true
-                    ]);
-    
-                    return redirect()->to(base_url('/mis_movimientos'));
-    
-                } else {
-                    return redirect()->to(base_url('/'));
-                }
-            } else {
-                $data['error'] = 'Correo electrónico o contraseña incorrectos.';
-            }
-        }
-    }
-    
-
     /* Metodos */
+    public function AutenticarUsuario(){
+      
+
+        $email = $this->request->getPost('email');
+        $password = $this->request->getPost('password');
+
+        $emailModel = new EmailsModel();
+        $user = $emailModel->AuthEmail($email);
+      
+        $usuarioModel = new UsuariosModel();
+        $usuario = $usuarioModel->Auth_usuario($email);
+
+        if ($user && $usuario && $usuario['pass']) {
+
+                 $session = session();
+
+                 $session->set([
+                    'id_usuario' => $usuario['id_usuario'],
+                    'usuario' => $usuario['usuario'],
+                    'email' => $user['email'],
+                    'logged_in' => true
+                ]);
+
+                return redirect()->to(base_url('/Principal')); 
+
+            }else {
+                return redirect()->to(base_url('/'));
+            } 
+        }
+    
+
+
+    // public function AutenticarUsuario(){
+
+    //         $email = $this->request->getPost('email');
+    //         $password = $this->request->getPost('password');
+    
+    //         $emailModel = new EmailsModel();
+    //         $user = $emailModel->AuthEmail($email);
+          
+    //         if ($user) {
+
+    //             $usuarioModel = new UsuariosModel();
+    //             $usuario = $usuarioModel->Auth_usuario($email);
+
+
+    //             if ($usuario && password_verify($password, $usuario['pass'] ?? '')) {
+
+    //                 $session = session();
+    //                 $session->set([
+    //                     'id_usuario' => $usuario['id_usuario'],
+    //                     'usuario' => $usuario['usuario'],
+    //                     'email' => $user['email'],
+    //                     'logged_in' => true
+    //                 ]);
+    
+    //                 return redirect()->to(base_url('/Principal'));
+    
+    //             } else {
+    //                 return redirect()->to(base_url('/'));
+    //             }
+    //         } else {
+    //             $data['error'] = 'Correo electrónico o contraseña incorrectos.';
+    //         }
+    // }
+    
+    // public function AutenticarUsuario(){
+        
+    //     if($this->request->getMethod() == "post" ) {
+
+    //         // Validar el formulario de inicio de sesión y autenticar al usuario
+    //         $usuario = $this->request->getPost('usu');
+    //         $pass = $this->request->getPost('password');
+            
+    //         $usuario = $this -> usuario -> validar($usuario, $pass);
+        
+    //         if ($usuario) {
+
+    //             if ($usuario && password_verify($pass, $usuario['pass'] ?? '')) {
+
+    //                 $session = session();
+
+    //                 $session->set([
+    //                     'id_usuario' => $usuario['id_usuario'],
+    //                     'usuario' => $usuario['usuario'],
+    //                     'email' => $user['email'],
+    //                     'logged_in' => true
+    //                 ]);
+    
+    //                 return redirect()->to(base_url('/Principal'));
+                    
+    //             // $sesion_activa = session();
+            
+    //             // $sesion_activa ->set ([
+    //             //     'id_usuario' => $usuario['id_usuario'],
+    //             //     'usuario' => $usuario['usuario'],
+    //             //     'inicio_sesion' => true
+    //             // ]);
+        
+    //             // return redirect()->to('/principal');
+    //             }else {
+    //                 return redirect()->to('/');
+    //         }
+    //             return redirect()->to('/');
+    //     }
+    //     }
+    // }
+
+    
     public function guardar(){   
 
         if ($this->request->getMethod() == "post" ) {
             
             $password = $this->request->getPost('password');
-            $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-    
+            $hashed_password = password_hash($password, PASSWORD_BCRYPT, ['cost' => 8]);
+            
             $this->usuario->save([    
                 'usuario' => $this->request->getPost('usuario'),
                 'nombre' => $this->request->getPost('nombre'),
@@ -122,13 +193,16 @@ class Auth extends BaseController
                 'numero' => $this -> request ->getPost('telefono')
             ]);
 
-            return redirect()->to('/');
+            return redirect()->to('/principal');
         }
     }
      
-    public function logout(){
+
+    public function logout() {
         $session = session();
         $session->destroy();
         return redirect()->to(base_url('/'));
     }
+
+
 }
