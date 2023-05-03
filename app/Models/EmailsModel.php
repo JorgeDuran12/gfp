@@ -42,11 +42,19 @@ class EmailsModel extends Model{
     return $datos;
     }
 
-    public function obtener_parametros(){
-     $this->select('emails.*');
-      $this->where('estado', 'A');
-     $datos = $this->findAll();  //nos trae todos los registros que cumplan con una condicion dada 
-      return $datos;
-    }
+    // public function obtener_parametros(){
+    //  $this->select('emails.*');
+    //   $this->where('estado', 'A');
+    //  $datos = $this->findAll();  //nos trae todos los registros que cumplan con una condicion dada 
+    //   return $datos;
+    // }
  
+    public function AuthEmail($email){
+      $this->select('emails.*');
+      $this->where('email', $email);
+      $this->where('estado', 'A');
+      $datos = $this->first();  
+      return $datos;
+  }
+  
 }

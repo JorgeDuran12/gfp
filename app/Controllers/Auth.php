@@ -8,11 +8,13 @@ use App\Models\TelefonosModel;
 
 class Auth extends BaseController
 {
+
     protected $usuario;
     protected $email;
     protected $parametros;
     protected $telefono;
     
+
     public function __construct()
     {
         $this->usuario = new UsuariosModel();
@@ -25,9 +27,7 @@ class Auth extends BaseController
     {   
         echo view("auth/login", [
             'tituloPagina' => 'Inicio de sesión',
-            // 'usuarios'=>$usuario, 
-            // 'parametros'=>$parametros,
-            // 'email'=>$email
+
         ]);
     }
 
@@ -46,6 +46,45 @@ class Auth extends BaseController
         ]);
     }
 
+
+    public function AutenticarUsuario(){
+        if ($this->request->getMethod() == 'post') {
+
+            $email = $this->request->getPost('email');
+            $password = $this->request->getPost('password');
+    
+            $emailModel = new EmailsModel();
+            $user = $emailModel->AuthEmail($email);
+
+    
+            if ($user) {
+
+                $usuarioModel = new UsuariosModel();
+                $usuario = $usuarioModel->Auth_usuario($email);
+
+                if ($usuario && password_verify($password, $usuario['pass'] ?? '')) {
+
+                    $session = session();
+                    $session->set([
+                        'id_usuario' => $usuario['id_usuario'],
+                        'usuario' => $usuario['usuario'],
+                        'email' => $user['email'],
+                        'logged_in' => true
+                    ]);
+    
+                    return redirect()->to(base_url('/mis_movimientos'));
+    
+                } else {
+                    return redirect()->to(base_url('/'));
+                }
+            } else {
+                $data['error'] = 'Correo electrónico o contraseña incorrectos.';
+            }
+        }
+    }
+    
+
+    /* Metodos */
     public function guardar(){   
 
         if ($this->request->getMethod() == "post" ) {
@@ -86,81 +125,10 @@ class Auth extends BaseController
             return redirect()->to('/');
         }
     }
-
-    /* Metodos */
-
-    // public function ValidarUsuario(){
      
-    //     if ($this->request->getMethod() == "post" ) {
-
-    //         $session = session();
-            
-    //         $email = $this->request->getPost('email');
-    //         $password = $this->request->getPost('password');
-            
-    //         $usuario = $this -> usuario -> where('estado', 'A') ->first();   
-
-    //         // Validamos la contraseña
-    //         if ($usuario && password_verify($password, $usuario['pass'])) {
-    //             // Si la contraseña es correcta, creamos la sesión
-    //             $session->set([
-    //                 'id' => $usuario['id_usuario'],
-    //                 'usuario' => $usuario['usuario'],
-    //                 'isLoggedIn' => true,
-
-    //             ]);
-             
-    //             return redirect()->to(base_url('/principal'));                 
-    //         } else {
-    //             // $session->setFlashdata('error', 'El email o la contraseña son incorrectos');
-    //             return redirect()->to(base_url('/'));
-    //         }
-    //     }
-    // }
-
-
-    public function ValidarUsuario()
-    {
-        if ($this->request->getMethod() == 'post') {
-            
-            $email = $this->request->getPost('email');
-            $password = $this->request->getPost('password');
-            
-            if (empty($email) || empty($password)) {
-                $data['error'] = 'Por favor, proporcione un correo electrónico y una contraseña.';
-            } else {
-                $emailsModel = new EmailsModel();
-                $user = $emailsModel->where('email', $email)->first();
-                
-                if ($user) {
-                    $session = session();
-                    $usuariosModel = new UsuariosModel();
-                    $usuario = $usuariosModel->find($user['id_usuario']);
-                    
-                    if (password_verify($password, $usuario['pass'])) {
-                        $session_data = [
-                            'id_usuario' => $usuario['id_usuario'],
-                            'username' => $usuario['usuario'],
-                            'email' => $user['email'],
-                            'logged_in' => true
-                        ];
-    
-                        $session->set($session_data);
-                        return redirect()->to('/principal');
-                    } else {
-                        $data['error'] = 'Correo electrónico o contraseña incorrectos.';
-                    }
-                } else {
-                    $data['error'] = 'Correo electrónico o contraseña incorrectos.';
-                }
-            }
-        }
-    }
-
-    public function logout() {
+    public function logout(){
         $session = session();
         $session->destroy();
         return redirect()->to(base_url('/'));
     }
-    
 }

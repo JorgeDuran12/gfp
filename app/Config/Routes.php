@@ -11,7 +11,7 @@ $routes = Services::routes();
  * --------------------------------------------------------------------
  */
 $routes->setDefaultNamespace('App\Controllers');
-$routes->setDefaultController('Home');
+$routes->setDefaultController('Auth');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
@@ -32,7 +32,7 @@ $routes->set404Override();
 
 /*  Routas Principales (Links)*/
 $routes->get('/', 'Auth::index');
-$routes->get('/principal', 'Principal::index');
+$routes->get('/Principal', 'Principal::index');
 $routes->get('agenda_de_pago', 'Agenda::index');
 $routes->get('mi_saquito', 'Saquito::index');
 $routes->get('mis_movimientos', 'Registro::index');
@@ -45,14 +45,12 @@ $routes->get('gestion/usuarios', 'Usuario::index');
 // rutas de peticion
 $routes->post('buscar_usuario/(:num)','Usuario::buscar_usuario/$1');
 
-/* Rutas Login y Registro */
+/* Rutas Login*/
+$routes->post('AutenticarUsuario','Auth::AutenticarUsuario');
 
-// $routes->post('ValidarUsuario', 'Auth::ValidarUsuario');
-$routes->post('/Validar', 'Auth::ValidarUsuario');
-$routes->get('/CrearCuenta', 'Auth::registroPagina');
+/* Rutas Registro*/
+$routes->get('CrearCuenta', 'Auth::registroPagina');
 $routes->post('Registrar', 'Auth::guardar');
-
-
 
 
 /*

@@ -8,7 +8,7 @@ class Principal extends BaseController
 
     public function index()
     {
-        echo view("gfp/principal/principal", [
+        return view("gfp/principal/principal", [
             'tituloPagina' => 'Inicio'
         ]);
     }

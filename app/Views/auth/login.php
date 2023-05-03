@@ -15,7 +15,7 @@
                     finanzas hoy!</strong> </span>
         </div>
         <br>
-        <form class="login__form" action="<?php base_url('Validar');?>" method="POST">
+        <form method="POST" class="login__form" action="<?=base_url('AutenticarUsuario') ?>">
             <div class="login__input-container">
                 <label class="login__form-input-label" for="email">Correo electronico: </label>
                 <img src="<?= base_url("icons/envelope-fill.svg")?>" class="login__form-icon">
@@ -57,8 +57,8 @@
                                         restablecimiento a tu correo electrónico para que puedas recuperar tu acceso a
                                         nuestra plataforma</strong></p>
                                 <input type="email" class="form-control" id="floatingInput"
-                                    placeholder="name@example.com">
-                                <label for="floatingInput"></label>
+                                    placeholder="Ej: name@example.com">
+                                <!-- <label for="floatingInput"></label> -->
                             </div>
                         </div>
                         <div class="modal-footer bp">
