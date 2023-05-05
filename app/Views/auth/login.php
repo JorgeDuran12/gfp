@@ -32,9 +32,10 @@
                 <a data-bs-toggle="modal" data-bs-target="#recuperarModal" href="#">
                     ¿Has olvidado tu contraseña?
                 </a>
+
                 <div class="contenedor">
-                <button class="btn btn-5" type="submit">Entrar</button>
-                </div>
+                <button class="btn_login" type="submit">Entrar</button>
+                </div> 
             </div>
 
             <div class="login__form-register">

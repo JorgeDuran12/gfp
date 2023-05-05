@@ -24,9 +24,7 @@ class UsuariosModel extends Model{
     protected $validationMessages = [];
     protected $skipValidation    = false;
 
-
  // <-------------funcion traer_usuario que sera usada en controlador por la funcion  buscar_usuario----------------------->
-
  
  public function traer_usuario($id){
     $this->select('usuarios.*');
@@ -35,6 +33,27 @@ class UsuariosModel extends Model{
     $datos = $this->first();  
     return $datos;
 }
+
+    // public function DataActualizar($id){
+    //     $this->select('usuarios.*, emails.');
+    //     $this->join('telefonos', 'telefonos.id_usuario = usuarios.id_usuario');
+    //     $this->join('emails','emails.id_usuario = usuarios.id_usuario');
+    //     $this->where('estado','A');
+    //     $this->where('usuarios.id_usuario',$id);
+    //     $datos = $this->first();  
+    //     return $datos;
+    // }
+
+    public function DataActualizar($id,$estado){
+        $this->select('usuarios.*, emails.id_usuario as id_emails, talefonos.id_usuario as id_telefono');
+        $this->join('telefonos', 'telefonos.id_usuario = usuarios.id_usuario');
+        $this->join('emails','emails.id_usuario = usuarios.id_usuario');
+        $this->where('usuarios.id_usuario',$id);
+        $this->where('estado','A');
+        $datos = $this->first();           
+        return $datos;
+      }
+
 
     // <-----------------------------------funcion eliminar en vista principal----------------------------------->
 
@@ -50,25 +69,13 @@ class UsuariosModel extends Model{
       return $datos;
    }
 
-   public function Auth_usuario($email) {
-    $this->select('usuarios.*');
-    $this->join('emails', 'emails.id_usuario = usuarios.id_usuario');
-    $this->where('emails.email', $email);
-    $this->where('usuarios.estado', 'A');
-    $datos = $this->get()->getRowArray(); 
-    return $datos;
-}
-
-// public function Auth_Verify_Usuario($)
-
-//  public function validar($usuario, $pass){
-//     // Buscar al usuario en la base de datos y verificar la contraseña
-//     // Devolver el usuario si las credenciales son válidas, o NULL si no lo son
-
-//     $this->select('usuarios.*');
-//     $this->where('estado', 'A');
-//     $user = $this->where('usuario', $usuario)->first();
-//     return $user;
-//  }
-
+    public function Auth_usuario($email) {
+        $this->select('usuarios.*');
+        $this->join('emails', 'emails.id_usuario = usuarios.id_usuario');
+        $this->where('emails.email', $email);
+        $this->where('usuarios.estado', 'A');
+        $datos = $this->get()->getRowArray(); 
+        // var_dump($datos);
+        return $datos;
+    }
 }

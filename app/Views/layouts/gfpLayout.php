@@ -22,7 +22,7 @@
 
     <!-- Todos los estilos -->
     <link rel="stylesheet" href="<?= base_url('css/header/headerStyless.css') ?>">
-    <link rel="stylesheet" href="<?= base_url('css/general/globalStyles.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('css/general/globalStyless.css') ?>">
     <link rel="stylesheet" href="<?= base_url('css/navbar/navvStyless.css') ?>">
     <link rel="stylesheet" href="<?= base_url('css/pagina/paginaStyle.css') ?>">
     <link rel="stylesheet" href="<?= base_url('css/footer/footerStyles.css') ?>">
@@ -30,11 +30,11 @@
     <link rel="stylesheet" href="<?= base_url("/css/agenda/pagoStylees.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/registro/movimientoss.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/actividades/actividad.css")?>">
-    <link rel="stylesheet" href="<?= base_url("/css/saquito/saquito1.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/css/saquito/saquito12.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/registro/movimiento.css")?>">
-    <link rel="stylesheet" href="<?= base_url("/css/agenda/pagoStylesss.css")?>">
-    <link rel="stylesheet" href="<?= base_url("/css/fullCalendar/fullCalendar.css")?>">
-    <link rel="stylesheet" href="<?= base_url("/css/123/1234567.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/css/agenda/pagoStyless.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/css/fullCalendar/fullCalendarrr.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/css/123/123456.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/123/9876541.css")?>">
 
     <!-- <link rel="stylesheet" href="<?= base_url("/layouts/gfpLayout.css")?>"> -->
@@ -55,9 +55,9 @@
         </div>
         
         <div class="page__container">
-            <header class="header__container">
-                <?= view('componentes/header')?>
-            </header>
+            <!-- <header class="header__container">
+                
+            </header> -->
             
             <div class="principal__container">
                 <?= $this->renderSection('contenido') ?>          

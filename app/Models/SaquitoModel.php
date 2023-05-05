@@ -26,12 +26,12 @@ class SaquitoModel extends Model{
   
    
      
-       /* public function traer_saquitos($id){
+        public function traer_saquitos($id){
             $this->select('saquitos.*');
             $this->where('id', $id);
             $datos = $this->first();  // nos trae el registro que cumpla con una condicion dada 
             return $datos;
-        }*/
+        }
 }
 
 

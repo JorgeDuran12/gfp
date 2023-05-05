@@ -5,7 +5,7 @@
 <div class="rg_container">
 
     
-    <form id="formulario" action="<?= base_url('Registrar');?>" class="form_container" method="POST">
+    <form id="formulario" class="form_container" action="<?=base_url('Registrar');?>"  method="POST">
 
         <div class="logo_container">
             <img src="<?= base_url("../img/gfp.png");?>" alt="logo_gfp">
@@ -96,7 +96,7 @@
 
         <!-- cuerpo de  num documento -->
         <div class="formulario__grupo" id="grupo__documento">
-        <label for="email" class="formulario__label">documento</label>
+        <label for="email" class="formulario__label">Numero de documento</label>
         <div class="formulario__grupo-input">
           <input type="text" class="formulario__input" name="documento" id="documento" placeholder="10021023659">
 
@@ -135,7 +135,7 @@
                 <span>Crear cuenta</span>
             </button>
             <div class="cuenta_register">
-                <p><strong>¿Ya tienes cuenta?</strong> <a href="<?php echo base_url("/")?>">Iniciar sesión</a></p>
+                <p ><strong>¿Ya tienes cuenta?</strong> <a href="<?php echo base_url("/")?>">Iniciar sesión</a></p>
             </div>
         </div>
     </form>
@@ -151,6 +151,17 @@
 	password: /^.{4,12}$/, // 4 a 12 digitos.
 	email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
 	telefono: /^\d{7,14}$/ // 7 a 14 numeros.
+}
+
+const campos = {
+usuario:false,
+nombre:false,
+apellido:false,
+password:true,
+email:false,
+telefono:false,
+documento:false,
+
 }
 
 const validarfuncion = (e) =>{
@@ -194,12 +205,12 @@ const validarcampo = ( expresion, input, campo) =>{
                    document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-incorrecto');
                    document.getElementById(`grupo__${campo}` ).classList.add('formulario__grupo-correcto');
                    document.querySelector(`#grupo__${campo} .formulario__input-error`).classList.remove('formulario__input-error-activo')
-                   
+                   campos[campo]= true;
           }else{
             document.getElementById(`grupo__${campo}`).classList.add('formulario__grupo-incorrecto');
             document.querySelector(`#grupo__${campo} .formulario__input-error`).classList.add('formulario__input-error-activo')
             document.getElementById(`grupo__${campo}` ).classList.remove('formulario__grupo-correcto');
-
+            campos[campo]= false;
           }
 } 
 
@@ -212,14 +223,13 @@ const validarpass2 = () =>{
             document.getElementById(`grupo__pass2` ).classList.add('formulario__grupo-incorrecto');
             document.querySelector(`#grupo__pass2 .formulario__input-error`).classList.add('formulario__input-error-activo');
             document.getElementById('grupo__pass2').classList.remove('formulario__grupo-correcto');
+            
 
-            console.log('renderizo no')
           }else{
             document.getElementById(`grupo__pass2` ).classList.remove('formulario__grupo-incorrecto');
             document.querySelector(`#grupo__pass2 .formulario__input-error`).classList.remove('formulario__input-error-activo');
              document.getElementById('grupo__pass2').classList.add('formulario__grupo-correcto');
-
-            console.log('renderizo si')
+          
           }
    
 }
@@ -230,5 +240,22 @@ inputs.forEach( (input)=>{
 });
 
 
+formulario.addEventListener('submit' ,(e) =>{
+e.preventDefault();
+
+if( campos.usuario &&  campos.apellido && campos.nombre && campos.email && campos.password && campos.telefono && campos.documento){
+
+  alert("xd")
+
+}else{
+  alert("ssddd")
+
+}
+
+});
+
+
 </script>
+
+
 <?= $this->endSection("contenido")?>

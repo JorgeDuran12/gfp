@@ -40,7 +40,7 @@
                             <td> <?php echo $dato['pass']; ?></td>
                             <td>  <?php if($dato['estado']=="A"){echo "Activo";}else{echo "Eliminado";}?></td>
                 <td>
-                <a class="btn btn-info"  href="#" data-href="<?php echo base_url('/usuarios/eliminar__usuario') . '/' .$dato['id_usuario']. '/' .'A'; ?>" data-bs-toggle="modal" data-bs-target="#modal-confirma"  width="16" height="16" title="Activar Registro">
+                <a class="btn btn-info"  href="#" data-href="<?php echo base_url('usuario/eliminar__usuario') . '/' .$dato['id_usuario']. '/' .'A'; ?>" data-bs-toggle="modal" data-bs-target="#modal-confirma"  width="16" height="16" title="Activar Registro">
                 <img
                     class="image" src="<?= base_url("img/restaurar.png") ?> " title="Eliminar">
                </a>

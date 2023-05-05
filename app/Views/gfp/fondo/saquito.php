@@ -15,7 +15,7 @@
 </div>
 <div class="contenedorSaquito">
     <!-- Formulario principal-->
-    <form method="POST" action="" class="saquito">
+    <form method="POST" action=" " class="saquito">
         <div class="tim">
             <h3>Meta</h3>
         </div>
@@ -24,20 +24,20 @@
 
         </div>
         <br>
-        <div class="tm">
+        <div class="tma">
             <input type="date" class="form-control" name="fecha_inicial" id="fecha_inicial"id="floatingInput"
                 placeholder="Fecha inicial: ">
             <label for="floatingInput"></label>
 
         </div>
         <br>
-        <div class="tm">
+        <div class="tma">
             <input type="number" class="form-control" name="valor" id="valor"id="floatingInput" placeholder="Valor: ">
             <label for="floatingInput"></label>
         </div>
         <br>
 
-        <div class="tx">
+        <div class="txa">
             <input type="number" class="form-control" name="cuota" id="couta"id="floatingInput" placeholder="Cuotas:">
             <label for="floatingInput"></label>
             <input type="number" class="form-control" name="numero_cuotas" id="numero_cuotas"id="floatingInput"
@@ -63,24 +63,22 @@
 </div>
 </form>
 <!-- Modal  Guadar-->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                <h5 class="modal-title" id="exampleModalLabel">Guardar Registro</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Guardar registro</h5>
             </div>
             <div class="modal-body">
-                ¿Desea guardar este registro?
+                ¿Desea Guardar este registro?
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-                <button type="Submit" class="btn btn-success">Guadar</button>
+                <button type="button" class=" btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                <button type="Submit" class="btn btn-success">Eliminar</button>
             </div>
         </div>
     </div>
-</div>
 <!-- Modal Eliminar-->
 <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -118,19 +116,19 @@
 
                 </div>
                 <br>
-                <div class="tm">
+                <div class="tma">
                     <input type="date" class="form-control" name="fecha_inicial" id="floatingInput" placeholder="Fecha inicial: ">
                     <label for="floatingInput"></label>
 
                 </div>
                 <br>
-                <div class="tm">
+                <div class="tma">
                     <input type="number" class="form-control" name="valor" id="floatingInput" placeholder="Valor: ">
                     <label for="floatingInput"></label>
                 </div>
                 <br>
 
-                <div class="tx">
+                <div class="txa">
                     <input type="number" class="form-control" name="cuota" id="floatingInput" placeholder="Cuotas:">
                     <label for="floatingInput"></label>
                     <input type="number" class="form-control" name="numero_cuotas"id="floatingInput" placeholder="Valor cuotas:">
@@ -151,7 +149,4 @@
 <?= $this->endSection("contenido")?>
 
 <script>
-   
- 
- 
 </script>

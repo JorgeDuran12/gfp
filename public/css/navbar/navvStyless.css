@@ -1,113 +1,115 @@
-        * {
-            margin: 0px;
-            padding: 0px;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-        }
-        
-        .navbar__container {
-            /* left: -200px; */
-            position: relative;
-            display: block;
-            height: 100vh + 10vh;
-            width: 80px;
-            transition: all 100ms linear;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            background: #243a69;
-        }
-        
-        .navbar__logo {
-            width: 50px;
-            text-align: center;
-            padding: 5px;
-            position: relative;
-            margin-top: 10px;
-        }
-        
-        .navbar__container>ul {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            margin-top: 50px;
-            padding: 0;
-            list-style: none;
-        }
-        
-        .navbar__container>ul>li {
-            padding-bottom: 10px;
-        }
-        
-        .navbar__container>ul>li>a {
-            text-decoration: none;
-            color: #fff;
-            font-size: 20px;
-        }
-        
-        .title__list {
-            font-weight: bolder;
-        }
-        
-        .navbar__list-spacing {
-            border-bottom: 1px solid rgb(158, 156, 158);
-            width: 100%;
-        }
-        
-        .navbar__list-last {
-            margin-bottom: 50px;
-        }
-        /* Icons dinamicos */
-        
-        .navbar__icons {
-            padding: 5px;
-            -webkit-transform: scale(0.80);
-            transform: scale(0.80);
-            animation: nameIcon 3s ease-in-out;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-        
-        .navbar__icons>span {
-            display: none;
-            font-size: 22px;
-            border-radius: 30px;
-            padding: 4px;
-            visibility: hidden;
-        }
-        
-        .navbar__icons:hover>li {
-            -webkit-transform: scale(0.90);
-            transform: scale(0.90);
-            padding: 10px;
-        }
-        
-        .navbar__icons:hover>span {
-            background-color: rgb(38, 150, 150);
-            display: inline-block;
-            top: 0;
-            left: 88px;
-            position: absolute;
-            visibility: visible;
-            width: 200px;
-        }
-        
-        .link__last {
-            margin-bottom: 30px;
-        }
-        
-        .icons__admin {
-            position: absolute;
-            bottom: 0;
-        }
-        
-        .navbar__separator {
-            border: 1px solid rgb(230, 230, 230);
-            width: 100%;
-            /* border: 1px solid white; */
-        }
-        /* box-shadow: 0px 0px 5px 5px #1ecdec; */
-        /* -webkit-border-radius: 90%; */
-        /* border-radius: 90%; */
+.navbar__container {
+    /* left: -200px; */
+    position: relative;
+    display: block;
+    height: 100vh + 10vh;
+    width: 80px;
+    transition: all 100ms linear;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #243a69;
+}
+
+.navbar__logo {
+    width: 50px;
+    text-align: center;
+    padding: 5px;
+    position: relative;
+    margin-top: 10px;
+}
+
+.navbar__container>ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+    padding: 0;
+    list-style: none;
+}
+
+.navbar__container>ul>li {
+    padding-bottom: 10px;
+}
+
+.navbar__container>ul>li>a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+}
+
+.title__list {
+    font-weight: bolder;
+}
+
+.navbar__list-spacing {
+    border-bottom: 1px solid rgb(158, 156, 158);
+    width: 100%;
+}
+
+.navbar__list-last {
+    margin-bottom: 50px;
+}
+
+
+/* Icons dinamicos */
+
+.navbar__icons {
+    padding: 5px;
+    -webkit-transform: scale(0.80);
+    transform: scale(0.80);
+    animation: nameIcon 3s ease-in-out;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.navbar__icons>span {
+    display: none;
+    font-size: 22px;
+    border-radius: 30px;
+    padding: 4px;
+    visibility: hidden;
+}
+
+.navbar__icons:hover>li {
+    -webkit-transform: scale(0.90);
+    transform: scale(0.90);
+    padding: 10px;
+}
+
+.navbar__icons:hover>span {
+    background-color: rgb(38, 150, 150);
+    display: inline-block;
+    top: 0;
+    left: 88px;
+    position: absolute;
+    visibility: visible;
+    width: 200px;
+}
+
+.link__last {
+    margin-bottom: 30px;
+}
+
+.icons__admin {
+    position: absolute;
+    bottom: 0;
+}
+
+.navbar__separator {
+    border: 1px solid rgb(230, 230, 230);
+    width: 100%;
+    /* border: 1px solid white; */
+}
+
+
+/* box-shadow: 0px 0px 5px 5px #1ecdec; */
+
+
+/* -webkit-border-radius: 90%; */
+
+
+/* border-radius: 90%; */

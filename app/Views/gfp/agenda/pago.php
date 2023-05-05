@@ -13,13 +13,14 @@ data-bs-target="#modalEvento">
 
 <div class="agendaPago__container">
   <!-- Agenda -->
-  <div class="agendaPago__calendar">
     <div id="calendar"></div>
-  </div>
   <!-- Fin Agenda -->
 
   <!-- Notas o resumen -->
   <div class="agendaPago__notas">
+    <div class="agendaPago__notas-title">
+      <span>Mis Actividades</span>
+    </div>
     
   </div>
   <!-- Fin notas o resumen -->
@@ -35,7 +36,7 @@ data-bs-target="#modalEvento">
           </div>
           <div class="modal-body">
             <!-- Formulario -->
-            <form action="" method="" class="d-flex flex-column ">
+            <form action="<?= base_url("insertar_evento")?>" method="post" class="d-flex flex-column ">
               <div class="mb-3" style="display:none;">
                 <label for="id" class="form-label">ID: </label>
                 <input type="text" hidden
@@ -52,7 +53,7 @@ data-bs-target="#modalEvento">
                 <div class="mb-3">
                   <label for="fechaInicio" class="form-label">Fecha inicial: </label>
                   <input type="datetime-local"
-                    class="form-control" name="fechaInicio" id="fechaInicio" aria-describedby="helpId" placeholder="Ej: año/mes/día">
+                    class="form-control" name="fechaInicio" id="fechaInicio"  placeholder="Ej: año/mes/día">
                 </div>
     
                 <div class="mb-3 l-3">
@@ -114,7 +115,7 @@ let modalEvento;
       events:  [ //Mostrar todos los eventos
         <?php foreach($eventos as $event) { ?>
           {
-            id: "<?php echo $event['id'];?>",
+            id: "<?php echo $event['id_agenda'];?>",
             title: "<?php echo $event['title'];?>",
             descripcion: "<?php echo $event['descripcion'];?>",
             color: "<?php echo $event['color'];?>",
@@ -125,7 +126,7 @@ let modalEvento;
       ],
       dateClick: function( data ) { //Click en el dia seleccionado o evento
         // console.log(data.dateStr )
-        limpiarFormulario(); //Limpiar formulario
+        limpiarFormulario( data ); //Limpiar formulario
         modalEvento.show();
       },
       eventClick: function ( data ) {
@@ -149,32 +150,35 @@ let modalEvento;
   function recuperar_datos_del_evento({ event: evento }) { 
     
     /* Configurar la hora y fecha inicio */
-    const fechaI = evento.startStr.split("T");
-    // console.log(fecha)
-    const horaI = fechaI[1].split("-");
-    // console.log(hora[0])
+    let fechaI = evento.startStr.split("T");
+    let horaI = fechaI[1].split("-");
+    horaI = horaI[0].split(":");
+    
 
     /* Configurar la hora y fecha de fin */
-    const fechaF = evento.endStr.split("T");
-    // console.log(fecha)
-    const horaF = fechaF[1].split("-");
-    // console.log(hora[0])
+    let fechaF = evento.endStr.split("T");
+    let horaF = fechaF[1].split("-");
+    horaF = horaF[0].split(":");
+
 
         document.getElementById("id").value = evento.id;
         document.getElementById("titulo").value = evento.title;
-        document.getElementById("fechaInicio").value = fechaI[0] + ' ' + horaI[0];
-        document.getElementById("fechaFinal").value = fechaF[0] + ' ' + horaF[0];
+        document.getElementById("fechaInicio").value = fechaI[0] + ' ' + horaI[0] + ":" + horaI[1];
+        document.getElementById("fechaFinal").value = fechaF[0] + ' ' + horaF[0] + ":" + horaF[1];
         document.getElementById("descripcion").value = evento.extendedProps.descripcion;
         document.getElementById("color").value = evento.backgroundColor;
   }
 
 
-  function limpiarFormulario() {
+  function limpiarFormulario( data ) {
+
+      // console.log(data)
+
         document.getElementById("id").value = "";
         document.getElementById("titulo").value = "";
         document.getElementById("descripcion").value = "";
         document.getElementById("color").value = "";
-        document.getElementById("fechaInicio").value = "";
+        document.getElementById("fechaInicio").value = data.dateStr;
         document.getElementById("fechaFinal").value = "";
   }
 

@@ -108,7 +108,7 @@ class Usuario extends BaseController
 
 // funcion eliminar
     public function eliminar__usuario($id,$estado){
-       $usuario_ = $this->usuario->eliminados_usu($id,$estado);
+       $usuario_ = $this->usuario->elimina_usu($id,$estado);
        return redirect()->to(base_url('gestion_de_administradores'));
     }
 
@@ -118,7 +118,7 @@ class Usuario extends BaseController
       public function buscar_usuario($id_usuario)
       {
           $returnData = array();
-          $usuario_ = $this->usuario->traer_usuario($id_usuario);
+          $usuario_ = $this->usuario->DataActualizar($id_usuario, $estado);
           if (!empty($usuario_)) {
               array_push($returnData, $usuario_);    
           }

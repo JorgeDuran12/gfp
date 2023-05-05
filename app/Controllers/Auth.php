@@ -24,13 +24,14 @@ class Auth extends BaseController
     }
     
     public function index()
-    {   
+    {
+
         echo view("auth/login", [
             'tituloPagina' => 'Inicio de sesión',
-
         ]);
     }
 
+    
     public function registroPagina(){ 
         $usuario = $this->usuario->where('estado', "A")->findAll();   
         $parametros = $this->parametros->obtener_encabezado_3();
@@ -48,127 +49,58 @@ class Auth extends BaseController
 
     /* Metodos */
     public function AutenticarUsuario(){
-      
 
-        $email = $this->request->getPost('email');
-        $password = $this->request->getPost('password');
-
-        $emailModel = new EmailsModel();
-        $user = $emailModel->AuthEmail($email);
+        $email = $this->request->getPost('Email_LoginForm');
+        $password = $this->request->getPost('Password_LoginForm');
       
         $usuarioModel = new UsuariosModel();
-        $usuario = $usuarioModel->Auth_usuario($email);
+        $emailModel = new EmailsModel();
 
-        if ($user && $usuario && $usuario['pass']) {
+        $id_usuario = $emailModel->Id_Usuario_Email($email);
+        
+        if ($id_usuario) {
+            
+            $usuario = $usuarioModel->Auth_usuario($email);
 
-                 $session = session();
+            if ($usuario && isset($usuario['pass'])) {
+                
+                if (password_verify($password, $usuario['pass'])) {
 
-                 $session->set([
-                    'id_usuario' => $usuario['id_usuario'],
-                    'usuario' => $usuario['usuario'],
-                    'email' => $user['email'],
-                    'logged_in' => true
-                ]);
+                    $session = session();
+                    $session->set([
+                        'id_usuario' => $id_usuario,
+                        'usuario' => $usuario['usuario'],
+                        'email' => $email,
+                        'logged_in' => true
+                    ]);
+                
+                    return redirect()->to(site_url('/Principal'));
 
-                return redirect()->to(base_url('/Principal')); 
-
-            }else {
-                return redirect()->to(base_url('/'));
-            } 
+                } else{
+                    // echo "La contraseña no coincide con la almacenada en la base de datos.";
+                    // return;
+                }
+            }       
+        } else {
+            // echo "El usuario no existe en la base de datos.";
+            // return;
         }
-    
+    }
 
 
-    // public function AutenticarUsuario(){
-
-    //         $email = $this->request->getPost('email');
-    //         $password = $this->request->getPost('password');
-    
-    //         $emailModel = new EmailsModel();
-    //         $user = $emailModel->AuthEmail($email);
-          
-    //         if ($user) {
-
-    //             $usuarioModel = new UsuariosModel();
-    //             $usuario = $usuarioModel->Auth_usuario($email);
-
-
-    //             if ($usuario && password_verify($password, $usuario['pass'] ?? '')) {
-
-    //                 $session = session();
-    //                 $session->set([
-    //                     'id_usuario' => $usuario['id_usuario'],
-    //                     'usuario' => $usuario['usuario'],
-    //                     'email' => $user['email'],
-    //                     'logged_in' => true
-    //                 ]);
-    
-    //                 return redirect()->to(base_url('/Principal'));
-    
-    //             } else {
-    //                 return redirect()->to(base_url('/'));
-    //             }
-    //         } else {
-    //             $data['error'] = 'Correo electrónico o contraseña incorrectos.';
-    //         }
-    // }
-    
-    // public function AutenticarUsuario(){
-        
-    //     if($this->request->getMethod() == "post" ) {
-
-    //         // Validar el formulario de inicio de sesión y autenticar al usuario
-    //         $usuario = $this->request->getPost('usu');
-    //         $pass = $this->request->getPost('password');
-            
-    //         $usuario = $this -> usuario -> validar($usuario, $pass);
-        
-    //         if ($usuario) {
-
-    //             if ($usuario && password_verify($pass, $usuario['pass'] ?? '')) {
-
-    //                 $session = session();
-
-    //                 $session->set([
-    //                     'id_usuario' => $usuario['id_usuario'],
-    //                     'usuario' => $usuario['usuario'],
-    //                     'email' => $user['email'],
-    //                     'logged_in' => true
-    //                 ]);
-    
-    //                 return redirect()->to(base_url('/Principal'));
-                    
-    //             // $sesion_activa = session();
-            
-    //             // $sesion_activa ->set ([
-    //             //     'id_usuario' => $usuario['id_usuario'],
-    //             //     'usuario' => $usuario['usuario'],
-    //             //     'inicio_sesion' => true
-    //             // ]);
-        
-    //             // return redirect()->to('/principal');
-    //             }else {
-    //                 return redirect()->to('/');
-    //         }
-    //             return redirect()->to('/');
-    //     }
-    //     }
-    // }
-
-    
     public function guardar(){   
 
         if ($this->request->getMethod() == "post" ) {
             
-            $password = $this->request->getPost('password');
-            $hashed_password = password_hash($password, PASSWORD_BCRYPT, ['cost' => 8]);
+            $password = $this->request->getPost('pass');
+            $hashed_password = password_hash($password, PASSWORD_DEFAULT);
             
             $this->usuario->save([    
                 'usuario' => $this->request->getPost('usuario'),
                 'nombre' => $this->request->getPost('nombre'),
                 'apellido' => $this->request->getPost('apellido'),
                 'tipo_documento' => $this->request->getPost('tipo_documento'),
-                'num_documento' => $this->request->getPost('num_documento'),
+                'documento' => $this->request->getPost('num_documento'),
                 'pass' => $hashed_password
             ]);
     
@@ -193,14 +125,15 @@ class Auth extends BaseController
                 'numero' => $this -> request ->getPost('telefono')
             ]);
 
-            return redirect()->to('/principal');
+            return redirect()->to('/Principal');
         }
     }
-     
+
 
     public function logout() {
         $session = session();
         $session->destroy();
+        
         return redirect()->to(base_url('/'));
     }
 

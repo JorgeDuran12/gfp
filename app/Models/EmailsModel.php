@@ -50,11 +50,21 @@ class EmailsModel extends Model{
     // }
  
     public function AuthEmail($email){
-      $this->select('emails.*');
+      $this->select('emails.*, usuarios.pass');
+      $this->join('usuarios', 'emails.id_usuario = usuarios.id_usuario');
       $this->where('email', $email);
-      $this->where('estado', 'A');
-      $datos = $this->first();  
+      $this->where('prioridad', 13);
+      $this->where('emails.estado', 'A');
+      $datos = $this->first(); 
+      // var_dump($datos);
       return $datos;
-  }
+    }
+    
   
+  public function Id_Usuario_Email($email)
+  {
+      $datos = $this->AuthEmail($email);
+      return $datos ? $datos['id_usuario'] : null;
+  }
+
 }

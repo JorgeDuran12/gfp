@@ -44,7 +44,7 @@
                                        <img  class="image" src="<?= base_url("img/editar.png") ?> " title="Editar" >
                                     </a>     
                                  
-                                    <a class="btn btn-danger"  href="#" data-href="<?php echo base_url('usuarios/eliminar__usuario'). '/' .$dato['id_usuario']. '/' .'E'; ?>"  data-bs-toggle="modal" data-bs-target="#modal-confirma" src="<?php echo base_url(); ?>/icons/borrar.png" width="16" height="16"  title="Elimina Registro"> 
+                                    <a class="btn btn-danger"  href="#" data-href="<?php echo base_url('usuario/eliminar__usuario'). '/' .$dato['id_usuario']. '/' .'E'; ?>"  data-bs-toggle="modal" data-bs-target="#modal-confirma" src="<?php echo base_url(); ?>/icons/borrar.png" width="16" height="16"  title="Elimina Registro"> 
                                     <img
                     class="image" src="<?= base_url("img/Eliminar.png") ?> " title="Eliminar">
                                    </a>
@@ -229,8 +229,8 @@ $('.close').click(function() {$("#modal-confirma").modal("hide");});
            $("#apellido").val(rs[0]['apellido']);
            $("#tipo_documento").val(rs[0]['tipo_documento']);
            $("#num_documento").val(rs[0]['num_documento']);
-           $("#email").val(rs[0]['email']);
-           $("#telefono").val(rs[0]['telefono']);
+           $("#email").val(rs[0]['id_emails']);
+           $("#telefono").val(rs[0]['id_telefono']);
            $("#id_rol").val(rs[0]['id_rol']);
            $("#pass").val(rs[0]['pass']);
            $("#btn_guardar").text('Actualizar');

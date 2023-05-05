@@ -1,0 +1,55 @@
+        .fc-direction-ltr {
+            /* left: 0; top: 0;   */
+            width: 100%;
+            position: relative;
+            height: 60%;
+            /* background-color: rgb(255, 255, 255); */
+            border: 1px solid #3e7184;
+            /* display: flex; */
+        }
+        
+        .fc .fc-toolbar.fc-header-toolbar {
+            background: #133e59;
+            height: 150px;
+        }
+        
+        .fc .fc-daygrid-day-number {
+            color: #f4f4f2;
+            text-decoration: none;
+        }
+        
+        .fc .fc-col-header-cell-cushion {
+            color: #f4f4f2;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        
+        .fc .fc-daygrid-day-frame {
+            width: 90%;
+        }
+        
+        .fc .fc-toolbar-title {
+            text-transform: capitalize;
+            font-weight: bold;
+        }
+        
+        .fc .fc-daygrid-day.fc-day-today {
+            background: #243a69;
+        }
+        
+        .fc-direction-ltr {
+            background: #133e59;
+        }
+        
+        .fc-direction-ltr .fc-button-group>.fc-button:not(:first-child) {
+            background: #c19821;
+        }
+        
+        .fc-direction-ltr .fc-button-group>.fc-button:not(:last-child) {
+            background: #c19821;
+        }
+        
+        .fc .fc-button-primary:not(:disabled):active,
+        .fc .fc-button-primary:not(:disabled).fc-button-active {
+            color: red;
+        }

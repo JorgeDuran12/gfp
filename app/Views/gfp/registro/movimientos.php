@@ -22,7 +22,6 @@
                 <option selected class="tl">Clase De Movimiento</option>
                 <option value="1" class="tl">Bancario</option>
                 <option value="2" class="tl">No Bancario</option>
-
             </select>
         </div>
         <br>
@@ -57,14 +56,25 @@
             </button>
 
         </div>&nbsp&nbsp&nbsp&nbsp&nbsp
+
         
-        <div class="rt">
+        <!-- <div class="rt">
             <button data-bs-toggle="modal" data-bs-target="#reporteegresoModal" type="button" class="btn btn-secondary">
                 <img src="<?= base_url("icons/file-earmark-spreadsheet-fill.svg") ?>">
                 Reporte Egreso
             </button>
+        </div>&nbsp&nbsp&nbsp&nbsp&nbsp -->
 
-        </div>
+
+        <div class="b" data-bs-toggle="modal" data-bs-target="#reporteegresoModal"> <a href="#" class="btn-neon">
+        <span id="span1"></span>
+        <span id="span2"></span>
+        <span id="span3"></span>
+        <span id="span4"></span>
+        Reporte Egreso
+      </a></div>
+
+
         </div>
     </form>
 

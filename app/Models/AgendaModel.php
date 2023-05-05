@@ -5,8 +5,8 @@ namespace App\Models; //Reservamos el espacio de nombre de la ruta app\models
 use CodeIgniter\Model;
 
 class AgendaModel extends Model{
-    protected $table      = 'eventos'; /* nombre de la tabla modelada/*/
-    protected $primaryKey = 'id';
+    protected $table      = 'agenda'; /* nombre de la tabla modelada/*/
+    protected $primaryKey = 'id_agenda';
 
     protected $useAutoIncrement = true; /* Si la llave primaria se genera con autoincremento*/
 
@@ -28,7 +28,7 @@ class AgendaModel extends Model{
 
 
     public function traer_todos_los_eventos(){
-        $this->select('eventos.*');
+        $this->select('agenda.*');
         $datos = $this->find();
         return $datos;
     }

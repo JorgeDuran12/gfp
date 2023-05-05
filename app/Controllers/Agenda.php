@@ -22,4 +22,20 @@ class Agenda extends BaseController
             'eventos' => $datosEventos
         ]);
     }
+
+    /* Metodos */ 
+    public function insertar( ) {
+        echo $id = $this->request->getPost('id');
+        echo $titulo = $this->request->getPost('title');
+        echo $descripcion = $this->request->getPost('descripcion');
+        echo $fechaInicial = $this->request->getPost('fechaInicio');
+        echo $fechaFinal = $this->request->getPost('fechaFinal');
+        echo $color = $this->request->getPost('color');
+
+        if( $id && $this->request->getMethod('post') ) {
+            echo 'Actualizando...';
+        }else if( $this->request->getMethod('post') ) {
+            echo 'Creando...';
+        }
+    }
 }

@@ -50,7 +50,7 @@
     font-weight: 700;
     color: #0e0d0d;
     text-transform: uppercase;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
 }
 
 .login__subtitle-text {
@@ -59,7 +59,7 @@
     text-align: center;
     line-height: 1.1rem;
     color: rgb(255, 255, 255);
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
 }
 
 .login__form {
