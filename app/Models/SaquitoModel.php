@@ -24,9 +24,14 @@ class SaquitoModel extends Model{
     protected $validationMessages = [];
     protected $skipValidation    = false;
   
-    function guardar($data){
-        $this->db->insert("saquitos",$data);
-        }
+   
+     
+       /* public function traer_saquitos($id){
+            $this->select('saquitos.*');
+            $this->where('id', $id);
+            $datos = $this->first();  // nos trae el registro que cumpla con una condicion dada 
+            return $datos;
+        }*/
 }
 
 

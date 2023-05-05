@@ -10,36 +10,56 @@ class Saquito extends BaseController
     public function __construct()
     
     {
-        //$this->saquito = new SaquitoModel();
-        //parent ::__construct();
+        $this->saquito = new SaquitoModel();
+        
     }
 
     public function index()
     {
+        
         echo view("gfp/fondo/saquito", [
-            'tituloPagina' => 'Mi saquito'
+            'tituloPagina' => 'Mi saquito',
+            //'saquito'=>$saquito
         ]);
     }
-    function guardar(){
-        $descripcion= $this->post("descripcion");
-        $fecha_inicial= $this->post("fecha_inicial");
-        $valor= $this->post("valor");
-        $cuotas= $this->post("cuotas");
-        $numero_cuotas= $this->post("numero_cuotas");
-
-        $datos = array (
-            "descripcion" => $descripcion,
-            "fecha_inical" => $fecha_inicial,
-            "valor" => $valor,
-            "cuota" => $cuotas,
-            "numero_cuotas" => $numero_cuotas,
-
-        );
-        $this->SaquitoModels->guardar($datos);
-        echo "Registro guardado";
 
 
+    /*public function traer_saquitos(){
+        $datos->this->saquito->traer_saquitos();
+        return json_encode($datos);
+    }*/
+    public function insertar()
+    {
+        $tp=$this->request->getPost('tp');
+        if ($this->request->getMethod() == "post") {
+            // Condicional Crear unos Registros
+            if ($tp == 1) {
+                $this->saquito->save([
+                    'descripcion' => $this->request->getPost('descripcion'),
+                    'fecha_inicial' => $this->request->getPost('fecha_inicial'),
+                    'valor' => $this->request->getPost('valor'),
+                    'cuota' => $this->request->getPost('cuota'),
+                    'numero_cuotas' => $this->request->getPost('numero_cuotas')
+                    
+                ]);
+
+            // Condicional Editar unos Registros
+            } else {
+                $this->saquito->update( 
+                    $this->request->getPost('id'),
+                    ['descripcion' => $this->request->getPost('descripcion'),
+                    'fecha_inicial' => $this->request->getPost('fecha_inicial'),
+                    'valor' => $this->request->getPost('valor'),
+                    'cuota' => $this->request->getPost('cuota'),
+                    'numero_cuotas' => $this->request->getPost('numero_cuotas')
+                    ]
+                );
+            }
+            return redirect()->to(base_url('/saquitos'));
+        }
     }
+
+  
     
    
 }

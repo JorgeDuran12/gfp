@@ -1,4 +1,4 @@
-<?= $this->extend("layouts/gfpLayout")?>
+ <?= $this->extend("layouts/gfpLayout")?>
 
 <?= $this->section("contenido")?>
 
@@ -7,7 +7,9 @@
 </div><br>
 
 
-
+<div  class="contenedorEmergencia">
+<form class="emergencia">
+<br>
 <div class="input-group mb-3 ss ">
     <span class="input-group-text" id="inputGroup-sizing-default"><img
             src="<?= base_url("icons/question-circle-fill.svg")?>"
@@ -16,8 +18,14 @@
     <input type="date" class="ss" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
 </div>
 
-<form>
-    <div class="registro"></div>
+    <div >
+
+    <div>
+        ggggggggggggggggggg
+
+    </div>
+    </div>
+    
    <!--  <div class="e b">
         <label> Ingresa Un Valor</label><br><br>
         <input type="number" class="tl aria-label=" Dollar amount (with dot and two decimal places)><br><br>
@@ -46,7 +54,7 @@
     </div> -->
 
 </form>
-
+</div>
 <!-- <div class="modal fade" id="guardaremergeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">

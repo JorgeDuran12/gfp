@@ -1,3 +1,8 @@
+.contenedorEmergencia {
+    width: 100%;
+    height: 100%;
+}
+
 .ss {
     color: rgb(0, 0, 0);
 }
@@ -6,19 +11,14 @@
     text-align: center;
 }
 
-.registro {
+.emergencia {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     margin: 20px auto;
-    width: 700px;
-    height: 650px;
+    height: 100%;
     flex-direction: column;
-    background-color: #043391;
-    border-color: white;
-    border-width: 2px;
-    border-style: solid;
-    border-radius: 20px;
+    background-color: #292929;
     -webkit-box-shadow: 10px 10px 10px -8px rgba(191, 191, 191, 1);
     -moz-box-shadow: 10px 10px 10px -8px rgba(191, 191, 191, 1);
     box-shadow: 10px 10px 10px -8px rgba(191, 191, 191, 1);

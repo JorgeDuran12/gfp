@@ -16,9 +16,9 @@
 
     <!-- Todos los estilos -->
     <link rel="stylesheet" href="<?= base_url('css/footer/footerStyles.css') ?>">
-    <link rel="stylesheet" href="<?= base_url("/css/usuarios/loginStyles4.css")?>">
-    <link rel="stylesheet" href="<?= base_url("/css/usuarios/register6.css")?>">
-    <link rel="stylesheet" href="<?= base_url("/css/layouts/authLayout.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/css/usuarios/loginStyles123.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/css/usuarios/register1256.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/css/layouts/authLayout1.css")?>">
 
     <title><?= $tituloPagina ?></title>
 </head>

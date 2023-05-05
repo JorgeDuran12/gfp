@@ -27,23 +27,26 @@
     <link rel="stylesheet" href="<?= base_url('css/pagina/paginaStyle.css') ?>">
     <link rel="stylesheet" href="<?= base_url('css/footer/footerStyles.css') ?>">
     <link rel="stylesheet" href="<?= base_url('css/principal/principalStyles.css') ?>">
-    <link rel="stylesheet" href="<?= base_url("/css/usuarios/loginStyles4.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/agenda/pagoStylees.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/registro/movimientoss.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/actividades/actividad.css")?>">
-    <link rel="stylesheet" href="<?= base_url("/css/saquito/saquito.css")?>">
-    <link rel="stylesheet" href="<?= base_url("/css/registro/movimientooo.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/css/saquito/saquito1.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/css/registro/movimiento.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/agenda/pagoStylesss.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/fullCalendar/fullCalendar.css")?>">
-    <link rel="stylesheet" href="<?= base_url("/css/123/12345.css")?>">
-    <link rel="stylesheet" href="<?= base_url("/css/123/987654.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/css/123/1234567.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/css/123/9876541.css")?>">
 
     <!-- <link rel="stylesheet" href="<?= base_url("/layouts/gfpLayout.css")?>"> -->
 
 
-    <!-- Full calendar -->
-    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.6/index.global.min.js"></script></head>
+    <!-- Full calendar JS-->
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/locales-all.js'></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.css">
 
+
+</head>
 <body class="body__container">
     <div class="body__content">
         

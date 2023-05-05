@@ -7,15 +7,15 @@
 
 <div class="input-group mb-3 date ">
 
-    <span class="input-group-text" id="inputGroup-sizing-default"><img
-            src="<?= base_url("icons/question-circle-fill.svg")?>"
-            title="En esta opcion debera digitalizar el dia del mes donde el aplicativo debera descontar de la disponibilidad de la cuota para el saquito">
-        &nbsp Fecha inicial</span>
-    <input type="date" class="ss" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+<span class="input-group-text" id="inputGroup-sizing-default"><img
+        src="<?= base_url("icons/question-circle-fill.svg")?>"
+        title="En esta opcion debera digitalizar el dia del mes donde el aplicativo debera descontar de la disponibilidad de la cuota para el saquito">
+    &nbsp Fecha inicial</span>
+<input type="date" class="ss" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
 </div>
-<div>
-    <form method="POST" action="<?php base_url();?>saquito/guardar" class="registro">
-
+<div class="contenedorSaquito">
+    <!-- Formulario principal-->
+    <form method="POST" action="" class="saquito">
         <div class="tim">
             <h3>Meta</h3>
         </div>
@@ -45,11 +45,7 @@
             <label for="floatingInput"></label>
         </div>
         <br>
-
-
-
-
-
+     <!-- botones-->
         <div class="botondeanti">
             <button data-bs-toggle="modal" data-bs-target="#editarModal" type="button" class="btn btn-warning">
                 <img class="image" src="<?= base_url("img/editar.png") ?> " title="Editar">
@@ -59,7 +55,7 @@
                     class="image" src="<?= base_url("img/Eliminar.png") ?> " title="Eliminar">
             </button>
 
-            <button data-bs-toggle="modal" data-bs-target="#exampleModal" type="submit" class="btn btn-success"> <img
+            <button data-bs-toggle="modal" data-bs-target="#exampleModal" type="button" class="btn btn-success"> <img
                     class="image" src="<?= base_url("img/Guardar.png") ?> " title="Guardar">
             </button>
         </div>
@@ -71,8 +67,9 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Guardar Registro</h5>
+                
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h5 class="modal-title" id="exampleModalLabel">Guardar Registro</h5>
             </div>
             <div class="modal-body">
                 ¿Desea guardar este registro?
@@ -89,8 +86,8 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Eliminar registro</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h5 class="modal-title" id="exampleModalLabel">Eliminar registro</h5>
             </div>
             <div class="modal-body">
                 ¿Desea Eliminar este registro?
@@ -107,8 +104,9 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Editar Registro</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <img  src="<?= base_url("img/gfp.png") ?> " class="logo">
+                <h2 class="modal-title" id="exampleModalLabel">Editar Registro</h2>
             </div>
             <div class="modal-body">
 
@@ -116,32 +114,32 @@
                     <h3>Meta</h3>
                 </div>
                 <div class="dc">
-                    <textarea class="dc" placeholder="Descripcion:" id="floatingTextarea"></textarea>
+                    <textarea class="dc"  name="descripcion"placeholder="Descripcion:" id="floatingTextarea"></textarea>
 
                 </div>
                 <br>
                 <div class="tm">
-                    <input type="date" class="form-control" id="floatingInput" placeholder="Fecha inicial: ">
+                    <input type="date" class="form-control" name="fecha_inicial" id="floatingInput" placeholder="Fecha inicial: ">
                     <label for="floatingInput"></label>
 
                 </div>
                 <br>
                 <div class="tm">
-                    <input type="number" class="form-control" id="floatingInput" placeholder="Valor: ">
+                    <input type="number" class="form-control" name="valor" id="floatingInput" placeholder="Valor: ">
                     <label for="floatingInput"></label>
                 </div>
                 <br>
 
                 <div class="tx">
-                    <input type="number" class="form-control" id="floatingInput" placeholder="Cuotas:">
+                    <input type="number" class="form-control" name="cuota" id="floatingInput" placeholder="Cuotas:">
                     <label for="floatingInput"></label>
-                    <input type="number" class="form-control" id="floatingInput" placeholder="Valor cuotas:">
+                    <input type="number" class="form-control" name="numero_cuotas"id="floatingInput" placeholder="Valor cuotas:">
                     <label for="floatingInput"></label>
                 </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-                <button type="Submit" class="btn btn-success">Guadar</button>
+                <button type="Submit" class="btn btn-success" >Actulizar</button>
             </div>
         </div>
  <!-- <---------------------div de header y footer-------------------> 
@@ -154,20 +152,6 @@
 
 <script>
    
-  $(document).on("ready",inicio)
-  function inicio(){
-$("form").submit(function (event){
-   
-    event.preventDefault();
-    $.ajaX({
-        url:("form").attr("action"),
-        type:$("form").attr("method"),
-        data:$("form").serialize(),
-        success:function(respuesta){
-            alert("respuesta")
-        }
-    });
-});
-  }
+ 
  
 </script>

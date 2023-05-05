@@ -1,6 +1,6 @@
-<?=$this->extend("layouts/gfpLayout")?>
+<?= $this->extend("layouts/gfpLayout")?>
 
-<?=$this->section("contenido")?>
+<?= $this->section("contenido")?>
 
 <button 
 type="button"
@@ -31,14 +31,14 @@ data-bs-target="#modalEvento">
           <div class="modal-header" id="agendaPago__modal-header">
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             <img src="<?= base_url("img/gfp.png")?>" alt="" class="w-25 p-3">
-            <h3 class="modal-title" id="exampleModalLabel">Datos del evento</h3>
+            <h3 class="modal-title" id="modal-title">Nuevo recordatorio</h3>
           </div>
           <div class="modal-body">
             <!-- Formulario -->
-            <form action="<?= base_url("")?>" method="post" class="d-flex flex-column ">
-              <div class="mb-3">
+            <form action="" method="" class="d-flex flex-column ">
+              <div class="mb-3" style="display:none;">
                 <label for="id" class="form-label">ID: </label>
-                <input type="text"
+                <input type="text" hidden
                   class="form-control"  name="id" id="id" aria-describedby="helpId" placeholder="Ej: 2">
               </div>
               
@@ -50,15 +50,15 @@ data-bs-target="#modalEvento">
 
               <div class="w-100 d-flex">
                 <div class="mb-3">
-                  <label for="fecha" class="form-label">Fecha inicial: </label>
+                  <label for="fechaInicio" class="form-label">Fecha inicial: </label>
                   <input type="datetime-local"
-                    class="form-control" name="fecha" id="fecha" aria-describedby="helpId" placeholder="Ej: año/mes/día">
+                    class="form-control" name="fechaInicio" id="fechaInicio" aria-describedby="helpId" placeholder="Ej: año/mes/día">
                 </div>
     
                 <div class="mb-3 l-3">
-                  <label for="fecha" class="form-label">Fecha final de pago: </label>
+                  <label for="fechaFinal" class="form-label">Fecha final: </label>
                   <input type="datetime-local"
-                    class="form-control" name="fecha" id="fecha" aria-describedby="helpId" placeholder="Ej: año/mes/día">
+                    class="form-control" name="fechaFinal" id="fechaFinal" aria-describedby="helpId" placeholder="Ej: año/mes/día">
                 </div>
               </div>
 
@@ -75,8 +75,8 @@ data-bs-target="#modalEvento">
               
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Borrar este evento</button>
-              <button type="submit" class="btn btn-primary" >Agregar</button>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id="btn-del">Cancelar</button>
+              <button type="submit" class="btn btn-primary" id="btn-agg" >Agregar</button>
             </div>
 
           </form>
@@ -99,32 +99,90 @@ data-bs-target="#modalEvento">
 let modalEvento; 
   modalEvento = new bootstrap.Modal( document.getElementById('modalEvento'), { keyboard: false }); //Abrir modal cuando se de click en un evento.
 
-
-
-
-// console.log(evento)
-document.addEventListener('DOMContentLoaded', function() {
-        var calendarEl = document.getElementById('calendar');
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-          initialView: 'dayGridMonth',
-          locale: 'es', //Traducir al español el calendario
-          headerToolbar: { //Etiquetas del header
+    
+  // console.log(evento)
+  $(document).ready( function() {
+    let calendarEl = document.getElementById('calendar');
+    let calendar = new FullCalendar.Calendar(calendarEl, {
+      initialView: 'dayGridMonth',
+      locale: 'es',//Traducir al español el calendario
+      headerToolbar: { //Etiquetas del header
             left: 'prev,next today',
             center: 'title',
             right: 'dayGridMonth,timeGridWeek,timeGridDay'
           },
-          dateClick: function( event ) {
-            // console.log( event )
-            modalEvento.show();
-          },  
-          events: "http://localhost/gfp/public/listaDeEventos",
-        });
-        calendar.render();
-      });
+      events:  [ //Mostrar todos los eventos
+        <?php foreach($eventos as $event) { ?>
+          {
+            id: "<?php echo $event['id'];?>",
+            title: "<?php echo $event['title'];?>",
+            descripcion: "<?php echo $event['descripcion'];?>",
+            color: "<?php echo $event['color'];?>",
+            start: "<?php echo $event['start'];?>",
+            end: "<?php echo $event['end'];?>",
+          }, 
+        <?php } ?>
+      ],
+      dateClick: function( data ) { //Click en el dia seleccionado o evento
+        // console.log(data.dateStr )
+        limpiarFormulario(); //Limpiar formulario
+        modalEvento.show();
+      },
+      eventClick: function ( data ) {
+        // console.log(data)
+        modalEvento.show();
+        recuperar_datos_del_evento( data )
+        document.getElementById("modal-title").innerText = 'Actualizar este evento';
+        document.getElementById("btn-agg").innerText = 'Actualizar';
+        document.getElementById("btn-del").innerText = 'Borrar este evento';
+
+      },
+    });
+    calendar.render();
+  })
+
+</script>
+
+<script>
+
+  //Recuperar y mostrar datos del evento clickeado
+  function recuperar_datos_del_evento({ event: evento }) { 
+    
+    /* Configurar la hora y fecha inicio */
+    const fechaI = evento.startStr.split("T");
+    // console.log(fecha)
+    const horaI = fechaI[1].split("-");
+    // console.log(hora[0])
+
+    /* Configurar la hora y fecha de fin */
+    const fechaF = evento.endStr.split("T");
+    // console.log(fecha)
+    const horaF = fechaF[1].split("-");
+    // console.log(hora[0])
+
+        document.getElementById("id").value = evento.id;
+        document.getElementById("titulo").value = evento.title;
+        document.getElementById("fechaInicio").value = fechaI[0] + ' ' + horaI[0];
+        document.getElementById("fechaFinal").value = fechaF[0] + ' ' + horaF[0];
+        document.getElementById("descripcion").value = evento.extendedProps.descripcion;
+        document.getElementById("color").value = evento.backgroundColor;
+  }
+
+
+  function limpiarFormulario() {
+        document.getElementById("id").value = "";
+        document.getElementById("titulo").value = "";
+        document.getElementById("descripcion").value = "";
+        document.getElementById("color").value = "";
+        document.getElementById("fechaInicio").value = "";
+        document.getElementById("fechaFinal").value = "";
+  }
+
+
+</script>
 
 
 
 
-</script> 
 
-<?=$this->endSection("contenido")?>
+<?= $this->endSection("contenido")?>

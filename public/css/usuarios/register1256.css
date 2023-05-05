@@ -70,7 +70,7 @@
     position: absolute;
     z-index: 100;
     left: 12px;
-    bottom: 9px;
+    bottom: 5px;
 }
 
 .input_label {
@@ -162,8 +162,142 @@
 }
 
 
-/* @media (width: 900px) {
-    .form_container {
-        grid-template-columns: repeat(1, 1fr);
-    }
-} */
+/* login superbonito */
+
+button {
+    display: block;
+    width: 100%;
+    height: 40px;
+    margin-top: 20px;
+    background-color: green;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: green;
+}
+
+.card-title {
+    font-size: 30px;
+}
+
+.formulario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.formulario__label {
+    display: block;
+    font-weight: 700;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.formulario__grupo-input {
+    position: relative;
+}
+
+.modal-header {
+    background-color: black;
+    color: green
+}
+
+.formulario__input {
+    width: 100%;
+    background: whitesmoke;
+    border: 3px solid transparent;
+    border-radius: 3px;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 40px 0 10px;
+    transition: .3s ease all;
+}
+
+.formulario__input:focus {
+    border: 3px solid green;
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163, 164, 163, 0.4);
+}
+
+.formulario__input-error {
+    font-size: 12px;
+    margin-bottom: 0;
+    display: none;
+}
+
+.formulario__input-error-activo {
+    display: block;
+}
+
+.formulario__validacion-estado {
+    position: absolute;
+    right: 10px;
+    bottom: 15px;
+    z-index: 100;
+    font-size: 16px;
+    opacity: 0;
+}
+
+.formulario__mensaje {
+    height: 45px;
+    line-height: 45px;
+    background-color: #91190f;
+    padding: 0 15px;
+    border-radius: 3px;
+    display: none;
+}
+
+.formulario__mensaje {
+    display: block;
+}
+
+.formulario__mensaje p {
+    margin: 0;
+}
+
+
+/* <------------------estilo para validacion-----------------> */
+
+.formulario__grupo-correcto .formulario__validacion-estado {
+    color: green;
+    opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__label {
+    color: #91190f;
+}
+
+.formulario__grupo-incorrecto .formulario__input {
+    border: 3px solid #91190f;
+}
+
+.bnt_crear_cuenta {
+    border: 0;
+    background-image: linear-gradient( 150deg, #9500ff, #09f, #00DDff);
+    border-radius: 8px;
+    color: #fff;
+    display: flex;
+    font-size: 18px;
+    padding: 4px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.bnt_crear_cuenta span {
+    background-color: #111;
+    padding: 03px 70px;
+    border-radius: 6px;
+    transition: .3s;
+}
+
+.bnt_crear_cuenta:hover span {
+    background: none;
+}
+
+.bnt_crear_cuenta:active {
+    transform: scale(0.9);
+}

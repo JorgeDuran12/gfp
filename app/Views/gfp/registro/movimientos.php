@@ -5,16 +5,16 @@
 <div class="titulo">
     <h1> <img class="img" src="<?= base_url("img/movimiento.png")?>">
         Movimientos</h1>
-</div><br><br>
-<div>
-    <form action="" class="registro"><br> <br>
+</div>
+<div class="contenedorMovimiento" >
+    <form action="" class="movimiento"><br> <br>
         <div class="tm">
             <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
                 <option selected class="tl">Tipo De Movimiento</option>
                 <option value="1" class="tl">Egreso</option>
                 <option value="2" class="tl">Ingreso</option>
 
-            </select>
+            </select>   
         </div>
         <br>
         <div class="tm">
@@ -56,7 +56,7 @@
                 Reporte Ingreso
             </button>
 
-        </div>&nbsp&nbsp&nbsp
+        </div>&nbsp&nbsp&nbsp&nbsp&nbsp
         
         <div class="rt">
             <button data-bs-toggle="modal" data-bs-target="#reporteegresoModal" type="button" class="btn btn-secondary">
@@ -72,8 +72,8 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Guardar Movimiento</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h5 class="modal-title" id="exampleModalLabel">Guardar Movimiento</h5>
                 </div>
                 <div class="modal-body">
                     ¿Desea Guardar Este Movimiento?
@@ -91,8 +91,9 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Reporte Ingreso</h5>
+                
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h5 class="modal-title" id="exampleModalLabel">Reporte Ingreso</h5>
             </div>
             <div class="modal-body">
                 <div id="contenedor">
@@ -140,8 +141,9 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Reporte Egreso</h5>
+                
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h5 class="modal-title" id="exampleModalLabel">Reporte Egreso</h5>
             </div>
             <div class="modal-body">
 
