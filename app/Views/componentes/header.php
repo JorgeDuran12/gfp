@@ -9,8 +9,8 @@
     </div> -->
 
 <!-- version original carlos -->
-   <div class="header__btns__container">
-        <a href="<?= echo base_url('Auth/logout');?>"> 
+   <!-- <div class="header__btns__container">
+        <a href="<?=  base_url('Auth/logout');?>"> 
             <img src="<?= base_url('icons/salida.png')?>" alt="">
         </a>
-    </div>  
+    </div>   -->

@@ -5,16 +5,27 @@ use App\Models\AgendaModel;
 
 class Agenda extends BaseController
 {
-
+    
     protected $agenda;
-
+    
     public function __construct()
     {
         $this->agenda = new AgendaModel();
     }
-
+        
+    function verificarAutenticacion() {
+        session_start();
+        if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
+            // header('Location: /login.php');
+            return redirect()->to(base_url('/'));
+            exit;
+        }
+    }
+    
     public function index()
     {
+        $this->verificarAutenticacion();
+        
         $datosEventos = $this->agenda->traer_todos_los_eventos();
 
         echo view("gfp/agenda/pago", [

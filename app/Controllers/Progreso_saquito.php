@@ -4,8 +4,20 @@ namespace App\Controllers;
 
 class Progreso_Saquito extends BaseController
 {
+    
+  function verificarAutenticacion() {
+    session_start();
+    if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
+        // header('Location: /login.php');
+        return redirect()->to(base_url('/'));
+        exit;
+    }
+  }
+
     public function index()
     {
+      $this->verificarAutenticacion();
+      
         $datos = ['tituloPag' => 'Saquito'];
 
         $vistaPrincipal = 

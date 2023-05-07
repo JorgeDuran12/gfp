@@ -8,13 +8,11 @@ use App\Models\TelefonosModel;
 
 class Auth extends BaseController
 {
-
     protected $usuario;
     protected $email;
     protected $parametros;
     protected $telefono;
     
-
     public function __construct()
     {
         $this->usuario = new UsuariosModel();
@@ -22,15 +20,14 @@ class Auth extends BaseController
         $this->email = new EmailsModel();
         $this->telefono = new TelefonosModel();
     }
-    
-    public function index()
-    {
 
-        echo view("auth/login", [
+    public function index(){
+
+        echo view("auth/login",
+         [
             'tituloPagina' => 'Inicio de sesión',
         ]);
     }
-
     
     public function registroPagina(){ 
         $usuario = $this->usuario->where('estado', "A")->findAll();   
@@ -50,8 +47,8 @@ class Auth extends BaseController
     /* Metodos */
     public function AutenticarUsuario(){
 
-        $email = $this->request->getPost('Email_LoginForm');
-        $password = $this->request->getPost('Password_LoginForm');
+        $email = $this->request->getPost('email');
+        $password = $this->request->getPost('password');
       
         $usuarioModel = new UsuariosModel();
         $emailModel = new EmailsModel();
@@ -71,19 +68,29 @@ class Auth extends BaseController
                         'id_usuario' => $id_usuario,
                         'usuario' => $usuario['usuario'],
                         'email' => $email,
+                        'rol' => $usuario['id_rol'],
                         'logged_in' => true
                     ]);
                 
-                    return redirect()->to(site_url('/Principal'));
+                     // Redirigir según el rol del usuario
+                    if ($usuario['id_rol'] === '1') {
+                        return redirect()->to(base_url('/Principal'));
+                    } elseif ($usuario['id_rol'] === '2') {
+                        return redirect()->to(base_url('/Principal'));
+                    } elseif ($usuario['id_rol'] === '3') {
+                        return redirect()->to(base_url('/Principal'));
+                    } elseif ($usuario['id_rol'] === '4') {
+                        return redirect()->to(base_url('/Principal'));
+                    }
 
                 } else{
-                    // echo "La contraseña no coincide con la almacenada en la base de datos.";
-                    // return;
+                    echo "La contraseña no coincide con la almacenada en la base de datos.";
+                    return;
                 }
             }       
         } else {
-            // echo "El usuario no existe en la base de datos.";
-            // return;
+            echo "El usuario no existe en la base de datos.";
+            return;
         }
     }
 
@@ -92,7 +99,7 @@ class Auth extends BaseController
 
         if ($this->request->getMethod() == "post" ) {
             
-            $password = $this->request->getPost('pass');
+            $password = $this->request->getPost('pass1');
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
             
             $this->usuario->save([    
@@ -129,13 +136,10 @@ class Auth extends BaseController
         }
     }
 
-
     public function logout() {
         $session = session();
         $session->destroy();
-        
+       
         return redirect()->to(base_url('/'));
     }
-
-
 }

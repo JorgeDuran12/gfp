@@ -14,12 +14,12 @@
                     finanzas hoy!</strong> </span>
         </div>
         <br>
-        <form method="POST" class="login__form" action="<?=base_url('AutenticarUsuario') ?>">
+        <form method="POST" class="login__form" action="<?= base_url('AutenticarUsuario'); ?>">
             <div class="login__input-container">
                 <label class="login__form-input-label" for="email">Correo electronico: </label>
                 <img src="<?= base_url("icons/envelope-fill.svg")?>" class="login__form-icon">
                 <input placeholder="Ej: correo@gmail.com" name="email" type="email" class="login__form-input-field"
-                    id="email" required>
+                    id="password" required>
             </div>
             <div class="login__input-container">
                 <label class="login__form-input-label" for="password">Contraseña: </label>
@@ -34,8 +34,8 @@
                 </a>
 
                 <div class="contenedor">
-                <button class="btn_login" type="submit">Entrar</button>
-                </div> 
+                    <button class="btn_login" type="submit">Entrar</button>
+                </div>
             </div>
 
             <div class="login__form-register">
@@ -57,7 +57,7 @@
                             <div class="tm">
                                 <p><strong>¿Olvidaste tu contraseña? No hay problema, te enviaremos un enlace de
                                         restablecimiento a tu correo electrónico para que puedas recuperar tu acceso a
-                                        nuestra plataforma</strong></p>
+                                        nuestra plataforma.</strong></p>
                                 <input type="email" class="form-control" id="floatingInput"
                                     placeholder="Ej: name@example.com">
                                 <!-- <label for="floatingInput"></label> -->
@@ -72,9 +72,6 @@
             </div>
         </div>
     </div>
-    </div>
-
-
-
+</div>
 
 <?= $this->endSection("contenido")?>

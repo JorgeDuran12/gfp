@@ -2,15 +2,12 @@
 
 namespace App\Controllers;
 
-
 use App\Controllers\BaseController;
 use App\Models\UsuariosModel;
 use App\Models\RolModel;
 use App\Models\EmailsModel;
 use App\Models\ParamentrosModel;
 use App\Models\TelefonosModel;
-
-
 
 
 class Usuario extends BaseController
@@ -26,8 +23,19 @@ class Usuario extends BaseController
         $this->telefono = new TelefonosModel();
     }
 
+    function verificarAutenticacion() {
+        session_start();
+        if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
+            // header('Location: /login.php');
+            return redirect()->to(base_url('/'));
+            exit;
+        }
+    }
+
     public function index()
     {
+        $this->verificarAutenticacion();
+        
         $usuario = $this->usuario->where('estado', "A")->findAll();   
         $parametro = $this->parametro->obtener_encabezado_3();   
         $rol = $this->rol->where('estado', "A")->findAll();  

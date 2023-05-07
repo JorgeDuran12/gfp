@@ -48,7 +48,7 @@
       </div>
 
       <div class="navbar__icons navbar__icon-logout">
-        <li class="icon-image"><a href="<?= base_url('gestion/roles')?>"><img src="<?= base_url("icons/logout.png")?>"/></a></li>
+        <li class="icon-image"><a href="<?= base_url('auth/logout')?>"><img src="<?= base_url("icons/logout.png")?>"/></a></li>
         <span class="icon-name">Salir</span>
       </div>
       

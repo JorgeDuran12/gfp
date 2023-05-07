@@ -27,7 +27,7 @@
           <svg xmlns="http://www.w3.org/2000/svg" class ="formulario__validacion-estado" width="16" height="16" fill="currentColor" class="bi bi-bookmark-check-fill" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zm8.854-9.646a.5.5 0 0 0-.708-.708L7.5 7.793 6.354 6.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/></svg> 
 
         </div>
-       <p class="formulario__input-error">El nombre no deve llevar numeros ni simbolos </p>
+       <p class="formulario__input-error">El nombre no debe llevar numeros ni simbolos </p>
       </div>
   <!-- cuerpo  de formulario apellido -->
   <div class="formulario__grupo" id="grupo__apellido"> 
@@ -38,7 +38,7 @@
           <svg xmlns="http://www.w3.org/2000/svg" class ="formulario__validacion-estado" width="16" height="16" fill="currentColor" class="bi bi-bookmark-check-fill" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zm8.854-9.646a.5.5 0 0 0-.708-.708L7.5 7.793 6.354 6.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/></svg> 
 
         </div>
-       <p class="formulario__input-error">El apellido no deve llevar numeros ni simbolos</p>
+       <p class="formulario__input-error">El apellido no debe llevar numeros ni simbolos</p>
       </div>
        <!-- cuerpo  de formulario usuario -->
        <div class="formulario__grupo "  id="grupo__usuario"> 
@@ -62,7 +62,7 @@
           <svg xmlns="http://www.w3.org/2000/svg" class ="formulario__validacion-estado" width="16" height="16" fill="currentColor" class="bi bi-bookmark-check-fill" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zm8.854-9.646a.5.5 0 0 0-.708-.708L7.5 7.793 6.354 6.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/></svg> 
 
         </div>
-       <p class="formulario__input-error">El correo solo deve contener letras, numeros, guiones y gion bajo</p>
+       <p class="formulario__input-error">El correo solo debe contener letras, numeros, guiones y gion bajo</p>
       </div>
         <!-- cuerpo de telefono -->
         <div class="formulario__grupo" id="grupo__telefono">
@@ -73,7 +73,7 @@
           <svg xmlns="http://www.w3.org/2000/svg" class ="formulario__validacion-estado" width="16" height="16" fill="currentColor" class="bi bi-bookmark-check-fill" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zm8.854-9.646a.5.5 0 0 0-.708-.708L7.5 7.793 6.354 6.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/></svg> 
 
         </div>
-       <p class="formulario__input-error">el telefono solo puede contener numeros y el maximo es 14</p>
+       <p class="formulario__input-error">El telefono solo puede contener numeros y el maximo es 14</p>
       </div>
 
 <!-- <---------------cuerpo de tipo de documento------------->
@@ -90,7 +90,7 @@
 
           <svg xmlns="http://www.w3.org/2000/svg" class ="formulario__validacion-estado" width="16" height="16" fill="currentColor" class="bi bi-bookmark-check-fill" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zm8.854-9.646a.5.5 0 0 0-.708-.708L7.5 7.793 6.354 6.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/></svg> 
         </div>
-       <p class="formulario__input-error">el telefono solo puede contener numeros y el maximo es 14</p>
+       <p class="formulario__input-error">El telefono solo puede contener numeros y el maximo es 14</p>
       </div>
 
 
@@ -117,7 +117,7 @@
           <svg xmlns="http://www.w3.org/2000/svg" class ="formulario__validacion-estado" width="16" height="16" fill="currentColor" class="bi bi-bookmark-check-fill" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zm8.854-9.646a.5.5 0 0 0-.708-.708L7.5 7.793 6.354 6.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/></svg> 
 
         </div>
-       <p class="formulario__input-error">La contraeña deve ser de 4 a 16 digitos para ser segura </p>
+       <p class="formulario__input-error">La contraeña debe ser de 4 a 16 digitos para ser segura </p>
       </div>
  <!-- cuerpo  de formulario contraseña -->
  <div class="formulario__grupo" id="grupo__pass2"> 
@@ -235,12 +235,12 @@ const validarpass2 = () =>{
 }
 
 inputs.forEach( (input)=>{
-  input.addEventListener('keydown', validarfuncion);
-  input.addEventListener('blur', validarfuncion);
+  input.addebentListener('keydown', validarfuncion);
+  input.addebentListener('blur', validarfuncion);
 });
 
 
-formulario.addEventListener('submit' ,(e) =>{
+formulario.addebentListener('submit' ,(e) =>{
 e.preventDefault();
 
 if( campos.usuario &&  campos.apellido && campos.nombre && campos.email && campos.password && campos.telefono && campos.documento){
