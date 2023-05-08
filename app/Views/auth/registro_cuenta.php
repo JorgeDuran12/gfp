@@ -27,7 +27,7 @@
           <svg xmlns="http://www.w3.org/2000/svg" class ="formulario__validacion-estado" width="16" height="16" fill="currentColor" class="bi bi-bookmark-check-fill" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zm8.854-9.646a.5.5 0 0 0-.708-.708L7.5 7.793 6.354 6.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/></svg> 
 
         </div>
-       <p class="formulario__input-error">El nombre no debe llevar numeros ni simbolos </p>
+       <p class="formulario__input-error">El nombre no debe llevar numeros ni simbolos</p>
       </div>
   <!-- cuerpo  de formulario apellido -->
   <div class="formulario__grupo" id="grupo__apellido"> 
@@ -112,7 +112,7 @@
   <div class="formulario__grupo" id="grupo__pass"> 
         <label for="pass" class="formulario__label">Contraseña</label>
         <div class="formulario__grupo-input">
-          <input type="password" class="formulario__input" name="pass" id="pass1" placeholder="digite contraseña" required>
+          <input type="password" class="formulario__input" name="pass1" id="pass1" placeholder="digite contraseña" required>
 
           <svg xmlns="http://www.w3.org/2000/svg" class ="formulario__validacion-estado" width="16" height="16" fill="currentColor" class="bi bi-bookmark-check-fill" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zm8.854-9.646a.5.5 0 0 0-.708-.708L7.5 7.793 6.354 6.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/></svg> 
 
@@ -123,7 +123,7 @@
  <div class="formulario__grupo" id="grupo__pass2"> 
         <label for="pass2" class="formulario__label">Repetir Contraseña</label>
         <div class="formulario__grupo-input">
-          <input type="password" class="formulario__input" name="pass" id="pass2" placeholder="contraseña" required>
+          <input type="password" class="formulario__input" name="pass2" id="pass2" placeholder="contraseña" required>
 
           <svg xmlns="http://www.w3.org/2000/svg" class ="formulario__validacion-estado" width="16" height="16" fill="currentColor" class="bi bi-bookmark-check-fill" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zm8.854-9.646a.5.5 0 0 0-.708-.708L7.5 7.793 6.354 6.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/></svg> 
 
@@ -140,7 +140,9 @@
         </div>
     </form>
 </div>
+
 <script>
+
   const formulario = document.getElementById('formulario');
   const inputs = document.querySelectorAll('#formulario input');
 
@@ -153,6 +155,8 @@
 	telefono: /^\d{7,14}$/ // 7 a 14 numeros.
 }
 
+
+// <-------------estado de boelanos------------------------->
 const campos = {
 usuario:false,
 nombre:false,
@@ -168,7 +172,7 @@ const validarfuncion = (e) =>{
     switch(e.target.name){
         case "usuario":
           validarcampo(expresiones.usuario, e.target, 'usuario');
-          
+         
         break;  
         case "nombre":
           validarcampo(expresiones.nombre, e.target, 'nombre');
@@ -200,6 +204,8 @@ const validarfuncion = (e) =>{
     }
 }
 
+// <----------------------------validar campos---------------------->
+
 const validarcampo = ( expresion, input, campo) =>{
   if(expresion.test(input.value)){
                    document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-incorrecto');
@@ -213,6 +219,9 @@ const validarcampo = ( expresion, input, campo) =>{
             campos[campo]= false;
           }
 } 
+
+
+// <-----------------------validar contraseña-------------------->
 
 const validarpass2 = () =>{
   const inputpass1 = document.getElementById('pass1');  
@@ -234,26 +243,48 @@ const validarpass2 = () =>{
    
 }
 
+
+
 inputs.forEach( (input)=>{
-  input.addebentListener('keydown', validarfuncion);
-  input.addebentListener('blur', validarfuncion);
+  input.addEventListener('blur', validarfuncion);
+  input.addEventListener('keydown', validarfuncion);
 });
 
 
-formulario.addebentListener('submit' ,(e) =>{
-e.preventDefault();
+
+                        
+                     
+
+
+formulario.addEventListener('submit' ,() =>{
+
 
 if( campos.usuario &&  campos.apellido && campos.nombre && campos.email && campos.password && campos.telefono && campos.documento){
 
-  alert("xd")
+/* 
+  Swal.fire({
+  title: 'Error!',
+  text: 'Do you want to continue',
+  icon: 'success',
+  confirmButtonText: 'Ok'
+}) */
 
 }else{
-  alert("ssddd")
+  alert("ssddd");
 
 }
 
 });
 
+const valor = <?= $session->mensaje?>;
+if( valor === 0 ) {
+  Swal.fire({
+  title: 'ERROR AL CREAR LA CUENTA!',
+  text: 'El usuario ya existe ',
+  icon: 'error',
+  confirmButtonText: 'Ok'
+})
+}
 
 </script>
 

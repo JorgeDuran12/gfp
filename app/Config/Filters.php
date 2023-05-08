@@ -21,6 +21,7 @@ class Filters extends BaseConfig
         'honeypot'      => Honeypot::class,
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
+        'Verificar_Auth' => \App\Filters\Verificar_Auth::class,
     ];
 
     /**
@@ -60,5 +61,50 @@ class Filters extends BaseConfig
      * Example:
      * 'isLoggedIn' => ['before' => ['account/*', 'profiles/*']]
      */
-    public array $filters = [];
+    public array $filters = [
+        'Verificar_Auth' => [
+            'before' => [
+                /* Controladores */
+                'agenda',
+                'agenda/*',
+                'principal',
+                'principal/*',
+                'emergencia',
+                'emergencia/*',
+                'registro',
+                'registro/*',
+                'rol',
+                'rol/*',
+                'saquito',
+                'saquito/*',
+                'usuario',
+                'usuario/*',
+                'progreso_saquito',
+                'progreso_saquito/*',
+
+                /* Rutas de agenda*/
+                'agenda_de_pago',
+                'listaDeEventos',
+                'insertar_evento',
+
+                /* Rutas de saquito*/
+                'mi_saquito',
+
+                /* Rutas de movimientos*/
+                'mis_movimientos',
+
+                /* Rutas de usuarios */
+                'gestion/usuarios',
+                'gestion_de_administradores',
+
+                /* Rutas de roles*/
+                'gestion/roles',
+
+                /* Rutas de emergencia */
+                'fondo_de_emergencia',
+
+
+            ]
+        ]
+    ];
 }

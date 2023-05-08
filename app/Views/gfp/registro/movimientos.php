@@ -6,7 +6,7 @@
     <h1> <img class="img" src="<?= base_url("img/movimiento.png")?>">
         Movimientos</h1>
 </div>
-<div class="contenedorMovimiento" >
+<div class="contenedorMovimiento" ></div>
     <form action="" class="movimiento"><br> <br>
         <div class="tm">
             <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
@@ -42,20 +42,30 @@
         </div>
 
         <div class="botondeanti">
-            <button data-bs-toggle="modal" data-bs-target="#movimientoModal" type="button" class="btn btn-success"> <img
-                    class="image" src="<?= base_url("img/Guardar.png") ?> " title="Guardar">
-            </button>
+
+            <div class="b" data-bs-toggle="modal" data-bs-target="#movimientoModal"> <a href="#" class="btn-guardar">
+        <span id="span1g"></span>
+        <span id="span2g"></span>
+        <span id="span3g"></span>
+        <span id="span4g"></span>
+        <img
+        class="image" src="<?= base_url("img/Guardar.png") ?> " title="Guardar">
+      </a></div>
+
         </div>
         <br><br><br>
         <div class="hh">
         <div class="rt">
-            <button data-bs-toggle="modal" data-bs-target="#reporteingresoModal" type="button"
-                class="btn btn-secondary">
-                <img src="<?= base_url("icons/file-earmark-spreadsheet-fill.svg") ?>">
-                Reporte Ingreso
-            </button>
 
+        <div class="b" data-bs-toggle="modal" data-bs-target="#reporteingresoModal"> <a href="#" class="btn-neon">
+        <span id="span1"></span>
+        <span id="span2"></span>
+        <span id="span3"></span>
+        <span id="span4"></span>
+        Reporte Ingreso
+      </a></div>
         </div>&nbsp&nbsp&nbsp&nbsp&nbsp
+        
 
         
         <!-- <div class="rt">
@@ -74,7 +84,7 @@
         Reporte Egreso
       </a></div>
 
-
+      </div>
         </div>
     </form>
 
@@ -90,11 +100,12 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class=" btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="Submit" class="btn btn-success">Guadar</button>
+                    <button type="Submit" class="btn btn-success">Guardar</button>
                 </div>
             </div>
         </div>
     </div>
+    
 </div>
 
 <div class="modal fade" id="reporteingresoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -140,7 +151,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class=" btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-                <button type="Submit" class="btn btn-success">Guadar</button>
+                <button type="Submit" class="btn btn-primary">Descargar</button>
             </div>
         </div>
     </div>
@@ -192,7 +203,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class=" btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-                <button type="Submit" class="btn btn-success">Guadar</button>
+                <button type="Submit" class="btn btn-primary">Descargar</button>
             </div>
         </div>
     </div>

@@ -15,12 +15,6 @@ data-bs-target="#modalEvento">
   <!-- Agenda -->
     <div id="calendar"></div>
   <!-- Fin Agenda -->
-
-  <!-- Notas o resumen -->
-  <div class="agendaPago__notas">
-    <div class="agendaPago__notas-title">
-      <span>Mis Actividades</span>
-    </div>
     
   </div>
   <!-- Fin notas o resumen -->

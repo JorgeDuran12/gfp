@@ -2,6 +2,8 @@
 
 <?= $this->section('contenido'); ?>
 
+<h1>Bienvenido <?=$misDatos->usuario; ?></h1>
+
 <div class="principal__cont-1" >
     <div class="div__cont">1</div>
     <div class="div__cont"><canvas id="myChart2" width=""></canvas></div>

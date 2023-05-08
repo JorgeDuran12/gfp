@@ -20,6 +20,9 @@
     <link rel="stylesheet" href="<?= base_url("/css/usuarios/register1256.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/layouts/authLayout1.css")?>">
 
+    <!-- Sweetalert -->
+    <script src="<?= base_url("sweetalert/sweetalert2@11.js")?>"></script>
+
     <title><?= $tituloPagina ?></title>
 </head>
 

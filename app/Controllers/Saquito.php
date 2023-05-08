@@ -15,28 +15,34 @@ class Saquito extends BaseController
         
     }
 
-    function verificarAutenticacion() {
-        session_start();
-        if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
-            // header('Location: /login.php');
-            return redirect()->to(base_url('/'));
-            exit;
-        }
-    }
-
+   
     public function index()
     {
-        $this->verificarAutenticacion();
-        
         echo view("gfp/fondo/saquito", [
             'tituloPagina' => 'Mi saquito',
             //'saquito'=>$saquito
         ]);
     }
 
+    /*public function guardar(){
+        $SaquitoModel= new SaquitoModel($db);
+        $request=\confing\services::request();
+        $data=array(
+            'descripcion' => $this->request->getPost('descripcion'),
+                'fecha_inicial' => $this->request->getPost('fecha_inicial'),
+                'valor' => $this->request->getPost('valor'),
+                'cuota' => $this->request->getPost('cuota'),
+                'numero_cuotas' => $this->request->getPost('numero_cuota'),
+        );
+        if($SaquitoModel -> insert($data)===false){
+            var_drump($SaquitoModel->errors());
+        }
+    }*/
+
   
-    public function Guadar()
+    public function Insertar()
     {
+       
         if ($this->request->getMethod() == "post" ) {
             $this->saquito->save([    
                 'descripcion' => $this->request->getPost('descripcion'),
@@ -46,9 +52,11 @@ class Saquito extends BaseController
                 'numero_cuotas' => $this->request->getPost('numero_cuota'),
             ]);
 
-       
+
             return redirect()->to(base_url('/saquitos'));
+            
         }
+       
     }
 }
 

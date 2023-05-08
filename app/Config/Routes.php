@@ -31,12 +31,16 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 
 /*  Routas Principales (Links)*/
+
 $routes->get('/', 'Auth::index');
 $routes->get('Principal', 'Principal::index');
 
+
 /* Rutas Agenda */
 $routes->get('agenda_de_pago', 'Agenda::index');
+
 $routes->get('listaDeEventos', 'Agenda::buscar_eventos');
+
 $routes->post('insertar_evento', 'Agenda::insertar');
 
 

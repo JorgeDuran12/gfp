@@ -30,6 +30,9 @@ class Auth extends BaseController
     }
     
     public function registroPagina(){ 
+
+        $session = session();
+
         $usuario = $this->usuario->where('estado', "A")->findAll();   
         $parametros = $this->parametros->obtener_encabezado_3();
         $email = $this->email->where('estado', "A")->findAll();     
@@ -40,11 +43,13 @@ class Auth extends BaseController
             'usuarios'=>$usuario, 
             'parametros'=>$parametros,
             'email'=>$email,
-            'telefono'=>$telefono
+            'telefono'=>$telefono,
+            'session' => $session
         ]);
     }
 
     /* Metodos */
+
     public function AutenticarUsuario(){
 
         $email = $this->request->getPost('email');
@@ -71,10 +76,9 @@ class Auth extends BaseController
                         'rol' => $usuario['id_rol'],
                         'logged_in' => true
                     ]);
-                
-                     // Redirigir según el rol del usuario
+
                     if ($usuario['id_rol'] === '1') {
-                        return redirect()->to(base_url('/Principal'));
+                        return redirect()->to(base_url('/gestion_de_administradores'));
                     } elseif ($usuario['id_rol'] === '2') {
                         return redirect()->to(base_url('/Principal'));
                     } elseif ($usuario['id_rol'] === '3') {
@@ -94,45 +98,81 @@ class Auth extends BaseController
         }
     }
 
+    // public function RecuperarCuenta(){
+    //     $email_recuperar = $this->request->getPost('email_modal');
+
+    //     $userModel = new UsuariosModel();
+    //     $user = $userModel -> where('email', $email) -> first();
+
+    //     if(!isset($user)){
+    //        return echo "este correo no existe en la base de datos";
+    //     } elseif (isset($user === $email_recuperar)){
+
+    //          }
+
+    // }
+    // }
 
     public function guardar(){   
 
+        $usuarioModel = new UsuariosModel();
+
         if ($this->request->getMethod() == "post" ) {
+            $usuarioName = $this->request->getPost('usuario');
+
+            $existeUsuario = $usuarioModel->traer_usuario_by_user($usuarioName);
+            if($existeUsuario) {
             
-            $password = $this->request->getPost('pass1');
-            $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-            
-            $this->usuario->save([    
-                'usuario' => $this->request->getPost('usuario'),
-                'nombre' => $this->request->getPost('nombre'),
-                'apellido' => $this->request->getPost('apellido'),
-                'tipo_documento' => $this->request->getPost('tipo_documento'),
-                'documento' => $this->request->getPost('num_documento'),
-                'pass' => $hashed_password
-            ]);
+                return redirect()->to(base_url('auth/registroPagina'))->with('mensaje', '0');
+              
+            }else {
+                $password = $this->request->getPost('pass1');
+                $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+                
+                $this->usuario->save([    
+                    'usuario' => $this->request->getPost('usuario'),
+                    'nombre' => $this->request->getPost('nombre'),
+                    'apellido' => $this->request->getPost('apellido'),
+                    'tipo_documento' => $this->request->getPost('tipo_documento'),
+                    'documento' => $this->request->getPost('num_documento'),
+                    'pass' => $hashed_password
+                ]);
+        
+                $id_usuario = $this -> usuario ->insertID(); 
     
-            $id_usuario = $this -> usuario ->insertID(); 
-
-            $this -> usuario -> save([
-                'id_usuario' => $id_usuario,
-                'usuario_crea'=> $id_usuario
-            ]);
-
-            $this -> email -> save([
-                'id_usuario' => $id_usuario,
-                'usuario_crea'=> $id_usuario,
-                'prioridad' => 13,
-                'email' => $this -> request ->getPost('email')
-            ]);
-
-            $this -> telefono -> save( [
-                'id_usuario' => $id_usuario,
-                'usuario_crea'=> $id_usuario,
-                'prioridad' => 13,
-                'numero' => $this -> request ->getPost('telefono')
-            ]);
-
-            return redirect()->to('/Principal');
+                $this -> usuario -> save([
+                    'id_usuario' => $id_usuario,
+                    'usuario_crea'=> $id_usuario
+                ]);
+    
+                $this -> email -> save([
+                    'id_usuario' => $id_usuario,
+                    'usuario_crea'=> $id_usuario,
+                    'prioridad' => 13,
+                    'email' => $this -> request ->getPost('email')
+                ]);
+    
+                $this -> telefono -> save( [
+                    'id_usuario' => $id_usuario,
+                    'usuario_crea'=> $id_usuario,
+                    'prioridad' => 13,
+                    'numero' => $this -> request ->getPost('telefono')
+                ]);
+    
+                $session = session();
+                $session->set([ 
+                    'usuario' => $this->request->getPost('usuario'),
+                    'nombre' => $this->request->getPost('nombre'),
+                    'apellido' => $this->request->getPost('apellido'),
+                    'tipo_documento' => $this->request->getPost('tipo_documento'),
+                    'documento' => $this->request->getPost('num_documento'),
+                    'emails' => $this -> request ->getPost('email'),
+                    'telefonos' => $this -> request ->getPost('telefono'),
+                    'logged_in' => true
+                ]);
+                return redirect()->to('/Principal'); 
+            }
+         
         }
     }
 

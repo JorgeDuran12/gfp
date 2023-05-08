@@ -19,7 +19,7 @@
                 <label class="login__form-input-label" for="email">Correo electronico: </label>
                 <img src="<?= base_url("icons/envelope-fill.svg")?>" class="login__form-icon">
                 <input placeholder="Ej: correo@gmail.com" name="email" type="email" class="login__form-input-field"
-                    id="password" required>
+                    id="email" required>
             </div>
             <div class="login__input-container">
                 <label class="login__form-input-label" for="password">Contraseña: </label>
@@ -45,7 +45,7 @@
         </form>
 
         <div class="modal fade" id="recuperarModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
+            aria-hidden="true" action="<?= base_url('auth/RecuperarCuenta');?>">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -58,7 +58,7 @@
                                 <p><strong>¿Olvidaste tu contraseña? No hay problema, te enviaremos un enlace de
                                         restablecimiento a tu correo electrónico para que puedas recuperar tu acceso a
                                         nuestra plataforma.</strong></p>
-                                <input type="email" class="form-control" id="floatingInput"
+                                <input type="email" class="form-control" id="floatingInput email_modal" name="email_modal"
                                     placeholder="Ej: name@example.com">
                                 <!-- <label for="floatingInput"></label> -->
                             </div>
@@ -73,5 +73,6 @@
         </div>
     </div>
 </div>
+
 
 <?= $this->endSection("contenido")?>

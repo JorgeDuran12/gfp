@@ -31,8 +31,8 @@
     <link rel="stylesheet" href="<?= base_url("/css/registro/movimientoss.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/actividades/actividad.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/saquito/saquito12.css")?>">
-    <link rel="stylesheet" href="<?= base_url("/css/registro/movimiento.css")?>">
-    <link rel="stylesheet" href="<?= base_url("/css/agenda/pagoStyless.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/css/registro/movimiento2.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/css/agenda/pagoStylesss.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/fullCalendar/fullCalendarrr.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/123/123456.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/123/9876541.css")?>">

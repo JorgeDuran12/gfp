@@ -34,6 +34,14 @@ class UsuariosModel extends Model{
     return $datos;
 }
 
+public function traer_usuario_by_user($username) {
+    $this->select('usuarios.*');
+    $this->where('estado','A');
+    $this->where('usuario',$username);
+    $datos = $this->first();  
+    return $datos;
+}
+
     // public function DataActualizar($id){
     //     $this->select('usuarios.*, emails.');
     //     $this->join('telefonos', 'telefonos.id_usuario = usuarios.id_usuario');

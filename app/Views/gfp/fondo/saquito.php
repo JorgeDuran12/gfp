@@ -15,7 +15,7 @@
 </div>
 <div class="contenedorSaquito">
     <!-- Formulario principal-->
-    <form method="POST" action=" " class="saquito">
+    <form method="POST" action="<?php echo base_url('Insertar') ?>  " class="saquito">
         <div class="tim">
             <h3>Meta</h3>
         </div>
@@ -55,7 +55,7 @@
                     class="image" src="<?= base_url("img/Eliminar.png") ?> " title="Eliminar">
             </button>
 
-            <button data-bs-toggle="modal" data-bs-target="#exampleModal" type="button" class="btn btn-success"> <img
+            <button data-bs-toggle="modal" data-bs-target="#exampleModal1" type="button" class="btn btn-success"> <img
                     class="image" src="<?= base_url("img/Guardar.png") ?> " title="Guardar">
             </button>
         </div>
@@ -75,17 +75,18 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class=" btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-                <button type="Submit" class="btn btn-success">Eliminar</button>
-            </div>
+                <button type="Submit" class="btn btn-success">guardar</button>
+            </div>   
         </div>
     </div>
+ </div>
 <!-- Modal Eliminar-->
 <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                <h5 class="modal-title" id="exampleModalLabel">Eliminar registro</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Eliminar Registro</h5>
             </div>
             <div class="modal-body">
                 ¿Desea Eliminar este registro?
@@ -94,9 +95,9 @@
                 <button type="button" class=" btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
                 <button type="Submit" class="btn btn-success">Eliminar</button>
             </div>
-        </div>
-    </div>
 </div>
+        </div>
+     </div>
 <!-- Modal  Editar-->
 <div class="modal fade" id="editarModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -137,16 +138,21 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-                <button type="Submit" class="btn btn-success" >Actulizar</button>
+                <button type="Submit" class="btn btn-success" >Actualizar</button>
             </div>
+        </div>
         </div>
  <!-- <---------------------div de header y footer-------------------> 
  </div>
 
 </div>
+</div>
+
 
 
 <?= $this->endSection("contenido")?>
 
 <script>
+
+
 </script>
