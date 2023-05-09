@@ -15,34 +15,35 @@
 </div>
 <div class="contenedorSaquito">
     <!-- Formulario principal-->
-    <form method="POST" action="<?php echo base_url('Insertar') ?>  " class="saquito">
+    <form method="POST" action="<?php echo base_url('saquito/Insertar') ?>  " class="saquito">
         <div class="tim">
             <h3>Meta</h3>
         </div>
         <div class="dc">
-            <textarea class="dc" name="descripcion" id="descripcion"placeholder="Descripcion:" id="floatingTextarea"></textarea>
+            <textarea class="dc" name="descripcion" id="floatingTextarea descripcion" placeholder="Descripcion:"></textarea>
 
         </div>
         <br>
         <div class="tma">
-            <input type="date" class="form-control" name="fecha_inicial" id="fecha_inicial"id="floatingInput"
+            <input type="date" class="form-control" name="fecha_inicial" id="fecha_inicial floatingInput"
                 placeholder="Fecha inicial: ">
             <label for="floatingInput"></label>
 
         </div>
         <br>
         <div class="tma">
-            <input type="number" class="form-control" name="valor" id="valor"id="floatingInput" placeholder="Valor: ">
+            <input type="number" class="form-control" name="valor" id="floatingInput valor" placeholder="Valor: ">
             <label for="floatingInput"></label>
         </div>
         <br>
 
         <div class="txa">
-            <input type="number" class="form-control" name="cuota" id="couta"id="floatingInput" placeholder="Cuotas:">
-            <label for="floatingInput"></label>
-            <input type="number" class="form-control" name="numero_cuotas" id="numero_cuotas"id="floatingInput"
+        <input type="number" class="form-control" name="numero_cuota" id="numero_cuota floatingInput"
                 placeholder="Valor cuotas:">
             <label for="floatingInput"></label>
+            <input type="number" class="form-control" name="cuota" id="couta floatingInput" placeholder="Cuotas:">
+            <label for="floatingInput"></label>
+            
         </div>
         <br>
      <!-- botones-->
@@ -55,7 +56,7 @@
                     class="image" src="<?= base_url("img/Eliminar.png") ?> " title="Eliminar">
             </button>
 
-            <button data-bs-toggle="modal" data-bs-target="#exampleModal1" type="button" class="btn btn-success"> <img
+            <button data-bs-toggle="modal" data-bs-target="#exampleModal1" type="submit" class="btn btn-success"> <img
                     class="image" src="<?= base_url("img/Guardar.png") ?> " title="Guardar">
             </button>
         </div>
@@ -63,7 +64,7 @@
 </div>
 </form>
 <!-- Modal  Guadar-->
-<div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!--<div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -74,12 +75,12 @@
                 ¿Desea Guardar este registro?
             </div>
             <div class="modal-footer">
-                <button type="button" class=" btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-                <button type="Submit" class="btn btn-success">guardar</button>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                <button type="Submit" class="btn btn-success">Guardar</button>
             </div>   
         </div>
     </div>
- </div>
+ </div>-->
 <!-- Modal Eliminar-->
 <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -130,9 +131,9 @@
                 <br>
 
                 <div class="txa">
-                    <input type="number" class="form-control" name="cuota" id="floatingInput" placeholder="Cuotas:">
+                    <input type="number" class="form-control" name="cuota" id="floatingInput cuota" placeholder="Cuotas:">
                     <label for="floatingInput"></label>
-                    <input type="number" class="form-control" name="numero_cuotas"id="floatingInput" placeholder="Valor cuotas:">
+                    <input type="number" class="form-control" name="numero_cuota" id="floatingInput numero_cuota" placeholder="Valor cuotas:">
                     <label for="floatingInput"></label>
                 </div>
             </div>
@@ -153,6 +154,21 @@
 <?= $this->endSection("contenido")?>
 
 <script>
+/*$(document).on("ready",saquito);
+function saquito(){
+    $("form").submit(function(event){
+      
+        event.preventDefault();
+        $.ajax({
+            url:$("form").attr("action"),
+            type:$(""form).attr("method"),
+            data:$("form").serialize(),
+            success:function(respuesta){
+                alert(respuesta)
+            }
 
+        });
+    });
+}*/
 
 </script>

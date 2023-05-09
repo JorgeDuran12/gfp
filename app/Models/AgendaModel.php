@@ -19,7 +19,7 @@ class AgendaModel extends Model{
     // protected $dateFormat    = 'datetime'; /* Tipo fecha */
     // protected $createdField  = 'fecha_crea'; /*fecha automatica para la creacion */
     protected $updatedField  = ''; /*fecha automatica para la edicion */
-    protected $deletedField  = ''; /*no se usara, es para la eliminacion fisica */
+    protected $deletedField  = 'id_agenda'; /*no se usara, es para la eliminacion fisica */
 
     protected $validationRules    = [];
     protected $validationMessages = [];
@@ -32,6 +32,7 @@ class AgendaModel extends Model{
         $datos = $this->find();
         return $datos;
     }
+
 
 
 }

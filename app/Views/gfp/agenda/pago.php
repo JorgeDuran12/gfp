@@ -2,14 +2,6 @@
 
 <?= $this->section("contenido")?>
 
-<button 
-type="button"
-class="btn btn-danger"
-id="agendaPago__btn" 
-data-bs-toggle="modal" 
-data-bs-target="#modalEvento">
-+
-</button>    
 
 <div class="agendaPago__container">
   <!-- Agenda -->
@@ -17,7 +9,6 @@ data-bs-target="#modalEvento">
   <!-- Fin Agenda -->
     
   </div>
-  <!-- Fin notas o resumen -->
 
   <!-- Modal -->
   <div class="modal fade" id="modalEvento" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -28,12 +19,13 @@ data-bs-target="#modalEvento">
             <img src="<?= base_url("img/gfp.png")?>" alt="" class="w-25 p-3">
             <h3 class="modal-title" id="modal-title">Nuevo recordatorio</h3>
           </div>
+          <div class="alert alert-danger" role="alert" id="mensajeError" hidden></div>
           <div class="modal-body">
             <!-- Formulario -->
-            <form action="<?= base_url("insertar_evento")?>" method="post" class="d-flex flex-column ">
-              <div class="mb-3" style="display:none;">
+            <form class="d-flex flex-column" id="datosFormulario" action="<?= base_url("insertar_evento")?>" method="POST" onsubmit="return validateForm()">
+              <div class="mb-3" style="">
                 <label for="id" class="form-label">ID: </label>
-                <input type="text" hidden
+                <input type="text"
                   class="form-control"  name="id" id="id" aria-describedby="helpId" placeholder="Ej: 2">
               </div>
               
@@ -41,6 +33,8 @@ data-bs-target="#modalEvento">
                 <label for="titulo" class="form-label">Titulo: </label>
                 <input type="text"
                   class="form-control" name="titulo" id="titulo" aria-describedby="helpId" placeholder="Ej: Recordatorio">
+                  <!-- <div class="valid-feedback">Valido.</div> -->
+                  <div class="invalid-feedback">Campo invalido.</div>
               </div>
 
               <div class="w-100 d-flex">
@@ -70,8 +64,8 @@ data-bs-target="#modalEvento">
               
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id="btn-del">Cancelar</button>
-              <button type="submit" class="btn btn-primary" id="btn-agg" >Agregar</button>
+                <button type="button" class="btn btn-danger" id="btn-del" onclick="eliminar_evento()">Borrar este evento</button>
+              <button type="submit" class="btn btn-primary" id="btn-agg">Agregar</button>
             </div>
 
           </form>
@@ -91,14 +85,32 @@ data-bs-target="#modalEvento">
 
 <script>
 
+//Referencia formulario 
+let formulario        = document.querySelector('#datosFormulario');
+
+//Referencias inputs HTML
+let inputId           = document.querySelector('#id');
+let inputTitulo       = document.querySelector("#titulo");
+let inputFechaInicio  = document.querySelector("#fechaInicio");
+let inputFechaFinal   = document.querySelector("#fechaFinal");
+let inputDescripcion  = document.querySelector("#descripcion");
+let inputColor        = document.querySelector("#color");
+
+//Referencias Botones HTML
+let tituloModal = document.querySelector("#modal-title");
+let btnAgregar  = document.querySelector("#btn-agg");
+let btnEliminar = document.querySelector("#btn-del");
+let divAlerta = document.querySelector("#mensajeError");
+
+//Abrir modal cuando se de click en un evento.
 let modalEvento; 
-  modalEvento = new bootstrap.Modal( document.getElementById('modalEvento'), { keyboard: false }); //Abrir modal cuando se de click en un evento.
+  modalEvento = new bootstrap.Modal( document.getElementById('modalEvento'), { keyboard: false }); 
 
     
-  // console.log(evento)
+  //Inicializar Calendario
   $(document).ready( function() {
     let calendarEl = document.getElementById('calendar');
-    let calendar = new FullCalendar.Calendar(calendarEl, {
+    var calendar = new FullCalendar.Calendar(calendarEl, {
       initialView: 'dayGridMonth',
       locale: 'es',//Traducir al español el calendario
       headerToolbar: { //Etiquetas del header
@@ -118,67 +130,173 @@ let modalEvento;
           }, 
         <?php } ?>
       ],
-      dateClick: function( data ) { //Click en el dia seleccionado o evento
-        // console.log(data.dateStr )
-        limpiarFormulario( data ); //Limpiar formulario
+      //Click en el dia seleccionado o evento
+      dateClick: function( data ) { 
+        limpiar_formulario( data ); //Limpiar formulario
         modalEvento.show();
       },
+      //funcion al hacer click en evento creado
       eventClick: function ( data ) {
-        // console.log(data)
         modalEvento.show();
-        recuperar_datos_del_evento( data )
-        document.getElementById("modal-title").innerText = 'Actualizar este evento';
-        document.getElementById("btn-agg").innerText = 'Actualizar';
-        document.getElementById("btn-del").innerText = 'Borrar este evento';
+        recuperar_datos_del_evento( data );
+        tituloModal.innerText = 'Actualizar este evento';
+        btnAgregar.innerText = 'Actualizar';
+        btnEliminar.disabled = false;
 
       },
     });
+
     calendar.render();
   })
 
-</script>
 
-<script>
 
   //Recuperar y mostrar datos del evento clickeado
   function recuperar_datos_del_evento({ event: evento }) { 
     
-    /* Configurar la hora y fecha inicio */
-    let fechaI = evento.startStr.split("T");
-    let horaI = fechaI[1].split("-");
-    horaI = horaI[0].split(":");
+    let fechaInicial = configurar_fecha( evento.startStr );
+    let fechaFinal = configurar_fecha( evento.endStr );
+
+        inputId.value = evento.id;
+        inputTitulo.value = evento.title;
+        inputFechaInicio.value = fechaInicial;
+        inputFechaFinal.value = fechaFinal;
+        inputDescripcion.value = evento.extendedProps.descripcion;
+        inputColor.value = evento.backgroundColor;
+
+  }
+
+
+  //Limpiar campos del formulario cada que de "click" en otro
+  function limpiar_formulario( data ) {
+      
+        inputId.value = "";
+        inputTitulo.value = "";
+        inputFechaInicio.value = data.dateStr + ' ' + '00' + ':' + '00';
+        inputFechaFinal.value = "";
+        inputDescripcion.value = "";
+        inputColor.value = "";
+
+        tituloModal.innerText = 'Crear nuevo evento';
+        btnAgregar.innerText = 'Guardar';
+        btnEliminar.disabled = true;
+  }
+
+
+  //Eliminar un evento
+  function eliminar_evento() {
+    Swal.fire({
+      title: 'Alerta', 
+      text: 'Estas seguro que deseas eliminar este evento?', 
+      icon: 'info', 
+      confirmButtonText: 'Confirmar'
+    }).then(result => {
+      if( result.isConfirmed === true ) {
+
+        $.ajax({
+          url: "<?= base_url("eliminar_evento")?>" + '/' + inputId.value,
+          type: 'get',
+          dataType: 'json'
+        })
+        setTimeout(() => {
+          window.location.reload();
+        }, 50)
+        swalMensaje('Información', 'El evento fue eliminado exitosamente', 'info', 'Aceptar');
+      }
+    })
     
-
-    /* Configurar la hora y fecha de fin */
-    let fechaF = evento.endStr.split("T");
-    let horaF = fechaF[1].split("-");
-    horaF = horaF[0].split(":");
-
-
-        document.getElementById("id").value = evento.id;
-        document.getElementById("titulo").value = evento.title;
-        document.getElementById("fechaInicio").value = fechaI[0] + ' ' + horaI[0] + ":" + horaI[1];
-        document.getElementById("fechaFinal").value = fechaF[0] + ' ' + horaF[0] + ":" + horaF[1];
-        document.getElementById("descripcion").value = evento.extendedProps.descripcion;
-        document.getElementById("color").value = evento.backgroundColor;
   }
 
 
-  function limpiarFormulario( data ) {
+  //Configurar fecha y hora
+  function configurar_fecha( date ) {
 
-      // console.log(data)
+    let fecha = date.split("T");
+    let hora = fecha[1].split("-");
+    hora = hora[0].split(":");
 
-        document.getElementById("id").value = "";
-        document.getElementById("titulo").value = "";
-        document.getElementById("descripcion").value = "";
-        document.getElementById("color").value = "";
-        document.getElementById("fechaInicio").value = data.dateStr;
-        document.getElementById("fechaFinal").value = "";
+    return fecha[0] + ' ' + hora[0] + ":" + hora[1];
   }
+
+
+
+  //Validar campos 
+function validateForm() {
+
+  //capturamos el valor(value) de myfrom/fname 
+  var titulo = inputTitulo.value;
+  var desc = inputDescripcion.value;
+  var start = inputFechaInicio.value;
+  var end = inputFechaFinal.value;
+  var color = inputColor.value;
+
+  let fecha1 = start.split('-');
+  let fecha2 = end.split('-');
+  console.log({fecha1, fecha2})
+
+
+  //validamos para ver si existe un valor agregado al input
+  if (titulo.length <= 5 || desc.length <= 5 || start === '' || end === '' || color.length === '') {
+    
+    divAlerta.hidden = false;
+    divAlerta.innerText = 'Error, Hay campos vacios!'
+    
+    setTimeout(() => {
+      
+      divAlerta.hidden = true;
+      divAlerta.innerText = ''
+      
+    }, 1000)
+    
+    return false;
+  }
+
+}
 
 
 </script>
 
+
+
+
+<script>
+
+  
+ const estado = "<?= $session->mensaje?>";
+
+ if( estado === 5 ) {
+
+  Swal.fire({
+    'title': 'Actualización exitosa',
+    'text': 'Se ha actualizado el evento correctamente',
+    'icon': 'success',
+    'confirmButtonText': 'Aceptar'
+  })
+
+ }else if(estado == 6 ) {
+
+  Swal.fire({
+    'title': 'Creación exitosa',
+    'text': 'Se ha creado el evento correctamente',
+    'icon': 'success',
+    'confirmButtonText': 'Aceptar'
+  })
+
+ }
+
+ //Swal (Mensajes dinamicos)
+ function swalMensaje(titulo, descripcion, icono, textBoton ) {
+
+    return Swal.fire({
+      title: titulo,
+      text: descripcion, 
+      icon: icono,
+      confirmButtonText: textBoton
+    })
+
+ }
+
+</script>
 
 
 

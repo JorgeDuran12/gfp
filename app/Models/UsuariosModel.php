@@ -86,4 +86,5 @@ public function traer_usuario_by_user($username) {
         // var_dump($datos);
         return $datos;
     }
+    
 }

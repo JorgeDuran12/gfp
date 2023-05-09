@@ -69,6 +69,7 @@ class Auth extends BaseController
                 if (password_verify($password, $usuario['pass'])) {
 
                     $session = session();
+                    
                     $session->set([
                         'id_usuario' => $id_usuario,
                         'usuario' => $usuario['usuario'],
@@ -98,6 +99,7 @@ class Auth extends BaseController
         }
     }
 
+
     // public function RecuperarCuenta(){
     //     $email_recuperar = $this->request->getPost('email_modal');
 
@@ -112,14 +114,17 @@ class Auth extends BaseController
 
     // }
     // }
+       
+        
 
     public function guardar(){   
 
         $usuarioModel = new UsuariosModel();
 
         if ($this->request->getMethod() == "post" ) {
-            $usuarioName = $this->request->getPost('usuario');
 
+            
+            $usuarioName = $this->request->getPost('usuario');
             $existeUsuario = $usuarioModel->traer_usuario_by_user($usuarioName);
             if($existeUsuario) {
             
@@ -134,7 +139,7 @@ class Auth extends BaseController
                     'nombre' => $this->request->getPost('nombre'),
                     'apellido' => $this->request->getPost('apellido'),
                     'tipo_documento' => $this->request->getPost('tipo_documento'),
-                    'documento' => $this->request->getPost('num_documento'),
+                    'num_documento' => $this->request->getPost('documento'),
                     'pass' => $hashed_password
                 ]);
         
@@ -182,4 +187,4 @@ class Auth extends BaseController
        
         return redirect()->to(base_url('/'));
     }
-}
+}   

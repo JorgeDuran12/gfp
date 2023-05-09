@@ -23,17 +23,16 @@
     <!-- Todos los estilos -->
     <link rel="stylesheet" href="<?= base_url('css/header/headerStyless.css') ?>">
     <link rel="stylesheet" href="<?= base_url('css/general/globalStyless.css') ?>">
-    <link rel="stylesheet" href="<?= base_url('css/navbar/navvStyless.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('css/navbar/navStyless.css') ?>">
     <link rel="stylesheet" href="<?= base_url('css/pagina/paginaStyle.css') ?>">
     <link rel="stylesheet" href="<?= base_url('css/footer/footerStyles.css') ?>">
     <link rel="stylesheet" href="<?= base_url('css/principal/principalStyles.css') ?>">
     <link rel="stylesheet" href="<?= base_url("/css/agenda/pagoStylees.css")?>">
-    <link rel="stylesheet" href="<?= base_url("/css/registro/movimientoss.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/actividades/actividad.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/saquito/saquito12.css")?>">
-    <link rel="stylesheet" href="<?= base_url("/css/registro/movimiento2.css")?>">
-    <link rel="stylesheet" href="<?= base_url("/css/agenda/pagoStylesss.css")?>">
-    <link rel="stylesheet" href="<?= base_url("/css/fullCalendar/fullCalendarrr.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/css/registro/movimiento3.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/css/agenda/pagoStyles.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/css/fullCalendar/fullCalendar.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/123/123456.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/123/9876541.css")?>">
 
@@ -44,6 +43,9 @@
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.js'></script>
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/locales-all.js'></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.css">
+
+    <!-- Sweealert -->
+    <script src="<?= base_url("sweetalert/sweetalert2@11.js")?>"></script>
 
 
 </head>

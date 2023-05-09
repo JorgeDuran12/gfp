@@ -38,10 +38,9 @@ $routes->get('Principal', 'Principal::index');
 
 /* Rutas Agenda */
 $routes->get('agenda_de_pago', 'Agenda::index');
-
 $routes->get('listaDeEventos', 'Agenda::buscar_eventos');
-
 $routes->post('insertar_evento', 'Agenda::insertar');
+$routes->get('eliminar_evento/(:any)', 'Agenda::eliminar/$1');
 
 
 $routes->get('mi_saquito', 'Saquito::index');

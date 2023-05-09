@@ -6,10 +6,10 @@
     <h1> <img class="img" src="<?= base_url("img/movimiento.png")?>">
         Movimientos</h1>
 </div>
-<div class="contenedorMovimiento" ></div>
-    <form action="" class="movimiento"><br> <br>
+<div class="contenedorMovimiento" >
+    <form method="POST" action="<?php echo base_url('/movimiento/insertar'); ?>" autocomplete="off" class="movimiento"><br> <br>
         <div class="tm">
-            <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+            <select class="form-select"  aria-label="Floating label select example" id="tipo_movimiento" name="tipo_movimiento">
                 <option selected class="tl">Tipo De Movimiento</option>
                 <option value="1" class="tl">Egreso</option>
                 <option value="2" class="tl">Ingreso</option>
@@ -18,7 +18,7 @@
         </div>
         <br>
         <div class="tm">
-            <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+            <select class="form-select"  aria-label="Floating label select example" id="clase_movimiento" name="clase_movimiento">
                 <option selected class="tl">Clase De Movimiento</option>
                 <option value="1" class="tl">Bancario</option>
                 <option value="2" class="tl">No Bancario</option>
@@ -27,30 +27,30 @@
         <br>
 
         <div class="tx">
-            <input type="number" class="form-control" id="floatingInput" placeholder="Valor ">
+            <input type="number" class="form-control" placeholder="Valor" id="valor" name="valor">
             <label for="floatingInput"></label>
         </div>
         <br>
         <div class="dc">
-            <textarea class="dc" placeholder="Descripcion" id="floatingTextarea"></textarea>
+            <textarea class="dc" placeholder="Descripcion" id="descripcion" name="descripcion"></textarea>
 
         </div>
         <br>
         <div class="tx">
-            <input type="date" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <input type="date" class="form-control"  placeholder="name@example.com" id="fecha_movimiento" name="fecha_movimiento">
             <label for="floatingInput"></label>
         </div>
 
         <div class="botondeanti">
 
-            <div class="b" data-bs-toggle="modal" data-bs-target="#movimientoModal"> <a href="#" class="btn-guardar">
+        <div class="b"> <button href="#" class="btn-guardar" type="Submit">
         <span id="span1g"></span>
         <span id="span2g"></span>
         <span id="span3g"></span>
         <span id="span4g"></span>
         <img
         class="image" src="<?= base_url("img/Guardar.png") ?> " title="Guardar">
-      </a></div>
+      </button></div>
 
         </div>
         <br><br><br>
@@ -86,27 +86,11 @@
 
       </div>
         </div>
+        
     </form>
 
-    <div class="modal fade" id="movimientoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    <h5 class="modal-title" id="exampleModalLabel">Guardar Movimiento</h5>
-                </div>
-                <div class="modal-body">
-                    ¿Desea Guardar Este Movimiento?
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class=" btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="Submit" class="btn btn-success">Guardar</button>
-                </div>
-            </div>
-        </div>
     </div>
-    
-</div>
+
 
 <div class="modal fade" id="reporteingresoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -158,6 +142,8 @@
 </div>
 </div>
 
+
+
 <div class="modal fade" id="reporteegresoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -171,7 +157,7 @@
                 <div id="contenedor">
                     <div id="limite">
                         <div class="table-responsive">
-                            <table class="table table-bordered table-sm table-striped" id="dataTable" width="100%"
+                            <table class="table table-bordered table-sm table-striped" id="dataTable1" width="100%"
                                 cellspacing="0">
                                 <thead>
                                     <tr>
@@ -210,5 +196,8 @@
     </div>
 </div>
 </div>
+
+
+
 
 <?= $this->endSection("contenido")?>

@@ -18,10 +18,12 @@ class Agenda extends BaseController
     public function index()
     {
         $datosEventos = $this->agenda->traer_todos_los_eventos();
+        $session = session();
 
         echo view("gfp/agenda/pago", [
             'tituloPagina' => 'Agenda de pagos',
-            'eventos' => $datosEventos
+            'eventos' => $datosEventos,
+            'session' => $session,
         ]);
         
     }
@@ -29,16 +31,45 @@ class Agenda extends BaseController
     /* Metodos */ 
     public function insertar() {
         echo $id = $this->request->getPost('id');
-        echo $titulo = $this->request->getPost('title');
+        echo $titulo = $this->request->getPost('titulo');
         echo $descripcion = $this->request->getPost('descripcion');
         echo $fechaInicial = $this->request->getPost('fechaInicio');
         echo $fechaFinal = $this->request->getPost('fechaFinal');
         echo $color = $this->request->getPost('color');
 
         if( $id && $this->request->getMethod('post') ) {
-            echo 'Actualizando...';
+            
+            $this->agenda->update($id, [
+                'title' => $titulo,
+                'descripcion' => $descripcion,
+                'start' => $fechaInicial,
+                'end' => $fechaFinal,
+                'color' => $color
+            ]);
+            
+            return redirect()->to(base_url("Agenda"))->with('mensaje', '5' );
+
         }else if( $this->request->getMethod('post') ) {
             echo 'Creando...';
+            $this->agenda->insert([
+                'title' => $titulo,
+                'descripcion' => $descripcion,
+                'start' => $fechaInicial,
+                'end' => $fechaFinal,
+                'color' => $color
+            ]);
+
+            return redirect()->to(base_url("Agenda"))->with('mensaje', '6');
         }
+        // return redirect()->to(base_url("Agenda"));
+    }
+
+
+    public function eliminar($id) {
+        $this->agenda->where('id_agenda', $id)->delete();
+    }
+
+    public function prueba() {
+
     }
 }
