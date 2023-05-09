@@ -16,7 +16,7 @@
 
     <!-- Todos los estilos -->
     <link rel="stylesheet" href="<?= base_url('css/footer/footerStyles.css') ?>">
-    <link rel="stylesheet" href="<?= base_url("/css/usuarios/loginStyles5.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/css/usuarios/loginStyles7.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/usuarios/register1256.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/layouts/authLayout1.css")?>">
 
@@ -24,6 +24,7 @@
     <script src="<?= base_url("sweetalert/sweetalert2@11.js")?>"></script>
 
     <title><?= $tituloPagina ?></title>
+    
 </head>
 
 <body class="authLayout__container">

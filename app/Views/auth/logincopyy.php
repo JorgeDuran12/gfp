@@ -29,8 +29,7 @@
             </div>
 
             <div class="login__form-footer">
-
-                <a href="#" onclick="MostrarModal()">
+                <a data-bs-toggle="modal" data-bs-target="#recuperarModal" href="#">
                     ¿Has olvidado tu contraseña?
                 </a>
 
@@ -44,38 +43,36 @@
                 <a class="" href="<?php echo base_url('CrearCuenta'); ?>">Crear mi cuenta!</a>
             </div>
         </form>
+
+        <div class="modal fade" id="recuperarModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true" action="<?= base_url('auth/RecuperarCuenta');?>">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Recuperar Contraseña</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <div class="tm">
+                                <p><strong>¿Olvidaste tu contraseña? No hay problema, te enviaremos un enlace de
+                                        restablecimiento a tu correo electrónico para que puedas recuperar tu acceso a
+                                        nuestra plataforma.</strong></p>
+                                <input type="email" class="form-control" id="floatingInput email_modal" name="email_modal"
+                                    placeholder="Ej: name@example.com">
+                                <!-- <label for="floatingInput"></label> -->
+                            </div>
+                        </div>
+                        <div class="modal-footer bp">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="Submit" class="btn btn-success enviar">Enviar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
-<script>
-
-function MostrarModal() {
-
-Swal.fire({
-  title: 'Restablecer Contraseña',
-  input: 'email',
-  inputLabel: 'Te enviaremos un enlace de restablecimiento de contraseña a tu correo electrónico para que puedas recuperar tu acceso a nuestra plataforma.',
-  inputPlaceholder: 'Ej: name@example.com',
-  heightAuto: false,
-  customClass: {
-    inputLabel: 'my-custom-class'
-  },
-  inputValidator: (value) => {
-    if (!value) {
-      return 'Por favor, ingresa el correo electrónico';
-    } else if (!/\S+@\S+\.\S+/.test(value)) {
-      return 'Correo electrónico inválido';
-    }
-  }
-}).then((result) => {
-  if (result.isConfirmed) {
-    const email = result.value;
-    Swal.fire(`El link de restablacimiento de contraseña llegara al correo: ${email}`);
-  }
-});
-
-}
-
-</script>
 
 <?= $this->endSection("contenido")?>

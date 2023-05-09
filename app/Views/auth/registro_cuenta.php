@@ -244,16 +244,10 @@ const validarpass2 = () =>{
 }
 
 
-
 inputs.forEach( (input)=>{
   input.addEventListener('blur', validarfuncion);
   input.addEventListener('keydown', validarfuncion);
-});
-
-
-
-                        
-                     
+});                       
 
 
 formulario.addEventListener('submit' ,() =>{
@@ -271,7 +265,6 @@ if( campos.usuario &&  campos.apellido && campos.nombre && campos.email && campo
 
 }else{
   alert("ssddd");
-
 }
 
 });
