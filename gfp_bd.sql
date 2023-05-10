@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-05-2023 a las 18:38:31
+-- Tiempo de generación: 10-05-2023 a las 18:27:49
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -71,16 +71,6 @@ CREATE TABLE `agenda` (
   `end` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Volcado de datos para la tabla `agenda`
---
-
-INSERT INTO `agenda` (`id_agenda`, `title`, `descripcion`, `color`, `start`, `end`) VALUES
-(1, '', '', '#000000', '2023-05-11 00:00:00', '2023-05-10 11:30:00'),
-(2, '', '', '#000000', '2023-05-09 00:00:00', '0000-00-00 00:00:00'),
-(3, '', '', '#000000', '2023-05-02 00:00:00', '0000-00-00 00:00:00'),
-(4, '', '', '#000000', '2023-05-03 00:00:00', '0000-00-00 00:00:00');
-
 -- --------------------------------------------------------
 
 --
@@ -120,15 +110,9 @@ CREATE TABLE `emails` (
 
 INSERT INTO `emails` (`id_email`, `email`, `prioridad`, `estado`, `fecha_crea`, `id_usuario`, `usuario_crea`) VALUES
 (1, 'duranolivaresjorgeluis1@gmail.com', 13, 'A', '2023-05-08 15:25:43', 3, 3),
-(7, 'juandaviasdasd.janleo02@gmail.com', 13, 'A', '2023-05-08 21:12:09', 27, 27),
 (8, 'danipc@gmail.com', 13, 'A', '2023-05-08 21:13:02', 28, 28),
-(10, 'delassalasospino20033@gmail.com', 13, 'A', '2023-05-09 17:14:35', 30, 30),
-(11, 'mariase3105@gmail.com', 13, 'A', '2023-05-09 17:16:44', 31, 31),
-(16, 'asdasdasd@gmail.com', 13, 'A', '2023-05-09 18:28:11', 36, 36),
-(17, 'asdsadsa@gmail.com', 13, 'A', '2023-05-09 19:40:07', 37, 37),
-(18, 'asdsad@gmail.com', 13, 'A', '2023-05-09 20:18:39', 38, 38),
-(19, 'jhasdjha@gmail.com', 13, 'A', '2023-05-09 20:26:56', 39, 39),
-(20, 'duran1@gmail.com', 13, 'A', '2023-05-09 20:48:06', 40, 40);
+(32, 'iiggyysdwefsdfgs123132@gma.ccccc', 13, 'A', '2023-05-10 21:02:01', 54, 54),
+(33, 'mariase3105@gmail.com', 13, 'A', '2023-05-10 16:02:26', 31, 31);
 
 -- --------------------------------------------------------
 
@@ -160,17 +144,25 @@ CREATE TABLE `movimientos` (
   `fecha_movimiento` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `estado` char(1) NOT NULL DEFAULT 'A',
   `fecha_crea` timestamp NOT NULL DEFAULT current_timestamp(),
-  `id_usuario` smallint(2) NOT NULL
+  `usuario_crea` smallint(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `movimientos`
 --
 
-INSERT INTO `movimientos` (`id_movimiento`, `descripcion`, `tipo_movimiento`, `clase_movimiento`, `valor`, `fecha_movimiento`, `estado`, `fecha_crea`, `id_usuario`) VALUES
-(4, 'fdgdsg', 2, 1, '50000.00', '2023-05-19 05:00:00', 'A', '2023-05-09 21:18:04', 0),
-(5, 'lo', 2, 2, '10000.00', '2023-06-01 05:00:00', 'A', '2023-05-09 21:19:55', 0),
-(6, 'pago de cel de dani pc', 1, 2, '1000000.00', '2023-06-02 05:00:00', 'A', '2023-05-09 21:32:49', 0);
+INSERT INTO `movimientos` (`id_movimiento`, `descripcion`, `tipo_movimiento`, `clase_movimiento`, `valor`, `fecha_movimiento`, `estado`, `fecha_crea`, `usuario_crea`) VALUES
+(1, 'fdgdsg', 2, 1, '50000.00', '2023-05-10 12:22:18', 'A', '2023-05-09 21:18:04', 3),
+(2, 'lo', 2, 2, '10000.00', '2023-05-10 12:22:15', 'A', '2023-05-09 21:19:55', 3),
+(3, 'pago de cel de dani pc', 1, 2, '1000000.00', '2023-05-10 12:22:11', 'A', '2023-05-09 21:32:49', 3),
+(4, '6511', 2, 2, '1651.00', '2023-05-10 12:14:26', 'A', '2023-05-10 17:13:23', 3),
+(6, 'gascgg<ad d ', 1, 1, '100000.00', '2023-05-26 05:00:00', 'A', '2023-05-10 17:17:45', 28),
+(8, '23232', 2, 1, '323232.00', '2023-06-01 05:00:00', 'A', '2023-05-10 17:19:54', 3),
+(15, '21cseces', 3, 1, '2312.00', '2023-05-10 05:00:00', 'A', '2023-05-10 17:34:13', 3),
+(20, 'erger', 2, 4, '32423.00', '2023-05-20 05:00:00', 'A', '2023-05-10 18:29:35', 3),
+(21, 'el daniel es un huevon', 2, 3, '44444.00', '2023-05-26 05:00:00', 'A', '2023-05-10 18:30:53', 3),
+(22, 'ahffjvadffvavdf afvdddfad', 2, 3, '144242.00', '2023-05-12 05:00:00', 'A', '2023-05-10 18:44:23', 28),
+(25, 'cfxgbdgzhf', 1, 3, '414224.00', '2023-06-02 05:00:00', 'A', '2023-05-10 19:57:57', 28);
 
 -- --------------------------------------------------------
 
@@ -332,20 +324,11 @@ CREATE TABLE `saquitos` (
 --
 
 INSERT INTO `saquitos` (`id_saquito`, `descripcion`, `fecha_inicial`, `valor`, `numero_cuota`, `cuota`, `estado`, `fecha_crea`, `usuario_crea`) VALUES
-(1, 'holaa', '2023-05-26', '150000.00', '127', '3.00', 'A', '2023-05-09 20:20:09', 0),
-(2, '', '0000-00-00', '0.00', '0', '0.00', 'A', '2023-05-09 20:21:12', 0),
-(3, 'jajjaja', '2023-05-11', '8500000.00', '127', '8.00', 'A', '2023-05-09 20:23:48', 0),
-(4, 'funciona', '2023-05-24', '90000.00', '127', '9.00', 'A', '2023-05-09 21:02:36', 0),
-(5, 'tgdaffg', '2023-05-11', '100000.00', '127', '10.00', 'A', '2023-05-09 21:21:25', 0),
-(6, 'wfee', '2023-05-18', '1000.00', '127', '2.00', 'A', '2023-05-09 21:23:52', 0),
-(7, 'algo', '0051-12-03', '1000.00', '127', '5.00', 'A', '2023-05-09 21:26:02', 0),
-(8, '11', '2023-05-25', '2000.00', '1000', '2.00', 'A', '2023-05-09 21:27:12', 0),
-(9, '11', '2023-05-18', '4500.00', '1500', '3.00', 'A', '2023-05-09 21:28:50', 0),
-(10, '543', '2023-05-12', '5000.00', '5', '1000.00', 'A', '2023-05-09 21:31:12', 0),
-(11, 'danipc', '2023-05-23', '10000.00', '1000', '10.00', 'A', '2023-05-09 21:33:58', 0),
-(12, 'hola ', '2023-05-25', '100000.00', '1000', '7.00', 'A', '2023-05-09 21:35:56', 0),
-(13, 'aaskdoeadj', '2023-05-18', '5000.00', '5', '10006.00', 'A', '2023-05-09 21:36:55', 0),
-(14, 'hhhhhhhhhhh', '2023-05-11', '1000000.00', '1000', '10.00', 'A', '2023-05-09 21:37:44', 0);
+(1, 'funciona', '2023-05-31', '900000.00', '9', '100000.00', 'A', '2023-05-10 12:14:28', 31),
+(2, 'fhv', '2023-05-19', '4646.00', '4', '600.00', 'A', '2023-05-10 17:17:17', 31),
+(3, '876', '2023-05-10', '2052.00', '8587', '8578.00', 'A', '2023-05-10 17:28:45', 3),
+(4, 'aaaaaaaaffff', '2023-05-10', '1000000.00', '10', '100000.00', 'A', '2023-05-10 17:35:04', 31),
+(5, 'wqdd', '2023-05-20', '4174.00', '772', '757.00', 'A', '2023-05-10 18:17:27', 3);
 
 -- --------------------------------------------------------
 
@@ -368,15 +351,10 @@ CREATE TABLE `telefonos` (
 --
 
 INSERT INTO `telefonos` (`id_telefono`, `numero`, `prioridad`, `fecha_crea`, `estado`, `id_usuario`, `usuario_crea`) VALUES
-(38, '3238906836', 13, '2023-05-08 21:12:09', 'A', 27, 27),
 (39, '3145553222', 13, '2023-05-08 21:13:02', 'A', 28, 28),
-(41, '3238906836', 13, '2023-05-09 17:14:35', 'A', 30, 30),
 (42, '3003095834', 13, '2023-05-09 17:16:44', 'A', 31, 31),
-(47, '3213213213', 13, '2023-05-09 18:28:11', 'A', 36, 36),
-(48, '32223333232', 13, '2023-05-09 19:40:07', 'A', 37, 37),
-(49, '32132132132', 13, '2023-05-09 20:18:39', 'A', 38, 38),
-(50, '32223233333', 13, '2023-05-09 20:26:56', 'A', 39, 39),
-(51, '15465165', 13, '2023-05-09 20:48:06', 'A', 40, 40);
+(51, '15465165', 13, '2023-05-09 20:48:06', 'A', 40, 40),
+(55, '444444444', 13, '2023-05-10 21:02:01', 'A', 54, 54);
 
 -- --------------------------------------------------------
 
@@ -392,6 +370,7 @@ CREATE TABLE `usuarios` (
   `pass` varchar(200) NOT NULL,
   `estado` char(1) NOT NULL DEFAULT 'A',
   `fecha_crea` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `token` varchar(200) DEFAULT NULL,
   `id_rol` smallint(2) DEFAULT 3,
   `usuario_crea` smallint(2) NOT NULL,
   `tipo_documento` smallint(2) NOT NULL,
@@ -402,19 +381,14 @@ CREATE TABLE `usuarios` (
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`id_usuario`, `usuario`, `nombre`, `apellido`, `pass`, `estado`, `fecha_crea`, `id_rol`, `usuario_crea`, `tipo_documento`, `num_documento`) VALUES
-(1, 'devLas', 'carlos', 'de las salas', 'hola', 'A', '2023-05-02 15:36:43', 1, 1, 9, '6565632'),
-(2, 'Safe', 'santiago', 'guerrero', 'hola', 'A', '2023-05-05 13:12:26', 1, 1, 9, '32323'),
-(3, 'JorgeDuran12', 'Jorge Luis', 'Duran Olivares', '$2y$10$t2JV.BaqDOhhDBQZCywzHOGRx51L0nV4skNtAMXKIVWBGoHBwuh8u', 'A', '2023-05-09 15:54:07', 1, 3, 9, '1007219901'),
-(27, 'asdasasdas', 'sadsada', 'sdasd', '$2y$10$jZNcW0RHY/7VqBwSp/0Sl.yFHge3PfLAwhKoGPLLQA7K/MlDA8fgK', 'A', '2023-05-09 15:34:11', 3, 27, 9, ''),
-(28, 'danipc', 'daniel', 'Banquet', '$2y$10$Y.pApjdV4iGUqioYGymDPeWScJ9xWX1mE5OQhx2YRrV1mq6sqqdJ6', 'A', '2023-05-08 16:13:45', 1, 28, 9, ''),
-(30, 'krastt', 'carlos', 'de las salas', '$2y$10$VQW/WrxM9HTxrBZH.3mEk.7TgVMwFB94X94kh9slPTsw86SiwFHEm', 'A', '2023-05-09 12:14:35', 3, 30, 9, ''),
-(31, 'Majo', 'Maria jose', 'Ramirez', '$2y$10$lJCs.OVlFG6Cno/nKGRmU.0585QD08xr.um.bIcgGEeiL5CNb8i0S', 'A', '2023-05-09 12:16:44', 3, 31, 9, ''),
-(36, 'asdasdas', 'asadasd', 'sdasdasd', '$2y$10$h.aOIU3Qm0SoWMUkCX2G.O3BqEzbh7oEKdLaEqGv2rbT6Q8GmcVDG', 'A', '2023-05-09 13:28:11', 3, 36, 9, '147258369'),
-(37, 'asdsadsa', 'asdasdasd', 'asdsadasd', '$2y$10$/GNnl6xBKcjjLTBd.nXHAuXwL/1xEUuIxaQcxxAlpQeSgVTsafhNC', 'A', '2023-05-09 14:40:07', 3, 37, 9, '23102031201'),
-(38, 'asdasdasd', 'asdasdasd', 'asdasdasd', '$2y$10$E52Z3jKjXfWnKqVqe6c//.e1Ui7d5Y5SMwO315PdGSjDUopVaCYfq', 'A', '2023-05-09 15:18:39', 3, 38, 10, '1001201200'),
-(39, 'asdasdsd', 'asdasdasd', 'asdasdasd', '$2y$10$eKQq6MfCFSUc0kEehumPieaUUVZcZP81x6gCt6IRxsOuC6q/VfxFW', 'A', '2023-05-09 15:26:56', 3, 39, 9, '100123001111'),
-(40, 'duran12', 'jorge', 'duran', '$2y$10$t2JV.BaqDOhhDBQZCywzHOGRx51L0nV4skNtAMXKIVWBGoHBwuh8u', 'A', '2023-05-09 15:48:06', 3, 40, 9, '546546546546');
+INSERT INTO `usuarios` (`id_usuario`, `usuario`, `nombre`, `apellido`, `pass`, `estado`, `fecha_crea`, `token`, `id_rol`, `usuario_crea`, `tipo_documento`, `num_documento`) VALUES
+(1, 'devLas', 'carlos', 'de las salas', 'hola', 'A', '2023-05-02 15:36:43', '', 1, 1, 9, '6565632'),
+(2, 'Safe', 'santiago', 'guerrero', 'hola', 'A', '2023-05-05 13:12:26', '', 1, 1, 9, '32323'),
+(3, 'JorgeDuran12', 'Jorge Luis', 'Duran Olivares', '$2y$10$t2JV.BaqDOhhDBQZCywzHOGRx51L0nV4skNtAMXKIVWBGoHBwuh8u', 'A', '2023-05-10 16:21:47', '4mwD7YqjXH1tmXbHB14GqeurIjVsRZ', 1, 3, 9, '1007219901'),
+(28, 'danipc', 'daniel', 'Banquet', '$2y$10$Y.pApjdV4iGUqioYGymDPeWScJ9xWX1mE5OQhx2YRrV1mq6sqqdJ6', 'A', '2023-05-10 16:23:32', 'T38e7nEypqPVWubUlDoNnWppxlR5LY', 1, 28, 9, '5535'),
+(31, 'Majo', 'Maria jose', 'Ramirez', '$2y$10$lJCs.OVlFG6Cno/nKGRmU.0585QD08xr.um.bIcgGEeiL5CNb8i0S', 'A', '2023-05-10 12:20:35', '', 3, 31, 9, '21113535'),
+(40, 'duran12', 'jorge', 'duran', '$2y$10$t2JV.BaqDOhhDBQZCywzHOGRx51L0nV4skNtAMXKIVWBGoHBwuh8u', 'A', '2023-05-09 15:48:06', '', 3, 40, 9, '546546546546'),
+(54, 'ttt777', 'aaaaa', 'ygtgyy', '$2y$10$KJVTdsxqgJb4z3.U/wmeHuXaLZWxq8MtbqiZtUmNZO0J7XyWQvCga', 'A', '2023-05-10 16:02:01', NULL, 3, 54, 10, '10333334');
 
 --
 -- Índices para tablas volcadas
@@ -462,8 +436,9 @@ ALTER TABLE `fondo_emergencia`
 --
 ALTER TABLE `movimientos`
   ADD PRIMARY KEY (`id_movimiento`),
-  ADD KEY `movimiento-clase_parametro` (`clase_movimiento`),
-  ADD KEY `movimieno-tipo_parametro` (`tipo_movimiento`);
+  ADD KEY `usuario_crea` (`usuario_crea`),
+  ADD KEY `tipo_movimiento` (`tipo_movimiento`),
+  ADD KEY `clase_movimiento` (`clase_movimiento`);
 
 --
 -- Indices de la tabla `parametros_det`
@@ -508,7 +483,8 @@ ALTER TABLE `roles`
 -- Indices de la tabla `saquitos`
 --
 ALTER TABLE `saquitos`
-  ADD PRIMARY KEY (`id_saquito`);
+  ADD PRIMARY KEY (`id_saquito`),
+  ADD KEY `usuario_crea` (`usuario_crea`);
 
 --
 -- Indices de la tabla `telefonos`
@@ -524,8 +500,6 @@ ALTER TABLE `telefonos`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id_usuario`),
-  ADD UNIQUE KEY `usuario` (`usuario`),
-  ADD KEY `usuario_usuario-crea` (`usuario_crea`),
   ADD KEY `usuario_rol` (`id_rol`),
   ADD KEY `documento_usuario` (`tipo_documento`);
 
@@ -543,7 +517,7 @@ ALTER TABLE `acciones`
 -- AUTO_INCREMENT de la tabla `agenda`
 --
 ALTER TABLE `agenda`
-  MODIFY `id_agenda` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_agenda` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `disponibles`
@@ -555,7 +529,7 @@ ALTER TABLE `disponibles`
 -- AUTO_INCREMENT de la tabla `emails`
 --
 ALTER TABLE `emails`
-  MODIFY `id_email` smallint(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id_email` smallint(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT de la tabla `fondo_emergencia`
@@ -567,7 +541,7 @@ ALTER TABLE `fondo_emergencia`
 -- AUTO_INCREMENT de la tabla `movimientos`
 --
 ALTER TABLE `movimientos`
-  MODIFY `id_movimiento` smallint(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_movimiento` smallint(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT de la tabla `parametros_det`
@@ -603,19 +577,19 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT de la tabla `saquitos`
 --
 ALTER TABLE `saquitos`
-  MODIFY `id_saquito` smallint(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id_saquito` smallint(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `telefonos`
 --
 ALTER TABLE `telefonos`
-  MODIFY `id_telefono` smallint(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+  MODIFY `id_telefono` smallint(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_usuario` smallint(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id_usuario` smallint(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 
 --
 -- Restricciones para tablas volcadas
@@ -651,8 +625,9 @@ ALTER TABLE `fondo_emergencia`
 -- Filtros para la tabla `movimientos`
 --
 ALTER TABLE `movimientos`
-  ADD CONSTRAINT `movimieno-tipo_parametro` FOREIGN KEY (`tipo_movimiento`) REFERENCES `parametros_det` (`id_parametro_det`),
-  ADD CONSTRAINT `movimiento-clase_parametro` FOREIGN KEY (`clase_movimiento`) REFERENCES `parametros_det` (`id_parametro_det`);
+  ADD CONSTRAINT `movimientos_ibfk_1` FOREIGN KEY (`usuario_crea`) REFERENCES `usuarios` (`id_usuario`),
+  ADD CONSTRAINT `movimientos_ibfk_2` FOREIGN KEY (`tipo_movimiento`) REFERENCES `parametros_det` (`id_parametro_det`),
+  ADD CONSTRAINT `movimientos_ibfk_3` FOREIGN KEY (`clase_movimiento`) REFERENCES `parametros_det` (`id_parametro_det`);
 
 --
 -- Filtros para la tabla `parametros_det`
@@ -687,6 +662,12 @@ ALTER TABLE `proyeccion`
 --
 ALTER TABLE `roles`
   ADD CONSTRAINT `usuario_crear` FOREIGN KEY (`id_usuario_crea`) REFERENCES `usuarios` (`id_usuario`);
+
+--
+-- Filtros para la tabla `saquitos`
+--
+ALTER TABLE `saquitos`
+  ADD CONSTRAINT `saquitos_ibfk_1` FOREIGN KEY (`usuario_crea`) REFERENCES `usuarios` (`id_usuario`);
 
 --
 -- Filtros para la tabla `telefonos`
