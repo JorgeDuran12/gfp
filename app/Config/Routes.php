@@ -44,7 +44,7 @@ $routes->get('eliminar_evento/(:any)', 'Agenda::eliminar/$1');
 
 
 $routes->get('mi_saquito', 'Saquito::index');
-$routes->get('mis_movimientos', 'Registro::index');
+$routes->get('mis_movimientos', 'Movimiento::index');
 $routes->get('fondo_de_emergencia', 'Emergencia::index');
 $routes->get('gestion/roles', 'Rol::index');
 $routes->get('gestion/usuarios', 'Usuario::index');
@@ -63,6 +63,9 @@ $routes->post('AutenticarUsuario','Auth::AutenticarUsuario');
 /* Rutas Registro*/
 $routes->get('CrearCuenta', 'Auth::registroPagina');
 $routes->post('Registrar', 'Auth::guardar');
+
+/* Ruta para la descarga del pdf de Movimiento */
+
 
 
 /*

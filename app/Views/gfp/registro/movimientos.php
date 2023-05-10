@@ -7,38 +7,59 @@
         Movimientos</h1>
 </div>
 <div class="contenedorMovimiento" >
-    <form method="POST" action="<?php echo base_url('/movimiento/insertar'); ?>" autocomplete="off" class="movimiento"><br> <br>
+    <form method="POST" action="<?php echo base_url('/movimiento/insertar'); ?>" autocomplete="off" class="movimiento">
+    <br><br>
         <div class="tm">
-            <select class="form-select"  aria-label="Floating label select example" id="tipo_movimiento" name="tipo_movimiento">
+
+            <!-- <select class="form-select"  aria-label="Floating label select example" id="tipo_movimiento" name="tipo_movimiento" required>
                 <option selected class="tl">Tipo De Movimiento</option>
                 <option value="1" class="tl">Egreso</option>
                 <option value="2" class="tl">Ingreso</option>
+            </select>    -->
 
-            </select>   
+            <select class="form-select" name="tipo_movimiento" id="tipo_movimiento" aria-label="Floating label select example"  required>
+            <!-- <option selected >Tipo de movimiento</option>  -->
+                <?php foreach ($tipo_movi as $data) {?>
+                     
+                <option value="<?php echo $data["id_parametro_det"]; ?>"><?php echo $data["nombre"];?></option>
+                <?php } ?>
+            </select>
+
         </div>
         <br>
+        
         <div class="tm">
-            <select class="form-select"  aria-label="Floating label select example" id="clase_movimiento" name="clase_movimiento">
+
+            <!-- <select class="form-select"  aria-label="Floating label select example" id="clase_movimiento" name="clase_movimiento" required>
                 <option selected class="tl">Clase De Movimiento</option>
                 <option value="1" class="tl">Bancario</option>
                 <option value="2" class="tl">No Bancario</option>
+            </select> -->
+
+
+            <select class="form-select" name="clase_movimiento" id="clase_movimiento" aria-label="Floating label select example"  required>
+            <!-- <option selected >Clase de movimiento</option>  -->
+                <?php foreach ($clase_movi as $data) {?>
+             
+                <option value="<?php echo $data["id_parametro_det"]; ?>"><?php echo $data["nombre"];?></option>
+                <?php } ?>
             </select>
         </div>
         <br>
 
         <div class="tx">
-            <input type="number" class="form-control" placeholder="Valor" id="valor" name="valor">
+            <input type="number" class="form-control" placeholder="Valor" id="valor" name="valor" required>
             <label for="floatingInput"></label>
         </div>
         <br>
         <div class="dc">
-            <textarea class="dc" placeholder="Descripcion" id="descripcion" name="descripcion"></textarea>
+            <textarea class="dc" placeholder="Descripcion" id="descripcion" name="descripcion" required></textarea>
 
         </div>
         <br>
         <div class="tx">
-            <input type="date" class="form-control"  placeholder="name@example.com" id="fecha_movimiento" name="fecha_movimiento">
-            <label for="floatingInput"></label>
+            <input type="date" class="form-control"  placeholder="name@example.com" id="fecha_movimiento" name="fecha_movimiento" required>
+            <label for="floatingInput" ></label>
         </div>
 
         <div class="botondeanti">
@@ -57,12 +78,12 @@
         <div class="hh">
         <div class="rt">
 
-        <div class="b" data-bs-toggle="modal" data-bs-target="#reporteingresoModal"> <a href="#" class="btn-neon">
+        <div class="b" data-bs-toggle="modal" data-bs-target="#reporteMovimientosModal"> <a href="#" class="btn-neon">
         <span id="span1"></span>
         <span id="span2"></span>
         <span id="span3"></span>
         <span id="span4"></span>
-        Reporte Ingreso
+        Reporte De Movimientos
       </a></div>
         </div>&nbsp&nbsp&nbsp&nbsp&nbsp
         
@@ -76,14 +97,6 @@
         </div>&nbsp&nbsp&nbsp&nbsp&nbsp -->
 
 
-        <div class="b" data-bs-toggle="modal" data-bs-target="#reporteegresoModal"> <a href="#" class="btn-neon">
-        <span id="span1"></span>
-        <span id="span2"></span>
-        <span id="span3"></span>
-        <span id="span4"></span>
-        Reporte Egreso
-      </a></div>
-
       </div>
         </div>
         
@@ -92,65 +105,13 @@
     </div>
 
 
-<div class="modal fade" id="reporteingresoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="reporteMovimientosModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                <h5 class="modal-title" id="exampleModalLabel">Reporte Ingreso</h5>
-            </div>
-            <div class="modal-body">
-                <div id="contenedor">
-                    <div id="limite">
-                        <div class="table-responsive">
-                            <table class="table table-bordered table-sm table-striped" id="dataTable" width="100%"
-                                cellspacing="0">
-                                <thead>
-                                    <tr>
-
-                                        <th>valor</th>
-                                        <th>fecha</th>
-                                        <th>tipoMovimiento</th>
-                                        <th>descripcion</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-
-                                    <tr>
-                                        <td>1.000.000</td>
-                                        <td>11/5/2023</td>
-                                        <td>No Bancario</td>
-                                        <td>venta de un cel q tenia viejo venta de un cel q tenia viejo venta de un cel
-                                            q tenia viejo </td>
-
-                                    </tr>
-
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="modal-footer">
-                <button type="button" class=" btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-                <button type="Submit" class="btn btn-primary">Descargar</button>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-
-
-
-<div class="modal fade" id="reporteegresoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                <h5 class="modal-title" id="exampleModalLabel">Reporte Egreso</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Reporte De Movimientos</h5>
             </div>
             <div class="modal-body">
 
@@ -164,6 +125,7 @@
 
                                         <th>valor</th>
                                         <th>fecha</th>
+                                        <th>ClaseMovimiento</th>
                                         <th>tipoMovimiento</th>
                                         <th>descripcion</th>
 
@@ -174,6 +136,7 @@
                                     <tr>
                                         <td>50.000</td>
                                         <td>11/6/2023</td>
+                                        <td>Ingreso</td>
                                         <td>Bancario</td>
                                         <td>pago del plan pago del plan pago del plan pago del plan pago del plan pago
                                             del plan</td>

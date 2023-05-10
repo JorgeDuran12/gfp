@@ -5,8 +5,8 @@
 <div class="rg_container">
 
     
-    <form id="formulario" class="form_container" action="<?=base_url('Registrar');?>"  method="POST">
-
+    <form id="formulario" class="form_container"action="<?=base_url('Registrar');?>"  method="POST"  >
+     
         <div class="logo_container">
             <img src="<?= base_url("../img/gfp.png");?>" alt="logo_gfp">
         </div>
@@ -55,7 +55,7 @@
 
        <!-- cuerpo  de formulario email -->
   <div class="formulario__grupo" id="grupo__email">
-        <label for="email" class="formulario__label">Correo Electronico</label>
+        <label for="email" class="formulario__label" title="digite un correo electronico valido ">Correo Electronico </label>
         <div class="formulario__grupo-input">
           <input type="email" class="formulario__input" name="email" id="email" placeholder="ejemplocorreo@gmail.com" required>
 
@@ -63,6 +63,7 @@
 
         </div>
        <p class="formulario__input-error">El correo solo debe contener letras, numeros, guiones y gion bajo</p>
+       <p class="formulario__input-error_email">este correo ya esta asociado ha otra  cuenta </p>
       </div>
         <!-- cuerpo de telefono -->
         <div class="formulario__grupo" id="grupo__telefono">
@@ -112,7 +113,7 @@
   <div class="formulario__grupo" id="grupo__pass"> 
         <label for="pass" class="formulario__label">Contraseña</label>
         <div class="formulario__grupo-input">
-          <input type="password" class="formulario__input" name="pass1" id="pass1" placeholder="digite contraseña" required>
+          <input type="password" class="formulario__input" name="pass" id="pass" placeholder="digite contraseña" required>
 
           <svg xmlns="http://www.w3.org/2000/svg" class ="formulario__validacion-estado" width="16" height="16" fill="currentColor" class="bi bi-bookmark-check-fill" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zm8.854-9.646a.5.5 0 0 0-.708-.708L7.5 7.793 6.354 6.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/></svg> 
 
@@ -141,10 +142,16 @@
     </form>
 </div>
 
-
+<!---------------------scrip---------------------------------->
 
 <script>
 
+
+
+
+
+
+// <--------------------------llamdo de  formulario para validar--------------------->
 
   const formulario = document.getElementById('formulario');
   const inputs = document.querySelectorAll('#formulario input');
@@ -159,20 +166,22 @@
 }
 
 
-// <-------------estado de boelanos------------------------->
+// <-------------estado de inptus para manipular el envio ------------------------->
 const campos = {
 usuario:false,
 nombre:false,
 apellido:false,
-password:true,
+pass:false,
 email:false,
 telefono:false,
 documento:false,
 
 }
 
+
+
 const validarfuncion = (e) =>{
-    switch(e.target.name){
+  switch(e.target.name){
         case "usuario":
           validarcampo(expresiones.usuario, e.target, 'usuario');
          
@@ -191,6 +200,7 @@ const validarfuncion = (e) =>{
         break;  
         case "email":
           validarcampo(expresiones.email, e.target, 'email');
+          verificarEmail( e );
 
         break;  
         case "telefono":
@@ -207,7 +217,39 @@ const validarfuncion = (e) =>{
     }
 }
 
-// <----------------------------validar campos---------------------->
+
+function verificarEmail( e ) {
+  const valorEmail = e.target.value;
+   
+
+  if( valorEmail.includes('@')) {
+
+    $.ajax({
+      url: "<?= base_url("auth/verificar_email")?>" + "/" + valorEmail,
+      type: "POST",
+      dataType: "JSON",
+      success: ( data ) => {
+        // console.log(data)
+        if( data !== null ) {
+          // Swal.fire('Informacion', 'Ya existe un usuario con ese email registrado', 'info', 'Aceptar');
+           document.getElementById('grupo__email').classList.add('formulario__grupo-incorrecto');
+             document.querySelector('#grupo__email .formulario__input-error_email').classList.add('formulario__input-error_email-activo')
+           document.getElementById('grupo__email' ).classList.remove('formulario__grupo-correcto');
+           campos['email']= false;
+
+        }else{
+         document.querySelector('#grupo__email .formulario__input-error_email').classList.remove('formulario__input-error_email-activo')
+         campos['email']= true;
+        }
+
+      }
+    })
+  }
+
+
+}
+
+// <----------------------------validar campos y renderizado de  respuestas ---------------------->
 
 const validarcampo = ( expresion, input, campo) =>{
   if(expresion.test(input.value)){
@@ -224,10 +266,10 @@ const validarcampo = ( expresion, input, campo) =>{
 } 
 
 
-// <-----------------------validar contraseña-------------------->
+// <-----------------------validar contraseña y renderzado de respueestas-------------------->
 
 const validarpass2 = () =>{
-  const inputpass1 = document.getElementById('pass1');  
+  const inputpass1 = document.getElementById('pass');  
   
   const inputpass2 = document.getElementById('pass2');
   
@@ -235,16 +277,17 @@ const validarpass2 = () =>{
             document.getElementById(`grupo__pass2` ).classList.add('formulario__grupo-incorrecto');
             document.querySelector(`#grupo__pass2 .formulario__input-error`).classList.add('formulario__input-error-activo');
             document.getElementById('grupo__pass2').classList.remove('formulario__grupo-correcto');
-            
+            campos['pass']= false;
 
           }else{
             document.getElementById(`grupo__pass2` ).classList.remove('formulario__grupo-incorrecto');
             document.querySelector(`#grupo__pass2 .formulario__input-error`).classList.remove('formulario__input-error-activo');
              document.getElementById('grupo__pass2').classList.add('formulario__grupo-correcto');
-          
+             campos['pass']= true;
           }
    
 }
+// <----------------------evaluacion de campos por clic y teclas---------------------->
 
 
 inputs.forEach( (input)=>{
@@ -253,10 +296,12 @@ inputs.forEach( (input)=>{
 });                       
 
 
-formulario.addEventListener('submit' ,(e) =>{
-  e.preventDefault();
+// <---------------------control de envio de formulario--------------->
 
-if( campos.usuario &&  campos.apellido && campos.nombre && campos.email && campos.password && campos.telefono && campos.documento){
+formulario.addEventListener('submit' ,(e) =>{
+
+
+if( campos.usuario &&  campos.apellido && campos.nombre && campos.email && campos.pass && campos.telefono && campos.documento){
   
   Swal.fire({
   title: 'Bienvenido!',
@@ -278,15 +323,8 @@ if( campos.usuario &&  campos.apellido && campos.nombre && campos.email && campo
 }
 
 });
-// const valor = <?= $session->mensaje?>;
-// if( valor === 0 ) {
-//   Swal.fire({
-//   title: 'ERROR AL CREAR LA CUENTA!',
-//   text: 'El usuario ya existe ',
-//   icon: 'error',
-//   confirmButtonText: 'Ok'
-// })
-// }
+
+
 
 
     

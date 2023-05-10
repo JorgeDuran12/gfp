@@ -55,6 +55,25 @@ class ParamentrosModel extends Model{
         $this->where('id_parametro_enc', 3);
         $datos = $this->findAll();  //nos trae todos los registros que cumplan con una condicion dada 
         return $datos;
+    }
+    
+    public function obtener_encabezado_1(){
+        $this->select('parametros_det.*');
+        $this->where('estado', 'A');
+        $this->where('id_parametro_enc', 1);
+        $datos = $this->findAll();  //nos trae todos los registros que cumplan con una condicion dada 
+        return $datos;
    }
+
+    public function obtener_encabezado_2(){
+        $this->select('parametros_det.*');
+        $this->where('estado', 'A');
+        $this->where('id_parametro_enc', 2);
+        $datos = $this->findAll();  //nos trae todos los registros que cumplan con una condicion dada 
+        return $datos;
+    }
+
+
+
 
 }

@@ -16,7 +16,6 @@ class Saquito extends BaseController
         $this->saquito = new SaquitoModel();
         
     }
-
    
     public function index()
     {
@@ -26,20 +25,6 @@ class Saquito extends BaseController
         ]);
     }
 
-    /*public function guardar(){
-        $SaquitoModel= new SaquitoModel($db);
-        $request=\confing\services::request();
-        $data=array(
-            'descripcion' => $this->request->getPost('descripcion'),
-                'fecha_inicial' => $this->request->getPost('fecha_inicial'),
-                'valor' => $this->request->getPost('valor'),
-                'cuota' => $this->request->getPost('cuota'),
-                'numero_cuotas' => $this->request->getPost('numero_cuota'),
-        );
-        if($SaquitoModel -> insert($data)===false){
-            var_drump($SaquitoModel->errors());
-        }
-    }*/
 
   
     public function Insertar(){
@@ -47,7 +32,7 @@ class Saquito extends BaseController
         if ($this->request->getMethod() == "post" ) {
 
             $session = session();
-            $this->saquito;
+            $id_usuario = $session->get('id_usuario');
 
             $this->saquito->save([    
                 'descripcion' => $this->request->getPost('descripcion'),
@@ -55,11 +40,11 @@ class Saquito extends BaseController
                 'valor' => $this->request->getPost('valor'),
                 'numero_cuota' => $this->request->getPost('numero_cuota'),
                 'cuota' => $this->request->getPost('cuota'),
+                'usuario_crea' => $id_usuario
             ]);
             
         }
             return redirect()->to(base_url('/mi_saquito'));
             
         }
-    
 }

@@ -13,7 +13,7 @@ class MovimientoModel extends Model{
     protected $returnType     = 'array';  /* forma en que se retornan los datos */
     protected $useSoftDeletes = false; /* si hay eliminacion fisica de registro */
 
-    protected $allowedFields = ['descripcion','tipo_movimiento','clase_movimiento','valor','fecha_movimiento','estado','id_usuario']; /* relacion de campos de la tabla */
+    protected $allowedFields = ['descripcion','tipo_movimiento','clase_movimiento','valor','fecha_movimiento','estado','usuario_crea']; /* relacion de campos de la tabla */
 
     protected $useTimestamps = true; /*tipo de tiempo a utilizar */
     protected $createdField  = 'fecha_crea'; /*fecha automatica para la creacion */

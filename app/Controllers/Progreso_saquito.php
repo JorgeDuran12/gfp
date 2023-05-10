@@ -10,11 +10,11 @@ class Progreso_Saquito extends BaseController
         $datos = ['tituloPag' => 'Saquito'];
 
         $vistaPrincipal = 
-        view('componentes/head', $datos)
-        .view('componentes/navbar')
-        .view('componentes/header')
+        //view('componentes/head', $datos)
+        .//view('componentes/navbar')
+        .//view('componentes/header')
         .view('fondos/progreso_saquito')
-        .view('componentes/footer');
+        .//view('componentes/footer');
 
         return $vistaPrincipal;
     }

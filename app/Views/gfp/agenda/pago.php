@@ -224,22 +224,38 @@ let modalEvento;
 function validateForm() {
 
   //capturamos el valor(value) de myfrom/fname 
-  var titulo = inputTitulo.value;
-  var desc = inputDescripcion.value;
-  var start = inputFechaInicio.value;
-  var end = inputFechaFinal.value;
-  var color = inputColor.value;
+  const titulo = inputTitulo.value;
+  const desc = inputDescripcion.value;
+  let start = inputFechaInicio.value;
+  let end = inputFechaFinal.value;
+  const color = inputColor.value;
 
-  let fecha1 = start.split('-');
-  let fecha2 = end.split('-');
-  console.log({fecha1, fecha2})
-
+  start = start.split('T');
+  end = end.split('T');
+  
+  // start[0] < end[0] ? console.log(true) : console.log(false);
 
   //validamos para ver si existe un valor agregado al input
-  if (titulo.length <= 5 || desc.length <= 5 || start === '' || end === '' || color.length === '') {
+  if (titulo.length <= 5 || desc.length <= 5 
+    ) {
     
     divAlerta.hidden = false;
-    divAlerta.innerText = 'Error, Hay campos vacios!'
+    divAlerta.innerText = 'Error, los campos estan vaciós o requieren más caracteres!'
+    
+    setTimeout(() => {
+      
+      divAlerta.hidden = true;
+      divAlerta.innerText = ''
+      
+    }, 1000)
+    
+    return false;
+  }
+
+  if( end[1] < start[1] || end[0] < start[0]  ) {
+
+    divAlerta.hidden = false;
+    divAlerta.innerText = 'Error, la fecha de finalización no debe ser menor a la de Inicio!'
     
     setTimeout(() => {
       

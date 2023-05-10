@@ -19,6 +19,10 @@ class Auth extends BaseController
         $this->parametros = new ParamentrosModel();
         $this->email = new EmailsModel();
         $this->telefono = new TelefonosModel();
+
+        helper('generar_token');
+        helper('configurar_sendMail');
+
     }
 
     public function index(){
@@ -48,7 +52,55 @@ class Auth extends BaseController
         ]);
     }
 
+    public function Recuperar_Clave_Pagina(){
+        echo view("auth/recuperar_contraseña", [
+            'tituloPagina' => 'Recuperar contraseña',
+            'session' => session()
+        ]);
+    }
+
     /* Metodos */
+
+    //Funcion para enviar correo al email posteado (Restablecer pass)
+    public function enviar_token_pass() {
+        //Configurar SendMail
+        $sendEmail = sendMailConfig();
+        
+        //Dato input
+        $email  = $this->request->getPost('email');
+        //Buscar usuario by Email
+        $UsuariosModel = new UsuariosModel();
+        $informacion = $UsuariosModel->verificar_email_bd($email);
+
+        //Generar Token 
+        $caracteres = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $token = generarCaracteres($caracteres, 30);
+
+        if(!$informacion) {
+            echo 'Correo no valido';
+            exit();
+        }else {
+            //Insertar token al usuario en la BD
+            $UsuariosModel->update($informacion['id_usuario'],[
+                'token' => $token
+            ]);
+            
+            //Enviar token al correo
+            $sendEmail->setFrom('gestor@financiero.com', 'GfP - Tu mejor compañia');
+            $sendEmail->setTo('someone@example.com');
+    
+            $sendEmail->setSubject('Recuperacion de contraseña');
+            $sendEmail->setMessage('El codigo de restablecimiento de contraseña es : ' .$token);
+    
+            // $sendEmail->send();
+            $sendEmail->send(); 
+
+            return redirect()->to(base_url("auth/Recuperar_Clave_Pagina"))->with('ok', 1);
+
+        }
+        
+
+    }
 
     public function AutenticarUsuario(){
 
@@ -123,14 +175,6 @@ class Auth extends BaseController
 
         if ($this->request->getMethod() == "post" ) {
 
-            
-            $usuarioName = $this->request->getPost('usuario');
-            $existeUsuario = $usuarioModel->traer_usuario_by_user($usuarioName);
-            if($existeUsuario) {
-            
-                return redirect()->to(base_url('auth/registroPagina'))->with('mensaje', '0');
-              
-            }else {
                 $password = $this->request->getPost('pass1');
                 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
                 
@@ -176,9 +220,16 @@ class Auth extends BaseController
                     'logged_in' => true
                 ]);
                 return redirect()->to('/Principal'); 
-            }
+            
          
         }
+    }
+
+    public function verificar_email($email) {
+
+        $resp = $this->usuario->verificar_email_bd($email);
+        return json_encode($resp, true);
+
     }
 
     public function logout() {
@@ -186,5 +237,10 @@ class Auth extends BaseController
         $session->destroy();
        
         return redirect()->to(base_url('/'));
+    }
+
+
+    public function recuperar_contraseña_by_email($email) {
+        echo 'recuperando...';
     }
 }   

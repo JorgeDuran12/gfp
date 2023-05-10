@@ -30,13 +30,15 @@
 
             <div class="login__form-footer">
 
-                <a href="#" onclick="MostrarModal()">
+                <a href="<?= base_url("auth/Recuperar_Clave_Pagina")?>">
                     ¿Has olvidado tu contraseña?
                 </a>
 
                 <div class="contenedor">
                     <button class="btn_login" type="submit">Entrar</button>
+                    
                 </div>
+                
             </div>
 
             <div class="login__form-register">
@@ -48,7 +50,7 @@
 </div>
 
 <script>
-
+/* 
 function MostrarModal() {
 
 Swal.fire({
@@ -71,10 +73,14 @@ Swal.fire({
   if (result.isConfirmed) {
     const email = result.value;
     Swal.fire(`El link de restablacimiento de contraseña llegara al correo: ${email}`);
+
+    setTimeout(() => {
+      window.location.href = 
+    }, 1000)
   }
 });
 
-}
+} */
 
 </script>
 

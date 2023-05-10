@@ -2,7 +2,7 @@
 <?= $this->section("contenido")?>
 
 <div class="titulo">
-    <h3><img class="img" src="<?= base_url("img/saquito1.png")?>"> Saquito</h3>
+    <h3><img class="img" src="<?= base_url("img/saquito.png")?>"> Saquito</h3>
 </div><br>
 
 <div class="input-group mb-3 date ">
@@ -20,28 +20,28 @@
             <h3>Meta</h3>
         </div>
         <div class="dc">
-            <textarea class="dc" name="descripcion" id="floatingTextarea descripcion" placeholder="Descripcion:"></textarea>
+            <textarea class="dc" name="descripcion" id="floatingTextarea descripcion" placeholder="Descripcion:" required></textarea>
 
         </div>
         <br>
         <div class="tma">
             <input type="date" class="form-control" name="fecha_inicial" id="fecha_inicial floatingInput"
-                placeholder="Fecha inicial: ">
+                placeholder="Fecha inicial: " required>
             <label for="floatingInput"></label>
 
         </div>
         <br>
         <div class="tma">
-            <input type="number" class="form-control" name="valor" id="floatingInput valor" placeholder="Valor: ">
+            <input type="number" class="form-control" name="valor" id="floatingInput valor" placeholder="Valor: " required>
             <label for="floatingInput"></label>
         </div>
         <br>
 
         <div class="txa">
         <input type="number" class="form-control" name="numero_cuota" id="numero_cuota floatingInput"
-                placeholder="Valor cuotas:">
+                placeholder="Valor cuotas:" required>
             <label for="floatingInput"></label>
-            <input type="number" class="form-control" name="cuota" id="couta floatingInput" placeholder="Cuotas:">
+            <input type="number" class="form-control" name="cuota" id="couta floatingInput" placeholder="Cuotas:" required>
             <label for="floatingInput"></label>
             
         </div>
@@ -100,7 +100,7 @@
         </div>
      </div>
 <!-- Modal  Editar-->
-<div class="modal fade" id="editarModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+ <div class="modal fade" id="editarModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -109,33 +109,29 @@
                 <h2 class="modal-title" id="exampleModalLabel">Editar Registro</h2>
             </div>
             <div class="modal-body">
-
-                <div class="tim">
-                    <h3>Meta</h3>
-                </div>
-                <div class="dc">
-                    <textarea class="dc"  name="descripcion"placeholder="Descripcion:" id="floatingTextarea"></textarea>
-
-                </div>
+             <div class="tim">
+              <h3>Meta</h3>
+             </div>
+             <div class="dca">
+                <textarea class="dca"  name="descripcion"placeholder="Descripcion:" id="floatingTextarea"></textarea>
+            </div>
                 <br>
-                <div class="tma">
-                    <input type="date" class="form-control" name="fecha_inicial" id="floatingInput" placeholder="Fecha inicial: ">
-                    <label for="floatingInput"></label>
-
-                </div>
+            <div class="tma">
+                <input type="date" class="form-control" name="fecha_inicial" id="floatingInput" placeholder="Fecha inicial: ">
+                <label for="floatingInput"></label>
+             </div>
                 <br>
-                <div class="tma">
-                    <input type="number" class="form-control" name="valor" id="floatingInput" placeholder="Valor: ">
-                    <label for="floatingInput"></label>
-                </div>
+            <div class="tma">
+                <input type="number" class="form-control" name="valor" id="floatingInput" placeholder="Valor: ">
+                 <label for="floatingInput"></label>
+            </div>
                 <br>
-
-                <div class="txa">
-                    <input type="number" class="form-control" name="cuota" id="floatingInput cuota" placeholder="Cuotas:">
-                    <label for="floatingInput"></label>
-                    <input type="number" class="form-control" name="numero_cuota" id="floatingInput numero_cuota" placeholder="Valor cuotas:">
-                    <label for="floatingInput"></label>
-                </div>
+            <div class="txa">
+                 <input type="number" class="form-control" name="cuota" id="floatingInput cuota" placeholder="Cuotas:">
+                <label for="floatingInput"></label>
+                <input type="number" class="form-control" name="numero_cuota" id="floatingInput numero_cuota" placeholder="Valor cuotas:">
+                <label for="floatingInput"></label>
+            </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
@@ -170,5 +166,4 @@ function saquito(){
         });
     });
 }*/
-
 </script>

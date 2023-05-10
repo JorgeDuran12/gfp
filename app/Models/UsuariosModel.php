@@ -13,7 +13,7 @@ class UsuariosModel extends Model{
     protected $returnType     = 'array';  /* forma en que se retornan los datos */
     protected $useSoftDeletes = false; /* si hay eliminacion fisica de registro */
 
-    protected $allowedFields = ['usuario','nombre','apellido','pass','fecha_crea','estado','id_rol','usuario_crea','tipo_documento','num_documento']; /* relacion de campos de la tabla */
+    protected $allowedFields = ['usuario','nombre','apellido','pass','fecha_crea','estado','id_rol','usuario_crea','tipo_documento','num_documento', 'token']; /* relacion de campos de la tabla */
     
     protected $useTimestamps = true; /*tipo de tiempo a utilizar */
     protected $createdField  = 'fecha_crea'; /*fecha automatica para la creacion */
@@ -30,14 +30,6 @@ class UsuariosModel extends Model{
     $this->select('usuarios.*');
     $this->where('estado','A');
     $this->where('id_usuario',$id);
-    $datos = $this->first();  
-    return $datos;
-}
-
-public function traer_usuario_by_user($username) {
-    $this->select('usuarios.*');
-    $this->where('estado','A');
-    $this->where('usuario',$username);
     $datos = $this->first();  
     return $datos;
 }
@@ -86,5 +78,16 @@ public function traer_usuario_by_user($username) {
         // var_dump($datos);
         return $datos;
     }
+    public function verificar_email_bd($email) {
+        $this->select('usuarios.*');
+        $this->join('emails', 'emails.id_usuario = usuarios.id_usuario');
+        $this->where('emails.email', $email);
+        $this->where('usuarios.estado', 'A');
+        $datos = $this->get()->getRowArray(); 
+        // var_dump($datos);
+        return $datos;
+    }
+
+
     
 }
