@@ -32,6 +32,7 @@ const EstadoTokenEnviado = "<?= $session->ok?>";
     if(EstadoTokenEnviado === '1' ) {
         tituloH1.innerText = 'Escriba una nueva contraseña';
         labelInput.innerText = 'Nueva contraseña';
+        // let input = document.querySelector('#email').type = 'password';
         input.placeholder = '*******';
         btn.innerText = 'Guardar'
     }

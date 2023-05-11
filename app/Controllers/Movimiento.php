@@ -10,39 +10,45 @@ use Dompdf\Dompdf;
 
 class Movimiento extends BaseController
 
-{    
+ {   
+  
+  // public function demoPDF(){
+//   $dompdf = new Dompdf();
+//   $dompdf->loadHTML('Movimiento');
+//   $dompdf->setPaper('A4','portrait');
+//   $dompdf->render();
+//   $dompdf->stream();
+// }
+
 
   protected $Movimiento;
   protected $parametros;
 
-  public function demoPDF(){
-     $dompdf = new Dompdf();
-     $dompdf->loadHTML('Movimiento');
-     $dompdf->setPaper('A4','portrait');
-     $dompdf->render();
-     $dompdf->stream();
-  }
-
+  
 
 
     public function __construct()
     {
+       
       $this->Movimiento = new MovimientoModel();
       $this->parametros = new ParamentrosModel();
     }
 
     public function index()
     {
+      // $Movimiento = $this-> Movimiento ->where('estado','A')->findAll();
+      $Movimiento = $this-> Movimiento-> traer();
       $tipo_movimiento = $this-> parametros ->obtener_encabezado_1();
       $clase_movimiento_Model = new ParamentrosModel();
       $clase_movimiento = $clase_movimiento_Model -> obtener_encabezado_2();
-      
 
-        echo view("gfp/registro/movimientos", [
+        echo view("gfp/registro/movimientos",  [
             'tituloPagina' => 'Mis movimientos',
             'tipo_movi' => $tipo_movimiento,
             'clase_movi' => $clase_movimiento,
-        ]);
+            'Movimientos' => $Movimiento,
+            
+        ],);
     }
     
     public function insertar()

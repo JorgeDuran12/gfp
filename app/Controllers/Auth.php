@@ -87,7 +87,8 @@ class Auth extends BaseController
             
             //Enviar token al correo
             $sendEmail->setFrom('gestor@financiero.com', 'GfP - Tu mejor compañia');
-            $sendEmail->setTo('someone@example.com');
+            $sendEmail->setTo($informacion);
+            // $sendEmail->setTo('someone@example.com');
     
             $sendEmail->setSubject('Recuperacion de contraseña');
             $sendEmail->setMessage('El codigo de restablecimiento de contraseña es : ' .$token);
@@ -127,7 +128,9 @@ class Auth extends BaseController
                         'usuario' => $usuario['usuario'],
                         'email' => $email,
                         'rol' => $usuario['id_rol'],
+                        //este logged in sera usado en la carpeta filter
                         'logged_in' => true
+
                     ]);
 
                     if ($usuario['id_rol'] === '1') {
@@ -152,23 +155,6 @@ class Auth extends BaseController
     }
 
 
-    // public function RecuperarCuenta(){
-    //     $email_recuperar = $this->request->getPost('email_modal');
-
-    //     $userModel = new UsuariosModel();
-    //     $user = $userModel -> where('email', $email) -> first();
-
-    //     if(!isset($user)){
-    //        return echo "este correo no existe en la base de datos";
-    //     } elseif (isset($user === $email_recuperar)){
-
-    //          }
-
-    // }
-    // }
-       
-        
-
     public function guardar(){   
 
         $usuarioModel = new UsuariosModel();
@@ -187,7 +173,7 @@ class Auth extends BaseController
                     'pass' => $hashed_password
                 ]);
         
-                $id_usuario = $this -> usuario ->insertID(); 
+                $id_usuario = $this -> usuario -> insertID(); 
     
                 $this -> usuario -> save([
                     'id_usuario' => $id_usuario,

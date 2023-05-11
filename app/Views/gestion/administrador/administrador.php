@@ -40,7 +40,7 @@
                             <td> <?php echo $dato['pass']; ?></td>
                             <td>  <?php if($dato['estado']=="A"){echo "Activo";}else{echo "Eliminado";}?></td>
                             <td>      
-                                    <a  class="btn btn-warning"  href="#" onclick="seleccionausuario(<?php echo $dato['id_usuario'] . ',' . 2 ?>);" data-bs-toggle="modal" data-bs-target="#agregar-usuario"  width="16" height="16" title="Editar Registro">
+                                    <a  class="btn btn-warning"  href="#" onclick="seleccionausuario(<?php echo $dato['id_usuario'] . ',' . 2 ?>);" data-bs-toggle="modal" data-bs-target="#agregar_usuario"  width="16" height="16" title="Editar Registro">
                                        <img  class="image" src="<?= base_url("img/editar.png") ?> " title="Editar" >
                                     </a>     
                                  
@@ -58,7 +58,7 @@
 <!-- <---------------------modal agregar usuario----------->
 <form method="POST" action="<?php echo base_url('/usuario/insertar'); ?>" autocomplete="off">
 
-    <div class="modal fade" id="agregar-usuario"tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="agregar_usuario"tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
 
         <div class="modal-content">
@@ -67,24 +67,23 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-     
+       
+        <input hidden id="tp" name ="tp">
+        <input hidden id="id_usuario" name ="id_usuario">
 
       <!-- lado izquierdo -->
         <div>
 
         <div class="input_container">
-                  <label class="input_label" for="email_field">selecione rol</label>
+                  <label class="input_label" for="email_field">Selecione rol</label>
                   <img src="<?= base_url("icons/person-vcard-fill.svg")?>" class="icon">
-                  <select class="select"   name="id_rol" id="id_rol"aria-label="Default select example" required>
+                  <select class="select" name="id_rol" id="id_rol" aria-label="Default select example" required>
                   <?php foreach ($roles as $data) {?>
                     
                       <option value="<?php echo $data['id_rol']; ?>"><?php echo $data["nombre"];?></option>
                 <?php } ?>
             </select>
         </div>
-       
-
-      
 
               <!-- nombre -->
         <div class="input_container">
@@ -99,9 +98,7 @@
             <img src="<?= base_url("icons/person-lines-fill.svg")?>" class="icon">
             <input placeholder="Ej: Banquet" name="apellido" type="text" class="input_field" id="apellido"  required >
         </div>
-              <!-- usuario -->
 
-              
               <!-- tipo de documento -->
               
               <div class="input_container">
@@ -125,6 +122,8 @@
     </div>
 <!-- lado derecho -->
 <div>
+      <!-- usuario -->
+
     <div class="input_container">
         <label class="input_label" for="email_field">Nombre de usuario</label>
         <img src="<?= base_url("icons/person-check-fill.svg")?>" class="icon">
@@ -156,10 +155,7 @@
         </div>
 
         </div>
-        
-        <input hidden id="tp" name ="tp" >
-        <input hidden id="id_usuario" name ="id_usuario">
-
+      
       </div>
       <div class="modal-footer">
 
@@ -186,8 +182,7 @@
                     <h5  class="modal-title"
                     
                         id="exampleModalLabel">Eliminación de Registro<h5>
-                       
-                        
+
 
                 </div>
                 <div style="text-align:center;font-weight:bold;" class="modal-body">
@@ -234,10 +229,10 @@ $('.close').click(function() {$("#modal-confirma").modal("hide");});
            $("#id_rol").val(rs[0]['id_rol']);
            $("#pass").val(rs[0]['pass']);
            $("#btn_guardar").text('Actualizar');
-           console.log("editable")
+           console.log("editable");
          }
          
-      })
+      });
      }else{$("#tp").val(1);
        document.getElementById('exampleModalLabel');
        $("#usuario").val('');
@@ -250,11 +245,10 @@ $('.close').click(function() {$("#modal-confirma").modal("hide");});
         $("#telefono").val('');
         $("#pass").val('');
         $("#btn_guardar").text('Guardar');
-        console.log("enviado")
+        console.log("enviado");
      }
     
    }
- ; 
 
    
 </script>

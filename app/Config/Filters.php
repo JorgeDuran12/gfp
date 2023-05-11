@@ -21,7 +21,7 @@ class Filters extends BaseConfig
         'honeypot'      => Honeypot::class,
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
-        'Verificar_Auth' => \App\Filters\Verificar_Auth::class,
+        'Verificar_Auth' => \App\Filters\Verificar_Auth::class, // y mas abajo en la linea 67 se implementara la seguridad de enrutamiento al sistema
     ];
 
     /**
@@ -61,6 +61,9 @@ class Filters extends BaseConfig
      * Example:
      * 'isLoggedIn' => ['before' => ['account/*', 'profiles/*']]
      */
+
+
+
     public array $filters = [
         'Verificar_Auth' => [
             'before' => [

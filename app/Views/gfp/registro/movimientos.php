@@ -128,21 +128,23 @@
                                         <th>ClaseMovimiento</th>
                                         <th>tipoMovimiento</th>
                                         <th>descripcion</th>
+                                     
 
                                     </tr>
                                 </thead>
                                 <tbody>
 
-                                    <tr>
-                                        <td>50.000</td>
-                                        <td>11/6/2023</td>
-                                        <td>Ingreso</td>
-                                        <td>Bancario</td>
-                                        <td>pago del plan pago del plan pago del plan pago del plan pago del plan pago
-                                            del plan</td>
-
-                                    </tr>
-
+                                  
+                                <?php foreach ($Movimientos as $dato) { ?>
+                                        <tr>
+                                            <td><?php echo $dato ['valor'];?></td>
+                                            <td><?php echo $dato ['fecha_movimiento'];?></td>
+                                            <td><?php echo $dato ['clase_movimiento'];?></td>
+                                            <td><?php echo $dato ['tipo_movimiento'];?></td>
+                                            <td><?php echo $dato ['descripcion'];?></td>
+                                            </tr>
+                                            <?php } ?>
+                            
                                 </tbody>
                             </table>
                         </div>

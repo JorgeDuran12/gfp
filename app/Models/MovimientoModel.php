@@ -24,5 +24,18 @@ class MovimientoModel extends Model{
     protected $validationMessages = [];
     protected $skipValidation    = false;
 
-    
+
+    public function traer(){
+
+        $session = session();
+        $id_usuario = $session->get('id_usuario');
+
+        $this->select('movimientos.*');
+        $this->where('estado', 'A');
+        $this->where('usuario_crea', $id_usuario);
+        $data = $this->findAll();
+        return $data;
+
+    }
+
 }

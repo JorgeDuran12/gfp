@@ -19,9 +19,11 @@ class Saquito extends BaseController
    
     public function index()
     {
+         $saquitos = $this-> saquito-> traer();
+        // $saquito = $this-> saquito -> traer_saquitos();
         echo view("gfp/fondo/saquito", [
             'tituloPagina' => 'Mi saquito',
-            //'saquito'=>$saquito
+            'saquito'=>$saquitos
         ]);
     }
 

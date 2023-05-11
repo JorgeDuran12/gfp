@@ -24,14 +24,26 @@ class SaquitoModel extends Model{
     protected $validationMessages = [];
     protected $skipValidation    = false;
   
-   
-     
-        public function traer_saquitos($id){
+        public function traer_saquitos(){
             $this->select('saquitos.*');
-            $this->where('id', $id);
-            $datos = $this->first();  // nos trae el registro que cumpla con una condicion dada 
+            // $this->where('id', $id);
+            $this->where('estado','A');
+            $datos = $this->findAll();  // nos trae el registro que cumpla con una condicion dada 
             return $datos;
         }
-}
+        public function traer(){
+
+            $session = session();
+            $id_usuario = $session->get('id_usuario');
+    
+            $this->select('saquitos.*');
+            $this->where('estado', 'A');
+            $this->where('usuario_crea', $id_usuario);
+            $data = $this->findAll();
+            return $data;
+    
+        }
+    }
+
 
 
