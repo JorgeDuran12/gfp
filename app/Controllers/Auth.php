@@ -103,36 +103,43 @@ class Auth extends BaseController
 
     }
 
+
     public function AutenticarUsuario(){
 
+        // Obtener el email y la contraseña del formulario de inicio de sesión
         $email = $this->request->getPost('email');
         $password = $this->request->getPost('password');
-      
+    
+        // Crear instancias de los modelos de usuarios y correos electrónicos
         $usuarioModel = new UsuariosModel();
         $emailModel = new EmailsModel();
-
+    
+        // Obtener el ID del usuario correspondiente al correo electrónico proporcionado
         $id_usuario = $emailModel->Id_Usuario_Email($email);
-        
+    
+        // Verificar si se encontró un usuario correspondiente al correo electrónico proporcionado
         if ($id_usuario) {
             
+            // Obtener información del usuario correspondiente al correo electrónico proporcionado
             $usuario = $usuarioModel->Auth_usuario($email);
-
+    
+            // Verificar si se encontró información del usuario y si su contraseña coincide con la proporcionada
             if ($usuario && isset($usuario['pass'])) {
                 
+                // Verificar si la contraseña proporcionada coincide con la almacenada en la base de datos
                 if (password_verify($password, $usuario['pass'])) {
-
+    
+                    // Iniciar sesión del usuario y establecer sus detalles de sesión
                     $session = session();
-                    
                     $session->set([
                         'id_usuario' => $id_usuario,
                         'usuario' => $usuario['usuario'],
                         'email' => $email,
                         'rol' => $usuario['id_rol'],
-                        //este logged in sera usado en la carpeta filter
-                        'logged_in' => true
-
+                        'logged_in' => true // es una clave que se establece en los detalles de sesión del usuario cuando se autentica correctamente, y se utiliza para aplicar restricciones a ciertas páginas que sólo deben ser accesibles por usuarios autenticados.
                     ]);
-
+    
+                    // Redirigir al usuario según su rol
                     if ($usuario['id_rol'] === '1') {
                         return redirect()->to(base_url('/gestion_de_administradores'));
                     } elseif ($usuario['id_rol'] === '2') {
@@ -142,13 +149,15 @@ class Auth extends BaseController
                     } elseif ($usuario['id_rol'] === '4') {
                         return redirect()->to(base_url('/Principal'));
                     }
-
+    
                 } else{
+                    // Si la contraseña no coincide, mostrar un mensaje de error
                     echo "La contraseña no coincide con la almacenada en la base de datos.";
                     return;
                 }
             }       
         } else {
+            // Si no se encontró un usuario correspondiente al correo electrónico proporcionado, mostrar un mensaje de error
             echo "El usuario no existe en la base de datos.";
             return;
         }
@@ -172,7 +181,8 @@ class Auth extends BaseController
                     'num_documento' => $this->request->getPost('documento'),
                     'pass' => $hashed_password
                 ]);
-        
+
+                //Se utiliza para obtener el id_usuario del último registro insertado en la tabla usuarios
                 $id_usuario = $this -> usuario -> insertID(); 
     
                 $this -> usuario -> save([
