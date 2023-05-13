@@ -60,7 +60,7 @@ class EmailsModel extends Model{
       return $datos;
     }
     
-  //funcion de autentuicar usada en el controlador Auth
+  
   public function Id_Usuario_Email($email)
   {
       $datos = $this->AuthEmail($email);

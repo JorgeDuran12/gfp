@@ -24,11 +24,12 @@ class SaquitoModel extends Model{
     protected $validationMessages = [];
     protected $skipValidation    = false;
   
-        public function traer_saquitos(){
+   
+     
+        public function traer_saquitos($id){
             $this->select('saquitos.*');
-            // $this->where('id', $id);
-            $this->where('estado','A');
-            $datos = $this->findAll();  // nos trae el registro que cumpla con una condicion dada 
+            $this->where('id', $id);
+            $datos = $this->first();  // nos trae el registro que cumpla con una condicion dada 
             return $datos;
         }
         public function traer(){
@@ -43,7 +44,6 @@ class SaquitoModel extends Model{
             return $data;
     
         }
-    }
-
+}
 
 

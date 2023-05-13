@@ -26,13 +26,13 @@ class UsuariosModel extends Model{
 
  // <-------------funcion traer_usuario que sera usada en controlador por la funcion  buscar_usuario----------------------->
  
-    public function traer_usuario($id){
-        $this->select('usuarios.*');
-        $this->where('estado','A');
-        $this->where('id_usuario',$id);
-        $datos = $this->first();  
-        return $datos;
-    }
+ public function traer_usuario($id){
+    $this->select('usuarios.*');
+    $this->where('estado','A');
+    $this->where('id_usuario',$id);
+    $datos = $this->first();  
+    return $datos;
+}
 
     // public function DataActualizar($id){
     //     $this->select('usuarios.*, emails.');
@@ -44,29 +44,30 @@ class UsuariosModel extends Model{
     //     return $datos;
     // }
 
-    public function DataActualizar($id){
+    public function DataActualizar($id,$estado){
         $this->select('usuarios.*, emails.id_usuario as id_emails, talefonos.id_usuario as id_telefono');
         $this->join('telefonos', 'telefonos.id_usuario = usuarios.id_usuario');
         $this->join('emails','emails.id_usuario = usuarios.id_usuario');
         $this->where('usuarios.id_usuario',$id);
-        $this->where('usuarios.estado','A');
+        $this->where('estado','A');
         $datos = $this->first();           
         return $datos;
       }
 
+
     // <-----------------------------------funcion eliminar en vista principal----------------------------------->
 
-    public function elimina_usu($id,$estado){
-        $datos = $this->update($id, ['estado' => $estado]);         
-        return $datos;
-    }
+ public function elimina_usu($id,$estado){
+     $datos = $this->update($id, ['estado' => $estado]);         
+    return $datos;
+}
 
-    public function obtener_usuario(){
-        $this->select('usuarios.*');
-        $this->where('estado', 'A');
-        $datos = $this->findall();  //nos trae todos los registros que cumplan con una condicion dada 
-        return $datos;
-    }
+ public function obtener_usuario(){
+     $this->select('usuarios.*');
+     $this->where('estado', 'A');
+     $datos = $this->findall();  //nos trae todos los registros que cumplan con una condicion dada 
+      return $datos;
+   }
 
     public function Auth_usuario($email) {
         $this->select('usuarios.*');
@@ -77,7 +78,6 @@ class UsuariosModel extends Model{
         // var_dump($datos);
         return $datos;
     }
-    
     public function verificar_email_bd($email) {
         $this->select('usuarios.*');
         $this->join('emails', 'emails.id_usuario = usuarios.id_usuario');

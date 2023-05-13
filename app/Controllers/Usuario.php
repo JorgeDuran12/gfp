@@ -39,13 +39,8 @@ class Usuario extends BaseController
     public function insertar()
     {
         $tp=$this->request->getPost('tp');
-
         if ($this->request->getMethod() == "post") {
-
-            if ($tp === 1) {
-                
-            $session = session();
-            $usuario_crea = $session->get('id_usuario');
+            if ($tp == 1) {
 
                 $password = $this->request->getPost('pass');
                 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
@@ -57,27 +52,25 @@ class Usuario extends BaseController
                     'id_rol' => $this->request->getPost('id_rol'),
                     'tipo_documento' => $this->request->getPost('tipo_documento'),
                     'num_documento' => $this->request->getPost('num_documento'),
-                    'pass' => $hashed_password,
-                    'usuario_crea' =>  $usuario_crea
+                    'pass' => $hashed_password
                 ]);
-
                 $id_usuario = $this -> usuario ->insertID(); 
 
                 $this -> usuario -> save([
                     'id_usuario' => $id_usuario,
-                    'usuario_crea'=> $usuario_crea
+                    'usuario_crea'=> $id_usuario
                 ]);
     
                 $this -> email -> save([
                     'id_usuario' => $id_usuario,
-                    'usuario_crea'=> $usuario_crea,
+                    'usuario_crea'=> $id_usuario,
                     'prioridad' => 13,
                     'email' => $this -> request ->getPost('email')
                 ]);
     
-                $this -> telefono -> save([
+                $this -> telefono -> save( [
                     'id_usuario' => $id_usuario,
-                    'usuario_crea'=>  $usuario_crea,
+                    'usuario_crea'=> $id_usuario,
                     'prioridad' => 13,
                     'numero' => $this -> request ->getPost('telefono')
                 ]);
@@ -91,8 +84,7 @@ class Usuario extends BaseController
                     'id_rol' => $this->request->getPost('id_rol'),
                     'tipo_documento' => $this->request->getPost('tipo_documento'),
                     'num_documento' => $this->request->getPost('num_documento'),
-                    'pass' => $this->request->getPost('pass'),
-                    'usuario_crea' =>  $usuario_crea
+                    'pass' => $this->request->getPost('pass')
                    
                 ]);
             }
@@ -118,15 +110,15 @@ class Usuario extends BaseController
        return redirect()->to(base_url('gestion_de_administradores'));
     }
 
+
+
       // <---------------------------------buscar_usuario del model traer_usuario -------------------------------------->
       public function buscar_usuario($id_usuario)
       {
           $returnData = array();
-          $usuarioF_ = $this -> usuario ->DataActualizar($id);
-          var_dump($usuarioF_);
-          exit();
-          if (!empty($usuarioF_)) {
-              array_push($returnData, $usuarioF_);    
+          $usuario_ = $this->usuario->DataActualizar($id_usuario, $estado);
+          if (!empty($usuario_)) {
+              array_push($returnData, $usuario_);    
           }
           echo json_encode($returnData);
       }

@@ -42,6 +42,7 @@ $routes->get('listaDeEventos', 'Agenda::buscar_eventos');
 $routes->post('insertar_evento', 'Agenda::insertar');
 $routes->get('eliminar_evento/(:any)', 'Agenda::eliminar/$1');
 
+
 $routes->get('mi_saquito', 'Saquito::index');
 $routes->get('mis_movimientos', 'Movimiento::index');
 $routes->get('fondo_de_emergencia', 'Emergencia::index');

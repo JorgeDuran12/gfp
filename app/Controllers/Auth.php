@@ -6,12 +6,17 @@ use App\Models\EmailsModel;
 use App\Models\ParamentrosModel;
 use App\Models\TelefonosModel;
 
+use CodeIgniter\API\ResponseTrait;
+
 class Auth extends BaseController
 {
     protected $usuario;
     protected $email;
     protected $parametros;
     protected $telefono;
+
+    use ResponseTrait;
+
     
     public function __construct()
     {
@@ -52,6 +57,8 @@ class Auth extends BaseController
         ]);
     }
 
+    /* Metodos y pages - view (RECUPERAR CONTRASEÑA) */
+
     public function Recuperar_Clave_Pagina(){
         echo view("auth/recuperar_contraseña", [
             'tituloPagina' => 'Recuperar contraseña',
@@ -59,87 +66,139 @@ class Auth extends BaseController
         ]);
     }
 
-    /* Metodos */
+    
 
     //Funcion para enviar correo al email posteado (Restablecer pass)
     public function enviar_token_pass() {
+    
         //Configurar SendMail
         $sendEmail = sendMailConfig();
+        //Valores ingresados
+        $email = $this->request->getPost('email');
+        $nuevaPass = $this->request->getPost('nuevaPass');
         
-        //Dato input
-        $email  = $this->request->getPost('email');
-        //Buscar usuario by Email
+        //Model Usuario
         $UsuariosModel = new UsuariosModel();
-        $informacion = $UsuariosModel->verificar_email_bd($email);
 
         //Generar Token 
         $caracteres = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
         $token = generarCaracteres($caracteres, 30);
+        
+        if( $email ) {
 
+        //Buscar usuario by Email
+        $informacion = $UsuariosModel->verificar_email_bd($email);
         if(!$informacion) {
             echo 'Correo no valido';
             exit();
-        }else {
-            //Insertar token al usuario en la BD
-            $UsuariosModel->update($informacion['id_usuario'],[
-                'token' => $token
-            ]);
-            
-            //Enviar token al correo
-            $sendEmail->setFrom('gestor@financiero.com', 'GfP - Tu mejor compañia');
-            $sendEmail->setTo($informacion);
-            // $sendEmail->setTo('someone@example.com');
-    
-            $sendEmail->setSubject('Recuperacion de contraseña');
-            $sendEmail->setMessage('El codigo de restablecimiento de contraseña es : ' .$token);
-    
-            // $sendEmail->send();
-            $sendEmail->send(); 
-
-            return redirect()->to(base_url("auth/Recuperar_Clave_Pagina"))->with('ok', 1);
-
         }
         
+        $idUsuario = $informacion['id_usuario'];
+
+        //Insertar token al usuario en la BD
+        $UsuariosModel->update($idUsuario,[
+            'token' => $token
+        ]);
+        
+        //Enviar token al correo
+        $sendEmail->setFrom('gestor@financiero.com', 'GfP - Tu mejor compañia');
+        $sendEmail->setTo('someone@example.com');
+
+        $sendEmail->setSubject('Recuperacion de contraseña');
+        $sendEmail->setMessage('El codigo de restablecimiento de contraseña es : ' .$token);
+
+        // $sendEmail->send();
+        $sendEmail->send(); 
+
+        return redirect()->to(base_url("auth/Recuperar_Clave_Pagina"))->with('usuarioId', $idUsuario );
+
+
+        }else if( $nuevaPass ) {
+            $idUsuario =  $this->request->getPost('id_usuario');
+
+            //Model Usuario
+            $UsuariosModel = new UsuariosModel();
+
+            //Encriptar clave
+            $hasPassword = password_hash($nuevaPass, PASSWORD_DEFAULT);
+
+            //Update a la password
+            $UsuariosModel->update($idUsuario,[
+                'pass' => $hasPassword,
+                'token' => null
+            ]);
+
+            return redirect()->to(base_url("/"));
+
+        }
+    }
+
+    public function verificar_token($id, $token) {
+        //
+       
+        //Model Usuario
+        $UsuariosModel = new UsuariosModel();
+
+        $usuario = $UsuariosModel->traer_usuario($id);
+        $tokenUsuarioBD = $usuario['token'];
+
+        if($tokenUsuarioBD == $token ) {
+            
+            $msg = [
+                [
+                    'msg' => 'El token fue verificado correctamente',
+                    'ok' => true,
+                ]
+            ];
+
+            return $this->respond($usuario, 200);
+
+        }else {
+            $msg = [
+                [
+                    'msg' => 'El token no es valido',
+                    'ok' => false,
+                ]
+            ];
+                return $this->fail(404);
+        }
+
+
 
     }
 
+   /* Fin - Metodos y pages - view (RECUPERAR CONTRASEÑA) */
+
 
     public function AutenticarUsuario(){
+        $usuarioModel = new UsuariosModel();
 
-        // Obtener el email y la contraseña del formulario de inicio de sesión
         $email = $this->request->getPost('email');
         $password = $this->request->getPost('password');
-    
-        // Crear instancias de los modelos de usuarios y correos electrónicos
+      
         $usuarioModel = new UsuariosModel();
         $emailModel = new EmailsModel();
-    
-        // Obtener el ID del usuario correspondiente al correo electrónico proporcionado
+
         $id_usuario = $emailModel->Id_Usuario_Email($email);
-    
-        // Verificar si se encontró un usuario correspondiente al correo electrónico proporcionado
+        
         if ($id_usuario) {
             
-            // Obtener información del usuario correspondiente al correo electrónico proporcionado
             $usuario = $usuarioModel->Auth_usuario($email);
-    
-            // Verificar si se encontró información del usuario y si su contraseña coincide con la proporcionada
+
             if ($usuario && isset($usuario['pass'])) {
                 
-                // Verificar si la contraseña proporcionada coincide con la almacenada en la base de datos
                 if (password_verify($password, $usuario['pass'])) {
-    
-                    // Iniciar sesión del usuario y establecer sus detalles de sesión
+
                     $session = session();
+                    
                     $session->set([
                         'id_usuario' => $id_usuario,
                         'usuario' => $usuario['usuario'],
                         'email' => $email,
                         'rol' => $usuario['id_rol'],
-                        'logged_in' => true // es una clave que se establece en los detalles de sesión del usuario cuando se autentica correctamente, y se utiliza para aplicar restricciones a ciertas páginas que sólo deben ser accesibles por usuarios autenticados.
+                        'logged_in' => true
                     ]);
-    
-                    // Redirigir al usuario según su rol
+
                     if ($usuario['id_rol'] === '1') {
                         return redirect()->to(base_url('/gestion_de_administradores'));
                     } elseif ($usuario['id_rol'] === '2') {
@@ -149,20 +208,18 @@ class Auth extends BaseController
                     } elseif ($usuario['id_rol'] === '4') {
                         return redirect()->to(base_url('/Principal'));
                     }
-    
+
                 } else{
-                    // Si la contraseña no coincide, mostrar un mensaje de error
                     echo "La contraseña no coincide con la almacenada en la base de datos.";
                     return;
                 }
             }       
         } else {
-            // Si no se encontró un usuario correspondiente al correo electrónico proporcionado, mostrar un mensaje de error
-            echo "El usuario no existe en la base de datos.";
+            echo "La contraseña no coincide con la almacenada en la base de datos.";
             return;
         }
     }
-
+    
 
     public function guardar(){   
 
@@ -179,11 +236,11 @@ class Auth extends BaseController
                     'apellido' => $this->request->getPost('apellido'),
                     'tipo_documento' => $this->request->getPost('tipo_documento'),
                     'num_documento' => $this->request->getPost('documento'),
-                    'pass' => $hashed_password
+                    'pass' => $hashed_password,
+                    
                 ]);
-
-                //Se utiliza para obtener el id_usuario del último registro insertado en la tabla usuarios
-                $id_usuario = $this -> usuario -> insertID(); 
+        
+                $id_usuario = $this -> usuario ->insertID(); 
     
                 $this -> usuario -> save([
                     'id_usuario' => $id_usuario,

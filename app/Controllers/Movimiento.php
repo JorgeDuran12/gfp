@@ -38,6 +38,7 @@ class Movimiento extends BaseController
     {
       // $Movimiento = $this-> Movimiento ->where('estado','A')->findAll();
       $Movimiento = $this-> Movimiento-> traer();
+      // $Movimiento = $this-> Movimiento-> nombreMovimiento();
       $tipo_movimiento = $this-> parametros ->obtener_encabezado_1();
       $clase_movimiento_Model = new ParamentrosModel();
       $clase_movimiento = $clase_movimiento_Model -> obtener_encabezado_2();
@@ -51,6 +52,7 @@ class Movimiento extends BaseController
         ],);
     }
     
+
     public function insertar()
     {
         if ($this->request->getMethod() == "post") {
@@ -64,7 +66,7 @@ class Movimiento extends BaseController
                     'clase_movimiento' => $this->request->getPost('clase_movimiento'),
                     'valor' => $this->request->getPost('valor'),
                     'fecha_movimiento' => $this->request->getPost('fecha_movimiento'),
-                    'usuario_crea' => $id_usuario
+                    'usuario_crea' => $id_usuario,
                 ]);
             } 
             return redirect()->to(base_url('/mis_movimientos'));

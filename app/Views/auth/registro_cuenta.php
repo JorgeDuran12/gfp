@@ -155,7 +155,7 @@
 
   const formulario = document.getElementById('formulario');
   const inputs = document.querySelectorAll('#formulario input');
-// <---------------condiciones para evaluacion----------------->
+
   const expresiones = {
 	usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
 	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
@@ -179,7 +179,7 @@ documento:false,
 }
 
 
-// <--------------------------evalluacion de campos----------------------->
+
 const validarfuncion = (e) =>{
   switch(e.target.name){
         case "usuario":
@@ -217,14 +217,12 @@ const validarfuncion = (e) =>{
     }
 }
 
-
-// <---------------------funcion ajax para consultar email--------------->
-
+// <-------funcion creada para verificar email------>
 function verificarEmail( e ) {
   const valorEmail = e.target.value;
    
 
-  if( valorEmail.includes('@')) {
+  if( valorEmail.includes('@')) { //condicion para evaluar desde el @
 
     $.ajax({
       url: "<?= base_url("auth/verificar_email")?>" + "/" + valorEmail,
@@ -290,6 +288,7 @@ const validarpass2 = () =>{
    
 }
 // <----------------------evaluacion de campos por clic y teclas---------------------->
+
 
 inputs.forEach( (input)=>{
   input.addEventListener('blur', validarfuncion);

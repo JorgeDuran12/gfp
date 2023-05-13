@@ -16,8 +16,8 @@
 
     <!-- Todos los estilos -->
     <link rel="stylesheet" href="<?= base_url('css/footer/footerStyles.css') ?>">
-    <link rel="stylesheet" href="<?= base_url("/css/usuarios/loginStyles7.css")?>">
-    <link rel="stylesheet" href="<?= base_url("/css/usuarios/registe.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/css/usuarios/loginStyles123.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/css/usuarios/register123456.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/layouts/authLayout1.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/usuarios/recuperarcontra1.css")?>">
     <!-- Sweetalert -->

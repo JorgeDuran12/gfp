@@ -23,7 +23,7 @@
                                   <img src="<?= base_url("icons/envelope-fill.svg")?>" class="login__form-icon"> 
 
                   </div>
-                <p class="formulario__input-error_email">El correo no esta asociada a ninguna cuenta activo </p>
+                <p class="formulario__input-error_email">El correo no esta asociada a ninguna cuenta activa </p>
             </div>
 
             <div class="login__input-container">
@@ -64,10 +64,9 @@
 // <--------------------------evalluacion de campos----------------------->
 const validarfuncion = (e) =>{
   switch(e.target.name){
-     
-        case "email":
-          // validarcampo(expresiones.email, e.target, 'email');
-          verificarEmail( e );}    
+                        case "email":
+                        verificarEmail( e );
+                      }    
 }
 
 
@@ -76,8 +75,8 @@ const validarfuncion = (e) =>{
 function verificarEmail( e ) {
   const valorEmail = e.target.value;
    
-console.log(e.target.value)
-  if( valorEmail.includes('@')) {
+// console.log(e.target.value)
+  if( valorEmail.includes('.')) {
           $.ajax({
                     url: "<?= base_url("auth/verificar_email")?>" + "/" + valorEmail,
                     type: "POST",
@@ -85,13 +84,10 @@ console.log(e.target.value)
                     success: ( data ) => {
                         //  console.log(data)
                         if( data !== null ) {
-
                           console.log('email correcto')
                           // campos['email']= false;
                           document.querySelector('#grupo__email .formulario__input-error_email').classList.remove('formulario__input-error_email-activo');
-                          document.getElementById('grupo__email').classList.remove('formulario__grupo-incorrecto');
-
-                          
+                          document.getElementById('grupo__email').classList.remove('formulario__grupo-incorrecto');                          
                         }else{
                            document.getElementById('grupo__email').classList.add('formulario__grupo-incorrecto');
                              document.querySelector('#grupo__email .formulario__input-error_email').classList.add('formulario__input-error_email-activo')
@@ -106,6 +102,21 @@ console.log(e.target.value)
      )
   }
 }
+
+// funtion validarcuenta =  (e)=> {
+//   if( ){
+//     $ajax({
+//       url: "<?= base_url("auth/AutenticarUsuario")?>",
+//       dataType: "JSON",
+//       success:(data)=>{
+//         if( data === 1 ){
+//           console.log('por aqui')
+//         }
+//       }
+//     })
+//   }  
+
+// }
 
   // <----------------------evaluacion de campos por clic y teclas---------------------->
 
