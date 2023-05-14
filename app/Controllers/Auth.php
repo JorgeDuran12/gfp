@@ -134,7 +134,6 @@ class Auth extends BaseController
     }
 
     public function verificar_token($id, $token) {
-        //
        
         //Model Usuario
         $UsuariosModel = new UsuariosModel();
@@ -171,7 +170,6 @@ class Auth extends BaseController
 
 
     public function AutenticarUsuario(){
-        $usuarioModel = new UsuariosModel();
 
         $email = $this->request->getPost('email');
         $password = $this->request->getPost('password');
@@ -210,71 +208,66 @@ class Auth extends BaseController
                     }
 
                 } else{
-                    echo "La contraseña no coincide con la almacenada en la base de datos.";
-                    return;
+                    return redirect()->to(base_url("/"))->with('mensaje', '2' );
                 }
             }       
         } else {
-            echo "La contraseña no coincide con la almacenada en la base de datos.";
-            return;
+            return redirect()->to(base_url("/"))->with('mensaje', '3' );
         }
     }
     
 
     public function guardar(){   
 
-        $usuarioModel = new UsuariosModel();
-
         if ($this->request->getMethod() == "post" ) {
 
-                $password = $this->request->getPost('pass1');
-                $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-                
-                $this->usuario->save([    
-                    'usuario' => $this->request->getPost('usuario'),
-                    'nombre' => $this->request->getPost('nombre'),
-                    'apellido' => $this->request->getPost('apellido'),
-                    'tipo_documento' => $this->request->getPost('tipo_documento'),
-                    'num_documento' => $this->request->getPost('documento'),
-                    'pass' => $hashed_password,
-                    
-                ]);
-        
-                $id_usuario = $this -> usuario ->insertID(); 
-    
-                $this -> usuario -> save([
-                    'id_usuario' => $id_usuario,
-                    'usuario_crea'=> $id_usuario
-                ]);
-    
-                $this -> email -> save([
-                    'id_usuario' => $id_usuario,
-                    'usuario_crea'=> $id_usuario,
-                    'prioridad' => 13,
-                    'email' => $this -> request ->getPost('email')
-                ]);
-    
-                $this -> telefono -> save( [
-                    'id_usuario' => $id_usuario,
-                    'usuario_crea'=> $id_usuario,
-                    'prioridad' => 13,
-                    'numero' => $this -> request ->getPost('telefono')
-                ]);
-    
-                $session = session();
-                $session->set([ 
-                    'usuario' => $this->request->getPost('usuario'),
-                    'nombre' => $this->request->getPost('nombre'),
-                    'apellido' => $this->request->getPost('apellido'),
-                    'tipo_documento' => $this->request->getPost('tipo_documento'),
-                    'documento' => $this->request->getPost('num_documento'),
-                    'emails' => $this -> request ->getPost('email'),
-                    'telefonos' => $this -> request ->getPost('telefono'),
-                    'logged_in' => true
-                ]);
-                return redirect()->to('/Principal'); 
+            $password = $this->request->getPost('pass');
+            $hashed_password = password_hash($password, PASSWORD_DEFAULT);
             
-         
+            $this->usuario->save([    
+                'usuario' => $this->request->getPost('usuario'),
+                'nombre' => $this->request->getPost('nombre'),
+                'apellido' => $this->request->getPost('apellido'),
+                'tipo_documento' => $this->request->getPost('tipo_documento'),
+                'num_documento' => $this->request->getPost('documento'),
+                'pass' => $hashed_password,
+                
+            ]);
+    
+            $id_usuario = $this -> usuario ->insertID(); 
+
+            $this -> usuario -> save([
+                'id_usuario' => $id_usuario,
+                'usuario_crea'=> $id_usuario
+            ]);
+
+            $this -> email -> save([
+                'id_usuario' => $id_usuario,
+                'usuario_crea'=> $id_usuario,
+                'prioridad' => 13,
+                'email' => $this -> request ->getPost('email')
+            ]);
+
+            $this -> telefono -> save( [
+                'id_usuario' => $id_usuario,
+                'usuario_crea'=> $id_usuario,
+                'prioridad' => 13,
+                'numero' => $this -> request ->getPost('telefono')
+            ]);
+
+            $session = session();
+            $session->set([ 
+                'usuario' => $this->request->getPost('usuario'),
+                'nombre' => $this->request->getPost('nombre'),
+                'apellido' => $this->request->getPost('apellido'),
+                'tipo_documento' => $this->request->getPost('tipo_documento'),
+                'documento' => $this->request->getPost('num_documento'),
+                'emails' => $this -> request ->getPost('email'),
+                'telefonos' => $this -> request ->getPost('telefono'),
+                'logged_in' => true
+            ]);
+
+            return redirect()->to('/Principal'); 
         }
     }
 
@@ -284,16 +277,18 @@ class Auth extends BaseController
         return json_encode($resp, true);
 
     }
-
-    public function logout() {
-        $session = session();
-        $session->destroy();
-       
-        return redirect()->to(base_url('/'));
-    }
-
+    
 
     public function recuperar_contraseña_by_email($email) {
         echo 'recuperando...';
     }
+
+    //Cerrar session destruyendo la informacion alojada en la web
+    public function logout() {
+        $session = session();
+        $session->destroy();
+        
+        return redirect()->to(base_url('/'));
+    }
+
 }   
