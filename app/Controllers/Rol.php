@@ -21,4 +21,39 @@ class Rol extends BaseController
 
         echo view("gestion/roles/rol", $datos);
     }
+
+    public function insertar()
+    {
+        $tp=$this->request->getPost('tp');
+        if ($this->request->getMethod() == "post") {	
+
+            $session = session(); 
+            $id_usuario = $session->get('id_usuario');
+
+            if ($tp == 1) {
+                $this->rol->save([
+                    'descripcion' => $this->request->getPost('descripcion'),
+                    'nombre' => $this->request->getPost('nombre'),
+                    'usuario_crea' => $id_usuario
+                ]);
+            } else {
+         $this->rol->update($this->request->getPost('id_rol'),[                    
+                'descripcion' => $this->request->getPost('descripcion'),
+                'nombre' => $this->request->getPost('nombre')  
+                
+         ]);
+             }
+            return redirect()->to(base_url('/rol'));
+        }
+    }
+      //<---------------------------------buscar_rol del model traer_rol -------------------------------------->
+      public function buscar_rol($id)
+      {
+          $returnData = array();
+          $rol_ = $this->rol->traer_rol($id, 'A');
+          if (!empty($rol_)) {
+              array_push($returnData, $rol_);    
+          }
+          echo json_encode($returnData);
+      }
 }

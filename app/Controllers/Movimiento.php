@@ -10,26 +10,28 @@ use Dompdf\Dompdf;
 
 class Movimiento extends BaseController
 
- {   
-  
-  // public function demoPDF(){
-//   $dompdf = new Dompdf();
-//   $dompdf->loadHTML('Movimiento');
-//   $dompdf->setPaper('A4','portrait');
-//   $dompdf->render();
-//   $dompdf->stream();
-// }
+ {    
+  public function demoPdf()
+  {
+      $dompdf = new Dompdf();
+      $html="<h1> Pdf Example</h1>";
+      $dompdf->loadHtml($html);
+      $dompdf->setPaper('A4', 'landscape');
+      $dompdf->render();
+      $dompdf->stream();
+  }
+
 
 
   protected $Movimiento;
   protected $parametros;
 
-  
+
 
 
     public function __construct()
     {
-       
+      
       $this->Movimiento = new MovimientoModel();
       $this->parametros = new ParamentrosModel();
     }

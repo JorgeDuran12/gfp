@@ -129,8 +129,8 @@
                                         <tr>
                                             <td><?php echo $dato ['valor'];?></td>
                                             <td><?php echo $dato ['fecha_movimiento'];?></td>
-                                            <td><?php echo $dato ['clase_movimiento'];?></td>
-                                            <td><?php echo $dato ['tipo_movimiento'];?></td>
+                                            <td><?php echo $dato ['Tnombre2'];?></td>
+                                            <td><?php echo $dato ['Tnombre'];?></td>
                                             <td><?php echo $dato ['descripcion'];?></td>
                                             </tr>
                                             <?php } ?>

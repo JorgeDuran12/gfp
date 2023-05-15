@@ -116,11 +116,11 @@ class Usuario extends BaseController
       public function buscar_usuario($id_usuario)
       {
           $returnData = array();
-          $usuario_ = $this->usuario->DataActualizar($id_usuario, $estado);
+          $usuario_ = $this->usuario->DataActualizar($id_usuario, 'A');
           if (!empty($usuario_)) {
               array_push($returnData, $usuario_);    
           }
           echo json_encode($returnData);
       }
-
 }
+ 

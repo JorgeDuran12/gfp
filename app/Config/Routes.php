@@ -21,6 +21,8 @@ $routes->set404Override();
 // Set `$autoRoutesImproved` to true in `app/Config/Feature.php` and set the following to true.
  $routes->setAutoRoute(true);
 
+
+
 /*
  * --------------------------------------------------------------------
  * Route Definitions
@@ -53,7 +55,9 @@ $routes->get('gestion_de_administradores', 'Usuario::index');
 
 // rutas de peticion
 $routes->post('buscar_usuario/(:num)','Usuario::buscar_usuario/$1');
-$routes->get('eliminados_usuario', 'Usuario::eliminados');
+$routes->post('buscar_rol/(:num)','Rol::buscar_rol/$1');
+// $routes->get('buscar_telefonos/(:num)', 'Usuario::buscar_telefono/$1');
+$routes->post('eliminados_usuario', 'Usuario::eliminados');
 $routes->get('eliminar__usuario', 'Usuario::eliminar__usuario');
 
 
@@ -65,7 +69,7 @@ $routes->get('CrearCuenta', 'Auth::registroPagina');
 $routes->post('Registrar', 'Auth::guardar');
 
 /* Ruta para la descarga del pdf de Movimiento */
-
+  $routes->get('generate-pdf', 'Movimiento::demoPdf');
 
 
 /*

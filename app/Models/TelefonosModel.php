@@ -28,13 +28,13 @@ class TelefonosModel extends Model{
  // <-------------funcion traer_usuario que sera usada en controlador por la funcion  buscar_usuario----------------------->
 
  
-//  public function traer_usuario($id){
-//     $this->select('usuarios.*');
-//     $this->where('estado','A');
-//     $this->where('id_usuario',$id);
-//     $datos = $this->first();  
-//     return $datos;
-// }
+ public function traer_usuario($id){
+    $this->select('telefonos.*');
+    $this->where('estado','A');
+    $this->where('id_usuario',$id);
+    $datos = $this->first();  
+    return $datos;
+}
 
     // <-----------------------------------funcion eliminar en vista principal----------------------------------->
 
@@ -49,5 +49,7 @@ class TelefonosModel extends Model{
 //      $datos = $this->findall();  //nos trae todos los registros que cumplan con una condicion dada 
 //       return $datos;
 //    }
+
+
  
 }

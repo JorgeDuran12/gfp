@@ -30,10 +30,13 @@ class Saquito extends BaseController
   
     public function Insertar(){
 
+        $tp=$this->request->getPost('tp');
+
         if ($this->request->getMethod() == "post" ) {
 
             $session = session();
             $id_usuario = $session->get('id_usuario');
+            if($tp == 1){
 
             $this->saquito->save([    
                 'descripcion' => $this->request->getPost('descripcion'),
@@ -43,9 +46,32 @@ class Saquito extends BaseController
                 'cuota' => $this->request->getPost('cuota'),
                 'usuario_crea' => $id_usuario
             ]);
+
             
+        } else {
+            $this->saquito->update($this->request->getPost('id')[
+                'descripcion' => $this->request->getPost('descripcion'),
+                'fecha_inicial' => $this->request->getPost('fecha_inicial'),
+                'valor' => $this->request->getPost('valor'),
+                'numero_cuota' => $this->request->getPost('numero_cuota'),
+                'cuota' => $this->request->getPost('cuota'),
+                'usuario_crea' => $id_usuario
+
+
+            ]);
         }
             return redirect()->to(base_url('/mi_saquito'));
             
         }
+    }
+    public function buscar_Registro($id){
+        $returnData = array();
+        $saquito_ = $this->saquito->traer_saquitos($id);
+        if (!empty($saquito_)) {
+            array_push($returnData, $saquito_);
+        }
+        echo json_encode($returnData);
+
+    }
+
 }

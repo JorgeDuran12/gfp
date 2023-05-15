@@ -73,7 +73,4 @@ class ParamentrosModel extends Model{
         return $datos;
     }
 
-
-
-
 }

@@ -29,6 +29,7 @@
                             <th colspan="2">Acciones</th>
                         </tr>
                     </thead>
+                    
                     <?php foreach ($roles as $dato){ ?>
                           <tr>
                             <td> <?php echo $dato['id_rol']; ?></td>
@@ -36,10 +37,10 @@
                             <td> <?php echo $dato['descripcion']; ?></td>
                             <td>  <?php if($dato['estado']=="A"){echo "Activo";}else{echo "Eliminado";}?></td>
                             <td>      
-                                    <a  class="btn btn-warning"  href="#" onclick="seleccionarol(<?php echo $dato['id_rol'] . ',' . 2 ?>);" data-bs-toggle="modal" data-bs-target="#agregar_rol"  width="16" height="16" title="Editar Registro">
+                            <a  class="btn btn-warning"  href="#" onclick="seleccionarol(<?php echo $dato['id_rol'] . ',' . 2 ?>);" data-bs-toggle="modal" data-bs-target="#agregar_rol"  width="16" height="16" title="Editar Registro">
                                        <img  class="image" src="<?= base_url("img/editar.png") ?> " title="Editar" >
                                     </a>     
-                                 
+                                  
                                     <button data-bs-toggle="modal" data-bs-target="#eliminaremergenModal" type="button" class="btn btn-danger">
                                         <img  class="image" src="<?= base_url("img/Eliminar.png") ?> " title="Eliminar" >
                                     </button>
@@ -72,11 +73,11 @@
 
             <label class="input_label" for="email_field">descripcion</label>
 
-            <textarea class="dc" placeholder="Descripcion" id="floatingTextarea"></textarea>
+            <textarea class="dc" placeholder="Descripcion" name="descripcion" id="descripcion"></textarea>
  
     
     <input hidden id="tp" name ="tp" >
-    <input hidden id="id_rol" name ="id_rol">
+    <input hidden id="id_rol " name ="id_rol ">
 
   </div>
   <div class="modal-footer">
@@ -98,6 +99,41 @@
 <!-- <---------------------div de header y footer-------------------> 
 </div>
 <script>
+$('#modal-confirma').on('show.bs.modal', function(e) {                                      
+        $(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));           
+    });                                                                                  
+$('.close').click(function() {$("#modal-confirma").modal("hide");});
+
+
+ 
+  function seleccionarol(id, tp) {
+    if (tp == 2) {
+      dataURL = "<?php echo base_url('buscar_rol'); ?>" + "/" + id;
+      $.ajax({
+         type: "POST",
+         url: dataURL,
+         dataType: "json",
+         success: function(rs) {
+           document.getElementById('exampleModalLabel');           
+           $("#tp").val(2);
+           $("#id_rol").val(id);
+           $("#descripcion").val(rs[0]['descripcion']);
+           $("#nombre").val(rs[0]['nombre']);
+           $("#btn_guardar").text('Actualizar');
+           
+         
+         }
+         
+      });
+     }else{$("#tp").val(1);
+       document.getElementById('exampleModalLabel');
+       $("#descripcion").val('');
+        $("#nombre").val('');
+        $("#btn_guardar").text('Guardar');
+        
+     }
+    
+   }
 
 
 </script>

@@ -13,7 +13,7 @@ class RolModel extends Model{
     protected $returnType     = 'array';  /* forma en que se retornan los datos */
     protected $useSoftDeletes = false; /* si hay eliminacion fisica de registro */
 
-    protected $allowedFields = ['nombre','id_usuario_crea','fecha_crea','estado','descripcion']; /* relacion de campos de la tabla */
+    protected $allowedFields = ['nombre','usuario_crea','fecha_crea','estado','descripcion']; /* relacion de campos de la tabla */
 
     protected $useTimestamps = true; /*tipo de tiempo a utilizar */
     protected $createdField  = 'fecha_crea'; /*fecha automatica para la creacion */
@@ -28,12 +28,15 @@ class RolModel extends Model{
  // <-------------funcion traer_cargo que sera usada en controlador por la funcion  buscar cargo----------------------->
 
  
- public function traer_rol($clave , $valor){
+ public function traer_rol($id){
     $this->select('roles.*');
-    $this->where($clave, $valor);
+    $this->where('estado','A');
+    $this->where('id_rol',$id);
     $datos = $this->first();  
     return $datos;
 }
+
+
 
     // <-----------------------------------funcion eliminar en vista principal----------------------------------->
 

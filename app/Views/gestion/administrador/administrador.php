@@ -10,7 +10,7 @@
  
     <div class="op">
       
-    <a href="#" onclick="seleccionausuario(<?php echo 1 . ',' . 1 ?>);" class="btn btn-success regresar_Btn" data-bs-toggle="modal" data-bs-target="#agregar-usuario">Crear nuevo usario</a>
+    <a href="#" onclick="seleccionausuario(<?php echo 1 . ',' . 1 ?>);" class="btn btn-success regresar_Btn" data-bs-toggle="modal" data-bs-target="#agregar_usuario">Crear nuevo usario</a>
     &nbsp <a href="<?php echo base_url('eliminados_usuario'); ?>"  class="btn btn-secondary regresar_Btn">Eliminados</a>
 
         &nbsp<a href="<?php echo base_url('/principal'); ?>" class="btn btn-primary regresar_Btn">Regresar</a>
@@ -63,7 +63,7 @@
 
         <div class="modal-content">
       <div class="modal-header">            
-        <h5 class="modal-title">Crear usuario</h5>
+        <h5 class="modal-title" id="exampleModalLabel"></h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -216,7 +216,7 @@ $('.close').click(function() {$("#modal-confirma").modal("hide");});
          url: dataURL,
          dataType: "json",
          success: function(rs) {
-           document.getElementById('exampleModalLabel');           
+           document.getElementById('exampleModalLabel').innerText = "Actualizar usuario";           
            $("#tp").val(2);
            $("#id_usuario").val(id);
            $("#usuario").val(rs[0]['usuario']);
@@ -224,8 +224,8 @@ $('.close').click(function() {$("#modal-confirma").modal("hide");});
            $("#apellido").val(rs[0]['apellido']);
            $("#tipo_documento").val(rs[0]['tipo_documento']);
            $("#num_documento").val(rs[0]['num_documento']);
-           $("#email").val(rs[0]['id_emails']);
-           $("#telefono").val(rs[0]['id_telefono']);
+           $("#email").val(rs[0]['email']);
+           $("#telefono").val(rs[0]['telefono']);
            $("#id_rol").val(rs[0]['id_rol']);
            $("#pass").val(rs[0]['pass']);
            $("#btn_guardar").text('Actualizar');
@@ -234,7 +234,7 @@ $('.close').click(function() {$("#modal-confirma").modal("hide");});
          
       });
      }else{$("#tp").val(1);
-       document.getElementById('exampleModalLabel');
+       document.getElementById('exampleModalLabel').innerText = "Crear usuario";
        $("#usuario").val('');
         $("#nombre").val('');
         $("#apellido").val('');
