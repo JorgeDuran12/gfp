@@ -161,12 +161,10 @@ class Auth extends BaseController
             ];
                 return $this->fail(404);
         }
-
-
-
     }
 
    /* Fin - Metodos y pages - view (RECUPERAR CONTRASEÑA) */
+
 
     public function AutenticarUsuario(){
 

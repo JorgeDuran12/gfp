@@ -144,13 +144,66 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class=" btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-                <button type="Submit" class="btn btn-primary">Descargar</button>
+                <button type="Submit" id="pdfout" class="btn btn-primary">Descargar</button>
             </div>
         </div>
     </div>
     </div>
 </div>
 </div>
+ <!-- gnerador de pdf -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.debug.js"></script>
+
+
+
+<script>
+
+
+         //    solicitar los datos de la tabla
+        contenedor = document.getElementById('contenedor'),pdfout = document.getElementById('pdfout');
+     
+    //    generador de pdf
+    pdfout.onclick =  function (){
+    
+        const doc =  new jsPDF('p','pt','letter');
+        const margin = 20;
+        const scale = (doc.internal.pageSize.width - margin * 2 ) / document.body.clientWidth;
+        const scale_mobile = (doc.internal.pageSize.width - margin * 2 ) / document.body.getBoundingClientRect();
+ 
+         // checkin
+         if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+            //mobile
+            doc.html(contenedor,{
+                x:margin,
+                y:margin,
+                html2canvas:{
+                    scale:scale_mobile,
+                },
+                callback: function(doc){
+                      doc.uotput
+                      ('dataurlnewwindow',{filname:'pdf.pdf'}); 
+                }
+                
+            });
+         }else{
+            //pc 
+            doc.html(contenedor,{
+                x:margin,
+                y:margin,
+                html2canvas:{
+                    scale:scale,
+                },
+                callback: function(doc){
+                      doc.uotput
+                      ('dataurlnewwindow',{filname:'pdf.pdf'}); 
+                }
+                
+            });
+
+         }
+
+    };
+</script>
 
 
 

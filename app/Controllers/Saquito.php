@@ -36,8 +36,8 @@ class Saquito extends BaseController
 
             $session = session();
             $id_usuario = $session->get('id_usuario');
-            if($tp == 1){
 
+            if($tp == 1){
             $this->saquito->save([    
                 'descripcion' => $this->request->getPost('descripcion'),
                 'fecha_inicial' => $this->request->getPost('fecha_inicial'),
@@ -49,24 +49,23 @@ class Saquito extends BaseController
 
             
         } else {
-            $this->saquito->update($this->request->getPost('id')[
+            $this->saquito->update($this->request->getPost('id_saquito'),[
                 'descripcion' => $this->request->getPost('descripcion'),
                 'fecha_inicial' => $this->request->getPost('fecha_inicial'),
                 'valor' => $this->request->getPost('valor'),
                 'numero_cuota' => $this->request->getPost('numero_cuota'),
                 'cuota' => $this->request->getPost('cuota'),
                 'usuario_crea' => $id_usuario
-
-
             ]);
         }
             return redirect()->to(base_url('/mi_saquito'));
             
         }
     }
-    public function buscar_Registro($id){
+    
+    public function buscar_Registro($id_saquito){
         $returnData = array();
-        $saquito_ = $this->saquito->traer_saquitos($id);
+        $saquito_ = $this->saquito->traer_saquitos($id_saquito, 'A');
         if (!empty($saquito_)) {
             array_push($returnData, $saquito_);
         }

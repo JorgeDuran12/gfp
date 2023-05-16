@@ -6,7 +6,7 @@ use CodeIgniter\Model;
 
 class RolModel extends Model{
     protected $table      = 'roles'; /* nombre de la tabla modelada/*/
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'id_rol';
 
     protected $useAutoIncrement = true; /* Si la llave primaria se genera con autoincremento*/
 

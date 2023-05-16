@@ -25,13 +25,15 @@ class SaquitoModel extends Model{
     protected $skipValidation    = false;
   
    
-     
-        public function traer_saquitos($id){
+        public function traer_saquitos($id, $estado){
+
             $this->select('saquitos.*');
-            $this->where('id', $id);
+            $this->where('id_saquito', $id);
+            $this->where('estado', $estado);
             $datos = $this->first();  // nos trae el registro que cumpla con una condicion dada 
             return $datos;
         }
+
         public function traer(){
 
             $session = session();

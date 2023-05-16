@@ -37,9 +37,10 @@ class Rol extends BaseController
                     'usuario_crea' => $id_usuario
                 ]);
             } else {
-         $this->rol->update($this->request->getPost('id_rol'),[                    
+             $this->rol->update($this->request->getPost('id'),[                    
+                 'nombre' => $this->request->getPost('nombre'),
                 'descripcion' => $this->request->getPost('descripcion'),
-                'nombre' => $this->request->getPost('nombre')  
+                'usuario_crea' => $id_usuario
                 
          ]);
              }

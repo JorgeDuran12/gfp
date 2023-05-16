@@ -27,9 +27,10 @@ class UsuariosModel extends Model{
  // <-------------funcion traer_usuario que sera usada en controlador por la funcion  buscar_usuario----------------------->
  
  public function traer_usuario($id){
-    $this->select('usuarios.*');
-    $this->where('estado','A');
-    $this->where('id_usuario',$id);
+    $this->select('usuarios.*, roles.nombre as rol_nombre');
+    $this->join('roles', 'roles.id_rol = usuarios.id_rol');
+    $this->where('usuarios.estado','A');
+    $this->where('usuarios.id_usuario',$id);
     $datos = $this->first();  
     return $datos;
 }

@@ -11,15 +11,6 @@ use Dompdf\Dompdf;
 class Movimiento extends BaseController
 
  {    
-  public function demoPdf()
-  {
-      $dompdf = new Dompdf();
-      $html="<h1> Pdf Example</h1>";
-      $dompdf->loadHtml($html);
-      $dompdf->setPaper('A4', 'landscape');
-      $dompdf->render();
-      $dompdf->stream();
-  }
 
 
 
@@ -53,6 +44,9 @@ class Movimiento extends BaseController
             
         ],);
     }
+
+
+     
     
 
     public function insertar()

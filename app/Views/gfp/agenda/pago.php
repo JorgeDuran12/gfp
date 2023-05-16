@@ -23,11 +23,8 @@
           <div class="modal-body">
             <!-- Formulario -->
             <form class="d-flex flex-column" id="datosFormulario" action="<?= base_url("insertar_evento")?>" method="POST" onsubmit="return validateForm()">
-              <div class="mb-3" style="">
-                <label for="id" class="form-label">ID: </label>
-                <input type="text"
+                <input type="text" hidden
                   class="form-control"  name="id" id="id" aria-describedby="helpId" placeholder="Ej: 2">
-              </div>
               
               <div class="mb-3">
                 <label for="titulo" class="form-label">Titulo: </label>

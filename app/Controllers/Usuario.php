@@ -111,7 +111,7 @@ class Usuario extends BaseController
     }
 
 
-
+ 
       // <---------------------------------buscar_usuario del model traer_usuario -------------------------------------->
       public function buscar_usuario($id_usuario)
       {

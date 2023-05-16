@@ -8,10 +8,10 @@
   </a>
   <!-- <div class="navbar__separator"></div> -->
   <ul>
-    <div class="navbar__icons link__last">
-      <li class="icon-image"><a href="<?= base_url('principal')?>"><img src="<?= base_url("icons/perfil.png")?>"/></a></li>
+    <div class="navbar__icons link__last flex flex-column">
+      <li class="icon-image"><a href="<?= base_url('mi_perfil')?>"><img src="<?= base_url("icons/perfil.png")?>"/></a></li>
       <span class="icon-name">Ver mi perfil</span>
-      <h6>ADMIN</h6>
+      <h6 class="mt-2 fw-bold">ADMIN</h6>
     </div>
 
     <!-- <div class="navbar__separator"></div> -->

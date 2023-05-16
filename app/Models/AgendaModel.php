@@ -13,7 +13,7 @@ class AgendaModel extends Model{
     // protected $returnType     = 'array';  /* forma en que se retornan los datos */
     // protected $useSoftDeletes = false; /* si hay eliminacion fisica de registro */
 
-    protected $allowedFields = ['descripcion', 'title', 'color', 'start', 'end']; /* relacion de campos de la tabla */
+    protected $allowedFields = ['descripcion', 'title', 'color', 'start', 'end', 'id_usuario']; /* relacion de campos de la tabla */
 
     // protected $useTimestamps = true; /*tipo de tiempo a utilizar */
     // protected $dateFormat    = 'datetime'; /* Tipo fecha */
@@ -27,8 +27,9 @@ class AgendaModel extends Model{
 
 
 
-    public function traer_todos_los_eventos(){
+    public function traer_todos_los_eventos_por_usuario($idUsuario){
         $this->select('agenda.*');
+        $this->where('id_usuario', $idUsuario);
         $datos = $this->find();
         return $datos;
     }

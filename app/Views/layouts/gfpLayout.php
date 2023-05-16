@@ -5,14 +5,14 @@
     <meta name="author" content="Santiago Guerrero, Daniel Banquet, Jorge Duran, Maria Jose, Carlos de las salas">
     <meta name="description" content="Sin descripcion por ahora...">
     <!-- Estilos Bootstrap -->
-    <link rel="stylesheet" href="<?= base_url('bootstrap/bootstrap.min.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('bootstrap/bootstrap.min2.css') ?>">
     <link rel="stylesheet" href="<?= base_url('bootstrap/bootstrap-icons.css') ?>">
 
     <!-- Scripts Bootstrap -->
     <script src="<?= base_url('bootstrap/bootstrap.min.js') ?>"></script>
     <script src="<?= base_url('bootstrap/popper.min.js') ?>"></script>
     <script src="<?= base_url('bootstrap/bootstrap.bundle.min.js') ?>"></script>
-    <script src="<?= base_url('js/jquery-3.6.0.js') ?>"></script>
+    <script src="<?= base_url('../js/jquery-3.6.0.js') ?>"></script>
 
     <!-- Scripts ChartJs -->
     
@@ -26,18 +26,19 @@
     <link rel="stylesheet" href="<?= base_url('css/navbar/navStyless.css') ?>">
     <link rel="stylesheet" href="<?= base_url('css/pagina/paginaStyle.css') ?>">
     <link rel="stylesheet" href="<?= base_url('css/footer/footerStyles.css') ?>">
-    <link rel="stylesheet" href="<?= base_url('css/principal/principalStyles.css') ?>">
+    <link rel="stylesheet" href="<?= base_url("/css/usuarios/recuperarcontra2.css")?>">
+    <link rel="stylesheet" href="<?= base_url('css/principal/prrincipalStyles.css') ?>">
     <link rel="stylesheet" href="<?= base_url("/css/agenda/pagoStylees.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/actividades/actividad.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/saquito/saquito4321.css")?>">
-    <link rel="stylesheet" href="<?= base_url("/css/registro/movimiento5.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/css/registro/movimiento6.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/agenda/pagoStyles.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/fullCalendar/fullCalendar.css")?>">
-    <link rel="stylesheet" href="<?= base_url("/css/123/123456.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/css/123/1234567.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/123/9876541.css")?>">
-    <link rel="stylesheet" href="<?= base_url("/css/usuarios/recuperarcontra1.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/css/perfil/perfilStyles.css")?>">
 
-    <!-- <link rel="stylesheet" href="<?= base_url("/layouts/gfpLayout.css")?>"> -->
+    <link rel="stylesheet" href="<?= base_url("/css/layouts/gfpLayout.css")?>">
 
 
     <!-- Full calendar JS-->
@@ -47,7 +48,11 @@
 
     <!-- Sweealert -->
     <script src="<?= base_url("sweetalert/sweetalert2@11.js")?>"></script>
-
+    <!-- gnerador de pdf -->
+   
+    
+    <!-- Progress Bar -->
+    <script src="<?= base_url("progressBar/progressbar.min.js")?>"></script>
 
 </head>
 <body class="body__container">
@@ -62,7 +67,7 @@
                 
             </header> -->
             
-            <div class="principal__container">
+            <div class="contenido__container">
                 <?= $this->renderSection('contenido') ?>          
             </div>   
         </div>

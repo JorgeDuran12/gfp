@@ -17,7 +17,10 @@ class Agenda extends BaseController
         
     public function index()
     {
-        $datosEventos = $this->agenda->traer_todos_los_eventos();
+        $session = session();
+        $idUsuarioglobal = $session->id_usuario;
+
+        $datosEventos = $this->agenda->traer_todos_los_eventos_por_usuario($idUsuarioglobal);
         $session = session();
 
         echo view("gfp/agenda/pago", [
@@ -30,6 +33,10 @@ class Agenda extends BaseController
 
     /* Metodos */ 
     public function insertar() {
+
+        $session = session();
+        $idUsuarioglobal = $session->id_usuario;
+
         echo $id = $this->request->getPost('id');
         echo $titulo = $this->request->getPost('titulo');
         echo $descripcion = $this->request->getPost('descripcion');
@@ -44,7 +51,8 @@ class Agenda extends BaseController
                 'descripcion' => $descripcion,
                 'start' => $fechaInicial,
                 'end' => $fechaFinal,
-                'color' => $color
+                'color' => $color,
+                'id_usuario' => $idUsuarioglobal
             ]);
             
             return redirect()->to(base_url("Agenda"))->with('mensaje', '5' );
@@ -56,7 +64,8 @@ class Agenda extends BaseController
                 'descripcion' => $descripcion,
                 'start' => $fechaInicial,
                 'end' => $fechaFinal,
-                'color' => $color
+                'color' => $color,
+                'id_usuario' => $idUsuarioglobal
             ]);
 
             return redirect()->to(base_url("Agenda"))->with('mensaje', '6');

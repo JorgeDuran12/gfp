@@ -34,8 +34,14 @@ $routes->set404Override();
 
 /*  Routas Principales (Links)*/
 
+/* Ruta de perfil actual */
+$routes->get('mi_perfil', 'Perfil::index');
+
+
 $routes->get('/', 'Auth::index');
+/* Rutas principal */
 $routes->get('Principal', 'Principal::index');
+$routes->post('agregar_presupuesto', 'Principal::agregar_presupuesto');
 
 
 /* Rutas Agenda */
@@ -56,7 +62,9 @@ $routes->get('gestion_de_administradores', 'Usuario::index');
 // rutas de peticion
 $routes->post('buscar_usuario/(:num)','Usuario::buscar_usuario/$1');
 $routes->post('buscar_rol/(:num)','Rol::buscar_rol/$1');
-// $routes->get('buscar_telefonos/(:num)', 'Usuario::buscar_telefono/$1');
+$routes->post('buscar_Registro/(:num)' , 'Saquito::buscar_Registro/$1');
+$routes->post('Insertar','Saquito::Insertar');
+
 $routes->post('eliminados_usuario', 'Usuario::eliminados');
 $routes->get('eliminar__usuario', 'Usuario::eliminar__usuario');
 
@@ -68,8 +76,9 @@ $routes->post('AutenticarUsuario','Auth::AutenticarUsuario');
 $routes->get('CrearCuenta', 'Auth::registroPagina');
 $routes->post('Registrar', 'Auth::guardar');
 
-/* Ruta para la descarga del pdf de Movimiento */
-  $routes->get('generate-pdf', 'Movimiento::demoPdf');
+
+  
+
 
 
 /*
