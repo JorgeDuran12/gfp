@@ -162,3 +162,8 @@
     text-decoration: none;
     color: #ededf2;
 }
+
+
+#mensaje_error{
+    display: none;
+}
