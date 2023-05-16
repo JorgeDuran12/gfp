@@ -58,7 +58,7 @@
 
 </div>
 
-<script>
+<!-- <script>
     $(document).ready(function() {
         $('#formulario').submit(function(event) {
             event.preventDefault();
@@ -67,7 +67,7 @@
             let password = $('#password').val();
 
             $.ajax({
-                url: "<?= base_url ('AutenticarUsuario');?>",
+                url: "<= base_url ('AutenticarUsuario');?>",
                 method: 'POST',
                 data: {
                     email: email,
@@ -97,7 +97,7 @@
         });
     });
 
-</script>
+</script> -->
 
 
 <?= $this->endSection("contenido")?>

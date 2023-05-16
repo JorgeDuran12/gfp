@@ -25,7 +25,7 @@
                             <th>Usuario</th>
                             <th>Nombre</th>
                             <th>Apellido</th>
-                            <th>Contraseña</th>
+                            <!-- <th>Contraseña</th> -->
                         
                             <th>estado</th>
                             <th colspan="2">Acciones</th>
@@ -37,7 +37,7 @@
                             <td> <?php echo $dato['usuario']; ?></td>
                             <td> <?php echo $dato['nombre']; ?></td>
                             <td> <?php echo $dato['apellido']; ?></td>
-                            <td> <?php echo $dato['pass']; ?></td>
+                            <!-- <td> <php echo $dato['pass']; ?></td> -->
                             <td>  <?php if($dato['estado']=="A"){echo "Activo";}else{echo "Eliminado";}?></td>
                             <td>      
                                     <a  class="btn btn-warning"  href="#" onclick="seleccionausuario(<?php echo $dato['id_usuario'] . ',' . 2 ?>);" data-bs-toggle="modal" data-bs-target="#agregar_usuario"  width="16" height="16" title="Editar Registro">

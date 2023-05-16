@@ -45,19 +45,20 @@ class UsuariosModel extends Model{
     // }
 
 
-    public function DataActualizar($id,$estado){
-
+    public function DataActualizar($id, $estado)
+    {
         $this->select('usuarios.*, emails.email as email, telefonos.numero as telefono');
         $this->join('telefonos', 'telefonos.id_usuario = usuarios.id_usuario');
-        $this->join('emails','emails.id_usuario = usuarios.id_usuario');
-        // $this->where('usuarios.id_usuario',$id);
-        $this->where('usuarios.estado','A');
-        $this->where('emails.estado','A');
-        $this->where('telefonos.estado','A');
-        $datos = $this->first();           
+        $this->join('emails', 'emails.id_usuario = usuarios.id_usuario');
+        $this->where('usuarios.id_usuario', $id);
+        $this->where('usuarios.estado', $estado);
+        $this->where('emails.estado', 'A');
+        $this->where('telefonos.estado', 'A');
+        $datos = $this->first();
+    
         return $datos;
-      }
-
+    }
+    
 
 
     // <-----------------------------------funcion eliminar en vista principal----------------------------------->
