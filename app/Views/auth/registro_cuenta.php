@@ -67,7 +67,7 @@
       </div>
         <!-- cuerpo de telefono -->
         <div class="formulario__grupo" id="grupo__telefono">
-        <label for="email" class="formulario__label">telefono</label>
+        <label for="email" class="formulario__label">Telefono</label>
         <div class="formulario__grupo-input">
           <input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="3222222" required>
 
@@ -79,7 +79,7 @@
 
 <!-- <---------------cuerpo de tipo de documento------------->
 <div class="formulario__grupo" id="grupo__tipo_documento">
-        <label for="email" class="formulario__label">tipo de documento</label>
+        <label for="email" class="formulario__label">Tipo de documento</label>
         <div class="formulario__grupo-input">
         <select class="formulario__input" name="tipo_documento" id="tipo_documento" aria-label="Default select example"
                 required>
@@ -122,7 +122,7 @@
       </div>
  <!-- cuerpo  de formulario contraseña -->
  <div class="formulario__grupo" id="grupo__pass2"> 
-        <label for="pass2" class="formulario__label">Repetir Contraseña</label>
+        <label for="pass2" class="formulario__label">Confirmar Contraseña</label>
         <div class="formulario__grupo-input">
           <input type="password" class="formulario__input" name="pass2" id="pass2" placeholder="contraseña" required>
 
@@ -132,7 +132,7 @@
        <p class="formulario__input-error">Las contraseñas deben ser igual </p>
       </div>
         <div class="btn_container">
-            <button type="submit" class="bnt_crear_cuenta">
+            <button type="submit" class="bnkl">
                 <span>Crear cuenta</span>
             </button>
             <div class="cuenta_register">

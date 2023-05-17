@@ -1,8 +1,6 @@
 <?= $this->extend("layouts/authLayout")?>
 <?= $this->section("contenido")?>
 
-<body class="authLayout__container">
-
     <div class="login__container">
         <div class="container__2">
 
@@ -43,8 +41,8 @@
                             ¿Has olvidado tu contraseña?
                         </a>
 
-                        <div class="contenedor">
-                            <button class="btn_login" type="submit">Entrar</button>
+                        <div class="contenedor__">
+                            <button class="btn_login__" type="submit">Entrar</button>
                         </div>
                     </div>
 
@@ -54,54 +52,12 @@
                         <a class="" href="<?php echo base_url('CrearCuenta'); ?>">Crear mi cuenta!</a>
 
                     </div>
+
                 </form>
+                
             </div>
         </div>
+</div>
 
-    </div>
-
-</body>
-
-<!-- <script>
-
-    $(document).ready(function() {
-        $('#formulario').submit(function(event) {
-            event.preventDefault();
-
-            let email = $('#email').val();
-            let password = $('#password').val();
-
-            $.ajax({
-                url: "<= base_url('AutenticarUsuario'); ?>",
-                type: 'POST',
-
-                data: {
-                    email: email,
-                    password: password
-                },
-                dataType: 'JSON',
-                success: function(response) {
-
-                    if (response.mensaje === '2') {
-
-                        $('#mensaje_error').text('El correo electronico o la contraseña son incorrectos');
-
-                    } else if (response.mensaje === '3') {
-
-                        $('#mensaje_error').text('El usuario no existe');
-
-                    }else {
-
-                        $('#mensaje-error').text('Inicio de sesion correcto');
-                    }
-                },
-                error: function() {
-                    alert("Error");
-                }
-            });
-        });
-    });
-
-</script> -->
 
 <?= $this->endSection("contenido")?>

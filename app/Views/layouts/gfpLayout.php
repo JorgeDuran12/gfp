@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="<?= base_url('css/general/globalStyless.css') ?>">
     <link rel="stylesheet" href="<?= base_url('css/navbar/navStyless.css') ?>">
     <link rel="stylesheet" href="<?= base_url('css/pagina/paginaStyle.css') ?>">
-    <link rel="stylesheet" href="<?= base_url('css/footer/footerStyles.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('css/footer/footerStyles2.css') ?>">
     <link rel="stylesheet" href="<?= base_url("/css/usuarios/recuperarcontra2.css")?>">
     <link rel="stylesheet" href="<?= base_url('css/principal/prrincipalStyles.css') ?>">
     <link rel="stylesheet" href="<?= base_url("/css/agenda/pagoStylees.css")?>">
