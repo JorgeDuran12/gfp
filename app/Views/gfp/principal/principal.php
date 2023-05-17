@@ -4,7 +4,9 @@
 
 <div class="principal__container">
   <span class="mt-4 fw-bold fs-3">Bienvenido 
-    <span class="text-info text-capitalize"><?=$misDatos->usuario; ?>,</span>
+    <span class="text-info text-capitalize"><?=$misDatos->usuario; ?>,
+  
+    </span>
     aqui tienes todas las estadisticas de tu cuenta.
   </span>
   

@@ -30,12 +30,12 @@
     <link rel="stylesheet" href="<?= base_url('css/principal/prrincipalStyles.css') ?>">
     <link rel="stylesheet" href="<?= base_url("/css/agenda/pagoStylees.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/actividades/actividad.css")?>">
-    <link rel="stylesheet" href="<?= base_url("/css/saquito/saquito4321.css")?>">
-    <link rel="stylesheet" href="<?= base_url("/css/registro/movimiento6.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/css/saquito/saquito1.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/css/registro/movimiento9.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/agenda/pagoStyles.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/fullCalendar/fullCalendar.css")?>">
-    <link rel="stylesheet" href="<?= base_url("/css/123/1234567.css")?>">
-    <link rel="stylesheet" href="<?= base_url("/css/123/9876541.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/css/123/emergencia3.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/css/123/987654.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/perfil/perfilStyles.css")?>">
 
     <link rel="stylesheet" href="<?= base_url("/css/layouts/gfpLayout.css")?>">

@@ -27,6 +27,17 @@ class TelefonosModel extends Model{
 
  // <-------------funcion traer_usuario que sera usada en controlador por la funcion  buscar_usuario----------------------->
 
+public function Perfiltelefono() {
+
+    $session = session();
+    $id_usuario = $session->get('id_usuario');
+
+    $this->select('telefonos.*');
+    $this->where('estado','A');
+    $this->where('id_usuario',$id_usuario);
+    $datos = $this->first();  
+    return $datos;
+}
  
  public function traer_usuario($id){
     $this->select('telefonos.*');

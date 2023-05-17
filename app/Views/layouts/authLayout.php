@@ -21,7 +21,18 @@
     <link rel="stylesheet" href="<?= base_url("/css/usuarios/register9.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/usuarios/recuperarcontra2.css")?>">
     <link rel="stylesheet" href="<?= base_url('css/footer/footerStyles2.css') ?>">
+
+
+    <!-- <---generadir de pdf con jspdf----------------> -->
+   <script src="<?php echo base_url(); ?>/jsPDF-1.3.2/dist/jspdf.debug.js"></script>
+   <script src="<?php echo base_url(); ?>/jsPDF-1.3.2/dist/jspdf.min.js"></script>
+
+
+
+   
+   
     
+
     <!-- Sweetalert -->
     <script src="<?= base_url("sweetalert/sweetalert2@11.js")?>"></script>
 

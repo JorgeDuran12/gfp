@@ -14,12 +14,12 @@
                     <li class="fw-bold fs-4">Nombres: <span class="fw-normal"><?= $DatosPerfil['nombre']?></span> </li>
                     <li class="fw-bold fs-4">Apellidos: <span class="fw-normal"><?= $DatosPerfil['apellido']?></span> </li>
                     <li class="fw-bold fs-4">Documento: <span class="fw-normal">
-                        <?= $DatosPerfil['tipo_documento']?>
+                        <?= $DatosPerfil['pf_tp']?>
                          - <?= $DatosPerfil['num_documento']?></span> 
                     </li>
                     <li class="fw-bold fs-4">Rol actual: <span class="fw-normal"><?= $DatosPerfil['rol_nombre']?></span> </li>
-                    <li>Emails : TODO: Relacion Email</li>
-                    <li>Telefonos : TODO: Relacion Telefonos</li>
+                    <li class="fw-bold fs-4">Emails: <span class="fw-normal"> <?= session() -> email ?> </span> </li>
+                    <li class="fw-bold fs-4">Telefonos: <span class="fw-normal"> <?= $dataTelefono['numero']?> </span> </li>
             </ul>
 
         </div>

@@ -105,7 +105,7 @@
             </div>
             <div class="modal-body">
 
-                <div id="contenedor">
+                <div id="contenedor_modal_Movimiento">
                     <div id="limite">
                         <div class="table-responsive">
                             <table class="table table-bordered table-sm table-striped" id="dataTable1" width="100%"

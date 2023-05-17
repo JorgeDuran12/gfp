@@ -1,3 +1,5 @@
+<script src="<?php echo base_url(); ?>/jsPDF-1.3.2/dist/jspdf.debug.js"></script>
+   <script src="<?php echo base_url(); ?>/jsPDF-1.3.2/dist/jspdf.min.js"></script>
 <?= $this->extend("layouts/gfpLayout")?>
 <?= $this->section("contenido")?>
 
@@ -13,7 +15,10 @@
     <a href="#" onclick="seleccionausuario(<?php echo 1 . ',' . 1 ?>);" class="btn btn-success regresar_Btn" data-bs-toggle="modal" data-bs-target="#agregar_usuario">Crear nuevo usario</a>
     &nbsp <a href="<?php echo base_url('eliminados_usuario'); ?>"  class="btn btn-secondary regresar_Btn">Eliminados</a>
 
-        &nbsp<a href="<?php echo base_url('/principal'); ?>" class="btn btn-primary regresar_Btn">Regresar</a>
+        &nbsp<a href="<?php echo base_url('/principal'); ?>" class="btn btn-primary regresar_Btn">Regresar</a> &nbsp
+
+        <a href="#" onclick="pdf()">pdf ahora </a>
+        
     </div>
     <div id="contenedor">
   <div id="limite">
@@ -246,10 +251,22 @@ $('.close').click(function() {$("#modal-confirma").modal("hide");});
         $("#pass").val('');
         $("#btn_guardar").text('Guardar');
         console.log("enviado");
-     }
-    
+     } 
+   }
+   
+   function pdf(){
+    alert('ya');
+    doc = new jsPDF('P','mm', 'letter');
+       doc.setFonSise(40);
+       doc.text( 40,20, "Octocat loves jsPDF");
+       doc.line(0, 80 - 60,100, 80-60)
+       doc.text(`Fuerza`, 10,40);
+       doc.text(`Magia`, 10,30);
+       doc.text(`velocidad`, 10,20);
+       doc.save(`autorizacion_"+".pdf`);
    }
 
+   
    
 </script>
 

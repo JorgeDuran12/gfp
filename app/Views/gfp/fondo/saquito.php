@@ -6,7 +6,7 @@
 </div><br>
 
 <div class="tabla">
-    <h1>Progreso de saquito</h1>
+    <h1 class="titu">Progreso de saquito</h1>
 
     <!--<div class="input-group mb-3 date ">
 
@@ -20,7 +20,7 @@
     <a href="#" onclick="selecionaRegistro(<?php echo 1 . ',' . 1 ?>);" class="btn btn-success regresar_Btn"
         data-bs-toggle="modal" data-bs-target="#editarModal">Agregar</a>
 
-    &nbsp <a href="<?php echo base_url(''); ?>" class="btn btn-secondary regresar_Btn">Eliminados</a>
+    <!--&nbsp <a href="<?php echo base_url(''); ?>" class="btn btn-secondary regresar_Btn">Eliminados</a>-->
 
    
 </div>
@@ -97,7 +97,7 @@
                 <h2 class="modal-title" id="exampleModalLabel">Agregar Registro</h2>
             </div>
 
-            <form class="form" method="POST" action="<?php echo base_url('Insertar') ?>  ">
+            <form id="formulario" class="form" method="POST" action="<?php echo base_url('Insertar') ?>  ">
                 <div class="modal-body">
 
                     <input hidden id="id_saquito" name="id_saquito">
@@ -119,7 +119,7 @@
                     </div>
 
                     <br>
-                    <div class="tma">
+                    <!-- <div class="tma">
                         <input type="number" class="form-control" name="valor" id="valor"
                             placeholder="Valor: " required>
                         <label for="floatingInput"></label>
@@ -133,7 +133,18 @@
                             placeholder="Valor cuotas:" required>
                         <label for="floatingInput"></label>
                     </div>
-                </div>
+                </div> --> 
+                <div class="tma">
+<form id="myForm">
+  <label for="num1">precio del objetivo:</label>
+  <input type="text"   class="form-control valida" id="valor" name="valor" >
+  <br>
+  <label for="num2">numero de cuotas:</label>
+  <input type="text" class="form-control valida"  id="numero_cuota" name="numero_cuota">
+  <br>
+  <input type="text" class="form-control" id="cuota" name="cuota">
+</form>
+</div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
                     <button type="Submit" class="btn btn-success" id="btn_guardar_saquito">guardar</button>
@@ -149,6 +160,39 @@
 </div>
 
 <script>
+    $(document).on('blur','.valida', function(event){
+        var num1 = parseInt(document.getElementById("valor").value);
+        var num2 = parseInt(document.getElementById("numero_cuota").value);
+if(num1 && num2){
+        // Realizar la división
+        var resultado = num1 / num2;
+        document.getElementById("cuota").value=resultado
+        
+}
+    })
+/* 
+function realizarDivision() {
+  // Obtener los valores de los campos de entrada
+  var num1 = parseInt(document.getElementById("num1").value);
+  var num2 = parseInt(document.getElementById("num2").value);
+
+  // Realizar la división
+  var resultado = num1 / num2;
+
+  // Mostrar el resultado en un elemento div
+//   document.getElementById("cuota").innerText = "El resultado es: " + resultado;
+  document.getElementById("cuota").val(resultado)
+} */
+
+// <--------------------------llamdo de  formulario para valores de operacion--------------------->
+
+
+
+let numero1 = document.querySelectorAll("#numero_cuota");
+let numero2  = document.querySelectorAll("#valor");
+let resultadoOperacion = parseFloat(numero1)/parseFloat(numero2);
+
+console.log(resultadoOperacion);
 
 function selecionaRegistro(id, tp) {
     if (tp == 2) {
@@ -188,10 +232,10 @@ function selecionaRegistro(id, tp) {
 }
 </script>
 <script>
-var cuota = parseint(promt("ingrese su cuota"));
-var numero_cuota= parseint(promt("ingrese el numero de cuotas"));
-var divi = cuota/numero_cuota
-cosole.log("el resultado es:")
-</script>
+
+
 
 <?= $this->endSection("contenido")?>
+
+
+

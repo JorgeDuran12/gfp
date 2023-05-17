@@ -39,6 +39,11 @@ $routes->get('mi_perfil', 'Perfil::index');
 
 
 $routes->get('/', 'Auth::index');
+
+//Rutas SendGrid
+$routes->get('enviar_token', 'SendGrid::enviar_token_pass');
+
+
 /* Rutas principal */
 $routes->get('Principal', 'Principal::index');
 $routes->post('agregar_presupuesto', 'Principal::agregar_presupuesto');
