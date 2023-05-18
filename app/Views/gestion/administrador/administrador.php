@@ -73,8 +73,8 @@
       </div>
       <div class="modal-body">
        
-        <input hidden id="tp" name ="tp">
-        <input hidden id="id_usuario" name ="id_usuario">
+        <input hidden id="id" name="id">
+        <input hidden id="tp" name="tp">
 
       <!-- lado izquierdo -->
         <div>
@@ -206,54 +206,77 @@
 
 <script>
 
-// <---------------modal confirmar eliminacion---------------------------------------------/\
+// <---------------modal confirmar eliminacion---------------------------------------------//
 $('#modal-confirma').on('show.bs.modal', function(e) {                                      
         $(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));           
     });                                                                                  
 $('.close').click(function() {$("#modal-confirma").modal("hide");});
 
- 
-  function seleccionausuario(id, tp) {
-    if (tp == 2) {
+
+function seleccionausuario(id, tp) {
+
+  if (tp === 2) {
+
       dataURL = "<?php echo base_url('buscar_usuario'); ?>" + "/" + id;
+      
       $.ajax({
-         type: "POST",
-         url: dataURL,
-         dataType: "json",
-         success: function(rs) {
-           document.getElementById('exampleModalLabel').innerText = "Actualizar usuario";           
-           $("#tp").val(2);
-           $("#id_usuario").val(id);
-           $("#usuario").val(rs[0]['usuario']);
-           $("#nombre").val(rs[0]['nombre']);
-           $("#apellido").val(rs[0]['apellido']);
-           $("#tipo_documento").val(rs[0]['tipo_documento']);
-           $("#num_documento").val(rs[0]['num_documento']);
-           $("#email").val(rs[0]['email']);
-           $("#telefono").val(rs[0]['telefono']);
-           $("#id_rol").val(rs[0]['id_rol']);
-           $("#pass").val(rs[0]['pass']);
-           $("#btn_guardar").text('Actualizar');
-           console.log("editable");
-         }
-         
-      });
-     }else{$("#tp").val(1);
-       document.getElementById('exampleModalLabel').innerText = "Crear usuario";
-       $("#usuario").val('');
-        $("#nombre").val('');
-        $("#apellido").val('');
-        $("#id_rol").val('');
-        $("#tipo_documento").val('');
-        $("#num_documento").val('');
-        $("#email").val('');
-        $("#telefono").val('');
-        $("#pass").val('');
-        $("#btn_guardar").text('Guardar');
-        console.log("enviado");
-     } 
-   }
-   
+
+        type: "POST",
+        url: dataURL,
+        dataType: "json",
+        success: function(rs) {
+        document.getElementById('exampleModalLabel').innerText = "Actualizar usuario";
+        $("#tp").val(2);
+        $("#id").val(id);
+        limpiarCampos();
+        $("#usuario").val(rs[0]['usuario']);
+        $("#nombre").val(rs[0]['nombre']);
+        $("#apellido").val(rs[0]['apellido']);
+        $("#tipo_documento").val(rs[0]['tipo_documento']);
+        $("#num_documento").val(rs[0]['num_documento']);
+        $("#email").val(rs[0]['email']);
+        $("#telefono").val(rs[0]['telefono']);
+        $("#id_rol").val(rs[0]['id_rol']);
+        $("#pass").val(rs[0]['pass']);
+        $("#btn_guardar").text('Actualizar');
+        // console.log("editable");
+      }
+    });
+
+  } else {
+    
+    $("#tp").val(1);
+    document.getElementById('exampleModalLabel').innerText = "Crear usuario";
+
+    $("#usuario").val('');
+    $("#nombre").val('');
+    $("#apellido").val('');
+    $("#id_rol").val('');
+    $("#tipo_documento").val('');
+    $("#num_documento").val('');
+    $("#email").val('');
+    $("#telefono").val('');
+    $("#pass").val('');
+    $("#btn_guardar").text('Guardar');
+    // console.log("enviado");
+  }
+}
+
+function limpiarCampos() {
+
+  $("#usuario").val('');
+  $("#nombre").val('');
+  $("#apellido").val('');
+  $("#id_rol").val('');
+  $("#tipo_documento").val('');
+  $("#num_documento").val('');
+  $("#email").val('');
+  $("#telefono").val('');
+  $("#pass").val('');
+
+}
+
+
    function pdf(){
     alert('ya');
     doc = new jsPDF('P','mm', 'letter');
@@ -265,9 +288,8 @@ $('.close').click(function() {$("#modal-confirma").modal("hide");});
        doc.text(`velocidad`, 10,20);
        doc.save(`autorizacion_"+".pdf`);
    }
-
-   
    
 </script>
+
 
 <?= $this->endSection("contenido")?>

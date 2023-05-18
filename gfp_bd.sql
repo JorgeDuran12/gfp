@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-05-2023 a las 18:26:30
--- Versión del servidor: 10.4.24-MariaDB
--- Versión de PHP: 8.1.6
+-- Tiempo de generación: 13-05-2023 a las 23:38:26
+-- Versión del servidor: 10.4.27-MariaDB
+-- Versión de PHP: 8.1.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -36,7 +36,7 @@ CREATE TABLE `acciones` (
   `estado` char(1) NOT NULL DEFAULT 'A',
   `id_usuario_crea` smallint(2) NOT NULL,
   `fecha_crea` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `acciones`
@@ -68,16 +68,8 @@ CREATE TABLE `agenda` (
   `descripcion` text NOT NULL,
   `color` varchar(200) NOT NULL,
   `start` datetime NOT NULL,
-  `end` datetime NOT NULL,
-  `id_usuario` smallint(2) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `agenda`
---
-
-INSERT INTO `agenda` (`id_agenda`, `title`, `descripcion`, `color`, `start`, `end`, `id_usuario`) VALUES
-(5, 'recordatorio1', 'asdasdasdasdas', '#1174df', '2023-05-02 00:00:00', '2023-05-03 11:08:00', 59);
+  `end` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -94,15 +86,7 @@ CREATE TABLE `disponibles` (
   `estado` char(1) DEFAULT 'A',
   `fecha_crea` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `id_usuario` smallint(2) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `disponibles`
---
-
-INSERT INTO `disponibles` (`id_disponible`, `periodo`, `saldo_anterior`, `ingreso`, `egreso`, `estado`, `fecha_crea`, `id_usuario`) VALUES
-(1, 2023, '0.00', '755000.00', '0.00', 'A', '2023-05-16 14:50:44', 59),
-(2, 2023, '0.00', '1000000.00', '0.00', 'A', '2023-05-16 15:56:23', 28);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -118,7 +102,7 @@ CREATE TABLE `emails` (
   `fecha_crea` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `id_usuario` smallint(2) NOT NULL,
   `usuario_crea` smallint(2) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `emails`
@@ -130,12 +114,7 @@ INSERT INTO `emails` (`id_email`, `email`, `prioridad`, `estado`, `fecha_crea`, 
 (32, 'iiggyysdwefsdfgs123132@gma.ccccc', 13, 'A', '2023-05-10 21:02:01', 54, 54),
 (33, 'mariase3105@gmail.com', 13, 'A', '2023-05-10 16:02:26', 31, 31),
 (34, 'santiagoguerreroh034@gmail.com', 13, 'A', '2023-05-11 17:24:20', 55, 55),
-(35, 'dta@gmail.com', 13, 'A', '2023-05-11 17:45:56', 56, 3),
-(36, 'duran1@gmail.com', 13, 'A', '2023-05-15 17:26:48', 57, 57),
-(37, '1234@gmial.com', 13, 'A', '2023-05-15 17:31:37', 58, 58),
-(41, 'devlassalas@gmail.com', 13, 'A', '2023-05-15 13:22:06', 1, 1),
-(42, 'delassalasospino2003@gmai.com', 13, 'A', '2023-05-16 17:23:46', 59, 59),
-(43, 'pepe11@gmail.com', 13, 'A', '2023-05-16 18:30:42', 60, 60);
+(35, 'dta@gmail.com', 13, 'A', '2023-05-11 17:45:56', 56, 3);
 
 -- --------------------------------------------------------
 
@@ -150,7 +129,7 @@ CREATE TABLE `fondo_emergencia` (
   `estado` char(1) DEFAULT 'A',
   `fecha_crea` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `id_usuario` smallint(2) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -168,27 +147,18 @@ CREATE TABLE `movimientos` (
   `estado` char(1) NOT NULL DEFAULT 'A',
   `fecha_crea` timestamp NOT NULL DEFAULT current_timestamp(),
   `usuario_crea` smallint(2) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `movimientos`
 --
 
 INSERT INTO `movimientos` (`id_movimiento`, `descripcion`, `tipo_movimiento`, `clase_movimiento`, `valor`, `fecha_movimiento`, `estado`, `fecha_crea`, `usuario_crea`) VALUES
+(1, 'fdgdsg', 2, 1, '50000.00', '2023-05-10 12:22:18', 'A', '2023-05-09 21:18:04', 3),
 (2, 'lo', 2, 2, '10000.00', '2023-05-10 12:22:15', 'A', '2023-05-09 21:19:55', 3),
 (3, 'pago de cel de dani pc', 1, 2, '1000000.00', '2023-05-10 12:22:11', 'A', '2023-05-09 21:32:49', 3),
 (4, '6511', 2, 2, '1651.00', '2023-05-10 12:14:26', 'A', '2023-05-10 17:13:23', 3),
-(32, 'hhhh', 2, 4, '999999999.99', '2023-05-15 12:22:00', 'A', '2023-05-15 17:22:18', 28),
-(33, 'hhhhhhhhhh', 2, 4, '10000.00', '2023-05-15 12:22:00', 'A', '2023-05-15 17:22:50', 28),
-(34, 'jjjjjj', 1, 3, '44000.00', '2023-05-15 12:23:00', 'A', '2023-05-15 17:23:12', 28),
-(35, 'asdasdcascdsac', 2, 4, '999999999.99', '2023-05-15 12:57:00', 'A', '2023-05-15 17:57:57', 3),
-(36, 'jjjj', 1, 3, '1000.00', '2023-05-15 13:07:00', 'A', '2023-05-15 18:07:02', 28),
-(37, 'jkkkkkkkkk', 1, 4, '1111.00', '2023-05-15 13:07:00', 'A', '2023-05-15 18:07:22', 28),
-(38, '651654654', 2, 3, '25156165.00', '2023-05-15 13:55:00', 'A', '2023-05-15 18:55:35', 28),
-(39, 'intento 1', 2, 4, '999999999.99', '2023-05-15 14:03:00', 'A', '2023-05-15 19:03:53', 3),
-(40, 'intento2', 1, 3, '233322233.00', '2023-05-15 14:04:00', 'A', '2023-05-15 19:04:17', 3),
-(41, 'venta de un cel', 2, 3, '1500000.00', '2023-05-16 13:21:00', 'A', '2023-05-16 18:21:27', 28),
-(42, 'kk', 1, 3, '10000.00', '2023-05-16 14:10:00', 'A', '2023-05-16 19:10:02', 28);
+(6, 'gascgg<ad d ', 1, 1, '100000.00', '2023-05-26 05:00:00', 'A', '2023-05-10 17:17:45', 28);
 
 -- --------------------------------------------------------
 
@@ -204,7 +174,7 @@ CREATE TABLE `parametros_det` (
   `fecha_crea` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `id_parametro_enc` smallint(2) NOT NULL,
   `id_usuario_crea` smallint(2) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `parametros_det`
@@ -236,7 +206,7 @@ CREATE TABLE `parametros_enc` (
   `estado` char(1) DEFAULT 'A',
   `fecha_crea` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `id_usuario_crea` smallint(2) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `parametros_enc`
@@ -261,7 +231,7 @@ CREATE TABLE `permisos` (
   `id_accion` smallint(2) NOT NULL,
   `id_usuario_crea` smallint(2) NOT NULL,
   `fecha_crea` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `permisos`
@@ -301,7 +271,7 @@ CREATE TABLE `proyeccion` (
   `fecha_crea` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `id_saquito` smallint(2) NOT NULL,
   `usuario_crea` smallint(2) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -314,22 +284,18 @@ CREATE TABLE `roles` (
   `nombre` varchar(50) NOT NULL,
   `descripcion` varchar(200) NOT NULL,
   `estado` char(1) DEFAULT 'A',
-  `usuario_crea` smallint(2) NOT NULL,
-  `fecha_crea` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `id_usuario_crea` smallint(2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `roles`
 --
 
-INSERT INTO `roles` (`id_rol`, `nombre`, `descripcion`, `estado`, `usuario_crea`, `fecha_crea`) VALUES
-(1, 'Super Administrador', 'Acceso completo en el sistema.\r\npuede gestionar usuarios, roles, grupos y otros superadministradores u administradores.\r\nDarle mantenimiento a la pagina, etc.', 'A', 1, '2023-05-15 14:41:34'),
-(2, 'Administrador', 'Permiso para gestionar a todos los usuarios finales dentro del sistema\r\n', 'A', 1, '2023-05-15 14:41:34'),
-(3, 'Usuario', 'Acceso a todas las herramientas que ofrece el sistema ', 'A', 1, '2023-05-15 14:41:34'),
-(4, 'gerente', 'se encarga de gestionar los avances', 'A', 2, '2023-05-15 14:41:34'),
-(5, 'ghjghjghjghjghjh', 'ghjghjghjghjghjghj', 'A', 3, '2023-05-15 21:17:15'),
-(6, 'ffhghfghfgh', 'qweweqweqweqweqw', 'A', 28, '2023-05-16 13:03:51'),
-(7, 'algo', 'dadas', 'A', 28, '2023-05-16 17:45:40');
+INSERT INTO `roles` (`id_rol`, `nombre`, `descripcion`, `estado`, `id_usuario_crea`) VALUES
+(1, 'Super Administrador', 'Acceso completo en el sistema.\r\npuede gestionar usuarios, roles, grupos y otros superadministradores u administradores.\r\nDarle mantenimiento a la pagina, etc.', 'A', 1),
+(2, 'Administrador', 'Permiso para gestionar a todos los usuarios finales dentro del sistema\r\n', 'A', 1),
+(3, 'Usuario', 'Acceso a todas las herramientas que ofrece el sistema ', 'A', 1),
+(4, 'gerente', 'se encarga de gestionar los avances', 'A', 2);
 
 -- --------------------------------------------------------
 
@@ -347,21 +313,23 @@ CREATE TABLE `saquitos` (
   `estado` char(1) NOT NULL DEFAULT 'A',
   `fecha_crea` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `usuario_crea` smallint(2) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `saquitos`
 --
 
 INSERT INTO `saquitos` (`id_saquito`, `descripcion`, `fecha_inicial`, `valor`, `numero_cuota`, `cuota`, `estado`, `fecha_crea`, `usuario_crea`) VALUES
-(1, 'fdf', '2023-05-10', '5.00', '4', '5.00', 'A', '2023-05-15 21:10:19', 31),
-(2, 'fghh', '2023-05-15', '544.00', '1', '4.00', 'A', '2023-05-15 21:12:12', 31),
-(3, 'df', '2023-05-16', '56.00', '5', '56.00', 'A', '2023-05-16 19:14:00', 31),
-(4, 'fg', '2023-05-31', '66663.00', '5', '65.00', 'A', '2023-05-16 19:14:32', 31),
-(5, 'xfdf', '2023-05-16', '5515.00', '52', '5.00', 'A', '2023-05-16 19:36:26', 31),
-(6, '423423', '2023-05-16', '234234.00', '23423', '23423.00', 'A', '2023-05-16 19:41:27', 3),
-(7, 'weqeqwe', '2023-05-16', '13423423.00', '23453', '423.00', 'A', '2023-05-16 19:59:07', 31),
-(8, 'daada', '2023-06-08', '343432.00', '3344', '23.00', 'A', '2023-05-16 20:04:30', 31);
+(1, 'funciona', '2023-05-31', '900000.00', '9', '100000.00', 'A', '2023-05-10 12:14:28', 31),
+(2, 'fhv', '2023-05-19', '4646.00', '4', '600.00', 'A', '2023-05-10 17:17:17', 31),
+(3, '876', '2023-05-10', '2052.00', '8587', '8578.00', 'A', '2023-05-10 17:28:45', 3),
+(4, 'aaaaaaaaffff', '2023-05-10', '1000000.00', '10', '100000.00', 'A', '2023-05-10 17:35:04', 31),
+(5, 'wqdd', '2023-05-20', '4174.00', '772', '757.00', 'A', '2023-05-10 18:17:27', 3),
+(6, 'dgdg', '2023-05-19', '452.00', '5', '152.00', 'A', '2023-05-11 17:01:09', 31),
+(7, 'gggg', '2023-05-19', '5852.00', '21', '128.00', 'A', '2023-05-11 17:02:19', 31),
+(8, 'hjkil', '2023-05-02', '444444.00', '44444', '4444.00', 'A', '2023-05-11 17:39:40', 31),
+(9, 'dg', '2023-05-01', '556.00', '42', '4.00', 'A', '2023-05-11 18:22:39', 31),
+(10, 'wrss', '2023-05-17', '50000.00', '4', '11000.00', 'A', '2023-05-11 21:45:23', 31);
 
 -- --------------------------------------------------------
 
@@ -377,17 +345,19 @@ CREATE TABLE `telefonos` (
   `estado` char(1) NOT NULL DEFAULT 'A',
   `id_usuario` smallint(2) NOT NULL,
   `usuario_crea` smallint(2) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `telefonos`
 --
 
 INSERT INTO `telefonos` (`id_telefono`, `numero`, `prioridad`, `fecha_crea`, `estado`, `id_usuario`, `usuario_crea`) VALUES
-(1, '3011559374', 13, '2023-05-15 14:32:36', 'A', 3, 3),
-(3, '3238906836', 13, '2023-05-16 12:54:27', 'A', 1, 1),
-(4, '3124885564', 13, '2023-05-16 13:24:50', 'A', 28, 28),
-(5, '325476727', 13, '2023-05-16 18:30:42', 'A', 60, 60);
+(39, '3145553222', 13, '2023-05-08 21:13:02', 'A', 28, 28),
+(42, '3003095834', 13, '2023-05-09 17:16:44', 'A', 31, 31),
+(51, '15465165', 13, '2023-05-09 20:48:06', 'A', 40, 40),
+(55, '444444444', 13, '2023-05-10 21:02:01', 'A', 54, 54),
+(56, '3145775332', 13, '2023-05-11 17:24:20', 'A', 55, 55),
+(57, '23423', 13, '2023-05-11 17:45:56', 'A', 56, 3);
 
 -- --------------------------------------------------------
 
@@ -408,51 +378,22 @@ CREATE TABLE `usuarios` (
   `usuario_crea` smallint(2) NOT NULL,
   `tipo_documento` smallint(2) NOT NULL,
   `num_documento` varchar(15) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `usuarios`
 --
 
 INSERT INTO `usuarios` (`id_usuario`, `usuario`, `nombre`, `apellido`, `pass`, `estado`, `fecha_crea`, `token`, `id_rol`, `usuario_crea`, `tipo_documento`, `num_documento`) VALUES
-(1, 'devLas', 'carlos', 'de las salas', '12132', 'A', '2023-05-16 12:23:13', '', 1, 1, 9, '6565632'),
+(1, 'devLas', 'carlos', 'de las salas', 'hola', 'A', '2023-05-11 12:21:38', '', 1, 1, 9, '6565632'),
 (2, 'Safe', 'santiago', 'guerrero', 'hola', 'A', '2023-05-05 13:12:26', '', 1, 1, 9, '32323'),
-(3, 'JorgeDuran12', 'Jorge Luis', 'Duran Olivares', '$2y$10$t2JV.BaqDOhhDBQZCywzHOGRx51L0nV4skNtAMXKIVWBGoHBwuh8u', 'A', '2023-05-16 12:26:44', 'x9pyYTQt9kji4RAPdEyrsNuNyZQUCG', 1, 3, 9, '1007219901'),
-(28, 'Danipc', 'Daniel', 'Banquet', '$2y$10$Y.pApjdV4iGUqioYGymDPeWScJ9xWX1mE5OQhx2YRrV1mq6sqqdJ6', 'A', '2023-05-16 13:25:40', 'T38e7nEypqPVWubUlDoNnWppxlR5LY', 1, 28, 9, '5535'),
+(3, 'JorgeDuran12', 'Jorge Luis', 'Duran Olivares', '$2y$10$t2JV.BaqDOhhDBQZCywzHOGRx51L0nV4skNtAMXKIVWBGoHBwuh8u', 'A', '2023-05-11 12:37:54', 'x9pyYTQt9kji4RAPdEyrsNuNyZQUCG', 1, 3, 9, '1007219901'),
+(28, 'danipc', 'daniel', 'Banquet', '$2y$10$Y.pApjdV4iGUqioYGymDPeWScJ9xWX1mE5OQhx2YRrV1mq6sqqdJ6', 'A', '2023-05-10 16:23:32', 'T38e7nEypqPVWubUlDoNnWppxlR5LY', 1, 28, 9, '5535'),
 (31, 'Majo', 'Maria jose', 'Ramirez', '$2y$10$lJCs.OVlFG6Cno/nKGRmU.0585QD08xr.um.bIcgGEeiL5CNb8i0S', 'A', '2023-05-10 12:20:35', '', 3, 31, 9, '21113535'),
 (40, 'duran12', 'jorge', 'duran', '$2y$10$t2JV.BaqDOhhDBQZCywzHOGRx51L0nV4skNtAMXKIVWBGoHBwuh8u', 'A', '2023-05-09 15:48:06', '', 3, 40, 9, '546546546546'),
 (54, 'ttt777', 'aaaaa', 'ygtgyy', '$2y$10$KJVTdsxqgJb4z3.U/wmeHuXaLZWxq8MtbqiZtUmNZO0J7XyWQvCga', 'A', '2023-05-10 16:02:01', NULL, 3, 54, 10, '10333334'),
 (55, 'santo', 'santiago', 'guerrero', '$2y$10$t2JV.BaqDOhhDBQZCywzHOGRx51L0nV4skNtAMXKIVWBGoHBwuh8u', 'A', '2023-05-11 13:11:20', NULL, 3, 55, 9, '1001893022'),
-(56, '42343', '354', '32423', '$2y$10$da2qZueVkfRjKBbJMLXKguGdstoMqglSwnUVbD8O2M3.r0SbuRkF2', 'E', '2023-05-16 12:18:45', NULL, 3, 3, 12, '32423'),
-(57, 'JorgeDuran12', 'Jorge Luisdwdw', 'Duran Olivares', '$2y$10$t2JV.BaqDOhhDBQZCywzHOGRx51L0nV4skNtAMXKIVWBGoHBwuh8u', 'E', '2023-05-16 12:18:39', NULL, 1, 57, 9, '1007219901'),
-(58, 'cdbdt', 'dwe3', '3e23', '$2y$10$zn9ovS1DzOB1A2G/LK5o8.g7Yq2eeLRmUVzbndDAT0gcmTL1h.X2S', 'E', '2023-05-15 12:31:53', NULL, 3, 58, 11, '1244523412312'),
-(59, 'devlassalas', ' carlos', 'de las salas', '$2y$10$vON5VnMKoERF5ZnXqpjzYu5/t/sObKAuIZIEZxO9.qGsouxUhnlmu', 'A', '2023-05-16 12:23:46', NULL, 3, 59, 9, '1048264406'),
-(60, 'pepe11', 'pepe', 'cabo', '$2y$10$IDfqif.6DWwqvRmWzjMzHu2piRI9NpnhFoTKUe3pPT5gMD27l1NZ6', 'A', '2023-05-16 13:30:42', NULL, 3, 60, 9, '142542484');
-
--- --------------------------------------------------------
-
---
--- Estructura Stand-in para la vista `vw_parametros_det`
--- (Véase abajo para la vista actual)
---
-CREATE TABLE `vw_parametros_det` (
-`id_parametro_det` smallint(2)
-,`nombre` varchar(50)
-,`resumen` char(2)
-,`estado` char(1)
-,`fecha_crea` timestamp
-,`id_parametro_enc` smallint(2)
-,`id_usuario_crea` smallint(2)
-);
-
--- --------------------------------------------------------
-
---
--- Estructura para la vista `vw_parametros_det`
---
-DROP TABLE IF EXISTS `vw_parametros_det`;
-
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vw_parametros_det`  AS SELECT `parametros_det`.`id_parametro_det` AS `id_parametro_det`, `parametros_det`.`nombre` AS `nombre`, `parametros_det`.`resumen` AS `resumen`, `parametros_det`.`estado` AS `estado`, `parametros_det`.`fecha_crea` AS `fecha_crea`, `parametros_det`.`id_parametro_enc` AS `id_parametro_enc`, `parametros_det`.`id_usuario_crea` AS `id_usuario_crea` FROM `parametros_det``parametros_det`  ;
+(56, '42343', '354', '32423', '$2y$10$da2qZueVkfRjKBbJMLXKguGdstoMqglSwnUVbD8O2M3.r0SbuRkF2', 'A', '2023-05-11 17:45:56', NULL, 3, 3, 12, '32423');
 
 --
 -- Índices para tablas volcadas
@@ -541,7 +482,7 @@ ALTER TABLE `proyeccion`
 --
 ALTER TABLE `roles`
   ADD PRIMARY KEY (`id_rol`),
-  ADD KEY `usuario_crear` (`usuario_crea`);
+  ADD KEY `roles_usuario` (`id_usuario_crea`);
 
 --
 -- Indices de la tabla `saquitos`
@@ -581,19 +522,19 @@ ALTER TABLE `acciones`
 -- AUTO_INCREMENT de la tabla `agenda`
 --
 ALTER TABLE `agenda`
-  MODIFY `id_agenda` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_agenda` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `disponibles`
 --
 ALTER TABLE `disponibles`
-  MODIFY `id_disponible` smallint(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_disponible` smallint(2) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `emails`
 --
 ALTER TABLE `emails`
-  MODIFY `id_email` smallint(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+  MODIFY `id_email` smallint(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT de la tabla `fondo_emergencia`
@@ -605,7 +546,7 @@ ALTER TABLE `fondo_emergencia`
 -- AUTO_INCREMENT de la tabla `movimientos`
 --
 ALTER TABLE `movimientos`
-  MODIFY `id_movimiento` smallint(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `id_movimiento` smallint(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT de la tabla `parametros_det`
@@ -635,25 +576,25 @@ ALTER TABLE `proyeccion`
 -- AUTO_INCREMENT de la tabla `roles`
 --
 ALTER TABLE `roles`
-  MODIFY `id_rol` smallint(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_rol` smallint(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `saquitos`
 --
 ALTER TABLE `saquitos`
-  MODIFY `id_saquito` smallint(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_saquito` smallint(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `telefonos`
 --
 ALTER TABLE `telefonos`
-  MODIFY `id_telefono` smallint(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_telefono` smallint(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_usuario` smallint(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
+  MODIFY `id_usuario` smallint(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 
 --
 -- Restricciones para tablas volcadas
@@ -725,7 +666,7 @@ ALTER TABLE `proyeccion`
 -- Filtros para la tabla `roles`
 --
 ALTER TABLE `roles`
-  ADD CONSTRAINT `usuario_crear` FOREIGN KEY (`usuario_crea`) REFERENCES `usuarios` (`id_usuario`);
+  ADD CONSTRAINT `usuario_crear` FOREIGN KEY (`id_usuario_crea`) REFERENCES `usuarios` (`id_usuario`);
 
 --
 -- Filtros para la tabla `saquitos`

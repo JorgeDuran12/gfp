@@ -114,7 +114,6 @@ $('.close').click(function() {
 });
 
 
-
 function seleccionarol(id, tp) {
     if (tp == 2) {
         dataURL = "<?php echo base_url('buscar_rol'); ?>" + "/" + id;

@@ -42,7 +42,7 @@ class Movimiento extends BaseController
             'clase_movi' => $clase_movimiento,
             'Movimientos' => $Movimiento,
             
-        ],);
+        ]);
     }
 
 

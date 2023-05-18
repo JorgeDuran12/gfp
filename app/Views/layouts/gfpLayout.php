@@ -34,7 +34,7 @@
     <link rel="stylesheet" href="<?= base_url("/css/registro/movimiento9.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/agenda/pagoStyles.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/fullCalendar/fullCalendar.css")?>">
-    <link rel="stylesheet" href="<?= base_url("/css/123/emergencia3.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/css/123/emergencia4.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/123/987654.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/perfil/perfilStyles.css")?>">
 

@@ -18,8 +18,8 @@
                          - <?= $DatosPerfil['num_documento']?></span> 
                     </li>
                     <li class="fw-bold fs-4">Rol actual: <span class="fw-normal"><?= $DatosPerfil['rol_nombre']?></span> </li>
-                    <li class="fw-bold fs-4">Emails: <span class="fw-normal"> <?= session() -> email ?> </span> </li>
-                    <li class="fw-bold fs-4">Telefonos: <span class="fw-normal"> <?= $dataTelefono['numero']?> </span> </li>
+                    <li class="fw-bold fs-4">Email: <span class="fw-normal"> <?= session() -> email ?> </span> </li>
+                    <li class="fw-bold fs-4">Telefono: <span class="fw-normal"> <?= $dataTelefono['numero']?> </span> </li>
             </ul>
 
         </div>

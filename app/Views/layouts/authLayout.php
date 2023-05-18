@@ -17,13 +17,13 @@
 
     <!-- Todos los estilos -->
     <link rel="stylesheet" href="<?= base_url("/css/layouts/authLayout2.css")?>">
-    <link rel="stylesheet" href="<?= base_url("/css/usuarios/loginStyles1.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/css/usuarios/loginStyles2.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/usuarios/register9.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/usuarios/recuperarcontra2.css")?>">
-    <link rel="stylesheet" href="<?= base_url('css/footer/footerStyles2.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('css/footer/footerStyles3.css') ?>">
 
 
-    <!-- <---generadir de pdf con jspdf----------------> -->
+    <!-- <---generadir de pdf con jspdf---------------->
    <script src="<?php echo base_url(); ?>/jsPDF-1.3.2/dist/jspdf.debug.js"></script>
    <script src="<?php echo base_url(); ?>/jsPDF-1.3.2/dist/jspdf.min.js"></script>
 

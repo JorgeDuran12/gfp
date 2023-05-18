@@ -67,54 +67,6 @@ class Auth extends BaseController
         ]);
     }
 
-    public function AutenticarUsuario(){
-
-        $email = $this->request->getPost('email');
-        $password = $this->request->getPost('password');
-      
-        $usuarioModel = new UsuariosModel();
-        $emailModel = new EmailsModel();
-
-        $id_usuario = $emailModel->Id_Usuario_Email($email);
-        
-        if ($id_usuario) {
-            
-            $usuario = $usuarioModel->Auth_usuario($email);
-
-            if ($usuario && isset($usuario['pass'])) {
-                
-                if (password_verify($password, $usuario['pass'])) {
-
-                    $session = session();
-                    
-                    $session->set([
-                        'id_usuario' => $id_usuario,
-                        'usuario' => $usuario['usuario'],
-                        'email' => $email,
-                        'rol' => $usuario['id_rol'],
-                        'logged_in' => true
-                    ]);
-
-                    if ($usuario['id_rol'] === '1') {
-                        return redirect()->to(base_url('/gestion_de_administradores'));
-                    } elseif ($usuario['id_rol'] === '2') {
-                        return redirect()->to(base_url('/Principal'));
-                    } elseif ($usuario['id_rol'] === '3') {
-                        return redirect()->to(base_url('/Principal'));
-                    } elseif ($usuario['id_rol'] === '4') {
-                        return redirect()->to(base_url('/Principal'));
-                    }
-
-                } else{
-                    return redirect()->to(base_url("/"))->with('mensaje', '2' );
-                }
-            }       
-        } else {
-            return redirect()->to(base_url("/"))->with('mensaje', '3');
-        }
-    }
-
-
     public function guardar(){   
 
         if ($this->request->getMethod() == "post" ) {
@@ -169,13 +121,60 @@ class Auth extends BaseController
         }
     }
 
+    public function AutenticarUsuario(){
+
+        $email = $this->request->getPost('email');
+        $password = $this->request->getPost('password');
+      
+        $usuarioModel = new UsuariosModel();
+        $emailModel = new EmailsModel();
+
+        $id_usuario = $emailModel->Id_Usuario_Email($email);
+        
+        if ($id_usuario) {
+            
+            $usuario = $usuarioModel->Auth_usuario($email);
+
+            if ($usuario && isset($usuario['pass'])) {
+                
+                if (password_verify($password, $usuario['pass'])) {
+
+                    $session = session();
+                    
+                    $session->set([
+                        'id_usuario' => $id_usuario,
+                        'usuario' => $usuario['usuario'],
+                        'email' => $email,
+                        'rol' => $usuario['id_rol'],
+                        'logged_in' => true
+                    ]);
+
+                    if ($usuario['id_rol'] === '1') {
+                        return redirect()->to(base_url('/gestion_de_administradores'));
+                    } elseif ($usuario['id_rol'] === '2') {
+                        return redirect()->to(base_url('/Principal'));
+                    } elseif ($usuario['id_rol'] === '3') {
+                        return redirect()->to(base_url('/Principal'));
+                    } elseif ($usuario['id_rol'] === '4') {
+                        return redirect()->to(base_url('/Principal'));
+                    }
+
+                } else{
+                    return redirect()->to(base_url("/"))->with('mensaje', '2' );
+                }
+            }       
+        } else {
+            return redirect()->to(base_url("/"))->with('mensaje', '3' );
+        }
+    }
+    
+    
     public function verificar_email($email) {
 
         $resp = $this->usuario->verificar_email_bd($email);
         return json_encode($resp, true);
 
     }
-    
 
     public function recuperar_contraseña_by_email($email) {
         echo 'recuperando...';

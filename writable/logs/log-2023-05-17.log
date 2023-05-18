@@ -2576,3 +2576,237 @@ INFO - 2023-05-17 16:54:22 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2023-05-17 16:54:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-05-17 16:55:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-05-17 16:55:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 21:53:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 21:53:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 21:54:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 21:54:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 21:54:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 21:54:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 21:54:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 21:55:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 21:55:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 21:55:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 21:55:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 21:55:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-17 21:55:57 --> mysqli_sql_exception: Table 'gfp_bd.vw_parametros_det' doesn't exist in C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `movimie...', 0)
+#1 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `movimie...')
+#2 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `movimie...')
+#3 C:\xampp\htdocs\gfp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `movimie...', Array, false)
+#4 C:\xampp\htdocs\gfp\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\gfp\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\gfp\app\Models\MovimientoModel.php(38): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\gfp\app\Controllers\Movimiento.php(33): App\Models\MovimientoModel->traer()
+#8 C:\xampp\htdocs\gfp\system\CodeIgniter.php(934): App\Controllers\Movimiento->index()
+#9 C:\xampp\htdocs\gfp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Movimiento))
+#10 C:\xampp\htdocs\gfp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\gfp\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-05-17 21:55:57 --> Table 'gfp_bd.vw_parametros_det' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `movimientos`.*, `parametros_det`.`nombre` as `Tnombre`, `vw_parametros_det`.`nombre` as `Tnombre2`
+FROM `movimientos`
+JOIN `parametros_det` ON `movimientos`.`tipo_movimiento`=`parametros_det`.`id_parametro_det`
+JOIN `vw_parametros_det` ON `vw_parametros_det`.`id_parametro_det` = `movimientos`.`clase_movimiento`
+WHERE `movimientos`.`estado` = \'A\'
+AND `usuario_crea` = \'3\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `movimientos`.*, `parametros_det`.`nombre` as `Tnombre`, `vw_parametros_det`.`nombre` as `Tnombre2`
+FROM `movimientos`
+JOIN `parametros_det` ON `movimientos`.`tipo_movimiento`=`parametros_det`.`id_parametro_det`
+JOIN `vw_parametros_det` ON `vw_parametros_det`.`id_parametro_det` = `movimientos`.`clase_movimiento`
+WHERE `movimientos`.`estado` = \'A\'
+AND `usuario_crea` = \'3\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `movimientos`.*, `parametros_det`.`nombre` as `Tnombre`, `vw_parametros_det`.`nombre` as `Tnombre2`
+FROM `movimientos`
+JOIN `parametros_det` ON `movimientos`.`tipo_movimiento`=`parametros_det`.`id_parametro_det`
+JOIN `vw_parametros_det` ON `vw_parametros_det`.`id_parametro_det` = `movimientos`.`clase_movimiento`
+WHERE `movimientos`.`estado` = \'A\'
+AND `usuario_crea` = \'3\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `movimientos`.*, `parametros_det`.`nombre` as `Tnombre`, `vw_parametros_det`.`nombre` as `Tnombre2`
+FROM `movimientos`
+JOIN `parametros_det` ON `movimientos`.`tipo_movimiento`=`parametros_det`.`id_parametro_det`
+JOIN `vw_parametros_det` ON `vw_parametros_det`.`id_parametro_det` = `movimientos`.`clase_movimiento`
+WHERE `movimientos`.`estado` = :movimientos.estado:
+AND `usuario_crea` = :usuario_crea:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\MovimientoModel.php(38): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Movimiento.php(33): App\Models\MovimientoModel->traer()
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Movimiento->index()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Movimiento))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-17 22:00:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-17 22:00:37 --> mysqli_sql_exception: Table 'gfp_bd.vw_parametros_det' doesn't exist in C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `movimie...', 0)
+#1 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `movimie...')
+#2 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `movimie...')
+#3 C:\xampp\htdocs\gfp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `movimie...', Array, false)
+#4 C:\xampp\htdocs\gfp\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\gfp\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\gfp\app\Models\MovimientoModel.php(38): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\gfp\app\Controllers\Movimiento.php(33): App\Models\MovimientoModel->traer()
+#8 C:\xampp\htdocs\gfp\system\CodeIgniter.php(934): App\Controllers\Movimiento->index()
+#9 C:\xampp\htdocs\gfp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Movimiento))
+#10 C:\xampp\htdocs\gfp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\gfp\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-05-17 22:00:37 --> Table 'gfp_bd.vw_parametros_det' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `movimientos`.*, `parametros_det`.`nombre` as `Tnombre`, `vw_parametros_det`.`nombre` as `Tnombre2`
+FROM `movimientos`
+JOIN `parametros_det` ON `movimientos`.`tipo_movimiento`=`parametros_det`.`id_parametro_det`
+JOIN `vw_parametros_det` ON `vw_parametros_det`.`id_parametro_det` = `movimientos`.`clase_movimiento`
+WHERE `movimientos`.`estado` = \'A\'
+AND `usuario_crea` = \'3\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `movimientos`.*, `parametros_det`.`nombre` as `Tnombre`, `vw_parametros_det`.`nombre` as `Tnombre2`
+FROM `movimientos`
+JOIN `parametros_det` ON `movimientos`.`tipo_movimiento`=`parametros_det`.`id_parametro_det`
+JOIN `vw_parametros_det` ON `vw_parametros_det`.`id_parametro_det` = `movimientos`.`clase_movimiento`
+WHERE `movimientos`.`estado` = \'A\'
+AND `usuario_crea` = \'3\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `movimientos`.*, `parametros_det`.`nombre` as `Tnombre`, `vw_parametros_det`.`nombre` as `Tnombre2`
+FROM `movimientos`
+JOIN `parametros_det` ON `movimientos`.`tipo_movimiento`=`parametros_det`.`id_parametro_det`
+JOIN `vw_parametros_det` ON `vw_parametros_det`.`id_parametro_det` = `movimientos`.`clase_movimiento`
+WHERE `movimientos`.`estado` = \'A\'
+AND `usuario_crea` = \'3\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `movimientos`.*, `parametros_det`.`nombre` as `Tnombre`, `vw_parametros_det`.`nombre` as `Tnombre2`
+FROM `movimientos`
+JOIN `parametros_det` ON `movimientos`.`tipo_movimiento`=`parametros_det`.`id_parametro_det`
+JOIN `vw_parametros_det` ON `vw_parametros_det`.`id_parametro_det` = `movimientos`.`clase_movimiento`
+WHERE `movimientos`.`estado` = :movimientos.estado:
+AND `usuario_crea` = :usuario_crea:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\MovimientoModel.php(38): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Movimiento.php(33): App\Models\MovimientoModel->traer()
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Movimiento->index()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Movimiento))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-17 22:04:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 22:04:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 22:04:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 22:04:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 22:04:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 22:05:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 22:05:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 22:06:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 22:06:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 22:11:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 22:11:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 22:16:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 22:16:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 22:16:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 22:16:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 22:16:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 22:16:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 22:16:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 22:16:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 22:16:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 22:16:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 22:16:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 22:16:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 22:16:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 22:16:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 22:16:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 22:16:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 22:16:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 22:17:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-17 22:17:01 --> mysqli_sql_exception: Table 'gfp_bd.vw_parametros_det' doesn't exist in C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `movimie...', 0)
+#1 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `movimie...')
+#2 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `movimie...')
+#3 C:\xampp\htdocs\gfp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `movimie...', Array, false)
+#4 C:\xampp\htdocs\gfp\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\gfp\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\gfp\app\Models\MovimientoModel.php(38): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\gfp\app\Controllers\Movimiento.php(33): App\Models\MovimientoModel->traer()
+#8 C:\xampp\htdocs\gfp\system\CodeIgniter.php(934): App\Controllers\Movimiento->index()
+#9 C:\xampp\htdocs\gfp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Movimiento))
+#10 C:\xampp\htdocs\gfp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\gfp\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-05-17 22:17:01 --> Table 'gfp_bd.vw_parametros_det' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `movimientos`.*, `parametros_det`.`nombre` as `Tnombre`, `vw_parametros_det`.`nombre` as `Tnombre2`
+FROM `movimientos`
+JOIN `parametros_det` ON `movimientos`.`tipo_movimiento`=`parametros_det`.`id_parametro_det`
+JOIN `vw_parametros_det` ON `vw_parametros_det`.`id_parametro_det` = `movimientos`.`clase_movimiento`
+WHERE `movimientos`.`estado` = \'A\'
+AND `usuario_crea` = \'3\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `movimientos`.*, `parametros_det`.`nombre` as `Tnombre`, `vw_parametros_det`.`nombre` as `Tnombre2`
+FROM `movimientos`
+JOIN `parametros_det` ON `movimientos`.`tipo_movimiento`=`parametros_det`.`id_parametro_det`
+JOIN `vw_parametros_det` ON `vw_parametros_det`.`id_parametro_det` = `movimientos`.`clase_movimiento`
+WHERE `movimientos`.`estado` = \'A\'
+AND `usuario_crea` = \'3\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `movimientos`.*, `parametros_det`.`nombre` as `Tnombre`, `vw_parametros_det`.`nombre` as `Tnombre2`
+FROM `movimientos`
+JOIN `parametros_det` ON `movimientos`.`tipo_movimiento`=`parametros_det`.`id_parametro_det`
+JOIN `vw_parametros_det` ON `vw_parametros_det`.`id_parametro_det` = `movimientos`.`clase_movimiento`
+WHERE `movimientos`.`estado` = \'A\'
+AND `usuario_crea` = \'3\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `movimientos`.*, `parametros_det`.`nombre` as `Tnombre`, `vw_parametros_det`.`nombre` as `Tnombre2`
+FROM `movimientos`
+JOIN `parametros_det` ON `movimientos`.`tipo_movimiento`=`parametros_det`.`id_parametro_det`
+JOIN `vw_parametros_det` ON `vw_parametros_det`.`id_parametro_det` = `movimientos`.`clase_movimiento`
+WHERE `movimientos`.`estado` = :movimientos.estado:
+AND `usuario_crea` = :usuario_crea:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\MovimientoModel.php(38): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Movimiento.php(33): App\Models\MovimientoModel->traer()
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Movimiento->index()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Movimiento))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-17 22:17:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 22:17:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 22:17:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 22:17:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 22:17:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 22:17:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 22:17:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 22:17:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 22:17:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 22:17:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 22:19:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 22:19:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 22:19:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 22:22:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 22:31:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 22:31:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 22:31:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 22:31:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 22:32:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 22:32:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 23:02:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 23:04:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 23:04:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 23:10:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 23:10:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 23:10:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 23:10:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 23:10:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 23:10:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 23:10:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 23:29:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 23:29:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 23:29:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 23:29:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 23:29:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 23:34:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 23:34:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 23:34:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 23:40:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 23:44:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 23:44:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 23:51:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 23:58:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 23:59:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 23:59:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

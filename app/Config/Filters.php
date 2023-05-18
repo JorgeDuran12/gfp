@@ -81,6 +81,15 @@ class Filters extends BaseConfig
                 'usuario/*',
                 'progreso_saquito',
                 'progreso_saquito/*',
+                'sendMail',
+                'sendMail/*',
+                'SendGrid',
+                'SendGrid/*',
+                'Movimiento',
+                'Movimiento/*',
+                'Perfil',
+                'Perfil/*',
+
 
                 /* Rutas de agenda*/
                 'agenda_de_pago',
@@ -96,13 +105,22 @@ class Filters extends BaseConfig
                 /* Rutas de usuarios */
                 'gestion/usuarios',
                 'gestion_de_administradores',
+                'eliminar__usuario',
+                'eliminados_usuario',
+
+                
 
                 /* Rutas de roles*/
                 'gestion/roles',
 
                 /* Rutas de emergencia */
                 'fondo_de_emergencia',
-
+                
+                /* Rutas de perfil */
+                'mi_perfil',
+                
+                'enviar_token',
+                
 
             ]
         ]
