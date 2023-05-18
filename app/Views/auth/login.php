@@ -60,13 +60,54 @@
 </div>
 
 <script>
-    
-const msg = "<?= session()->getFlashdata('mensaje') ?>";
-if (msg === '2' ) {
-    $('#mensaje_error').text('La contraseña no coincide').show().delay(3000).fadeOut();
-} else {
-    $('#mensaje_error').text('La cuenta no existe').show().delay(3000).fadeOut();
-}
+
+// const msg = "<= session()->getFlashdata('mensaje') ?>";
+
+// if (msg === '2' ) {
+//     $('#mensaje_error').text('La contraseña no coincide').show().delay(3000).fadeOut();
+// } else {
+//     $('#mensaje_error').text('La cuenta no existe').show().delay(3000).fadeOut();
+// }
+
+
+
+
+
+
+$(document).ready(function() {
+    $('#formulario').submit(function(event) {
+        event.preventDefault();
+
+
+        let email = $('#email').val();
+        let password = $('#password').val();
+
+
+        $.ajax({
+            url: "<?= base_url('AutenticarUsuario'); ?>",
+            type: 'POST',
+            data: {
+                email: email,
+                password: password
+            },
+            dataType: 'JSON',
+            success: function(response) {
+                console.log(response);
+                if (response.mensaje === '2') {
+                    $('#mensaje_error').text('El correo o la contraseña son incorrectos').show().delay(3000).fadeOut();
+                } else if (response.mensaje === '3'){
+                    $('#mensaje_error').text('La cuenta no existe').show().delay(3000).fadeOut();
+                 }else{
+                    window.location.href = "<?= base_url('Principal') ?>";
+                 }
+            },
+            error: function() {
+                alert("Error");
+            }
+        });
+    });
+});
+
 </script>
 
 <?= $this->endSection("contenido")?>

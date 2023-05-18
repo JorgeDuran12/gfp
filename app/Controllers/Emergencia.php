@@ -10,4 +10,5 @@ class Emergencia extends BaseController
             'tituloPagina' => 'Fondo de emergencia'
         ]);
     }
+   
 }

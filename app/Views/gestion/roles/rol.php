@@ -11,7 +11,7 @@
 
     <a href="" onclick="seleccionarol(<?php echo 1 . ',' . 1 ?>);" class="btn btn-success regresar_Btn"
         data-bs-toggle="modal" data-bs-target="#agregar_rol">Agregar</a>
-    &nbsp<a href="<?php echo base_url('eliminados_cargo'); ?>" class="btn btn-secondary regresar_Btn">Eliminados</a>
+    &nbsp<a href="<?php echo base_url('eliminados_rol'); ?>" class="btn btn-secondary regresar_Btn">Eliminados</a>
 
     &nbsp<a href="<?php echo base_url('/principal'); ?>" class="btn btn-primary regresar_Btn">Regresar</a>
 </div>
@@ -44,10 +44,10 @@
                             <img class="image" src="<?= base_url("img/editar.png") ?> " title="Editar">
                         </a>
 
-                        <button data-bs-toggle="modal" data-bs-target="#eliminaremergenModal" type="button"
-                            class="btn btn-danger">
-                            <img class="image" src="<?= base_url("img/Eliminar.png") ?> " title="Eliminar">
-                        </button>
+                        <a class="btn btn-danger"  href="#" data-href="<?php echo base_url('rol/eliminar__rol'). '/' .$dato['id_rol']. '/' .'E'; ?>"  data-bs-toggle="modal" data-bs-target="#modal-confirma" src="<?php echo base_url(); ?>/icons/borrar.png" width="16" height="16"  title="Elimina Registro"> 
+                                    <img
+                    class="image" src="<?= base_url("img/Eliminar.png") ?> " title="Eliminar">
+                                   </a>
 
                     </td>
 
@@ -99,6 +99,34 @@
         </div>
     </div>
 </form>
+
+
+<!-- modal confirma -->
+<div class="modal fade" id="modal-confirma" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div style="text-align:center;" class="modaal-header">
+                    <h5  class="modal-title"
+                    
+                        id="exampleModalLabel">Eliminación de Registro<h5>
+
+
+                </div>
+                <div style="text-align:center;font-weight:bold;" class="modal-body">
+                    <p>Seguro Desea Eliminar este Registro?</p>
+                    <tr>
+                           
+                </div>
+                <div class="modal-footer">
+                    <a type="button" class="btn btn-primary close" data-bs-dismiss="modal">No</a>
+                    <a class="btn btn-danger btn-ok">Si</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
 
 

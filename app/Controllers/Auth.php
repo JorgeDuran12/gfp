@@ -98,7 +98,7 @@ class Auth extends BaseController
                 'email' => $this -> request ->getPost('email')
             ]);
 
-            $this -> telefono -> save( [
+            $this -> telefono -> save([
                 'id_usuario' => $id_usuario,
                 'usuario_crea'=> $id_usuario,
                 'prioridad' => 13,
@@ -123,24 +123,28 @@ class Auth extends BaseController
 
     public function AutenticarUsuario(){
 
+
         $email = $this->request->getPost('email');
         $password = $this->request->getPost('password');
-      
+     
         $usuarioModel = new UsuariosModel();
         $emailModel = new EmailsModel();
 
+
         $id_usuario = $emailModel->Id_Usuario_Email($email);
-        
+       
         if ($id_usuario) {
-            
+           
             $usuario = $usuarioModel->Auth_usuario($email);
 
+
             if ($usuario && isset($usuario['pass'])) {
-                
+               
                 if (password_verify($password, $usuario['pass'])) {
 
+
                     $session = session();
-                    
+                   
                     $session->set([
                         'id_usuario' => $id_usuario,
                         'usuario' => $usuario['usuario'],
@@ -149,26 +153,18 @@ class Auth extends BaseController
                         'logged_in' => true
                     ]);
 
-                    if ($usuario['id_rol'] === '1') {
-                        return redirect()->to(base_url('/gestion_de_administradores'));
-                    } elseif ($usuario['id_rol'] === '2') {
-                        return redirect()->to(base_url('/Principal'));
-                    } elseif ($usuario['id_rol'] === '3') {
-                        return redirect()->to(base_url('/Principal'));
-                    } elseif ($usuario['id_rol'] === '4') {
-                        return redirect()->to(base_url('/Principal'));
-                    }
-
+                    $response['mensaje'] = '1';
                 } else{
-                    return redirect()->to(base_url("/"))->with('mensaje', '2' );
+                    $response['mensaje'] = '2';
                 }
-            }       
+            }      
         } else {
-            return redirect()->to(base_url("/"))->with('mensaje', '3' );
+            $response['mensaje'] = '3';
         }
+        return $this->response->setJSON($response);
     }
-    
-    
+
+   
     public function verificar_email($email) {
 
         $resp = $this->usuario->verificar_email_bd($email);

@@ -26,11 +26,17 @@ class DisponibleModel extends Model{
     // protected $skipValidation    = false;
 
 
-
-    public function traer_todos_los_eventos(){
+    //Retornar solo el saldo anterior ( o actual )
+    public function traer_disponible($id){
         $this->select('disponibles.*');
+        $this->where('id_usuario', $id);
         $datos = $this->find();
-        return $datos;
+        
+        if( empty($datos) ) {
+            return 0;
+        }else {
+            return $datos[0]['saldo_anterior'];
+        }
     }
 
 

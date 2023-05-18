@@ -16,10 +16,13 @@ class Principal extends BaseController
     public function index(){
 
         $datos = session();
-    
+        $Disponible = $this->disponible->traer_disponible($datos->id_usuario);
+        
+
         return view("gfp/principal/principal", [
             'tituloPagina' => 'Inicio',
-            'misDatos' => $datos
+            'misDatos' => $datos,
+            'presupuestoActual' => $Disponible
         ]); 
     }
 
@@ -34,15 +37,15 @@ class Principal extends BaseController
 
         $this->disponible->insert([
             'periodo' => $periodo,
-            'saldo_anterior' => 0,
-            'ingreso' => $presupuesto,
+            'saldo_anterior' => $presupuesto,
+            'ingreso' => 0,
             'egreso' => 0,
             'id_usuario' => $idUsuarioGlobal,
         ]);
 
         $session->set(['presupuesto' => $presupuesto ]);
 
-        return redirect()->to(base_url('/principal'));
+        return redirect()->to(base_url('/principal'))->with('estado', 1);
         
     }
 

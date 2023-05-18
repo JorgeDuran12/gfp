@@ -25,18 +25,18 @@
     <link rel="stylesheet" href="<?= base_url('css/general/globalStyless.css') ?>">
     <link rel="stylesheet" href="<?= base_url('css/navbar/navStyless.css') ?>">
     <link rel="stylesheet" href="<?= base_url('css/pagina/paginaStyle.css') ?>">
-    <link rel="stylesheet" href="<?= base_url('css/footer/footerStyles2.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('css/footer/footerStyles3.css') ?>">
     <link rel="stylesheet" href="<?= base_url("/css/usuarios/recuperarcontra2.css")?>">
     <link rel="stylesheet" href="<?= base_url('css/principal/prrincipalStyles.css') ?>">
     <link rel="stylesheet" href="<?= base_url("/css/agenda/pagoStylees.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/actividades/actividad.css")?>">
-    <link rel="stylesheet" href="<?= base_url("/css/saquito/saquito1.css")?>">
-    <link rel="stylesheet" href="<?= base_url("/css/registro/movimiento9.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/css/saquito/saquito.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/css/registro/movimiento1.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/agenda/pagoStyles.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/fullCalendar/fullCalendar.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/123/emergencia4.css")?>">
-    <link rel="stylesheet" href="<?= base_url("/css/123/987654.css")?>">
-    <link rel="stylesheet" href="<?= base_url("/css/perfil/perfilStyles.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/css/123/administrador.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/css/perfil/perfilStyles12.css")?>">
 
     <link rel="stylesheet" href="<?= base_url("/css/layouts/gfpLayout.css")?>">
 

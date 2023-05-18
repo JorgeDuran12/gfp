@@ -70,8 +70,10 @@ $routes->post('buscar_rol/(:num)','Rol::buscar_rol/$1');
 $routes->post('buscar_Registro/(:num)' , 'Saquito::buscar_Registro/$1');
 $routes->post('Insertar','Saquito::Insertar');
 
-$routes->post('eliminados_usuario', 'Usuario::eliminados');
+$routes->get('eliminados_usuario', 'Usuario::eliminados');
 $routes->get('eliminar__usuario', 'Usuario::eliminar__usuario');
+$routes->get('eliminados_rol', 'Rol::eliminados_rol');
+$routes->get('eliminar__rol', 'ROL::eliminar__rol');
 
 
 /* Rutas Login*/

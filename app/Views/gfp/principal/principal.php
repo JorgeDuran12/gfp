@@ -90,7 +90,7 @@ var bar = new ProgressBar.Circle(presupuestoContainer, {
     circle.path.setAttribute('stroke', state.color);
     circle.path.setAttribute('stroke-width', state.width);
 
-    var valorPresupuesto = "<?= $misDatos->presupuesto?>";
+    var valorPresupuesto = "<?= $presupuestoActual?>";
     if (valorPresupuesto == 0) {
       circle.setText(`$0`);
     } else {
@@ -110,6 +110,14 @@ bar.animate(1.0);  // Number from 0.0 to 1.0
 
   const periodo = new Date();
   inputPeriodo.value = periodo.getFullYear();
+
+
+</script>
+
+
+
+<script>
+//
 
 
 </script>

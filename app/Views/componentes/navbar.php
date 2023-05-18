@@ -11,7 +11,7 @@
     <div class="navbar__icons link__last flex flex-column">
       <li class="icon-image"><a href="<?= base_url('mi_perfil')?>"><img src="<?= base_url("icons/perfil.png")?>"/></a></li>
       <span class="icon-name">Ver mi perfil</span>
-      <h6 class="mt-2 fw-bold">ADMIN</h6>
+      <h6 class="mt-2 fw-bold">PANEL</h6>
     </div>
 
     <!-- <div class="navbar__separator"></div> -->
@@ -31,10 +31,10 @@
       <span class="icon-name">Movimientos</span>
     </div>
 
-    <div class="navbar__icons">
+    <!-- <div class="navbar__icons">
       <li class="icon-image"><a href="<?= base_url('fondo_de_emergencia')?>"><img src="<?= base_url("icons/emergencia.png")?>"/></a></li>
       <span class="icon-name">Fondo emergencia</span>
-    </div>
+    </div> -->
 
       <div class="navbar__separator"></div>
     
@@ -42,7 +42,7 @@
         <li class="icon-image"><a href="<?= base_url('gestion_de_administradores')?>"><img src="<?= base_url("icons/empresario.png")?>"/></a></li>
         <span class="icon-name">Administradores</span>
       </div>
-      <div class="navbar__icons">
+       <div class="navbar__icons">
         <li class="icon-image"><a href="<?= base_url('gestion/roles')?>"><img src="<?= base_url("icons/roles.png")?>"/></a></li>
         <span class="icon-name">Manejo De Roles</span>
       </div>
@@ -58,17 +58,4 @@
 
 
 
-
-
-<script>
-  // const icon = document.querySelector('.icon');
-  // const iconName = document.querySelector('.icon-name');
-
-  // icon.addEventListener('mouseenter', () => {
-  //   iconName.classList.add('show');
-  //   setTimeout(() => { iconName.classList.remove('show') }, 1000)
-    
-    
-  // })
-</script>
 

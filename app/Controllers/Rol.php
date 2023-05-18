@@ -47,6 +47,25 @@ class Rol extends BaseController
             return redirect()->to(base_url('/rol'));
         }
     }
+
+
+
+    public function eliminados_rol()
+    {
+        $rol = $this->rol->where('estado', "E")->findAll();   
+        $datos = ['tituloPagina' => 'Rol','roles'=>$rol];
+
+        echo view("gestion/roles/rol_eliminados", $datos);
+    }
+
+
+    public function eliminar__rol($id,$estado){
+        $rol_ = $this->rol->elimina_rol($id,$estado);
+        return redirect()->to(base_url('gestion/roles'));
+     }
+ 
+
+
       //<---------------------------------buscar_rol del model traer_rol -------------------------------------->
       public function buscar_rol($id)
       {

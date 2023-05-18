@@ -4,9 +4,16 @@
 <div class="perfil__container">
 
     <div class="perfil__carta">
-        <div class="perfil__img"></div>
-        <img src="<?= base_url("icons/perfil1.png")?>" alt="iconoPerfil" class="perfil__icono">
-        
+        <div class="perfil__img">
+    <h1>
+        Administracion de perfil
+    </h1>        
+    </div>
+
+    <div class="ubicacion">
+        <img src="<?= base_url("img/perfil.png")?>" alt="iconoPerfil" class="perfil__icono">
+
+    </div>
         
         <div class="perfil__informacion">
             <ul>

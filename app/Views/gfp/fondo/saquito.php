@@ -8,14 +8,13 @@
 <div class="tabla">
     <h1 class="titu">Progreso de saquito</h1>
 
-    <!--<div class="input-group mb-3 date ">
+    <div class="input-group mb-3 date ">
 
-<span class="input-group-text" id="inputGroup-sizing-default"><img
-        src="<= base_url("icons/question-circle-fill.svg")?>"
+<span class="input-group-text" id="inputGroup-sizing-default"> <img src="<?= base_url("icons/question-circle-fill.svg")?>"
         title="En esta opcion debera digitalizar el dia del mes donde el aplicativo debera descontar de la disponibilidad de la cuota para el saquito">
     &nbsp Ingrese  Dia</span>
-<input type="week" class="ss" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-</div>-->
+<input type="date" class="ss" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>
 
     <a href="#" onclick="selecionaRegistro(<?php echo 1 . ',' . 1 ?>);" class="btn btn-success regresar_Btn"
         data-bs-toggle="modal" data-bs-target="#editarModal">Agregar</a>
@@ -160,6 +159,7 @@
 </div>
 
 <script>
+
     $(document).on('blur','.valida', function(event){
         var num1 = parseInt(document.getElementById("valor").value);
         var num2 = parseInt(document.getElementById("numero_cuota").value);
@@ -230,8 +230,8 @@ function selecionaRegistro(id, tp) {
     }
 
 }
+
 </script>
-<script>
 
 
 

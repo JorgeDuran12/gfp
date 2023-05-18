@@ -97,7 +97,7 @@
 
 <div class="modal fade" id="reporteMovimientosModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-        <div class="modal-content">
+        <div class="modal-content" id="movimientos_modal-content">
             <div class="modal-header">
                 
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -144,7 +144,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class=" btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-                <button type="Submit" id="pdfout" class="btn btn-primary">Descargar</button>
+                <!-- <button type="Submit" id="pdfout" class="btn btn-primary">Descargar</button> -->
             </div>
         </div>
     </div>

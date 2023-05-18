@@ -11,7 +11,8 @@ use App\Models\TelefonosModel;
 
 
 class Usuario extends BaseController
-{
+{  
+    protected $perfil;
     protected $usuario,$rol,$parametro,$email,$telefono;
 
     public function __construct()
@@ -25,7 +26,6 @@ class Usuario extends BaseController
 
     public function index()
     {
-        
         $usuario = $this->usuario->where('estado', "A")->findAll();   
         $parametro = $this->parametro->obtener_encabezado_3();   
         $rol = $this->rol->where('estado', "A")->findAll();  
@@ -75,17 +75,17 @@ class Usuario extends BaseController
                     'numero' => $this -> request ->getPost('telefono')
                 ]);
     
-
+                
             } else {
-                $this->usuario->update($this->request->getPost('id_usuario'),[       
+                $this->usuario->update($this->request->getPost('id'),[       
                     'usuario' => $this->request->getPost('usuario'),             
                     'nombre' => $this->request->getPost('nombre'),
                     'apellido' => $this->request->getPost('apellido'),
                     'id_rol' => $this->request->getPost('id_rol'),
                     'tipo_documento' => $this->request->getPost('tipo_documento'),
                     'num_documento' => $this->request->getPost('num_documento'),
-                    'pass' => $this->request->getPost('pass')
-                   
+                    'pass' => $this->request->getPost('pass'),
+                
                 ]);
             }
 

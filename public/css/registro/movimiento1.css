@@ -1,0 +1,262 @@
+        #valor {
+            text-align: center;
+        }
+        
+        #fecha_movimiento {
+            text-align: center;
+        }
+        
+        .form-select {
+            justify-content: center;
+            height: auto;
+            text-align: center;
+        }
+        
+        .tm {
+            width: 600px;
+            text-align: center;
+        }
+        
+        .contenedorMovimiento {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .tl {
+            color: rgb(0, 0, 0);
+            text-align: center;
+        }
+        
+        .dc {
+            width: 600px;
+            height: 100px;
+            color: black;
+            text-align: center;
+            border-radius: 10px;
+        }
+        
+        .movimiento {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 100px auto;
+            height: 100%;
+            flex-direction: column;
+        }
+        
+        .titulo {
+            text-align: center;
+        }
+        
+        .rt {
+            text-align: center;
+        }
+        
+        .tx {
+            text-align: center;
+            width: 600px;
+        }
+        
+        .image {
+            width: auto;
+            height: 25px;
+            border-radius: 7px;
+        }
+        
+        .img {
+            width: auto;
+            height: 46px;
+            border-radius: 7px;
+        }
+        
+        .hh {
+            display: flex;
+            position: relative;
+        }
+        
+        #movimientos_modal-content {
+            width: 800px;
+            background: #e9e9e9;
+            /* text-align: center; */
+            border-color: white;
+            border-width: 1px;
+            border-style: solid;
+        }
+        
+        #movimientos_modal-content {
+            width: 850px;
+            /* left: -150px; */
+            background-color: #4771a3;
+        }
+        
+        #reporteMovimientosModal {
+            width: 100%;
+        }
+        
+        #contenedor_modal_Movimiento {
+            width: 100%;
+        }
+        
+        .modal-body {
+            /* text-align: center; */
+            position: relative;
+            width: 100%;
+        }
+        /* --------------------------------------------------------------------- */
+        
+        .btn-neon {
+            position: relative;
+            display: inline-block;
+            padding: 15px 30px;
+            color: #fff;
+            letter-spacing: 4px;
+            text-decoration: none;
+            font-size: 15px;
+            overflow: hidden;
+            transition: 0.2s;
+        }
+        
+        .btn-neon:hover {
+            background: #edeef6ea;
+            box-shadow: 0 0 10px #edeef6, 0 0 40px #edeef6, 0 0 80px #edeef6;
+            transition-delay: 1s;
+        }
+        
+        .btn-neon span {
+            position: absolute;
+            display: block;
+        }
+        
+        #span1 {
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #edeef6);
+        }
+        
+        .btn-neon:hover #span1 {
+            left: 100%;
+            transition: 1s;
+        }
+        
+        #span3 {
+            bottom: 0;
+            right: -100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(270deg, transparent, #edeef6);
+        }
+        
+        .btn-neon:hover #span3 {
+            right: 100%;
+            transition: 1s;
+            transition-delay: 0.5s;
+        }
+        
+        #span2 {
+            top: -100%;
+            right: 0;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(180deg, transparent, #edeef6);
+        }
+        
+        .btn-neon:hover #span2 {
+            top: 100%;
+            transition: 1s;
+            transition-delay: 0.25s;
+        }
+        
+        #span4 {
+            bottom: -100%;
+            left: 0;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(360deg, transparent, #edeef6);
+        }
+        
+        .btn-neon:hover #span4 {
+            bottom: 100%;
+            transition: 1s;
+            transition-delay: 0.75s;
+        }
+        
+        .btn-guardar {
+            background-color: #133e59;
+            display: inline-block;
+            padding: 5px 10px;
+            color: #53b469ea;
+            letter-spacing: 4px;
+            text-decoration: none;
+            font-size: 15px;
+            overflow: hidden;
+            transition: 0.2s;
+            border: none;
+        }
+        
+        .btn-guardar:hover {
+            background: #53b469ea;
+            box-shadow: 0 0 10px #edeef6, 0 0 40px #edeef6, 0 0 80px #edeef6;
+            transition-delay: 1s;
+        }
+        
+        .btn-guardar span {
+            position: absolute;
+            display: block;
+        }
+        
+        #span1 {
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #edeef6);
+        }
+        
+        .btn-guardar:hover #span1 {
+            left: 100%;
+            transition: 1s;
+        }
+        
+        #span3 {
+            bottom: 0;
+            right: -100%;
+            /* width: 100%; */
+            height: 2px;
+            background: linear-gradient(270deg, transparent, #edeef6);
+        }
+        
+        .btn-guardar:hover #span3 {
+            right: 100%;
+            transition: 1s;
+            transition-delay: 0.5s;
+        }
+        
+        #span2 {
+            top: -100%;
+            right: 0;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(180deg, transparent, #edeef6);
+        }
+        
+        .btn-guardar:hover #span2 {
+            top: 100%;
+            transition: 1s;
+            transition-delay: 0.25s;
+        }
+        
+        #span4 {
+            bottom: -100%;
+            left: 0;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(360deg, transparent, #edeef6);
+        }
+        
+        .btn-guardar:hover #span4 {
+            bottom: 100%;
+            transition: 1s;
+            transition-delay: 0.75s;
+        }

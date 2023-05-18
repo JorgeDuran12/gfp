@@ -17,7 +17,7 @@
 
         &nbsp<a href="<?php echo base_url('/principal'); ?>" class="btn btn-primary regresar_Btn">Regresar</a> &nbsp
 
-        <a href="#" onclick="pdf()">pdf ahora </a>
+        <!-- <a href="#" onclick="pdf()">pdf ahora </a> -->
         
     </div>
     <div id="contenedor">
@@ -82,10 +82,10 @@
         <div class="input_container">
                   <label class="input_label" for="email_field">Selecione rol</label>
                   <img src="<?= base_url("icons/person-vcard-fill.svg")?>" class="icon">
-                  <select class="select" name="id_rol" id="id_rol" aria-label="Default select example" required>
+                  <select class="select_administrador" name="id_rol" id="id_rol" aria-label="Default select example" required>
                   <?php foreach ($roles as $data) {?>
                     
-                      <option value="<?php echo $data['id_rol']; ?>"><?php echo $data["nombre"];?></option>
+                      <option value="<?php echo $data['id_rol'];?>" class="black_opcion"><?php echo $data["nombre"];?></option>
                 <?php } ?>
             </select>
         </div>
@@ -109,7 +109,7 @@
               <div class="input_container">
                   <label class="input_label" for="email_field">Tipo de documento</label>
                   <img src="<?= base_url("icons/person-vcard-fill.svg")?>" class="icon">
-                  <select class="select"  name="tipo_documento" id="tipo_documento"aria-label="Default select example" required>
+                  <select class="select_administrador"  name="tipo_documento" id="tipo_documento"aria-label="Default select example" required>
                   <?php foreach ($parametros as $data) {?>
                       <option value="<?php echo $data['id_parametro_det']; ?>"><?php echo $data["nombre"];?></option>
                 <?php } ?>
@@ -147,11 +147,11 @@
         <input placeholder="Contraseña" name="pass" type="password" class="input_field" id="pass"  require >
     </div>
     
-     <div class="input_container">
+     <!-- <div class="input_container">
         <label class="input_label" for="email_field">Confirmar contraseña</label>
         <img src="<?= base_url("icons/shield-lock-fill.svg")?>" class="icon">
         <input placeholder="Validar contraseña" name="input-name" type="password"  class="input_field" id="valid_password">
-        </div> 
+        </div>  -->
         
          <div class="input_container">
             <label class="input_label" for="email_field">Correo electronico</label>
@@ -277,17 +277,17 @@ function limpiarCampos() {
 }
 
 
-   function pdf(){
-    alert('ya');
-    doc = new jsPDF('P','mm', 'letter');
-       doc.setFonSise(40);
-       doc.text( 40,20, "Octocat loves jsPDF");
-       doc.line(0, 80 - 60,100, 80-60)
-       doc.text(`Fuerza`, 10,40);
-       doc.text(`Magia`, 10,30);
-       doc.text(`velocidad`, 10,20);
-       doc.save(`autorizacion_"+".pdf`);
-   }
+//    function pdf(){
+//     alert('ya');
+//     doc = new jsPDF('P','mm', 'letter');
+//        doc.setFonSise(40);
+//        doc.text( 40,20, "Octocat loves jsPDF");
+//        doc.line(0, 80 - 60,100, 80-60)
+//        doc.text(`Fuerza`, 10,40);
+//        doc.text(`Magia`, 10,30);
+//        doc.text(`velocidad`, 10,20);
+//        doc.save(`autorizacion_"+".pdf`);
+//    }
    
 </script>
 

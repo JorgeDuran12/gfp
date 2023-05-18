@@ -36,16 +36,14 @@ class RolModel extends Model{
     return $datos;
 }
 
+public function elimina_rol($id,$estado){
+    $datos = $this->update($id, ['estado' => $estado]);         
+    return $datos;
+}
 
 
     // <-----------------------------------funcion eliminar en vista principal----------------------------------->
 
-public function elimina_rol($id,$estado){
-    $datos = $this->update($id, ['estado' => $estado]);         
-    return $datos;
-
-    
-}
 public function obtenerusuario(){
     $this->select('roles.*');
       $this->where('estado', 'A');
