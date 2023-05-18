@@ -60,6 +60,7 @@
 </div>
 
 <script>
+    
 const msg = "<?= session()->getFlashdata('mensaje') ?>";
 if (msg === '2' ) {
     $('#mensaje_error').text('La contraseña no coincide').show().delay(3000).fadeOut();
