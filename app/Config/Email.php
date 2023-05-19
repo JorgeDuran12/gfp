@@ -23,22 +23,22 @@ class Email extends BaseConfig
     /**
      * The server path to Sendmail.
      */
-    public string $mailPath = '/usr/sbin/sendmail';
+    // public string $mailPath = '/usr/sbin/sendmail';
 
     /**
      * SMTP Server Address
      */
-    public string $SMTPHost = 'smtp.sendgrid.net';
+    public string $SMTPHost = 'smtp.gmail.com';
 
     /**
      * SMTP Username
      */
-    public string $SMTPUser = 'apikey';
+    public string $SMTPUser = 'delassalasospino2003@gmail.com';
 
     /**
      * SMTP Password
      */
-    public string $SMTPPass = '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';
+    public string $SMTPPass = 'rapgtmydglixvxne';
 
     /**
      * SMTP Port
@@ -58,7 +58,7 @@ class Email extends BaseConfig
     /**
      * SMTP Encryption. Either tls or ssl
      */
-    public string $SMTPCrypto = 'tls';
+    public string $SMTPCrypto = 'ssl';
 
     /**
      * Enable word-wrap

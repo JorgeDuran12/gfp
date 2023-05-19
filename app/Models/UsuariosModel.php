@@ -26,15 +26,35 @@ class UsuariosModel extends Model{
 
  // <-------------funcion traer_usuario que sera usada en controlador por la funcion  buscar_usuario----------------------->
  
-    public function traer_usuario($id){
-        $this->select('usuarios.*, roles.nombre as rol_nombre, parametros_det.nombre as pf_tp');
-        $this->join('roles', 'roles.id_rol = usuarios.id_rol');
-        $this->join('parametros_det', 'parametros_det.id_parametro_det = usuarios.tipo_documento');
-        $this->where('usuarios.estado','A');
-        $this->where('usuarios.id_usuario',$id);
-        $datos = $this->first();  
-        return $datos;
-    }
+
+ public function traer_usuario(){
+
+    $session = session();
+    $id_usuario = $session->get('id_usuario');
+
+    $this->select('usuarios.*, roles.nombre as rol_nombre, parametros_det.nombre as pf_tp, telefonos.numero as telefono, emails.email as email');
+    $this->join('roles', 'roles.id_rol = usuarios.id_rol');
+    $this->join('telefonos', 'telefonos.id_usuario = usuarios.id_usuario');
+    $this->join('emails','emails.id_usuario = usuarios.id_usuario');
+    $this->join('parametros_det', 'parametros_det.id_parametro_det = usuarios.tipo_documento');
+    $this->where('usuarios.estado','A');
+    $this->where('usuarios.id_usuario',$id_usuario);
+    $datos = $this->first();  
+    return $datos;
+}
+
+
+    //public function traer_usuario($id){
+    //      $this->select('usuarios.*, roles.nombre as rol_nombre, parametros_det.nombre as pf_tp, telefonos.numero as telefono, emails.email as email');
+    //      $this->join('roles', 'roles.id_rol = usuarios.id_rol');
+    //      $this->join('telefonos', 'telefonos.id_usuario = usuarios.id_usuario');
+    //      $this->join('emails','emails.id_usuario = usuarios.id_usuario');
+    //      $this->join('parametros_det', 'parametros_det.id_parametro_det = usuarios.tipo_documento');
+    //      $this->where('usuarios.estado','A');
+    //     $this->where('usuarios.id_usuario',$id);
+    //     $datos = $this->first();  
+    //      return $datos;
+    //  }
 
     public function DataActualizar($id, $estado)
     {

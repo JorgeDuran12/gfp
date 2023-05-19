@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="<?= base_url('css/pagina/paginaStyle.css') ?>">
     <link rel="stylesheet" href="<?= base_url('css/footer/footerStyles3.css') ?>">
     <link rel="stylesheet" href="<?= base_url("/css/usuarios/recuperarcontra2.css")?>">
-    <link rel="stylesheet" href="<?= base_url('css/principal/prrincipalStyles.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('css/principal/prrincipalStyles1.css') ?>">
     <link rel="stylesheet" href="<?= base_url("/css/agenda/pagoStylees.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/actividades/actividad.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/saquito/saquito.css")?>">

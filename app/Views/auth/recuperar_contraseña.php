@@ -32,8 +32,8 @@ let inputIdUsuario = document.querySelector('#id_usuario');
 const usuarioId = "<?= $session->usuarioId?>";
 // console.log(usuarioId)
 
-const status = "<?= $session->statusRecuperarPass?>";
-console.log(status);
+// const status = "<?= $session->statusRecuperarPass?>";
+// console.log(status);
 
     if(usuarioId) {
 

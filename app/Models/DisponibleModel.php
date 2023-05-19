@@ -13,7 +13,7 @@ class DisponibleModel extends Model{
     // protected $returnType     = 'array';  /* forma en que se retornan los datos */
     // protected $useSoftDeletes = false; /* si hay eliminacion fisica de registro */
 
-    protected $allowedFields = ['periodo', 'saldo_anterior', 'ingreso', 'egreso', 'estado', 'fecha_crea', 'id_usuario']; /* relacion de campos de la tabla */
+    protected $allowedFields = ['periodo', 'saldo_anterior', 'ingreso', 'egreso', 'estado', 'fecha_crea', 'id_usuario', 'presupuesto_anual']; /* relacion de campos de la tabla */
 
     // protected $useTimestamps = true; /*tipo de tiempo a utilizar */
     // protected $dateFormat    = 'datetime'; /* Tipo fecha */
@@ -39,6 +39,19 @@ class DisponibleModel extends Model{
         }
     }
 
+
+
+    //informacion de trasabilidad
+    public function obtener_trasabilidad(){
+        $session = session();
+        $id_usuario = $session->get('id_usuario');
+
+        $this->select('disponibles.*');
+        $this->where('estado', 'A');
+        $this->where('id_usuario', $id_usuario);
+        $datos = $this->findAll();  //nos trae todos los registros que cumplan con una condicion dada 
+        return $datos;
+    }
 
 
 }

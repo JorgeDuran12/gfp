@@ -4,7 +4,7 @@
 
 <div class="principal__container">
   <span class="mt-4 fw-bold fs-3">Bienvenido 
-    <span class="text-info text-capitalize"><?=$misDatos->usuario; ?>,
+    <span class="text-info text-capitalize"> <?=$misDatos->usuario; ?>,
   
     </span>
     aqui tienes todas las estadisticas de tu cuenta.
@@ -18,11 +18,50 @@
         type="button" 
         class="btn btn-danger"
         data-bs-toggle="modal" data-bs-target="#modalAgregar"
+        id="btn-agregarPresupuesto"
         >Ingresar presupuesto</button>
       </div>
+         <!-- <--------------trasabilidad----------------------> 
+      <div class="div__cont">
+        <table class="table table-bordered table-sm table-striped" id="dataTable1" width="100%"
+                                cellspacing="0">
+                                <thead>
+                                    <tr>
 
-      <div class="div__cont"><canvas id="myChart2" width=""></canvas></div>
+                                        <th>perido</th>
+                                        <th>saldo_anterior</th>
+                                        <th>ingreso</th>
+                                        <th>egreso</th>
+                                        <th>presupuesto anual</th>
+                                        
+                                     
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                  
+                                <?php foreach ($trasabilidad as $dato) { ?>
+                                        <tr>
+                                            <td><?php echo $dato ['periodo'];?></td>
+                                            <td><?php echo $dato ['saldo_anterior'];?></td>
+                                            <td><?php echo $dato ['ingreso'];?></td>
+                                            <td><?php echo $dato ['egreso'];?></td>
+                                            <td><?php echo $dato ['presupuesto_anual'];?></td>
+                                           
+                                            </tr>
+                                            <?php } ?>
+                            
+                                </tbody>
+                            </table>
+        <canvas id="myChart2" width=""></canvas>
+    
+    </div>
       
+
+
+
+
       <div class="div__cont">3</div>
   </div>
   
@@ -69,8 +108,9 @@
 <script>
 
 //Referencias HTML
-presupuestoContainer = document.querySelector('#presupuesto');
-inputPeriodo = document.querySelector('#periodo_input');
+let presupuestoContainer = document.querySelector('#presupuesto');
+let inputPeriodo = document.querySelector('#periodo_input');
+let btnPresupuesto = document.querySelector('#btn-agregarPresupuesto');
 
 var bar = new ProgressBar.Circle(presupuestoContainer, {
   color: '#aaa',
@@ -95,6 +135,7 @@ var bar = new ProgressBar.Circle(presupuestoContainer, {
       circle.setText(`$0`);
     } else {
       circle.setText(`$${valorPresupuesto}`);
+      btnPresupuesto.hidden = true
     }
 
   }
@@ -108,8 +149,12 @@ bar.animate(1.0);  // Number from 0.0 to 1.0
             
 <script>
 
+//Colocar año actual al input 
   const periodo = new Date();
   inputPeriodo.value = periodo.getFullYear();
+
+//Quitar botono si ya agrego un presupuesto
+
 
 
 </script>

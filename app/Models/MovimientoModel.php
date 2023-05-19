@@ -40,4 +40,19 @@ class MovimientoModel extends Model{
 
     }
 
+    public function tasa_movimiento(){
+        $session = session();
+        $id_usuario = $session->get('id_usuario');
+        
+        $this->select('movimientos.*, clase_movimiento, valor');
+        $this->where('usuario_crea', $id_usuario);
+        $this->where('estado', 'A');
+        $datos = $this->findAll();
+        return $datos;
+
+    }
+
+
+
+
 }

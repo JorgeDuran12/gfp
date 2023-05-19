@@ -39,6 +39,7 @@ $routes->get('mi_perfil', 'Perfil::index');
 
 
 $routes->get('/', 'Auth::index');
+$routes->get('recuperar_contraseña', 'Auth::Recuperar_Clave_Pagina');
 
 //Rutas SendGrid
 $routes->get('enviar_token', 'SendGrid::enviar_token_pass');
@@ -57,6 +58,7 @@ $routes->get('eliminar_evento/(:any)', 'Agenda::eliminar/$1');
 
 
 $routes->get('mi_saquito', 'Saquito::index');
+$routes->get('proyeccion', 'Proyeccion::index');
 $routes->get('mis_movimientos', 'Movimiento::index');
 $routes->get('fondo_de_emergencia', 'Emergencia::index');
 $routes->get('gestion/roles', 'Rol::index');

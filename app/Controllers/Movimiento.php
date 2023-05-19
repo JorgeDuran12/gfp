@@ -7,17 +7,12 @@ use App\Models\MovimientoModel;
 use App\Models\ParamentrosModel;
 use Dompdf\Dompdf;
 
-
 class Movimiento extends BaseController
 
  {    
 
-
-
   protected $Movimiento;
   protected $parametros;
-
-
 
 
     public function __construct()
@@ -29,25 +24,19 @@ class Movimiento extends BaseController
 
     public function index()
     {
-      // $Movimiento = $this-> Movimiento ->where('estado','A')->findAll();
       $Movimiento = $this-> Movimiento-> traer();
-      // $Movimiento = $this-> Movimiento-> nombreMovimiento();
       $tipo_movimiento = $this-> parametros ->obtener_encabezado_1();
       $clase_movimiento_Model = new ParamentrosModel();
       $clase_movimiento = $clase_movimiento_Model -> obtener_encabezado_2();
-
+      
         echo view("gfp/registro/movimientos",  [
             'tituloPagina' => 'Mis movimientos',
             'tipo_movi' => $tipo_movimiento,
             'clase_movi' => $clase_movimiento,
-            'Movimientos' => $Movimiento,
-            
+            'Movimientos' => $Movimiento,   
         ]);
     }
 
-
-     
-    
 
     public function insertar()
     {
@@ -68,8 +57,13 @@ class Movimiento extends BaseController
             return redirect()->to(base_url('/mis_movimientos'));
         }
 
-    
-    }
+
+
+        public function calculo(){
+            $Movi_model = new MovimientoModel();
+            $calculo = $Movi_model -> tasa_movimiento();
+        }
+}
 
 
 

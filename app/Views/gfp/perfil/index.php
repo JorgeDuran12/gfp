@@ -20,13 +20,13 @@
                     <li class="fw-bold fs-4">Nombre de usuario: <span class="fw-normal"><?= $DatosPerfil['usuario']?></span> </li>
                     <li class="fw-bold fs-4">Nombres: <span class="fw-normal"><?= $DatosPerfil['nombre']?></span> </li>
                     <li class="fw-bold fs-4">Apellidos: <span class="fw-normal"><?= $DatosPerfil['apellido']?></span> </li>
-                    <li class="fw-bold fs-4">Documento: <span class="fw-normal">
+                     <li class="fw-bold fs-4">Documento: <span class="fw-normal"> 
                         <?= $DatosPerfil['pf_tp']?>
                          - <?= $DatosPerfil['num_documento']?></span> 
                     </li>
-                    <li class="fw-bold fs-4">Rol actual: <span class="fw-normal"><?= $DatosPerfil['rol_nombre']?></span> </li>
-                    <li class="fw-bold fs-4">Email: <span class="fw-normal"> <?= session() -> email ?> </span> </li>
-                    <li class="fw-bold fs-4">Telefono: <span class="fw-normal"> <?= $dataTelefono['numero']?> </span> </li>
+                        <li class="fw-bold fs-4">Rol actual: <span class="fw-normal"><?= $DatosPerfil['rol_nombre']?></span> </li>
+                        <li class="fw-bold fs-4">Email: <span class="fw-normal"> <?= $DatosPerfil['email']?> </span> </li>
+                        <li class="fw-bold fs-4">Telefono: <span class="fw-normal"> <?= $DatosPerfil['telefono']?> </span> </li>
             </ul>
 
         </div>

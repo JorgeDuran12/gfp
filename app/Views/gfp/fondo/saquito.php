@@ -10,13 +10,10 @@
 
     <div class="input-group mb-3 date ">
 
-<span class="input-group-text" id="inputGroup-sizing-default"> <img src="<?= base_url("icons/question-circle-fill.svg")?>"
-        title="En esta opcion debera digitalizar el dia del mes donde el aplicativo debera descontar de la disponibilidad de la cuota para el saquito">
-    &nbsp Ingrese  Dia</span>
-<input type="date" class="ss" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+
 </div>
 
-    <a href="#" onclick="selecionaRegistro(<?php echo 1 . ',' . 1 ?>);" class="btn btn-success regresar_Btn"
+    <a href="#" id="agregrar"onclick="selecionaRegistro(<?php echo 1 . ',' . 1 ?>);" class="btn btn-success regresar_Btn"
         data-bs-toggle="modal" data-bs-target="#editarModal">Agregar</a>
 
     <!--&nbsp <a href="<?php echo base_url(''); ?>" class="btn btn-secondary regresar_Btn">Eliminados</a>-->
@@ -52,6 +49,8 @@
                     data-bs-target="#editarModal" width="16" height="16" title="Editar Registro">
                     <img class="image" src="<?= base_url("img/editar.png") ?> " title="Editar">
                 </a>
+
+                <!-- <input hidden id="vr" name="vr" value="1"> -->
 
                 
 
@@ -112,6 +111,10 @@
                     </div>
                     <br>
                     <div class="tma">
+                    <span class="input-group-text" id="inputGroup-sizing-default"> <img src="<?= base_url("icons/question-circle-fill.svg")?>"
+                            title="En esta opcion debera digitalizar el dia del mes donde el aplicativo debera descontar de la disponibilidad de la cuota para el saquito">
+                            &nbsp Ingrese  Dia
+                    </span>
                         <input type="date" class="form-control" name="fecha_inicial" id="fecha_inicial"
                             placeholder="Fecha inicial: " required>
                         <label for="floatingInput"></label>
@@ -159,6 +162,7 @@
 </div>
 
 <script>
+
 
     $(document).on('blur','.valida', function(event){
         var num1 = parseInt(document.getElementById("valor").value);
@@ -230,6 +234,17 @@ function selecionaRegistro(id, tp) {
     }
 
 }
+
+
+// const valor = document.getElementById('vr')
+
+// console.log(valor.value);
+//    $(document).ready(function() {
+//     if (valor == 1){
+//       console.log("si estoy")
+//     }
+// });
+
 
 </script>
 

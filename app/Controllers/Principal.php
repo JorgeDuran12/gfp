@@ -11,16 +11,22 @@ class Principal extends BaseController
     public function __construct()
     {
         $this->disponible = new DisponibleModel();
+        
+
     }
 
     public function index(){
 
         $datos = session();
+        
         $Disponible = $this->disponible->traer_disponible($datos->id_usuario);
+        $trasabilidad_model = new DisponibleModel();
+        $trasabilidad = $trasabilidad_model->obtener_trasabilidad();
         
 
         return view("gfp/principal/principal", [
             'tituloPagina' => 'Inicio',
+            'trasabilidad' => $trasabilidad,
             'misDatos' => $datos,
             'presupuestoActual' => $Disponible
         ]); 
@@ -45,7 +51,7 @@ class Principal extends BaseController
 
         $session->set(['presupuesto' => $presupuesto ]);
 
-        return redirect()->to(base_url('/principal'))->with('estado', 1);
+        return redirect()->to(base_url('/principal'))->with('estadoPresupuesto', 1);
         
     }
 

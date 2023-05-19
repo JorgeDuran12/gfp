@@ -66,6 +66,52 @@ class Auth extends BaseController
             'session' => session()
         ]);
     }
+    
+    public function enviar_token_pass()
+    {
+        //Servicio de email - Transportador
+        $email = \Config\Services::email();
+
+        $emailInput = $this->request->getPost('email');
+        $nuevaPass = $this->request->getPost('nuevaPass');
+
+        //Instanciar Modelo Usuario y traer datos
+        $usuariosModel = new UsuariosModel();
+        $infoUsuario = $usuariosModel->verificar_email_bd( $emailInput );
+        if( $infoUsuario != null ) {
+            $idUsuario = $infoUsuario['id_usuario'];
+        }
+        if( $emailInput ) {
+
+          //generar token
+            $caracteres = "0123456789abcdefghijklmnopqrst";
+            $token = generarCaracteres($caracteres, 5);
+
+            //Enviar token al correo respectivo
+            $email->setFrom('delassalasospino2003@gmail.com');
+            $email->setTo('krast646@gmail.com');
+            $email->setSubject('Este es el asunto');
+            $email->setMessage('Este es el mensaje');
+
+            if($email->send()) {
+                echo 'enviado';
+            }else {
+                echo 'no enviado';
+            }
+
+            
+        }else if( $nuevaPass ){
+
+
+        }
+
+    } 
+
+    public function verificar_token()
+    {
+
+    }
+    /*  */
 
     public function guardar(){   
 
