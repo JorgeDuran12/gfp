@@ -162,7 +162,6 @@ class Auth extends BaseController
                 'telefonos' => $this -> request ->getPost('telefono'),
                 'logged_in' => true
             ]);
-
             return redirect()->to('/Principal'); 
         }
     }
@@ -200,6 +199,7 @@ class Auth extends BaseController
                     ]);
 
                     $response['mensaje'] = '1';
+
                 } else{
                     $response['mensaje'] = '2';
                 }

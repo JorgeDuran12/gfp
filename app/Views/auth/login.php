@@ -60,7 +60,6 @@
 </div>
 
 <script>
-
 // const msg = "<= session()->getFlashdata('mensaje') ?>";
 
 // if (msg === '2' ) {
@@ -94,12 +93,17 @@ $(document).ready(function() {
             success: function(response) {
                 console.log(response);
                 if (response.mensaje === '2') {
-                    $('#mensaje_error').text('El correo o la contraseña son incorrectos').show().delay(3000).fadeOut();
-                } else if (response.mensaje === '3'){
-                    $('#mensaje_error').text('La cuenta no existe').show().delay(3000).fadeOut();
-                 }else{
-                    window.location.href = "<?= base_url('Principal') ?>";
-                 }
+                    $('#mensaje_error').text('El correo o la contraseña son incorrectos')
+                        .show().delay(3000).fadeOut();
+                } else if (response.mensaje === '3') {
+                    $('#mensaje_error').text('La cuenta no existe').show().delay(3000)
+                        .fadeOut();
+                } else {
+                    setTimeout(function() {
+                        window.location.href = "<?= base_url('Principal') ?>";
+                    }, 2000);
+
+                }
             },
             error: function() {
                 alert("Error");
@@ -107,7 +111,6 @@ $(document).ready(function() {
         });
     });
 });
-
 </script>
 
 <?= $this->endSection("contenido")?>

@@ -17,7 +17,7 @@
         
         <div class="perfil__informacion">
             <ul>
-                    <li class="fw-bold fs-4">Nombre de usuario: <span class="fw-normal"><?= $DatosPerfil['usuario']?></span> </li>
+                    <li class="fw-bold fs-4">Nombre de usuario: <span class="fw-normal"> <?= $DatosPerfil['usuario']?> </span> </li>
                     <li class="fw-bold fs-4">Nombres: <span class="fw-normal"><?= $DatosPerfil['nombre']?></span> </li>
                     <li class="fw-bold fs-4">Apellidos: <span class="fw-normal"><?= $DatosPerfil['apellido']?></span> </li>
                      <li class="fw-bold fs-4">Documento: <span class="fw-normal"> 
