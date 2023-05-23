@@ -84,8 +84,7 @@
 
       <div class="modal-body">
         <!-- Formulario -->
-        <form action="<?= base_url("agregar_presupuesto")?>" method="post">
-          <div class="mb-3 flex w-100">
+            <div class="mb-3 flex w-100">
             <label for="presupuesto" class="form-label">De cuanto quieres que sea tu presupuesto </label>
             <input type="text" required
               class="form-control" name="presupuesto_input" id="presupuesto_input" aria-describedby="helpId" placeholder="Ej: 1000000">
@@ -155,15 +154,11 @@ bar.animate(1.0);  // Number from 0.0 to 1.0
 
 //Quitar botono si ya agrego un presupuesto
 
-
-
 </script>
 
 
 
 <script>
-//
-
 
 </script>
 

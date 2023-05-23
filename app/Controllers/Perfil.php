@@ -26,5 +26,10 @@ class Perfil extends BaseController
         
     }
 
+    public function traer_informacion() {
+        $miPerfil = $this->perfil->traer_usuario();
+        echo json_encode($miPerfil);
+    }
+
     
 }

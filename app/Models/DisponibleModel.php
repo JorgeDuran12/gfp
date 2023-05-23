@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models; //Reservamos el espacio de nombre de la ruta app\models
+namespace App\Models; 
 
 use CodeIgniter\Model;
 
@@ -39,8 +39,6 @@ class DisponibleModel extends Model{
         }
     }
 
-
-
     //informacion de trasabilidad
     public function obtener_trasabilidad(){
         $session = session();
@@ -50,6 +48,18 @@ class DisponibleModel extends Model{
         $this->where('estado', 'A');
         $this->where('id_usuario', $id_usuario);
         $datos = $this->findAll();  //nos trae todos los registros que cumplan con una condicion dada 
+        return $datos;
+    }
+
+    public function datos_ingreso(){
+        $session = session();
+        $id_usuario = $session->get('id_usuario');
+
+        $this->select('disponibles.saldo_anterior, ingreso , egreso');
+        $this->where('estado','A');
+        $this->where('id_usuario', $id_usuario);
+        $datos = $this-> first();
+        // var_dump($datos);
         return $datos;
     }
 

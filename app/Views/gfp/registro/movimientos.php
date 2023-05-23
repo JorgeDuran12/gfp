@@ -37,7 +37,7 @@
             </select> -->
 
             <label for="floatingInput">Clase de movimiento</label>
-            <select class="form-select" name="clase_movimiento" id="clase_movimiento" aria-label="Floating label select example"  required>
+            <select class="form-select valida" name="clase_movimiento" id="clase_movimiento" aria-label="Floating label select example"  required>
              <!-- <option selected required >Clase de movimiento</option>  -->
                 <?php foreach ($clase_movi as $data) {?>
              
@@ -48,7 +48,7 @@
         <br>
 
         <div class="tx">
-            <input type="number" class="form-control" placeholder="Valor" id="valor" name="valor" required>
+            <input type="number" class="form-control valida" placeholder="Valor" id="valor" name="valor" required>
             <label for="floatingInput"></label>
         </div>
         <br>
@@ -152,57 +152,41 @@
 </div>
 </div>
  <!-- gnerador de pdf -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.debug.js"></script>
 
 
 
 <script>
 
+    const saldo_anterior = <?= $disponibles['saldo_anterior']?>;
+    const ingreso = <?= $disponibles['ingreso']?>;
+    const egreso = <?= $disponibles['egreso']?>;
+    console.log("saldo" +saldo_anterior);
+    console.log("ingreso" +ingreso)
+    console.log("egreso" + egreso)
+    let resultado = saldo_anterior + ingreso;
+    document.write(resultado);
 
-         //    solicitar los datos de la tabla
-        contenedor = document.getElementById('contenedor'),pdfout = document.getElementById('pdfout');
+    $(document).on('blur', '.valida', function(event) {
+        var valor = parseInt(document.getElementById("valor").value);
+        var tipo = parseInt(document.getElementById("clase_movimiento").value);
+        if(valor && tipo){
+        // Realizar la división
+        var resultado = valor - egreso;
      
-    //    generador de pdf
-    pdfout.onclick =  function (){
-    
-        const doc =  new jsPDF('p','pt','letter');
-        const margin = 20;
-        const scale = (doc.internal.pageSize.width - margin * 2 ) / document.body.clientWidth;
-        const scale_mobile = (doc.internal.pageSize.width - margin * 2 ) / document.body.getBoundingClientRect();
- 
-         // checkin
-         if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-            //mobile
-            doc.html(contenedor,{
-                x:margin,
-                y:margin,
-                html2canvas:{
-                    scale:scale_mobile,
-                },
-                callback: function(doc){
-                      doc.uotput
-                      ('dataurlnewwindow',{filname:'pdf.pdf'}); 
-                }
-                
-            });
-         }else{
-            //pc 
-            doc.html(contenedor,{
-                x:margin,
-                y:margin,
-                html2canvas:{
-                    scale:scale,
-                },
-                callback: function(doc){
-                      doc.uotput
-                      ('dataurlnewwindow',{filname:'pdf.pdf'}); 
-                }
-                
-            });
+         console.log("resultado" + resultado);
 
-         }
+        }
 
-    };
+    })
+
+
+
+
+
+
+
+
+
 </script>
 
 

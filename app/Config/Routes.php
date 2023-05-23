@@ -71,6 +71,8 @@ $routes->post('buscar_usuario/(:num)','Usuario::buscar_usuario/$1');
 $routes->post('buscar_rol/(:num)','Rol::buscar_rol/$1');
 $routes->post('buscar_Registro/(:num)' , 'Saquito::buscar_Registro/$1');
 $routes->post('Insertar','Saquito::Insertar');
+$routes->post('Insertar_proyeccion','Proyeccion::Insertar');
+
 
 $routes->get('eliminados_usuario', 'Usuario::eliminados');
 $routes->get('eliminar__usuario', 'Usuario::eliminar__usuario');

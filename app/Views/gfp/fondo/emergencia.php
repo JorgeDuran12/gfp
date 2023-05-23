@@ -26,7 +26,7 @@
          <input type="number" class="emergencia__input" name="emergencia__valor" id="emergencia__valor">
      </form>
 
-     <div class="a_emergencia__">
+     <div class="a_emergencia__"></div>
 
          <a href="#" class="btn btn-success ancla_emergencia">Guardar</a>
 
@@ -44,5 +44,16 @@
 
  </div>
  </div>
+
+
+<script>
+
+    const saldo_anterior = <?= $disponibles['saldo_anterior']?>;
+    const ingreso = <?= $disponibles['ingreso']?>;
+
+    let resultado = saldo_anterior + ingreso;
+    document.write(resultado);
+
+</script>
 
  <?= $this->endSection("contenido")?>

@@ -31,10 +31,10 @@
       <span class="icon-name">Movimientos</span>
     </div>
 
-    <!-- <div class="navbar__icons">
+    <div class="navbar__icons">
       <li class="icon-image"><a href="<?= base_url('fondo_de_emergencia')?>"><img src="<?= base_url("icons/emergencia.png")?>"/></a></li>
       <span class="icon-name">Fondo emergencia</span>
-    </div> -->
+    </div>
 
       <div class="navbar__separator"></div>
     

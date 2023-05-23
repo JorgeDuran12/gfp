@@ -52,7 +52,30 @@ class MovimientoModel extends Model{
 
     }
 
+    public function suma(){
+        $session = session();
+        $id_usuario = $session->get('id_usuario');
 
+        $this->select('movimientos.*, usuario_crea, sum(valor) as suma_total');
+        $this->where('estado', 'A');
+        $this->where('usuario_crea', $id_usuario);
+        $this->where('clase_movimiento', 3);
+        $datos = $this->findAll();
+        // var_dump($datos);
+        return $datos;
+    }
 
+    public function resta(){
+        $session = session();
+        $id_usuario = $session->get('id_usuario');
+
+        $this->select('movimientos.*, usuario_crea, sum(valor) as suma_total');
+        $this->where('estado', 'A');
+        $this->where('usuario_crea', $id_usuario);
+        $this->where('clase_movimiento', 4);
+        $datos = $this->findAll();
+        // var_dump($datos);
+        return $datos;
+    }
 
 }
