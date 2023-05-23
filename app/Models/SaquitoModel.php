@@ -44,7 +44,18 @@ class SaquitoModel extends Model{
             $this->where('usuario_crea', $id_usuario);
             $data = $this->findAll();
             return $data;
-    
+        }
+
+        public function traerId_saquito()
+        {
+            $session = session();
+            $id_usuario = $session->get('id_usuario');
+
+            $this->select('saquitos.*');
+            $this->where('estado', 'A');
+            $this->where('usuario_crea', $id_usuario);
+            $datos = $this->first();
+            return $datos['id_saquito'];
         }
 }
 

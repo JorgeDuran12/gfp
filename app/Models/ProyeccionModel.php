@@ -23,17 +23,12 @@ class ProyeccionModel extends Model{
     protected $validationRules    = [];
     protected $validationMessages = [];
     protected $skipValidation    = false;
-
-
+ 
     public function traer(){
-
-        $session = session();
-        $id_usuario = $session->get('id_usuario');
-
+        
         $this->select('proyeccion.*');
         $this->where('estado', 'A');
-        $this->where('usuario_crea', $id_usuario);
-        $data = $this->findAll();
+        $data = $this->first();
         return $data;
 
     }
