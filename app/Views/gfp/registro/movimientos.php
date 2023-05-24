@@ -26,8 +26,23 @@
             </select>
 
         </div>
+     
+<!-- <--------------actualizacion ----------->
+        <div  class="tx">
+            <input  type="number" class="form-control valida" placeholder="ingreso" id="ingreso" name="ingreso" required>
+            <label for="floatingInput"></label>
+        </div>
+        <div  class="tx">
+            <input type="number" class="form-control valida" placeholder="egreso" id="egreso" name="egreso" required>
+            <label for="floatingInput"></label>
+        </div>
+        <div   class="tx">
+            <input type="number" class="form-control valida" placeholder="presupuesto" id="presupuesto" name="presupuesto" required>
+            <label for="floatingInput"></label>
+        </div>
         <br>
-        
+        <br>
+
         <div class="tm">
 
             <!-- <select class="form-select"  aria-label="Floating label select example" id="clase_movimiento" name="clase_movimiento" required>
@@ -46,6 +61,7 @@
             </select>
         </div>
         <br>
+
 
         <div class="tx">
             <input type="number" class="form-control valida" placeholder="Valor" id="valor" name="valor" required>
@@ -89,6 +105,8 @@
 
       </div>
         </div>
+
+     
         
     </form>
 
@@ -160,27 +178,48 @@
     const saldo_anterior = <?= $disponibles['saldo_anterior']?>;
     const ingreso = <?= $disponibles['ingreso']?>;
     const egreso = <?= $disponibles['egreso']?>;
+    const presu = <?= $disponibles['presupuesto_anual']?>;
     console.log("saldo" +saldo_anterior);
-    console.log("ingreso" +ingreso)
-    console.log("egreso" + egreso)
+    console.log("ingreso" +ingreso);
+    console.log("egreso" + egreso);
+    console.log("presu" + presu);
     let resultado = saldo_anterior + ingreso;
     document.write(resultado);
 
     $(document).on('blur', '.valida', function(event) {
         var valor = parseInt(document.getElementById("valor").value);
         var tipo = parseInt(document.getElementById("clase_movimiento").value);
-        if(valor && tipo){
+        if(tipo == 3 && valor){
         // Realizar la división
-        var resultado = valor - egreso;
-     
+        var resultado = valor + ingreso;
          console.log("resultado" + resultado);
+
+
+       var total = valor + presu;
+
+       console.log("ingreso actual es de " + resultado + "el presupuesto anual esta en" + total );
+            document.getElementById("ingreso").value=resultado;
+            document.getElementById("egreso").value=egreso;
+            document.getElementById("presupuesto").value=total;
+        }else{
+            var resultado = valor + egreso;
+
+            var total = presu - valor;
+
+            console.log("engreso actual es de " + resultado + "el presupuesto anual esta en" + total );
+
+            console.log("resultado" + resultado);
+            document.getElementById("egreso").value=resultado;
+            document.getElementById("ingreso").value=ingreso;
+            document.getElementById("presupuesto").value=total;
 
         }
 
     })
-
-
-
+    
+    
+    
+    //  document.getElementById("ingreso").value=resultado
 
 
 

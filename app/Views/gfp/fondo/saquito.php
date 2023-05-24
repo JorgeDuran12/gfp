@@ -6,17 +6,21 @@
 </div><br>
 
 <div class="tabla">
-    <h1 class="titu">Progreso de saquito</h1>
+    <!-- <h1 class="titu">Progreso de saquito</h1> -->
 
     <div class="input-group mb-3 date ">
 
 
-</div>
+     </div>
 
-    <a href="#" id="agregrar"onclick="selecionaRegistro(<?php echo 1 . ',' . 1 ?>);" class="btn btn-success regresar_Btn"
+    <a href="#" id="agregar"onclick="selecionaRegistro(<?php echo 1 . ',' . 1 ?>);" class="btn btn-success regresar_Btn"
         data-bs-toggle="modal" data-bs-target="#editarModal">Agregar</a>
+        
+<!--        
+     <button type="button" id="olcultar">Ocultar botón acción</button> 
+<button type="button" id="show">Mostrar botón acción</button>  -->
 
-    <!--&nbsp <a href="<?php echo base_url(''); ?>" class="btn btn-secondary regresar_Btn">Eliminados</a>-->
+    <!-- &nbsp <a href="<?php echo base_url(''); ?>" class="btn btn-secondary regresar_Btn">Proyeccion</a> -->
 
    
 </div>
@@ -63,6 +67,8 @@
 </table>
 </div>
 </div>
+
+
 
 </form>
 
@@ -155,6 +161,7 @@
     </div>
 </div>
 
+
 <!-- <---------------------div de header y footer------------------->
 </div>
 
@@ -162,6 +169,17 @@
 </div>
 
 <script>
+     
+     $(function (){
+        $('#show').click(function(){
+          $('#agregar').show();
+        });
+       
+        $('#btn_guardar_saquito').click(function(){
+	      $('#agregar').hide();
+        });
+        
+      })
 
 
     $(document).on('blur','.valida', function(event){

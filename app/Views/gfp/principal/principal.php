@@ -15,7 +15,7 @@
         <h4>Presupuesto actual:</h4>
         <span id="presupuesto"></span>
         <button 
-        type="button" 
+        type="submit" 
         class="btn btn-danger"
         data-bs-toggle="modal" data-bs-target="#modalAgregar"
         id="btn-agregarPresupuesto"

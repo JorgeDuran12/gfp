@@ -51,6 +51,8 @@ class Movimiento extends BaseController
                     
             $session = session();
             $id_usuario = $session->get('id_usuario');
+             $id_disponible = new DisponibleModel();
+             $identificador = $id_disponible->traer_id_disponible();
              
                 $this->Movimiento->save([
                     'descripcion' => $this->request->getPost('descripcion'),
@@ -60,14 +62,17 @@ class Movimiento extends BaseController
                     'fecha_movimiento' => $this->request->getPost('fecha_movimiento'),
                     'usuario_crea' => $id_usuario,
                 ]);
-            //    $this->disponible->update($this->request->getPost('id_disponible'),[
-            //     'ingreso' => $this->request->getPost('ingreso'),
-            //     'egreso' => $this->request->getPost('egreso'),
-            //     'presupuesto_anual' => $this->request->getPost('presupuesto_anual'),
-            //    ]);
+                $this->disponible->update($identificador,[
+                'ingreso' => $this->request->getPost('ingreso'),
+                 'egreso' => $this->request->getPost('egreso'),
+               'presupuesto_anual' => $this->request->getPost('presupuesto'),
+               'id_usuario' => $id_usuario,
+
+              ]);
             } 
             return redirect()->to(base_url('/mis_movimientos'));
         }
+        
 
 
 

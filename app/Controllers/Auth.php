@@ -111,6 +111,7 @@ class Auth extends BaseController
     {
 
     }
+
     /*  */
 
     public function guardar(){   
@@ -153,6 +154,7 @@ class Auth extends BaseController
 
             $session = session();
             $session->set([ 
+                'id_usuario' => $id_usuario,
                 'usuario' => $this->request->getPost('usuario'),
                 'nombre' => $this->request->getPost('nombre'),
                 'apellido' => $this->request->getPost('apellido'),
@@ -162,6 +164,7 @@ class Auth extends BaseController
                 'telefonos' => $this -> request ->getPost('telefono'),
                 'logged_in' => true
             ]);
+
             return redirect()->to('/Principal'); 
         }
     }
@@ -194,9 +197,11 @@ class Auth extends BaseController
                         'id_usuario' => $id_usuario,
                         'usuario' => $usuario['usuario'],
                         'email' => $email,
-                        'rol' => $usuario['id_rol'],
+                        'id_rol' => $usuario['id_rol'],
                         'logged_in' => true
                     ]);
+                    
+                    $response['id_rol'] = $usuario['id_rol'];
 
                     $response['mensaje'] = '1';
 

@@ -38,24 +38,20 @@
 
       <div class="navbar__separator"></div>
     
-    <div class="navbar__icons">
+    <div class="navbar__icons" id="Admin_gestion">
         <li class="icon-image"><a href="<?= base_url('gestion_de_administradores')?>"><img src="<?= base_url("icons/empresario.png")?>"/></a></li>
         <span class="icon-name">Administradores</span>
-      </div>
-       <div class="navbar__icons">
+    </div>
+
+    <div class="navbar__icons">
         <li class="icon-image"><a href="<?= base_url('gestion/roles')?>"><img src="<?= base_url("icons/roles.png")?>"/></a></li>
         <span class="icon-name">Manejo De Roles</span>
-      </div>
+    </div>
 
       <div class="navbar__icons navbar__icon-logout">
         <li class="icon-image"><a href="<?= base_url('auth/logout')?>"><img src="<?= base_url("icons/logout.png")?>"/></a></li>
         <span class="icon-name">Salir</span>
       </div>
-      
   </ul>
-
 </div>
-
-
-
 

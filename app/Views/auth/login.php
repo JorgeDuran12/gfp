@@ -52,9 +52,7 @@
                     <a class="" href="<?php echo base_url('CrearCuenta'); ?>">Crear mi cuenta!</a>
 
                 </div>
-
             </form>
-
         </div>
     </div>
 </div>
@@ -68,30 +66,23 @@
 //     $('#mensaje_error').text('La cuenta no existe').show().delay(3000).fadeOut();
 // }
 
-
-
-
-
-
 $(document).ready(function() {
     $('#formulario').submit(function(event) {
         event.preventDefault();
 
-
         let email = $('#email').val();
         let password = $('#password').val();
-
 
         $.ajax({
             url: "<?= base_url('AutenticarUsuario'); ?>",
             type: 'POST',
             data: {
                 email: email,
-                password: password
+                password: password,
             },
             dataType: 'JSON',
             success: function(response) {
-                console.log(response);
+                // console.log(response);
                 if (response.mensaje === '2') {
                     $('#mensaje_error').text('El correo o la contraseña son incorrectos')
                         .show().delay(3000).fadeOut();
@@ -99,10 +90,19 @@ $(document).ready(function() {
                     $('#mensaje_error').text('La cuenta no existe').show().delay(3000)
                         .fadeOut();
                 } else {
-                    setTimeout(function() {
-                        window.location.href = "<?= base_url('Principal') ?>";
-                    }, 2000);
-
+                    if (response.id_rol === '1') {
+                        setTimeout(function() {
+                            window.location.href = "<?= base_url('principal') ?>";
+                        }, 1000);
+                    } else if (response.id_rol === '2') {
+                        setTimeout(function() {
+                            window.location.href = "<?= base_url('principal') ?>";
+                        }, 1000);
+                    } else if (response.id_rol === '3' || response.id_rol === '4') {
+                        setTimeout(function() {
+                            window.location.href = "<?= base_url('principal') ?>";
+                        }, 1000);
+                    }
                 }
             },
             error: function() {

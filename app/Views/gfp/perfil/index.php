@@ -34,11 +34,7 @@
                 <li>DOCUMENTO:</li>
                 <span><?= $DatosPerfil['pf_tp']?> - <?= $DatosPerfil['num_documento']?></span>
             </ul>
-            <!-- Editar informacion (Button) -->
-            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalPerfil" onclick="mostrarDatos(1)">
-                <img type="image" src="<?= base_url("img/editar.png")?>" />
-            </button>
-            
+
             <h3 class="mt-5 mb-3 text-white fw-bold text-uppercase">Contacto</h3>
             <ul class="d-flex">
                 <li>TELEFONO PRINCIPAL:</li>
@@ -49,9 +45,16 @@
                 <span><?= $DatosPerfil['email']?></span>
             </ul>
             <!-- Editar contacto (Button) -->
-            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalPerfil" onclick="mostrarDatos(2)">
+            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalPerfil" onclick="mostrarDatos()">
                 <img type="image" src="<?= base_url("img/editar.png")?>" />
             </button>
+
+            <h3 class="mt-5 mb-3 text-white fw-bold text-uppercase">Cambiar contraseña</h3>
+            <form action="" class="d-flex flex-column">
+                <input type="password" placeholder="Contraseña actual" class="mb-3">
+                <input type="password" placeholder="Nueva contraseña" class="mb-3">
+                <button class="btn btn-outline-primary">Cambiar</button>
+            </form>
 
             <!-- Modal -->
   <div class="modal fade" id="modalPerfil" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -65,9 +68,12 @@
           <div class="alert alert-danger" role="alert" id="mensajeError" hidden></div>
           <div class="modal-body">
             <!-- Formulario -->
-            <form class="d-flex flex-column" id="datosFormulario" action="<?= base_url("actualizar_perfil")?>" method="POST" onsubmit="return validateForm()">
+            <form class="d-flex flex-column" id="datosFormulario" action="<?= base_url("perfil/editar_informacion")?>" method="POST" onsubmit="return validateForm()">
                 <input type="text" hidden
                   class="form-control"  name="id" id="id" aria-describedby="helpId" placeholder="Ej: Henrry1">
+              
+                <input type="number" hidden
+                  class="form-control"  name="tp" id="tp" aria-describedby="helpId" placeholder="Ej: Henrry1">
               
               <div class="mb-3" id="divINput">
                 <label for="usuario" class="form-label" id="titleLabel">Nombre de Usuario o Apodo: </label>
@@ -89,10 +95,10 @@
                 </div>
               </div>
 
-              <div class="mb-3">
+              <div class="mb-3" id="select-id">
                 <label for="documento" class="form-label" id="titleLabel">Documento de identidad:</label>
                 <div class="d-flex" id="divINput">
-                    <select name="tipo Documento" id="tipo Documento" value="tipo Documento" class="text-body">
+                    <select name="tipo_Documento" id="tipo_Documento" value="tipo Documento" class="text-body">
                         <option class="text-body" value="">C.C</option>
                         <option class="text-body" value="">C.E</option>
                         <option class="text-body" value="">T.I</option>
@@ -102,6 +108,20 @@
                     class="form-control" name="num_documento" id="num_documento" aria-describedby="helpId" placeholder="Ej: 1048264444"/>
                 </div>
               </div>
+
+              <div class="d-flex w-100">
+                <label for="">Emails</label>
+                  <select name="" id="" class="w-50">
+                    <option value="">Emails</option>
+                  </select>
+
+                  <label for="">Telefonos</label>
+                  <select name="" id="" class="w-50">
+                    <option value="">teleonos</option>
+                  </select>
+              </div>
+
+                
 
         
             </div>
@@ -126,63 +146,39 @@
 
 <script>
 
+var inputTp = document.querySelector('#tp');
 var inputUsuario = document.querySelector('#usuario');
 var inputNombres = document.querySelector('#nombres');
 var inputApellidos = document.querySelector('#apellidos');
-var inputTipoDoc = document.querySelector('#tipo Documento');
-var inputNumDoc= document.querySelector('#num_documento');
+var inputTipoDoc = document.querySelector('#tipo_Documento');
+var inputNumDoc = document.querySelector('#num_documento');
 
 var labelInputs = document.querySelectorAll('#titleLabel');
 
+var selectDiv = document.querySelector('#select-id');
+
 
     function mostrarDatos( id ) {
-        if( id === 1 ) {
-            limpiarCampos( id );
+     
             $.ajax({
                 url: "<?= base_url("perfil/traer_informacion")?>",
                 type: "GET",
                 dataType: "json",
                 success: function ( data ) {
                     console.log(data);
-
+                    
+                    inputTp.value = 1
                     inputUsuario.value = data['usuario'];
                     inputNombres.value = data['nombre'];
                     inputApellidos.value = data['apellido'];
                     // inputApellidos.value = data['apellido'];
                     inputNumDoc.value = data['num_documento'];
-
                 }
             })
-        }else if( id === 2 ) {
-            limpiarCampos( id )
-
-
-
-        }
+      
     }
 
-    function limpiarCampos( id ) {
-
-            if( id === 1 ) {
-                inputUsuario.hidden = false;
-                inputNombres.hidden = false;
-                inputApellidos.hidden = false;
-                inputNumDoc.hidden = false;
-
-            }else {
-                inputUsuario.hidden = true;
-                inputNombres.hidden = true;
-                inputApellidos.hidden = true;
-                inputNumDoc.hidden = true;
-
-                labelInputs.forEach((item, i) => {
-                    item.innerText = '';
-                    item.hidden = true;
-                })
-
-                // inputTipoDoc.innerHTML = '';
-            }
-    }
+   
 </script>
 
 <?= $this->endSection('contenido')?>

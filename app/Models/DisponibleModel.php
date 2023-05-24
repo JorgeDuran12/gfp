@@ -55,12 +55,23 @@ class DisponibleModel extends Model{
         $session = session();
         $id_usuario = $session->get('id_usuario');
 
-        $this->select('disponibles.saldo_anterior, ingreso , egreso');
+        $this->select('disponibles.saldo_anterior, ingreso , egreso , presupuesto_anual, id_disponible , id_usuario');
         $this->where('estado','A');
         $this->where('id_usuario', $id_usuario);
         $datos = $this-> first();
         // var_dump($datos);
         return $datos;
+    }
+    public function traer_id_disponible()
+    {
+        $session = session();
+        $id_usuario = $session->get('id_usuario');
+
+        $this->select('disponibles.*');
+        $this->where('estado', 'A');
+        $this->where('id_usuario', $id_usuario);
+        $datos = $this->first();
+        return $datos['id_disponible'];
     }
 
 

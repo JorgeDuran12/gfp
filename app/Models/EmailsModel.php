@@ -67,4 +67,13 @@ class EmailsModel extends Model{
       return $datos ? $datos['id_usuario'] : null;
   }
 
+  public function traer_emails_by_id( $id )
+  {
+    $this->select('emails.*');
+    $this->where('estado','A');
+    $this->where('id_usuario',$id);
+    $datos = $this->findAll();  
+    return $datos;
+  }
+
 }

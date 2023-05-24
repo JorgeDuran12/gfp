@@ -47,6 +47,14 @@ public function Perfiltelefono() {
     return $datos;
 }
 
+public function traer_telefonos_by_id( $id ) {
+    $this->select('telefonos.*');
+    $this->where('estado','A');
+    $this->where('id_usuario',$id);
+    $datos = $this->findAll();  
+    return $datos;
+}
+
     // <-----------------------------------funcion eliminar en vista principal----------------------------------->
 
 //  public function elimina_usuario($id,$estado){

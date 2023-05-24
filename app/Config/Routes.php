@@ -62,6 +62,7 @@ $routes->get('proyeccion', 'Proyeccion::index');
 $routes->get('mis_movimientos', 'Movimiento::index');
 $routes->get('fondo_de_emergencia', 'Emergencia::index');
 $routes->get('gestion/roles', 'Rol::index');
+
 $routes->get('gestion/usuarios', 'Usuario::index');
 $routes->get('gestion_de_administradores', 'Usuario::index');
 
@@ -72,6 +73,10 @@ $routes->post('buscar_rol/(:num)','Rol::buscar_rol/$1');
 $routes->post('buscar_Registro/(:num)' , 'Saquito::buscar_Registro/$1');
 $routes->post('Insertar','Saquito::Insertar');
 $routes->post('Insertar_proyeccion','Proyeccion::Insertar');
+
+// $routes->post('insertar/(:num)','Movimiento::insertar/$1');
+
+//$routes->post('proyeccion_saquito','Proyeccion::Insertar');
 
 
 $routes->get('eliminados_usuario', 'Usuario::eliminados');
