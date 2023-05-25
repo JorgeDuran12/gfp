@@ -9,16 +9,14 @@ use App\Models\SaquitoModel;
 
 class Proyeccion extends BaseController
 {
-    protected $proyeccion;
+    // protected $proyeccion;
     protected $saquito;
     //protected $movimiento;
 
-    
     public function __construct()
-    
     {
         // $this->Movimineto = new MovimientoModel();
-        $this->Proyeccion = new ProyeccionModel();
+        // $this->Proyeccion = new ProyeccionModel();
         $this->usuario = new UsuariosModel();
         $this->saquito = new SaquitoModel();
         
@@ -26,10 +24,16 @@ class Proyeccion extends BaseController
    
     public function index()
     {
-        $Proyeccion= $this->Proyeccion->traer();
+        $session = session();
+
+        $proye = new ProyeccionModel();
+
+        $proyeccion = $proye -> traer();
+
         echo view("gfp/fondo/proyeccion_saquito", [
             'tituloPagina' => 'Proyeccion',
-            'proyeccion' => $Proyeccion,
+            'proyeccion' => $proyeccion,
+            'misDatos' => $session
             
         ]);
     }

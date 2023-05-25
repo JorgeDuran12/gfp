@@ -21,12 +21,12 @@ class Agenda extends BaseController
         $idUsuarioglobal = $session->id_usuario;
 
         $datosEventos = $this->agenda->traer_todos_los_eventos_por_usuario($idUsuarioglobal);
-        $session = session();
 
         echo view("gfp/agenda/pago", [
             'tituloPagina' => 'Agenda de pagos',
             'eventos' => $datosEventos,
             'session' => $session,
+            'misDatos' => $session,
         ]);
         
     }

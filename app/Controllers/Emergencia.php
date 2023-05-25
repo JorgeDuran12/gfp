@@ -16,6 +16,7 @@ class Emergencia extends BaseController
         
     public function index()
     {
+        $session = session();
         // $movi = $this-> movimiento ->resta();
         // $movi = $this-> movimiento ->suma();
         $disponibles = $this-> disponible ->datos_ingreso();
@@ -24,6 +25,7 @@ class Emergencia extends BaseController
             'tituloPagina' => 'Fondo de emergencia',
             // 'suma' => $movi,
             'disponibles' => $disponibles,
+            'misDatos' => $session
         ]);
     }
    

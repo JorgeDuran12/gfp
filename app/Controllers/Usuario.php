@@ -26,14 +26,21 @@ class Usuario extends BaseController
 
     public function index()
     {
+        $session = session();
+
         $usuario = $this->usuario->where('estado', "A")->findAll();   
         $parametro = $this->parametro->obtener_encabezado_3();   
         $rol = $this->rol->where('estado', "A")->findAll();  
         $email = $this->email->where('estado', "A")->findAll();     
         $telefono = $this->telefono->where('estado', "A")->findAll();    
-        $datos = ['tituloPag' => 'Administrador','usuarios'=>$usuario, 'roles'=>$rol, 'parametros'=>$parametro, 'tituloPagina' => 'Administradores' ];
 
-        echo view("gestion/administrador/administrador", $datos);
+        echo view("gestion/administrador/administrador", [
+            'tituloPagina' => 'Administradores',
+            'usuarios'=>$usuario, 
+            'roles'=>$rol, 
+            'parametros'=>$parametro, 
+            'misDatos' => $session,
+        ]);
     }
 
     public function insertar()

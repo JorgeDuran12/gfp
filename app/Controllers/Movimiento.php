@@ -29,6 +29,8 @@ class Movimiento extends BaseController
 
     public function index()
     {
+      $session = session();
+
       $Movimiento = $this-> Movimiento-> traer();
       $tipo_movimiento = $this-> parametros ->obtener_encabezado_1();
       $clase_movimiento_Model = new ParamentrosModel();
@@ -41,6 +43,7 @@ class Movimiento extends BaseController
             'clase_movi' => $clase_movimiento,
             'Movimientos' => $Movimiento,   
             'disponibles' => $disponibles,
+            'misDatos' => $session
         ]);
     }
 
@@ -62,6 +65,7 @@ class Movimiento extends BaseController
                     'fecha_movimiento' => $this->request->getPost('fecha_movimiento'),
                     'usuario_crea' => $id_usuario,
                 ]);
+                
                 $this->disponible->update($identificador,[
                 'ingreso' => $this->request->getPost('ingreso'),
                  'egreso' => $this->request->getPost('egreso'),

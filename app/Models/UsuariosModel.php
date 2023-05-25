@@ -92,5 +92,14 @@ class UsuariosModel extends Model{
     }
 
 
-    
+    public function traer_info_usuario_rol( $id )
+    {
+    $this->select('usuarios.*, roles.nombre as rol_nombre');
+    $this->join('roles', 'roles.id_rol = usuarios.id_rol');
+    $this->where('usuarios.estado','A');
+    $this->where('usuarios.id_usuario',$id);
+    $datos = $this->first();  
+    return $datos;
+    }
+
 }

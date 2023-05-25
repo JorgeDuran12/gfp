@@ -28,7 +28,7 @@ class SaquitoModel extends Model{
         public function traer_saquitos($id, $estado){
 
             $this->select('saquitos.*');
-            $this->where('id_saquito', $id);
+            $this->where('usuario_crea', $id);
             $this->where('estado', $estado);
             $datos = $this->first();  // nos trae el registro que cumpla con una condicion dada 
             return $datos;

@@ -8,7 +8,6 @@
 </div>
 <div class="contenedorMovimiento" >
     <form method="POST" action="<?php echo base_url('/movimiento/insertar'); ?>" autocomplete="off" class="movimiento">
-    <br><br>
         <div class="tm">
 
             <!-- <select class="form-select"  aria-label="Floating label select example" id="tipo_movimiento" name="tipo_movimiento" required>
@@ -27,21 +26,21 @@
 
         </div>
      
-<!-- <--------------actualizacion ----------->
-        <div  class="tx">
-            <input  type="number" class="form-control valida" placeholder="ingreso" id="ingreso" name="ingreso" required>
+                                          <!-- <--------------actualizacion ----------->
+
+       <!-- esta parte esta oculta en la vista  -->
+       <div  class="tx" >
+            <input  type="hidden" class="form-control valida" placeholder="ingreso" id="ingreso" name="ingreso" required>
             <label for="floatingInput"></label>
         </div>
         <div  class="tx">
-            <input type="number" class="form-control valida" placeholder="egreso" id="egreso" name="egreso" required>
+            <input type="hidden" class="form-control valida" placeholder="egreso" id="egreso" name="egreso" required>
             <label for="floatingInput"></label>
         </div>
         <div   class="tx">
-            <input type="number" class="form-control valida" placeholder="presupuesto" id="presupuesto" name="presupuesto" required>
+            <input type="hidden" class="form-control valida" placeholder="presupuesto" id="presupuesto" name="presupuesto" required>
             <label for="floatingInput"></label>
         </div>
-        <br>
-        <br>
 
         <div class="tm">
 
@@ -99,20 +98,14 @@
         <span id="span2"></span>
         <span id="span3"></span>
         <span id="span4"></span>
-        Reporte De Movimientos
+          Reporte De Movimientos
       </a></div>
         </div>&nbsp&nbsp&nbsp&nbsp&nbsp
 
       </div>
         </div>
-
-     
-        
     </form>
-
     </div>
-
-
 <div class="modal fade" id="reporteMovimientosModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content" id="movimientos_modal-content">
@@ -169,64 +162,60 @@
     </div>
 </div>
 </div>
- <!-- gnerador de pdf -->
-
 
 
 <script>
 
-    const saldo_anterior = <?= $disponibles['saldo_anterior']?>;
-    const ingreso = <?= $disponibles['ingreso']?>;
-    const egreso = <?= $disponibles['egreso']?>;
-    const presu = <?= $disponibles['presupuesto_anual']?>;
-    console.log("saldo" +saldo_anterior);
-    console.log("ingreso" +ingreso);
-    console.log("egreso" + egreso);
-    console.log("presu" + presu);
-    let resultado = saldo_anterior + ingreso;
-    document.write(resultado);
+const saldo_anterior = <?= $disponibles['saldo_anterior']?>;
+const ingreso = <?= $disponibles['ingreso']?>;
+const egreso = <?= $disponibles['egreso']?>;
+const presu = <?= $disponibles['presupuesto_anual']?>;
+console.log("saldo" + saldo_anterior);
+console.log("ingreso" + ingreso);
+console.log("egreso" + egreso);
+console.log("presu" + presu);
 
-    $(document).on('blur', '.valida', function(event) {
-        var valor = parseInt(document.getElementById("valor").value);
-        var tipo = parseInt(document.getElementById("clase_movimiento").value);
-        if(tipo == 3 && valor){
-        // Realizar la división
-        var resultado = valor + ingreso;
-         console.log("resultado" + resultado);
+$(document).on('blur', '.valida', function(event) {
+    let valor = parseInt(document.getElementById("valor").value);
+    let tipo = parseInt(document.getElementById("clase_movimiento").value);
 
-
-       var total = valor + presu;
-
-       console.log("ingreso actual es de " + resultado + "el presupuesto anual esta en" + total );
-            document.getElementById("ingreso").value=resultado;
-            document.getElementById("egreso").value=egreso;
-            document.getElementById("presupuesto").value=total;
-        }else{
-            var resultado = valor + egreso;
-
-            var total = presu - valor;
-
-            console.log("engreso actual es de " + resultado + "el presupuesto anual esta en" + total );
-
-            console.log("resultado" + resultado);
-            document.getElementById("egreso").value=resultado;
-            document.getElementById("ingreso").value=ingreso;
-            document.getElementById("presupuesto").value=total;
-
-        }
-
-    })
+    let nuevoIngreso = ingreso;
+    let nuevoEgreso = egreso;
     
+    if (tipo === 3 && valor) {
+        // Realizar la suma al saldo anterior y al ingreso
+        let resultado = saldo_anterior + valor;
+        let total = presu + valor;
+        
+        console.log("El ingreso actual es de " + nuevoIngreso + ". El presupuesto anual está en " + total);
+        
+        nuevoIngreso += valor;
+
+    } else {
+        // Realizar la resta al saldo anterior y al egreso
+        let resultado = saldo_anterior - valor;
+        let total = presu - valor;
+        
+        console.log("El egreso actual es de " + nuevoEgreso + ". El presupuesto anual está en " + total);
+        
+        nuevoEgreso += valor;
+    }
     
+    document.getElementById("ingreso").value = nuevoIngreso;
+    document.getElementById("egreso").value = nuevoEgreso;
+
+    presupuesto_anual = saldo_anterior + nuevoIngreso - nuevoEgreso;
     
-    //  document.getElementById("ingreso").value=resultado
+    document.getElementById("presupuesto").value = presupuesto_anual;
 
-
-
-
+});
 
 
 </script>
+
+
+
+
 
 
 

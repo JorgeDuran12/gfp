@@ -16,10 +16,15 @@ class Rol extends BaseController
 
     public function index()
     {
-        $rol = $this->rol->where('estado', "A")->findAll();   
-        $datos = ['tituloPagina' => 'Rol','roles'=>$rol];
+        $session = session();
 
-        echo view("gestion/roles/rol", $datos);
+        $rol = $this->rol->where('estado', "A")->findAll();   
+
+        echo view("gestion/roles/rol", [
+            'tituloPagina' => 'Rol',
+            'roles'=>$rol,
+            'misDatos' => $session
+        ]);
     }
 
     public function insertar()

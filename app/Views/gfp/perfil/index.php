@@ -50,10 +50,10 @@
             </button>
 
             <h3 class="mt-5 mb-3 text-white fw-bold text-uppercase">Cambiar contraseña</h3>
-            <form action="" class="d-flex flex-column">
-                <input type="password" placeholder="Contraseña actual" class="mb-3">
-                <input type="password" placeholder="Nueva contraseña" class="mb-3">
-                <button class="btn btn-outline-primary">Cambiar</button>
+            <form action="<?= base_url("perfil/cambiar_clave")?>" method="post" onsubmit="return verificarCampos()" class="d-flex flex-column">
+                <input id="old_pass" name="old_pass" type="password" placeholder="Contraseña actual" class="mb-3">
+                <input id="new_pass" name="new_pass" type="password" placeholder="Nueva contraseña" class="mb-3">
+                <button class="btn btn-outline-primary" type="submit">Cambiar</button>
             </form>
 
             <!-- Modal -->
@@ -97,31 +97,49 @@
 
               <div class="mb-3" id="select-id">
                 <label for="documento" class="form-label" id="titleLabel">Documento de identidad:</label>
-                <div class="d-flex" id="divINput">
+                <div class="d-flex" id="">
                     <select name="tipo_Documento" id="tipo_Documento" value="tipo Documento" class="text-body">
-                        <option class="text-body" value="">C.C</option>
-                        <option class="text-body" value="">C.E</option>
-                        <option class="text-body" value="">T.I</option>
-                        <option class="text-body" value="">P.E</option>
+                      <?php foreach($tipoDoc as $row ) { ?>
+                          <option class="text-body" value="<?= $row['id_parametro_det']?>"><?= $row['resumen']?></option>
+                      <?php } ?>
                     </select>
                     <input type="text"
                     class="form-control" name="num_documento" id="num_documento" aria-describedby="helpId" placeholder="Ej: 1048264444"/>
                 </div>
               </div>
 
-              <div class="d-flex w-100">
-                <label for="">Emails</label>
-                  <select name="" id="" class="w-50">
-                    <option value="">Emails</option>
+              <label for="">Emails: </label>
+              <div class="d-flex w-100 h-100 align-items-center">
+                <select class="text-body p-2">
+                    <?php foreach($prioridad as $row ) { ?>
+                        <option class="text-body" value="<?= $row['id_parametro_det']?>"><?= $row['resumen']?></option>
+                    <?php } ?>
                   </select>
-
-                  <label for="">Telefonos</label>
-                  <select name="" id="" class="w-50">
-                    <option value="">teleonos</option>
-                  </select>
+                  <select class="text-body p-2">
+                      <?php foreach($emails as $row ) { ?>
+                          <option class="text-body" value="<?= $row['id_email']?>"><?= $row['email']?></option>
+                      <?php } ?>
+                    </select>
+                  <button type="button" onclick="" class="btn btn-danger m-1">-</button>
+                  <button type="button" onclick="agregarRegistro('email')" class="btn btn-warning">+</button>
+                </div>
+                
+                <label for="">Telefonos: </label>
+                <div class="d-flex w-100 h-100 align-items-center">
+                  <select class="text-body p-2">
+                    <?php foreach($prioridad as $row ) { ?>
+                      <option class="text-body" value="<?= $row['id_parametro_det']?>"><?= $row['resumen']?></option>
+                      <?php } ?>
+                    </select>
+                    <select class="text-body p-2">
+                      <?php foreach($telefonos as $row ) { ?>
+                        <option class="text-body" value="<?= $row['id_telefono']?>"><?= $row['numero']?></option>
+                        <?php } ?>
+                    </select>
+                    <button type="button" onclick="" class="btn btn-danger m-1">-</button>
+                    <button type="button" onclick="agregarRegistro('telefono')" class="btn btn-warning">+</button>
               </div>
 
-                
 
         
             </div>
@@ -146,9 +164,44 @@
 
 <script>
 
+var inputOldPass = document.querySelector('#old_pass');
+var inputNewPass = document.querySelector('#new_pass');
+
+  /* Cambiar clave */
+  function verificarCampos() {
+
+    let oldPass = inputOldPass.value;
+    let newPass = inputNewPass.value;
+
+    if( oldPass.length <= 1  || newPass.length <= 1  ) {
+      return false;
+    }
+  }                   
+
+  const estadopass = "<?= $misDatos->estado_perfil_pass?>";
+  if( estadopass === 'true' ) {
+    Swal.fire({
+      title: 'Contraseña actualizada',
+      text: 'Se ha actualizado la contraseña correctamente',
+      confirmButtonText: 'Aceptar'
+    })
+
+  }else if( estadopass === 'false' ) {
+    Swal.fire({
+      title: 'Error al actualizar contraseña',
+      text: 'La contraseña antigua no es la correcta, intentelo nuevamente',
+      confirmButtonText: 'Aceptar'
+    })
+
+  }
+
+  /* Fin cambiar clave */
+
 var inputTp = document.querySelector('#tp');
 var inputUsuario = document.querySelector('#usuario');
 var inputNombres = document.querySelector('#nombres');
+var inputTelefono = document.querySelector('#telefono');
+var inputEmail = document.querySelector('#email');
 var inputApellidos = document.querySelector('#apellidos');
 var inputTipoDoc = document.querySelector('#tipo_Documento');
 var inputNumDoc = document.querySelector('#num_documento');
@@ -158,25 +211,71 @@ var labelInputs = document.querySelectorAll('#titleLabel');
 var selectDiv = document.querySelector('#select-id');
 
 
-    function mostrarDatos( id ) {
-     
-            $.ajax({
-                url: "<?= base_url("perfil/traer_informacion")?>",
-                type: "GET",
-                dataType: "json",
-                success: function ( data ) {
-                    console.log(data);
-                    
-                    inputTp.value = 1
-                    inputUsuario.value = data['usuario'];
-                    inputNombres.value = data['nombre'];
-                    inputApellidos.value = data['apellido'];
-                    // inputApellidos.value = data['apellido'];
-                    inputNumDoc.value = data['num_documento'];
-                }
-            })
-      
+function mostrarDatos( id ) {
+
+  $.ajax({
+      url: "<?= base_url("perfil/traer_informacion")?>",
+      type: "GET",
+      dataType: "json",
+      success: function ( data ) {
+          // console.log(data);
+          
+          inputTp.value = 1
+          inputUsuario.value = data['usuario'];
+          inputNombres.value = data['nombre'];
+          inputApellidos.value = data['apellido'];
+          // inputApellidos.value = data['apellido'];
+          inputNumDoc.value = data['num_documento'];
+      }
+  })
+
+}
+
+
+function agregarRegistro(tipo) {
+
+  if( tipo === 'email') {
+    Swal.fire({
+    title: 'Agregar nuevo email',
+    input: 'text',
+    inputAttributes: {
+    autocapitalize: 'on'
+    },
+    showCancelButton: true,
+    confirmButtonText: 'Agregar',
+    showLoaderOnConfirm: true,
+    preConfirm: (login) => {
+      console.log(login);
+      return fetch("<?= base_url("perfil/agregar_tel_email")?>")
+        .then(response => {
+          /* if */
+        })
+        .catch(error => {
+          Swal.showValidationMessage(
+            `Error al agregar: ${error}`
+          )
+        })
+    },
+    allowOutsideClick: () => !Swal.isLoading()
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire({
+        title: `Email agregado correctamente`,
+      })
     }
+  })
+  
+  }else if( tipo === 'telefono') {
+    Swal.fire({
+      title: 'Agregar un nuevo Telefono',
+      input: 'text'
+    })
+  
+  }
+
+
+
+}
 
    
 </script>

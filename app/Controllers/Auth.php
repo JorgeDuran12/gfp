@@ -130,8 +130,11 @@ class Auth extends BaseController
                 'pass' => $hashed_password,
                 
             ]);
-    
+            
             $id_usuario = $this -> usuario ->insertID(); 
+
+            //Traer rol de usuario
+            $datos = $this->usuario->traer_info_usuario_rol( $id_usuario );
 
             $this -> usuario -> save([
                 'id_usuario' => $id_usuario,
@@ -162,6 +165,7 @@ class Auth extends BaseController
                 'documento' => $this->request->getPost('num_documento'),
                 'emails' => $this -> request ->getPost('email'),
                 'telefonos' => $this -> request ->getPost('telefono'),
+                'rol' => $datos['id_rol'],
                 'logged_in' => true
             ]);
 
@@ -192,12 +196,15 @@ class Auth extends BaseController
 
 
                     $session = session();
+
+                    //Traer rol de usuario
+                    $datos = $this->usuario->traer_info_usuario_rol( $id_usuario );
                    
                     $session->set([
                         'id_usuario' => $id_usuario,
                         'usuario' => $usuario['usuario'],
                         'email' => $email,
-                        'id_rol' => $usuario['id_rol'],
+                        'rol' => $datos['id_rol'],
                         'logged_in' => true
                     ]);
                     

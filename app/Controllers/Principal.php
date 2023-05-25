@@ -18,22 +18,22 @@ class Principal extends BaseController
     public function index(){
 
         $datos = session();
-        
         $Disponible = $this->disponible->traer_disponible($datos->id_usuario);
         $trasabilidad_model = new DisponibleModel();
         $trasabilidad = $trasabilidad_model->obtener_trasabilidad();
         
 
-        return view("gfp/principal/principal", [
+        echo view('gfp/principal/principal', [ 
             'tituloPagina' => 'Inicio',
             'trasabilidad' => $trasabilidad,
             'misDatos' => $datos,
             'presupuestoActual' => $Disponible
-        ]); 
+        ]);
+
     }
 
-
     /* metodos */
+    
     public function agregar_presupuesto() {
         $session = session();
         $idUsuarioGlobal = $session->id_usuario;

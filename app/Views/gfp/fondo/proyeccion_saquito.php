@@ -3,7 +3,8 @@
 
 <div class="titulo">
     <h1>Progreso de saquito</h1>
-    <div class="formulario_proyeccion">
+</div>   
+<div class="formulario_proyeccion">
 
         <form id="formulario" method="POST" action="<?php echo base_url('Insertar_proyeccion'); ?>">
 
@@ -24,29 +25,39 @@
             </div>
 
         </form>
-    </div>
-</div>
 
-<br>
-<!-- <div class="table-responsive">
-                <table class="tabla" id="dataTable" cellspacing="0">
+    <div class="table table-striped">
+                <table class="table table-striped" id="dataTable" cellspacing="0">
                     <thead>
                         <tr class="cm" >
-                            <th>fecha</th>
-                            <th>Valor</th>
-                             <th>Descripcion</th>
-                            <th>Mes</th> 
+                            <th>fecha_cuota</th>
+                            <th>Valor_cuota</th>
+                             <th>saquito</th>
+                             <th>estado</th>
+                             
                         
                         </tr>
                     </thead>
-                    <tbody >
-                        <tr>
-                            <td>cuota</td>
-                            <td>valor</td>
-                        </tr>
+                    <tbody class=" jm">
+                        <?php foreach ($proyeccion as $dato){ ?>
+                            <tr> 
+                                <td><?php echo $dato['fecha_cuota'];?></td> 
+                                <td><?php echo $dato['valor_cuota'];?></td>
+                                <td><?php echo $dato['descripcion'];?></td>
+                                <td><?php echo $dato['estado'];?></td>
+                            </tr>
+
+                        <?php } ?> 
+                   
                     </tbody>
-</table> 
-</div>    -->
+                </table> 
+   </div>    
+
+   </div>
+   
+</div>
+
+
 
 
 

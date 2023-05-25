@@ -1,4 +1,4 @@
-<?= $this->extend("layouts/gfpLayout")?>
+w<?= $this->extend("layouts/gfpLayout")?>
 <?= $this->section("contenido")?>
 
 <div class="titulo">
@@ -13,8 +13,8 @@
 
      </div>
 
-    <a href="#" id="agregar"onclick="selecionaRegistro(<?php echo 1 . ',' . 1 ?>);" class="btn btn-success regresar_Btn"
-        data-bs-toggle="modal" data-bs-target="#editarModal">Agregar</a>
+         <button href="#" id="agregar" onclick="selecionaRegistro(<?php echo 1 . ',' . 1 ?>);" class="btn btn-success regresar_Btn"
+             data-bs-toggle="modal" data-bs-target="#editarModal" >Agregar</button>
         
 <!--        
      <button type="button" id="olcultar">Ocultar botón acción</button> 
@@ -169,7 +169,24 @@
 </div>
 
 <script>
-     
+    var btnAGregar = document.getElementById('agregar');
+
+
+        $.ajax({
+            url: "<?php echo base_url("saquito/buscar_Registro")?>",
+            type: "get",
+            dataType: "json",
+            success: function (data) {
+                // console.log(data)
+                if( data.length >= 1 ) {
+                    console.log('Hola')
+                    btnAGregar.innerText = 'Deshabilitado'
+                    btnAGregar.disabled = true;
+                }   
+            }
+        })
+
+
      $(function (){
         $('#show').click(function(){
           $('#agregar').show();

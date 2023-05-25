@@ -19,10 +19,13 @@ class Saquito extends BaseController
    
     public function index()
     {
+        $session = session();
+
         $saquitos = $this-> saquito-> traer();
         echo view("gfp/fondo/saquito", [
             'tituloPagina' => 'Mi saquito',
-            'saquito'=>$saquitos
+            'saquito'=>$saquitos,
+            'misDatos' => $session,
         ]);
     }
 
@@ -58,19 +61,24 @@ class Saquito extends BaseController
                 'usuario_crea' => $id_usuario
             ]);
         }
-            return redirect()->to(base_url('/mi_saquito'));
+            return redirect()->to(base_url('/mi_saquito'))->with('estado_saquito', 2);
             
         }
     }
     
-    public function buscar_Registro($id_saquito){
+    public function buscar_Registro(){
         $returnData = array();
-        $saquito_ = $this->saquito->traer_saquitos($id_saquito, 'A');
+
+        $session = session();
+        $idUsuario = $session->id_usuario;
+
+        $saquito_ = $this->saquito->traer_saquitos($idUsuario, 'A');
         if (!empty($saquito_)) {
             array_push($returnData, $saquito_);
         }
         echo json_encode($returnData);
 
     }
+
 
 }
