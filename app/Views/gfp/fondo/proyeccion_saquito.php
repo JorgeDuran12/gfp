@@ -8,14 +8,14 @@
 
         <form id="formulario" method="POST" action="<?php echo base_url('Insertar_proyeccion'); ?>">
 
-            <div class="tma"><input type="date" class="form-control" name="fecha_cuota" id="fecha_cuota"
+            <div class="tma   input_group"><input type="date" class="form-control" name="fecha_cuota" id="fecha_cuota"
                     placeholder="Fecha inicial: " required>
-                <label for="floatingInput"></label>
-            </div>
+                <label for="floatingInput"></label> 
+        
 
-            <div class="tma"> <input type="number" class="form-control valida" name="valor_cuota" id="valor_cuota"
+             <input type="number" class="form-control valida" name="valor_cuota" id="valor_cuota"
                     placeholder="Valor: " required>
-                <label for="floatingInput"></label>
+                <label for="floatingInput"></label> 
             </div>
             <div  class="tx">
             <input type="hidden" class="form-control valida" placeholder="egreso" id="egreso" name="egreso" required>

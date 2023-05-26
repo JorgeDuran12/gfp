@@ -22,5 +22,8 @@
     flex-direction: column;
 }
 .tma{
+    text-align: center;
+}
+.input_group{
     text-align: right;
 }

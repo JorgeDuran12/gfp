@@ -7,7 +7,7 @@
 
     <div class="titulo"> 
       <h3>Administracion de usuarios</h3>
-    </div >
+    </div>
 <br>
  
     <div class="op">
@@ -17,46 +17,34 @@
 
         &nbsp<a href="<?php echo base_url('/principal'); ?>" class="btn btn-primary regresar_Btn">Regresar</a> &nbsp
 
-        <!-- <a href="#" onclick="pdf()">pdf ahora </a> -->
         
     </div>
     <div id="contenedor">
   <div id="limite">
-            <div class="table-responsive">
-                <table class="table table-red  table-sm table-striped" id="dataTable" width="100%" cellspacing="0">
+                <table  id="miTabla" class="display">
                     <thead>
-                        <tr >
-                            <th>Id</th>
+                        <tr>
+                            <th>ID</th>
                             <th>Usuario</th>
                             <th>Nombre</th>
                             <th>Apellido</th>
-                            <!-- <th>Contraseña</th> -->
-                        
-                            <th>estado</th>
-                            <th colspan="2">Acciones</th>
+                            <th>Rol</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
                         </tr>
                     </thead>
-                    <?php foreach ($usuarios as $dato){ ?>
-                          <tr>
-                            <td> <?php echo $dato['id_usuario']; ?></td>
-                            <td> <?php echo $dato['usuario']; ?></td>
-                            <td> <?php echo $dato['nombre']; ?></td>
-                            <td> <?php echo $dato['apellido']; ?></td>
-                            <!-- <td> <php echo $dato['pass']; ?></td> -->
-                            <td>  <?php if($dato['estado']=="A"){echo "Activo";}else{echo "Eliminado";}?></td>
-                            <td>      
-                                    <a  class="btn btn-warning"  href="#" onclick="seleccionausuario(<?php echo $dato['id_usuario'] . ',' . 2 ?>);" data-bs-toggle="modal" data-bs-target="#agregar_usuario"  width="16" height="16" title="Editar Registro">
-                                       <img  class="image" src="<?= base_url("img/editar.png") ?> " title="Editar" >
-                                    </a>     
-                                 
-                                    <a class="btn btn-danger"  href="#" data-href="<?php echo base_url('usuario/eliminar__usuario'). '/' .$dato['id_usuario']. '/' .'E'; ?>"  data-bs-toggle="modal" data-bs-target="#modal-confirma" src="<?php echo base_url(); ?>/icons/borrar.png" width="16" height="16"  title="Elimina Registro"> 
-                                    <img
-                    class="image" src="<?= base_url("img/Eliminar.png") ?> " title="Eliminar">
-                                   </a>
-                                
-                            </td>                              
-                          </tr> 
-                        <?php } ?>
+                    <tbody>
+                        <?php foreach ($usuarios as $dato){ ?>
+                            <tr>
+                            <td><?= $dato['id_usuario']?></td>
+                            <td><?= $dato['usuario']?></td>
+                            <td><?= $dato['nombre']?></td>
+                            <td><?= $dato['apellido']?></td>
+                            <td><?= $dato['id_rol']?></td>
+                            <td><?= $dato['estado']?></td>
+                            <td>Acciones</td>
+                        </tr>
+                        <?php } ?> 
                     </tbody>
                 </table>
 
@@ -276,20 +264,29 @@ function limpiarCampos() {
 
 }
 
-
-//    function pdf(){
-//     alert('ya');
-//     doc = new jsPDF('P','mm', 'letter');
-//        doc.setFonSise(40);
-//        doc.text( 40,20, "Octocat loves jsPDF");
-//        doc.line(0, 80 - 60,100, 80-60)
-//        doc.text(`Fuerza`, 10,40);
-//        doc.text(`Magia`, 10,30);
-//        doc.text(`velocidad`, 10,20);
-//        doc.save(`autorizacion_"+".pdf`);
-//    }
-   
 </script>
 
+
+<script>
+ /******* Data - Table ***********/
+$(document).ready(function () {
+    $('#miTabla').DataTable({
+        scrollY: '500px',
+        scrollCollapse: true,
+        paging: false,
+        language: {
+            lengthMenu: 'Display _MENU_ records per page',
+            zeroRecords: 'No se encontro nada - Lo siento',
+            info: 'Mostrando pagina _PAGE_ de _PAGES_',
+            infoEmpty: 'No se encontro el registro',
+            infoFiltered: '(Filtrado de _MAX_ registros totales)',
+    },
+
+
+    });
+});
+
+
+</script>
 
 <?= $this->endSection("contenido")?>

@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="<?= base_url("/css/agenda/pagoStylees.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/actividades/actividad.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/saquito/saquito.css")?>">
-    <link rel="stylesheet" href="<?= base_url("/css/saquito/progreso_saquito1.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/css/saquito/progreso_saquito2.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/registro/movimiento1.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/agenda/pagoStyles.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/fullCalendar/fullCalendar.css")?>">
@@ -53,7 +53,9 @@
     
     <!-- DataTable -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css"/>
-    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="<?= base_url('js/jquery-3.6.0.js') ?>"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
    
     
     <!-- Progress Bar -->

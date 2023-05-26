@@ -28,19 +28,18 @@ class ParamentrosModel extends Model{
  // <-------------funcion traer_usuario que sera usada en controlador por la funcion  buscar_usuario----------------------->
 
  
- public function traerUsuario($clave, $valor){
+    public function traerUsuario($clave, $valor){
     $this->select('parametros_det.*');
     $this->where($clave, $valor);
     $datos = $this->first();  
     return $datos;
-}
-
+    }
     // <-----------------------------------funcion eliminar en vista principal----------------------------------->
 
- public function elimina_usuario($id,$estado){
+    public function elimina_usuario($id,$estado){
      $datos = $this->update($id, ['estado' => $estado]);         
     return $datos;
-}
+    }
 
     public function obtener_parametros(){
     $this->select('parametros_det.*');
@@ -79,5 +78,4 @@ class ParamentrosModel extends Model{
         $datos = $this->findAll();  //nos trae todos los registros que cumplan con una condicion dada 
         return $datos;
     }
-
 }
