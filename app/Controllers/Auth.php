@@ -128,10 +128,9 @@ class Auth extends BaseController
                 'tipo_documento' => $this->request->getPost('tipo_documento'),
                 'num_documento' => $this->request->getPost('documento'),
                 'pass' => $hashed_password,
-                
             ]);
             
-            $id_usuario = $this -> usuario ->insertID(); 
+            $id_usuario = $this -> usuario ->insertID();
 
             //Traer rol de usuario
             $datos = $this->usuario->traer_info_usuario_rol( $id_usuario );

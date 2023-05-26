@@ -213,11 +213,4 @@ $(document).on('blur', '.valida', function(event) {
 
 </script>
 
-
-
-
-
-
-
-
 <?= $this->endSection("contenido")?>

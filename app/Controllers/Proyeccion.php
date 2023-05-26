@@ -3,28 +3,33 @@
 namespace App\Controllers;
 
 use App\Models\ProyeccionModel;
-//use App\Models\MovimientosModel;
+use App\Models\MovimientoModel;
 use App\Models\UsuariosModel;
 use App\Models\SaquitoModel;
+use App\Models\DisponibleModel;
+
 
 class Proyeccion extends BaseController
 {
-    // protected $proyeccion;
+    protected $proyeccion;
     protected $saquito;
-    //protected $movimiento;
+    protected $Movimiento;
+    protected $disponible;
 
     public function __construct()
     {
-        // $this->Movimineto = new MovimientoModel();
-        // $this->Proyeccion = new ProyeccionModel();
+        $this->Movimiento = new MovimientoModel();
+        $this->Proyeccion = new ProyeccionModel();
         $this->usuario = new UsuariosModel();
         $this->saquito = new SaquitoModel();
+        $this->disponible = new DisponibleModel();
         
     }
    
     public function index()
     {
         $session = session();
+        $disponibles = $this-> disponible ->datos_ingreso();
 
         $proye = new ProyeccionModel();
 
@@ -33,6 +38,7 @@ class Proyeccion extends BaseController
         echo view("gfp/fondo/proyeccion_saquito", [
             'tituloPagina' => 'Proyeccion',
             'proyeccion' => $proyeccion,
+            'disponibles' => $disponibles,
             'misDatos' => $session
             
         ]);
@@ -45,6 +51,8 @@ class Proyeccion extends BaseController
         $id_usuario = $session->get('id_usuario');
 
         $id_saquito = $this-> saquito -> traerId_saquito();
+        $id_disponible = new DisponibleModel();
+        $identificador = $id_disponible->traer_id_disponible();
 
         $this->Proyeccion->save([
             'fecha_cuota' => $this->request->getPost('fecha_cuota'), 
@@ -52,6 +60,28 @@ class Proyeccion extends BaseController
             'usuario_crea' => $id_usuario,
             'id_saquito' => $id_saquito,
         ]);
+        $this->Movimiento->save([
+           'tipo_movimiento'=>2,
+           'clase_movimiento'=>4,
+           'descripcion'=>"cuota saquito",
+           'valor' => $this->request->getPost('valor_cuota'), 
+           'usuario_crea' => $id_usuario,
+
+
+        ]);
+
+        $this->disponible->update($identificador,[
+           
+             'egreso' => $this->request->getPost('egreso'),
+           'presupuesto_anual' => $this->request->getPost('presupuesto'),
+           'id_usuario' => $id_usuario,
+
+          ]);
+
+
+
+
+
 
         return redirect()->to(base_url('/proyeccion'));
     }

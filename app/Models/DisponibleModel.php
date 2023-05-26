@@ -35,7 +35,7 @@ class DisponibleModel extends Model{
         if( empty($datos) ) {
             return 0;
         }else {
-            return $datos[0]['saldo_anterior'];
+            return $datos[0]['presupuesto_anual'];
         }
     }
 
@@ -60,8 +60,19 @@ class DisponibleModel extends Model{
         $this->where('id_usuario', $id_usuario);
         $datos = $this-> first();
         // var_dump($datos);
-        return $datos;
+
+        if( empty($datos) ) {
+            $datos['saldo_anterior'] = 0;
+            $datos['ingreso'] = 0;
+            $datos['egreso'] = 0;
+            $datos['presupuesto_anual'] = 0;
+            return $datos;
+        }else {
+            return $datos;
+        }
     }
+
+
     public function traer_id_disponible()
     {
         $session = session();
@@ -71,7 +82,12 @@ class DisponibleModel extends Model{
         $this->where('estado', 'A');
         $this->where('id_usuario', $id_usuario);
         $datos = $this->first();
-        return $datos['id_disponible'];
+        
+        if( empty($datos)) {
+            return $datos['id_disponible'] = 0;
+        }else {
+            return $datos['id_disponible']  ;
+        }
     }
 
 

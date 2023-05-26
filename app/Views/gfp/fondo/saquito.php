@@ -15,6 +15,8 @@ w<?= $this->extend("layouts/gfpLayout")?>
 
          <button href="#" id="agregar" onclick="selecionaRegistro(<?php echo 1 . ',' . 1 ?>);" class="btn btn-success regresar_Btn"
              data-bs-toggle="modal" data-bs-target="#editarModal" >Agregar</button>
+             <a href="<?php echo base_url('/proyeccion'); ?>" class="btn btn-primary regresar_Btn">Proyeccion</a> &nbsp
+
         
 <!--        
      <button type="button" id="olcultar">Ocultar botón acción</button> 
@@ -30,6 +32,7 @@ w<?= $this->extend("layouts/gfpLayout")?>
         <tr class="cm"></tr>
             <th>Descripcion</th>
             <th>Fecha inicial</th>
+           
             <th>valor</th>
             <th>Numero cuota</th>
             <th>cuota</th>
@@ -43,6 +46,7 @@ w<?= $this->extend("layouts/gfpLayout")?>
         <tr>
             <td><?php echo $dato ['descripcion'];?></td>
             <td><?php echo $dato['fecha_inicial'];?></td>
+           
             <td><?php echo $dato['valor'];?></td>
             <td><?php echo $dato['numero_cuota'];?></td>
             <td> <?php echo $dato['cuota'];?></td>
@@ -117,31 +121,15 @@ w<?= $this->extend("layouts/gfpLayout")?>
                     </div>
                     <br>
                     <div class="tma">
-                    <span class="input-group-text" id="inputGroup-sizing-default"> <img src="<?= base_url("icons/question-circle-fill.svg")?>"
-                            title="En esta opcion debera digitalizar el dia del mes donde el aplicativo debera descontar de la disponibilidad de la cuota para el saquito">
-                            &nbsp Ingrese  Dia
-                    </span>
+        
                         <input type="date" class="form-control" name="fecha_inicial" id="fecha_inicial"
                             placeholder="Fecha inicial: " required>
-                        <label for="floatingInput"></label>
+                        <label for="floatingInput">fecha inicial:</label>
                     </div>
+                    
 
                     <br>
-                    <!-- <div class="tma">
-                        <input type="number" class="form-control" name="valor" id="valor"
-                            placeholder="Valor: " required>
-                        <label for="floatingInput"></label>
-                    </div>
-                    <br>
-                    <div class="txa">
-                        <input type="number" class="form-control" name="cuota" id="cuota"
-                            placeholder="Cuotas:" required>
-                        <label for="floatingInput"></label>
-                        <input type="number" class="form-control" name="numero_cuota" id="numero_cuota"
-                            placeholder="Valor cuotas:" required>
-                        <label for="floatingInput"></label>
-                    </div>
-                </div> --> 
+                    
                 <div class="tma">
 <form id="myForm">
   <label for="num1">precio del objetivo:</label>
@@ -249,6 +237,7 @@ function selecionaRegistro(id, tp) {
                 $("#id_saquito").val(id);
                 $("#descripcion").val(rs[0]['descripcion']);
                 $("#fecha_inicial").val(rs[0]['fecha_inicial']);
+              
                 $("#valor").val(rs[0]['valor']);
                 $("#numero_cuota").val(rs[0]['numero_cuota']);
                 $("#cuota").val(rs[0]['cuota']);
@@ -261,6 +250,7 @@ function selecionaRegistro(id, tp) {
         document.getElementById('exampleModalLabel').innerText = "Agregar Registro";
         $("#descripcion").val('');
         $("#fecha_inicial").val('');
+       
         $("#valor").val('');
         $("#numero_cuota").val('');
         $("#cuota").val('');

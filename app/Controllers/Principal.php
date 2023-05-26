@@ -32,22 +32,24 @@ class Principal extends BaseController
 
     }
 
-    /* metodos */
-    
+    /* metodos */    
+
     public function agregar_presupuesto() {
+
         $session = session();
         $idUsuarioGlobal = $session->id_usuario;
 
         $periodo = $this->request->getPost('periodo_input');
         $presupuesto = $this->request->getPost('presupuesto_input');
-
-        $this->disponible->insert([
-            'periodo' => $periodo,
-            'saldo_anterior' => $presupuesto,
-            'ingreso' => 0,
-            'egreso' => 0,
-            'id_usuario' => $idUsuarioGlobal,
-        ]);
+    
+            $this->disponible->insert([
+                'periodo' => $periodo,
+                'saldo_anterior' => $presupuesto,
+                'presupuesto_anual' => $presupuesto,
+                'ingreso' => 0,
+                'egreso' => 0,
+                'id_usuario' => $idUsuarioGlobal,
+            ]);
 
         $session->set(['presupuesto' => $presupuesto ]);
 

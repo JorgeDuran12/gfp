@@ -235,49 +235,16 @@ function mostrarDatos( id ) {
 function agregarRegistro(tipo) {
 
   if( tipo === 'email') {
-    Swal.fire({
-    title: 'Agregar nuevo email',
-    input: 'text',
-    inputAttributes: {
-    autocapitalize: 'on'
-    },
-    showCancelButton: true,
-    confirmButtonText: 'Agregar',
-    showLoaderOnConfirm: true,
-    preConfirm: (login) => {
-      console.log(login);
-      return fetch("<?= base_url("perfil/agregar_tel_email")?>")
-        .then(response => {
-          /* if */
-        })
-        .catch(error => {
-          Swal.showValidationMessage(
-            `Error al agregar: ${error}`
-          )
-        })
-    },
-    allowOutsideClick: () => !Swal.isLoading()
-  }).then((result) => {
-    if (result.isConfirmed) {
-      Swal.fire({
-        title: `Email agregado correctamente`,
-      })
-    }
-  })
-  
+
+
   }else if( tipo === 'telefono') {
-    Swal.fire({
-      title: 'Agregar un nuevo Telefono',
-      input: 'text'
-    })
+   
   
   }
 
-
-
 }
 
-   
+
 </script>
 
 <?= $this->endSection('contenido')?>

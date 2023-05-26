@@ -85,77 +85,61 @@
             <p class="formulario__input-error">El correo solo debe contener letras, numeros, guiones y gion bajo</p>
             <p class="formulario__input-error_email">este correo ya esta asociado ha otra cuenta </p>
         </div>
-        <!-- cuerpo de telefono -->
-        <div class="formulario__grupo" id="grupo__telefono">
-            <label for="email" class="formulario__label">Telefono</label>
-            <div class="formulario__grupo-input">
-                <input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="3222222"
-                    required>
-
-                <svg xmlns="http://www.w3.org/2000/svg" class="formulario__validacion-estado" width="16" height="16"
-                    fill="currentColor" class="bi bi-bookmark-check-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                        d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zm8.854-9.646a.5.5 0 0 0-.708-.708L7.5 7.793 6.354 6.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z" />
-                </svg>
-
-            </div>
-            <p class="formulario__input-error">El telefono solo puede contener numeros y el maximo es 14</p>
-        </div>
-
+        
         <!-- <---------------cuerpo de tipo de documento------------->
         <div class="formulario__grupo" id="grupo__tipo_documento">
             <label for="email" class="formulario__label">Tipo de documento</label>
             <div class="formulario__grupo-input">
                 <select class="formulario__input" name="tipo_documento" id="tipo_documento"
-                    aria-label="Default select example" required>
-                    <?php foreach ($parametros as $data) {?>
+                aria-label="Default select example" required>
+                <?php foreach ($parametros as $data) {?>
                     <option value="<?php echo $data["id_parametro_det"]; ?>"><?php echo $data["nombre"];?></option>
                     <?php } ?>
                 </select>
-
+                
 
                 <svg xmlns="http://www.w3.org/2000/svg" class="formulario__validacion-estado" width="16" height="16"
-                    fill="currentColor" class="bi bi-bookmark-check-fill" viewBox="0 0 16 16">
+                fill="currentColor" class="bi bi-bookmark-check-fill" viewBox="0 0 16 16">
                     <path fill-rule="evenodd"
                         d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zm8.854-9.646a.5.5 0 0 0-.708-.708L7.5 7.793 6.354 6.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z" />
-                </svg>
+                    </svg>
             </div>
             <p class="formulario__input-error">El telefono solo puede contener numeros y el maximo es 14</p>
         </div>
-
+        
 
         <!-- cuerpo de  num documento -->
         <div class="formulario__grupo" id="grupo__documento">
             <label for="email" class="formulario__label">Numero de documento</label>
             <div class="formulario__grupo-input">
-                <input type="text" class="formulario__input" name="documento" id="documento" placeholder="10021023659"
-                    required>
-
+                <input type="number" class="formulario__input" name="documento" id="documento" placeholder="10021023659"
+                required>
+                
                 <svg xmlns="http://www.w3.org/2000/svg" class="formulario__validacion-estado" width="16" height="16"
-                    fill="currentColor" class="bi bi-bookmark-check-fill" viewBox="0 0 16 16">
+                fill="currentColor" class="bi bi-bookmark-check-fill" viewBox="0 0 16 16">
                     <path fill-rule="evenodd"
                         d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zm8.854-9.646a.5.5 0 0 0-.708-.708L7.5 7.793 6.354 6.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z" />
-                </svg>
-
-            </div>
-            <p class="formulario__input-error">El documento solo puede contener numero y el maximo es de 14 </p>
+                    </svg>
+                    
+                </div>
+                <p class="formulario__input-error">El documento solo puede contener numero y el maximo es de 14 </p>
         </div>
-
-
-
+        
+        
+        
         <!-- cuerpo  de formulario contraseña -->
         <div class="formulario__grupo" id="grupo__pass">
             <label for="pass" class="formulario__label">Contraseña</label>
             <div class="formulario__grupo-input">
                 <input type="password" class="formulario__input" name="pass" id="pass" placeholder="digite contraseña"
-                    required>
-
+                required>
+                
                 <svg xmlns="http://www.w3.org/2000/svg" class="formulario__validacion-estado" width="16" height="16"
-                    fill="currentColor" class="bi bi-bookmark-check-fill" viewBox="0 0 16 16">
+                fill="currentColor" class="bi bi-bookmark-check-fill" viewBox="0 0 16 16">
                     <path fill-rule="evenodd"
-                        d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zm8.854-9.646a.5.5 0 0 0-.708-.708L7.5 7.793 6.354 6.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z" />
+                    d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zm8.854-9.646a.5.5 0 0 0-.708-.708L7.5 7.793 6.354 6.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z" />
                 </svg>
-
+                
             </div>
             <p class="formulario__input-error">La contraeña debe ser de 4 a 16 digitos para ser segura </p>
         </div>
@@ -164,16 +148,32 @@
             <label for="pass2" class="formulario__label">Confirmar Contraseña</label>
             <div class="formulario__grupo-input">
                 <input type="password" class="formulario__input" name="pass2" id="pass2" placeholder="contraseña"
+                required>
+                
+                <svg xmlns="http://www.w3.org/2000/svg" class="formulario__validacion-estado" width="16" height="16"
+                fill="currentColor" class="bi bi-bookmark-check-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                    d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zm8.854-9.646a.5.5 0 0 0-.708-.708L7.5 7.793 6.354 6.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z" />
+                </svg>
+                
+            </div>
+            <p class="formulario__input-error">Las contraseñas deben ser igual </p>
+        </div>
+        <!-- cuerpo de telefono -->
+        <div class="formulario__grupo" id="grupo__telefono">
+            <label for="email" class="formulario__label">Telefono</label>
+            <div class="formulario__grupo-input">
+                <input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="3222222"
                     required>
-
+        
                 <svg xmlns="http://www.w3.org/2000/svg" class="formulario__validacion-estado" width="16" height="16"
                     fill="currentColor" class="bi bi-bookmark-check-fill" viewBox="0 0 16 16">
                     <path fill-rule="evenodd"
                         d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zm8.854-9.646a.5.5 0 0 0-.708-.708L7.5 7.793 6.354 6.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z" />
                 </svg>
-
+        
             </div>
-            <p class="formulario__input-error">Las contraseñas deben ser igual </p>
+            <p class="formulario__input-error">El telefono solo puede contener numeros y el maximo es 14</p>
         </div>
         <div class="btn_container">
             <button type="submit" class="bnkl">
@@ -189,12 +189,12 @@
 <!---------------------scrip---------------------------------->
 
 <script>
-// <--------------------------llamdo de  formulario para validar--------------------->
-
-const formulario = document.getElementById('formulario');
-const inputs = document.querySelectorAll('#formulario input');
-
-const expresiones = {
+    // <--------------------------llamdo de  formulario para validar--------------------->
+    
+    const formulario = document.getElementById('formulario');
+    const inputs = document.querySelectorAll('#formulario input');
+    
+    const expresiones = {
     usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
     nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
     apellido: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.

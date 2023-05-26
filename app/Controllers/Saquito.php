@@ -44,6 +44,7 @@ class Saquito extends BaseController
             $this->saquito->save([    
                 'descripcion' => $this->request->getPost('descripcion'),
                 'fecha_inicial' => $this->request->getPost('fecha_inicial'),
+                
                 'valor' => $this->request->getPost('valor'),
                 'numero_cuota' => $this->request->getPost('numero_cuota'),
                 'cuota' => $this->request->getPost('cuota'),
@@ -55,6 +56,7 @@ class Saquito extends BaseController
             $this->saquito->update($this->request->getPost('id_saquito'),[
                 'descripcion' => $this->request->getPost('descripcion'),
                 'fecha_inicial' => $this->request->getPost('fecha_inicial'),
+               
                 'valor' => $this->request->getPost('valor'),
                 'numero_cuota' => $this->request->getPost('numero_cuota'),
                 'cuota' => $this->request->getPost('cuota'),
