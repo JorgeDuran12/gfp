@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-05-2023 a las 17:23:08
+-- Tiempo de generación: 26-05-2023 a las 17:19:10
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -29,6 +29,7 @@ USE `gfp_bd`;
 -- Estructura de tabla para la tabla `acciones`
 --
 
+DROP TABLE IF EXISTS `acciones`;
 CREATE TABLE `acciones` (
   `id_accion` smallint(2) NOT NULL,
   `nombre` varchar(100) NOT NULL,
@@ -62,6 +63,7 @@ INSERT INTO `acciones` (`id_accion`, `nombre`, `descripcion`, `estado`, `id_usua
 -- Estructura de tabla para la tabla `agenda`
 --
 
+DROP TABLE IF EXISTS `agenda`;
 CREATE TABLE `agenda` (
   `id_agenda` int(11) NOT NULL,
   `title` varchar(200) NOT NULL,
@@ -72,44 +74,24 @@ CREATE TABLE `agenda` (
   `id_usuario` smallint(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Volcado de datos para la tabla `agenda`
---
-
-INSERT INTO `agenda` (`id_agenda`, `title`, `descripcion`, `color`, `start`, `end`, `id_usuario`) VALUES
-(3, 'pago de tareas', 'asdmas.dmna,msdn,masnd,masnd,masdn', '#9d3939', '2023-05-19 00:00:00', '2023-05-20 10:16:00', 28);
-
 -- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `disponibles`
 --
 
+DROP TABLE IF EXISTS `disponibles`;
 CREATE TABLE `disponibles` (
   `id_disponible` smallint(2) NOT NULL,
   `periodo` year(4) NOT NULL,
-  `saldo_anterior` decimal(11,2) NOT NULL,
-  `ingreso` decimal(11,2) NOT NULL,
-  `egreso` decimal(11,2) NOT NULL,
-  `presupuesto_anual` decimal(11,2) NOT NULL,
+  `saldo_anterior` decimal(11,2) NOT NULL DEFAULT 0.00,
+  `ingreso` decimal(11,2) NOT NULL DEFAULT 0.00,
+  `egreso` decimal(11,2) NOT NULL DEFAULT 0.00,
+  `presupuesto_anual` decimal(11,2) DEFAULT 0.00,
   `estado` char(1) DEFAULT 'A',
   `fecha_crea` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `id_usuario` smallint(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `disponibles`
---
-
-INSERT INTO `disponibles` (`id_disponible`, `periodo`, `saldo_anterior`, `ingreso`, `egreso`, `presupuesto_anual`, `estado`, `fecha_crea`, `id_usuario`) VALUES
-(1, 2023, '100000.00', '3000.00', '6000.00', '0.00', 'A', '2023-05-19 12:32:33', 61),
-(2, 2023, '999999999.99', '0.00', '0.00', '0.00', 'A', '2023-05-19 12:15:46', 31),
-(6, 2023, '3000.00', '0.00', '0.00', '0.00', 'A', '2023-05-19 12:31:42', 61),
-(8, 2023, '1000000.00', '0.00', '0.00', '0.00', 'A', '2023-05-19 12:45:03', 28),
-(10, 2023, '999999999.99', '0.00', '0.00', '0.00', 'A', '2023-05-19 13:10:35', 28),
-(12, 2023, '40000.00', '0.00', '0.00', '0.00', 'A', '2023-05-19 13:30:22', 28),
-(13, 2023, '3000000.00', '0.00', '0.00', '0.00', 'A', '2023-05-19 13:30:38', 3),
-(15, 2023, '500000.00', '0.00', '0.00', '0.00', 'A', '2023-05-19 15:06:55', 77);
 
 -- --------------------------------------------------------
 
@@ -117,6 +99,7 @@ INSERT INTO `disponibles` (`id_disponible`, `periodo`, `saldo_anterior`, `ingres
 -- Estructura de tabla para la tabla `emails`
 --
 
+DROP TABLE IF EXISTS `emails`;
 CREATE TABLE `emails` (
   `id_email` smallint(2) NOT NULL,
   `email` varchar(200) NOT NULL,
@@ -139,7 +122,12 @@ INSERT INTO `emails` (`id_email`, `email`, `prioridad`, `estado`, `fecha_crea`, 
 (57, 'daniel@gmail.com', 13, 'A', '2023-05-19 17:46:55', 74, 74),
 (58, 'duran3313@gmail.com', 13, 'A', '2023-05-19 18:03:01', 75, 75),
 (59, 'wilfri@gmail.com', 13, 'A', '2023-05-19 18:08:18', 76, 76),
-(60, 'devlassalas@gmail.com', 13, 'A', '2023-05-19 19:59:33', 77, 77);
+(60, 'devlassalas@gmail.com', 13, 'A', '2023-05-19 19:59:33', 77, 77),
+(62, 'dev@gmail.com', 13, 'A', '2023-05-24 17:12:39', 79, 79),
+(63, 'yo@gmail.com', 13, 'A', '2023-05-25 19:22:08', 80, 80),
+(65, 'delassalasospino20033@gmail.com', 13, 'A', '2023-05-25 19:26:00', 82, 82),
+(66, 'santiagoguerreroh034@gmail.com', 13, 'A', '2023-05-26 17:36:13', 83, 83),
+(67, 'asdasdasdasdasd@gmail.com', 13, 'A', '2023-05-26 18:21:44', 84, 84);
 
 -- --------------------------------------------------------
 
@@ -147,6 +135,7 @@ INSERT INTO `emails` (`id_email`, `email`, `prioridad`, `estado`, `fecha_crea`, 
 -- Estructura de tabla para la tabla `fondo_emergencia`
 --
 
+DROP TABLE IF EXISTS `fondo_emergencia`;
 CREATE TABLE `fondo_emergencia` (
   `id_fondo-emergencia` smallint(2) NOT NULL,
   `fecha_inicial` date NOT NULL,
@@ -162,6 +151,7 @@ CREATE TABLE `fondo_emergencia` (
 -- Estructura de tabla para la tabla `movimientos`
 --
 
+DROP TABLE IF EXISTS `movimientos`;
 CREATE TABLE `movimientos` (
   `id_movimiento` smallint(2) NOT NULL,
   `descripcion` varchar(200) NOT NULL,
@@ -179,36 +169,10 @@ CREATE TABLE `movimientos` (
 --
 
 INSERT INTO `movimientos` (`id_movimiento`, `descripcion`, `tipo_movimiento`, `clase_movimiento`, `valor`, `fecha_movimiento`, `estado`, `fecha_crea`, `usuario_crea`) VALUES
-(32, 'hhhh', 2, 4, '999999999.99', '2023-05-15 12:22:00', 'A', '2023-05-15 17:22:18', 28),
-(33, 'hhhhhhhhhh', 2, 4, '10000.00', '2023-05-15 12:22:00', 'A', '2023-05-15 17:22:50', 28),
-(34, 'jjjjjj', 1, 3, '2000.00', '2023-05-19 15:15:11', 'A', '2023-05-15 17:23:12', 28),
-(35, 'asdasdcascdsac', 2, 4, '1000.00', '2023-05-19 15:17:02', 'A', '2023-05-15 17:57:57', 3),
-(36, 'jjjj', 1, 3, '1000.00', '2023-05-15 13:07:00', 'A', '2023-05-15 18:07:02', 28),
-(37, 'jkkkkkkkkk', 1, 4, '1111.00', '2023-05-15 13:07:00', 'A', '2023-05-15 18:07:22', 28),
-(38, '651654654', 2, 3, '25156165.00', '2023-05-15 13:55:00', 'A', '2023-05-15 18:55:35', 28),
-(39, 'intento 1', 2, 4, '1000.00', '2023-05-19 15:17:08', 'A', '2023-05-15 19:03:53', 3),
-(40, 'intento2', 1, 3, '1000.00', '2023-05-19 15:17:15', 'A', '2023-05-15 19:04:17', 3),
-(41, 'venta de un cel', 2, 3, '1500000.00', '2023-05-16 13:21:00', 'A', '2023-05-16 18:21:27', 28),
-(42, 'kk', 1, 3, '10000.00', '2023-05-16 14:10:00', 'A', '2023-05-16 19:10:02', 28),
-(43, 'fghdzhdf', 1, 3, '10010.00', '2023-05-17 15:22:00', 'A', '2023-05-17 20:22:56', 28),
-(44, 'coufyj ', 1, 3, '100000.00', '2023-05-17 15:23:00', 'A', '2023-05-17 20:23:05', 28),
-(45, 'k+\r\njoctuktf', 1, 3, '40000.00', '2023-05-17 15:23:00', 'A', '2023-05-17 20:23:12', 28),
-(46, 'zzzzzhd n', 1, 3, '1410480.00', '2023-05-17 15:23:00', 'A', '2023-05-17 20:23:22', 28),
-(47, 'hhsjydfsrtyetye', 1, 3, '444111.00', '2023-05-17 15:23:00', 'A', '2023-05-17 20:23:32', 28),
-(48, 'ssaffffffffffffffffffffffffffffffffffffff', 1, 3, '999999999.99', '2023-05-17 15:23:00', 'A', '2023-05-17 20:23:50', 28),
-(49, 'ererertetrrrrr', 1, 4, '40000.00', '2023-05-17 15:23:00', 'A', '2023-05-17 20:24:02', 28),
-(50, 'hddddddddddddddddddddddddd', 1, 3, '999999999.99', '2023-05-17 15:24:00', 'A', '2023-05-17 20:24:16', 28),
-(51, 'rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr', 1, 3, '999999999.99', '2023-05-17 15:24:00', 'A', '2023-05-17 20:24:25', 28),
-(54, 'uafvas dS D  VYADC fdFFffyyVV v a FVB vf  aaff qv gv   V AFV V vf avd f ad  dv dvf d fvd vf vdf fvd vvf vd v VDF V DFV F VD F  VF DV FVD VF V V  F VD FVD VVF DV FVD F D FD F DV FVD F DVF D FD VF DV FV', 1, 3, '10000.00', '2023-05-17 15:31:00', 'A', '2023-05-17 20:31:53', 28),
-(55, 'Texto es un conjunto de enunciados que permite dar un mensaje coherente y ordenado, ya sea de manera escrita o a través de la palabra. Se trata de una estructura compuesta por signos y una escritura d', 2, 3, '1000.00', '2023-05-18 12:48:00', 'A', '2023-05-18 17:48:39', 28),
-(56, 'comprar zapatos', 1, 4, '100000.00', '2023-05-18 13:56:36', 'A', '2023-05-18 18:28:32', 31),
-(57, 'comprar ropa', 2, 4, '900000.00', '2023-05-18 13:55:00', 'A', '2023-05-18 18:55:22', 31),
-(58, 'lo que sea', 1, 3, '1000.00', '2023-05-19 15:16:44', 'A', '2023-05-18 20:43:34', 67),
-(59, 'hola', 2, 4, '500000.00', '2023-05-18 15:56:00', 'A', '2023-05-18 20:56:28', 65),
-(60, 'pago de nomina', 2, 4, '1000000.00', '2023-05-19 12:29:00', 'A', '2023-05-19 17:29:56', 70),
-(61, '34523453', 1, 4, '565436.00', '2023-05-19 13:06:00', 'A', '2023-05-19 18:06:07', 3),
-(62, '21312', 2, 4, '3434234.00', '2023-05-19 13:39:00', 'A', '2023-05-19 18:39:56', 3),
-(63, '12321', 2, 4, '12312.00', '2023-05-19 14:11:00', 'A', '2023-05-19 19:11:25', 3);
+(252, 'cuota saquito', 2, 4, '80000.00', '2023-05-26 14:40:26', 'A', '2023-05-26 19:40:26', 3),
+(253, 'cuota saquito', 2, 4, '75000.00', '2023-05-26 14:44:37', 'A', '2023-05-26 19:44:37', 3),
+(254, 'cuota saquito', 2, 4, '5000.00', '2023-05-26 14:46:41', 'A', '2023-05-26 19:46:41', 3),
+(255, 'cuota saquito', 2, 4, '100000.00', '2023-05-26 14:49:41', 'A', '2023-05-26 19:49:41', 31);
 
 -- --------------------------------------------------------
 
@@ -216,10 +180,11 @@ INSERT INTO `movimientos` (`id_movimiento`, `descripcion`, `tipo_movimiento`, `c
 -- Estructura de tabla para la tabla `parametros_det`
 --
 
+DROP TABLE IF EXISTS `parametros_det`;
 CREATE TABLE `parametros_det` (
   `id_parametro_det` smallint(2) NOT NULL,
   `nombre` varchar(50) NOT NULL,
-  `resumen` char(2) NOT NULL,
+  `resumen` varchar(3) NOT NULL,
   `estado` char(1) DEFAULT 'A',
   `fecha_crea` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `id_parametro_enc` smallint(2) NOT NULL,
@@ -235,14 +200,14 @@ INSERT INTO `parametros_det` (`id_parametro_det`, `nombre`, `resumen`, `estado`,
 (2, 'No bancario', 'Nb', 'A', '2023-05-11 13:45:32', 1, 1),
 (3, 'Ingreso', 'In', 'A', '2023-04-21 13:23:09', 2, 1),
 (4, 'Egreso', 'Eg', 'A', '2023-05-11 13:45:25', 2, 1),
-(9, 'Cedula de Ciudadania', 'Cc', 'A', '2023-05-01 12:45:56', 3, 1),
-(10, 'Tarjeta de Identidad', 'Td', 'A', '2023-05-01 12:46:42', 3, 1),
-(11, 'Pasaporte', 'Pt', 'A', '2023-05-01 12:46:47', 3, 1),
-(12, 'Cedula de Extranjeria', 'Ce', 'A', '2023-05-01 12:49:34', 3, 1),
-(13, 'principal', 'pr', 'A', '2023-04-21 13:39:50', 6, 1),
-(14, 'secundario', 'sg', 'A', '2023-04-25 13:10:49', 6, 1),
-(15, 'Numero de Identificacion Tributaria', 'NI', 'A', '2023-05-01 12:54:55', 3, 2),
-(16, 'Permiso Especial de Permanencia', 'PE', 'A', '2023-05-01 12:57:25', 3, 1);
+(9, 'Cedula de Ciudadania', 'C.C', 'A', '2023-05-25 13:22:56', 3, 1),
+(10, 'Tarjeta de Identidad', 'T.I', 'A', '2023-05-25 13:22:59', 3, 1),
+(11, 'Pasaporte', 'P.T', 'A', '2023-05-25 13:23:01', 3, 1),
+(12, 'Cedula de Extranjeria', 'C.E', 'A', '2023-05-25 13:22:51', 3, 1),
+(13, 'principal', 'P', 'A', '2023-05-25 13:22:19', 6, 1),
+(14, 'secundario', 'S', 'A', '2023-05-25 13:22:22', 6, 1),
+(15, 'Numero de Identificacion Tributaria', 'NIT', 'A', '2023-05-25 13:23:05', 3, 2),
+(16, 'Permiso Especial de Permanencia', 'P.E', 'A', '2023-05-25 13:23:07', 3, 1);
 
 -- --------------------------------------------------------
 
@@ -250,6 +215,7 @@ INSERT INTO `parametros_det` (`id_parametro_det`, `nombre`, `resumen`, `estado`,
 -- Estructura de tabla para la tabla `parametros_enc`
 --
 
+DROP TABLE IF EXISTS `parametros_enc`;
 CREATE TABLE `parametros_enc` (
   `id_parametro_enc` smallint(2) NOT NULL,
   `nombre` varchar(50) NOT NULL,
@@ -274,6 +240,7 @@ INSERT INTO `parametros_enc` (`id_parametro_enc`, `nombre`, `estado`, `fecha_cre
 -- Estructura de tabla para la tabla `permisos`
 --
 
+DROP TABLE IF EXISTS `permisos`;
 CREATE TABLE `permisos` (
   `id_permiso` smallint(2) NOT NULL,
   `estado` char(1) NOT NULL DEFAULT 'A',
@@ -313,15 +280,24 @@ INSERT INTO `permisos` (`id_permiso`, `estado`, `id_rol`, `id_accion`, `id_usuar
 -- Estructura de tabla para la tabla `proyeccion`
 --
 
+DROP TABLE IF EXISTS `proyeccion`;
 CREATE TABLE `proyeccion` (
   `id_proyeccion` smallint(2) NOT NULL,
   `fecha_cuota` date NOT NULL,
   `valor_cuota` decimal(11,2) NOT NULL,
+  `total` decimal(11,2) NOT NULL DEFAULT 0.00,
   `estado` char(1) DEFAULT 'A',
   `fecha_crea` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `id_saquito` smallint(2) NOT NULL,
   `usuario_crea` smallint(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `proyeccion`
+--
+
+INSERT INTO `proyeccion` (`id_proyeccion`, `fecha_cuota`, `valor_cuota`, `total`, `estado`, `fecha_crea`, `id_saquito`, `usuario_crea`) VALUES
+(15, '2023-05-26', '100000.00', '0.00', 'A', '2023-05-26 19:49:41', 16, 31);
 
 -- --------------------------------------------------------
 
@@ -329,6 +305,7 @@ CREATE TABLE `proyeccion` (
 -- Estructura de tabla para la tabla `roles`
 --
 
+DROP TABLE IF EXISTS `roles`;
 CREATE TABLE `roles` (
   `id_rol` smallint(2) NOT NULL,
   `nombre` varchar(50) NOT NULL,
@@ -345,11 +322,7 @@ CREATE TABLE `roles` (
 INSERT INTO `roles` (`id_rol`, `nombre`, `descripcion`, `estado`, `usuario_crea`, `fecha_crea`) VALUES
 (1, 'Super Administrador', 'Acceso completo en el sistema.\r\npuede gestionar usuarios, roles, grupos y otros superadministradores u administradores.\r\nDarle mantenimiento a la pagina, etc.', 'A', 1, '2023-05-15 14:41:34'),
 (2, 'Administrador', 'Permiso para gestionar a todos los usuarios finales dentro del sistema\r\n', 'A', 1, '2023-05-15 14:41:34'),
-(3, 'Usuario', 'Acceso a todas las herramientas que ofrece el sistema ', 'A', 1, '2023-05-15 14:41:34'),
-(4, 'Gerente', 'se encarga de gestionar los avances', 'A', 2, '2023-05-18 13:34:35'),
-(8, 'prueba', 'prueba', 'E', 3, '2023-05-18 14:12:33'),
-(9, 'prueba x2', 'haciendo lo q se conoce como la probación ', 'E', 28, '2023-05-18 14:17:56'),
-(10, 'eqwe', 'dwedwe', 'E', 70, '2023-05-19 12:31:13');
+(3, 'Usuario', 'Acceso a todas las herramientas que ofrece el sistema ', 'A', 1, '2023-05-15 14:41:34');
 
 -- --------------------------------------------------------
 
@@ -357,6 +330,7 @@ INSERT INTO `roles` (`id_rol`, `nombre`, `descripcion`, `estado`, `usuario_crea`
 -- Estructura de tabla para la tabla `saquitos`
 --
 
+DROP TABLE IF EXISTS `saquitos`;
 CREATE TABLE `saquitos` (
   `id_saquito` smallint(2) NOT NULL,
   `descripcion` varchar(200) NOT NULL,
@@ -374,9 +348,7 @@ CREATE TABLE `saquitos` (
 --
 
 INSERT INTO `saquitos` (`id_saquito`, `descripcion`, `fecha_inicial`, `valor`, `numero_cuota`, `cuota`, `estado`, `fecha_crea`, `usuario_crea`) VALUES
-(1, 'gfhgh', '2023-05-17', '52.00', '4', '13.00', 'A', '2023-05-19 17:59:07', 31),
-(2, 'ghh', '2023-05-10', '50000.00', '41', '1219.51', 'A', '2023-05-19 18:00:57', 31),
-(4, 'asdsadasdasdasd', '2023-05-19', '300000.00', '10001', '30.00', 'A', '2023-05-19 18:43:37', 3);
+(16, 'para un telefono', '2023-05-25', '800000.00', '8', '100000.00', 'A', '2023-05-26 19:49:26', 31);
 
 -- --------------------------------------------------------
 
@@ -384,6 +356,7 @@ INSERT INTO `saquitos` (`id_saquito`, `descripcion`, `fecha_inicial`, `valor`, `
 -- Estructura de tabla para la tabla `telefonos`
 --
 
+DROP TABLE IF EXISTS `telefonos`;
 CREATE TABLE `telefonos` (
   `id_telefono` smallint(2) NOT NULL,
   `numero` varchar(15) NOT NULL,
@@ -403,9 +376,13 @@ INSERT INTO `telefonos` (`id_telefono`, `numero`, `prioridad`, `fecha_crea`, `es
 (19, '123456789', 13, '2023-05-19 17:40:37', 'A', 73, 73),
 (20, '444888484', 13, '2023-05-19 17:46:55', 'A', 74, 74),
 (21, '3238906836', 13, '2023-05-19 12:51:18', 'A', 3, 3),
-(22, '12344123123', 13, '2023-05-19 18:03:01', 'A', 75, 75),
-(23, '23423423', 13, '2023-05-19 18:08:18', 'A', 76, 76),
-(24, '3238906836', 13, '2023-05-19 19:59:33', 'A', 77, 77);
+(28, '323890683633', 13, '2023-05-24 12:09:18', 'A', 77, 77),
+(29, '134543322', 13, '2023-05-24 17:12:39', 'A', 79, 79),
+(30, '654321', 13, '2023-05-24 12:17:10', 'A', 31, 31),
+(31, '2314123123', 13, '2023-05-25 19:22:08', 'A', 80, 80),
+(32, '3238906836', 13, '2023-05-25 19:26:00', 'A', 82, 82),
+(33, '3145575332', 13, '2023-05-26 17:36:13', 'A', 83, 83),
+(34, '321321321321', 13, '2023-05-26 18:21:44', 'A', 84, 84);
 
 -- --------------------------------------------------------
 
@@ -413,6 +390,7 @@ INSERT INTO `telefonos` (`id_telefono`, `numero`, `prioridad`, `fecha_crea`, `es
 -- Estructura de tabla para la tabla `usuarios`
 --
 
+DROP TABLE IF EXISTS `usuarios`;
 CREATE TABLE `usuarios` (
   `id_usuario` smallint(2) NOT NULL,
   `usuario` varchar(15) NOT NULL,
@@ -434,8 +412,8 @@ CREATE TABLE `usuarios` (
 
 INSERT INTO `usuarios` (`id_usuario`, `usuario`, `nombre`, `apellido`, `pass`, `estado`, `fecha_crea`, `token`, `id_rol`, `usuario_crea`, `tipo_documento`, `num_documento`) VALUES
 (1, 'devLas', 'carlos', 'de las salas', '12132', 'A', '2023-05-16 12:23:13', '', 1, 1, 9, '6565632'),
-(2, 'Safe', 'santiago', 'guerrero', 'hola', 'A', '2023-05-18 13:53:25', '', 1, 1, 9, '32323'),
-(3, 'JorgeDuran12', 'Jorge Luis', 'Duran Olivares', '$2y$10$t2JV.BaqDOhhDBQZCywzHOGRx51L0nV4skNtAMXKIVWBGoHBwuh8u', 'A', '2023-05-16 12:26:44', 'x9pyYTQt9kji4RAPdEyrsNuNyZQUCG', 1, 3, 9, '1007219901'),
+(2, 'Safe', 'santiago', 'guerrero', 'hola', 'A', '2023-05-24 12:26:06', '', 3, 1, 9, '32323'),
+(3, 'JorgeDuran12', 'Jorge Luis', 'Duran Olivares', '$2y$10$t2JV.BaqDOhhDBQZCywzHOGRx51L0nV4skNtAMXKIVWBGoHBwuh8u', 'A', '2023-05-26 13:51:46', 'x9pyYTQt9kji4RAPdEyrsNuNyZQUCG', 1, 3, 9, '1007219901'),
 (28, 'Danipc', 'Daniel', 'Banquet', '$2y$10$Y.pApjdV4iGUqioYGymDPeWScJ9xWX1mE5OQhx2YRrV1mq6sqqdJ6', 'A', '2023-05-18 13:36:57', 'T38e7nEypqPVWubUlDoNnWppxlR5LY', 1, 28, 9, '11061212840'),
 (31, 'Majo', 'Maria jose', 'Ramirez', '$2y$10$lJCs.OVlFG6Cno/nKGRmU.0585QD08xr.um.bIcgGEeiL5CNb8i0S', 'A', '2023-05-18 13:35:40', '', 3, 31, 9, '1043122695'),
 (61, 'santo', 'santiago', 'guerrero', '$2y$10$NbLgWFT5vU0jURLiIhPbKO9VzVN67rStMlwBDCGXaYlO93Dw1qTgq', 'A', '2023-05-18 14:19:59', NULL, 1, 61, 10, '1001893022'),
@@ -444,49 +422,29 @@ INSERT INTO `usuarios` (`id_usuario`, `usuario`, `nombre`, `apellido`, `pass`, `
 (70, 'algo', 'algo', 'algo', '$2y$10$ZO.QuFkw1J7uiW7H5yrICOmoZQIOAjPeAPilvX5sn5UexLXpQBTHi', 'A', '2023-05-19 12:16:39', NULL, 3, 70, 9, '12323463'),
 (73, 'Karl', 'Carlos', 'De las salas ', '$2y$10$oELknYrcA3.YzYy/zMLCteRwdY4a7uCMoYs6VU/C/PP20dPiAqBDe', 'A', '2023-05-19 14:05:44', 'nmegt', 3, 73, 9, '123654789'),
 (74, 'hhhhhh', 'ff', 'fff', '$2y$10$M273OYRJ5RpACY6N80KXA.J4PvVmCw/WEfwUwxZ640eSfuMu1K9.W', 'A', '2023-05-19 12:46:55', NULL, 3, 74, 9, '44848484'),
-(75, '123123', 'hola', 'hola', '$2y$10$cGjwg.NLd2P5nz8h.cqzCeMjKAXO.YfYjiwmz37RHKFExAzbZ1Gl.', 'A', '2023-05-19 13:03:01', NULL, 3, 75, 9, '2323123'),
+(75, '123123', 'hola', 'hola', '$2y$10$cGjwg.NLd2P5nz8h.cqzCeMjKAXO.YfYjiwmz37RHKFExAzbZ1Gl.', 'A', '2023-05-24 12:06:03', NULL, 3, 75, 9, ''),
 (76, 'wilfri', 'rfvrv', 'rvf', '$2y$10$2yBN5XAjzHEZJs/u3GtfqearMfc7kRtj/36vtRIRIRy.OqL3j4BDO', 'A', '2023-05-19 13:08:18', NULL, 3, 76, 9, '312312312'),
-(77, 'devlassalas', 'devlassalas', 'ospino', '$2y$10$O6ztChQa5AkW1oSJ8YvUz.kNnkjp45Y/SuxQtQIHotOHC2bSsHPUW', 'A', '2023-05-19 14:59:33', NULL, 3, 77, 9, '1048264406');
+(77, 'devlassalas', 'devlassalas', 'ospino', '$2y$10$aIK1rchFnMevUo1.0VYDfODCRriPQFKOXFv47q6ZtWrB7hdhVIASK', 'A', '2023-05-25 16:31:45', NULL, 1, 77, 9, '1048264406'),
+(79, 'duran12331', 'prueba', 'prueba ', '$2y$10$nCwEp0JwTvus2NDDKFNideGn0SpGMahH3grRNG/RtbMxrNDjHqq.u', 'A', '2023-05-24 12:12:39', NULL, 3, 79, 9, '423324324'),
+(80, 'santo', 'jorge', 'asdasdas', '$2y$10$71lOmUVRGvi7FiHath0Kz.cNtGzXA5IcxbhuqJSchHdvZ07IGbzBm', 'A', '2023-05-25 14:22:08', NULL, 3, 80, 9, '123123214'),
+(81, 'santo', 'jorge', 'asdasdas', '$2y$10$PIzrLPt2Tn5l9yPqe2G0GeIhYwFs7oVtJ.zBjd.SSs7uSTQWZadB6', 'A', '2023-05-25 14:22:20', NULL, 3, 81, 9, '123123214'),
+(82, 'kraster', 'carlos', 'de las salas', '$2y$10$B00/Npo09IDOnEkbMB7yIOtbQWxezlnbMhZaYbsqNcxhef53ew3M6', 'A', '2023-05-25 14:26:00', NULL, 3, 82, 9, '1048264406'),
+(83, 'santo', 'santiago', 'guerrero', '$2y$10$sy3dlueCx7EsHqvL.xz2XuU0nQSt1.ZCytA.Udam2UjTkQzlnMLD.', 'A', '2023-05-26 12:45:30', NULL, 1, 83, 10, '1001893022'),
+(84, 'asdasdasdasd', 'akjsdhakjsdasd', 'asdasdasdasd', '$2y$10$BZtZihUys9PAfMpP36dKV.T9q0iPfltHYFgtkBL2af7odhfSIHXfS', 'A', '2023-05-26 13:21:44', NULL, 3, 84, 10, '1321321321321');
 
--- --------------------------------------------------------
 
---
--- Estructura Stand-in para la vista `vw_parametros_det`
--- (Véase abajo para la vista actual)
---
+DROP VIEW IF EXISTS `vw_parametros_det`;
 CREATE TABLE `vw_parametros_det` (
 `id_parametro_det` smallint(2)
 ,`nombre` varchar(50)
-,`resumen` char(2)
+,`resumen` varchar(3)
 ,`estado` char(1)
 ,`fecha_crea` timestamp
 ,`id_parametro_enc` smallint(2)
 ,`id_usuario_crea` smallint(2)
 );
 
--- --------------------------------------------------------
 
---
--- Estructura para la vista de `vw_parametros_det` exportada como una tabla
---
-DROP TABLE IF EXISTS `vw_parametros_det`;
-CREATE TABLE`vw_parametros_det`(
-    `id_parametro_det` smallint(2) NOT NULL DEFAULT '0',
-    `nombre` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-    `resumen` char(2) COLLATE utf8mb4_general_ci NOT NULL,
-    `estado` char(1) COLLATE utf8mb4_general_ci DEFAULT 'A',
-    `fecha_crea` timestamp NOT NULL DEFAULT 'current_timestamp()',
-    `id_parametro_enc` smallint(2) NOT NULL,
-    `id_usuario_crea` smallint(2) NOT NULL
-);
-
---
--- Índices para tablas volcadas
---
-
---
--- Indices de la tabla `acciones`
---
 ALTER TABLE `acciones`
   ADD PRIMARY KEY (`id_accion`),
   ADD KEY `accion_usuario` (`id_usuario_crea`);
@@ -559,8 +517,8 @@ ALTER TABLE `permisos`
 --
 ALTER TABLE `proyeccion`
   ADD PRIMARY KEY (`id_proyeccion`),
-  ADD KEY `proyeccion_saquito` (`id_saquito`),
-  ADD KEY `usario_crear` (`usuario_crea`);
+  ADD KEY `id_saquito` (`id_saquito`),
+  ADD KEY `usuario_crea` (`usuario_crea`);
 
 --
 -- Indices de la tabla `roles`
@@ -607,19 +565,19 @@ ALTER TABLE `acciones`
 -- AUTO_INCREMENT de la tabla `agenda`
 --
 ALTER TABLE `agenda`
-  MODIFY `id_agenda` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_agenda` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `disponibles`
 --
 ALTER TABLE `disponibles`
-  MODIFY `id_disponible` smallint(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id_disponible` smallint(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT de la tabla `emails`
 --
 ALTER TABLE `emails`
-  MODIFY `id_email` smallint(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
+  MODIFY `id_email` smallint(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
 
 --
 -- AUTO_INCREMENT de la tabla `fondo_emergencia`
@@ -631,7 +589,7 @@ ALTER TABLE `fondo_emergencia`
 -- AUTO_INCREMENT de la tabla `movimientos`
 --
 ALTER TABLE `movimientos`
-  MODIFY `id_movimiento` smallint(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
+  MODIFY `id_movimiento` smallint(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=256;
 
 --
 -- AUTO_INCREMENT de la tabla `parametros_det`
@@ -655,7 +613,7 @@ ALTER TABLE `permisos`
 -- AUTO_INCREMENT de la tabla `proyeccion`
 --
 ALTER TABLE `proyeccion`
-  MODIFY `id_proyeccion` smallint(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_proyeccion` smallint(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT de la tabla `roles`
@@ -667,19 +625,19 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT de la tabla `saquitos`
 --
 ALTER TABLE `saquitos`
-  MODIFY `id_saquito` smallint(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_saquito` smallint(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT de la tabla `telefonos`
 --
 ALTER TABLE `telefonos`
-  MODIFY `id_telefono` smallint(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id_telefono` smallint(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_usuario` smallint(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
+  MODIFY `id_usuario` smallint(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=85;
 
 --
 -- Restricciones para tablas volcadas
@@ -744,8 +702,8 @@ ALTER TABLE `permisos`
 -- Filtros para la tabla `proyeccion`
 --
 ALTER TABLE `proyeccion`
-  ADD CONSTRAINT `proyeccion_saquito` FOREIGN KEY (`id_saquito`) REFERENCES `saquitos` (`id_saquito`),
-  ADD CONSTRAINT `usario_crear` FOREIGN KEY (`usuario_crea`) REFERENCES `usuarios` (`id_usuario`);
+  ADD CONSTRAINT `proyeccion_ibfk_1` FOREIGN KEY (`id_saquito`) REFERENCES `saquitos` (`id_saquito`),
+  ADD CONSTRAINT `proyeccion_ibfk_2` FOREIGN KEY (`usuario_crea`) REFERENCES `usuarios` (`id_usuario`);
 
 --
 -- Filtros para la tabla `roles`

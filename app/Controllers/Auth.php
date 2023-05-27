@@ -174,13 +174,11 @@ class Auth extends BaseController
 
     public function AutenticarUsuario(){
 
-
         $email = $this->request->getPost('email');
         $password = $this->request->getPost('password');
      
         $usuarioModel = new UsuariosModel();
         $emailModel = new EmailsModel();
-
 
         $id_usuario = $emailModel->Id_Usuario_Email($email);
        
@@ -188,11 +186,9 @@ class Auth extends BaseController
            
             $usuario = $usuarioModel->Auth_usuario($email);
 
-
             if ($usuario && isset($usuario['pass'])) {
                
                 if (password_verify($password, $usuario['pass'])) {
-
 
                     $session = session();
 
@@ -206,9 +202,8 @@ class Auth extends BaseController
                         'rol' => $datos['id_rol'],
                         'logged_in' => true
                     ]);
-                    
-                    $response['id_rol'] = $usuario['id_rol'];
 
+                    $response['id_rol'] = $datos['id_rol'];
                     $response['mensaje'] = '1';
 
                 } else{

@@ -20,7 +20,7 @@
             <!-- <option selected >Tipo de movimiento</option>  -->
                 <?php foreach ($tipo_movi as $data) {?>
                      
-                <option value="<?php echo $data["id_parametro_det"]; ?>"><?php echo $data["nombre"];?></option>
+                <option class="select_movi" value="<?php echo $data["id_parametro_det"]; ?>"><?php echo $data["nombre"];?></option>
                 <?php } ?>
             </select>
 
@@ -55,7 +55,7 @@
              <!-- <option selected required >Clase de movimiento</option>  -->
                 <?php foreach ($clase_movi as $data) {?>
              
-                <option value="<?php echo $data["id_parametro_det"]; ?>"><?php echo $data["nombre"];?></option>
+                <option class="select_movi" value="<?php echo $data["id_parametro_det"]; ?>"><?php echo $data["nombre"];?></option>
                 <?php } ?>
             </select>
         </div>

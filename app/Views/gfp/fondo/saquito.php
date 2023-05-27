@@ -122,9 +122,9 @@ w<?= $this->extend("layouts/gfpLayout")?>
                     <br>
                     <div class="tma">
         
+                        <label for="floatingInput">fecha inicial:</label>
                         <input type="date" class="form-control" name="fecha_inicial" id="fecha_inicial"
                             placeholder="Fecha inicial: " required>
-                        <label for="floatingInput">fecha inicial:</label>
                     </div>
                     
 
@@ -138,6 +138,7 @@ w<?= $this->extend("layouts/gfpLayout")?>
   <label for="num2">numero de cuotas:</label>
   <input type="text" class="form-control valida"  id="numero_cuota" name="numero_cuota">
   <br>
+  <label for="num3"></label>
   <input type="text" class="form-control" id="cuota" name="cuota">
 </form>
 </div>

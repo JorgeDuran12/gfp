@@ -65,7 +65,7 @@
 
 <!-- Modal -->
 
-<form action="<?= base_url('agregar_presupuesto');?>" method="POST">
+<form action="<?= base_url('agregar_presupuesto');?>" method="POST" id="form_principal">
 
     <div class="modal fade" id="modalAgregar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -132,20 +132,24 @@ var bar = new ProgressBar.Circle(presupuestoContainer, {
         circle.path.setAttribute('stroke', state.color);
         circle.path.setAttribute('stroke-width', state.width);
 
-        var valorPresupuesto = "<?= $presupuestoActual?>";
+        let valorPresupuesto = <?= $presupuestoActual ?>;
+        let formattedPresupuesto = valorPresupuesto.toLocaleString(); // Formatear con separación de comas
+
         if (valorPresupuesto == 0) {
             circle.setText(`$0`);
         } else {
-            circle.setText(`$${valorPresupuesto}`);
-            btnPresupuesto.hidden = true
+            circle.setText(`$${formattedPresupuesto}`);
+            btnPresupuesto.hidden = true;
         }
 
     }
 });
+
 bar.text.style.fontFamily = '"Exo", sans-serif';
 bar.text.style.fontSize = '2rem';
 
-bar.animate(1.0); // Number from 0.0 to 1.0
+bar.animate(1.0);
+
 </script>
 
 <script>
@@ -155,6 +159,5 @@ inputPeriodo.value = periodo.getFullYear();
 
 //Quitar botono si ya agrego un presupuesto
 </script>
-
 
 <?= $this->endSection('contenido'); ?>
