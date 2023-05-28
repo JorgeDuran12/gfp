@@ -58,13 +58,6 @@
 </div>
 
 <script>
-// const msg = "<= session()->getFlashdata('mensaje') ?>";
-
-// if (msg === '2' ) {
-//     $('#mensaje_error').text('La contraseña no coincide').show().delay(3000).fadeOut();
-// } else {
-//     $('#mensaje_error').text('La cuenta no existe').show().delay(3000).fadeOut();
-// }
 
 $(document).ready(function() {
     $('#formulario').submit(function(event) {
@@ -90,19 +83,12 @@ $(document).ready(function() {
                     $('#mensaje_error').text('La cuenta no existe').show().delay(3000)
                         .fadeOut();
                 } else {
-                    if (response.id_rol === '1') {
+
+                    if (response.id_rol === response.id_rol) {
                         setTimeout(function() {
                             window.location.href = "<?= base_url('principal') ?>";
                         }, 1000);
-                    } else if (response.id_rol === '2') {
-                        setTimeout(function() {
-                            window.location.href = "<?= base_url('principal') ?>";
-                        }, 1000);
-                    } else if (response.id_rol === '3' || response.id_rol === '4') {
-                        setTimeout(function() {
-                            window.location.href = "<?= base_url('principal') ?>";
-                        }, 1000);
-                    }
+                    } 
                 }
             },
             error: function() {
@@ -111,6 +97,7 @@ $(document).ready(function() {
         });
     });
 });
+
 </script>
 
 <?= $this->endSection("contenido")?>
