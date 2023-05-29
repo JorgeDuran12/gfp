@@ -43,6 +43,7 @@ class Usuario extends BaseController
         ]);
     }
 
+    
     public function insertar()
     {
         $tp=$this->request->getPost('tp');
@@ -83,7 +84,6 @@ class Usuario extends BaseController
                     'prioridad' => 13,
                     'numero' => $this -> request ->getPost('telefono')
                 ]);
-    
                 
             } else {
                 $this->usuario->update($this->request->getPost('id_usuario'),[       
@@ -95,6 +95,7 @@ class Usuario extends BaseController
             return redirect()->to(base_url('/usuario'));
         }
     }
+
 //  <----------------------------------------vista eliminados------------------------------------>
     public function eliminados()
     {

@@ -210,6 +210,7 @@ $('.close').click(function() {
     $("#modal-confirma").modal("hide");
 });
 
+
 function seleccionausuario(id, tp) {
 
     $(".input_container").hide();
@@ -226,13 +227,17 @@ function seleccionausuario(id, tp) {
             success: function(rs) {
                 console.log(rs);
                 document.getElementById('exampleModalLabel').innerText = "Actualizar usuario";
+
                 $("#tp").val(2);
                 $("#id").val(id);
                 limpiarCampos();
+
                 $("#id_rol").closest(".input_container").show();
                 $("#usuario").closest(".input_container").show();
-                // $("#usuario").val(rs[0]['usuario']);
-                // $("#id_rol").val(rs[0]['id_rol']);
+
+                $("#usuario").val(rs[0]['usuario']).prop('disabled', true);
+                $("#id_rol").val(rs[0]['id_rol']);
+
                 $("#btn_guardar").text('Actualizar');
             }
         });
@@ -241,6 +246,7 @@ function seleccionausuario(id, tp) {
         $("#tp").val(1);
         limpiarCampos();
         document.getElementById('exampleModalLabel').innerText = "Crear usuario";
+        $("#usuario").val('').prop('disabled', false);
         $(".input_container").show();
         $("#btn_guardar").text('Guardar');
     }
