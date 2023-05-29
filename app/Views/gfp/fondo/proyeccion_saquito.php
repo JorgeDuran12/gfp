@@ -33,9 +33,10 @@
             </div>
 
         </form>
-
+    <div id="contenedor">
+    <div id="limite">
     <div class="table table-striped">
-                <table class="table table-striped" id="dataTable" cellspacing="0">
+                <table id="miTabla" cellspacing="0">
                     <thead>
                         <tr>
                             <th>Fecha cuota</th>
@@ -59,45 +60,101 @@
                    
                     </tbody>
                 </table> 
-   </div>    
+    </div>    
+    </div>
+    </div>
+</div>
+<div class="container">
 
-   </div>
-   
+<table class="table">
+  <thead class="table-dark">
+    <tr>
+    <th translucido></th>
+    <th>Cuotas</th>
+    <th>valor de meta</th>
+    
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+        <td>cantidad de cuotas</td>   
+        <td><?= $traer_sqto['numero_cuota']?></td>
+        <td><?= $traer_sqto['valor']?></td>  
+       
+    </tr>
+    <tr>
+        <td>cuotas registrada</td> 
+    </tr>
+    <tr>
+        <td>Cuotas restantes</td>   
+    </tr>
+    <tr>
+        <td>registros extras</td>   
+    </tr>
+  </tbody>
+</table>
 </div>
 
-
-
-
-
+    
+<!-- <---------------------div de header y footer------------------->
+                                                                                     
+</div>
 </div>
 </div>
 <script>
     
     const egreso = <?= $disponibles['egreso']?>;
     const presu = <?= $disponibles['presupuesto_anual']?>;
-    console.log("presu" + presu);
-    
 
     $(document).on('blur', '.valida', function(event) {
     let valor_cuota= parseInt(document.getElementById("valor_cuota").value);
     let resultado = presu - valor_cuota
-    console.log("resultado" + resultado);
+    // console.log("resultado" + resultado);
      let resultado2 = valor_cuota + egreso
-     console.log("resultado-------"+resultado2);
+    //  console.log("resultado-------"+resultado2);
     document.getElementById("egreso").value = resultado2;
     document.getElementById("presupuesto").value = resultado;
 
     })
 
-
-
-// poribles uso
-
-// const saldo_anterior = <?= $disponibles['saldo_anterior']?>;
-// const ingreso = <?= $disponibles['ingreso']?>;
-    // console.log("saldo" + saldo_anterior);
-     console.log("egreso" + egreso);
-
+// poribles
 </script>
+
+<script>
+/******* Data - Table ***********/
+$(document).ready(function() {
+    $('#miTabla').DataTable({
+        scrollY: '500px',
+        scrollCollapse: true,
+        paging: false,
+        language: {
+            lengthMenu: 'Display _MENU_ records per page',
+            zeroRecords: 'No se encontro nada - Lo siento',
+            info: 'Mostrando pagina _PAGE_ de _PAGES_',
+            infoEmpty: 'No se encontro el registro',
+            infoFiltered: '(Filtrado de _MAX_ registros totales)',
+        },
+        responsive: true
+    });
+});
+</script>
+
+<!-- <script>
+
+    const valor_cuota= "<=$traer_proye['valor_cuota'];?>";
+    const valor = "<=$traer_sqto['valor'];?>";
+
+    let nuevo_valorCuota  = valor_cuota;
+
+    nuevo_valorCuota += valor_cuota;
+
+
+    let resultado = valor - nuevo_valorCuota;
+    console.log("valor_cuota: " + valor_cuota);
+    console.log("valor: " + valor);
+
+
+</script> -->
+
 
 <?= $this->endSection("contenido")?>

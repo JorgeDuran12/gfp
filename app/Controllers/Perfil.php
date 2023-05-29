@@ -5,6 +5,8 @@ use App\Models\UsuariosModel;
 use App\Models\TelefonosModel;
 use App\Models\EmailsModel;
 use App\Models\ParamentrosModel;
+use CodeIgniter\API\ResponseTrait;
+
 
 class Perfil extends BaseController
 {
@@ -12,6 +14,7 @@ class Perfil extends BaseController
     protected $telefono;
     protected $email;
     protected $parametro;
+    use ResponseTrait;
     
     public function __construct()
     {
@@ -27,7 +30,7 @@ class Perfil extends BaseController
         $session = session();
         $idGlobal = $session->id_usuario;
 
-        $miPerfil = $this->usuario->traer_usuario();
+        $miPerfil = $this->usuario->traer_usuario_perfil();
         $misTelefonos = $this->telefono->traer_telefonos_by_id( $idGlobal );
         $misEmails = $this->email->traer_emails_by_id( $idGlobal );
         $parametrosTipoDoc = $this->parametro->obtener_encabezado_3();
@@ -49,16 +52,54 @@ class Perfil extends BaseController
     }
 
     public function editar_informacion() {
-        $tp = $this->request->getPost('tp');
-        if($tp === '1') {
-            $this->usuario->insert(session()->get('id_usuario'), [
+        $session = session();
+        $idUsuario = $session->id_usuario;
+
+        $id_telefono_pr = $this->request->getPost('id_telefono_pr');
+        $id_email_pr = $this->request->getPost('id_email_pr');
+
+            //Actualizar la informacion basica
+            $this->usuario->update($idUsuario, [
                 'usuario' => $this->request->getPost('usuario'),
                 'nombre' => $this->request->getPost('nombres'),
                 'apellido' => $this->request->getPost('apellidos'),
                 'tipo_documento' => $this->request->getPost('tipo_Documento'),
                 'num_documento' => $this->request->getPost('num_documento'),
             ]);
-        }
+
+            //Traer telefono que se va pasar de secundario a primario y eliminar
+            if( $this->request->getPost('telefonos') ) {
+
+                $telefono = $this->telefono->traer_telefonos_by_numero( $this->request->getPost('telefonos') );
+                $this->telefono->where('id_telefono', $telefono[0]['id_telefono'])->delete();
+    
+                //Actualizar el numero Principal del usuario
+                $this->telefono->update($id_telefono_pr, [
+                    'numero' => $this->request->getPost('telefonos')
+                ]);
+                
+            }
+
+            //Traer email que se va pasar de secundario a primario y eliminar
+            $emailData = $this->email->traer_emails_by_correo( $this->request->getPost('emails') );
+            if( !empty($emailData ) ) {
+                $this->email->where('id_email', $emailData[0]['id_email'])->delete();
+
+                //Actualizar el numero Principal del usuario
+                $this->email->update($id_email_pr, [
+                    'email' => $this->request->getPost('emails')
+                ]);
+                
+            }
+
+
+
+
+
+
+
+            return redirect()->to(base_url('perfil'));
+        
     }
 
     public function traer_informacion() {
@@ -79,9 +120,58 @@ class Perfil extends BaseController
         // echo json_encode($telefonos);
     }
 
-    public function agregar_tel_email()
-    {
+    public function agregar_tel_email($telOrEmail, $tp)     
+    {   
+        $session = session();
+        $idUsuario = $session->id_usuario;
 
+        
+        if( $tp == 1) {
+            $telsUsuario = $this->telefono->traer_telefonos_by_id( $idUsuario );
+            // echo 'telefono';
+
+            //Recorrer cada telefono para ver si existe y es igual al ingresado
+           for( $i = 0; $i < count($telsUsuario); $i++ ) {
+                if( $telsUsuario[$i]['numero'] == $telOrEmail ) {
+                    return $this->fail('Telefono ya existente', 400);
+                    exit();
+                }
+            }
+            
+            //insertar telefono si no existe
+            $this->telefono->insert([
+                'numero' => $telOrEmail,
+                'prioridad' => '14', //Secundarios,
+                'id_usuario' => $idUsuario,
+                'usuario_crea' => $idUsuario
+            ]);
+            return $this->respond('Numero agregado', 200);
+                
+            
+        }else if( $tp == 2 ) {
+
+                $emailsUsuario = $this->email->traer_emails_by_id( $idUsuario );
+                // echo 'telefono';
+    
+                //Recorrer cada telefono para ver si existe y es igual al ingresado
+               for( $i = 0; $i < count($emailsUsuario); $i++ ) {
+                    if( $emailsUsuario[$i]['email'] == $telOrEmail ) {
+                        return $this->fail('Correo ya existente', 400);
+                        exit();
+                    }
+                }
+                
+                //insertar telefono si no existe
+                $this->email->insert([
+                    'email' => $telOrEmail,
+                    'prioridad' => '14', //Secundarios,
+                    'id_usuario' => $idUsuario,
+                    'usuario_crea' => $idUsuario
+                ]);
+
+                return $this->respond('correo agregado', 200);
+                
+        }
     }
 
     public function cambiar_clave()

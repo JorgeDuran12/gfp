@@ -46,6 +46,7 @@ class Usuario extends BaseController
     public function insertar()
     {
         $tp=$this->request->getPost('tp');
+
         if ($this->request->getMethod() == "post") {
             if ($tp == 1) {
 
@@ -61,6 +62,7 @@ class Usuario extends BaseController
                     'num_documento' => $this->request->getPost('num_documento'),
                     'pass' => $hashed_password
                 ]);
+
                 $id_usuario = $this -> usuario ->insertID(); 
 
                 $this -> usuario -> save([
@@ -75,7 +77,7 @@ class Usuario extends BaseController
                     'email' => $this -> request ->getPost('email')
                 ]);
     
-                $this -> telefono -> save( [
+                $this -> telefono -> save([
                     'id_usuario' => $id_usuario,
                     'usuario_crea'=> $id_usuario,
                     'prioridad' => 13,
@@ -84,15 +86,9 @@ class Usuario extends BaseController
     
                 
             } else {
-                $this->usuario->update($this->request->getPost('id'),[       
+                $this->usuario->update($this->request->getPost('id_usuario'),[       
                     'usuario' => $this->request->getPost('usuario'),             
-                    'nombre' => $this->request->getPost('nombre'),
-                    'apellido' => $this->request->getPost('apellido'),
                     'id_rol' => $this->request->getPost('id_rol'),
-                    'tipo_documento' => $this->request->getPost('tipo_documento'),
-                    'num_documento' => $this->request->getPost('num_documento'),
-                    'pass' => $this->request->getPost('pass'),
-                
                 ]);
             }
 

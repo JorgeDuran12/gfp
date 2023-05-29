@@ -100,4 +100,15 @@ $(document).ready(function() {
 
 </script>
 
+<script>
+/* Recuperar pass  (Alerta) */
+
+const estado_recuperar_pass = "<?= $session->estado_recuperar_pass?>";
+if( estado_recuperar_pass === 'true' ) {
+    Swal.fire('Recuperación exitosa', 'La contraseña se ha recuperado correctamente', 'success', 'Aceptar');
+}
+
+
+</script>
+
 <?= $this->endSection("contenido")?>

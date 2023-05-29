@@ -82,7 +82,7 @@ $routes->post('Insertar_proyeccion','Proyeccion::Insertar');
 $routes->get('eliminados_usuario', 'Usuario::eliminados');
 $routes->get('eliminar__usuario', 'Usuario::eliminar__usuario');
 $routes->get('eliminados_rol', 'Rol::eliminados_rol');
-$routes->get('eliminar__rol', 'ROL::eliminar__rol');
+$routes->get('eliminar__rol', 'Rol::eliminar__rol');
 
 
 /* Rutas Login*/

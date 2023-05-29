@@ -45,15 +45,4 @@
  </div>
  </div>
 
-
-<script>
-
-    const saldo_anterior = <?= $disponibles['saldo_anterior']?>;
-    const ingreso = <?= $disponibles['ingreso']?>;
-
-    let resultado = saldo_anterior + ingreso;
-    document.write(resultado);
-
-</script>
-
  <?= $this->endSection("contenido")?>

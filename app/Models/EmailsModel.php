@@ -72,8 +72,19 @@ class EmailsModel extends Model{
     $this->select('emails.*');
     $this->where('estado','A');
     $this->where('id_usuario',$id);
+    $this->where('prioridad', '14');
     $datos = $this->findAll();  
     return $datos;
+  }
+  public function traer_emails_by_correo( $email )
+  {
+    $this->select('emails.*');
+    $this->where('estado','A');
+    $this->where('email',$email);
+    // $this->where('prioridad', '14');
+    $datos = $this->find();  
+    return $datos;
+    
   }
 
 }

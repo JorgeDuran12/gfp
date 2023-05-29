@@ -51,7 +51,16 @@ public function traer_telefonos_by_id( $id ) {
     $this->select('telefonos.*');
     $this->where('estado','A');
     $this->where('id_usuario',$id);
+    $this->where('prioridad', '14');
     $datos = $this->findAll();  
+    return $datos;
+}
+public function traer_telefonos_by_numero( $numero ) {
+    $this->select('telefonos.*');
+    $this->where('estado','A');
+    $this->where('numero',$numero);
+    $this->where('prioridad', '14');
+    $datos = $this->find();  
     return $datos;
 }
 

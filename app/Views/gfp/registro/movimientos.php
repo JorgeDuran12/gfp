@@ -119,8 +119,7 @@
                 <div id="contenedor_modal_Movimiento">
                     <div id="limite">
                         <div class="table-responsive">
-                            <table class="table table-bordered table-sm table-striped" id="dataTable1" width="100%"
-                                cellspacing="0">
+                        <table id="miTabla" class="display">                          
                                 <thead>
                                     <tr>
 
@@ -211,6 +210,27 @@ $(document).on('blur', '.valida', function(event) {
 });
 
 
+</script>
+
+<script>
+/******* Data - Table ***********/
+$(document).ready(function() {
+    $('#miTabla').DataTable({
+        scrollY: '500px',
+        scrollCollapse: true,
+        paging: false,
+        language: {
+            lengthMenu: 'Display _MENU_ records per page',
+            zeroRecords: 'No se encontro nada - Lo siento',
+            info: 'Mostrando pagina _PAGE_ de _PAGES_',
+            infoEmpty: 'No se encontro el registro',
+            infoFiltered: '(Filtrado de _MAX_ registros totales)',
+        },
+        responsive: true
+
+
+    });
+});
 </script>
 
 <?= $this->endSection("contenido")?>

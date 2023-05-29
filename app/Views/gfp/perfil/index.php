@@ -17,7 +17,7 @@
             
         <div class="perfil__informacion">
             
-            <h3 class="mb-3 text-white fw-bold text-uppercase">Información</h3>
+            <h3 class="mb-3 text-white fw-bold text-uppercase">Información Basica</h3>
             <ul class="d-flex">
                 <li>USUARIO:</li>
                 <span><?= $DatosPerfil['usuario']?></span>
@@ -35,18 +35,21 @@
                 <span><?= $DatosPerfil['pf_tp']?> - <?= $DatosPerfil['num_documento']?></span>
             </ul>
 
-            <h3 class="mt-5 mb-3 text-white fw-bold text-uppercase">Contacto</h3>
+            <h3 class="mt-5 mb-3 text-white fw-bold text-uppercase">Información de Contacto</h3>
             <ul class="d-flex">
                 <li>TELEFONO PRINCIPAL:</li>
-                <span><?= $DatosPerfil['telefono']?></span>
+                <?php if($DatosPerfil['prioridad_tel'] == '13'){ ?>
+                  <span><?= $DatosPerfil['telefono']?></span>
+                <?php } ?>
+                  <!-- No hay telefono principal -->
             </ul>
+            
             <ul class="d-flex">
                 <li>CORREO ELECTRONICO PRINCIPAL:</li>
                 <span><?= $DatosPerfil['email']?></span>
             </ul>
-            <!-- Editar contacto (Button) -->
             <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalPerfil" onclick="mostrarDatos()">
-                <img type="image" src="<?= base_url("img/editar.png")?>" />
+              <img type="image" src="<?= base_url("img/editar.png")?>" />
             </button>
 
             <h3 class="mt-5 mb-3 text-white fw-bold text-uppercase">Cambiar contraseña</h3>
@@ -68,12 +71,11 @@
           <div class="alert alert-danger" role="alert" id="mensajeError" hidden></div>
           <div class="modal-body">
             <!-- Formulario -->
-            <form class="d-flex flex-column" id="datosFormulario" action="<?= base_url("perfil/editar_informacion")?>" method="POST" onsubmit="return validateForm()">
+            <form  class="d-flex flex-column" id="datosFormulario" action="<?= base_url("perfil/editar_informacion")?>" method="POST" onsubmit="return validateForm()">
                 <input type="text" hidden
-                  class="form-control"  name="id" id="id" aria-describedby="helpId" placeholder="Ej: Henrry1">
-              
-                <input type="number" hidden
-                  class="form-control"  name="tp" id="tp" aria-describedby="helpId" placeholder="Ej: Henrry1">
+                  class="form-control"  name="id_telefono_pr" id="id_telefono_pr" aria-describedby="helpId" placeholder="Ej: pass">
+                <input type="text" hidden
+                  class="form-control"  name="id_email_pr" id="id_email_pr" aria-describedby="helpId" placeholder="Ej: correo">
               
               <div class="mb-3" id="divINput">
                 <label for="usuario" class="form-label" id="titleLabel">Nombre de Usuario o Apodo: </label>
@@ -108,41 +110,33 @@
                 </div>
               </div>
 
-              <label for="">Emails: </label>
-              <div class="d-flex w-100 h-100 align-items-center">
-                <select class="text-body p-2">
-                    <?php foreach($prioridad as $row ) { ?>
-                        <option class="text-body" value="<?= $row['id_parametro_det']?>"><?= $row['resumen']?></option>
-                    <?php } ?>
-                  </select>
-                  <select class="text-body p-2">
+              <label for="emails">Emails:</label>
+                <div class="d-flex w-100 h-100 align-items-center mb-3">
+                    <select class="text-body p-2" id="emails" name="emails">
                       <?php foreach($emails as $row ) { ?>
-                          <option class="text-body" value="<?= $row['id_email']?>"><?= $row['email']?></option>
-                      <?php } ?>
-                    </select>
-                  <button type="button" onclick="" class="btn btn-danger m-1">-</button>
-                  <button type="button" onclick="agregarRegistro('email')" class="btn btn-warning">+</button>
-                </div>
-                
-                <label for="">Telefonos: </label>
-                <div class="d-flex w-100 h-100 align-items-center">
-                  <select class="text-body p-2">
-                    <?php foreach($prioridad as $row ) { ?>
-                      <option class="text-body" value="<?= $row['id_parametro_det']?>"><?= $row['resumen']?></option>
-                      <?php } ?>
-                    </select>
-                    <select class="text-body p-2">
-                      <?php foreach($telefonos as $row ) { ?>
-                        <option class="text-body" value="<?= $row['id_telefono']?>"><?= $row['numero']?></option>
+                        <option class="text-body" value="<?= $row['email']?>"><?= $row['email']?></option>
                         <?php } ?>
                     </select>
-                    <button type="button" onclick="" class="btn btn-danger m-1">-</button>
-                    <button type="button" onclick="agregarRegistro('telefono')" class="btn btn-warning">+</button>
-              </div>
+                    <button type="button" onclick="agregarRegistro('email')" class="btn btn-warning">Agregar</button>
+                    <button type="button" onclick="eliminarRegistro('email')" class="btn btn-danger ">Eliminar</button>
+                </div>
+                
+                <label for="telefonos">Teléfonos:</label>
+                <div class="d-flex w-100 h-100 align-items-center">
+                  <select class="text-body p-2" id="telefonos" name="telefonos">
+                    <?php foreach($telefonos as $row ) { ?>
+                      <option class="text-body" value="<?= $row['numero']?>">
+                      <?= $row['numero']?>
+                    </option>
+                      <?php } ?>
+                    </select>
+                    <button type="button" onclick="agregarRegistro('telefono')" class="btn btn-warning">Agregar</button>
+                    <button type="button" onclick="eliminarRegistro('telefono')" class="btn btn-danger ">Eliminar</button>
+                </div>
 
 
-        
             </div>
+
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" id="btn-del">Cancelar</button>
               <button type="submit" class="btn btn-primary" id="btn-agg">Actualizar</button>
@@ -197,7 +191,9 @@ var inputNewPass = document.querySelector('#new_pass');
 
   /* Fin cambiar clave */
 
-var inputTp = document.querySelector('#tp');
+var inputIdTelefonoPrincipal = document.querySelector('#id_telefono_pr');
+var inputIdEmailPrincipal = document.querySelector('#id_email_pr');
+
 var inputUsuario = document.querySelector('#usuario');
 var inputNombres = document.querySelector('#nombres');
 var inputTelefono = document.querySelector('#telefono');
@@ -211,39 +207,156 @@ var labelInputs = document.querySelectorAll('#titleLabel');
 var selectDiv = document.querySelector('#select-id');
 
 
-function mostrarDatos( id ) {
+function mostrarDatos( tp ) {
 
   $.ajax({
       url: "<?= base_url("perfil/traer_informacion")?>",
       type: "GET",
       dataType: "json",
       success: function ( data ) {
-          // console.log(data);
+          console.log(data);
           
-          inputTp.value = 1
           inputUsuario.value = data['usuario'];
           inputNombres.value = data['nombre'];
           inputApellidos.value = data['apellido'];
-          // inputApellidos.value = data['apellido'];
           inputNumDoc.value = data['num_documento'];
+          inputTipoDoc.value = data['tipo_documento'];
+          inputIdTelefonoPrincipal.value = data['id_telefono'];
+          inputIdEmailPrincipal.value = data['id_email'];
+
       }
   })
 
 }
 
 
-function agregarRegistro(tipo) {
 
-  if( tipo === 'email') {
+function agregarRegistro( agregar ) {
+  if( agregar === 'telefono' ) {
+
+    const tp = 1;
+
+    $("#modalPerfil").modal('hide')
+    Swal.fire({
+      title: 'Ingrese un nuevo telefono',
+      input: 'text',
+      inputLabel: 'Ingrese un telefono valido',
+      inputPlaceholder: 'Ej: 3238906836',
+      showCancelButton: true,
+      confirmButtonText: 'Guardar',
+      showLoaderOnConfirm: true,
+      preConfirm: (tel) => {
+
+        if( tel.length === 10 ) {
+          return fetch(`http://localhost/gfp/public/perfil/agregar_tel_email/${tel}/${tp}`)
+          .then(response => {
+            if( response.status == 400 ) {
+              throw new Error('Telefono ya existente');
+            }
+            //Si la respuesta es correcta
 
 
-  }else if( tipo === 'telefono') {
-   
-  
+          })
+          .catch(error => {
+            Swal.showValidationMessage(
+              `${error}`
+            )
+          })
+        }else {
+          Swal.fire('Error al agregar', 'La longitud debe ser de 10 caracteres', 'info', 'Aceptar')
+          $("#modalPerfil").modal('show')
+          return false;
+        }
+
+      },
+      allowOutsideClick: () => !Swal.isLoading()
+    })
+    .then(result => {
+      if( result.isConfirmed ) {
+        Swal.fire('Telefono agregado', 'Se agrego el telefono correctamente', 'success', 'Ok');
+        // $("#modalPerfil").modal('reload');
+          $("#modalPerfil .modal-body").load(location.href + ' #modalPerfil .modal-body');
+          $("#modalPerfil").modal('show');
+      }else {
+
+        $("#modalPerfil").modal('show');
+        
+      }
+    })
+
+
+  }else if( agregar === 'email' ) {
+
+    const tp = 2;
+
+$("#modalPerfil").modal('hide')
+Swal.fire({
+  title: 'Ingrese un nuevo Correo',
+  input: 'email',
+  inputLabel: 'Ingrese un correo valido',
+  inputPlaceholder: 'Ej: micorreo@correo.com',
+  showCancelButton: true,
+  confirmButtonText: 'Guardar',
+  showLoaderOnConfirm: true,
+  preConfirm: (tel) => {
+
+    if( tel.includes('@') ) {
+      return fetch(`http://localhost/gfp/public/perfil/agregar_tel_email/${tel}/${tp}`)
+      .then(response => {
+        if( response.status == 400 ) {
+          throw new Error('Telefono ya existente');
+        }
+        //Si la respuesta es correcta
+
+
+      })
+      .catch(error => {
+        Swal.showValidationMessage(
+          `${error}`
+        )
+      })
+    }else {
+      Swal.fire('Error al agregar', 'Formato de correo incorrecto', 'info', 'Aceptar')
+      $("#modalPerfil").modal('show')
+      return false;
+    }
+
+  },
+  allowOutsideClick: () => !Swal.isLoading()
+})
+.then(result => {
+  if( result.isConfirmed ) {
+    Swal.fire('Correo agregado', 'Se agrego el correo correctamente', 'success', 'Ok');
+    // $("#modalPerfil").modal('reload');
+      $("#modalPerfil .modal-body").load(location.href + ' #modalPerfil .modal-body');
+      $("#modalPerfil").modal('show');
+  }else {
+
+    $("#modalPerfil").modal('show');
+    
   }
+})
 
+  }
 }
 
+</script>
+
+
+
+<script>
+
+$(document).ready(function() {
+  $("#setMainBtn").click(function() {
+    let selectPhones = $("#telefonos").val();
+    if( selectPhones ) {
+      $('#telefonos option').removeClass('main');
+      $(selectPhones).each(function() {
+        $('#telefonos option[value="' + this + '"]').addClass('main')
+      })  
+    }
+  })
+})
 
 </script>
 

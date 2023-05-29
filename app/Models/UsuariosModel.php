@@ -32,7 +32,23 @@ class UsuariosModel extends Model{
     $session = session();
     $id_usuario = $session->get('id_usuario');
 
-    $this->select('usuarios.*, roles.nombre as rol_nombre, parametros_det.nombre as pf_tp, telefonos.numero as telefono, emails.email as email');
+    $this->select('usuarios.*, roles.nombre as rol_nombre, parametros_det.nombre as pf_tp, telefonos.numero as telefono, telefonos.id_telefono as id_telefono, emails.email as email, emails.id_email as id_email');
+    $this->join('roles', 'roles.id_rol = usuarios.id_rol');
+    $this->join('telefonos', 'telefonos.id_usuario = usuarios.id_usuario');
+    $this->join('emails','emails.id_usuario = usuarios.id_usuario');
+    $this->join('parametros_det', 'parametros_det.id_parametro_det = usuarios.tipo_documento');
+    $this->where('usuarios.estado','A');
+    $this->where('usuarios.id_usuario',$id_usuario);
+    $datos = $this->first();  
+    return $datos;
+    }
+    public function traer_usuario_perfil()
+    {
+
+    $session = session();
+    $id_usuario = $session->get('id_usuario');
+
+    $this->select('usuarios.*, roles.nombre as rol_nombre, parametros_det.nombre as pf_tp, telefonos.numero as telefono, telefonos.prioridad as prioridad_tel, emails.email as email');
     $this->join('roles', 'roles.id_rol = usuarios.id_rol');
     $this->join('telefonos', 'telefonos.id_usuario = usuarios.id_usuario');
     $this->join('emails','emails.id_usuario = usuarios.id_usuario');
@@ -53,8 +69,9 @@ class UsuariosModel extends Model{
         $this->where('usuarios.estado', $estado);
         $this->where('emails.estado', 'A');
         $this->where('telefonos.estado', 'A');
+        $this->where('telefonos.prioridad', 13);
+        $this->where('emails.prioridad', 13);
         $datos = $this->first();
-    
         return $datos;
     }
     

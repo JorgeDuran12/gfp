@@ -26,23 +26,25 @@ w<?= $this->extend("layouts/gfpLayout")?>
 
    
 </div>
+<div id="contenedor">
+    <div id="limite">
 
-<table class="table table-striped">
-    <thead>
-        <tr class="cm"></tr>
-            <th>Descripcion</th>
+<table id="miTabla" class="display">
+            <thead>
+                <tr>
+                <th>Descripcion</th>
             <th>Fecha inicial</th>
            
             <th>valor</th>
             <th>Numero cuota</th>
             <th>cuota</th>
             <th>estado</th>
-            <th colspan="2">Acciones</th>
+            <th>Acciones</th>
 
-        </tr>
-    </thead>
-    <tbody class=" jm">
-        <?php foreach ($saquito as $dato) { ?>
+                </tr>
+            </thead>
+            <tbody>
+               <?php foreach ($saquito as $dato) { ?>
         <tr>
             <td><?php echo $dato ['descripcion'];?></td>
             <td><?php echo $dato['fecha_inicial'];?></td>
@@ -65,12 +67,12 @@ w<?= $this->extend("layouts/gfpLayout")?>
             </td>
         </tr>
         <?php } ?>
-    </tbody>
-
-
-</table>
+            </tbody>
+        </table>
 </div>
 </div>
+               </div>
+               </div>
 
 
 
@@ -170,7 +172,8 @@ w<?= $this->extend("layouts/gfpLayout")?>
                 if( data.length >= 1 ) {
                     console.log('Hola')
                     btnAGregar.innerText = 'Deshabilitado'
-                    btnAGregar.disabled = true;
+                    btnAGregar.disabled = true;                    
+                    
                 }   
             }
         })
@@ -262,17 +265,31 @@ function selecionaRegistro(id, tp) {
 }
 
 
-// const valor = document.getElementById('vr')
-
-// console.log(valor.value);
-//    $(document).ready(function() {
-//     if (valor == 1){
-//       console.log("si estoy")
-//     }
-// });
 
 
 </script>
+
+<script>
+/******* Data - Table ***********/
+$(document).ready(function() {
+    $('#miTabla').DataTable({
+        scrollY: '500px',
+        scrollCollapse: true,
+        paging: false,
+        language: {
+            lengthMenu: 'Display _MENU_ records per page',
+            zeroRecords: 'No se encontro nada - Lo siento',
+            info: 'Mostrando pagina _PAGE_ de _PAGES_',
+            infoEmpty: 'No se encontro el registro',
+            infoFiltered: '(Filtrado de _MAX_ registros totales)',
+        },
+        responsive: true
+
+
+    });
+});
+</script>
+
 
 
 

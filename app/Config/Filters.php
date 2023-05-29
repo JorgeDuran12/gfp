@@ -22,6 +22,7 @@ class Filters extends BaseConfig
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
         'Verificar_Auth' => \App\Filters\Verificar_Auth::class,
+        'Verificar_Login' => \App\Filters\Verificar_Login::class,
     ];
 
     /**
@@ -123,6 +124,19 @@ class Filters extends BaseConfig
                 
 
             ]
-        ]
+        ],
+            
+        'Verificar_Login' => [
+            'before' => [
+                /* Controladores */
+                'auth',
+                '/',
+                'recuperar_contraseña',
+                'verificar_token',
+                'enviar_token',
+                
+            ]
+ 
+        ]           
     ];
 }

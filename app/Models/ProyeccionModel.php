@@ -35,8 +35,27 @@ class ProyeccionModel extends Model{
         $this->where('proyeccion.usuario_crea',$id_usuario);
         $data = $this->findAll();
         return $data;
-
     }
+    
+    public function traer_proye(){
+        $session = session();
+        $id_usuario = $session->get('id_usuario');
+
+        $this->select('proyeccion.*');
+        $this->where('usuario_crea', $id_usuario);
+        $this->where('estado','A');
+        $datos = $this-> get()->getRowArray();
+        var_dump($datos);
+
+          if( empty($datos) ) {
+            $datos['valor_cuota'] = 0;
+              return $datos;
+          }else {
+              return $datos;
+          }
+    }
+
+   
 }
     
 

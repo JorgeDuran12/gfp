@@ -32,14 +32,20 @@ class Proyeccion extends BaseController
         $disponibles = $this-> disponible ->datos_ingreso();
 
         $proye = new ProyeccionModel();
+        $traer_sqto= new SaquitoModel();
+        $traer_proye= new ProyeccionModel();
 
         $proyeccion = $proye -> traer();
+        $traer_sqto =   $traer_sqto -> traer_sqto ();
+        $traer_proye=   $traer_proye -> traer_proye ();
 
         echo view("gfp/fondo/proyeccion_saquito", [
             'tituloPagina' => 'Proyeccion',
             'proyeccion' => $proyeccion,
             'disponibles' => $disponibles,
-            'misDatos' => $session
+            'misDatos' => $session,
+            'traer_sqto' => $traer_sqto,
+            'traer_proye' => $traer_proye,
             
         ]);
     }

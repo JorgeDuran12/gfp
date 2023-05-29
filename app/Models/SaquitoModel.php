@@ -57,6 +57,25 @@ class SaquitoModel extends Model{
             $datos = $this->first();
             return $datos['id_saquito'];
         }
+        public function traer_sqto(){
+            $session = session();
+            $id_usuario = $session->get('id_usuario');
+    
+            $this->select('saquitos.*');
+            $this->where('estado','A');
+            $this->where('usuario_crea', $id_usuario);
+            $datos = $this-> first();
+            // var_dump($datos);
+    
+             if( empty($datos) ) {
+                $datos['valor'] = 0;
+                 $datos['numero_cuota'] = 0;
+                $datos['cuota'] = 0;
+                 return $datos;
+             }else {
+                 return $datos;
+             }
+        }
 }
 
 

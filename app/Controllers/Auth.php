@@ -32,9 +32,12 @@ class Auth extends BaseController
 
     public function index(){
 
+        $session = session();
+
         echo view("auth/login",
          [
             'tituloPagina' => 'Inicio de sesión',
+            'session' => $session
         ]);
     }
     
@@ -78,41 +81,106 @@ class Auth extends BaseController
         //Instanciar Modelo Usuario y traer datos
         $usuariosModel = new UsuariosModel();
         $infoUsuario = $usuariosModel->verificar_email_bd( $emailInput );
-        if( $infoUsuario != null ) {
-            $idUsuario = $infoUsuario['id_usuario'];
-        }
+
         if( $emailInput ) {
+            //Verificar si existe el correo y usuario     
+            if( $infoUsuario != null ) {
+                $idUsuario = $infoUsuario['id_usuario'];
+                $nombreUsuario = $infoUsuario['nombre'];
+            }else {
+                return redirect()->
+                    to(base_url('auth/Recuperar_Clave_Pagina'))
+                    ->with('no_existe_email', 'error');
+            }
 
           //generar token
             $caracteres = "0123456789abcdefghijklmnopqrst";
             $token = generarCaracteres($caracteres, 5);
 
+            $nombre = 'asd';
             //Enviar token al correo respectivo
-            $email->setFrom('delassalasospino2003@gmail.com');
-            $email->setTo('krast646@gmail.com');
-            $email->setSubject('Este es el asunto');
-            $email->setMessage('Este es el mensaje');
+            $email->setFrom('finanzaspersonales@gmail.com');
+            $email->setTo($emailInput);
+            $email->setSubject('Reestablecimiento de contraseña');
+            $email->setMessage("
+                <h1>Estimado/a, $nombreUsuario</h1>                
+                <p>Hemos recibido una solicitud para restablecer la contraseña de tu cuenta. 
+                Para proceder con el restablecimiento sigue los siguientes pasos:</p>
+                
+                <p>
+                1. Haz clic en el enlace a continuación para acceder a la página de 
+                restablecimiento de contraseña:
+                    <li><a href='http://localhost/gfp/public/verificar_token/$token/$idUsuario'>Click para restablecer la contraseña</a></li>
+                </p>
+                
+                <p>2. Serás redirigido/a a una página donde podrás ingresar una nueva contraseña.</p>
+                
+                <p>3. Elige una contraseña segura y asegúrate de que cumpla con los requisitos de seguridad establecidos. 
+                Te recomendamos utilizar una combinación de letras mayúsculas y minúsculas, números y símbolos.</p>
+                <p>4. Una vez que hayas ingresado tu nueva contraseña, confírmala en el campo designado.</p>
+                <p>5. Haz clic en el botón 'Guardar' o 'Restablecer' para completar el proceso.</p>
+                
+                <p>Si no solicitaste este restablecimiento de contraseña, te recomendamos que contactes nuestro servicio de atención al cliente de inmediato para que podamos investigar el asunto.
+
+                Recuerda que es importante mantener tus contraseñas seguras y no compartirlas con nadie. 
+                Si tienes alguna pregunta o necesitas ayuda adicional, no dudes en contactarnos.</p>
+
+                <h4>Atentamente,</h4>
+
+                <p>Tu camino hacia la libertad financiera $nombreUsuario, 
+                tu aliado en la gestión financiera personal/p>
+            ");
 
             if($email->send()) {
-                echo 'enviado';
+                //Registrar el token al usuario
+                $this->usuario->update($idUsuario, [
+                    'token' =>  $token
+                ]);
+                
+                return redirect()->
+                to(base_url('auth/Recuperar_Clave_Pagina'))
+                ->with('token_enviado', 'true');
+            
             }else {
-                echo 'no enviado';
+                
+                return redirect()->
+                to(base_url('auth/Recuperar_Clave_Pagina'))
+                ->with('token_enviado', 'false');
             }
 
             
-        }else if( $nuevaPass ){
+        }else if( $nuevaPass ) {
 
+            $idUsuario_input = $this->request->getPost('id_usuario');
+            $hasPassword = password_hash($nuevaPass, PASSWORD_DEFAULT);
+
+
+            $this->usuario->update($idUsuario_input, [
+                'pass' => $hasPassword
+            ]);
+            return redirect()->to(base_url('auth'))->with('estado_recuperar_pass', 'true');
 
         }
 
+
     } 
 
-    public function verificar_token()
-    {
+   //verificar token por url
+   public function verificar_token_params($tokenUrl, $idUrl)
+   {
+       $infoUsuario = $this->usuario->traer_info_usuario_rol( $idUrl );
+       if( !empty($infoUsuario) && $tokenUrl == $infoUsuario['token'] ) {
+           //Si si es el usuario se quita el token
+           $this->usuario->update($idUrl, [
+               'token' => null
+           ]);
+           return redirect()->to(base_url('auth/Recuperar_Clave_Pagina'))->with('id_usuario', $idUrl);
+       }else {
+           return redirect()->to(base_url('auth/Recuperar_Clave_Pagina'))->with('token_verificado', 'false');
+       }
+   }
 
-    }
-
-    /*  */
+   /*  */
 
     public function guardar(){   
 
