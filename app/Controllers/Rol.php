@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Controllers\BaseController;
 use App\Models\RolModel;
 
+
 class Rol extends BaseController
 {
     protected $rol;

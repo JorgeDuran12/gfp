@@ -33,20 +33,22 @@ class Movimiento extends BaseController
 
       $Movimiento = $this-> Movimiento-> traer();
       $tipo_movimiento = $this-> parametros ->obtener_encabezado_1();
+
       $clase_movimiento_Model = new ParamentrosModel();
       $clase_movimiento = $clase_movimiento_Model -> obtener_encabezado_2();
-      $disponibles = $this-> disponible ->datos_ingreso();
 
+      $disponibles = $this-> disponible ->datos_ingreso();
+      // var_dump($Movimiento, $tipo_movimiento, $clase_movimiento, $disponibles);
+      // exit();
         echo view("gfp/registro/movimientos",  [
             'tituloPagina' => 'Mis movimientos',
             'tipo_movi' => $tipo_movimiento,
             'clase_movi' => $clase_movimiento,
-            'Movimientos' => $Movimiento,   
+            'movimientos' => $Movimiento,   
             'disponibles' => $disponibles,
             'misDatos' => $session
         ]);
     }
-
 
     public function insertar()
     {
@@ -77,9 +79,6 @@ class Movimiento extends BaseController
             return redirect()->to(base_url('/mis_movimientos'));
         }
         
-
-
-
         public function calculo(){
             $Movi_model = new MovimientoModel();
             $calculo = $Movi_model -> tasa_movimiento();

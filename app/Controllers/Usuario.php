@@ -98,13 +98,14 @@ class Usuario extends BaseController
 
 //  <----------------------------------------vista eliminados------------------------------------>
     public function eliminados()
-    {
+    {  $session = session();
+
         $usuario = $this->usuario->where('estado', "e")->findAll();   
         $parametro = $this->parametro->obtener_encabezado_3();   
         $rol = $this->rol->where('estado', "A")->findAll();  
         $email = $this->email->where('estado', "A")->findAll();     
         $telefono = $this->telefono->where('estado', "A")->findAll();    
-        $datos = ['tituloPag' => 'Administrador','usuarios'=>$usuario, 'roles'=>$rol, 'parametros'=>$parametro, 'tituloPagina' => 'Administradores' ];
+        $datos = ['tituloPag' => 'Administrador','usuarios'=>$usuario, 'roles'=>$rol, 'parametros'=>$parametro, 'tituloPagina' => 'Administradores' ,'misDatos' => $session ];
         echo view("gestion/administrador/admin_eliminados", $datos);
     }
 

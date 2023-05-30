@@ -33,11 +33,11 @@ class Proyeccion extends BaseController
 
         $proye = new ProyeccionModel();
         $traer_sqto= new SaquitoModel();
-        $traer_proye= new ProyeccionModel();
+        $traer_proy= new ProyeccionModel();
 
         $proyeccion = $proye -> traer();
         $traer_sqto =   $traer_sqto -> traer_sqto ();
-        $traer_proye=   $traer_proye -> traer_proye ();
+        $traer_proye=   $traer_proy -> traer_proye ();
 
         echo view("gfp/fondo/proyeccion_saquito", [
             'tituloPagina' => 'Proyeccion',
@@ -45,8 +45,7 @@ class Proyeccion extends BaseController
             'disponibles' => $disponibles,
             'misDatos' => $session,
             'traer_sqto' => $traer_sqto,
-            'traer_proye' => $traer_proye,
-            
+            'traer_proye' => $traer_proye['valor_cuota'],
         ]);
     }
 
@@ -73,7 +72,6 @@ class Proyeccion extends BaseController
            'valor' => $this->request->getPost('valor_cuota'), 
            'usuario_crea' => $id_usuario,
 
-
         ]);
 
         $this->disponible->update($identificador,[
@@ -83,17 +81,7 @@ class Proyeccion extends BaseController
            'id_usuario' => $id_usuario,
 
           ]);
-
-
-
-
-
-
         return redirect()->to(base_url('/proyeccion'));
     }
-
-
-  
-   
 
 }

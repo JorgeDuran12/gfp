@@ -84,13 +84,29 @@
     </tr>
     <tr>
         <td>cuotas registrada</td> 
+         <td>
+            <div id="cuotas" name="cuotas" >
+
+            </div>
+        </td>
+        <td ><div id="num_cuotas" name="num_cuotas"> </div></td>
     </tr>
     <tr>
         <td>Cuotas restantes</td>   
+        <td>
+            <div id="num_cr">
+
+            </div>
+        </td> 
+        
+        <td>
+            <div id="saldo_restante">
+
+            </div>
+        </td>  
+        
     </tr>
-    <tr>
-        <td>registros extras</td>   
-    </tr>
+
   </tbody>
 </table>
 </div>
@@ -101,6 +117,7 @@
 </div>
 </div>
 </div>
+
 <script>
     
     const egreso = <?= $disponibles['egreso']?>;
@@ -126,7 +143,7 @@ $(document).ready(function() {
     $('#miTabla').DataTable({
         scrollY: '500px',
         scrollCollapse: true,
-        paging: false,
+        paging: true,
         language: {
             lengthMenu: 'Display _MENU_ records per page',
             zeroRecords: 'No se encontro nada - Lo siento',
@@ -137,24 +154,33 @@ $(document).ready(function() {
         responsive: true
     });
 });
+
+
+</script>
+<script>
+
+const suma_cuotas = <?= json_encode($traer_proye) ?>;
+console.log(suma_cuotas)
+let suma = 0;
+for (let  i = 0 ; i < suma_cuotas.length; i++) {
+   suma = parseFloat(suma) + parseFloat(suma_cuotas[i]['valor_cuota']);
+   document.getElementById('num_cuotas').innerText = suma;
+   document.getElementById('cuotas').innerText = suma_cuotas.length;
+//    alert(suma_cuotas)
+
+ } 
+ let num1 = <?= $traer_sqto['numero_cuota']?>;
+ let num2 = <?= $traer_sqto['valor']?>;
+
+
+ resultado1 = num1- suma_cuotas.length;
+ console.log(resultado1) 
+
+ resultado2 = num2 - suma;
+ console.log(resultado2) 
+
+ 
+//console.log("La suma total es: " + suma);       
 </script>
 
-<!-- <script>
-
-    const valor_cuota= "<=$traer_proye['valor_cuota'];?>";
-    const valor = "<=$traer_sqto['valor'];?>";
-
-    let nuevo_valorCuota  = valor_cuota;
-
-    nuevo_valorCuota += valor_cuota;
-
-
-    let resultado = valor - nuevo_valorCuota;
-    console.log("valor_cuota: " + valor_cuota);
-    console.log("valor: " + valor);
-
-
-</script> -->
-
-
-<?= $this->endSection("contenido")?>
+<?= $this->endSection("contenido")?>.

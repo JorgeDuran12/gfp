@@ -41,18 +41,19 @@ class ProyeccionModel extends Model{
         $session = session();
         $id_usuario = $session->get('id_usuario');
 
-        $this->select('proyeccion.*');
+        $this->select('proyeccion. valor_cuota');
         $this->where('usuario_crea', $id_usuario);
         $this->where('estado','A');
-        $datos = $this-> get()->getRowArray();
-        var_dump($datos);
+        $datos['valor_cuota']= $this-> find();
+        //  var_dump($datos);   
 
           if( empty($datos) ) {
             $datos['valor_cuota'] = 0;
               return $datos;
           }else {
               return $datos;
-          }
+          } 
+
     }
 
    

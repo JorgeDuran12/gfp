@@ -20,7 +20,7 @@
             <!-- <option selected >Tipo de movimiento</option>  -->
                 <?php foreach ($tipo_movi as $data) {?>
                      
-                <option class="select_movi" value="<?php echo $data["id_parametro_det"]; ?>"><?php echo $data["nombre"];?></option>
+                <option value="<?php echo $data["id_parametro_det"]; ?>"><?php echo $data["nombre"];?></option>
                 <?php } ?>
             </select>
 
@@ -55,7 +55,7 @@
              <!-- <option selected required >Clase de movimiento</option>  -->
                 <?php foreach ($clase_movi as $data) {?>
              
-                <option class="select_movi" value="<?php echo $data["id_parametro_det"]; ?>"><?php echo $data["nombre"];?></option>
+                <option value="<?php echo $data["id_parametro_det"]; ?>"><?php echo $data["nombre"];?></option>
                 <?php } ?>
             </select>
         </div>
@@ -119,7 +119,8 @@
                 <div id="contenedor_modal_Movimiento">
                     <div id="limite">
                         <div class="table-responsive">
-                        <table id="miTabla" class="display">                          
+                            <table class="table table-bordered table-sm table-striped" id="dataTable1" width="100%"
+                                cellspacing="0">
                                 <thead>
                                     <tr>
 
@@ -133,15 +134,14 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-
-                                  
-                                <?php foreach ($Movimientos as $dato) { ?>
+   
+                                <?php foreach ($movimientos as $dato) { ?>
                                         <tr>
-                                            <td><?php echo $dato ['valor'];?></td>
-                                            <td><?php echo $dato ['fecha_movimiento'];?></td>
-                                            <td><?php echo $dato ['Tnombre2'];?></td>
-                                            <td><?php echo $dato ['Tnombre'];?></td>
-                                            <td><?php echo $dato ['descripcion'];?></td>
+                                            <td> <?php echo $dato ['valor'];?></td>
+                                            <td> <?php echo $dato ['fecha_movimiento'];?></td>
+                                            <td> <?php echo $dato ['Tnombre2'];?></td>
+                                            <td> <?php echo $dato ['Tnombre'];?></td>
+                                            <td> <?php echo $dato ['descripcion'];?></td>
                                             </tr>
                                             <?php } ?>
                             
@@ -212,25 +212,11 @@ $(document).on('blur', '.valida', function(event) {
 
 </script>
 
-<script>
-/******* Data - Table ***********/
-$(document).ready(function() {
-    $('#miTabla').DataTable({
-        scrollY: '500px',
-        scrollCollapse: true,
-        paging: false,
-        language: {
-            lengthMenu: 'Display _MENU_ records per page',
-            zeroRecords: 'No se encontro nada - Lo siento',
-            info: 'Mostrando pagina _PAGE_ de _PAGES_',
-            infoEmpty: 'No se encontro el registro',
-            infoFiltered: '(Filtrado de _MAX_ registros totales)',
-        },
-        responsive: true
 
 
-    });
-});
-</script>
+
+
+
+
 
 <?= $this->endSection("contenido")?>
