@@ -85,12 +85,8 @@
                     <textarea class="dc" placeholder="Descripcion" name="descripcion" id="descripcion"></textarea>
 
 
-
                 </div>
                 <div class="modal-footer">
-
-
-
 
                     <button type="submit" class="btn btn-primary" id="btn_guardar">Guardar</button>
                 </div>

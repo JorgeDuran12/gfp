@@ -186,7 +186,20 @@ let num3 = <?= $traer_sqto['valor']?>
 if(  num3 === 0 ){
 console.log("nada");
 }else if( suma == num3 ){
-    alert("ya tienes todo el dinero ya puedes comprar ");
+   
+}
+
+function selecionaRegistro(id,) {
+   
+   dataURL = "<?php echo base_url('Proyeccion/completado'); ?>" + "/" + id;
+   $.ajax({
+     
+
+       type: "POST",
+       url: dataURL,
+       dataType: "json",
+     
+   });
 }
  
 //console.log("La suma total es: " + suma);       

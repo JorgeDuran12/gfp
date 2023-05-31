@@ -58,8 +58,13 @@ class Rol extends BaseController
 
     public function eliminados_rol()
     {
-        $rol = $this->rol->where('estado', "E")->findAll();   
-        $datos = ['tituloPagina' => 'Rol','roles'=>$rol];
+        $session = session();
+        $rol = $this->rol->where('estado', "E")->findAll();  
+         
+        $datos = ['tituloPagina' => 'Rol',
+        'roles'=>$rol, 
+        'misDatos' => $session,
+        ];
 
         echo view("gestion/roles/rol_eliminados", $datos);
     }

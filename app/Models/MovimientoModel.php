@@ -36,7 +36,7 @@ class MovimientoModel extends Model{
         $this->where('movimientos.estado', 'A'); 
         $this->where('movimientos.usuario_crea', $id_usuario);
         $data = $this->findAll();
-        return $data;
+        return $data; 
     }
 
     public function tasa_movimiento(){

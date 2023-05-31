@@ -7,7 +7,7 @@
         Movimientos</h1>
 </div>
 <div class="contenedorMovimiento" >
-    <form method="POST" action="<?php echo base_url('/movimiento/insertar'); ?>" autocomplete="off" class="movimiento">
+    <form method="POST" action="<?php echo base_url('insertar'); ?>" autocomplete="off" class="movimiento">
         <div class="tm">
 
             <!-- <select class="form-select"  aria-label="Floating label select example" id="tipo_movimiento" name="tipo_movimiento" required>

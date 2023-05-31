@@ -33,6 +33,7 @@
            
             <th>valor</th>
             <th>Numero cuota</th>
+            <th>progreso</th>
             <th>cuota</th>
             <th>estado</th>
             <th>Acciones</th>
@@ -47,8 +48,9 @@
            
             <td><?php echo $dato['valor'];?></td>
             <td><?php echo $dato['numero_cuota'];?></td>
+            <td> <?php if($dato['completado']=="N"){echo "No completado";}else{echo "Completado";}?></td>
             <td> <?php echo $dato['cuota'];?></td>
-            <td><?php echo $dato['estado'];?></td>
+            <td> <?php if($dato['estado']=="A"){echo "Activo";}else{echo "Eliminado";}?></td>
             <td>
                 <a class="btn btn-warning" href="#"
                     onclick=" selecionaRegistro(<?php echo $dato['id_saquito'] . ',' . 2 ?>);" data-bs-toggle="modal"
@@ -175,16 +177,16 @@
         })
 
 
-     $(function (){
-        $('#show').click(function(){
-          $('#agregar').show();
-        });
+    //  $(function (){
+    //     $('#show').click(function(){
+    //       $('#agregar').show();
+    //     });
        
-        $('#btn_guardar_saquito').click(function(){
-	      $('#agregar').hide();
-        });
+    //     $('#btn_guardar_saquito').click(function(){
+	//       $('#agregar').hide();
+    //     });
         
-      })
+    //   })
 
 
     $(document).on('blur','.valida', function(event){
@@ -270,6 +272,10 @@ $(document).ready(function() {
 
     });
 });
+
+</script>
+
+<script>
 
 </script>
 

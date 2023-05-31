@@ -37,18 +37,15 @@ $routes->set404Override();
 /* Ruta de perfil actual */
 $routes->get('mi_perfil', 'Perfil::index');
 
-
 $routes->get('/', 'Auth::index');
 $routes->get('recuperar_contraseña', 'Auth::Recuperar_Clave_Pagina');
 
 //Rutas SendGrid
 $routes->get('enviar_token', 'SendGrid::enviar_token_pass');
 
-
 /* Rutas principal */
 $routes->get('Principal', 'Principal::index');
 $routes->post('agregar_presupuesto', 'Principal::agregar_presupuesto');
-
 
 /* Rutas Agenda */
 $routes->get('agenda_de_pago', 'Agenda::index');
@@ -73,16 +70,14 @@ $routes->post('buscar_rol/(:num)','Rol::buscar_rol/$1');
 $routes->post('buscar_Registro/(:num)' , 'Saquito::buscar_Registro/$1');
 $routes->post('Insertar','Saquito::Insertar');
 $routes->post('Insertar_proyeccion','Proyeccion::Insertar');
-
-// $routes->post('insertar/(:num)','Movimiento::insertar/$1');
-
-//$routes->post('proyeccion_saquito','Proyeccion::Insertar');
+$routes->post('cambiar_clave','Perfil::cambiar_clave');
+$routes->post('insertar','Movimiento::insertar');
 
 
 $routes->get('eliminados_usuario', 'Usuario::eliminados');
 $routes->get('eliminar__usuario', 'Usuario::eliminar__usuario');
 $routes->get('eliminados_rol', 'Rol::eliminados_rol');
-$routes->get('eliminar__rol', 'Rol::eliminar__rol');
+
 
 
 /* Rutas Login*/
@@ -93,7 +88,7 @@ $routes->get('CrearCuenta', 'Auth::registroPagina');
 $routes->post('Registrar', 'Auth::guardar');
 
 
-  
+
 
 
 

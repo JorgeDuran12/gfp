@@ -5,7 +5,7 @@
 
   <div>
     <div>
-      <h1 class="titulo_Vista">Usuarios Eliminados</h1>
+      <h1 class="titulo_Vista">Roles Eliminados</h1>
     </div>
     <div class="card-body">
 
@@ -23,7 +23,6 @@
                             <th>Id rol</th>
                             <th>Nombre</th>
                             <th></th>
-                            
                             <th>estado</th>
              
               <th>Acciones</th>
@@ -86,17 +85,18 @@
         type: "POST",
         url: dataURL,
         dataType: "json",
-        success: function(rs) {.
+        success: function(rs) {
 
         },
         error: function() {
-                alert("No se ha Podido Activar El Registro");
+                alert("No se ha podido activar el registro");
             }
       })
 
   };
  
   $('.close').click(function() {$("#modal-confirma").modal("hide");});
+  
 </script>
 
 <?= $this->endSection("contenido")?>

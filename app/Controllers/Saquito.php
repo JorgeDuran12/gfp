@@ -82,5 +82,10 @@ class Saquito extends BaseController
 
     }
 
+    public function completado($id,$estado){
+        $this->saquito-> completar_saquito($id,$estado);
+        return redirect()->to(base_url('/mi_saquito'));
+    }
+
 
 }

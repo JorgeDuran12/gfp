@@ -66,18 +66,22 @@ class Filters extends BaseConfig
         'Verificar_Auth' => [
             'before' => [
                 /* Controladores */
-                'agenda',
-                'agenda/*',
                 'principal',
                 'principal/*',
+                'Perfil',
+                'Perfil/*',
+                'agenda',
+                'agenda/*',
+                'saquito',
+                'saquito/*',
+                'Movimiento',
+                'Movimiento/*',
                 'emergencia',
                 'emergencia/*',
                 'registro',
                 'registro/*',
                 'rol',
                 'rol/*',
-                'saquito',
-                'saquito/*',
                 'usuario',
                 'usuario/*',
                 'progreso_saquito',
@@ -86,10 +90,8 @@ class Filters extends BaseConfig
                 'sendMail/*',
                 'SendGrid',
                 'SendGrid/*',
-                'Movimiento',
-                'Movimiento/*',
-                'Perfil',
-                'Perfil/*',
+                'Proyeccion',
+                'Proyeccion/*',
 
 
                 /* Rutas de agenda*/
@@ -102,6 +104,7 @@ class Filters extends BaseConfig
 
                 /* Rutas de movimientos*/
                 'mis_movimientos',
+                'insertar',
 
                 /* Rutas de usuarios */
                 'gestion/usuarios',
@@ -109,18 +112,22 @@ class Filters extends BaseConfig
                 'eliminar__usuario',
                 'eliminados_usuario',
 
-                
-
                 /* Rutas de roles*/
                 'gestion/roles',
+                'eliminados_rol',
 
                 /* Rutas de emergencia */
                 'fondo_de_emergencia',
                 
                 /* Rutas de perfil */
                 'mi_perfil',
-                
+                'cambiar_clave',
+
+                /*rutas de sendMail*/
                 'enviar_token',
+                
+                /*rutas de proyeccion*/
+                'Insertar_proyeccion',
                 
 
             ]
@@ -136,7 +143,6 @@ class Filters extends BaseConfig
                 'enviar_token',
                 
             ]
- 
         ]           
     ];
 }

@@ -53,7 +53,7 @@
             </button>
 
             <h3 class="mt-5 mb-3 text-white fw-bold text-uppercase">Cambiar contraseña</h3>
-            <form action="<?= base_url("perfil/cambiar_clave")?>" method="post" onsubmit="return verificarCampos()" class="d-flex flex-column">
+            <form action="<?= base_url("cambiar_clave")?>" method="post" onsubmit="return verificarCampos()" class="d-flex flex-column">
                 <input id="old_pass" name="old_pass" type="password" placeholder="Contraseña actual" class="mb-3">
                 <input id="new_pass" name="new_pass" type="password" placeholder="Nueva contraseña" class="mb-3">
                 <button class="btn btn-outline-primary" type="submit">Cambiar</button>
