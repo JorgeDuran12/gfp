@@ -40,20 +40,17 @@
            
     <?php if($misDatos->rol != '3') { ?>
 
+      <?php if($misDatos->rol != '2') { ?>
         <div class="navbar__icons" id="Admin_gestion">
           <li class="icon-image"><a href="<?= base_url('gestion_de_administradores')?>"><img src="<?= base_url("icons/empresario.png")?>"/></a></li>
           <span class="icon-name">Administradores</span>
         </div>
-        
-      <?php if($misDatos->rol != '2') { ?>
+        <?php } ?>
 
         <div class="navbar__icons">
             <li class="icon-image"><a href="<?= base_url('gestion/roles')?>"><img src="<?= base_url("icons/roles.png")?>"/></a></li>
             <span class="icon-name">Manejo De Roles</span>
         </div>
-
-      <?php } ?>
-
     <?php } ?>
 
 

@@ -175,10 +175,19 @@ for (let  i = 0 ; i < suma_cuotas.length; i++) {
 
  resultado1 = num1- suma_cuotas.length;
  console.log(resultado1) 
+ document.getElementById('num_cr').innerText = resultado1;
 
  resultado2 = num2 - suma;
  console.log(resultado2) 
+ document.getElementById('saldo_restante').innerText = resultado2;
 
+let num3 = <?= $traer_sqto['valor']?>
+
+if(  num3 === 0 ){
+console.log("nada");
+}else if( suma == num3 ){
+    alert("ya tienes todo el dinero ya puedes comprar ");
+}
  
 //console.log("La suma total es: " + suma);       
 </script>

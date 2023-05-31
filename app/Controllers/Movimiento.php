@@ -31,7 +31,7 @@ class Movimiento extends BaseController
       $session = session();
 
       $Movimientos = $this-> Movimiento-> traer();
-      var_dump($Movimientos);
+      // var_dump($Movimientos);
       $tipo_movimiento = $this-> parametros ->obtener_encabezado_1();
       // var_dump($tipo_movimiento);
 

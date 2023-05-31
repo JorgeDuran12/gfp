@@ -30,11 +30,11 @@ class MovimientoModel extends Model{
         $session = session();
         $id_usuario = $session->get('id_usuario');
        
-        $this->select('movimientos.*, parametros_det.nombre as Tnombre, vw_parametros_det.nombre as Tnombre2');
+        $this->select('movimientos.*, parametros_det.nombre as Tnombre, vw_parametros_det.nombre as Tnombre2, DATE(movimientos.fecha_movimiento) as Fecha_movimiento');
         $this->join('parametros_det', 'movimientos.tipo_movimiento=parametros_det.id_parametro_det');
         $this->join('vw_parametros_det', 'vw_parametros_det.id_parametro_det = movimientos.clase_movimiento');
         $this->where('movimientos.estado', 'A'); 
-        $this->where('usuario_crea', $id_usuario);
+        $this->where('movimientos.usuario_crea', $id_usuario);
         $data = $this->findAll();
         return $data;
     }

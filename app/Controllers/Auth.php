@@ -284,7 +284,6 @@ class Auth extends BaseController
         return $this->response->setJSON($response);
     }
 
-   
     public function verificar_email($email) {
 
         $resp = $this->usuario->verificar_email_bd($email);

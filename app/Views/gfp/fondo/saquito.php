@@ -1,4 +1,4 @@
-w<?= $this->extend("layouts/gfpLayout")?>
+<?= $this->extend("layouts/gfpLayout")?>
 <?= $this->section("contenido")?>
 
 <div class="titulo">
@@ -18,11 +18,7 @@ w<?= $this->extend("layouts/gfpLayout")?>
              <a href="<?php echo base_url('/proyeccion'); ?>" class="btn btn-primary regresar_Btn">Proyeccion</a> &nbsp
 
         
-<!--        
-     <button type="button" id="olcultar">Ocultar botón acción</button> 
-<button type="button" id="show">Mostrar botón acción</button>  -->
 
-    <!-- &nbsp <a href="<?php echo base_url(''); ?>" class="btn btn-secondary regresar_Btn">Proyeccion</a> -->
 
    
 </div>
@@ -201,19 +197,7 @@ if(num1 && num2){
         
 }
     })
-/* 
-function realizarDivision() {
-  // Obtener los valores de los campos de entrada
-  var num1 = parseInt(document.getElementById("num1").value);
-  var num2 = parseInt(document.getElementById("num2").value);
 
-  // Realizar la división
-  var resultado = num1 / num2;
-
-  // Mostrar el resultado en un elemento div
-//   document.getElementById("cuota").innerText = "El resultado es: " + resultado;
-  document.getElementById("cuota").val(resultado)
-} */
 
 // <--------------------------llamdo de  formulario para valores de operacion--------------------->
 
@@ -264,12 +248,10 @@ function selecionaRegistro(id, tp) {
 
 }
 
-
-
-
 </script>
 
 <script>
+
 /******* Data - Table ***********/
 $(document).ready(function() {
     $('#miTabla').DataTable({
@@ -288,9 +270,8 @@ $(document).ready(function() {
 
     });
 });
+
 </script>
-
-
 
 
 <?= $this->endSection("contenido")?>
