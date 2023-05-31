@@ -86,7 +86,7 @@ class Usuario extends BaseController
                 ]);
                 
             } else {
-                $this->usuario->update($this->request->getPost('id_usuario'),[       
+                $this->usuario->update($this->request->getPost('id'),[       
                     'usuario' => $this->request->getPost('usuario'),             
                     'id_rol' => $this->request->getPost('id_rol'),
                 ]);

@@ -10,8 +10,7 @@ use App\Models\DisponibleModel;
 use Dompdf\Dompdf;
 
 class Movimiento extends BaseController
-
- {    
+{    
 
   protected $Movimiento;
   protected $parametros;
@@ -31,20 +30,23 @@ class Movimiento extends BaseController
     {
       $session = session();
 
-      $Movimiento = $this-> Movimiento-> traer();
+      $Movimientos = $this-> Movimiento-> traer();
+      var_dump($Movimientos);
       $tipo_movimiento = $this-> parametros ->obtener_encabezado_1();
+      // var_dump($tipo_movimiento);
 
       $clase_movimiento_Model = new ParamentrosModel();
       $clase_movimiento = $clase_movimiento_Model -> obtener_encabezado_2();
-
+      // var_dump($clase_movimiento);
+      
       $disponibles = $this-> disponible ->datos_ingreso();
-      // var_dump($Movimiento, $tipo_movimiento, $clase_movimiento, $disponibles);
-      // exit();
+      // var_dump($disponibles);
+ 
         echo view("gfp/registro/movimientos",  [
             'tituloPagina' => 'Mis movimientos',
             'tipo_movi' => $tipo_movimiento,
             'clase_movi' => $clase_movimiento,
-            'movimientos' => $Movimiento,   
+            'movimientos' => $Movimientos,   
             'disponibles' => $disponibles,
             'misDatos' => $session
         ]);

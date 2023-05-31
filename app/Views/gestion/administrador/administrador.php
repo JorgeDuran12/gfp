@@ -88,7 +88,7 @@
                                     <label class="input_label" for="email_field">Selecione rol</label>
                                     <img src="<?= base_url("icons/person-vcard-fill.svg")?>" class="icon">
                                     <select class="select_administrador" name="id_rol" id="id_rol"
-                                        aria-label="Default select example">
+                                        aria-label="Default select example" required>
                                         <?php foreach ($roles as $data) {?>
 
                                         <option value="<?php echo $data['id_rol'];?>" class="black_opcion">
@@ -102,7 +102,7 @@
                                     <label class="input_label" for="email_field">Nombre</label>
                                     <img src="<?= base_url("icons/person-fill.svg")?>" class="icon">
                                     <input placeholder="Ej: Daniel" name="nombre" type="text" class="input_field"
-                                        id="nombre">
+                                        id="nombre" required>
                                 </div>
 
                                 <!-- apellido -->
@@ -110,7 +110,7 @@
                                     <label class="input_label" for="email_field">Apellidos</label>
                                     <img src="<?= base_url("icons/person-lines-fill.svg")?>" class="icon">
                                     <input placeholder="Ej: Banquet" name="apellido" type="text" class="input_field"
-                                        id="apellido">
+                                        id="apellido" required>
                                 </div>
 
                                 <!-- tipo de documento -->
@@ -118,7 +118,7 @@
                                     <label class="input_label" for="email_field">Tipo de documento</label>
                                     <img src="<?= base_url("icons/person-vcard-fill.svg")?>" class="icon">
                                     <select class="select_administrador" name="tipo_documento" id="tipo_documento"
-                                        aria-label="Default select example">
+                                        aria-label="Default select example" required>
                                         <?php foreach ($parametros as $data) {?>
                                         <option value="<?php echo $data['id_parametro_det']; ?>">
                                             <?php echo $data["nombre"];?></option>
@@ -131,7 +131,7 @@
                                     <label class="input_label" for="email_field">Numero de documento</label>
                                     <img src="<?= base_url("icons/person-video.svg")?>" class="icon">
                                     <input placeholder="Ej: 1007 265 547" name="num_documento" type="number"
-                                        class="input_field" id="num_documento">
+                                        class="input_field" id="num_documento" required>
                                 </div>
                             </div>
                             <div>
@@ -140,28 +140,28 @@
                                     <label class="input_label" for="email_field">Nombre de usuario</label>
                                     <img src="<?= base_url("icons/person-check-fill.svg")?>" class="icon">
                                     <input placeholder="Ej: Daniel" name="usuario" type="text" class="input_field"
-                                        id="usuario">
+                                        id="usuario" required>
                                 </div>
 
                                 <div class="input_container">
                                     <label class="input_label" for="email_field">Teléfono</label>
                                     <img src="<?= base_url("icons/telephone-fill.svg")?>" class="icon">
                                     <input placeholder="Ej: 309 156 9347" name="telefono" type="number"
-                                        class="input_field" id="telefono">
+                                        class="input_field" id="telefono" required>
                                 </div>
 
                                 <div class="input_container">
                                     <label class="input_label" for="password_field">Contraseña</label>
                                     <img src="<?= base_url("icons/person-fill-lock.svg")?>" class="icon">
                                     <input placeholder="Contraseña" name="pass" type="password" class="input_field"
-                                        id="pass">
+                                        id="pass" required>
                                 </div>
 
                                 <div class="input_container">
                                     <label class="input_label" for="email_field">Correo electronico</label>
                                     <img src="<?= base_url("icons/envelope-fill.svg")?>" class="icon">
                                     <input placeholder="Ej: correo@mail.com" name="email" type="email"
-                                        class="input_field" id="email">
+                                        class="input_field" id="email" required>
                                 </div>
                             </div>
                         </div>
@@ -198,6 +198,7 @@
     </div>
 </div>
 
+
 <script>
 // <---------------modal confirmar eliminacion---------------------------------------------//
 $('#modal-confirma').on('show.bs.modal', function(e) {
@@ -229,21 +230,25 @@ function seleccionausuario(id, tp) {
                 $("#id").val(id);
                 limpiarCampos();
 
+                $("#nombre, #apellido, #tipo_documento, #num_documento,#telefono,#email,#pass").prop('required', false);
+
                 $("#id_rol").closest(".input_container").show();
                 $("#usuario").closest(".input_container").show();
 
-                $("#usuario").val(rs[0]['usuario']).prop('disabled', true);
+                $("#usuario").val(rs[0]['usuario']).prop('readonly', true);
+
+                // $("#usuario").val(rs[0]['usuario']).prop('disabled', true);
                 $("#id_rol").val(rs[0]['id_rol']);
 
                 $("#btn_guardar").text('Actualizar');
             }
-        });
-        
+        });    
+
     } else {
         $("#tp").val(1);
         limpiarCampos();
         document.getElementById('exampleModalLabel').innerText = "Crear usuario";
-        $("#usuario").val('').prop('disabled', false);
+        $("#usuario").val('').prop('readonly', false);
         $(".input_container").show();
         $("#btn_guardar").text('Guardar');
     }
@@ -262,6 +267,7 @@ function limpiarCampos() {
     $("#pass").val('');
 
 }
+
 </script>
 
 
