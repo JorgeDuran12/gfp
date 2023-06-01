@@ -168,3 +168,21 @@
     border-radius: 20px;
 
 }
+
+.btn_login__a{
+    display: block;
+    width: 100%;
+    height: 40px;
+    margin-top: 20px;
+    background-color: #ededf2;
+    color:#242424;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+.btn_login__a:hover {
+    background-color: #e4e4da;
+}

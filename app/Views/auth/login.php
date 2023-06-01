@@ -42,8 +42,9 @@
                     </a>
 
                     <div class="contenedor__">
-                        <button class="btn_login__" type="submit">Entrar</button>
+                        <button class="btn_login__a" type="submit">Entrar</button>
                     </div>
+                    
                 </div>
 
                 <div class="login__form-register">

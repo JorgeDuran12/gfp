@@ -103,12 +103,14 @@
     justify-content: space-between;
     align-items: center;
     outline: none;
-    /* border: 1px solid #000000; */
-    margin-top: 17px;
-    margin-left: 22px;
+    /* margin: 5px; */
+    /* border: #000000 1px solid; */
+    margin-top: 20px;
+    margin-left: 5px;
 }
 
 .bnkl {
+    margin-top: 9px;
     width: 90%;
     height: 2.5em;
     border-radius: 3em;
@@ -127,7 +129,9 @@
 .cuenta_register {
     display: flex;
     text-align: center;
-    margin-top: 15px;
+    /* align-items: center; */
+    margin-top: 10px;
+    /* border: #000000 1px solid; */
 }
 
 .cuenta_register a {
@@ -161,26 +165,6 @@
 
 .select:hover {
     background-color: #eeeeea;
-}
-
-
-/* login superbonito */
-
-button {
-    display: block;
-    width: 100%;
-    height: 40px;
-    margin-top: 20px;
-    background-color: green;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: green;
 }
 
 .card-title {
@@ -271,7 +255,6 @@ button:hover {
     margin: 0;
 }
 
-
 /* <------------------estilo para validacion-----------------> */
 
 .formulario__grupo-correcto .formulario__validacion-estado {
@@ -288,16 +271,12 @@ button:hover {
 }
 
 .bnt_crear_cuenta {
-    /* border: 0; */
-    /* background-image: linear-gradient( 150deg, #9500ff, #09f, #00DDff); */
     background-color: #e5e5e5;
     border-radius: 8px;
     color: #ffff;
     display: flex;
     font-size: 18px;
-    /* padding: 4px; */
     cursor: pointer;
-    /* transition: .3s; */
 }
 
 .bnt_crear_cuenta span {
@@ -306,11 +285,3 @@ button:hover {
     /* transition: .3s; */
     text-align: center;
 }
-/* 
-.bnt_crear_cuenta:hover span {
-    background: none;
-} */
-/* 
-.bnt_crear_cuenta:active {
-    transform: scale(0.9);
-} */
