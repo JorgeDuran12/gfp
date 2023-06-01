@@ -61,7 +61,9 @@ if( estado_recuperar_pass === 'false') {
 const estado_token_enviado = "<?= $session->token_enviado?>";
 if( estado_token_enviado === 'true' ) {
     Swal.fire('Revise su correo electronico', 'Se le ha enviado un mensaje con todas las instrucciones a su correo', 'info', 'Aceptar');
-
+    
+}else if( estado_token_enviado === 'false' ) {
+    Swal.fire('Error al recuperar', 'Hubo un error con el servidor, intentolo mas tarde', 'error', 'Aceptar');
 }
 
 

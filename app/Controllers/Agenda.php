@@ -61,7 +61,7 @@ class Agenda extends BaseController
             echo 'Creando...';
             $this->agenda->insert([
                 'title' => $titulo,
-                'descripcion' => $descripcion,
+                'descripcion' => $descripcion,  
                 'start' => $fechaInicial,
                 'end' => $fechaFinal,
                 'color' => $color,

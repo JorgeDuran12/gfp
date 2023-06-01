@@ -30,3 +30,5 @@ class Emergencia extends BaseController
     }
    
 }
+
+ 

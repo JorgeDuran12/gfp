@@ -34,6 +34,10 @@
                 <li>DOCUMENTO:</li>
                 <span><?= $DatosPerfil['pf_tp']?> - <?= $DatosPerfil['num_documento']?></span>
             </ul>
+            <!-- Boton editar info basica -->
+            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalPerfil" onclick="mostrarDatos()">
+              <img type="image" src="<?= base_url("img/editar.png")?>" />
+            </button>
 
             <h3 class="mt-5 mb-3 text-white fw-bold text-uppercase">Información de Contacto</h3>
             <ul class="d-flex">
@@ -41,14 +45,14 @@
                 <?php if($DatosPerfil['prioridad_tel'] == '13'){ ?>
                   <span><?= $DatosPerfil['telefono']?></span>
                 <?php } ?>
-                  <!-- No hay telefono principal -->
             </ul>
             
             <ul class="d-flex">
                 <li>CORREO ELECTRONICO PRINCIPAL:</li>
                 <span><?= $DatosPerfil['email']?></span>
             </ul>
-            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalPerfil" onclick="mostrarDatos()">
+            <!-- Boton editar info basica -->
+            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalContacto" onclick="mostrarDatos()">
               <img type="image" src="<?= base_url("img/editar.png")?>" />
             </button>
 
@@ -58,6 +62,7 @@
                 <input id="new_pass" name="new_pass" type="password" placeholder="Nueva contraseña" class="mb-3">
                 <button class="btn btn-outline-primary" type="submit">Cambiar</button>
             </form>
+
 
             <!-- Modal -->
   <div class="modal fade" id="modalPerfil" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -109,32 +114,6 @@
                     class="form-control" name="num_documento" id="num_documento" aria-describedby="helpId" placeholder="Ej: 1048264444"/>
                 </div>
               </div>
-
-              <label for="emails">Emails:</label>
-                <div class="d-flex w-100 h-100 align-items-center mb-3">
-                    <select class="text-body p-2" id="emails" name="emails">
-                      <?php foreach($emails as $row ) { ?>
-                        <option class="text-body" value="<?= $row['email']?>"><?= $row['email']?></option>
-                        <?php } ?>
-                    </select>
-                    <button type="button" onclick="agregarRegistro('email')" class="btn btn-warning">Agregar</button>
-                    <button type="button" onclick="eliminarRegistro('email')" class="btn btn-danger ">Eliminar</button>
-                </div>
-                
-                <label for="telefonos">Teléfonos:</label>
-                <div class="d-flex w-100 h-100 align-items-center">
-                  <select class="text-body p-2" id="telefonos" name="telefonos">
-                    <?php foreach($telefonos as $row ) { ?>
-                      <option class="text-body" value="<?= $row['numero']?>">
-                      <?= $row['numero']?>
-                    </option>
-                      <?php } ?>
-                    </select>
-                    <button type="button" onclick="agregarRegistro('telefono')" class="btn btn-warning">Agregar</button>
-                    <button type="button" onclick="eliminarRegistro('telefono')" class="btn btn-danger ">Eliminar</button>
-                </div>
-
-
             </div>
 
             <div class="modal-footer">
@@ -148,6 +127,62 @@
       </div>
     </div>
     <!-- fin modal -->
+
+    <!-- Modal contacto -->
+  <div class="modal fade" id="modalContacto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header" id="agendaPago__modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <img src="<?= base_url("img/gfp.png")?>" alt="" class="w-25 p-3">
+            <h3 class="modal-title" id="modal-title">Editar</h3>
+          </div>
+          <div class="alert alert-danger" role="alert" id="mensajeError" hidden></div>
+          <div class="modal-body">
+            <!-- Formulario -->
+            <form  class="d-flex flex-column" id="datosFormulario" action="<?= base_url("perfil/editar_informacion")?>" method="POST" onsubmit="return validateForm()">
+                <input type="text" hidden
+                  class="form-control"  name="id_telefono_pr" id="id_telefono_pr" aria-describedby="helpId" placeholder="Ej: pass">
+                <input type="text" hidden
+                  class="form-control"  name="id_email_pr" id="id_email_pr" aria-describedby="helpId" placeholder="Ej: correo">
+
+              <label for="emails">Emails:</label>
+                <div class="d-flex w-100 h-100 align-items-center mb-3">
+                    <select class="text-body p-2" id="emails" name="emails">
+                      <?php foreach($emails as $row ) { ?>
+                        <option class="text-body" value="<?= $row['email']?>"><?= $row['email']?></option>
+                        <?php } ?>
+                    </select>
+                    <button type="button" onclick="establecerPrincipal('telefono')" class="btn btn-primary ">Establecer como principal</button>
+                    <button type="button" onclick="agregarRegistro('email')" class="btn btn-warning">Nuevo</button>
+                    <button type="button" onclick="eliminarRegistro('email')" class="btn btn-danger ">Eliminar</button>
+                </div>
+                
+                <label for="telefonos">Teléfonos:</label>
+                <div class="d-flex w-100 h-100 align-items-center">
+                  <select class="text-body p-2" id="telefonos" name="telefonos">
+                    <?php foreach($telefonos as $row ) { ?>
+                      <option class="text-body" value="<?= $row['numero']?>">
+                      <?= $row['numero']?>
+                    </option>
+                      <?php } ?>
+                    </select>
+                    <button type="button" onclick="establecerPrincipal('telefono')" class="btn btn-primary ">Establecer como principal</button>
+                    <button type="button" onclick="agregarRegistro('telefono')" class="btn btn-warning">Nuevo</button>
+                    <button type="button" onclick="eliminarRegistro('telefono')" class="btn btn-danger ">Eliminar</button>
+                </div>
+
+
+            </div>
+
+          </form>
+          <!-- fin Formulario -->
+        </div>
+      </div>
+    </div>
+    <!-- fin modal -->
+
+    
 
         </div>
     </div>
@@ -221,8 +256,9 @@ function mostrarDatos( tp ) {
           inputApellidos.value = data['apellido'];
           inputNumDoc.value = data['num_documento'];
           inputTipoDoc.value = data['tipo_documento'];
-          inputIdTelefonoPrincipal.value = data['id_telefono'];
-          inputIdEmailPrincipal.value = data['id_email'];
+
+          // inputIdTelefonoPrincipal.value = data['id_telefono'];
+          // inputIdEmailPrincipal.value = data['id_email'];
 
       }
   })
@@ -236,7 +272,7 @@ function agregarRegistro( agregar ) {
 
     const tp = 1;
 
-    $("#modalPerfil").modal('hide')
+    $("#modalContacto").modal('hide')
     Swal.fire({
       title: 'Ingrese un nuevo telefono',
       input: 'text',
@@ -264,7 +300,7 @@ function agregarRegistro( agregar ) {
           })
         }else {
           Swal.fire('Error al agregar', 'La longitud debe ser de 10 caracteres', 'info', 'Aceptar')
-          $("#modalPerfil").modal('show')
+          $("#modalContacto").modal('show')
           return false;
         }
 
@@ -275,11 +311,11 @@ function agregarRegistro( agregar ) {
       if( result.isConfirmed ) {
         Swal.fire('Telefono agregado', 'Se agrego el telefono correctamente', 'success', 'Ok');
         // $("#modalPerfil").modal('reload');
-          $("#modalPerfil .modal-body").load(location.href + ' #modalPerfil .modal-body');
-          $("#modalPerfil").modal('show');
+          $("#modalContacto .modal-body").load(location.href + ' #modalContacto .modal-body');
+          $("#modalContacto").modal('show');
       }else {
 
-        $("#modalPerfil").modal('show');
+        $("#modalContacto").modal('show');
         
       }
     })
@@ -289,7 +325,7 @@ function agregarRegistro( agregar ) {
 
     const tp = 2;
 
-$("#modalPerfil").modal('hide')
+$("#modalContacto").modal('hide')
 Swal.fire({
   title: 'Ingrese un nuevo Correo',
   input: 'email',
@@ -317,7 +353,7 @@ Swal.fire({
       })
     }else {
       Swal.fire('Error al agregar', 'Formato de correo incorrecto', 'info', 'Aceptar')
-      $("#modalPerfil").modal('show')
+      $("#modalContacto").modal('show')
       return false;
     }
 
@@ -328,11 +364,11 @@ Swal.fire({
   if( result.isConfirmed ) {
     Swal.fire('Correo agregado', 'Se agrego el correo correctamente', 'success', 'Ok');
     // $("#modalPerfil").modal('reload');
-      $("#modalPerfil .modal-body").load(location.href + ' #modalPerfil .modal-body');
-      $("#modalPerfil").modal('show');
+      $("#modalContacto .modal-body").load(location.href + ' #modalContacto .modal-body');
+      $("#modalContacto").modal('show');
   }else {
 
-    $("#modalPerfil").modal('show');
+    $("#modalContacto").modal('show');
     
   }
 })

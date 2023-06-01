@@ -120,7 +120,7 @@
                                     <select class="select_administrador" name="tipo_documento" id="tipo_documento"
                                         aria-label="Default select example" required>
                                         <?php foreach ($parametros as $data) {?>
-                                        <option value="<?php echo $data['id_parametro_det']; ?>">
+                                        <option value="<?php echo $data['id_parametro_det']; ?>" style="color:black">
                                             <?php echo $data["nombre"];?></option>
                                         <?php } ?>
                                     </select>

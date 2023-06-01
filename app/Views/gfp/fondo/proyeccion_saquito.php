@@ -186,21 +186,25 @@ let num3 = <?= $traer_sqto['valor']?>
 if(  num3 === 0 ){
 console.log("nada");
 }else if( suma == num3 ){
+
+    
+
+
    
 }
 
-function selecionaRegistro(id,) {
+
+ function selecionaRegistro(id,) {
    
    dataURL = "<?php echo base_url('Proyeccion/completado'); ?>" + "/" + id;
-   $.ajax({
+    $.ajax({
+        type: "POST",
+        url: dataURL,
+     dataType: "json",
      
-
-       type: "POST",
-       url: dataURL,
-       dataType: "json",
      
    });
-}
+ }
  
 //console.log("La suma total es: " + suma);       
 </script>
