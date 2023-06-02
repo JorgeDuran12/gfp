@@ -14,7 +14,7 @@
      </div>
 
          <button href="#" id="agregar" onclick="selecionaRegistro(<?php echo 1 . ',' . 1 ?>);" class="btn btn-success regresar_Btn"
-             data-bs-toggle="modal" data-bs-target="#editarModal" >Agregar</button>
+             data-bs-toggle="modal" data-bs-target="#editarModal" hidden>Agregar</button>
              <a href="<?php echo base_url('/proyeccion'); ?>" class="btn btn-primary regresar_Btn">Proyeccion</a> &nbsp
 
         
@@ -33,10 +33,9 @@
            
             <th>valor</th>
             <th>Numero cuota</th>
-            <th>progreso</th>
             <th>cuota</th>
             <th>estado</th>
-            <th>Acciones</th>
+            <!-- <th>Acciones</th> -->
 
                 </tr>
             </thead>
@@ -48,21 +47,9 @@
            
             <td><?php echo $dato['valor'];?></td>
             <td><?php echo $dato['numero_cuota'];?></td>
-            <td> <?php if($dato['completado']=="N"){echo "No completado";}else{echo "Completado";}?></td>
             <td> <?php echo $dato['cuota'];?></td>
-            <td> <?php if($dato['estado']=="A"){echo "Activo";}else{echo "Eliminado";}?></td>
-            <td>
-                <a class="btn btn-warning" href="#"
-                    onclick=" selecionaRegistro(<?php echo $dato['id_saquito'] . ',' . 2 ?>);" data-bs-toggle="modal"
-                    data-bs-target="#editarModal" width="16" height="16" title="Editar Registro">
-                    <img class="image" src="<?= base_url("img/editar.png") ?> " title="Editar">
-                </a>
-
-                <!-- <input hidden id="vr" name="vr" value="1"> -->
-
-                
-
-            </td>
+            <td> <?php if($dato['estado']=="A"){echo "No completado";}else{echo "completado";}?></td>
+        
         </tr>
         <?php } ?>
             </tbody>
@@ -161,32 +148,50 @@
     var btnAGregar = document.getElementById('agregar');
 
 
-        $.ajax({
-            url: "<?php echo base_url("saquito/buscar_Registro")?>",
-            type: "get",
-            dataType: "json",
-            success: function (data) {
-                // console.log(data)
-                if( data.length >= 1 ) {
-                    console.log('Hola')
-                    btnAGregar.innerText = 'Deshabilitado'
-                    btnAGregar.disabled = true;                    
-                    
-                }   
-            }
-        })
+                $(document).ready(function() {
+                    $.ajax({
+                        url: "<?php echo base_url("saquito/buscar_Registro")?>",
+                        type: "get",
+                        dataType: "json",
+                        success: function (data) {
+                            console.log(data)
+
+                            //Si hay saquito que desactive el boton de agregar
+                            if( data.length > 0 ) {
+                                btnAGregar.hidden = true
+                                btnAGregar.disabled = true;                    
+                                
+                                for(saquito of data[0]) {
+    
+                                    if( saquito.estado === 'C' ) {
+                                        btnAGregar.hidden = false
+                                        btnAGregar.disabled = false;
+                                        
+    
+                                    }else {
+                                        
+                                        btnAGregar.hidden = true;
+                                        btnAGregar.disabled = true;
+                                        break; 
+                                    }
+                                }
+                            }else {
+                                btnAGregar.hidden = false
+                                btnAGregar.disabled = false;                    
+                                
+                            }
+
+                            /* ***************************************** */
+
+                            /* ************************************** */
+
+                        }
+                    })
+
+                })
 
 
-    //  $(function (){
-    //     $('#show').click(function(){
-    //       $('#agregar').show();
-    //     });
-       
-    //     $('#btn_guardar_saquito').click(function(){
-	//       $('#agregar').hide();
-    //     });
-        
-    //   })
+
 
 
     $(document).on('blur','.valida', function(event){
@@ -259,7 +264,7 @@ $(document).ready(function() {
     $('#miTabla').DataTable({
         scrollY: '500px',
         scrollCollapse: true,
-        paging: false,
+        paging: true,
         language: {
             lengthMenu: 'Display _MENU_ records per page',
             zeroRecords: 'No se encontro nada - Lo siento',
@@ -284,3 +289,10 @@ $(document).ready(function() {
 
 
 
+<!-- <td>
+    <a class="btn btn-warning" href="#"
+        onclick=" selecionaRegistro(<?php echo $dato['id_saquito'] . ',' . 2 ?>);" data-bs-toggle="modal"
+        data-bs-target="#editarModal" width="16" height="16" title="Editar Registro">
+        <img class="image" src="<?= base_url("img/editar.png") ?> " title="Editar">
+    </a>
+</td> -->

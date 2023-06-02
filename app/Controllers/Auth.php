@@ -59,7 +59,7 @@ class Auth extends BaseController
             'session' => $session
         ]);
     }
-
+    
     /* Metodos y pages - view (RECUPERAR CONTRASEÑA) */
 
     public function Recuperar_Clave_Pagina()
@@ -179,8 +179,6 @@ class Auth extends BaseController
            return redirect()->to(base_url('auth/Recuperar_Clave_Pagina'))->with('token_verificado', 'false');
        }
    }
-
-   /*  */
 
     public function guardar(){   
 

@@ -1,0 +1,40 @@
+.titulo {
+    text-align: center;
+}
+
+.contenedor_principal_py {
+    width: 500px;
+    height: 400px;
+    flex-direction: column;
+    border: #a4fc30f0 2px solid;
+    padding: 10px;
+}
+
+.tabla {
+    width: 100%;
+    /* border: #98040a 2px solid; */
+}
+
+.pp_sq_table {
+    border: #98040a 2px solid;
+    /* width: 500px; */
+    display: flex;
+    margin: 10px;
+}
+
+.formulario_proyeccion {
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    height: 400px;
+    flex-direction: column;
+    /* border: #a4fc30f0 2px solid; */
+}
+
+.tma {
+    text-align: center;
+}
+
+.input_group {
+    text-align: right;
+}

@@ -3,37 +3,98 @@
 
 <div class="titulo">
     <h1>Progreso de saquito</h1>
-</div>   
-<div class="formulario_proyeccion">
+</div>
 
-        <form id="formulario" method="POST" action="<?php echo base_url('Insertar_proyeccion'); ?>">
 
-            <div class="tma   input_group"><input type="date" class="form-control" name="fecha_cuota" id="fecha_cuota"
-                    placeholder="Fecha inicial: " required>
-                <label for="floatingInput"></label> 
-        
+<div class="container overflow-hidden">
+    <div class="row gy-5">
+        <div class="col-6">
+            <div class="p-3 border bg-light">
+                <form id="formulario" method="POST" action="<?php echo base_url('Insertar_proyeccion'); ?>">
 
-             <input type="number" class="form-control valida" name="valor_cuota" id="valor_cuota"
-                    placeholder="Valor: " required>
-                <label for="floatingInput"></label> 
+                    <div class="tma   input_group"><input type="date" class="form-control" name="fecha_cuota"
+                            id="fecha_cuota" placeholder="Fecha inicial: " required>
+                        <label for="floatingInput"></label>
+
+                        <input type="number" class="form-control valida" name="valor_cuota" id="valor_cuota"
+                            placeholder="Valor: " required>
+                        <label for="floatingInput"></label>
+                    </div>
+
+                    <div class="tx">
+                        <input type="hidden" class="form-control valida" placeholder="egreso" id="egreso" name="egreso"
+                            required>
+                        <label for="floatingInput"></label>
+                    </div>
+
+                    <div class="tx">
+                        <input type="hidden" class="form-control valida" placeholder="presupuesto" id="presupuesto"
+                            name="presupuesto" required>
+                        <label for="floatingInput"></label>
+                    </div>
+
+                    <div>
+                        <button class="btn btn-success" href="#" class="btn-guardar" type="Submit">
+                            <img class="image" src="<?= base_url("img/Guardar.png") ?>" title="Guardar">
+                        </button>
+                    </div>
+
+                </form>
+                <div class="pp_sq_table">
+
+<table class="table">
+    <thead class="table-dark">
+        <tr>
+            <th translucido></th>
+            <th>Cuotas</th>
+            <th>valor de meta</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>cantidad de cuotas</td>
+            <td><?= $traer_sqto['numero_cuota']?></td>
+            <td><?= $traer_sqto['valor']?></td>
+
+        </tr>
+        <tr>
+            <td>cuotas registrada</td>
+            <td>
+                <div id="cuotas" name="cuotas">
+
+                </div>
+            </td>
+            <td>
+                <div id="num_cuotas" name="num_cuotas"> </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Cuotas restantes</td>
+            <td>
+                <div id="num_cr">
+
+                </div>
+            </td>
+
+            <td>
+                <div id="saldo_restante">
+
+                </div>
+            </td>
+
+        </tr>
+
+    </tbody>
+</table>
+</div>
+
+
             </div>
-            <div  class="tx">
-            <input type="hidden" class="form-control valida" placeholder="egreso" id="egreso" name="egreso" required>
-            <label for="floatingInput"></label>
         </div>
-        <div   class="tx">
-            <input type="hidden" class="form-control valida" placeholder="presupuesto" id="presupuesto" name="presupuesto" required>
-            <label for="floatingInput"></label>
-        </div>
-
-            <div> 
-                <button class="btn btn-success" href="#" class="btn-guardar" type="Submit">
-                    <img class="image" src="<?= base_url("img/Guardar.png") ?>" title="Guardar">
-                </button>
-            </div>
-
-        </form>
-    <div id="contenedor">
+        <div class="col-6">
+            <div class="p-3 border bg-light">       
+        <div id="contenedor">
     <div id="limite">
     <div class="table table-striped">
                 <table id="miTabla" cellspacing="0">
@@ -62,77 +123,45 @@
                 </table> 
     </div>    
     </div>
+    </div></div>
+        </div>
     </div>
 </div>
-<div class="container">
 
-<table class="table">
-  <thead class="table-dark">
-    <tr>
-    <th translucido></th>
-    <th>Cuotas</th>
-    <th>valor de meta</th>
-    
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-        <td>cantidad de cuotas</td>   
-        <td><?= $traer_sqto['numero_cuota']?></td>
-        <td><?= $traer_sqto['valor']?></td>  
-       
-    </tr>
-    <tr>
-        <td>cuotas registrada</td> 
-         <td>
-            <div id="cuotas" name="cuotas" >
 
-            </div>
-        </td>
-        <td ><div id="num_cuotas" name="num_cuotas"> </div></td>
-    </tr>
-    <tr>
-        <td>Cuotas restantes</td>   
-        <td>
-            <div id="num_cr">
+<!-- 
 
-            </div>
-        </td> 
-        
-        <td>
-            <div id="saldo_restante">
+<div class="contenedor_principal_py">
 
-            </div>
-        </td>  
-        
-    </tr>
+    <div class="formulario_proyeccion">
 
-  </tbody>
-</table>
+
+
+
+    </div>
 </div>
+ -->
 
-    
+
+
+
 <!-- <---------------------div de header y footer------------------->
-                                                                                     
-</div>
-</div>
-</div>
+
 
 <script>
-    
-    const egreso = <?= $disponibles['egreso']?>;
-    const presu = <?= $disponibles['presupuesto_anual']?>;
+const egreso = <?= $disponibles['egreso']?>;
+const presu = <?= $disponibles['presupuesto_anual']?>;
 
-    $(document).on('blur', '.valida', function(event) {
-    let valor_cuota= parseInt(document.getElementById("valor_cuota").value);
+$(document).on('blur', '.valida', function(event) {
+    let valor_cuota = parseInt(document.getElementById("valor_cuota").value);
     let resultado = presu - valor_cuota
     // console.log("resultado" + resultado);
-     let resultado2 = valor_cuota + egreso
+    let resultado2 = valor_cuota + egreso
     //  console.log("resultado-------"+resultado2);
     document.getElementById("egreso").value = resultado2;
     document.getElementById("presupuesto").value = resultado;
 
-    })
+})
 
 // poribles
 </script>
@@ -154,59 +183,52 @@ $(document).ready(function() {
         responsive: true
     });
 });
-
-
 </script>
 <script>
-
 const suma_cuotas = <?= json_encode($traer_proye) ?>;
 console.log(suma_cuotas)
 let suma = 0;
-for (let  i = 0 ; i < suma_cuotas.length; i++) {
-   suma = parseFloat(suma) + parseFloat(suma_cuotas[i]['valor_cuota']);
-   document.getElementById('num_cuotas').innerText = suma;
-   document.getElementById('cuotas').innerText = suma_cuotas.length;
-//    alert(suma_cuotas)
+for (let i = 0; i < suma_cuotas.length; i++) {
+    suma = parseFloat(suma) + parseFloat(suma_cuotas[i]['valor_cuota']);
+    document.getElementById('num_cuotas').innerText = suma;
+    document.getElementById('cuotas').innerText = suma_cuotas.length;
+    //    alert(suma_cuotas)
 
- } 
- let num1 = <?= $traer_sqto['numero_cuota']?>;
- let num2 = <?= $traer_sqto['valor']?>;
+}
+let num1 = <?= $traer_sqto['numero_cuota']?>;
+let num2 = <?= $traer_sqto['valor']?>;
 
 
- resultado1 = num1- suma_cuotas.length;
- console.log(resultado1) 
- document.getElementById('num_cr').innerText = resultado1;
+resultado1 = num1 - suma_cuotas.length;
+console.log(resultado1)
+document.getElementById('num_cr').innerText = resultado1;
 
- resultado2 = num2 - suma;
- console.log(resultado2) 
- document.getElementById('saldo_restante').innerText = resultado2;
+resultado2 = num2 - suma;
+console.log(resultado2)
+document.getElementById('saldo_restante').innerText = resultado2;
 
 let num3 = <?= $traer_sqto['valor']?>
 
-if(  num3 === 0 ){
-console.log("nada");
-}else if( suma == num3 ){
+if (num3 === 0) {
 
-    
+} else if (suma == num3) {
+
+    //Actualizar tabla saquito 
+    $.ajax({
+        type: "POST",
+        url: "<?php echo base_url('Saquito/completado'); ?>",
+        dataType: "json",
+        success: function(resp) {
+            console.log(resp)
+        }
+    });
 
 
-   
 }
 
 
- function selecionaRegistro(id,) {
-   
-   dataURL = "<?php echo base_url('Proyeccion/completado'); ?>" + "/" + id;
-    $.ajax({
-        type: "POST",
-        url: dataURL,
-     dataType: "json",
-     
-     
-   });
- }
- 
 //console.log("La suma total es: " + suma);       
 </script>
+
 
 <?= $this->endSection("contenido")?>.

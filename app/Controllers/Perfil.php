@@ -51,14 +51,12 @@ class Perfil extends BaseController
         
     }
 
+    //Editar informacion basica.
     public function editar_informacion() {
         $session = session();
         $idUsuario = $session->id_usuario;
 
-        $id_telefono_pr = $this->request->getPost('id_telefono_pr');
-        $id_email_pr = $this->request->getPost('id_email_pr');
-
-            //Actualizar la informacion basica
+          //Actualizar la informacion basica
             $this->usuario->update($idUsuario, [
                 'usuario' => $this->request->getPost('usuario'),
                 'nombre' => $this->request->getPost('nombres'),
@@ -67,46 +65,52 @@ class Perfil extends BaseController
                 'num_documento' => $this->request->getPost('num_documento'),
             ]);
 
-            //Traer telefono que se va pasar de secundario a primario y eliminar
-            if( $this->request->getPost('telefonos') ) {
-
-                $telefono = $this->telefono->traer_telefonos_by_numero( $this->request->getPost('telefonos') );
-                $this->telefono->where('id_telefono', $telefono[0]['id_telefono'])->delete();
-    
-                //Actualizar el numero Principal del usuario
-                $this->telefono->update($id_telefono_pr, [
-                    'numero' => $this->request->getPost('telefonos')
-                ]);
-                
-            }
-
-            //Traer email que se va pasar de secundario a primario y eliminar
-            $emailData = $this->email->traer_emails_by_correo( $this->request->getPost('emails') );
-            if( !empty($emailData ) ) {
-                $this->email->where('id_email', $emailData[0]['id_email'])->delete();
-
-                //Actualizar el numero Principal del usuario
-                $this->email->update($id_email_pr, [
-                    'email' => $this->request->getPost('emails')
-                ]);
-                
-            }
-
-
-
-
-
-
-
             return redirect()->to(base_url('perfil'));
         
     }
 
+    //Editar informacion de contacto (Telefono y emails).
+    public function editar_informacion_contacto() {
+        
+        $id_telefono_pr = $this->request->getPost('id_telefono_pr');
+        $id_email_pr = $this->request->getPost('id_email_pr');
+
+
+         //Traer telefono que se va pasar de secundario a primario y eliminar
+         if( $agregar == 'telefono' ) {
+            return $this->respond('telefono', 200);
+            exit();
+
+            $telefono = $this->telefono->traer_telefonos_by_numero( $this->request->getPost('telefonos') );
+            $this->telefono->where('id_telefono', $telefono[0]['id_telefono'])->delete();
+
+            //Actualizar el numero Principal del usuario
+            $this->telefono->update($id_telefono_pr, [
+                'numero' => $this->request->getPost('telefonos')
+            ]);
+            
+        }
+
+        //Traer email que se va pasar de secundario a primario y eliminar
+        $emailData = $this->email->traer_emails_by_correo( $this->request->getPost('emails') );
+        if( !empty($emailData ) ) {
+            $this->email->where('id_email', $emailData[0]['id_email'])->delete();
+
+            //Actualizar el numero Principal del usuario
+            $this->email->update($id_email_pr, [
+                'email' => $this->request->getPost('emails')
+            ]);
+            
+        }
+    }
+
+    //Traer informacion del usuario;
     public function traer_informacion() {
         $miPerfil = $this->usuario->traer_usuario();
         echo json_encode($miPerfil);
     }
 
+    //Traer telefonos y emails del usuario que esta logeado
     public function traer_tels_emails() {
         $idGlobal = session()->get('id_usuario');
         
@@ -120,6 +124,7 @@ class Perfil extends BaseController
         // echo json_encode($telefonos);
     }
 
+    //Agregar Telefonos o emails
     public function agregar_tel_email($telOrEmail, $tp)     
     {   
         $session = session();

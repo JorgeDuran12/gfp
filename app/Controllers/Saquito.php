@@ -4,17 +4,19 @@ namespace App\Controllers;
 
 use App\Models\SaquitoModel;
 use App\Models\UsuariosModel;
+use CodeIgniter\API\ResponseTrait;
+
 
 class Saquito extends BaseController
 {
     protected $saquito, $usuario;
+    use ResponseTrait;
     
     public function __construct()
     
     {
         $this->usuario = new UsuariosModel();
         $this->saquito = new SaquitoModel();
-        
     }
    
     public function index()
@@ -74,7 +76,7 @@ class Saquito extends BaseController
         $session = session();
         $idUsuario = $session->id_usuario;
 
-        $saquito_ = $this->saquito->traer_saquitos($idUsuario, 'A');
+        $saquito_ = $this->saquito->traer_saquitos($idUsuario);
         if (!empty($saquito_)) {
             array_push($returnData, $saquito_);
         }
@@ -82,10 +84,21 @@ class Saquito extends BaseController
 
     }
 
-    public function completado($id,$estado){
-        $this->saquito-> completar_saquito($id,$estado);
-        return redirect()->to(base_url('/mi_saquito'));
+    public function completado(){
+
+        $saquitoId = $this->saquito->traerId_saquito();
+
+        try{
+            $this->saquito-> completar_saquito($saquitoId,'C');
+            return $this->respond('Saquito completado', 200);
+
+        }catch(error) {
+            return $this->fail('Error al actualizar', 400);
+        }
+
     }
+
+
 
 
 }

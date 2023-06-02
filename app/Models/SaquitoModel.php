@@ -13,7 +13,7 @@ class SaquitoModel extends Model{
     protected $returnType     = 'array';  /* forma en que se retornan los datos */
     protected $useSoftDeletes = false; /* si hay eliminacion fisica de registro */
 
-    protected $allowedFields = ['descripcion','fecha_inicial','valor','numero_cuota','cuota','estado','fecha_crea','usuario_crea','completado']; /* relacion de campos de la tabla */
+    protected $allowedFields = ['descripcion','fecha_inicial','valor','numero_cuota','cuota','estado','fecha_crea','usuario_crea']; /* relacion de campos de la tabla */
 
     protected $useTimestamps = true; /*tipo de tiempo a utilizar */
     protected $createdField  = 'fecha_crea'; /*fecha automatica para la creacion */
@@ -25,12 +25,12 @@ class SaquitoModel extends Model{
     protected $skipValidation    = false;
   
    
-        public function traer_saquitos($id, $estado){
+        public function traer_saquitos($id){
 
             $this->select('saquitos.*');
             $this->where('usuario_crea', $id);
-            $this->where('estado', $estado);
-            $datos = $this->first();  // nos trae el registro que cumpla con una condicion dada 
+            // $this->where('estado', $estado);
+            $datos = $this->findAll();  // nos trae el registro que cumpla con una condicion dada 
             return $datos;
         }
 
@@ -52,7 +52,7 @@ class SaquitoModel extends Model{
             $id_usuario = $session->get('id_usuario');
 
             $this->select('saquitos.*');
-             $this->where('estado', 'A');
+              $this->where('estado', 'A');
             $this->where('usuario_crea', $id_usuario);
             $datos = $this->first();
             return $datos['id_saquito'];

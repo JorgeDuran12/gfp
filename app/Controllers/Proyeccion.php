@@ -84,4 +84,5 @@ class Proyeccion extends BaseController
         return redirect()->to(base_url('/proyeccion'));
     }
 
+
 }

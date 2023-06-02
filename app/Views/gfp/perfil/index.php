@@ -77,11 +77,7 @@
           <div class="modal-body">
             <!-- Formulario -->
             <form  class="d-flex flex-column" id="datosFormulario" action="<?= base_url("perfil/editar_informacion")?>" method="POST" onsubmit="return validateForm()">
-                <input type="text" hidden
-                  class="form-control"  name="id_telefono_pr" id="id_telefono_pr" aria-describedby="helpId" placeholder="Ej: pass">
-                <input type="text" hidden
-                  class="form-control"  name="id_email_pr" id="id_email_pr" aria-describedby="helpId" placeholder="Ej: correo">
-              
+
               <div class="mb-3" id="divINput">
                 <label for="usuario" class="form-label" id="titleLabel">Nombre de Usuario o Apodo: </label>
                 <input type="text"
@@ -140,36 +136,38 @@
           <div class="alert alert-danger" role="alert" id="mensajeError" hidden></div>
           <div class="modal-body">
             <!-- Formulario -->
-            <form  class="d-flex flex-column" id="datosFormulario" action="<?= base_url("perfil/editar_informacion")?>" method="POST" onsubmit="return validateForm()">
+            <form  class="d-flex flex-column" method="post" action="<?= base_url("perfil/editar_informacion_contacto")?>">
                 <input type="text" hidden
-                  class="form-control"  name="id_telefono_pr" id="id_telefono_pr" aria-describedby="helpId" placeholder="Ej: pass">
+                  class="form-control"  name="id_telefono_pr" id="id_telefono_pr" aria-describedby="helpId" placeholder="Ej: pass"/>
                 <input type="text" hidden
-                  class="form-control"  name="id_email_pr" id="id_email_pr" aria-describedby="helpId" placeholder="Ej: correo">
+                  class="form-control"  name="id_email_pr" id="id_email_pr" aria-describedby="helpId" placeholder="Ej: correo"/>
 
               <label for="emails">Emails:</label>
                 <div class="d-flex w-100 h-100 align-items-center mb-3">
                     <select class="text-body p-2" id="emails" name="emails">
                       <?php foreach($emails as $row ) { ?>
+                        <option class="text-body" value="">Elija un correo</option>
                         <option class="text-body" value="<?= $row['email']?>"><?= $row['email']?></option>
                         <?php } ?>
                     </select>
-                    <button type="button" onclick="establecerPrincipal('telefono')" class="btn btn-primary ">Establecer como principal</button>
+                    <button type="submit" class="btn btn-primary ">Establecer como principal</button>
                     <button type="button" onclick="agregarRegistro('email')" class="btn btn-warning">Nuevo</button>
-                    <button type="button" onclick="eliminarRegistro('email')" class="btn btn-danger ">Eliminar</button>
+                    <button type="submit" class="btn btn-danger ">Eliminar</button>
                 </div>
                 
                 <label for="telefonos">Teléfonos:</label>
                 <div class="d-flex w-100 h-100 align-items-center">
                   <select class="text-body p-2" id="telefonos" name="telefonos">
                     <?php foreach($telefonos as $row ) { ?>
+                      <option class="text-body" value="">Elija un telefono</option>
                       <option class="text-body" value="<?= $row['numero']?>">
                       <?= $row['numero']?>
                     </option>
                       <?php } ?>
                     </select>
-                    <button type="button" onclick="establecerPrincipal('telefono')" class="btn btn-primary ">Establecer como principal</button>
+                    <button type="submit" class="btn btn-primary">Establecer como principal</button>
                     <button type="button" onclick="agregarRegistro('telefono')" class="btn btn-warning">Nuevo</button>
-                    <button type="button" onclick="eliminarRegistro('telefono')" class="btn btn-danger ">Eliminar</button>
+                    <button type="submit" class="btn btn-danger ">Eliminar</button>
                 </div>
 
 
@@ -195,6 +193,22 @@
 
 var inputOldPass = document.querySelector('#old_pass');
 var inputNewPass = document.querySelector('#new_pass');
+
+var inputIdTelefonoPrincipal = document.querySelector('#id_telefono_pr');
+var inputIdEmailPrincipal = document.querySelector('#id_email_pr');
+
+var inputUsuario = document.querySelector('#usuario');
+var inputNombres = document.querySelector('#nombres');
+var inputTelefono = document.querySelector('#telefono');
+var inputEmail = document.querySelector('#email');
+var inputApellidos = document.querySelector('#apellidos');
+var inputTipoDoc = document.querySelector('#tipo_Documento');
+var inputNumDoc = document.querySelector('#num_documento');
+
+var labelInputs = document.querySelectorAll('#titleLabel');
+
+var selectDiv = document.querySelector('#select-id');
+
 
   /* Cambiar clave */
   function verificarCampos() {
@@ -226,20 +240,6 @@ var inputNewPass = document.querySelector('#new_pass');
 
   /* Fin cambiar clave */
 
-var inputIdTelefonoPrincipal = document.querySelector('#id_telefono_pr');
-var inputIdEmailPrincipal = document.querySelector('#id_email_pr');
-
-var inputUsuario = document.querySelector('#usuario');
-var inputNombres = document.querySelector('#nombres');
-var inputTelefono = document.querySelector('#telefono');
-var inputEmail = document.querySelector('#email');
-var inputApellidos = document.querySelector('#apellidos');
-var inputTipoDoc = document.querySelector('#tipo_Documento');
-var inputNumDoc = document.querySelector('#num_documento');
-
-var labelInputs = document.querySelectorAll('#titleLabel');
-
-var selectDiv = document.querySelector('#select-id');
 
 
 function mostrarDatos( tp ) {
@@ -266,7 +266,7 @@ function mostrarDatos( tp ) {
 }
 
 
-
+/* AGREGAR TELEFONOS O EMAIL */
 function agregarRegistro( agregar ) {
   if( agregar === 'telefono' ) {
 
@@ -274,7 +274,7 @@ function agregarRegistro( agregar ) {
 
     $("#modalContacto").modal('hide')
     Swal.fire({
-      title: 'Ingrese un nuevo telefono',
+      title: `Ingrese un ${agregar} nuevo`,
       input: 'text',
       inputLabel: 'Ingrese un telefono valido',
       inputPlaceholder: 'Ej: 3238906836',
@@ -327,7 +327,7 @@ function agregarRegistro( agregar ) {
 
 $("#modalContacto").modal('hide')
 Swal.fire({
-  title: 'Ingrese un nuevo Correo',
+  title: `Ingrese un ${agregar} nuevo`,
   input: 'email',
   inputLabel: 'Ingrese un correo valido',
   inputPlaceholder: 'Ej: micorreo@correo.com',
@@ -376,24 +376,8 @@ Swal.fire({
   }
 }
 
-</script>
-
-
-
-<script>
-
-$(document).ready(function() {
-  $("#setMainBtn").click(function() {
-    let selectPhones = $("#telefonos").val();
-    if( selectPhones ) {
-      $('#telefonos option').removeClass('main');
-      $(selectPhones).each(function() {
-        $('#telefonos option[value="' + this + '"]').addClass('main')
-      })  
-    }
-  })
-})
 
 </script>
+
 
 <?= $this->endSection('contenido')?>

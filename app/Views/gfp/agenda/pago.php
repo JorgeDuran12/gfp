@@ -2,7 +2,6 @@
 
 <?= $this->section("contenido")?>
 
-
 <div class="agendaPago__container">
   <!-- Agenda -->
     <div id="calendar"></div>
@@ -74,11 +73,6 @@
 
 
 </div>
-
-
-
-
-
 
 <script>
 

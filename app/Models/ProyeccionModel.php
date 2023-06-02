@@ -42,8 +42,12 @@ class ProyeccionModel extends Model{
         $id_usuario = $session->get('id_usuario');
 
         $this->select('proyeccion. valor_cuota');
-        $this->where('usuario_crea', $id_usuario);
-        $this->where('estado','A');
+        $this->join('saquitos', 'saquitos.id_saquito = proyeccion.id_saquito');
+        
+        
+        $this->where('saquitos.estado','A');
+        $this->where('proyeccion.usuario_crea', $id_usuario);
+        $this->where('proyeccion.estado','A');
         $datos['valor_cuota']= $this-> find();
         //  var_dump($datos);   
 
