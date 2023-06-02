@@ -1841,3 +1841,1296 @@ in APPPATH\Controllers\Perfil.php on line 80.
  3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Perfil))
  4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:29:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 19:29:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 19:29:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 19:29:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-02 19:29:56 --> Undefined variable $dato
+in APPPATH\Views\gfp\fondo\saquito.php on line 294.
+ 1 APPPATH\Views\gfp\fondo\saquito.php(294): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dato', 'C:\\xampp\\htdocs\\gfp\\app\\Views\\gfp\\fondo\\saquito.php', 294)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\gfp\\app\\Views\\gfp\\fondo\\saquito.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('gfp/fondo/saquito', [], true)
+ 5 APPPATH\Controllers\Saquito.php(27): view('gfp/fondo/saquito', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Saquito->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Saquito))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:32:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-02 19:32:02 --> Undefined variable $dato
+in APPPATH\Views\gfp\fondo\saquito.php on line 294.
+ 1 APPPATH\Views\gfp\fondo\saquito.php(294): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dato', 'C:\\xampp\\htdocs\\gfp\\app\\Views\\gfp\\fondo\\saquito.php', 294)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\gfp\\app\\Views\\gfp\\fondo\\saquito.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('gfp/fondo/saquito', [], true)
+ 5 APPPATH\Controllers\Saquito.php(27): view('gfp/fondo/saquito', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Saquito->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Saquito))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:32:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-02 19:32:03 --> Undefined variable $dato
+in APPPATH\Views\gfp\fondo\saquito.php on line 294.
+ 1 APPPATH\Views\gfp\fondo\saquito.php(294): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dato', 'C:\\xampp\\htdocs\\gfp\\app\\Views\\gfp\\fondo\\saquito.php', 294)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\gfp\\app\\Views\\gfp\\fondo\\saquito.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('gfp/fondo/saquito', [], true)
+ 5 APPPATH\Controllers\Saquito.php(27): view('gfp/fondo/saquito', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Saquito->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Saquito))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:32:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-02 19:32:04 --> Undefined variable $dato
+in APPPATH\Views\gfp\fondo\saquito.php on line 294.
+ 1 APPPATH\Views\gfp\fondo\saquito.php(294): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dato', 'C:\\xampp\\htdocs\\gfp\\app\\Views\\gfp\\fondo\\saquito.php', 294)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\gfp\\app\\Views\\gfp\\fondo\\saquito.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('gfp/fondo/saquito', [], true)
+ 5 APPPATH\Controllers\Saquito.php(27): view('gfp/fondo/saquito', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Saquito->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Saquito))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:32:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-02 19:32:05 --> Undefined variable $dato
+in APPPATH\Views\gfp\fondo\saquito.php on line 294.
+ 1 APPPATH\Views\gfp\fondo\saquito.php(294): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dato', 'C:\\xampp\\htdocs\\gfp\\app\\Views\\gfp\\fondo\\saquito.php', 294)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\gfp\\app\\Views\\gfp\\fondo\\saquito.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('gfp/fondo/saquito', [], true)
+ 5 APPPATH\Controllers\Saquito.php(27): view('gfp/fondo/saquito', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Saquito->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Saquito))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:33:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-02 19:33:53 --> Undefined variable $dato
+in APPPATH\Views\gfp\fondo\saquito.php on line 294.
+ 1 APPPATH\Views\gfp\fondo\saquito.php(294): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dato', 'C:\\xampp\\htdocs\\gfp\\app\\Views\\gfp\\fondo\\saquito.php', 294)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\gfp\\app\\Views\\gfp\\fondo\\saquito.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('gfp/fondo/saquito', [], true)
+ 5 APPPATH\Controllers\Saquito.php(27): view('gfp/fondo/saquito', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Saquito->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Saquito))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:33:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-02 19:33:54 --> Undefined variable $dato
+in APPPATH\Views\gfp\fondo\saquito.php on line 294.
+ 1 APPPATH\Views\gfp\fondo\saquito.php(294): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dato', 'C:\\xampp\\htdocs\\gfp\\app\\Views\\gfp\\fondo\\saquito.php', 294)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\gfp\\app\\Views\\gfp\\fondo\\saquito.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('gfp/fondo/saquito', [], true)
+ 5 APPPATH\Controllers\Saquito.php(27): view('gfp/fondo/saquito', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Saquito->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Saquito))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:34:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 19:34:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 19:35:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 19:35:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 19:35:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:35:11 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:35:11 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:36:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:36:08 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:36:08 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:37:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:37:13 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:37:13 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:37:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:37:15 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:37:15 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:37:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:37:27 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:37:27 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:38:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:38:06 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:38:06 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:38:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:38:08 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:38:08 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:38:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:38:09 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:38:09 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:38:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:38:10 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:38:10 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:38:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:38:11 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:38:11 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:38:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:38:11 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:38:11 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:38:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:38:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:38:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:38:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:38:34 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:38:34 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:38:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:38:35 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:38:35 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:38:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:38:36 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:38:36 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:38:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:38:46 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:38:46 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:38:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:38:47 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:38:47 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:39:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:39:25 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:39:25 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:40:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:40:14 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:40:14 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:40:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:40:40 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:40:40 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:41:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:41:25 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:41:25 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:41:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:41:28 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:41:28 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:41:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:41:28 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:41:28 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:41:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:41:29 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:41:29 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:41:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:41:55 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:41:55 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:41:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:41:56 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:41:56 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:41:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:41:56 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:41:56 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:41:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:41:57 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:41:57 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:41:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:41:57 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:41:57 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:41:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:41:57 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:41:57 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:41:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:41:57 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:41:57 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:41:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:41:58 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:41:58 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:41:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:41:58 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:41:58 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:41:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:41:58 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:41:58 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:41:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:41:58 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:41:58 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:41:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:41:59 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:41:59 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:41:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:41:59 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:41:59 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:41:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:41:59 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:41:59 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:41:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:41:59 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:41:59 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:43:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:43:25 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:43:25 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:43:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:43:27 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:43:27 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:43:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:43:58 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:43:58 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:44:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:44:12 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:44:12 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:44:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:44:18 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:44:18 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:54:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 19:54:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 19:54:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 19:54:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 19:54:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 19:54:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:54:37 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:54:37 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:54:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:54:44 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:54:44 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:54:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:54:45 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:54:45 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:54:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 19:54:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 19:54:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 19:55:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 19:55:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 19:55:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 19:55:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:55:08 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:55:08 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:55:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:55:11 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:55:11 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:55:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:55:21 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:55:21 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:55:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:55:21 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:55:21 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:55:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 19:55:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 19:55:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:55:31 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:55:31 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:55:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:55:37 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:55:37 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:55:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:55:37 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:55:37 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:56:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:56:02 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:56:02 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:56:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:56:03 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:56:03 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:56:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:56:11 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:56:11 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:56:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:56:12 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:56:12 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:56:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:56:18 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:56:18 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:56:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:56:19 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:56:19 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:56:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 19:56:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 19:56:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 19:56:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 19:56:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 19:56:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 19:56:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:56:59 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:56:59 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:57:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:57:11 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:57:11 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:57:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:57:12 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:57:12 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:57:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:57:23 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:57:23 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:57:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:57:23 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:57:23 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:57:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 19:57:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:57:37 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:57:37 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:57:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 19:57:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 19:57:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 19:58:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 19:58:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 19:58:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 19:58:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:58:19 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:58:19 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:58:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:58:26 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:58:26 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:58:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:58:27 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:58:27 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:58:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 19:58:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 19:58:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 19:58:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 19:58:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 19:58:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 19:59:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:59:01 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:59:01 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:59:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:59:09 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:59:09 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:59:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 19:59:09 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 19:59:09 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 19:59:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 19:59:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 19:59:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 20:00:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 20:00:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 20:00:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 20:00:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 20:00:12 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 20:00:12 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 20:00:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 20:00:18 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 20:00:18 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 20:00:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 20:00:18 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 20:00:18 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 20:00:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 20:00:24 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 20:00:24 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 20:00:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 20:00:24 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 20:00:24 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 20:00:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 20:00:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 20:00:45 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 20:00:45 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-02 20:00:45 --> Trying to access array offset on value of type null
+in APPPATH\Models\SaquitoModel.php on line 58.
+ 1 APPPATH\Models\SaquitoModel.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\gfp\\app\\Models\\SaquitoModel.php', 58)
+ 2 APPPATH\Controllers\Proyeccion.php(58): App\Models\SaquitoModel->traerId_saquito()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Proyeccion->Insertar()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proyeccion))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 20:00:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 20:00:47 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 20:00:47 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 20:00:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 20:00:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 20:01:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 20:01:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 20:01:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 20:01:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 20:01:56 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 20:01:56 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 20:02:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 20:02:21 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 20:02:21 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 20:02:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 20:02:32 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 20:02:32 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 20:02:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 20:02:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 20:02:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 20:02:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 20:02:40 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 20:02:40 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 20:02:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 20:02:50 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 20:02:50 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 20:02:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 20:02:50 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 20:02:50 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 20:02:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 20:02:55 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 20:02:55 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 20:02:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 20:02:56 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 20:02:56 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 20:03:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 20:03:01 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 20:03:01 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 20:03:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 20:03:02 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 20:03:02 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 20:03:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 20:03:05 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 20:03:05 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 20:03:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 20:03:06 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 20:03:06 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 20:03:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 20:03:10 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 20:03:10 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 20:03:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 20:03:11 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 20:03:11 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 20:03:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 20:03:16 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 20:03:16 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 20:03:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 20:03:16 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 20:03:16 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 20:03:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 20:03:24 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 20:03:24 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 20:03:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 20:03:24 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 20:03:24 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 20:03:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 20:03:29 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 20:03:29 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 20:03:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 20:03:30 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 20:03:30 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 20:03:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 20:03:38 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 20:03:38 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 20:03:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 20:03:38 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 20:03:39 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 20:03:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 20:03:42 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 20:03:42 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 20:03:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 20:03:42 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 20:03:42 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-02 20:03:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 20:04:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 20:04:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-02 20:05:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-02 20:05:47 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-02 20:05:47 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

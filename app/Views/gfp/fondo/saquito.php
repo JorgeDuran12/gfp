@@ -42,7 +42,7 @@
             <tbody>
                <?php foreach ($saquito as $dato) { ?>
         <tr>
-            <td><?php echo $dato ['descripcion'];?></td>
+            <td><?php echo $dato['descripcion'];?></td>
             <td><?php echo $dato['fecha_inicial'];?></td>
            
             <td><?php echo $dato['valor'];?></td>
@@ -291,7 +291,7 @@ $(document).ready(function() {
 
 <!-- <td>
     <a class="btn btn-warning" href="#"
-        onclick=" selecionaRegistro(<?php echo $dato['id_saquito'] . ',' . 2 ?>);" data-bs-toggle="modal"
+        onclick=" selecionaRegistro(<php echo $dato['id_saquito'] . ',' . 2 ?>);" data-bs-toggle="modal"
         data-bs-target="#editarModal" width="16" height="16" title="Editar Registro">
         <img class="image" src="<?= base_url("img/editar.png") ?> " title="Editar">
     </a>

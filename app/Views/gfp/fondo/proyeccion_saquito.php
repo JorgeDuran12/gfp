@@ -9,7 +9,7 @@
 <div class="container overflow-hidden">
     <div class="row gy-5">
         <div class="col-6">
-            <div class="p-3 border bg-light">
+            <div class="p-3 border ">
                 <form id="formulario" method="POST" action="<?php echo base_url('Insertar_proyeccion'); ?>">
 
                     <div class="tma   input_group"><input type="date" class="form-control" name="fecha_cuota"
@@ -93,7 +93,7 @@
             </div>
         </div>
         <div class="col-6">
-            <div class="p-3 border bg-light">       
+            <div class="p-3 border ">       
         <div id="contenedor">
     <div id="limite">
     <div class="table table-striped">
@@ -170,7 +170,7 @@ $(document).on('blur', '.valida', function(event) {
 /******* Data - Table ***********/
 $(document).ready(function() {
     $('#miTabla').DataTable({
-        scrollY: '500px',
+        scrollY: '400px',
         scrollCollapse: true,
         paging: true,
         language: {
