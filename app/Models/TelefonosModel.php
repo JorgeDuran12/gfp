@@ -47,11 +47,11 @@ public function Perfiltelefono() {
     return $datos;
 }
 
-public function traer_telefonos_by_id( $id ) {
+public function traer_telefonos_by_id( $id, $prioridad ) {
     $this->select('telefonos.*');
     $this->where('estado','A');
     $this->where('id_usuario',$id);
-    $this->where('prioridad', '14');
+    $this->where('prioridad', $prioridad);
     $datos = $this->findAll();  
     return $datos;
 }

@@ -4,12 +4,14 @@ namespace App\Controllers;
 
 use App\Models\SaquitoModel;
 use App\Models\UsuariosModel;
+use App\Models\DisponibleModel;
+
 use CodeIgniter\API\ResponseTrait;
 
 
 class Saquito extends BaseController
 {
-    protected $saquito, $usuario;
+    protected $saquito, $usuario, $disponible;
     use ResponseTrait;
     
     public function __construct()
@@ -17,6 +19,8 @@ class Saquito extends BaseController
     {
         $this->usuario = new UsuariosModel();
         $this->saquito = new SaquitoModel();
+        $this->disponible = new DisponibleModel();
+
     }
    
     public function index()

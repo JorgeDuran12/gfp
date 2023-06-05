@@ -13,9 +13,10 @@
 
      </div>
 
-         <button href="#" id="agregar" onclick="selecionaRegistro(<?php echo 1 . ',' . 1 ?>);" class="btn btn-success regresar_Btn"
-             data-bs-toggle="modal" data-bs-target="#editarModal" hidden>Agregar</button>
-             <a href="<?php echo base_url('/proyeccion'); ?>" class="btn btn-primary regresar_Btn">Proyeccion</a> &nbsp
+         <button  href="#" id="agregar" onclick="selecionaRegistro(<?php echo 1 . ',' . 1 ?>);" class="btn btn-success regresar_Btn"
+             data-bs-toggle="modal" data-bs-target="#editarModal" hidden   title="Para poder registrar un saquito debera   tener un presupuesto." >Agregar</button>
+
+             <a href=" <?php echo base_url('/proyeccion'); ?>" class="btn btn-primary regresar_Btn"  id="proyeccion" >Proyeccion</a> &nbsp
 
         
 
@@ -125,7 +126,7 @@
   <label for="num2">numero de cuotas:</label>
   <input type="text" class="form-control valida"  id="numero_cuota" name="numero_cuota">
   <br>
-  <label for="num3"></label>
+  <label for="num3">Cuotas</label>
   <input type="text" class="form-control" id="cuota" name="cuota">
 </form>
 </div>
@@ -143,6 +144,36 @@
 
 </div>
 </div>
+<<script>
+    let  btnAgregar = document.getElementById('agregar');
+    let btnProyeccion =document.getElementById('proyeccion');
+   $(document).ready(function(){
+    $.ajax({
+        url:"<?php echo base_url("principal/buscar_presupuesto")?>",
+        type:"get",
+        dataType:"json",
+        success:function(data){
+            
+            if( data.length > 0 ) {
+                btnAGregar.hidden = false;
+                console.log("tiene  resgistro");
+                
+            } else{
+                btnAGregar.hidden = true;
+                console.log(" no tiene resgistro");
+                btnAGregar.disabled = true;  
+                  
+
+                
+
+            }
+        }
+    })
+   })
+    
+
+    
+</script> 
 
 <script>
     var btnAGregar = document.getElementById('agregar');
@@ -154,30 +185,30 @@
                         type: "get",
                         dataType: "json",
                         success: function (data) {
-                            console.log(data)
+                            //console.log(data)
 
                             //Si hay saquito que desactive el boton de agregar
                             if( data.length > 0 ) {
                                 btnAGregar.hidden = true
-                                btnAGregar.disabled = true;                    
+                                //btnAGregar.disabled = true;                    
                                 
                                 for(saquito of data[0]) {
     
                                     if( saquito.estado === 'C' ) {
                                         btnAGregar.hidden = false
-                                        btnAGregar.disabled = false;
+                                        //btnAGregar.disabled = false;
                                         
     
                                     }else {
                                         
                                         btnAGregar.hidden = true;
-                                        btnAGregar.disabled = true;
+                                        //btnAGregar.disabled = true;
                                         break; 
                                     }
                                 }
                             }else {
                                 btnAGregar.hidden = false
-                                btnAGregar.disabled = false;                    
+                                //btnAGregar.disabled = false;                    
                                 
                             }
 
@@ -214,7 +245,7 @@ let numero1 = document.querySelectorAll("#numero_cuota");
 let numero2  = document.querySelectorAll("#valor");
 let resultadoOperacion = parseFloat(numero1)/parseFloat(numero2);
 
-console.log(resultadoOperacion);
+//console.log(resultadoOperacion);
 
 function selecionaRegistro(id, tp) {
     if (tp == 2) {

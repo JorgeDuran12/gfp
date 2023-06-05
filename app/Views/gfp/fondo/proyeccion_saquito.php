@@ -5,125 +5,118 @@
     <h1>Progreso de saquito</h1>
 </div>
 
-
 <div class="container overflow-hidden">
     <div class="row gy-5">
         <div class="col-6">
             <div class="p-3 border ">
                 <form id="formulario" method="POST" action="<?php echo base_url('Insertar_proyeccion'); ?>">
 
-                    <div class="tma   input_group"><input type="date" class="form-control" name="fecha_cuota"
-                            id="fecha_cuota" placeholder="Fecha inicial: " required>
-                        <label for="floatingInput"></label>
+                    <div class="tma input_group">
+                        <label for="floatingInput">Fecha de la cuota</label>
+                        <input type="date" class="form-control" name="fecha_cuota" id="fecha_cuota"
+                            placeholder="Fecha inicial: " required>
 
+                        <label for="floatingInput">Valor de la cuota </label>
                         <input type="number" class="form-control valida" name="valor_cuota" id="valor_cuota"
                             placeholder="Valor: " required>
-                        <label for="floatingInput"></label>
                     </div>
-
-                    <div class="tx">
-                        <input type="hidden" class="form-control valida" placeholder="egreso" id="egreso" name="egreso"
-                            required>
+                    <!-- <div class="tx">
                         <label for="floatingInput"></label>
-                    </div>
-
+                        <input type="hidden" class="form-control valida" placeholder="egreso" id="egreso" name="egreso" required>
+                    </div> -->
                     <div class="tx">
                         <input type="hidden" class="form-control valida" placeholder="presupuesto" id="presupuesto"
                             name="presupuesto" required>
-                        <label for="floatingInput"></label>
+                            <button class="btn btn-success" href="#" class="btn-guardar" type="Submit">
+                                <img class="image" src="<?= base_url("img/Guardar.png") ?>" title="Guardar">
+                            </button>
                     </div>
-
-                    <div>
-                        <button class="btn btn-success" href="#" class="btn-guardar" type="Submit">
-                            <img class="image" src="<?= base_url("img/Guardar.png") ?>" title="Guardar">
-                        </button>
-                    </div>
-
                 </form>
+
                 <div class="pp_sq_table">
 
-<table class="table">
-    <thead class="table-dark">
-        <tr>
-            <th translucido></th>
-            <th>Cuotas</th>
-            <th>valor de meta</th>
+                    <table class="table">
+                        <thead class="table-dark">
+                            <tr>
+                                <th translucido></th>
+                                <th>Cuotas</th>
+                                <th>Valor de Meta</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Cantidad de cuotas</td>
+                                <td><?= $traer_sqto['numero_cuota']?></td>
+                                <td><?= $traer_sqto['valor']?></td>
+                            </tr>
+                            <tr>
+                                <td>Cuotas Registrada</td>
+                                <td>
+                                    <div id="cuotas" name="cuotas">
 
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>cantidad de cuotas</td>
-            <td><?= $traer_sqto['numero_cuota']?></td>
-            <td><?= $traer_sqto['valor']?></td>
-
-        </tr>
-        <tr>
-            <td>cuotas registrada</td>
-            <td>
-                <div id="cuotas" name="cuotas">
-
-                </div>
-            </td>
-            <td>
-                <div id="num_cuotas" name="num_cuotas"> </div>
-            </td>
-        </tr>
-        <tr>
-            <td>Cuotas restantes</td>
-            <td>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div id="num_cuotas" name="num_cuotas"> </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">Dinero faltante </td>
+                                <!-- <td>Cuotas restantes</td> -->
+                                <!-- <td>
                 <div id="num_cr">
 
+                </div> -->
+                                </td>
+
+                                <td>
+                                    <div id="saldo_restante">
+
+                                    </div>
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
                 </div>
-            </td>
-
-            <td>
-                <div id="saldo_restante">
-
-                </div>
-            </td>
-
-        </tr>
-
-    </tbody>
-</table>
-</div>
 
 
             </div>
         </div>
         <div class="col-6">
-            <div class="p-3 border ">       
-        <div id="contenedor">
-    <div id="limite">
-    <div class="table table-striped">
-                <table id="miTabla" cellspacing="0">
-                    <thead>
-                        <tr>
-                            <th>Fecha cuota</th>
-                            <th>Valor cuota</th>
-                             <th>Saquito</th>
-                             <th>estado</th>
-                             
-                        
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php foreach ($proyeccion as $dato){ ?>
-                            <tr> 
-                                <td><?php echo $dato['fecha_cuota'];?></td> 
-                                <td><?php echo $dato['valor_cuota'];?></td>
-                                <td><?php echo $dato['descripcion'];?></td>
-                                <td><?php echo $dato['estado'];?></td>
-                            </tr>
+            <div class="p-3 border ">
+                <div id="contenedor">
+                    <div id="limite">
+                        <div class="table table-striped">
+                            <table id="miTabla" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>Fecha cuota</th>
+                                        <th>Valor cuota</th>
+                                        <th>Saquito</th>
+                                        <th>estado</th>
 
-                        <?php } ?> 
-                   
-                    </tbody>
-                </table> 
-    </div>    
-    </div>
-    </div></div>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php foreach ($proyeccion as $dato){ ?>
+                                    <tr>
+                                        <td><?php echo $dato['fecha_cuota'];?></td>
+                                        <td><?php echo $dato['valor_cuota'];?></td>
+                                        <td><?php echo $dato['descripcion'];?></td>
+                                        <td><?php echo $dato['estado'];?></td>
+                                    </tr>
+
+                                    <?php } ?>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -199,9 +192,9 @@ let num1 = <?= $traer_sqto['numero_cuota']?>;
 let num2 = <?= $traer_sqto['valor']?>;
 
 
-resultado1 = num1 - suma_cuotas.length;
-console.log(resultado1)
-document.getElementById('num_cr').innerText = resultado1;
+// resultado1 = num1 - suma_cuotas.length;
+// console.log(resultado1)
+// document.getElementById('num_cr').innerText = resultado1;
 
 resultado2 = num2 - suma;
 console.log(resultado2)

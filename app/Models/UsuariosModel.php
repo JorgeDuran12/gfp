@@ -37,6 +37,7 @@ class UsuariosModel extends Model{
         $this->join('emails','emails.id_usuario = usuarios.id_usuario');
         $this->join('parametros_det', 'parametros_det.id_parametro_det = usuarios.tipo_documento');
         $this->where('usuarios.estado','A');
+        $this->where('telefonos.prioridad','13');
         $this->where('usuarios.id_usuario',$id_usuario);
         $datos = $this->first();  
         return $datos;
@@ -52,10 +53,11 @@ class UsuariosModel extends Model{
         $this->join('telefonos', 'telefonos.id_usuario = usuarios.id_usuario');
         $this->join('emails','emails.id_usuario = usuarios.id_usuario');
         $this->join('parametros_det', 'parametros_det.id_parametro_det = usuarios.tipo_documento');
-        $this->where('usuarios.estado','A');
+        // $this->where('usuarios.estado','A');
+        $this->where('telefonos.prioridad','13');
         $this->where('usuarios.id_usuario',$id_usuario);
-        $datos = $this->first();  
-        return $datos;
+        $datos = $this->find();  
+        return $datos[0];
     }
     
     public function DataActualizar($id, $estado)

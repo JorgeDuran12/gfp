@@ -31,13 +31,13 @@
     <link rel="stylesheet" href="<?= base_url("/css/agenda/pagoStylees.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/actividades/actividad.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/saquito/saquito1.css")?>">
-    <link rel="stylesheet" href="<?= base_url("/css/saquito/progreso_saquito4.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/css/saquito/progreso_saquito6.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/registro/movimiento2.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/agenda/pagoStyles.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/fullCalendar/fullCalendar.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/123/emergencia6.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/123/administrador.css")?>">
-    <link rel="stylesheet" href="<?= base_url("/css/perfil/perfilStyles211.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/css/perfil/perfilStyles1.css")?>">
 
     <link rel="stylesheet" href="<?= base_url("/css/layouts/gfpLayout.css")?>">
 

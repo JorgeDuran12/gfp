@@ -1,3 +1,4 @@
+
 <?= $this->extend("layouts/authLayout")?>
 <?= $this->section("contenido")?>
 

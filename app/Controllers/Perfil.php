@@ -31,7 +31,7 @@ class Perfil extends BaseController
         $idGlobal = $session->id_usuario;
 
         $miPerfil = $this->usuario->traer_usuario_perfil();
-        $misTelefonos = $this->telefono->traer_telefonos_by_id( $idGlobal );
+        $misTelefonos = $this->telefono->traer_telefonos_by_id( $idGlobal, 14 );
         $misEmails = $this->email->traer_emails_by_id( $idGlobal );
         $parametrosTipoDoc = $this->parametro->obtener_encabezado_3();
         $parametrosPrioridad = $this->parametro->obtener_encabezado_6();
@@ -71,28 +71,38 @@ class Perfil extends BaseController
 
     //Editar informacion de contacto (Telefono y emails).
     public function editar_informacion_contacto() {
+
+        $inputIDPrincipalNumero = $this->request->getPost('id_telefono_pr');
+        $inputIDPrincipalEmail = $this->request->getPost('id_email_pr');
+
+
+        $telefonoInput = $this->request->getPost('telefonos');
+        $emailInput = $this->request->getPost('emails');
         
-        $id_telefono_pr = $this->request->getPost('id_telefono_pr');
-        $id_email_pr = $this->request->getPost('id_email_pr');
-
-
          //Traer telefono que se va pasar de secundario a primario y eliminar
-         if( $agregar == 'telefono' ) {
-            return $this->respond('telefono', 200);
-            exit();
+         if( $telefonoInput ) {
+            echo 'Hola';
 
-            $telefono = $this->telefono->traer_telefonos_by_numero( $this->request->getPost('telefonos') );
-            $this->telefono->where('id_telefono', $telefono[0]['id_telefono'])->delete();
-
-            //Actualizar el numero Principal del usuario
-            $this->telefono->update($id_telefono_pr, [
-                'numero' => $this->request->getPost('telefonos')
+            $telefono = $this->telefono->traer_telefonos_by_numero( $telefonoInput );
+            // $this->telefono->where('id_telefono', $telefono[0]['id_telefono'])->delete();
+            $this->telefono->update($telefono[0]['id_telefono'], [
+                'prioridad' => '13'
             ]);
+
+
+
+            $this->telefono->update($inputIDPrincipalNumero, [
+                'prioridad' => '14'
+            ]);
+
             
+            
+        }else if( $emailInput ) {
+            echo 'Email';exit();
         }
 
         //Traer email que se va pasar de secundario a primario y eliminar
-        $emailData = $this->email->traer_emails_by_correo( $this->request->getPost('emails') );
+        /* $emailData = $this->email->traer_emails_by_correo( $this->request->getPost('emails') );
         if( !empty($emailData ) ) {
             $this->email->where('id_email', $emailData[0]['id_email'])->delete();
 
@@ -101,7 +111,7 @@ class Perfil extends BaseController
                 'email' => $this->request->getPost('emails')
             ]);
             
-        }
+        } */
     }
 
     //Traer informacion del usuario;
@@ -132,7 +142,7 @@ class Perfil extends BaseController
 
         
         if( $tp == 1) {
-            $telsUsuario = $this->telefono->traer_telefonos_by_id( $idUsuario );
+            $telsUsuario = $this->telefono->traer_telefonos_by_id( $idUsuario, 14 );
             // echo 'telefono';
 
             //Recorrer cada telefono para ver si existe y es igual al ingresado

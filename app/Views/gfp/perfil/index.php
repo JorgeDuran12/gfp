@@ -42,9 +42,7 @@
             <h3 class="mt-5 mb-3 text-white fw-bold text-uppercase">Información de Contacto</h3>
             <ul class="d-flex">
                 <li>TELEFONO PRINCIPAL:</li>
-                <?php if($DatosPerfil['prioridad_tel'] == '13'){ ?>
                   <span><?= $DatosPerfil['telefono']?></span>
-                <?php } ?>
             </ul>
             
             <ul class="d-flex">
@@ -146,28 +144,26 @@
                 <div class="d-flex w-100 h-100 align-items-center mb-3">
                     <select class="text-body p-2" id="emails" name="emails">
                       <?php foreach($emails as $row ) { ?>
-                        <option class="text-body" value="">Elija un correo</option>
+                        <!-- <option class="text-body" value="">Elija un correo</option> -->
                         <option class="text-body" value="<?= $row['email']?>"><?= $row['email']?></option>
                         <?php } ?>
                     </select>
-                    <button type="submit" class="btn btn-primary ">Establecer como principal</button>
+                    <button type="submit" class="btn btn-primary " id="btnPrincipal1">Establecer como principal</button>
                     <button type="button" onclick="agregarRegistro('email')" class="btn btn-warning">Nuevo</button>
-                    <button type="submit" class="btn btn-danger ">Eliminar</button>
                 </div>
                 
                 <label for="telefonos">Teléfonos:</label>
                 <div class="d-flex w-100 h-100 align-items-center">
                   <select class="text-body p-2" id="telefonos" name="telefonos">
                     <?php foreach($telefonos as $row ) { ?>
-                      <option class="text-body" value="">Elija un telefono</option>
+                      <!-- <option class="text-body" value="">Elija un telefono</option> -->
                       <option class="text-body" value="<?= $row['numero']?>">
                       <?= $row['numero']?>
                     </option>
                       <?php } ?>
                     </select>
-                    <button type="submit" class="btn btn-primary">Establecer como principal</button>
+                    <button type="submit" class="btn btn-primary"  id="btnPrincipal2">Establecer como principal</button>
                     <button type="button" onclick="agregarRegistro('telefono')" class="btn btn-warning">Nuevo</button>
-                    <button type="submit" class="btn btn-danger ">Eliminar</button>
                 </div>
 
 
@@ -257,8 +253,8 @@ function mostrarDatos( tp ) {
           inputNumDoc.value = data['num_documento'];
           inputTipoDoc.value = data['tipo_documento'];
 
-          // inputIdTelefonoPrincipal.value = data['id_telefono'];
-          // inputIdEmailPrincipal.value = data['id_email'];
+          inputIdTelefonoPrincipal.value = data['id_telefono'];
+          inputIdEmailPrincipal.value = data['id_email'];
 
       }
   })
@@ -375,6 +371,41 @@ Swal.fire({
 
   }
 }
+
+
+
+/*  */
+
+$("#telefonos").change(function() {
+  let valor =  $(this).val();
+  valor = valor.split("");
+
+  if( valor.length === 10 ) {
+
+    $("#emails").prop('disabled', true);
+    $("#btnPrincipal1").prop('disabled', true);
+  }else {
+    
+    $("#emails").prop('disabled', false);
+    $("#btnPrincipal1").prop('disabled', false);
+  }
+})
+/*  */
+
+$("#emails").change(function() {
+  let valor =  $(this).val();
+  valor = valor.split("");
+
+  if( valor.length > 1 ) {
+
+    $("#telefonos").prop('disabled', true);
+    $("#btnPrincipal2").prop('disabled', true);
+  }else {
+    
+    $("#telefonos").prop('disabled', false);
+    $("#btnPrincipal2").prop('disabled', false);
+  }
+})
 
 
 </script>

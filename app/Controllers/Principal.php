@@ -56,5 +56,19 @@ class Principal extends BaseController
         return redirect()->to(base_url('/principal'))->with('estadoPresupuesto', 1);
         
     }
+    public function buscar_presupuesto(){
+        $returnData = array();
+
+        $session = session();
+        $idUsuario = $session->id_usuario;
+
+        $disponible_ = $this->disponible->traer_disponible($idUsuario);
+        if (!empty($disponible_)) {
+            array_push($returnData, $disponible_);
+        }
+        echo json_encode($returnData);
+
+    }
 
 }
+    

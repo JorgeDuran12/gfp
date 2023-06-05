@@ -68,6 +68,7 @@ $routes->get('gestion_de_administradores', 'Usuario::index');
 $routes->post('buscar_usuario/(:num)','Usuario::buscar_usuario/$1');
 $routes->post('buscar_rol/(:num)','Rol::buscar_rol/$1');
 $routes->post('buscar_Registro/(:num)' , 'Saquito::buscar_Registro/$1');
+$routes->post('buscar_presupuesto/(:num)' , 'Principal::buscar_presupuesto/$1');
 $routes->post('Insertar','Saquito::Insertar');
 $routes->post('Insertar_proyeccion','Proyeccion::Insertar');
 $routes->post('cambiar_clave','Perfil::cambiar_clave');
