@@ -20,13 +20,16 @@
                         <input type="number" class="form-control valida" name="valor_cuota" id="valor_cuota"
                             placeholder="Valor: " required>
                     </div>
-                    <!-- <div class="tx">
+                    
+                     <div class="tx">
                         <label for="floatingInput"></label>
                         <input type="hidden" class="form-control valida" placeholder="egreso" id="egreso" name="egreso" required>
-                    </div> -->
+                    </div> 
+
                     <div class="tx">
                         <input type="hidden" class="form-control valida" placeholder="presupuesto" id="presupuesto"
                             name="presupuesto" required>
+
                             <button class="btn btn-success" href="#" class="btn-guardar" type="Submit">
                                 <img class="image" src="<?= base_url("img/Guardar.png") ?>" title="Guardar">
                             </button>
@@ -129,34 +132,31 @@
     <div class="formulario_proyeccion">
 
 
-
-
     </div>
 </div>
  -->
-
-
-
 
 <!-- <---------------------div de header y footer------------------->
 
 
 <script>
+
 const egreso = <?= $disponibles['egreso']?>;
 const presu = <?= $disponibles['presupuesto_anual']?>;
 
 $(document).on('blur', '.valida', function(event) {
+
     let valor_cuota = parseInt(document.getElementById("valor_cuota").value);
-    let resultado = presu - valor_cuota
-    // console.log("resultado" + resultado);
-    let resultado2 = valor_cuota + egreso
+    let resultado = presu - valor_cuota;
+    let resultado2 = valor_cuota + egreso;
+
+
     //  console.log("resultado-------"+resultado2);
     document.getElementById("egreso").value = resultado2;
     document.getElementById("presupuesto").value = resultado;
 
 })
 
-// poribles
 </script>
 
 <script>
@@ -177,7 +177,9 @@ $(document).ready(function() {
     });
 });
 </script>
+
 <script>
+
 const suma_cuotas = <?= json_encode($traer_proye) ?>;
 console.log(suma_cuotas)
 let suma = 0;
@@ -212,7 +214,8 @@ if (num3 === 0) {
         url: "<?php echo base_url('Saquito/completado'); ?>",
         dataType: "json",
         success: function(resp) {
-            console.log(resp)
+            
+            console.log(resp);
         }
     });
 
@@ -225,3 +228,6 @@ if (num3 === 0) {
 
 
 <?= $this->endSection("contenido")?>.
+
+
+egreso

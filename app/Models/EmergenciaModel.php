@@ -5,7 +5,7 @@ namespace App\Models; //Reservamos el espacio de nombre de la ruta app\models
 use CodeIgniter\Model;
 
 class EmergenciaModel extends Model{
-    protected $table      = 'fd_emergencia'; /* nombre de la tabla modelada/*/
+    protected $table      = 'fondo_emergencia'; /* nombre de la tabla modelada/*/
     protected $primaryKey = 'id_fondo-emergencia';
 
     protected $useAutoIncrement = true; /* Si la llave primaria se genera con autoincremento*/
@@ -25,6 +25,13 @@ class EmergenciaModel extends Model{
     protected $skipValidation    = false;
 
 
+    public function traer_fondo($id){
+        $this->select('fondo_emergencia.*');
+        $this->where('estado','A');
+        $this->where('id_fondo-emergencia',$id);
+        $datos = $this->first();  
+        return $datos;
+    }
     
 
     

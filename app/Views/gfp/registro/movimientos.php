@@ -20,13 +20,12 @@
             <!-- <option selected >Tipo de movimiento</option>  -->
                 <?php foreach ($tipo_movi as $data) {?>
                      
-                <option value="<?php echo $data["id_parametro_det"]; ?>"><?php echo $data["nombre"];?></option>
+                <option style="color:black;" value="<?php echo $data["id_parametro_det"]; ?>"><?php echo $data["nombre"];?></option>
                 <?php } ?>
             </select>
-
         </div>
      
-                                          <!-- <--------------actualizacion ----------->
+    <!-- <--------------actualizacion ----------->
 
        <!-- esta parte esta oculta en la vista  -->
        <div  class="tx" >
@@ -43,28 +42,20 @@
         </div>
 
         <div class="tm">
-
-            <!-- <select class="form-select"  aria-label="Floating label select example" id="clase_movimiento" name="clase_movimiento" required>
-                <option selected class="tl">Clase De Movimiento</option>
-                <option value="1" class="tl">Bancario</option>
-                <option value="2" class="tl">No Bancario</option>
-            </select> -->
-
             <label for="floatingInput">Clase de movimiento</label>
             <select class="form-select valida" name="clase_movimiento" id="clase_movimiento" aria-label="Floating label select example"  required>
              <!-- <option selected required >Clase de movimiento</option>  -->
                 <?php foreach ($clase_movi as $data) {?>
              
-                <option value="<?php echo $data["id_parametro_det"]; ?>"><?php echo $data["nombre"];?></option>
+                <option style="color:black;" value="<?php echo $data["id_parametro_det"]; ?>"><?php echo $data["nombre"];?></option>
                 <?php } ?>
             </select>
         </div>
         <br>
-
-
         <div class="tx">
+            
+            <label for="floatingInput">Valor del Movimiento</label>
             <input type="number" class="form-control valida" placeholder="Valor" id="valor" name="valor" required>
-            <label for="floatingInput"></label>
         </div>
         <br>
         <div class="dc">
@@ -73,23 +64,22 @@
         </div>
         <br>
         <div class="tx">
+            <label for="floatingInput" >Fecha del Movimiento</label>
             <input type="datetime-local" class="form-control"  placeholder="name@example.com" id="fecha_movimiento" name="fecha_movimiento" required>
-            <label for="floatingInput" ></label>
         </div>
 
         <div class="botondeanti">
-
+<br>
         <div class="b"> <button href="#" class="btn-guardar" type="Submit">
         <span id="span1g"></span>
         <span id="span2g"></span>
         <span id="span3g"></span>
         <span id="span4g"></span>
-        <img
-        class="image" src="<?= base_url("img/Guardar.png") ?> " title="Guardar">
+        <img class="image" src="<?= base_url("img/Guardar.png") ?> " title="Guardar">
       </button></div>
 
         </div>
-        <br><br><br>
+        <br>
         <div class="hh">
         <div class="rt">
 
@@ -106,6 +96,7 @@
         </div>
     </form>
     </div>
+
 <div class="modal fade" id="reporteMovimientosModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content" id="movimientos_modal-content">
@@ -162,17 +153,17 @@
 </div>
 </div>
 
-
 <script>
 
 const saldo_anterior = <?= $disponibles['saldo_anterior']?>;
 const ingreso = <?= $disponibles['ingreso']?>;
 const egreso = <?= $disponibles['egreso']?>;
-const presu = <?= $disponibles['presupuesto_anual']?>;
+const presu = <?= $disponibles['saldo_anterior'];?>;
+
 console.log("saldo" + saldo_anterior);
 console.log("ingreso" + ingreso);
 console.log("egreso" + egreso);
-console.log("presu" + presu);
+// console.log("presu" + presu);
 
 $(document).on('blur', '.valida', function(event) {
     let valor = parseInt(document.getElementById("valor").value);
@@ -211,10 +202,6 @@ $(document).on('blur', '.valida', function(event) {
 
 
 </script>
-
-
-
-
 
 
 <script>
