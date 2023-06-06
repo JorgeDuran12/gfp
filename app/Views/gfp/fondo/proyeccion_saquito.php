@@ -35,6 +35,7 @@
                             </button>
                     </div>
                 </form>
+               
 
                 <div class="pp_sq_table">
 
@@ -207,6 +208,12 @@ let num3 = <?= $traer_sqto['valor']?>
 if (num3 === 0) {
 
 } else if (suma == num3) {
+    Swal.fire({
+                title: 'Felicitaciones!!',
+                text: 'Usted ha completado las cuotas del saquitos exitosamente, ya puede comprar su producto.',
+                icon: 'success',
+                confirmButtonText: 'Ok'        
+            });
 
     //Actualizar tabla saquito 
     $.ajax({
@@ -214,10 +221,11 @@ if (num3 === 0) {
         url: "<?php echo base_url('Saquito/completado'); ?>",
         dataType: "json",
         success: function(resp) {
-            
             console.log(resp);
         }
     });
+    window.location.href = "<?= base_url('mi_saquito') ?>";
+
 
 
 }

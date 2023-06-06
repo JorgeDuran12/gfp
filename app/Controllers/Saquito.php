@@ -95,10 +95,12 @@ class Saquito extends BaseController
         try{
             $this->saquito-> completar_saquito($saquitoId,'C');
             return $this->respond('Saquito completado', 200);
+            return redirect()->to(base_url('/mi_saquito'));
 
         }catch(error) {
             return $this->fail('Error al actualizar', 400);
         }
+
 
     }
 

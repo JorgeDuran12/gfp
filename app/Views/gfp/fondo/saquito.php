@@ -200,7 +200,7 @@
                                         pp.hidden = true;
                                         // pp.innerText= "no Registro";  
                                          
-                                           console.log("completado exitoso");
+                                         console.log("completado exitoso");
                                         //btnAGregar.disabled = false;  
                                         
     
