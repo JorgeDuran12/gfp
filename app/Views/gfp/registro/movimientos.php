@@ -9,16 +9,10 @@
 <div class="contenedorMovimiento">
     <form method="POST" action="<?php echo base_url('insertar'); ?>" autocomplete="off" class="movimiento">
         <div class="tm">
-
-            <!-- <select class="form-select"  aria-label="Floating label select example" id="tipo_movimiento" name="tipo_movimiento" required>
-                <option selected class="tl">Tipo De Movimiento</option>
-                <option value="1" class="tl">Egreso</option>
-                <option value="2" class="tl">Ingreso</option>
-            </select>    -->
             <label for="floatingInput"> Tipo de movimiento</label>
             <select class="form-select" name="tipo_movimiento" id="tipo_movimiento"
                 aria-label="Floating label select example" required>
-                <!-- <option selected >Tipo de movimiento</option>  -->
+           
                 <?php foreach ($tipo_movi as $data) {?>
 
                 <option style="color:black;" value="<?php echo $data["id_parametro_det"]; ?>">
@@ -73,13 +67,16 @@
                         <div class="p-3 border bg-light">
 
                         <select class="form-select valida" name="parametro_enc" id="parametro_enc" aria-label="Floating label select example" required>
-                                <!-- <option selected required >Clase de movimiento</option>  -->
+                             
                                 <?php foreach ($encabezado as $data) {?>
 
                                 <option style="color:black;" value="<?php echo $data["id_parametro_enc"]; ?>">
                                     <?php echo $data["nombre"];?></option>
                                     
                                 <?php } ?>
+
+                                <option value="otro">otro</option>
+
                             </select>
 
                         </div>
@@ -88,21 +85,21 @@
                         <div class="p-3 border bg-light">
 
                             <select class="form-select valida" name="parametro_det" id="parametro_det" aria-label="Floating label select example" required>
-                                <!-- <option selected required >Clase de movimiento</option>  -->
-                                <?php foreach ($parametros as $data) {?>
+                    
+                                <?php foreach ($parametros as $data) { ?>
 
-                                <option style="color:black;" value="<?php echo $data["id_parametro_det"]; ?>">
-                                    <?php echo $data["nombre"];?></option>   
+                                 <option style="color:black;" value="<?php echo $data["id_parametro_det"]; ?>">
+                                    <?php echo $data["nombre"];?></option>  
 
-                                <?php } ?>
+                                 <?php } ?> 
+
                             </select>
 
                         </div>
                     </div>
                 </div>
+                <textarea class="dc" placeholder="Descripcion" id="descripcion" name="descripcion"  style="display: none;" required></textarea>
             </div>
-            <!-- <textarea class="dc" placeholder="Descripcion" id="descripcion" name="descripcion" required></textarea> -->
-
         </div>
 
         <br>
@@ -200,6 +197,7 @@
 </div>
 
 <script>
+
 const saldo_anterior = <?= $disponibles['saldo_anterior']?>;
 const ingreso = <?= $disponibles['ingreso']?>;
 const egreso = <?= $disponibles['egreso']?>;
@@ -242,10 +240,8 @@ $(document).on('blur', '.valida', function(event) {
     presupuesto_anual = saldo_anterior + nuevoIngreso - nuevoEgreso;
 
     document.getElementById("presupuesto").value = presupuesto_anual;
-
 });
 </script>
-
 
 <script>
 /******* Data - Table ***********/
@@ -261,11 +257,61 @@ $(document).ready(function() {
             infoEmpty: 'No se encontro el registro',
             infoFiltered: '(Filtrado de _MAX_ registros totales)',
         },
-        responsive: true
 
+        responsive: true
 
     });
 });
 </script>
 
+<script>
+    $(document).ready(function() {
+    // Obtener el select de los parámetros de detalle
+    let select = $('#parametro_det');
+
+    // Obtener el textarea
+    let textarea = $('#descripcion');
+
+    // Vaciar el select al iniciar
+    select.empty();
+
+    // Evento change en el select de parámetros de encabezado
+    $('#parametro_enc').change(function() {
+        let id_parametro_enc = $(this).val();
+
+        // Verificar si se seleccionó la opción "otro"
+        if (id_parametro_enc === 'otro') {
+            // Deshabilitar el select y mostrar el textarea
+            select.empty();
+            select.prop('disabled', true);
+            textarea.show();
+        } else {
+            // Habilitar el select y ocultar el textarea
+            select.prop('disabled', false);
+            textarea.hide();
+
+            // Verificar si se seleccionó un valor válido en el select de encabezado
+            if (id_parametro_enc) {
+                $.ajax({
+                    url: '<?= base_url("Params"); ?>'+ '/' + id_parametro_enc,
+                    method: 'POST',
+                    dataType: 'json',
+                    success: function(response) {
+                        select.empty(); // Vaciar el select antes de agregar nuevas opciones
+                        $.each(response, function(index, item) {
+                            select.append($('<option>').text(item.nombre).val(item.id_parametro_det));
+                        });
+                    },
+                    error: function() {
+                        console.log('Error en la solicitud AJAX');
+                    }
+                });
+            } else {
+                select.empty(); // Vaciar el select si no se seleccionó ningún valor en el select de encabezado
+            }
+        }
+    });
+});
+
+</script>
 <?= $this->endSection("contenido")?>

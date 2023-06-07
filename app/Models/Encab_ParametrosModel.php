@@ -31,6 +31,7 @@ class Encab_ParametrosModel extends Model{
         $datos = $this->findAll();
         return $datos;
     }
+
     
 }
 

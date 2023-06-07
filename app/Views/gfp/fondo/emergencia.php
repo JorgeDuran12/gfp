@@ -29,8 +29,47 @@
                      <input type="number" class="emergencia__input" name="emergencia__valor" id="emergencia__valor" required>
                  </div>
             </div>
-<button class="btn btn-success regresar_Btn" type="submit">Enviar</button>
+                <br>
+                    <button class="btn btn-success regresar_Btn" type="submit">Enviar</button><br>
+                    <button  class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#ActualizarModal"><img class="image" src="<?= base_url("img/editar.png") ?> " title="Editar"></button>
              
-</form>
+    </form>
 
+                      
  <?= $this->endSection("contenido")?>
+
+ <div class="modal fade" id="ActualizarModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" id="movimientos_modal-content">
+            <div class="modal-header">
+
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h5 class="modal-title" id="exampleModalLabel">Actualizar fondo de emergencia</h5>
+            </div>
+            <div class="modal-body">
+
+                <div>Hola</div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class=" btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                <!-- <button type="Submit" id="pdfout" class="btn btn-primary">Descargar</button> -->
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

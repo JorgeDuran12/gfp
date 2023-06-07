@@ -6,7 +6,7 @@
 </div><br>
 
 <div class="tabla">
-    <!-- <h1 class="titu">Progreso de saquito</h1> -->
+
 
     <div class="input-group mb-3 date ">
 
@@ -14,7 +14,7 @@
      </div>
 
          <button  href="#" id="agregar" onclick="selecionaRegistro(<?php echo 1 . ',' . 1 ?>);" class="btn btn-success regresar_Btn"
-             data-bs-toggle="modal" data-bs-target="#editarModal" hidden   title="Para poder registrar un saquito debera   tener un presupuesto." >Agregar</button>
+             data-bs-toggle="modal" data-bs-target="#editarModal" hidden   >Agregar</button>
 
              <a href=" <?php echo base_url('/proyeccion'); ?>" hidden  class="btn btn-primary regresar_Btn"  id="proyeccion" >Proyeccion</a> &nbsp
 
@@ -50,6 +50,7 @@
             <td><?php echo $dato['numero_cuota'];?></td>
             <td> <?php echo $dato['cuota'];?></td>
             <td> <?php if($dato['estado']=="A"){echo "No completado";}else{echo "completado";}?></td>
+            
         
         </tr>
         <?php } ?>
@@ -144,9 +145,10 @@
 
 </div>
 </div>
+<!--Funcion para desaparecer el boton de agregar si no hay un valor en presupuesto-->
 <<script>
     let  btnAgregar = document.getElementById('agregar');
-    let btnProyeccion =document.getElementById('proyeccion');
+    
    $(document).ready(function(){
     $.ajax({
         url:"<?php echo base_url("principal/buscar_presupuesto")?>",
@@ -156,11 +158,10 @@
             
             if( data.length > 0 ) {
                 btnAGregar.hidden = false;
-                console.log("tiene  resgistro");
+                
                 
             } else{
                 btnAGregar.hidden = true;
-                console.log(" no tiene resgistro");
                 btnAGregar.disabled = true;  
                   
 
@@ -186,7 +187,7 @@
                         type: "get",
                         dataType: "json",
                         success: function (data) {
-                            //console.log(data)
+                            
 
                             //Si hay saquito que desactive el boton de agregar
                             if( data.length > 0 ) {
@@ -198,7 +199,7 @@
                                     if( saquito.estado === 'C' ) {
                                         btnAGregar.hidden = false;
                                         pp.hidden = true;
-                                        // pp.innerText= "no Registro";  
+                                        
                                          
                                          console.log("completado exitoso");
                                         //btnAGregar.disabled = false;  
@@ -210,14 +211,14 @@
                                         pp.hidden = false;
 
                                         //btnAGregar.disabled = true;
-                                        console.log("en proceso");
+                               
 
                                         break; 
                                     }
                                 }
                             }else {
                                 btnAGregar.hidden = false
-                                console.log("ultimo")
+                             
                                 //btnAGregar.disabled = false;                    
                                 
                             }
@@ -234,7 +235,7 @@
 
 
 
-
+    // <-- logica para hacer la operaccion-->
     $(document).on('blur','.valida', function(event){
         var num1 = parseInt(document.getElementById("valor").value);
         var num2 = parseInt(document.getElementById("numero_cuota").value);
@@ -255,19 +256,19 @@ let numero1 = document.querySelectorAll("#numero_cuota");
 let numero2  = document.querySelectorAll("#valor");
 let resultadoOperacion = parseFloat(numero1)/parseFloat(numero2);
 
-//console.log(resultadoOperacion);
+
 
 function selecionaRegistro(id, tp) {
     if (tp == 2) {
         dataURL = "<?php echo base_url('buscar_Registro'); ?>" + "/" + id;
         $.ajax({
-            //alert(tp);
+            
 
             type: "POST",
             url: dataURL,
             dataType: "json",
             success: function(rs) {
-                // console.log(rs)
+              
                 document.getElementById('exampleModalLabel').innerText= "Actualizar Registro";  
                 $("#tp").val(2);
                 $("#id_saquito").val(id);
@@ -321,9 +322,7 @@ $(document).ready(function() {
 
 </script>
 
-<script>
 
-</script>
 
 
 <?= $this->endSection("contenido")?>

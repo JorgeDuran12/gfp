@@ -212,7 +212,9 @@ if (num3 === 0) {
                 title: 'Felicitaciones!!',
                 text: 'Usted ha completado las cuotas del saquitos exitosamente, ya puede comprar su producto.',
                 icon: 'success',
-                confirmButtonText: 'Ok'        
+                confirmButtonText: 'Ok'
+
+                
             });
 
     //Actualizar tabla saquito 
@@ -221,21 +223,15 @@ if (num3 === 0) {
         url: "<?php echo base_url('Saquito/completado'); ?>",
         dataType: "json",
         success: function(resp) {
+            window.location.href = "<?= base_url('mi_saquito') ?>";
             console.log(resp);
         }
     });
-    window.location.href = "<?= base_url('mi_saquito') ?>";
-
-
 
 }
-
 
 //console.log("La suma total es: " + suma);       
 </script>
 
 
-<?= $this->endSection("contenido")?>.
-
-
-egreso
+<?= $this->endSection("contenido")?>

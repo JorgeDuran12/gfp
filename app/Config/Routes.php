@@ -55,6 +55,8 @@ $routes->get('eliminar_evento/(:any)', 'Agenda::eliminar/$1');
 
 
 $routes->get('mi_saquito', 'Saquito::index');
+$routes->get('parametros', 'Parametros::index');
+
 $routes->get('proyeccion', 'Proyeccion::index');
 $routes->get('mis_movimientos', 'Movimiento::index');
 $routes->get('fondo_de_emergencia', 'Emergencia::index');
@@ -73,6 +75,9 @@ $routes->post('Insertar','Saquito::Insertar');
 $routes->post('Insertar_proyeccion','Proyeccion::Insertar');
 $routes->post('cambiar_clave','Perfil::cambiar_clave');
 $routes->post('insertar','Movimiento::insertar');
+// $routes->post('obtener_registros/(:num)','Movimiento::obtener_registros/$1');
+$routes->post('Params/(:num)','Movimiento::Params/$1');
+
 
 
 $routes->get('eliminados_usuario', 'Usuario::eliminados');

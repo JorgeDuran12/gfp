@@ -8,16 +8,15 @@ use App\Models\ParamentrosModel;
 use App\Models\DisponibleModel;
 use App\Models\Encab_ParametrosModel;
 
-use Dompdf\Dompdf;
+// use Dompdf\Dompdf;
 
 class Movimiento extends BaseController
 {    
 
-  protected $Movimiento;
-  protected $parametros;
-  protected $disponible;
-  protected $encabezado;
-
+    protected $Movimiento;
+    protected $parametros;
+    protected $disponible;
+    protected $encabezado;
 
     public function __construct()
     {
@@ -42,7 +41,7 @@ class Movimiento extends BaseController
       $disponibles = $this-> disponible ->datos_ingreso();
       
       $par_movi = new  ParamentrosModel();
-      $parametro = $par_movi->ParametrosMovimientos();
+      $parametro = $par_movi->obtener_parametros();
 
       $encabezado = $this -> encabezado -> traerDatos();
 
@@ -54,7 +53,7 @@ class Movimiento extends BaseController
             'disponibles' => $disponibles,
             'parametros' => $parametro,
             'encabezado' => $encabezado,
-            'misDatos' => $session
+            'misDatos' => $session,
         ]);
     }
 
@@ -64,11 +63,14 @@ class Movimiento extends BaseController
                     
             $session = session();
             $id_usuario = $session->get('id_usuario');
+
              $id_disponible = new DisponibleModel();
              $identificador = $id_disponible->traer_id_disponible();
              
                 $this->Movimiento->save([
-                    'descripcion' => $this->request->getPost('descripcion'),
+                    // 'descripcion' => $this->request->getPost('descripcion'),
+                    // 'descripcion' => $this->request->getPost('parametros_det'),
+                    // 'descripcion' => $this->request->getPost('parametros_enc'),
                     'tipo_movimiento' => $this->request->getPost('tipo_movimiento'),
                     'clase_movimiento' => $this->request->getPost('clase_movimiento'),
                     'valor' => $this->request->getPost('valor'),
@@ -90,5 +92,10 @@ class Movimiento extends BaseController
         public function calculo(){
             $Movi_model = new MovimientoModel();
             $calculo = $Movi_model -> tasa_movimiento();
-        }
+        } 
+
+        public function Params($id_parametro_enc) {
+          $registros = $this->parametros->ParametrosMovimientos($id_parametro_enc);
+          return $this->response->setJSON($registros);
+      }
 }

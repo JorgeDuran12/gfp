@@ -51,6 +51,11 @@
             <li class="icon-image"><a href="<?= base_url('gestion/roles')?>"><img src="<?= base_url("icons/roles.png")?>"/></a></li>
             <span class="icon-name">Manejo De Roles</span>
         </div>
+
+        <div class="navbar__icons">
+            <li class="icon-image"><a href="<?= base_url('parametros')?>"><img src="<?= base_url("img/parametros.png")?>"/></a></li>
+            <span class="icon-name">Manejo De parametros</span>
+        </div>
     <?php } ?>
 
 

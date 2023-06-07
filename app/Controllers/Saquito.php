@@ -36,7 +36,7 @@ class Saquito extends BaseController
     }
 
 
-  
+                            
     public function Insertar(){
 
         $tp=$this->request->getPost('tp');

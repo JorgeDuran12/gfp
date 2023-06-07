@@ -99,7 +99,7 @@
               <div class="mb-3" id="select-id">
                 <label for="documento" class="form-label" id="titleLabel">Documento de identidad:</label>
                 <div class="d-flex" id="">
-                    <select name="tipo_Documento" id="tipo_Documento" value="tipo Documento" class="text-body">
+                  <select name="tipo_Documento" id="tipo_Documento" value="tipo Documento" class="text-body">
                       <?php foreach($tipoDoc as $row ) { ?>
                           <option class="text-body" value="<?= $row['id_parametro_det']?>"><?= $row['resumen']?></option>
                       <?php } ?>
@@ -143,6 +143,7 @@
               <label for="emails">Emails:</label>
                 <div class="d-flex w-100 h-100 align-items-center mb-3">
                     <select class="text-body p-2" id="emails" name="emails">
+                      <option value="">Seleccione un valor</option>
                       <?php foreach($emails as $row ) { ?>
                         <!-- <option class="text-body" value="">Elija un correo</option> -->
                         <option class="text-body" value="<?= $row['email']?>"><?= $row['email']?></option>
@@ -155,6 +156,7 @@
                 <label for="telefonos">Teléfonos:</label>
                 <div class="d-flex w-100 h-100 align-items-center">
                   <select class="text-body p-2" id="telefonos" name="telefonos">
+                  <option value="">Seleccione un valor</option>
                     <?php foreach($telefonos as $row ) { ?>
                       <!-- <option class="text-body" value="">Elija un telefono</option> -->
                       <option class="text-body" value="<?= $row['numero']?>">
