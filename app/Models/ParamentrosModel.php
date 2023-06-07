@@ -79,4 +79,27 @@ class ParamentrosModel extends Model{
         $datos = $this->findAll();  //nos trae todos los registros que cumplan con una condicion dada 
         return $datos;
     }
+
+    public function ParametrosMovimientos(){
+        $this->select('parametros_det.*, parametros_enc.estado');
+        $this->join('parametros_enc', 'parametros_enc.id_parametro_enc = parametros_det.id_parametro_enc');
+        $this->where('parametros_det.estado', 'A');
+        $this->where('parametros_enc.estado', 'A');
+        $this->whereIn('parametros_det.id_parametro_enc', [7,8]);
+        $datos = $this->findAll();
+        return $datos;
+    }
+
+
+    // public function ParametrosMovimientos($id_parametro_enc){
+
+    // $this->select('parametros_det.*, parametros_enc.estado');
+    // $this->join('parametros_enc', 'parametros_enc.id_parametro_enc = parametros_det.id_parametro_enc');
+    // $this->where('parametros_det.estado', 'A');
+    // $this->where('parametros_enc.estado', 'A');
+    // $this->whereIn('parametros_det.id_parametro_enc', $id_parametro_enc);
+    // $datos = $this->findAll();
+    // return $datos;
+    // }
+
 }

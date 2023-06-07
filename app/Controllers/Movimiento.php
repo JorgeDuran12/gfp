@@ -6,6 +6,7 @@ use App\Controllers\BaseController; /*la plantilla del controlador general de co
 use App\Models\MovimientoModel;
 use App\Models\ParamentrosModel;
 use App\Models\DisponibleModel;
+use App\Models\Encab_ParametrosModel;
 
 use Dompdf\Dompdf;
 
@@ -15,6 +16,7 @@ class Movimiento extends BaseController
   protected $Movimiento;
   protected $parametros;
   protected $disponible;
+  protected $encabezado;
 
 
     public function __construct()
@@ -23,6 +25,7 @@ class Movimiento extends BaseController
       $this->Movimiento = new MovimientoModel();
       $this->parametros = new ParamentrosModel();
       $this->disponible = new DisponibleModel();
+      $this->encabezado = new Encab_ParametrosModel();
 
     }
 
@@ -31,23 +34,26 @@ class Movimiento extends BaseController
       $session = session();
 
       $Movimientos = $this-> Movimiento-> traer();
-      // var_dump($Movimientos);
       $tipo_movimiento = $this-> parametros ->obtener_encabezado_1();
-      // var_dump($tipo_movimiento);
 
       $clase_movimiento_Model = new ParamentrosModel();
       $clase_movimiento = $clase_movimiento_Model -> obtener_encabezado_2();
-      // var_dump($clase_movimiento);
       
       $disponibles = $this-> disponible ->datos_ingreso();
-      // var_dump($disponibles);
- 
+      
+      $par_movi = new  ParamentrosModel();
+      $parametro = $par_movi->ParametrosMovimientos();
+
+      $encabezado = $this -> encabezado -> traerDatos();
+
         echo view("gfp/registro/movimientos",  [
             'tituloPagina' => 'Mis movimientos',
             'tipo_movi' => $tipo_movimiento,
             'clase_movi' => $clase_movimiento,
             'movimientos' => $Movimientos,   
             'disponibles' => $disponibles,
+            'parametros' => $parametro,
+            'encabezado' => $encabezado,
             'misDatos' => $session
         ]);
     }
@@ -86,12 +92,3 @@ class Movimiento extends BaseController
             $calculo = $Movi_model -> tasa_movimiento();
         }
 }
-
-
-
-
-
-        
-
-    
-   

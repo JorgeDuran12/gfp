@@ -6,7 +6,7 @@
     <h1> <img class="img" src="<?= base_url("img/movimiento.png")?>">
         Movimientos</h1>
 </div>
-<div class="contenedorMovimiento" >
+<div class="contenedorMovimiento">
     <form method="POST" action="<?php echo base_url('insertar'); ?>" autocomplete="off" class="movimiento">
         <div class="tm">
 
@@ -16,92 +16,138 @@
                 <option value="2" class="tl">Ingreso</option>
             </select>    -->
             <label for="floatingInput"> Tipo de movimiento</label>
-            <select class="form-select" name="tipo_movimiento" id="tipo_movimiento" aria-label="Floating label select example"  required>
-            <!-- <option selected >Tipo de movimiento</option>  -->
+            <select class="form-select" name="tipo_movimiento" id="tipo_movimiento"
+                aria-label="Floating label select example" required>
+                <!-- <option selected >Tipo de movimiento</option>  -->
                 <?php foreach ($tipo_movi as $data) {?>
-                     
-                <option style="color:black;" value="<?php echo $data["id_parametro_det"]; ?>"><?php echo $data["nombre"];?></option>
+
+                <option style="color:black;" value="<?php echo $data["id_parametro_det"]; ?>">
+                    <?php echo $data["nombre"];?></option>
                 <?php } ?>
             </select>
         </div>
-     
-    <!-- <--------------actualizacion ----------->
 
-       <!-- esta parte esta oculta en la vista  -->
-       <div  class="tx" >
-            <input  type="hidden" class="form-control valida" placeholder="ingreso" id="ingreso" name="ingreso" required>
+        <!-- <--------------actualizacion ----------->
+
+        <!-- esta parte esta oculta en la vista  -->
+        <div class="tx">
+            <input type="hidden" class="form-control valida" placeholder="ingreso" id="ingreso" name="ingreso" required>
             <label for="floatingInput"></label>
         </div>
-        <div  class="tx">
+        <div class="tx">
             <input type="hidden" class="form-control valida" placeholder="egreso" id="egreso" name="egreso" required>
             <label for="floatingInput"></label>
         </div>
-        <div   class="tx">
-            <input type="hidden" class="form-control valida" placeholder="presupuesto" id="presupuesto" name="presupuesto" required>
+        <div class="tx">
+            <input type="hidden" class="form-control valida" placeholder="presupuesto" id="presupuesto"
+                name="presupuesto" required>
             <label for="floatingInput"></label>
         </div>
 
         <div class="tm">
             <label for="floatingInput">Clase de movimiento</label>
-            <select class="form-select valida" name="clase_movimiento" id="clase_movimiento" aria-label="Floating label select example"  required>
-             <!-- <option selected required >Clase de movimiento</option>  -->
+            <select class="form-select valida" name="clase_movimiento" id="clase_movimiento"
+                aria-label="Floating label select example" required>
+                <!-- <option selected required >Clase de movimiento</option>  -->
                 <?php foreach ($clase_movi as $data) {?>
-             
-                <option style="color:black;" value="<?php echo $data["id_parametro_det"]; ?>"><?php echo $data["nombre"];?></option>
+
+                <option style="color:black;" value="<?php echo $data["id_parametro_det"]; ?>">
+                    <?php echo $data["nombre"];?></option>
                 <?php } ?>
             </select>
         </div>
         <br>
         <div class="tx">
-            
+
             <label for="floatingInput">Valor del Movimiento</label>
             <input type="number" class="form-control valida" placeholder="Valor" id="valor" name="valor" required>
         </div>
         <br>
+
+
         <div class="dc">
-            <textarea class="dc" placeholder="Descripcion" id="descripcion" name="descripcion" required></textarea>
+
+            <div class="container overflow-hidden">
+                <div class="row gx-5">
+                    <div class="col">
+                        <div class="p-3 border bg-light">
+
+                        <select class="form-select valida" name="parametro_enc" id="parametro_enc" aria-label="Floating label select example" required>
+                                <!-- <option selected required >Clase de movimiento</option>  -->
+                                <?php foreach ($encabezado as $data) {?>
+
+                                <option style="color:black;" value="<?php echo $data["id_parametro_enc"]; ?>">
+                                    <?php echo $data["nombre"];?></option>
+                                    
+                                <?php } ?>
+                            </select>
+
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="p-3 border bg-light">
+
+                            <select class="form-select valida" name="parametro_det" id="parametro_det" aria-label="Floating label select example" required>
+                                <!-- <option selected required >Clase de movimiento</option>  -->
+                                <?php foreach ($parametros as $data) {?>
+
+                                <option style="color:black;" value="<?php echo $data["id_parametro_det"]; ?>">
+                                    <?php echo $data["nombre"];?></option>   
+
+                                <?php } ?>
+                            </select>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <textarea class="dc" placeholder="Descripcion" id="descripcion" name="descripcion" required></textarea> -->
 
         </div>
+
         <br>
         <div class="tx">
-            <label for="floatingInput" >Fecha del Movimiento</label>
-            <input type="datetime-local" class="form-control"  placeholder="name@example.com" id="fecha_movimiento" name="fecha_movimiento" required>
+            <label for="floatingInput">Fecha del Movimiento</label>
+            <input type="datetime-local" class="form-control" placeholder="name@example.com" id="fecha_movimiento"
+                name="fecha_movimiento" required>
         </div>
 
         <div class="botondeanti">
-<br>
-        <div class="b"> <button href="#" class="btn-guardar" type="Submit">
-        <span id="span1g"></span>
-        <span id="span2g"></span>
-        <span id="span3g"></span>
-        <span id="span4g"></span>
-        <img class="image" src="<?= base_url("img/Guardar.png") ?> " title="Guardar">
-      </button></div>
+            <br>
+            <div class="b"> <button href="#" class="btn-guardar" type="Submit">
+                    <span id="span1g"></span>
+                    <span id="span2g"></span>
+                    <span id="span3g"></span>
+                    <span id="span4g"></span>
+                    <img class="image" src="<?= base_url("img/Guardar.png") ?> " title="Guardar">
+                </button></div>
 
         </div>
         <br>
         <div class="hh">
-        <div class="rt">
+            <div class="rt">
 
-        <div class="b" data-bs-toggle="modal" data-bs-target="#reporteMovimientosModal"> <a href="#" class="btn-neon">
-        <span id="span1"></span>
-        <span id="span2"></span>
-        <span id="span3"></span>
-        <span id="span4"></span>
-          Reporte De Movimientos
-      </a></div>
-        </div>&nbsp&nbsp&nbsp&nbsp&nbsp
+                <div class="b" data-bs-toggle="modal" data-bs-target="#reporteMovimientosModal"> <a href="#"
+                        class="btn-neon">
+                        <span id="span1"></span>
+                        <span id="span2"></span>
+                        <span id="span3"></span>
+                        <span id="span4"></span>
+                        Reporte De Movimientos
+                    </a></div>
+            </div>&nbsp&nbsp&nbsp&nbsp&nbsp
 
-      </div>
         </div>
-    </form>
-    </div>
+</div>
+</form>
+</div>
 
-<div class="modal fade" id="reporteMovimientosModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="reporteMovimientosModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content" id="movimientos_modal-content">
             <div class="modal-header">
-                
+
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 <h5 class="modal-title" id="exampleModalLabel">Reporte De Movimientos</h5>
             </div>
@@ -110,8 +156,7 @@
                 <div id="contenedor_modal_Movimiento">
                     <div id="limite">
                         <div class="table-responsive">
-                            <table id="miTabla" width="100%"
-                                cellspacing="0">
+                            <table id="miTabla" width="100%" cellspacing="0">
                                 <thead>
                                     <tr>
 
@@ -120,22 +165,23 @@
                                         <th>ClaseMovimiento</th>
                                         <th>tipoMovimiento</th>
                                         <th>descripcion</th>
-                                     
+
+
 
                                     </tr>
                                 </thead>
                                 <tbody>
-   
-                                <?php foreach ($movimientos as $dato) { ?>
-                                        <tr>
-                                            <td> <?php echo $dato ['valor'];?></td>
-                                            <td> <?php echo $dato ['Fecha_movimiento'];?></td>
-                                            <td> <?php echo $dato ['Tnombre2'];?></td>
-                                            <td> <?php echo $dato ['Tnombre'];?></td>
-                                            <td> <?php echo $dato ['descripcion'];?></td>
-                                            </tr>
-                                            <?php } ?>
-                            
+
+                                    <?php foreach ($movimientos as $dato) { ?>
+                                    <tr>
+                                        <td> <?php echo $dato ['valor'];?></td>
+                                        <td> <?php echo $dato ['Fecha_movimiento'];?></td>
+                                        <td> <?php echo $dato ['Tnombre2'];?></td>
+                                        <td> <?php echo $dato ['Tnombre'];?></td>
+                                        <td> <?php echo $dato ['descripcion'];?></td>
+                                    </tr>
+                                    <?php } ?>
+
                                 </tbody>
                             </table>
                         </div>
@@ -149,12 +195,11 @@
             </div>
         </div>
     </div>
-    </div>
+</div>
 </div>
 </div>
 
 <script>
-
 const saldo_anterior = <?= $disponibles['saldo_anterior']?>;
 const ingreso = <?= $disponibles['ingreso']?>;
 const egreso = <?= $disponibles['egreso']?>;
@@ -171,36 +216,34 @@ $(document).on('blur', '.valida', function(event) {
 
     let nuevoIngreso = ingreso;
     let nuevoEgreso = egreso;
-    
+
     if (tipo === 3 && valor) {
         // Realizar la suma al saldo anterior y al ingreso
         let resultado = saldo_anterior + valor;
         let total = presu + valor;
-        
+
         console.log("El ingreso actual es de " + nuevoIngreso + ". El presupuesto anual está en " + total);
-        
+
         nuevoIngreso += valor;
 
     } else {
         // Realizar la resta al saldo anterior y al egreso
         let resultado = saldo_anterior - valor;
         let total = presu - valor;
-        
+
         console.log("El egreso actual es de " + nuevoEgreso + ". El presupuesto anual está en " + total);
-        
+
         nuevoEgreso += valor;
     }
-    
+
     document.getElementById("ingreso").value = nuevoIngreso;
     document.getElementById("egreso").value = nuevoEgreso;
 
     presupuesto_anual = saldo_anterior + nuevoIngreso - nuevoEgreso;
-    
+
     document.getElementById("presupuesto").value = presupuesto_anual;
 
 });
-
-
 </script>
 
 
@@ -224,6 +267,5 @@ $(document).ready(function() {
     });
 });
 </script>
-
 
 <?= $this->endSection("contenido")?>
