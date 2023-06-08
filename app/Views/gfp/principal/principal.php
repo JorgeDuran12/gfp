@@ -50,6 +50,7 @@
                 </tbody>
             </table>
             <canvas id="myChart2" width="100"></canvas>
+        
         </div>
 
         <div class="div__cont">3</div>
@@ -172,7 +173,7 @@ let data = {
 };
 
   const ctx2 = document.getElementById('myChart2');
- new = Chart(ctx2, {
+ new Chart(ctx2, {
     type: 'doughnut',
   data: data,
   options: {

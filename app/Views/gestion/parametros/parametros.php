@@ -192,11 +192,12 @@ const actualizarContador = () => {
 
 
 <script>
+
  let titulo = document.getElementById('titulo');
  let agregar = document.getElementById('agregar');
 
-
     function seleccionaparametro(id, tp) {
+        
     if (tp == 2) {
         dataURL = "<?php echo base_url('buscar_parametro'); ?>" + "/" + id;
         $.ajax({

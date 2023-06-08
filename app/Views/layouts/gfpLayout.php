@@ -18,7 +18,8 @@
     
     
     <!-- Funciones javascript -->
-    <script src="<?= base_url('helpers/chartjs.js') ?>"></script>
+    <script src="<?= base_url('graficas/chart.js') ?>"></script>
+    <script src="<?= base_url('graficas/chart.min.js') ?>"></script>
 
     <!-- Todos los estilos -->
     <link rel="stylesheet" href="<?= base_url('css/header/headerStyless.css') ?>">

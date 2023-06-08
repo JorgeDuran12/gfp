@@ -77,7 +77,7 @@
                 </div>
             </div>
         </div>
-        <textarea class="dc" placeholder="Descripcion" id="descripcion" name="descripcion"  style="display: none;" required></textarea>
+        <textarea class="dc" placeholder="Descripcion" id="descripcion" name="descripcion"  style="display: none;"></textarea>
         <br>
 
         <div class="tx">

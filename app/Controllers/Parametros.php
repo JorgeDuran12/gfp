@@ -46,16 +46,13 @@ class Parametros extends BaseController
                'id_usuario_crea'=> $id_usuario
             ]);
 
-            // $id_parametro_enc = $this -> encabezado ->insertID(); 
+            $id_parametro_enc = $this -> encabezado ->insertID(); 
 
-            // $this -> detalle -> save([
-            // 'id_usuario_crea'=> $id_usuario,
-            // 'id_parametro_enc'=>$id_parametro_enc,
-            // 'nombre' => $this->request->getPost('detalle'),
-
-                
-                
-            // ]);
+             $this -> detalle -> save([
+             'id_usuario_crea'=> $id_usuario,
+             'id_parametro_enc'=>$id_parametro_enc,
+             'nombre' => $this->request->getPost('detalle'),
+            ]);
 
             } 
             return redirect()->to(base_url('parametros'));
