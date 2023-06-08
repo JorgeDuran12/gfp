@@ -120,6 +120,14 @@
         </div>
       </div>
     </div>
+     
+
+
+
+
+
+
+    
     <!-- fin modal -->
 
     <!-- Modal contacto -->
@@ -237,41 +245,40 @@ var selectDiv = document.querySelector('#select-id');
   }
 
   /* Fin cambiar clave */
+  
+  
+  
+  function mostrarDatos( tp ) {
 
-
-
-function mostrarDatos( tp ) {
-
-  $.ajax({
+    $.ajax({
       url: "<?= base_url("perfil/traer_informacion")?>",
       type: "GET",
       dataType: "json",
       success: function ( data ) {
-          console.log(data);
-          
-          inputUsuario.value = data['usuario'];
-          inputNombres.value = data['nombre'];
-          inputApellidos.value = data['apellido'];
-          inputNumDoc.value = data['num_documento'];
-          inputTipoDoc.value = data['tipo_documento'];
-
-          inputIdTelefonoPrincipal.value = data['id_telefono'];
-          inputIdEmailPrincipal.value = data['id_email'];
-
+        console.log(data);
+        
+        inputUsuario.value = data['usuario'];
+        inputNombres.value = data['nombre'];
+        inputApellidos.value = data['apellido'];
+        inputNumDoc.value = data['num_documento'];
+        inputTipoDoc.value = data['tipo_documento'];
+        
+        inputIdTelefonoPrincipal.value = data['id_telefono'];
+        inputIdEmailPrincipal.value = data['id_email'];
+        
       }
-  })
-
-}
-
-
-/* AGREGAR TELEFONOS O EMAIL */
-function agregarRegistro( agregar ) {
-  if( agregar === 'telefono' ) {
-
-    const tp = 1;
-
-    $("#modalContacto").modal('hide')
-    Swal.fire({
+    })
+    
+  }
+    
+  /* AGREGAR TELEFONOS O EMAIL */
+  function agregarRegistro( agregar ) {
+    if( agregar === 'telefono' ) {
+      
+      const tp = 1;
+      
+      $("#modalContacto").modal('hide')
+      Swal.fire({
       title: `Ingrese un ${agregar} nuevo`,
       input: 'text',
       inputLabel: 'Ingrese un telefono valido',
@@ -286,9 +293,9 @@ function agregarRegistro( agregar ) {
           .then(response => {
             if( response.status == 400 ) {
               throw new Error('Telefono ya existente');
+              return false;
             }
             //Si la respuesta es correcta
-
 
           })
           .catch(error => {
@@ -338,7 +345,7 @@ Swal.fire({
       return fetch(`http://localhost/gfp/public/perfil/agregar_tel_email/${tel}/${tp}`)
       .then(response => {
         if( response.status == 400 ) {
-          throw new Error('Telefono ya existente');
+          throw new Error('Email ya existente');
         }
         //Si la respuesta es correcta
 

@@ -67,12 +67,22 @@ class EmailsModel extends Model{
       return $datos ? $datos['id_usuario'] : null;
   }
 
-  public function traer_emails_by_id( $id )
+  public function traer_emails_by_id( $id, $prioridad )
   {
     $this->select('emails.*');
     $this->where('estado','A');
     $this->where('id_usuario',$id);
-    $this->where('prioridad', '14');
+    $this->where('prioridad', $prioridad);
+    $datos = $this->findAll();  
+    return $datos;
+  }
+
+  public function traer_emails_by_id_verificar( $id )
+  {
+    $this->select('emails.*');
+    $this->where('estado','A');
+    $this->where('id_usuario',$id);
+    // $this->where('prioridad', $prioridad);
     $datos = $this->findAll();  
     return $datos;
   }

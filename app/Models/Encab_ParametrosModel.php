@@ -25,13 +25,29 @@ class Encab_ParametrosModel extends Model{
     protected $skipValidation    = false;
 
     public function traerDatos(){
-        $this->select('parametros_enc.id_parametro_enc,nombre');
+        $this->select('parametros_enc.*');
         $this->where('estado', 'A');
         $this->whereIn('id_parametro_enc', [7,8,9]);
         $datos = $this->findAll();
         return $datos;
-    }
 
+    }
+    public function traer1Datos(){
+        $this->select('parametros_enc.*');
+        $this->where('estado', 'A');
+        $datos = $this->findAll();
+        return $datos;
+
+    }
+     
+ public function traer_parametro($id){
+    $this->select('parametros_enc.*');
+    $this->where('id_parametro_enc',$id);
+    $this->where('estado','A');
+    $datos = $this->first();  
+    return $datos;
+}
+    
     
 }
 

@@ -11,7 +11,7 @@
 <div class="op">
 
     <a href="" onclick="seleccionaparametro(<?php echo 1 . ',' . 1 ?>);" class="btn btn-success regresar_Btn"
-        data-bs-toggle="modal" data-bs-target="#parametro">Agregar</a>
+        data-bs-toggle="modal" data-bs-target="#parametro_encabezado" id="btn_agr">Agregar</a>
     &nbsp
     <a href="<?php echo base_url('eliminados_rol'); ?>" class="btn btn-secondary regresar_Btn">Eliminados</a>
    &nbsp
@@ -27,30 +27,59 @@
                     <tr>
                         <th>Id</th>
                         <th>Nombre</th>
-                        <th>descripcion</th>
-
-
                         <th>estado</th>
-                        <th colspan="2">Acciones</th>
+                        <th>acciones</th>
+                       
+                        
                     </tr>
                 </thead>
+                <?php foreach ($encabezado as $dato) { ?>
+                                    <tr>
+                                        <td> <?php echo $dato ['id_parametro_enc'];?></td>
+                                        <td> <?php echo $dato ['nombre'];?></td>
+                                        <td> <?php echo $dato ['estado'];?></td>
+                                        <td>
+                                            <!-- editar -->
+                                                <a class="btn btn-warning" href="#"
+                                                    onclick="seleccionaparametro(<?php echo $dato['id_parametro_enc'] . ',' . 2 ?>);"
+                                                    data-bs-toggle="modal" data-bs-target="#parametro_encabezado" width="16" height="16"
+                                                    title="Editar Registro">
+                                                    <img class="image" src="<?= base_url("img/documento.png") ?> " title="Editar">
+                                                </a>
+                                                <!-- eliminar -->
+                                                <a class="btn btn-danger" href="#"
+                                                    data-href="<?php echo base_url('parametro/eliminar__parametro'). '/' .$dato['id_parametro_enc']. '/' .'E'; ?>"
+                                                    data-bs-toggle="modal" data-bs-target="#modal-confirma"
+                                                    src="<?php echo base_url(); ?>/icons/borrar.png" width="16" height="16"
+                                                    title="Elimina Registro">
+                                                    <img class="image" src="<?= base_url("img/Eliminar.png") ?> " title="Eliminar">
+                                                </a>
+                                        </td>         
+                                        
+                                    
+                                    <?php } ?>
 
-                </tbody>
+                                    </tbody>
             </table>
         </div>
     </div>
 </div>
 
+
+
+<!-- CREAR ENCABEZADO -->
+
 <form method="POST" action="<?php echo base_url('/parametros/insertar'); ?>" autocomplete="off">
 
-    <div class="modal fade" id="parametro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="parametro_encabezado" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
 
             <div class="modal-content">
                 <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
                 <img src="<?= base_url("img/gfp.png")?>" alt="" class="w-25 p-3">
                     <h3 class="modal-title" id="exampleModalLabel">Crear nuevo parametro </h3>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
 
                 <div class="modal-body">
@@ -58,39 +87,24 @@
                     <input hidden id="tp" name="tp">
                     <input hidden id="id" name="id">
 
-                    <div class="container px-4 text-center">
-                    <div class="row gx-5">
-                      <div class="col">
-                      <div class="p-3">
+                    <div>
                           <!-- titulo -->
                           <h4>
                                Encabezado
                           </h4> 
                           <!-- cuerpo -->
 
-                          <label class="input_label" for="email_field">Nombre</label>
+                         
                             <input placeholder="Ej:categoria" name="encabezado" type="text" class="input_field" id="encabezado"  required>
                       
 
                       </div>
-                      </div>
-                      <div class="col">
-                        <div class="p-3">
-                          <h4>
-                               Detalles
-                          </h4> 
-                          <button id="agregar">Agregar</button>
-                         <div id="dinamic"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
 
 
                 </div>
                 <div class="modal-footer">
 
-                    <button type="submit" class="btn btn-primary" id="btn_guardar">Guardar</button>
+                    <button type="submit" class="btn btn-primary" id="btn_guardar2">Guardar</button>
                 </div>
             </div>
 
@@ -101,7 +115,12 @@
 
 
 
+
+
 <script>
+
+
+
 /******* Data - Table ***********/
 $(document).ready(function() {
     $('#miTabla').DataTable({
@@ -115,26 +134,31 @@ $(document).ready(function() {
             infoEmpty: 'No se encontro el registro',
             infoFiltered: '(Filtrado de _MAX_ registros totales)',
         },
-        responsive: true
 
+        responsive: true,
 
     });
 });
+
+
 </script>
 
-<script>
+<!-- <script>
   const contenedor = document.querySelector('#dinamic');
 const btnAgregar = document.querySelector('#agregar');
 
 // Variable para el total de elementos agregados
-let total = 1;
+let total = 0;
 
 /**
  * Método que se ejecuta cuando se da clic al botón de agregar elementos
  */
+
+
 btnAgregar.addEventListener('click', e => {
+    total++;
     let div = document.createElement('div');
-    div.innerHTML = `<label class="input_label" >${total++}</label> - <input class="input_label" type="text"  id="detalle[]"name="detalle[]" placeholder="Nombre del deatlle" required><button  class="btn btn-outline-danger" onclick="eliminar(this)">Eliminar</button>`;
+    div.innerHTML = `<label class="input_label" >${total}</label> - <input class="input_label" type="text"  id="detalle${total} "name="detalle${total}" placeholder="Nombre del deatlle" required><button  class="btn btn-outline-danger" onclick="eliminar(this)">Eliminar</button>`;
     contenedor.appendChild(div);
 })
 
@@ -158,6 +182,33 @@ const actualizarContador = () => {
         divs[i].children[0].innerHTML = total++;
     }//end for
 };
-</script>
+</script> -->
 
+
+<script>
+    function seleccionaparametro(id, tp) {
+    if (tp == 2) {
+        dataURL = "<?php echo base_url('buscar_parametro'); ?>" + "/" + id;
+        $.ajax({
+            type: "POST",
+            url: dataURL,
+            dataType: "json",
+            success: function(rs) {
+                // $("#tp").val(2);
+                // $("#id").val(id);
+                $("#encabezado").val(rs[0]['nombre']);
+                $("#btn_guardar2").text('Actualizar');
+            }
+
+        });
+    } else {
+        $("#tp").val(1);
+        document.getElementById('exampleModalLabel');
+        $("#nombre").val('');
+        $("#btn_guardar").text('Guardar');
+
+    }
+
+}
+</script>
 <?= $this->endSection("contenido")?>

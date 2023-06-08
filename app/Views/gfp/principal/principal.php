@@ -49,7 +49,7 @@
 
                 </tbody>
             </table>
-            <canvas id="myChart2" width=""></canvas>
+            <canvas id="myChart2" width="100"></canvas>
         </div>
 
         <div class="div__cont">3</div>
@@ -159,5 +159,35 @@ inputPeriodo.value = periodo.getFullYear();
 
 //Quitar botono si ya agrego un presupuesto
 </script>
+
+<script>
+   
+
+let data = {
+  labels: ['Enero', 'Febrero', 'Marzo', 'Abril'],
+  datasets: [{
+        data: [12, 1, 3, 5],
+        borderWidth: 1,
+      }]
+};
+
+  const ctx2 = document.getElementById('myChart2');
+ new = Chart(ctx2, {
+    type: 'doughnut',
+  data: data,
+  options: {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: 'top',
+      },
+      title: {
+        display: true,
+        text: 'Grafica de mis ahorros'
+      }
+    }
+  },
+  }); 
+</script> 
 
 <?= $this->endSection('contenido'); ?>

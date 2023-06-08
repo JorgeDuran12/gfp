@@ -55,6 +55,15 @@ public function traer_telefonos_by_id( $id, $prioridad ) {
     $datos = $this->findAll();  
     return $datos;
 }
+
+public function traer_telefonos_by_id_verificar( $id ) {
+    $this->select('telefonos.*');
+    $this->where('estado','A');
+    $this->where('id_usuario',$id);
+    // $this->where('prioridad', '13');
+    $datos = $this->findAll();  
+    return $datos;
+}
 public function traer_telefonos_by_numero( $numero ) {
     $this->select('telefonos.*');
     $this->where('estado','A');

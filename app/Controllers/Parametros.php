@@ -22,7 +22,7 @@ class Parametros extends BaseController
     {
         $session = session();
         $detalle = $this-> detalle ->obtener_parametros();
-        $encabezado = $this->encabezado->traerDatos();
+        $encabezado = $this->encabezado->traer1Datos();
 
         echo view("gestion/parametros/parametros", [
             'tituloPagina' => 'Parametros',
@@ -46,19 +46,31 @@ class Parametros extends BaseController
                'id_usuario_crea'=> $id_usuario
             ]);
 
-            $id_parametro_enc = $this -> encabezado ->insertID(); 
+            // $id_parametro_enc = $this -> encabezado ->insertID(); 
 
-            $this -> detalle -> save([
-            'id_usuario_crea'=> $id_usuario,
-            'id_parametro_enc'=>$id_parametro_enc,
-            'nombre' => $this->request->getPost('detalle'),
+            // $this -> detalle -> save([
+            // 'id_usuario_crea'=> $id_usuario,
+            // 'id_parametro_enc'=>$id_parametro_enc,
+            // 'nombre' => $this->request->getPost('detalle'),
 
                 
                 
-            ]);
+            // ]);
 
             } 
-            return redirect()->to(base_url('/mis_movimientos'));
+            return redirect()->to(base_url('parametros'));
         }
+
+          //<---------------------------------buscar_parametro del model traer_parametro -------------------------------------->
+      public function buscar_parametro($id)
+      {
+          $returnData = array();
+          $encabezado_ = $this->encabezado->traer_parametro($id, 'A');
+          if (!empty($encabezado_)) {
+              array_push($returnData, $encabezado_);    
+          }
+          echo json_encode($returnData);
+      }
    
 }
+ 

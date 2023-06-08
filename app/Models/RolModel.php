@@ -25,7 +25,7 @@ class RolModel extends Model{
     protected $skipValidation    = false;
 
 
- // <-------------funcion traer_cargo que sera usada en controlador por la funcion  buscar cargo----------------------->
+ // <-------------funcion traer_rol que sera usada en controlador por la funcion  buscar rol----------------------->
 
  
  public function traer_rol($id){

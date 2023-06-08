@@ -31,8 +31,8 @@ class Perfil extends BaseController
         $idGlobal = $session->id_usuario;
 
         $miPerfil = $this->usuario->traer_usuario_perfil();
-        $misTelefonos = $this->telefono->traer_telefonos_by_id( $idGlobal, 14 );
-        $misEmails = $this->email->traer_emails_by_id( $idGlobal );
+        $misTelefonos = $this->telefono->traer_telefonos_by_id( $idGlobal, '14' );
+        $misEmails = $this->email->traer_emails_by_id( $idGlobal, '14' );
         $parametrosTipoDoc = $this->parametro->obtener_encabezado_3();
         $parametrosPrioridad = $this->parametro->obtener_encabezado_6();
 
@@ -72,8 +72,10 @@ class Perfil extends BaseController
     //Editar informacion de contacto (Telefono y emails).
     public function editar_informacion_contacto() {
 
-        $inputIDPrincipalNumero = $this->request->getPost('id_telefono_pr');
-        $inputIDPrincipalEmail = $this->request->getPost('id_email_pr');
+        $miPerfil = $this->usuario->traer_usuario();
+
+        $inputIDPrincipalNumero = $miPerfil['id_telefono'];
+        $inputIDPrincipalEmail = $miPerfil['id_email'];
 
 
         $telefonoInput = $this->request->getPost('telefonos');
@@ -118,19 +120,19 @@ class Perfil extends BaseController
         echo json_encode($miPerfil);
     }
 
-    //Traer telefonos y emails del usuario que esta logeado
-    public function traer_tels_emails() {
-        $idGlobal = session()->get('id_usuario');
+    // //Traer telefonos y emails del usuario que esta logeado
+    // public function traer_tels_emails() {
+    //     $idGlobal = session()->get('id_usuario');
         
-        $datos = array();
+    //     $datos = array();
 
-        $telefonos = $this->telefono->traer_telefonos_by_id( $idGlobal );
-        $emails = $this->email->traer_emails_by_id( $idGlobal );
+    //     $telefonos = $this->telefono->traer_telefonos_by_id( $idGlobal );
+    //     $emails = $this->email->traer_emails_by_id( $idGlobal );
 
-        array_push($datos, $telefonos, $emails);
-        echo json_encode($datos);
-        // echo json_encode($telefonos);
-    }
+    //     array_push($datos, $telefonos, $emails);
+    //     echo json_encode($datos);
+    //     // echo json_encode($telefonos);
+    // }
 
     //Agregar Telefonos o emails
     public function agregar_tel_email($telOrEmail, $tp)     
@@ -140,7 +142,7 @@ class Perfil extends BaseController
 
         
         if( $tp == 1) {
-            $telsUsuario = $this->telefono->traer_telefonos_by_id( $idUsuario, 14 );
+            $telsUsuario = $this->telefono->traer_telefonos_by_id_verificar( $idUsuario );
             // echo 'telefono';
 
             //Recorrer cada telefono para ver si existe y es igual al ingresado
@@ -163,7 +165,7 @@ class Perfil extends BaseController
             
         }else if( $tp == 2 ) {
 
-                $emailsUsuario = $this->email->traer_emails_by_id( $idUsuario );
+                $emailsUsuario = $this->email->traer_emails_by_id_verificar( $idUsuario );
                 // echo 'telefono';
     
                 //Recorrer cada telefono para ver si existe y es igual al ingresado

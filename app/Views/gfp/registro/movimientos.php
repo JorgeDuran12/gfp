@@ -8,6 +8,22 @@
 </div>
 <div class="contenedorMovimiento">
     <form method="POST" action="<?php echo base_url('insertar'); ?>" autocomplete="off" class="movimiento">
+
+      <!-- <--------------actualizacion ----------->
+        <!-- esta parte esta oculta en la vista  -->
+        <div class="tx">
+            <input type="hidden" class="form-control valida" placeholder="ingreso" id="ingreso" name="ingreso" required>
+            <label for="floatingInput"></label>
+        </div>
+        <div class="tx">
+            <input type="hidden" class="form-control valida" placeholder="egreso" id="egreso" name="egreso" required>
+            <label for="floatingInput"></label>
+        </div>
+        <div class="tx">
+            <input type="hidden" class="form-control valida" placeholder="presupuesto" id="presupuesto" name="presupuesto" required>
+            <label for="floatingInput"></label>
+        </div>
+
         <div class="tm">
             <label for="floatingInput"> Tipo de movimiento</label>
             <select class="form-select" name="tipo_movimiento" id="tipo_movimiento"
@@ -20,23 +36,7 @@
                 <?php } ?>
             </select>
         </div>
-
-        <!-- <--------------actualizacion ----------->
-
-        <!-- esta parte esta oculta en la vista  -->
-        <div class="tx">
-            <input type="hidden" class="form-control valida" placeholder="ingreso" id="ingreso" name="ingreso" required>
-            <label for="floatingInput"></label>
-        </div>
-        <div class="tx">
-            <input type="hidden" class="form-control valida" placeholder="egreso" id="egreso" name="egreso" required>
-            <label for="floatingInput"></label>
-        </div>
-        <div class="tx">
-            <input type="hidden" class="form-control valida" placeholder="presupuesto" id="presupuesto"
-                name="presupuesto" required>
-            <label for="floatingInput"></label>
-        </div>
+        <br>
 
         <div class="tm">
             <label for="floatingInput">Clase de movimiento</label>
@@ -51,57 +51,39 @@
             </select>
         </div>
         <br>
-        <div class="tx">
 
+        <div class="tx">
             <label for="floatingInput">Valor del Movimiento</label>
             <input type="number" class="form-control valida" placeholder="Valor" id="valor" name="valor" required>
         </div>
         <br>
 
-
         <div class="dc">
-
             <div class="container overflow-hidden">
                 <div class="row gx-5">
                     <div class="col">
                         <div class="p-3 border bg-light">
 
-                        <select class="form-select valida" name="parametro_enc" id="parametro_enc" aria-label="Floating label select example" required>
+                        <select class="form-select valida" name="parametros_enc" id="parametros_enc" aria-label="Floating label select example" required>
                              
                                 <?php foreach ($encabezado as $data) {?>
-
                                 <option style="color:black;" value="<?php echo $data["id_parametro_enc"]; ?>">
                                     <?php echo $data["nombre"];?></option>
-                                    
                                 <?php } ?>
-
                                 <option value="otro">otro</option>
-
                             </select>
-
                         </div>
                     </div>
                     <div class="col">
                         <div class="p-3 border bg-light">
 
-                            <select class="form-select valida" name="parametro_det" id="parametro_det" aria-label="Floating label select example" required>
-                    
-                                <?php foreach ($parametros as $data) { ?>
-
-                                 <option style="color:black;" value="<?php echo $data["id_parametro_det"]; ?>">
-                                    <?php echo $data["nombre"];?></option>  
-
-                                 <?php } ?> 
-
-                            </select>
-
+                            <select class="form-select valida" id="parametros_det" name="parametros_det" aria-label="Floating label select example" required></select>
                         </div>
                     </div>
                 </div>
-                <textarea class="dc" placeholder="Descripcion" id="descripcion" name="descripcion"  style="display: none;" required></textarea>
             </div>
         </div>
-
+        <textarea class="dc" placeholder="Descripcion" id="descripcion" name="descripcion"  style="display: none;" required></textarea>
         <br>
         <div class="tx">
             <label for="floatingInput">Fecha del Movimiento</label>
@@ -111,6 +93,7 @@
 
         <div class="botondeanti">
             <br>
+
             <div class="b"> <button href="#" class="btn-guardar" type="Submit">
                     <span id="span1g"></span>
                     <span id="span2g"></span>
@@ -121,6 +104,7 @@
 
         </div>
         <br>
+        
         <div class="hh">
             <div class="rt">
 
@@ -265,50 +249,39 @@ $(document).ready(function() {
 </script>
 
 <script>
-    $(document).ready(function() {
-    // Obtener el select de los parámetros de detalle
-    let select = $('#parametro_det');
 
-    // Obtener el textarea
-    let textarea = $('#descripcion');
+$(document).ready(function() {
 
-    // Vaciar el select al iniciar
-    select.empty();
+    $('#parametros_enc').change(function() {
 
-    // Evento change en el select de parámetros de encabezado
-    $('#parametro_enc').change(function() {
-        let id_parametro_enc = $(this).val();
+        let id_encabezado = $(this).val();
+        let selectParametrosDet = $('#parametros_det');
+        let textareaDescripcion = $('#descripcion');
 
-        // Verificar si se seleccionó la opción "otro"
-        if (id_parametro_enc === 'otro') {
-            // Deshabilitar el select y mostrar el textarea
-            select.empty();
-            select.prop('disabled', true);
-            textarea.show();
+        if (id_encabezado === 'otro') {
+            selectParametrosDet.empty();
+            selectParametrosDet.prop('disabled', true);
+            textareaDescripcion.show();
         } else {
-            // Habilitar el select y ocultar el textarea
-            select.prop('disabled', false);
-            textarea.hide();
-
-            // Verificar si se seleccionó un valor válido en el select de encabezado
-            if (id_parametro_enc) {
-                $.ajax({
-                    url: '<?= base_url("Params"); ?>'+ '/' + id_parametro_enc,
-                    method: 'POST',
-                    dataType: 'json',
-                    success: function(response) {
-                        select.empty(); // Vaciar el select antes de agregar nuevas opciones
-                        $.each(response, function(index, item) {
-                            select.append($('<option>').text(item.nombre).val(item.id_parametro_det));
-                        });
-                    },
-                    error: function() {
-                        console.log('Error en la solicitud AJAX');
-                    }
-                });
-            } else {
-                select.empty(); // Vaciar el select si no se seleccionó ningún valor en el select de encabezado
-            }
+            // Realizar la petición AJAX para obtener los registros relacionados al encabezado seleccionado
+            $.ajax({
+                url: '<?= base_url("Params"); ?>' + '/' + id_encabezado,
+                method: 'POST',
+                dataType: 'json',
+                success: function(response) {
+                    selectParametrosDet.empty();
+                    // Agregar los registros al select "parametros_det"
+                    $.each(response, function(id, name) {
+                        selectParametrosDet.append($('<option>').text(name.nombre).val(name.id_parametro_det));
+                    });
+                    selectParametrosDet.show();
+                    selectParametrosDet.prop('disabled', false);
+                    textareaDescripcion.hide();
+                },
+                error: function() {
+                    console.log('Error en la solicitud AJAX');
+                }
+            });
         }
     });
 });
