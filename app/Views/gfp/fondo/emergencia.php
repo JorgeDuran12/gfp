@@ -34,6 +34,7 @@
             <br>
     </form>
 
+
     <a class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#ActualizarModal"><img class="image"
             src="<?= base_url("img/editar.png") ?> " title="Editar"></a>
 

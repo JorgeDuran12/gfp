@@ -77,7 +77,7 @@
                 </div>
             </div>
         </div>
-        <textarea class="dc" placeholder="Descripcion" id="descripcion" name="descripcion"  style="display: none;"></textarea>
+        <textarea class="dc" placeholder="Descripcion" id="descripcion" name="descripcion"  style="display: none;" required></textarea>
         <br>
 
         <div class="tx">
@@ -141,11 +141,11 @@
                                 <thead>
                                     <tr>
 
-                                        <th>valor</th>
-                                        <th>fecha</th>
+                                        <th>Valor</th>
+                                        <th>Fecha</th>
                                         <th>ClaseMovimiento</th>
-                                        <th>tipoMovimiento</th>
-                                        <th>descripcion</th>
+                                        <th>TipoMovimiento</th>
+                                        <th>Descripcion</th>
 
 
 
@@ -272,11 +272,13 @@ $(document).ready(function() {
                     selectParametrosDet.empty();
                     // Agregar los registros al select "parametros_det"
                     $.each(response, function(id, name) {
-                        selectParametrosDet.append($('<option>').text(name.nombre).val(name.id_parametro_det));
+                        selectParametrosDet.append($('<option>').text(name.nombre).val(name.nombre));
                     });
+
                     selectParametrosDet.show();
                     selectParametrosDet.prop('disabled', false);
                     textareaDescripcion.hide();
+                    textareaDescripcion.prop('required', false);
                 },
                 error: function() {
                     console.log('Error en la solicitud AJAX');
@@ -286,5 +288,30 @@ $(document).ready(function() {
     });
 });
 
+
+
+// Obtener referencia al textarea
+let textarea = document.getElementById('descripcion');
+
+// Escuchar el evento de ingreso de texto
+textarea.addEventListener('input', function() {
+  // Obtener el valor actual del textarea
+  let valor = textarea.value;
+
+  // Verificar si el valor no está vacío
+  if (valor.length > 0) {
+    // Obtener la primera letra y convertirla a mayúscula
+    let primeraLetra = valor.charAt(0).toUpperCase();
+
+    // Reemplazar la primera letra en el valor
+    valor = primeraLetra + valor.slice(1);
+
+    // Asignar el nuevo valor al textarea
+    textarea.value = valor;
+  }
+});
+
+
 </script>
+
 <?= $this->endSection("contenido")?>
