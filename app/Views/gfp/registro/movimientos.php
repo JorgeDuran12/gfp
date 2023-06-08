@@ -52,12 +52,6 @@
         </div>
         <br>
 
-        <div class="tx">
-            <label for="floatingInput">Valor del Movimiento</label>
-            <input type="number" class="form-control valida" placeholder="Valor" id="valor" name="valor" required>
-        </div>
-        <br>
-
         <div class="dc">
             <div class="container overflow-hidden">
                 <div class="row gx-5">
@@ -84,6 +78,12 @@
             </div>
         </div>
         <textarea class="dc" placeholder="Descripcion" id="descripcion" name="descripcion"  style="display: none;" required></textarea>
+        <br>
+
+        <div class="tx">
+            <label for="floatingInput">Valor del Movimiento</label>
+            <input type="number" class="form-control valida" placeholder="Valor" id="valor" name="valor" required>
+        </div>
         <br>
         <div class="tx">
             <label for="floatingInput">Fecha del Movimiento</label>

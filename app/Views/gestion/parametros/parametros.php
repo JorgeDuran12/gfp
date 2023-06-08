@@ -97,7 +97,13 @@
                          
                             <input placeholder="Ej:categoria" name="encabezado" type="text" class="input_field" id="encabezado"  required>
                       
-
+                            <div>
+                          <h4  id="titulo" hidden>
+                               Detalles
+                          </h4> 
+                          <button hidden id="agregar">Agregar</button>
+                         <div id="dinamic"></div>
+                        </div>
                       </div>
 
 
@@ -143,7 +149,7 @@ $(document).ready(function() {
 
 </script>
 
-<!-- <script>
+<script>
   const contenedor = document.querySelector('#dinamic');
 const btnAgregar = document.querySelector('#agregar');
 
@@ -182,10 +188,14 @@ const actualizarContador = () => {
         divs[i].children[0].innerHTML = total++;
     }//end for
 };
-</script> -->
+</script>
 
 
 <script>
+ let titulo = document.getElementById('titulo');
+ let agregar = document.getElementById('agregar');
+
+
     function seleccionaparametro(id, tp) {
     if (tp == 2) {
         dataURL = "<?php echo base_url('buscar_parametro'); ?>" + "/" + id;
@@ -194,10 +204,12 @@ const actualizarContador = () => {
             url: dataURL,
             dataType: "json",
             success: function(rs) {
-                // $("#tp").val(2);
-                // $("#id").val(id);
+                 $("#tp").val(2);
+                 $("#id").val(id);
                 $("#encabezado").val(rs[0]['nombre']);
                 $("#btn_guardar2").text('Actualizar');
+                titulo.hidden = false;
+                agregar.hidden = false;
             }
 
         });

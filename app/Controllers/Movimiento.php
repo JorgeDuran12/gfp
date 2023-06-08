@@ -57,10 +57,10 @@ class Movimiento extends BaseController
         ]);
     }
 
-    
-    public function insertar()
-    {
+
+     public function insertar(){
         if ($this->request->getMethod() == "post") {
+
             $session = session();
             $id_usuario = $session->get('id_usuario');
             
@@ -70,25 +70,33 @@ class Movimiento extends BaseController
             // Obtener los datos del select "parametros_det" y del textarea "descripcion"
             $parametro_det = $this->request->getPost('parametros_det');
             $descripcion = $this->request->getPost('descripcion');
-    
-            $data = [
-                'tipo_movimiento' => $this->request->getPost('tipo_movimiento'),
-                'clase_movimiento' => $this->request->getPost('clase_movimiento'),
-                'valor' => $this->request->getPost('valor'),
-                'fecha_movimiento' => $this->request->getPost('fecha_movimiento'),
-                'usuario_crea' => $id_usuario,
-            ];
+
     
             if ($parametro_det) {
+              
                 // Guardar el parámetro seleccionado en "parametros_det"
-                $data['descripcion'] = $parametro_det;
+                $this->Movimiento->save([
+                  'descripcion' => $parametro_det,
+                  'tipo_movimiento' => $this->request->getPost('tipo_movimiento'),
+                  'clase_movimiento' => $this->request->getPost('clase_movimiento'),
+                  'valor' => $this->request->getPost('valor'),
+                  'fecha_movimiento' => $this->request->getPost('fecha_movimiento'),
+                  'usuario_crea' => $id_usuario,
+              ]);
+
             } elseif ($descripcion) {
+
                 // Guardar la descripción ingresada en "descripcion"
-                $data['descripcion'] = $descripcion;
+                $this->Movimiento->save([
+                  'descripcion' => $descripcion,
+                  'tipo_movimiento' => $this->request->getPost('tipo_movimiento'),
+                  'clase_movimiento' => $this->request->getPost('clase_movimiento'),
+                  'valor' => $this->request->getPost('valor'),
+                  'fecha_movimiento' => $this->request->getPost('fecha_movimiento'),
+                  'usuario_crea' => $id_usuario,
+              ]);
             }
     
-            $this->Movimiento->save($data);
-            
             $this->disponible->update($identificador, [
                 'ingreso' => $this->request->getPost('ingreso'),
                 'egreso' => $this->request->getPost('egreso'),
@@ -96,7 +104,6 @@ class Movimiento extends BaseController
                 'id_usuario' => $id_usuario,
             ]);
         }
-        
         return redirect()->to(base_url('/mis_movimientos'));
     }
     
