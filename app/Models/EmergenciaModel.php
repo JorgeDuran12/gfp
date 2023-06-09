@@ -29,7 +29,7 @@ class EmergenciaModel extends Model{
         $this->select('fondo_emergencia.*');
         $this->where('estado','A');
         $this->where('id_fondo-emergencia',$id);
-        $datos = $this->first();  
+        $datos = $this->findAll();  
         return $datos;
     }
     

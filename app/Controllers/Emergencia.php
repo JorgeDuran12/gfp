@@ -19,10 +19,11 @@ class Emergencia extends BaseController
     public function index()
     {
         $session = session();
+        $id = $session->id_usuario;
         // $movi = $this-> movimiento ->resta();
         // $movi = $this-> movimiento ->suma();
         $disponibles = $this-> disponible ->datos_ingreso();
-        $emergencia = $this->emergencia->where('estado', "A")->findAll();
+        $emergencia = $this->emergencia->traer_fondo($id);
 
         echo view("gfp/fondo/emergencia", [
             'tituloPagina' => 'Fondo de emergencia',
@@ -34,6 +35,7 @@ class Emergencia extends BaseController
 
         ]);
     }
+
     public function insertar()
     {
         
@@ -48,7 +50,6 @@ class Emergencia extends BaseController
                     'usuario_crea' => $id_usuario,
                     'id_usuario' => $id_usuario,
                 ]);
-             
             return redirect()->to(base_url('/emergencia'));
         }
     } 
@@ -62,7 +63,18 @@ class Emergencia extends BaseController
           }
           echo json_encode($returnData);
       }
-   
+
+      public function editar(){
+        
+        $session = session(); 
+        $id_usuario = $session->get('id_usuario');
+        $this->emergencia->save($id_usuario,[
+        'valor' => $this->request->getPost('editar_emergencia__valor'),
+        'fecha_registro' => $this->request->getPost('editar_fecha_registra'),
+        'usuario_crea' => $id_usuario,
+        'id_usuario' => $id_usuario,
+        ]);
+      }
 }
 
  

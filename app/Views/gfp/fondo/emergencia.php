@@ -34,31 +34,56 @@
             <br>
     </form>
 
+    <a class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#ActualizarModal">
+        <img class="image" src="<?= base_url("img/editar.png") ?> " title="Editar">
+        </a>
 
-    <a class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#ActualizarModal"><img class="image"
-            src="<?= base_url("img/editar.png") ?> " title="Editar"></a>
+ <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">fecha</th>
+      <th scope="col">id_usuario</th>
+      <th scope="col">valor</th>
+    </tr>
+  </thead>
+  <tbody>
+<?php foreach ($emergencia as $dato) { ?>
+
+    <tr>
+    <td> <?php echo $dato ['id_fondo-emergencia'];?></td>
+    <td> <?php echo $dato ['fecha_registro'];?></td>
+    <td> <?php echo $dato ['id_usuario'];?></td>
+    <td> <?php echo $dato ['valor'];?></td>
+    </tr>
+
+    <?php } ?>
+
+  </tbody>
+</table> 
 
     <div class="modal fade" id="ActualizarModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content" id="movimientos_modal-content">
                 <div class="modal-header">
 
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
                     <h5 class="modal-title" id="exampleModalLabel">Actualizar fondo de emergencia</h5>
                 </div>
                 <div class="modal-body">
-                    <form action="">
+
+                    <form action="<?php echo base_url('/emergencia/editar'); ?>  method="POST" autocomplete="off">
 
                         <div>
                             <div>
                                 <input type="date" class="ss input_fecha__emergencia" aria-label="Sizing example input"
-                                    aria-describedby="inputGroup-sizing-default" id="fecha_registro12"
-                                    name="fecha_registro12" required>
+                                    aria-describedby="inputGroup-sizing-default" id="editar_fecha_registra"
+                                    name="editar_fecha_registra" required>
                             </div>
                             <br>
                             <div>
-                                <input type="number" class="emergencia__input" name="emergencia__valor22"
-                                    id="emergencia__valor22" required>
+                                <input type="number" class="emergencia__input" name="editar_emergencia__valor"
+                                    id="editar_emergencia__valor" required>
                             </div>
                         </div>
                     </form>

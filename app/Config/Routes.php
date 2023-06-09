@@ -78,6 +78,7 @@ $routes->post('cambiar_clave','Perfil::cambiar_clave');
 $routes->post('insertar','Movimiento::insertar');
 // $routes->post('obtener_registros/(:num)','Movimiento::obtener_registros/$1');
 $routes->post('Params/(:num)','Movimiento::Params/$1');
+$routes->post('editar/(:num)','Movimiento::editar/$1');
 
 
 
