@@ -85,4 +85,34 @@ class Proyeccion extends BaseController
     }
 
 
+    public function buscar_Proyeccion(){
+        $returnData = array();
+
+        $session = session();
+        $idUsuario = $session->id_usuario;
+
+        $proyeccion_ = $this->saquito->traer_Proyeccion($idUsuario);
+        if (!empty($proyeccion_)) {
+            array_push($returnData, $proyeccion_);
+        }
+        echo json_encode($returnData);
+
+    }
+
+
+    public function getDatos()
+    {
+        // Obtener los datos de la base de datos
+        $proyeccionSaquitoModel = new ProyeccionModel();
+        $datos = $proyeccionSaquitoModel->obtenerDatos(); // Suponiendo que tienes un modelo llamado "ProyeccionSaquitoModel" con un método "obtenerDatos" que devuelve los datos
+
+        // Preparar la respuesta
+        $response = [
+            'datos' => $datos
+        ];
+
+        // Enviar la respuesta como JSON
+        return $this->respond($response);
+    }
+
 }

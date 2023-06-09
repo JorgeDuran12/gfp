@@ -25,15 +25,20 @@ class EmergenciaModel extends Model{
     protected $skipValidation    = false;
 
 
-    public function traer_fondo($id){
+    public function traer_fondo($id)
+    {
         $this->select('fondo_emergencia.*');
         $this->where('estado','A');
-        $this->where('id_fondo-emergencia',$id);
+        $this->where('id_usuario', $id);
         $datos = $this->findAll();  
         return $datos;
     }
     
 
-    
+    public function obtenerRegistroPorUsuario($id_usuario)
+    {
+        return $this->where('id_usuario', $id_usuario)->first();
+    }
+
 
 }

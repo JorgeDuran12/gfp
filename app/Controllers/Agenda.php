@@ -34,7 +34,7 @@ class Agenda extends BaseController
     /* Metodos */ 
     public function insertar() {
 
-        $session = session();
+        $session = session(); 
         $idUsuarioglobal = $session->id_usuario;
 
         echo $id = $this->request->getPost('id');

@@ -23,7 +23,16 @@ class ProyeccionModel extends Model{
     protected $validationRules    = [];
     protected $validationMessages = [];
     protected $skipValidation    = false;
- 
+
+
+
+    public function traer_Proyeccion($id){
+        $this->select('proyeccion*');
+        $this-where('usuario_crea',$id);
+        $datos = $this->findAll();  // nos trae el registro que cumpla con una condicion dada 
+        return $datos;
+    }
+
 
     public function traer(){
     $session = session();
@@ -58,6 +67,16 @@ class ProyeccionModel extends Model{
               return $datos;
           } 
 
+    }
+    
+
+    public function obtenerDatos()
+    {
+        $this->select('valor_cuota, fecha_cuota, id_saquito, total');
+        $this->where('estado','A');
+        $datos = $this->findAll();
+
+        return $datos;
     }
 
    

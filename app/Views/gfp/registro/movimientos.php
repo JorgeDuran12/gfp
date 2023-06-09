@@ -129,7 +129,8 @@
         <div class="modal-content" id="movimientos_modal-content">
             <div class="modal-header">
 
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                <img src="<?= base_url("img/gfp.png")?>" alt="" class="w-25 p-3">
                 <h5 class="modal-title" id="exampleModalLabel">Reporte De Movimientos</h5>
             </div>
             <div class="modal-body">
@@ -287,7 +288,6 @@ $(document).ready(function() {
         }
     });
 });
-
 
 
 // Obtener referencia al textarea

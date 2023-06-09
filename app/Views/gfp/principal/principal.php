@@ -49,11 +49,9 @@
 
                 </tbody>
             </table>
-            <canvas id="myChart2" width="100"></canvas>
-        
         </div>
 
-        <div class="div__cont">3</div>
+        <div class="div__cont"> <canvas id="myChart2" width="100"></canvas></div>
     </div>
 
     <div class="principal__cont-2">
@@ -162,18 +160,22 @@ inputPeriodo.value = periodo.getFullYear();
 </script>
 
 <script>
+    //const saquito = <= json_encode($traer_proye) ?>;
+    //const Proyeccion = <= json_encode($traer_proye) ?>;
    
 
 let data = {
-  labels: ['Enero', 'Febrero', 'Marzo', 'Abril'],
+  labels: ['Enero', 'Febrero', 'Marzo', 'Abril',],
   datasets: [{
-        data: [12, 1, 3, 5],
+        data: [12, 1, 3, 5,],
         borderWidth: 1,
+        backgroundcolor:'white'
       }]
 };
 
   const ctx2 = document.getElementById('myChart2');
  new Chart(ctx2, {
+    url: "<?php echo base_url("Proyeccion/buscar_Proyeccion")?>",
     type: 'doughnut',
   data: data,
   options: {

@@ -33,36 +33,48 @@ class Parametros extends BaseController
     }
     
 
-       public function insertar()
+    
+    public function insertar()
     {
-        if ($this->request->getMethod() == "post") {
-                    
-            $session = session();
+        $tp=$this->request->getPost('tp');
+        if ($this->request->getMethod() == "post") {	
+
+            $session = session(); 
             $id_usuario = $session->get('id_usuario');
 
-             
-            $this->encabezado->save([
-                'nombre' => $this->request->getPost('encabezado'),
-               'id_usuario_crea'=> $id_usuario
-            ]);
+            if ($tp == 1) {
+                $this->encabezado->save([
+                    'nombre' => $this->request->getPost('encabezado'),
+                    'id_usuario_crea' => $id_usuario
+                ]);
 
-            $id_parametro_enc = $this -> encabezado ->insertID(); 
-
-             $this -> detalle -> save([
-             'id_usuario_crea'=> $id_usuario,
-             'id_parametro_enc'=>$id_parametro_enc,
-             'nombre' => $this->request->getPost('detalle'),
-            ]);
-
-            } 
-            return redirect()->to(base_url('parametros'));
+             } else {
+                    $this->encabezado->update($this->request->getPost('id'),[                    
+                 'nombre' => $this->request->getPost('encabezado'),
+              
+                
+                   ]);
+                }
+            return redirect()->to(base_url('/parametros'));
         }
+    }
+
 
           //<---------------------------------buscar_parametro del model traer_parametro -------------------------------------->
       public function buscar_parametro($id)
       {
           $returnData = array();
           $encabezado_ = $this->encabezado->traer_parametro($id, 'A');
+          if (!empty($encabezado_)) {
+              array_push($returnData, $encabezado_);    
+          }
+          echo json_encode($returnData);
+      }
+
+         public function buscar_detalles($id)
+      {
+          $returnData = array();
+          $encabezado_ = $this->encabezado->traer_registro($id, 'A');
           if (!empty($encabezado_)) {
               array_push($returnData, $encabezado_);    
           }

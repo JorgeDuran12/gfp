@@ -20,8 +20,10 @@ class Emergencia extends BaseController
     {
         $session = session();
         $id = $session->id_usuario;
+
         // $movi = $this-> movimiento ->resta();
         // $movi = $this-> movimiento ->suma();
+
         $disponibles = $this-> disponible ->datos_ingreso();
         $emergencia = $this->emergencia->traer_fondo($id);
 
@@ -30,15 +32,14 @@ class Emergencia extends BaseController
             // 'suma' => $movi,
              'emergencia' => $emergencia,
             'disponibles' => $disponibles,
-            'disponibles' => $disponibles,
-            'misDatos' => $session
+            // 'disponibles' => $disponibles,
+            'misDatos' => $session,
 
         ]);
     }
 
     public function insertar()
     {
-        
         $session = session(); 
         $id_usuario = $session->get('id_usuario');
 
@@ -48,7 +49,7 @@ class Emergencia extends BaseController
                     'valor' => $this->request->getPost('emergencia__valor'),
                     'fecha_registro' => $this->request->getPost('fecha_registro'),
                     'usuario_crea' => $id_usuario,
-                    'id_usuario' => $id_usuario,
+                    'id_usuario' => $id_usuario, 
                 ]);
             return redirect()->to(base_url('/emergencia'));
         }
@@ -64,17 +65,23 @@ class Emergencia extends BaseController
           echo json_encode($returnData);
       }
 
-      public function editar(){
-        
-        $session = session(); 
-        $id_usuario = $session->get('id_usuario');
-        $this->emergencia->save($id_usuario,[
-        'valor' => $this->request->getPost('editar_emergencia__valor'),
-        'fecha_registro' => $this->request->getPost('editar_fecha_registra'),
-        'usuario_crea' => $id_usuario,
-        'id_usuario' => $id_usuario,
-        ]);
+
+      public function ObtenerDatos()
+      {
+          $session = session(); 
+          $id_usuario = $session->get('id_usuario');
+      
+          // Obtener el id_fondo-emergencia asociado al id_usuario
+          $registro = $this->emergencia->getRegistroPorUsuario($id_usuario);
+      
+          // Obtener los datos del registro correspondientes al id_fondo-emergencia
+          $datos_registro = $this->emergencia->find($registro['id_fondo-emergencia']);
+      
+          // Devolver los datos como una respuesta JSON
+          echo json_encode($datos_registro);
       }
+       
+
 }
 
  

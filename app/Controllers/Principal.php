@@ -2,15 +2,17 @@
 
 namespace App\Controllers;
 use App\Models\DisponibleModel;
+use App\Models\ProyeccionModel;
 
 class Principal extends BaseController
 {
 
-    protected $disponible;
+    protected $disponible, $proyeccion;
 
     public function __construct()
     {
         $this->disponible = new DisponibleModel();
+        $this->Proyeccion = new ProyeccionModel();
         
 
     }
@@ -27,7 +29,9 @@ class Principal extends BaseController
             'tituloPagina' => 'Inicio',
             'trasabilidad' => $trasabilidad,
             'misDatos' => $datos,
-            'presupuestoActual' => $Disponible
+            'presupuestoActual' => $Disponible,
+            //'traer_sqto' => $traer_sqto,
+            //'traer_proye' => $traer_proye['valor_cuota'],
         ]);
 
     }

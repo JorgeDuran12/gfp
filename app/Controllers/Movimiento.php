@@ -43,7 +43,7 @@ class Movimiento extends BaseController
       $par_movi = new  ParamentrosModel();
       $parametro = $par_movi->obtener_parametros();
 
-      $encabezado = $this -> encabezado -> traerDatos();
+      $encabezado = $this -> encabezado -> traer_Datos();
 
         echo view("gfp/registro/movimientos",  [
             'tituloPagina' => 'Mis movimientos',
