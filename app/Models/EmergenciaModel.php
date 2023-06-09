@@ -28,17 +28,10 @@ class EmergenciaModel extends Model{
     public function traer_fondo($id)
     {
         $this->select('fondo_emergencia.*');
-        $this->where('estado','A');
         $this->where('id_usuario', $id);
+        $this->where('estado','A');
         $datos = $this->findAll();  
         return $datos;
     }
-    
-
-    public function obtenerRegistroPorUsuario($id_usuario)
-    {
-        return $this->where('id_usuario', $id_usuario)->first();
-    }
-
 
 }

@@ -52,9 +52,11 @@
                 <tr>
                     <td> <?php echo $dato ['fecha_registro'];?></td>
                     <td> <?php echo $dato ['valor'];?></td>
-                    <td> <a class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#ActualizarModal">
+                    <td> 
+                        <a class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#ActualizarModal">
                             <img class="image" src="<?= base_url("img/editar.png") ?> " title="Editar">
-                        </a> </td>
+                        </a>
+                    </td>
                 </tr>
 
                 <?php } ?>
@@ -76,11 +78,9 @@
                 </div>
                 <div class="modal-body">
 
-                <input hidden id="id" name="id">
-                <input hidden id="tp" name="tp">
+                <input id="id" name="id">
 
-                    <form action="<?php echo base_url('Actualizar');?> method=" POST" autocomplete="off"
-                        id="form_actualizar">
+                <form action="<?php echo base_url('Actualizar'); ?>" method="POST" autocomplete="off" id="form_actualizar">
 
                         <div>
                             <div>
@@ -99,51 +99,32 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class=" btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="Submit" id="pdfout" class="btn btn-primary">Actualizar</button>
+                    <button type="Submit" class="btn btn-primary" onclick= "seleccionausuario('id_usuario')">Actualizar</button>
                 </div>
             </div>
         </div>
     </div>
 
-<!-- <script>
+<script>
 
-    function seleccionausuario(id, tp) {
+function seleccionausuario(id) {
+    // let form = document.getElementById('#form_actualizar');
+    let dataURL = "<?php echo base_url('buscar_fondo'); ?>" + "/" + id;
 
-        $(".input_container").hide();
+    $.ajax({
+        type: "POST",
+        url: dataURL,
+        dataType: "json",
+        success: function(rs) {
+            document.getElementById('exampleModalLabel').innerText = "Actualizar usuario";
 
-        if (tp === 2) {
-
-            dataURL = "<?php echo base_url('buscar_usuario'); ?>" + "/" + id;
-
-            $.ajax({
-
-                type: "POST",
-                url: dataURL,
-                dataType: "json",
-                success: function(rs) {
-                    // console.log(rs);
-                    document.getElementById('exampleModalLabel').innerText = "Actualizar usuario";
-
-                    $("#tp").val(2);
-                    $("#id").val(id);
-                    limpiarCampos();
-
-                    $("#nombre, #apellido, #tipo_documento, #num_documento,#telefono,#email,#pass").prop(
-                        'required', false);
-
-                    $("#id_rol").closest(".input_container").show();
-                    $("#usuario").closest(".input_container").show();
-
-                    $("#usuario").val(rs[0]['usuario']).prop('readonly', true);
-
-                    // $("#usuario").val(rs[0]['usuario']).prop('disabled', true);
-                    $("#id_rol").val(rs[0]['id_rol']);
-
-                    $("#btn_guardar").text('Actualizar');
-                }
-            });
+            $("#id").val(id);
+            $("#editar_fecha_registra").val(rs[0]['fecha_registro']);
+            $("#editar_emergencia__valor").val(rs[0]['valor']);
         }
-    }
-    </script> -->
+    });
+}
+
+</script>
 
     <?= $this->endSection("contenido")?>

@@ -58,7 +58,8 @@ class Emergencia extends BaseController
     public function buscar_fondo($id)
       {
           $returnData = array();
-          $emergencia_ = $this->emergencia->traer_fondo($id, 'A');
+          $emergencia_ = $this->emergencia->traer_fondo($id);
+          var_dump($emergencia_);
           if (!empty($emergencia_)) {
               array_push($returnData, $emergencia_);    
           }
@@ -66,21 +67,6 @@ class Emergencia extends BaseController
       }
 
 
-      public function ObtenerDatos()
-      {
-          $session = session(); 
-          $id_usuario = $session->get('id_usuario');
-      
-          // Obtener el id_fondo-emergencia asociado al id_usuario
-          $registro = $this->emergencia->getRegistroPorUsuario($id_usuario);
-      
-          // Obtener los datos del registro correspondientes al id_fondo-emergencia
-          $datos_registro = $this->emergencia->find($registro['id_fondo-emergencia']);
-      
-          // Devolver los datos como una respuesta JSON
-          echo json_encode($datos_registro);
-      }
-       
 
 }
 
