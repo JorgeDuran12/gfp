@@ -9,7 +9,7 @@
 <div class="contenedorEmergencia">
 
     <!-- fecha de creacion del registro -->
-    <form method="POST" action="<?php echo base_url('/emergencia/insertar'); ?>" autocomplete="off">
+    <form method="POST" action="<?php echo base_url('/emergencia/insertar'); ?>" autocomplete="off" id="formulario_emergencia">
 
         <div class="emergencia">
             <div class="input-group mb-3 ss">
@@ -34,10 +34,9 @@
 
             <br>
 
-            <button class="btn btn-success regresar_Btn" type="submit">Enviar</button>
+            <button class="btn btn-success regresar_Btn" type="submit" id="btn_enviar">Enviar</button>
             <br>
     </form>
-
 
     <div style="width:500px;">
 
@@ -58,8 +57,8 @@
                     <td> <?php echo $dato ['valor'];?></td>
                     <td>
                         <a class="btn btn-warning" href="#"
-                            onclick="seleccionafondo(<?= $dato['id_fondo-emergencia'];?>)"
-                            data-bs-toggle="modal" data-bs-target="#ActualizarModal" width="16" height="16">
+                            onclick="seleccionafondo(<?= $dato['id_fondo-emergencia'];?>)" data-bs-toggle="modal"
+                            data-bs-target="#ActualizarModal" width="16" height="16">
                             <img class="image" src="<?= base_url("img/editar.png") ?>">
                         </a>
                     </td>
@@ -71,11 +70,10 @@
         </table>
 
     </div>
-    </div>
 
-    <!--- Modal Actualizar --->
-    
-    <form action="<?php echo base_url('/emergencia/update'); ?>" method="POST" autocomplete="off">
+<!--- Modal Actualizar --->
+
+<form action="<?php echo base_url('/emergencia/update'); ?>" method="POST" autocomplete="off">
 
     <div class="modal fade" id="ActualizarModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -85,35 +83,39 @@
                     <h5 class="modal-title" id="exampleModalLabel">Actualizar Registro</h5>
                 </div>
                 <div class="modal-body">
-                    
+
                     <input hidden id="id" name="id">
-                    
+
+                    <div>
                         <div>
-                            <div>
-                                <input type="date" class="ss input_fecha__emergencia" aria-label="Sizing example input"
-                                    aria-describedby="inputGroup-sizing-default" id="editar_fecha_registra"
-                                    name="editar_fecha_registra" required>
-                            </div>
-                            <br>
-                            <div>
-                                <input type="number" class="emergencia__input" name="editar_emergencia__valor"
-                                    id="editar_emergencia__valor" style="color:black;" required>
-                            </div>
+                            <input type="date" class="ss input_fecha__emergencia" aria-label="Sizing example input"
+                                aria-describedby="inputGroup-sizing-default" id="editar_fecha_registra"
+                                name="editar_fecha_registra" required>
+                        </div>
+                        <br>
+                        <div>
+                            <input type="number" class="emergencia__input" name="editar_emergencia__valor"
+                                id="editar_emergencia__valor" style="color:black;" required>
                         </div>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-                        <button type="submit" class="btn btn-primary" id="btn_actualizar">Actualizar</button>
-                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary" id="btn_actualizar">Actualizar</button>
                 </div>
             </div>
         </div>
+    </div>
 
-    </form>
+</form>
 
-    <script>
-        
-    function seleccionafondo(id) {
+</div>
+</div>
+
+
+<script>
+
+        function seleccionafondo(id) {
 
             dataURL = "<?php echo base_url('buscar_fondo'); ?>" + "/" + id;
 
@@ -132,7 +134,8 @@
                 }
             });
         }
-    </script>
+
+</script>
 
 
-    <?= $this->endSection("contenido")?>
+<?= $this->endSection("contenido")?>
