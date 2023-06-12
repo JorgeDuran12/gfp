@@ -21,53 +21,58 @@ class Emergencia extends BaseController
         $session = session();
         $id = $session->id_usuario;
 
-        // $movi = $this-> movimiento ->resta();
-        // $movi = $this-> movimiento ->suma();
-
         $disponibles = $this-> disponible ->datos_ingreso();
         $emergencia = $this->emergencia->traer_fondo($id);
 
         echo view("gfp/fondo/emergencia", [
             'tituloPagina' => 'Fondo de emergencia',
-            // 'suma' => $movi,
              'emergencia' => $emergencia,
             'disponibles' => $disponibles,
-            // 'disponibles' => $disponibles,
             'misDatos' => $session,
-
         ]);
     }
 
+
     public function insertar()
     {
-        $session = session(); 
+        $session = session();
         $id_usuario = $session->get('id_usuario');
 
-        if ($this->request->getMethod() == "post") {	
+            // Es una inserción
+            $this->emergencia->save([
+                'valor' => $this->request->getPost('emergencia__valor'),
+                'fecha_registro' => $this->request->getPost('fecha_registro'),
+                'usuario_crea' => $id_usuario,
+                'id_usuario' => $id_usuario,
+            ]);
 
-                $this->emergencia->save([
-                    'valor' => $this->request->getPost('emergencia__valor'),
-                    'fecha_registro' => $this->request->getPost('fecha_registro'),
-                    'usuario_crea' => $id_usuario,
-                    'id_usuario' => $id_usuario, 
-                ]);
             return redirect()->to(base_url('/emergencia'));
-        }
-    } 
+    }
 
-    public function buscar_fondo($id)
+
+    public function update()
+    {
+        if ($this->request->getMethod() == "post") {
+            // Es una actualización
+            $this->emergencia->update($this->request->getPost('id'),[ 
+                'fecha_registro' => $this->request->getPost('editar_fecha_registra'),
+                'valor' => $this->request->getPost('editar_emergencia__valor'),
+            ]);
+        }
+    
+        return redirect()->to(base_url('/emergencia'));
+    }
+    
+
+    public function buscar_fondo($id_usuario)
       {
           $returnData = array();
-          $emergencia_ = $this->emergencia->traer_fondo($id);
-          var_dump($emergencia_);
-          if (!empty($emergencia_)) {
-              array_push($returnData, $emergencia_);    
+          $usuario_ = $this->emergencia->Actualizar_fondo($id_usuario, 'A');
+          if (!empty($usuario_)) {
+              array_push($returnData, $usuario_);    
           }
           echo json_encode($returnData);
       }
 
 
-
 }
-
- 

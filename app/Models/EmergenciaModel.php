@@ -31,7 +31,28 @@ class EmergenciaModel extends Model{
         $this->where('id_usuario', $id);
         $this->where('estado','A');
         $datos = $this->findAll();  
+        // var_dump($datos);
         return $datos;
     }
 
+
+    // public function obtener_usuario_por_id($id)
+    // {
+    //     $this->select('fondo_emergencia.fecha_registro, valor');
+    //     $this->where('id_usuario', $id);
+    //     $this->where('estado', 'A');
+    //     $dato = $this->first();
+    //     return $dato;
+    // }
+
+
+    public function Actualizar_fondo($id, $estado)
+    {
+        $this->select('fondo_emergencia.*');
+        $this->where('estado', $estado);
+        $this->where('id_fondo-emergencia', $id);
+        $datos = $this->first();
+        return $datos;
+    }
+    
 }

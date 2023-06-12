@@ -48,7 +48,7 @@
                             onclick="seleccionausuario(<?php echo $dato['id_usuario'] . ',' . 2 ?>);"
                             data-bs-toggle="modal" data-bs-target="#agregar_usuario" width="16" height="16"
                             title="Editar Registro">
-                            <img class="image" src="<?= base_url("img/editar.png") ?> " title="Editar">
+                            <img class="image" src="<?= base_url("img/editar.png") ?>" title="Editar">
                         </a>
 
                         <a class="btn btn-danger" href="#"
