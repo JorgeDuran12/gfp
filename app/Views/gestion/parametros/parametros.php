@@ -124,13 +124,14 @@
                 <thead>
                     <tr>
                         <th>Id</th>
-                        <th>Id</th>
                         <th>Nombre</th>
                         <th>estado</th>
                         <th>acciones</th>
                         </tr>
                     </thead>
-             
+                    <tbody id="bodytb">
+
+                    </tbody>
 
             
             </table>
@@ -148,88 +149,26 @@
 </form>
 
 
-
-
-
-
-
 <!-- scrip para librerias de tabla -->
+
 <script>
+
    /******* Data - Table ***********/
         $(document).ready(function() {
             $('#miTabla').DataTable({
                 scrollY: '700px',
                 scrollCollapse: true,
                 paging: true,
-                language: {
-                    lengthMenu: 'Display _MENU_ records per page',
-                    zeroRecords: 'No se encontro nada - Lo siento',
-                    info: 'Mostrando pagina _PAGE_ de _PAGES_',
-                    infoEmpty: 'No se encontro el registro',
-                    infoFiltered: '(Filtrado de _MAX_ registros totales)',
-                },
                 responsive: true,
+                "language": {
+            "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Spanish.json"
+        }
             });
         });
-     // tabla de modal
-    $(document).ready(function() {
-        $('#miTablas').DataTable({
-            scrollY: '700px',
-            scrollCollapse: true,
-            paging: true,
-            language: {
-                lengthMenu: 'Display _MENU_ records per page',
-                zeroRecords: 'No se encontro nada - Lo siento',
-                info: 'Mostrando pagina _PAGE_ de _PAGES_',
-                infoEmpty: 'No se encontro el registro',
-                infoFiltered: '(Filtrado de _MAX_ registros totales)',
-            },
-            responsive: true,
-        });
-    });
+
+
 </script>
 
-<!-- script  para la incremetacion de inputp para detalle -->
-<!-- <script>
-            const contenedor = document.querySelector('#dinamic');
-            const btnAgregar = document.querySelector('#agregar');
-
-            // Variable para el total de elementos agregados
-            let total = 0;
-
-            /**
-             * Método que se ejecuta cuando se da clic al botón de agregar elementos
-             */
-
-
-            btnAgregar.addEventListener('click', e => {
-                total++;
-                let div = document.createElement('div');
-                div.innerHTML = `<label class="input_label" >${total}</label> - <input class="input_label" type="text"  id="detalle${total} "name="detalle${total}" placeholder="Nombre del deatlle" required><button  class="btn btn-outline-danger" onclick="eliminar(this)">Eliminar</button>`;
-                contenedor.appendChild(div);
-            })
-
-            /**
-             * Método para eliminar el div contenedor del input
-             * @param {this} e 
-             */
-            const eliminar = (e) => {
-                const divPadre = e.parentNode;
-                contenedor.removeChild(divPadre);
-                actualizarContador();
-            };
-
-            /**
-             * Método para actualizar el contador de los elementos agregados
-            */
-            const actualizarContador = () => {
-                let divs = contenedor.children;
-                total = 1;
-                for (let i = 0; i < divs.length; i++) {
-                    divs[i].children[0].innerHTML = total++;
-                }//end for
-            };
-</script> -->
 <!-- //  script para manipular encabezado -->
 <script>
 
@@ -266,26 +205,47 @@
             }
 
         }
+        
 
      //  en estas funcion solo se manipula el detalle 
      function seleccionaencabezado(id, tp) {
                 
                 if (tp == 2) {
-                   dataURL = "<?php echo base_url('buscar_detalles'); ?>" + "/" + id;
-                   $.ajax({
-                       type: "POST",
-                       url: dataURL,
-                       dataType: "json",
-                       success: function(rs) {
-                        console.log(rs);
+                    var contador = 0 
+                    var  mistablas = $('#miTablas').DataTable({
 
-                            
-                        //    $("#tp").val(2);
-                        //    $("#id").val(id);
-                        //    $("#encabezado").val(rs[0]['nombre']);
-                        //    $("#btn_guardar2").text('Actualizar');
-                           
-                       }
+                        "language": {
+            "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Spanish.json"
+        }
+                        
+                    })
+                    dataURL = "<?php echo base_url('buscar_detalles'); ?>" + "/" + id;
+                    $.ajax({
+                        type: "POST",
+                        url: dataURL,
+                        dataType: "json",
+                        success: function(rs) {
+                         console.log(rs);
+ 
+                         let contenido = '';
+                         rs[0].forEach(parametro => {
+            contador++
+            contenido += `
+            <tr id="util${contador}">
+            <td class="text-center">${parametro.id_parametro_det}</td>
+            <td class="text-center">${parametro.nombre}</td>
+            <td class="text-center">${parametro.estado}</td>
+            
+                            <td class="text-center">
+                            <button class="btn btn-outline-primary" onclick="editarEmail( ${contador});"></i></button>
+                            <button class="btn btn-outline-danger" onclick="eliminarEmail(${contador}, ${parametro.tp});"></i></button>
+                            </td>
+                            </tr>`
+        }); 
+        $('#bodytb').html(contenido);
+        
+                        }
+                
    
                    });
                 } else {

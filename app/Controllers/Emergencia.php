@@ -45,7 +45,7 @@ class Emergencia extends BaseController
                 'usuario_crea' => $id_usuario,
                 'id_usuario' => $id_usuario,
             ]);
-
+ 
             return redirect()->to(base_url('/emergencia'));
     }
 
@@ -73,6 +73,5 @@ class Emergencia extends BaseController
           }
           echo json_encode($returnData);
       }
-
 
 }

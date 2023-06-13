@@ -120,15 +120,14 @@
             dataURL = "<?php echo base_url('buscar_fondo'); ?>" + "/" + id;
 
             $.ajax({
+                
                 type: "POST",
                 url: dataURL,
                 dataType: "json",
                 success: function(rs) {
-                    console.log(rs);
+                    // console.log(rs);
 
-                    // $("#tp").val(2);
                     $("#id").val(id);
-
                     $("#editar_fecha_registra").val(rs[0]['fecha_registro']);
                     $("#editar_emergencia__valor").val(rs[0]['valor']);
                 }

@@ -191,6 +191,14 @@ let data = {
     }
   },
   }); 
+  let url =''
+  fetch(url)
+  .then(response =>responce.json())
+  .then(datos=> mostrar(datos))
+  .can(e => console.log(e))
+  const mostrar = ()=>{
+    
+  }
 </script> 
 
 <?= $this->endSection('contenido'); ?>
