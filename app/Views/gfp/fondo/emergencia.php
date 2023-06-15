@@ -9,11 +9,12 @@
 <div class="contenedorEmergencia">
 
     <!-- fecha de creacion del registro -->
-    <form method="POST" action="<?php echo base_url('/emergencia/insertar'); ?>" autocomplete="off" id="formulario_emergencia">
+    <form method="POST" action="<?php echo base_url('/emergencia/insertar'); ?>" autocomplete="off"
+        id="formulario_emergencia">
 
         <div class="emergencia">
             <div class="input-group mb-3 ss">
-                <span class="input-group-text" id="inputGroup-sizing-default">
+                <span class="input-group-text span_id_emergencia" id="inputGroup-sizing-default">
 
                     <img src="<?= base_url("icons/question-circle-fill.svg")?>"
                         title="El usuario ingresa la fecha para determinar el día mensual en que se realizará el descuento correspondiente de su presupuesto actual, destinado al fondo de emergencia."
@@ -71,43 +72,44 @@
 
     </div>
 
-<!--- Modal Actualizar --->
+    <!--- Modal Actualizar --->
 
-<form action="<?php echo base_url('/emergencia/update'); ?>" method="POST" autocomplete="off">
+    <form action="<?php echo base_url('/emergencia/update'); ?>" method="POST" autocomplete="off">
 
-    <div class="modal fade" id="ActualizarModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content" id="movimientos_modal-content">
-                <div class="modal-header">
-                    <img src="<?= base_url("img/gfp.png")?>" alt="" class="w-25 p-3">
-                    <h5 class="modal-title" id="exampleModalLabel">Actualizar Registro</h5>
-                </div>
-                <div class="modal-body">
+        <div class="modal fade" id="ActualizarModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content" id="movimientos_modal-content">
+                    <div class="modal-header">
+                        <img src="<?= base_url("img/gfp.png")?>" alt="" class="w-25 p-3">
+                        <h5 class="modal-title" id="exampleModalLabel">Actualizar Registro</h5>
+                    </div>
+                    <div class="modal-body">
 
-                    <input hidden id="id" name="id">
+                        <input hidden id="id" name="id">
 
-                    <div>
                         <div>
-                            <input type="date" class="ss input_fecha__emergencia" aria-label="Sizing example input"
-                                aria-describedby="inputGroup-sizing-default" id="editar_fecha_registra"
-                                name="editar_fecha_registra" required>
-                        </div>
-                        <br>
-                        <div>
-                            <input type="number" class="emergencia__input" name="editar_emergencia__valor"
-                                id="editar_emergencia__valor" style="color:black;" required>
+                            <div>
+                                <input type="date" class="ss input_fecha__emergencia" aria-label="Sizing example input"
+                                    aria-describedby="inputGroup-sizing-default" id="editar_fecha_registra"
+                                    name="editar_fecha_registra" required>
+                            </div>
+                            <br>
+                            <div>
+                                <input type="number" class="emergencia__input" name="editar_emergencia__valor"
+                                    id="editar_emergencia__valor" style="color:black;" required>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="submit" class="btn btn-primary" id="btn_actualizar">Actualizar</button>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary" id="btn_actualizar">Actualizar</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-</form>
+    </form>
 
 </div>
 </div>
@@ -115,26 +117,56 @@
 
 <script>
 
-        function seleccionafondo(id) {
+function seleccionafondo(id) {
 
-            dataURL = "<?php echo base_url('buscar_fondo'); ?>" + "/" + id;
+    dataURL = "<?php echo base_url('buscar_fondo'); ?>" + "/" + id;
 
-            $.ajax({
-                
-                type: "POST",
-                url: dataURL,
-                dataType: "json",
-                success: function(rs) {
-                    // console.log(rs);
+    $.ajax({
 
-                    $("#id").val(id);
-                    $("#editar_fecha_registra").val(rs[0]['fecha_registro']);
-                    $("#editar_emergencia__valor").val(rs[0]['valor']);
-                }
-            });
+        type: "POST",
+        url: dataURL,
+        dataType: "json",
+        success: function(rs) {
+            // console.log(rs);
+
+            $("#id").val(id);
+            $("#editar_fecha_registra").val(rs[0]['fecha_registro']);
+            $("#editar_emergencia__valor").val(rs[0]['valor']);
         }
+    });
+}
 
 </script>
 
 
+
+<script>
+
+    $(document).ready(function() {
+        
+  // Realizar la solicitud AJAX para obtener el estado del registro del usuario
+  $.ajax({
+    url: '<?php echo base_url('/emergencia/verificar_registro'); ?>',
+    type: 'GET',
+    dataType: 'json',
+    success: function(response) {
+      if (response.tieneRegistro) {
+
+        deshabilitarFormulario();
+      }
+    },
+    error: function(xhr, status, error) {
+      console.error(error);
+    }
+  });
+
+  // Función para deshabilitar el formulario
+  function deshabilitarFormulario() {
+    $('#fecha_registro, #emergencia__valor, #btn_enviar, .span_id_emergencia').prop('disabled', true).hide();
+  }
+});
+
+</script>
+
 <?= $this->endSection("contenido")?>
+

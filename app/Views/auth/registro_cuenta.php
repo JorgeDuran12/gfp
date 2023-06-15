@@ -163,7 +163,7 @@
         <div class="formulario__grupo" id="grupo__telefono">
             <label for="email" class="formulario__label">Telefono</label>
             <div class="formulario__grupo-input">
-                <input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="3222222"
+                <input type="number" class="formulario__input" name="telefono" id="telefono" placeholder="3222222"
                     required>
         
                 <svg xmlns="http://www.w3.org/2000/svg" class="formulario__validacion-estado" width="16" height="16"

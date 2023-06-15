@@ -55,8 +55,13 @@
     </div>
 
     <div class="principal__cont-2">
+
         <div class="div__cont"><canvas id="myChart1" width=""></canvas></div>
-        <div class="div__cont">5</div>
+
+        <div class="div__cont">
+            <canvas id="grafica"></canvas>
+        </div>
+
         <div class="div__cont">6</div>
     </div>
 
@@ -160,45 +165,133 @@ inputPeriodo.value = periodo.getFullYear();
 </script>
 
 <script>
-    //const saquito = <= json_encode($traer_proye) ?>;
-    //const Proyeccion = <= json_encode($traer_proye) ?>;
+   $(document).ready(function() {
+    $.ajax({
+        url: "<?php echo base_url("Proyeccion/buscar_Proyeccion")?>",
+        dataType: 'json',
+        method: "GET",
+        success: function(data) {
+            console.log(data);
+            var saquito =<?php ['']?>
+            var cuotas= <?php ['']?>
+            var color = ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)', 'rgba(255, 159, 64, 0.2)'];
+            var bordercolor = ['rgba(255,99,132,1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)', 'rgba(255, 159, 64, 1)'];
+            console.log(data);
+ 
+            for (var i in data) {
+                saquito.push(data[i].saquito);
+                cuotas.push(data[i].cuotas);
+            }
+ 
+            var chartdata = {
+                labels: saquito,
+                datasets: [{
+                    label: saquito,
+                    backgroundColor: color,
+                    borderColor: color,
+                    borderWidth: 2,
+                    hoverBackgroundColor: color,
+                    hoverBorderColor: bordercolor,
+                    data: cuotas
+                }]
+            };
+ 
+            var mostrar = $("#myChart2");
+ 
+            var grafico = new Chart(mostrar, {
+                type: 'doughnut',
+                data: chartdata,
+                options: {
+                    responsive: true,
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
+                    }
+                }
+            });
+        },
+        error: function(data) {
+            console.log(data);
+        }
+    });
+});
    
 
-let data = {
+ let data = {
   labels: ['Enero', 'Febrero', 'Marzo', 'Abril',],
   datasets: [{
         data: [12, 1, 3, 5,],
         borderWidth: 1,
-        backgroundcolor:'white'
-      }]
+         backgroundcolor:'white'
+     }]
 };
 
   const ctx2 = document.getElementById('myChart2');
  new Chart(ctx2, {
-    url: "<?php echo base_url("Proyeccion/buscar_Proyeccion")?>",
-    type: 'doughnut',
+     type: 'doughnut',
   data: data,
   options: {
-    responsive: true,
-    plugins: {
-      legend: {
-        position: 'top',
+     responsive: true,
+     plugins: {
+     legend: {
+       position: 'top',
       },
-      title: {
+     title: {
         display: true,
-        text: 'Grafica de mis ahorros'
+       text: 'Grafica de mis ahorros'
+      }
+   }
+ },
+  }); 
+  
+</script> 
+
+<!-- 
+<script>
+
+$(document).ready(function() {
+  var fechas = <php echo json_encode($fechas); ?>; // Obtener los datos de fechas desde el controlador
+  var valores = <php echo json_encode($valores); ?>; // Obtener los datos de valores desde el controlador
+
+  // Configurar la gráfica
+  var ctx = document.getElementById('grafica').getContext('2d');
+  var grafica = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: fechas, // Utilizar el arreglo de fechas como etiquetas en el eje x
+      datasets: [{
+        label: 'Valores de inserción', // Etiqueta para la leyenda
+        data: valores, // Utilizar el arreglo de valores para los datos
+        // backgroundColor: '#FFFFFF',
+        borderColor: 'white', // Color de borde de la línea
+        fill: false // No rellenar el área bajo la línea
+      }]
+    },
+    options: {
+      responsive: true, // Hacer la gráfica responsive
+      scales: {
+        x: {
+          display: true, // Mostrar el eje x
+          title: {
+            display: true,
+            text: 'Fechas' // Etiqueta del eje x
+          }
+        },
+        y: {
+          display: true, // Mostrar el eje y
+          title: {
+            display: true,
+            text: 'Valores' // Etiqueta del eje y
+          }
+        }
       }
     }
-  },
-  }); 
-  let url =''
-  fetch(url)
-  .then(response =>responce.json())
-  .then(datos=> mostrar(datos))
-  .can(e => console.log(e))
-  const mostrar = ()=>{
-    
-  }
-</script> 
+  });
+});
+
+</script> -->
 
 <?= $this->endSection('contenido'); ?>

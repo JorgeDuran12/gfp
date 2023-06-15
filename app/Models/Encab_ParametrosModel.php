@@ -65,6 +65,8 @@ public function traer_registro($id){
         $datos = $this->first();  
         return $datos;
     }
+
+
     
     
 }

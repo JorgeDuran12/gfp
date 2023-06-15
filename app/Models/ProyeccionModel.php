@@ -27,8 +27,8 @@ class ProyeccionModel extends Model{
 
 
     public function traer_Proyeccion($id){
-        $this->select('proyeccion*');
-        $this-where('usuario_crea',$id);
+        $this->select('proyeccion.*');
+        $this->where('usuario_crea',$id);
         $datos = $this->findAll();  // nos trae el registro que cumpla con una condicion dada 
         return $datos;
     }

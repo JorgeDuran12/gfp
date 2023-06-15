@@ -103,7 +103,7 @@
 
 <!-- CREAR detalle -->
 
-<form method="POST" action="<?php echo base_url('/parametros/insertar_detalle'); ?>" autocomplete="off">
+<form autocomplete="off">
         <div class="modal fade" id="parametro_detallle" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -120,13 +120,13 @@
                                         detalle
                                     </h4> 
   <!-- tabla de detalles -->
-  <table id="miTablas">
+  <table class="table table-bordered" >
                 <thead>
                     <tr>
                         <th>Id</th>
                         <th>Nombre</th>
                         <th>estado</th>
-                        <th>acciones</th>
+                        <th colspan="2">acciones</th>
                         </tr>
                     </thead>
                     <tbody id="bodytb">
@@ -135,12 +135,14 @@
 
             
             </table>
-                                      
+                          <button class="btn btn-success" type="button" id="agregarDetalle"> 
+                            crear 
+                          </button>            
             </div>
                         </div>
                         <div class="modal-footer">
 
-                            <button type="submit" class="btn btn-primary" id="btn_guardar2">Guardar</button>
+                            <!-- <button type="submit" class="btn btn-primary" id="btn_guardar2">Guardar</button> -->
                         </div>
                     </div>
 
@@ -160,6 +162,7 @@
                 scrollCollapse: true,
                 paging: true,
                 responsive: true,
+                
                 "language": {
             "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Spanish.json"
         }
@@ -206,19 +209,85 @@
 
         }
         
+        function seleccionausuario( id, tp ){
+
+            console.log({ id, tp})
+        }
+
+        function crear_detalle( idEncabezado ){
+
+            
+            
+            $("#agregarDetalle").click(function(){
+                
+                $("#parametro_detallle").modal('hide');
+                
+                    Swal.fire({
+                    title:"CREAR UN NUEVO DETALLE",
+                    input:"text",                
+                    inputLabel: 'Ingrese un detalle',
+                    inputPlaceholder: 'Ej: Tipo documento',
+                    showCancelButton: true,
+                    confirmButtonText: 'Guardar',
+                    showLoaderOnConfirm: true,
+                    preConfirm: (detalle) => {
+    
+                    if( detalle.length >= 5 ) { 
+
+                    return fetch(`http://localhost/gfp/public/parametros/insertar_detalle/${detalle}/${idEncabezado}`)
+                    .then(response => {
+                    if( response.status == 400 ) {
+                        throw new Error('Parametro ya existente');
+                        return false;
+                    }
+                    //Si la respuesta es correcta
+    
+                    })
+                    .catch(error => {
+                    Swal.showValidationMessage(
+                        `${error}`
+                    )
+                    })
+                    }else {
+                    Swal.fire('Error al agregar', 'La longitud debe ser mayor a 5 caracteres', 'info', 'Aceptar')
+                    $("#parametro_detallle").modal('show')
+                    return false;
+                    }
+    
+                    },
+                    allowOutsideClick: () => !Swal.isLoading()
+                    })
+                    .then(result => {
+                    if( result.isConfirmed ) {
+                    Swal.fire('Detalle agregado', 'Se agrego el detalle correctamente', 'success', 'Ok');
+                    $("#parametro_detallle .modal-body").load(location.href + '.modal-content');
+                    $("#parametro_detallle").modal('show');
+                    seleccionaencabezado(idEncabezado,2)
+                    
+                }else {
+                        seleccionaencabezado(idEncabezado,2)
+    
+                    $("#parametro_detallle").modal('show');
+    
+                    }
+                    })
+
+                })
+                
+            }
+
+            
+
 
      //  en estas funcion solo se manipula el detalle 
      function seleccionaencabezado(id, tp) {
-                
+console.log(id,tp);
+        crear_detalle( id );
+
+
                 if (tp == 2) {
                     var contador = 0 
-                    var  mistablas = $('#miTablas').DataTable({
-
-                        "language": {
-            "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Spanish.json"
-        }
-                        
-                    })
+                  
                     dataURL = "<?php echo base_url('buscar_detalles'); ?>" + "/" + id;
                     $.ajax({
                         type: "POST",
@@ -237,8 +306,14 @@
             <td class="text-center">${parametro.estado}</td>
             
                             <td class="text-center">
-                            <button class="btn btn-outline-primary" onclick="editarEmail( ${contador});"></i></button>
-                            <button class="btn btn-outline-danger" onclick="eliminarEmail(${contador}, ${parametro.tp});"></i></button>
+                                <button class="btn btn-warning" onclick="seleccionausuario(${parametro.id_parametro_det} ${","} ${2});">
+                                    </i><img class="image" src="<?= base_url("img/editar.png") ?>" title="Editar">
+                                </button>
+                            </td>
+                            <td>
+                                <button class="btn btn-danger"  data-href="${window.location.origin}/gpf/public/usuarios/eliminar/${parametro.id_parametro_det}/E" >
+                                    </i><img class="image" src="<?= base_url("img/eliminar.png") ?>"  title="Editar">
+                                </button>
                             </td>
                             </tr>`
         }); 
@@ -256,6 +331,7 @@
                
    
                }
+
    
            }
 

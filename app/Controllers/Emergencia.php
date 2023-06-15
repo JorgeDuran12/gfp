@@ -32,7 +32,6 @@ class Emergencia extends BaseController
         ]);
     }
 
-
     public function insertar()
     {
         $session = session();
@@ -49,7 +48,6 @@ class Emergencia extends BaseController
             return redirect()->to(base_url('/emergencia'));
     }
 
-
     public function update()
     {
         if ($this->request->getMethod() == "post") {
@@ -62,7 +60,6 @@ class Emergencia extends BaseController
     
         return redirect()->to(base_url('/emergencia'));
     }
-    
 
     public function buscar_fondo($id_usuario)
       {
@@ -74,4 +71,23 @@ class Emergencia extends BaseController
           echo json_encode($returnData);
       }
 
+
+      public function verificar_registro()
+    {
+        // Obtener el ID de usuario desde la sesión
+        $session = session();
+        $id_usuario = $session->get('id_usuario');
+
+        // Realizar la lógica para verificar si el usuario tiene un registro insertado
+        $tieneRegistro = $this->emergencia->verificarRegistro($id_usuario);
+
+        // Crear un array con la respuesta
+        $response = array(
+            'tieneRegistro' => $tieneRegistro
+        );
+
+        // Devolver la respuesta en formato JSON
+        return $this->response->setJSON($response);
+    }
+    
 }

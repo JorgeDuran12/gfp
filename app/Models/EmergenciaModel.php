@@ -36,21 +36,30 @@ class EmergenciaModel extends Model{
     }
 
 
-    // public function obtener_usuario_por_id($id)
-    // {
-    //     $this->select('fondo_emergencia.fecha_registro, valor');
-    //     $this->where('id_usuario', $id);
-    //     $this->where('estado', 'A');
-    //     $dato = $this->first();
-    //     return $dato;
-    // }
-
-
     public function Actualizar_fondo($id, $estado)
     {
         $this->select('fondo_emergencia.*');
         $this->where('estado', $estado);
         $this->where('id_fondo-emergencia', $id);
+        $datos = $this->first();
+        return $datos;
+    }
+    
+
+    public function verificarRegistro($id_usuario)
+    {
+        $this->select('*');
+        $this->where('id_usuario', $id_usuario);
+        $this->where('estado', 'A');
+        $datos = $this->first();
+        return $datos;
+    }
+
+    public function obtenerDatosInsercion($id_usuario)
+    {
+        $this->select('fondo_emergencia.*');
+        $this->where('id_usuario', $id_usuario);
+        $this->where('estado', 'A');
         $datos = $this->first();
         return $datos;
     }

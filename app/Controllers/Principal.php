@@ -3,17 +3,20 @@
 namespace App\Controllers;
 use App\Models\DisponibleModel;
 use App\Models\ProyeccionModel;
+use App\Models\SaquitoModel;
+use App\Models\EmergenciaModel;
 
 class Principal extends BaseController
 {
 
-    protected $disponible, $proyeccion;
+    protected $disponible, $proyeccion, $saquito, $emergencia;
 
     public function __construct()
     {
         $this->disponible = new DisponibleModel();
         $this->Proyeccion = new ProyeccionModel();
-        
+        $this->saquito = new SaquitoModel();
+        $this->emergencia = new EmergenciaModel();
 
     }
 
@@ -23,6 +26,13 @@ class Principal extends BaseController
         $Disponible = $this->disponible->traer_disponible($datos->id_usuario);
         $trasabilidad_model = new DisponibleModel();
         $trasabilidad = $trasabilidad_model->obtener_trasabilidad();
+        $proye = new ProyeccionModel();
+        $traer_sqto= new SaquitoModel();
+        $traer_proy= new ProyeccionModel();
+
+        $proyeccion = $proye -> traer();
+        $traer_sqto =   $traer_sqto -> traer_sqto ();
+        $traer_proye=   $traer_proy -> traer_proye ();
         
 
         echo view('gfp/principal/principal', [ 
@@ -30,8 +40,9 @@ class Principal extends BaseController
             'trasabilidad' => $trasabilidad,
             'misDatos' => $datos,
             'presupuestoActual' => $Disponible,
-            //'traer_sqto' => $traer_sqto,
-            //'traer_proye' => $traer_proye['valor_cuota'],
+            'proyeccion' => $proyeccion,
+            'traer_sqto' => $traer_sqto,
+            'traer_proye' => $traer_proye['valor_cuota'],
         ]);
 
     }
@@ -73,6 +84,18 @@ class Principal extends BaseController
         echo json_encode($returnData);
 
     }
+
+    // public function mostrarGrafica()
+    // {
+    //     $datosInsercion = $this->emergencia->obtenerDatosInsercion();
+
+    //     $data['fechas'] = $datosInsercion['fechas'];
+    //     $data['valores'] = $datosInsercion['valores'];
+
+    //     // Cargar la vista y pasar los datos
+    //     $this->load->view('Principal', $data);
+    // }
+
 
 }
     

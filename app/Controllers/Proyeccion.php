@@ -91,7 +91,7 @@ class Proyeccion extends BaseController
         $session = session();
         $idUsuario = $session->id_usuario;
 
-        $proyeccion_ = $this->saquito->traer_Proyeccion($idUsuario);
+        $proyeccion_ = $this->Proyeccion->traer_Proyeccion($idUsuario);
         if (!empty($proyeccion_)) {
             array_push($returnData, $proyeccion_);
         }

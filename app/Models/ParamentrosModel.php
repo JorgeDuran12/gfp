@@ -97,4 +97,14 @@ class ParamentrosModel extends Model{
         $datos = $this->findAll();
         return $datos;
     }
+
+
+    // funcion para veriifcar que el detalle sea unico
+    public function verificar_existe_parametro($detallito){
+        $this->select('parametros_det.*');
+        $this->where('nombre',$detallito);
+        $this->where('estado','A');
+        $datos = $this->findAll();  
+        return $datos;
+    }
 }
