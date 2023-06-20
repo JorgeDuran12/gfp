@@ -43,19 +43,17 @@ class Encab_ParametrosModel extends Model{
      
 // funtion para  llamar solo el registro segun su id en ecabezado
 
-public function traer_registro($id){
-    $this->select('parametros_enc.* ,parametros_det.*');
-    $this->join('parametros_det','parametros_det.id_parametro_enc = parametros_enc.id_parametro_enc');
-    $this->where('parametros_det.id_parametro_enc',$id);
-    $this->where('parametros_enc.estado', 'A');
-    $this->where('parametros_det.estado', 'A');
-    // $this->where('parametros_det.id_parametro_enc', 'parametros_enc.id_parametro_enc');
+    public function traer_registro($id){
+        $this->select('parametros_enc.* ,parametros_det.*');
+        $this->join('parametros_det','parametros_det.id_parametro_enc = parametros_enc.id_parametro_enc');
+        $this->where('parametros_det.id_parametro_enc',$id);
+        $this->where('parametros_enc.estado', 'A');
+        $this->where('parametros_det.estado', 'A');
+        // $this->where('parametros_det.id_parametro_enc', 'parametros_enc.id_parametro_enc');
 
-    $datos = $this->findAll();
-    return $datos;
-}
-
-
+        $datos = $this->findAll();
+        return $datos;
+    }
 
 
     public function traer_parametro($id){
@@ -66,8 +64,6 @@ public function traer_registro($id){
         return $datos;
     }
 
-
-    
     
 }
 

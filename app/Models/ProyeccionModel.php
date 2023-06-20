@@ -29,7 +29,9 @@ class ProyeccionModel extends Model{
     public function traer_Proyeccion($id){
         $this->select('proyeccion.*');
         $this->where('usuario_crea',$id);
+        $this->where('proyeccion.estado','A');
         $datos = $this->findAll();  // nos trae el registro que cumpla con una condicion dada 
+
         return $datos;
     }
 
@@ -40,7 +42,6 @@ class ProyeccionModel extends Model{
 
         $this->select('proyeccion.*, saquitos.descripcion as descripcion');
         $this->join('saquitos', 'saquitos.id_saquito = proyeccion.id_saquito');
-        $this->where('proyeccion.estado', 'A');
         $this->where('proyeccion.usuario_crea',$id_usuario);
         $data = $this->findAll();
         return $data;

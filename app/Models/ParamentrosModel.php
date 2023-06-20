@@ -107,4 +107,14 @@ class ParamentrosModel extends Model{
         $datos = $this->findAll();  
         return $datos;
     }
+
+    public function traerdeta(){
+        $this->select('parametros_det.*');
+        $this->where('id_parametro_enc', 10);
+        $this->where('estado','A');
+        $datos = $this->findAll();  
+        return $datos;
+    }
+
+
 }

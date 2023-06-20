@@ -23,14 +23,34 @@
                     aria-describedby="inputGroup-sizing-default" id="fecha_registro" name="fecha_registro" required>
             </div>
         </div>
-
         <!-- fin del codigo de fecha creacion -->
+
+
         <div class="p_emergencia">
+
             <div class="emergencia_container_form">
+
+                <label for="floatingInput">Metodo de pago</label>
+
+                <select class="form-select " name="params" id="params" aria-label="Floating label select example"
+                    required>
+
+                    <?php foreach ($params as $data) {?>
+
+                    <option style="color:black;" value="<?php echo $data["id_parametro_det"]; ?>">
+                        <?php echo $data["nombre"];?></option>
+                    <?php } ?>
+
+                </select>
+                <br>
                 <div class="form_container__emergencia">
                     <input type="number" class="emergencia__input" name="emergencia__valor" id="emergencia__valor"
                         required>
                 </div>
+                <br>
+
+                <textarea class="fd_text" placeholder="Descripcion" id="descripcion" name="descripcion" style="display: none;" required></textarea>
+
             </div>
 
             <br>
@@ -46,7 +66,7 @@
                 <tr>
                     <th scope="col">fecha</th>
                     <th scope="col">valor</th>
-                    <th scope="col">Editar</th>
+                    <!-- <th scope="col">Descripcion</th> -->
                 </tr>
             </thead>
             <tbody>
@@ -55,14 +75,15 @@
 
                 <tr>
                     <td> <?php echo $dato ['fecha_registro'];?></td>
-                    <td> <?php echo $dato ['valor'];?></td>
-                    <td>
+                    <td> <?php echo $dato ['sum'];?></td>
+                    <!-- <td> <php echo $dato ['descripcion'];?></td> -->
+                    <!-- <td>
                         <a class="btn btn-warning" href="#"
-                            onclick="seleccionafondo(<?= $dato['id_fondo-emergencia'];?>)" data-bs-toggle="modal"
+                            onclick="seleccionafondo(<= $dato['id_fondo-emergencia'];?>)" data-bs-toggle="modal"
                             data-bs-target="#ActualizarModal" width="16" height="16">
-                            <img class="image" src="<?= base_url("img/editar.png") ?>">
+                            <img class="image" src="<= base_url("img/editar.png") ?>">
                         </a>
-                    </td>
+                    </td> -->
                 </tr>
 
                 <?php } ?>
@@ -115,11 +136,10 @@
 </div>
 
 
-<script>
-
+<!-- <script>
 function seleccionafondo(id) {
 
-    dataURL = "<?php echo base_url('buscar_fondo'); ?>" + "/" + id;
+    dataURL = "<php echo base_url('buscar_fondo'); ?>" + "/" + id;
 
     $.ajax({
 
@@ -135,38 +155,49 @@ function seleccionafondo(id) {
         }
     });
 }
-
-</script>
-
+</script> -->
 
 
 <script>
 
-    $(document).ready(function() {
-        
-  // Realizar la solicitud AJAX para obtener el estado del registro del usuario
-  $.ajax({
-    url: '<?php echo base_url('/emergencia/verificar_registro'); ?>',
-    type: 'GET',
-    dataType: 'json',
-    success: function(response) {
-      if (response.tieneRegistro) {
+// Obtener referencia al textarea
+let textarea = document.getElementById('descripcion');
 
-        deshabilitarFormulario();
-      }
-    },
-    error: function(xhr, status, error) {
-      console.error(error);
+// Escuchar el evento de ingreso de texto
+textarea.addEventListener('input', function() {
+    // Obtener el valor actual del textarea
+    let valor = textarea.value;
+
+    // Verificar si el valor no está vacío
+    if (valor.length > 0) {
+        // Obtener la primera letra y convertirla a mayúscula
+        let primeraLetra = valor.charAt(0).toUpperCase();
+
+        // Reemplazar la primera letra en el valor
+        valor = primeraLetra + valor.slice(1);
+
+        // Asignar el nuevo valor al textarea
+        textarea.value = valor;
+    }
+});
+
+
+$(document).ready(function() {
+  $('#params').change(function() {
+    var selectedOption = $(this).val();
+
+    if (selectedOption === '83') {
+      $('#descripcion').show();
+    } else {
+        $('#descripcion').prop('required', false);
+      $('#descripcion').hide();
     }
   });
-
-  // Función para deshabilitar el formulario
-  function deshabilitarFormulario() {
-    $('#fecha_registro, #emergencia__valor, #btn_enviar, .span_id_emergencia').prop('disabled', true).hide();
-  }
 });
+
+
 
 </script>
 
-<?= $this->endSection("contenido")?>
 
+<?= $this->endSection("contenido")?>

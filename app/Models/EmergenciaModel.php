@@ -13,7 +13,7 @@ class EmergenciaModel extends Model{
     protected $returnType     = 'array';  /* forma en que se retornan los datos */
     protected $useSoftDeletes = false; /* si hay eliminacion fisica de registro */
 
-    protected $allowedFields = ['fecha_registro','valor','estado','usuario_crea','id_usuario', 'fecha_crea']; /* relacion de campos de la tabla */
+    protected $allowedFields = ['fecha_registro','valor','estado','usuario_crea','id_usuario', 'fecha_crea',]; /* relacion de campos de la tabla */
 
     protected $useTimestamps = true; /*tipo de tiempo a utilizar */
     protected $createdField  = 'fecha_crea'; /*fecha automatica para la creacion */
@@ -23,15 +23,26 @@ class EmergenciaModel extends Model{
     protected $validationRules    = [];
     protected $validationMessages = [];
     protected $skipValidation    = false;
+    
+    
+    
+    public function grafica_fondo(){
+        $session = session();
+        $id_usuario = $session->get('id_usuario');
+        $this->select('fondo_emergencia.*');
+        $this->where('estado','A');
+        $this->where('fondo_emergencia.usuario_crea',$id_usuario);
+        $datos = $this->first();
+        return $datos['valor'];
+    } 
 
 
     public function traer_fondo($id)
     {
-        $this->select('fondo_emergencia.*');
+        $this->select('fondo_emergencia.*, sum(valor) as sum');
         $this->where('id_usuario', $id);
         $this->where('estado','A');
-        $datos = $this->findAll();  
-        // var_dump($datos);
+        $datos = $this->findAll();
         return $datos;
     }
 

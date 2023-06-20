@@ -54,9 +54,10 @@ class SaquitoModel extends Model{
             $this->select('saquitos.*');
               $this->where('estado', 'A');
             $this->where('usuario_crea', $id_usuario);
-            $datos = $this->first();
+            $datos = $this->findAll();
             return $datos['id_saquito'];
         }
+        
         public function traer_sqto(){
             $session = session();
             $id_usuario = $session->get('id_usuario');
