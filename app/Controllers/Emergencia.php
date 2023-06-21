@@ -46,6 +46,7 @@ class Emergencia extends BaseController
     
         // Inserta el nuevo registro en la tabla EmergenciaModel
         $this->emergencia->insert([
+            'id_parametro_det' => $this->request->getPost('params'),
             'valor' => $this->request->getPost('emergencia__valor'),
             'fecha_registro' => $this->request->getPost('fecha_registro'),
             'descripcion' => $this->request->getPost('descripcion'),
@@ -60,11 +61,29 @@ class Emergencia extends BaseController
         if ($disponible) {
             // Realiza el cálculo y la actualización del campo presupuesto_anual en DisponibleModel
             $nuevoPresupuesto = $disponible['presupuesto_anual'] - $this->request->getPost('emergencia__valor');
+    
             $disponibleModel->update($disponible['id_disponible'], ['presupuesto_anual' => $nuevoPresupuesto]);
+    
+        } else if ($this->request->getPost('params') === '83') {
+            // Obtiene la sumatoria total de los valores del campo "valor" de la tabla Emergencia
+            $emergenciaModel = new EmergenciaModel();
+            $totalValor = $emergenciaModel->getSumValorByParametroDet('83', $id_usuario);
+    
+            // Obtiene el registro de emergencia relacionado con el usuario actual
+            $emergencia = $emergenciaModel->where('id_usuario', $id_usuario)->first();
+    
+            if ($emergencia) {
+                // Resta el totalValor al valor existente en la tabla Emergencia
+                $nuevoValor = $emergencia['valor'] - $totalValor;
+    
+                // Actualiza el valor en la tabla Emergencia
+                $emergenciaModel->update($emergencia['id_fondo-emergencia'], ['valor' => $nuevoValor]);
+            }   
         }
     
         return redirect()->to(base_url('/emergencia'));
     }
+    
     
 
     public function update()

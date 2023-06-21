@@ -9,7 +9,7 @@ use App\Models\EmergenciaModel;
 class Principal extends BaseController
 {
 
-    protected $disponible, $proyeccion, $saquito, $emergencia, $grafica_e;
+    protected $disponible, $proyeccion, $saquito, $emergencia, $grafica_e, $grafica_d;
 
     public function __construct()
     {
@@ -18,6 +18,7 @@ class Principal extends BaseController
         $this->saquito = new SaquitoModel();
         $this->emergencia = new EmergenciaModel();
         $this->grafica_e = new EmergenciaModel();
+        $this->grafica_d = new EmergenciaModel();
 
     }
 
@@ -27,7 +28,8 @@ class Principal extends BaseController
         $Disponible = $this->disponible->traer_disponible($datos->id_usuario);
         $trasabilidad_model = new DisponibleModel();
         $trasabilidad = $trasabilidad_model->obtener_trasabilidad();
-        $grafica =  $this-> grafica_e->grafica_fondo();
+        $grafica =  $this-> grafica_e->grafica_fondo_valor();
+        $grafica_t =  $this-> grafica_d->grafica_fondo_fecha();
         
         echo view('gfp/principal/principal', [ 
             'tituloPagina' => 'Inicio',
@@ -35,6 +37,7 @@ class Principal extends BaseController
             'misDatos' => $datos,
             'presupuestoActual' => $Disponible,
             'graficas_e'=>$grafica,
+            'graficas_titulo'=>$grafica_t,
             
 
         ]);
@@ -79,19 +82,8 @@ class Principal extends BaseController
         echo json_encode($returnData);
 
     }
-    // public function buscar_grafica(){
-    //     $returnData = array();
 
-    //     $session = session();
-    //     $idUsuario = $session->id_usuario;
-
-    //     $emergencia_ = $this->emergencia->grafica_fondo($idUsuario);
-    //     if (!empty($emergencia_)) {
-    //         array_push($returnData, $emergencia_);
-    //     }
-    //     echo json_encode($returnData);
-
-    // }
+    
 
 }
     

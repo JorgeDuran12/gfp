@@ -59,7 +59,7 @@
         <div class="div__cont"><canvas id="myChart1" width=""></canvas></div>
 
         <div class="div__cont">
-        <canvas id="myChart2" width="100"></canvas>
+            <canvas id="myChart2" width="100"></canvas>
         </div>
 
         <div class="div__cont">6</div>
@@ -107,7 +107,6 @@
 
 
 <script>
-    
 //Referencias HTML
 let presupuestoContainer = document.querySelector('#presupuesto');
 let inputPeriodo = document.querySelector('#periodo_input');
@@ -154,7 +153,6 @@ bar.text.style.fontFamily = '"Exo", sans-serif';
 bar.text.style.fontSize = '2rem';
 
 bar.animate(1.0);
-
 </script>
 
 <script>
@@ -167,40 +165,56 @@ inputPeriodo.value = periodo.getFullYear();
 
 <script>
 
+    const grafica_emergencia = <?= json_encode($graficas_e) ?>;
+    let array_datos = []; //creamos un array vacio
 
-    const ctx1 = document.getElementById('myChart2');
+    for (i = 0; i < grafica_emergencia.length; i++) {
+        array_datos.push(grafica_emergencia[i].valor) //por cada recorrido hace un push
+        // console.log(array_datos);
+        }
+
+
+    const detalle = <?=json_encode($graficas_titulo) ?>;
+    // console.log(detalle);
+    let array_detalle = [];
+
+    for (t = 0; t < detalle.length; t++) {
+        array_detalle.push(detalle[t].descripcion) //por cada recorrido hace un
+        // console.log(array_detalle);
+    }
+
+
+
+
+
+
+const ctx1 = document.getElementById('myChart2');
 
 new Chart(ctx1, {
- type: 'line',
- data: {
-   labels: [<?= json_encode($graficas_e) ?>],
-   datasets: [
-     {
-     label: 'Mis ultimos movimientos',
-     data: [<?= json_encode($graficas_e) ?>],
-     borderWidth: 1,
-     borderColor: '#00b4fc',
-     backgroundColor: 'white',
-     tension: 0.1
-    
-     },
+    type: 'line',
+    data: {
+        labels: array_detalle,
+        datasets: [{
+                label: 'Enero',
+                data: array_datos,
+                borderWidth: 1,
+                borderColor: 'black ',
+                backgroundColor: 'black',
+                tension: 0.1
 
-   ]
- },
- options: {
-   scales: {
-     y: {
-       beginAtZero: true
-     }
-   }
- },
-}); 
+            },
 
+        ]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    },
+});
 
- 
-  
-           
+</script>
 
-  
-</script> 
 <?= $this->endSection('contenido'); ?>

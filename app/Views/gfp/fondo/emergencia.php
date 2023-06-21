@@ -49,7 +49,7 @@
                 </div>
                 <br>
 
-                <textarea class="fd_text" placeholder="Descripcion" id="descripcion" name="descripcion" style="display: none;" required></textarea>
+                <textarea class="fd_text" placeholder="Descripcion" id="descripcion" name="descripcion" required></textarea>
 
             </div>
 
@@ -182,18 +182,19 @@ textarea.addEventListener('input', function() {
 });
 
 
-$(document).ready(function() {
-  $('#params').change(function() {
-    var selectedOption = $(this).val();
+// $(document).ready(function() {
+//   $('#params').change(function() {
+//     var selectedOption = $(this).val();
 
-    if (selectedOption === '83') {
-      $('#descripcion').show();
-    } else {
-        $('#descripcion').prop('required', false);
-      $('#descripcion').hide();
-    }
-  });
-});
+//     if (selectedOption === '83') {
+//       $('#descripcion').show();
+//       $('#descripcion').prop('required', true);
+//     } else {
+//         $('#descripcion').prop('required', false);
+//       $('#descripcion').hide();
+//     }
+//   });
+// });
 
 
 
