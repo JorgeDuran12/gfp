@@ -185,9 +185,6 @@ inputPeriodo.value = periodo.getFullYear();
 
 
 
-
-
-
 const ctx1 = document.getElementById('myChart2');
 
 new Chart(ctx1, {

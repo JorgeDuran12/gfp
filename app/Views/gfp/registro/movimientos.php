@@ -226,6 +226,7 @@ $(document).on('blur', '.valida', function(event) {
 
     document.getElementById("presupuesto").value = presupuesto_anual;
 });
+
 </script>
 
 <script>
