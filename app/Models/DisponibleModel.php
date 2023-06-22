@@ -51,6 +51,7 @@ class DisponibleModel extends Model{
         return $datos;
     }
 
+
     public function datos_ingreso(){
         $session = session();
         $id_usuario = $session->get('id_usuario');
@@ -86,9 +87,19 @@ class DisponibleModel extends Model{
         if( empty($datos)) {
             return $datos['id_disponible'] = 0;
         }else {
-            return $datos['id_disponible']  ;
+            return $datos['id_disponible'];
         }
     }
 
+
+    public function grafica_disponible($id_disponible) 
+    {
+        $this->select('disponibles.presupuesto_anual, ingreso, egreso');
+        $this->where('estado', 'A');
+        $this->where('id_disponible', $id_disponible);
+        $datos = $this->first();
+        return $datos;
+    }
+    
 
 }

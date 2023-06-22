@@ -51,6 +51,18 @@ class MovimientoModel extends Model{
 
     }
 
+
+    public function grafica_movi() 
+    {
+        $session = session();
+        $id_usuario = $session->get('id_usuario');
+        
+        $this->select('movimientos.valor,fecha_movimiento, descripcion');
+        $this->where('estado', 'A');
+        $this->where('usuario_crea', $id_usuario);
+        $datos = $this->findAll();
+        return $datos;
+    }
     
 
 }

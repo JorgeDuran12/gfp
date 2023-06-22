@@ -19,50 +19,29 @@
         </div>
         <!-- <--------------trasabilidad---------------------->
         <div class="div__cont">
-            <table class="table table-bordered table-sm table-striped" id="dataTable1" width="100%" cellspacing="0">
-                <thead>
-                    <tr>
 
-                        <th>Periodo</th>
-                        <th>Saldo Anterior</th>
-                        <th>Ingreso</th>
-                        <th>Egreso</th>
-                        <th>Presupuesto Anual</th>
+            <canvas id="myChart_presu"></canvas>
 
-
-
-                    </tr>
-                </thead>
-                <tbody>
-
-
-                    <?php foreach ($trasabilidad as $dato) { ?>
-                    <tr>
-                        <td><?php echo $dato ['periodo'];?></td>
-                        <td><?php echo $dato ['saldo_anterior'];?></td>
-                        <td><?php echo $dato ['ingreso'];?></td>
-                        <td><?php echo $dato ['egreso'];?></td>
-                        <td><?php echo $dato ['presupuesto_anual'];?></td>
-
-                    </tr>
-                    <?php } ?>
-
-                </tbody>
-            </table>
         </div>
 
-        <div class="div__cont"> </div>
     </div>
 
     <div class="principal__cont-2">
 
-        <div class="div__cont"><canvas id="myChart1" width=""></canvas></div>
+        <div class="div__cont">
+            <canvas id="myChart1" width=""></canvas>
+        </div>
 
         <div class="div__cont">
             <canvas id="myChart2" width="100"></canvas>
         </div>
 
-        <div class="div__cont">6</div>
+        <div class="div__cont">
+
+            <canvas id="Movimiento"></canvas>
+
+        </div>
+        
     </div>
 
 </div>
@@ -166,6 +145,7 @@ inputPeriodo.value = periodo.getFullYear();
 <script>
 
     const grafica_emergencia = <?= json_encode($graficas_e) ?>;
+
     let array_datos = []; //creamos un array vacio
 
     for (i = 0; i < grafica_emergencia.length; i++) {
@@ -213,5 +193,112 @@ new Chart(ctx1, {
 });
 
 </script>
+
+<!-- Script de grafico de presupuesto actual, ingresos y egresos -->
+
+<script>
+    
+const grafica_presupuesto = <?= json_encode($grafica_presu); ?>;
+
+const presupuestoAnual = grafica_presupuesto.presupuesto_anual;
+const ingreso = grafica_presupuesto.ingreso;
+const egreso = grafica_presupuesto.egreso;
+
+const ctx = document.getElementById('myChart_presu');
+
+new Chart(ctx, {
+  type: 'doughnut',
+  data: {
+    labels: ['Presupuesto Anual', 'Ingreso', 'Egreso'],
+    datasets: [{
+      data: [presupuestoAnual, ingreso, egreso],
+      borderWidth: 1,
+      backgroundColor: [
+        'rgba(255, 99, 132, 0.8)',  // Color para el presupuesto anual
+        'rgba(54, 162, 235, 0.8)',  // Color para el ingreso
+        'rgba(255, 206, 86, 0.8)',  // Color para el egreso
+      ]
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  }
+});
+</script>
+
+<script>
+    const grafica_movimiento = <?= json_encode($grafica_movi) ?>;
+    const array_dat = [];
+    const array_label = [];
+
+    for (let i = 0; i < grafica_movimiento.length; i++) {
+      array_dat.push(grafica_movimiento[i].descripcion);
+    }
+
+    for (let i = 0; i < grafica_movimiento.length; i++) {
+      array_label.push(grafica_movimiento[i].valor);
+    }
+
+    const mv = document.getElementById('Movimiento');
+
+    new Chart(mv, {
+      type: 'bar',
+      data: {
+        labels: array_dat,
+        datasets: [{
+          label: 'Valor: ',  
+          data: array_label,
+          borderWidth: 1,
+        }]
+      },
+      options: {
+        plugins: {
+          title: {
+            display: true,
+            text: 'Gastos Diarios',
+            color: 'white'
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              color: 'white' 
+            }
+          },
+          x: {
+            ticks: {
+              color: 'white'
+            }
+          }
+        },
+        animation: {
+          onComplete: function (context) {
+            const chartInstance = context.chart;
+            const ctx = chartInstance.ctx;
+            ctx.font = Chart.helpers.fontString(Chart.defaults.font.size, 'normal', Chart.defaults.font.family);
+            ctx.fillStyle = 'white';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'bottom';
+
+            chartInstance.data.datasets.forEach(function (dataset, i) {
+              const meta = chartInstance.getDatasetMeta(i);
+              meta.data.forEach(function (bar, index) {
+                const data = dataset.data[index];
+                const fecha = grafica_movimiento[index].fecha_movimiento;
+                ctx.fillText(fecha, bar.x, bar.y - 5);  
+              });
+            });
+          }
+        }
+      }
+    });
+  </script>
 
 <?= $this->endSection('contenido'); ?>
