@@ -39,7 +39,7 @@
                     <th>Numero cuota</th>
                     <th>cuota</th>
                     <th>estado</th>
-                    <!-- <th>Acciones</th> -->
+                    <th>Acciones</th> 
 
                 </tr>
             </thead>
@@ -53,7 +53,13 @@
                     <td><?php echo $dato['numero_cuota'];?></td>
                     <td> <?php echo $dato['cuota'];?></td>
                     <td> <?php if($dato['estado']=="A"){echo "No completado";}else{echo "completado";}?></td>
-
+                    <td>
+                    <a class="btn btn-warning" href="#"
+                    onclick="seleccionaSaquito(<?php echo $dato['id_saquito'] . ',' . 2 ?>);"
+                    width="16" height="16">
+                    <img class="image" src="<?= base_url("img/documento.png") ?> " title="Editar">
+                    </a>
+                    </td>
 
                 </tr>
                 <?php } ?>
@@ -321,6 +327,54 @@
         });
     });
     </script>
+    <script>
+        function seleccionaSaquito(id, tp) {
+console.log(id,tp);
+        ( id );
+
+
+                if (tp == 2) {
+                    var contador = 0 
+                  
+                    dataURL = "<?php echo base_url('buscar_tp'); ?>" + "/" + id;
+                    $.ajax({
+                        type: "POST",
+                        url: dataURL,
+                        dataType: "json",
+                        success: function(rs) {
+                         console.log(rs);
+ 
+                         let contenido = '';
+                         rs[0].forEach(p => {
+            contador++
+            contenido += `
+            <tr id="util${contador}">
+            <td class="text-center">${proyeccion.valor_cuota}</td>
+            <td class="text-center">${parametro.fecha_cuota}</td>
+            
+            
+                            
+                            </tr>`
+        }); 
+        $('#bodytb').html(contenido);
+        
+                        }
+                
+   
+                   });
+                } else {
+                   $("#tp").val(1);
+                   document.getElementById('exampleModalLabel');
+                   $("#nombre").val('');
+                   $("#btn_guardar").text('Guardar');
+               
+   
+               }
+
+   
+           }
+        
+    </script>
 
 
 
@@ -333,6 +387,6 @@
     <a class="btn btn-warning" href="#"
         onclick=" selecionaRegistro(<php echo $dato['id_saquito'] . ',' . 2 ?>);" data-bs-toggle="modal"
         data-bs-target="#editarModal" width="16" height="16" title="Editar Registro">
-        <img class="image" src="<?= base_url("img/editar.png") ?> " title="Editar">
+        <img class="image" src="<= base_url("img/editar.png") ?> " title="Editar">
     </a>
 </td> -->

@@ -80,6 +80,7 @@ $routes->post('insertar','Movimiento::insertar');
 // $routes->post('obtener_registros/(:num)','Movimiento::obtener_registros/$1');
 $routes->post('Params/(:num)','Movimiento::Params/$1');
 $routes->post('buscar_fondo/(:num)','Emergencia::buscar_fondo/$1');
+$routes->post('buscar_tp/(:num)','Saquito::buscar_tp/$1');
 // $routes->get('update/(:num)','Emergencia::update/$1');
 
 

@@ -88,6 +88,19 @@ class Saquito extends BaseController
 
     }
 
+
+     public function buscar_tp($id)
+      {
+        $returnData = array();
+       $saquitow_ = $this->saquito->traer_tp($id, 'C');
+          if (!empty($saquitow_)) {
+               array_push($returnData, $saquitow_);
+               echo ("tal vez ");  
+            }
+            echo json_encode($returnData);
+            echo ("ni madres ");  
+       }
+
     public function completado(){
 
         $saquitoId = $this->saquito->traerId_saquito();
@@ -101,8 +114,10 @@ class Saquito extends BaseController
             return $this->fail('Error al actualizar', 400);
         }
 
-
     }
+    
+ 
+
 
 
 

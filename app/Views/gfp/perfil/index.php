@@ -111,7 +111,7 @@
             </div>
 
             <div class="modal-footer">
-                <button type="button" class="btn btn-danger"   id="btn-del">Cancelar</button>
+                <button type="button" class="btn btn-danger"   id="btn-del"  data-bs-dismiss="modal">Cancelar</button>
               <button type="submit" class="btn btn-primary" id="btn-agg">Actualizar</button>
             </div>
 

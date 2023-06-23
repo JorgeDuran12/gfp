@@ -63,9 +63,11 @@ class EmergenciaModel extends Model{
 
     public function traer_fondo($id)
     {
-        $this->select('fondo_emergencia.*, sum(valor) as sum');
+        $this->select('fondo_emergencia.*');
         $this->where('id_usuario', $id);
         $this->where('estado','A');
+        // $this->orderBy('id_fondo-emergencia', 'DESC');
+
         $datos = $this->findAll();
         return $datos;
     }
@@ -99,5 +101,24 @@ class EmergenciaModel extends Model{
         return $datos;
     }
 
+
+
+
+    public function traer_id_emergencia()
+    {
+        $session = session();
+        $id_usuario = $session->get('id_usuario');
+
+        $this->select('fondo_emergencia.*');
+        $this->where('estado', 'A');
+        $this->where('id_usuario', $id_usuario);
+        $datos = $this->first();
+        
+        if( empty($datos)) {
+            return $datos['id_fondo-emergencia'] = 0;
+        }else {
+            return $datos['id_fondo-emergencia'];
+        }
+    }
 
 }

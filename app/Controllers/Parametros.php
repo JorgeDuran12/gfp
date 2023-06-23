@@ -101,7 +101,7 @@ public function insertar_detalle($parametro_detalle, $id_parametro_enc){
          public function buscar_detalles($id)
       {
           $returnData = array();
-          $encabezado_ = $this->encabezado->traer_registro($id, 'A');
+          $encabezado_ = $this->encabezado->traer_registro($id, 'C');
           if (!empty($encabezado_)) {
               array_push($returnData, $encabezado_);    
           }

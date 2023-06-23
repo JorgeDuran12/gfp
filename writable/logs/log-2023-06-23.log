@@ -425,3 +425,1877 @@ WARNING - 2023-06-23 04:16:08 --> [DEPRECATED] Creation of dynamic property App\
  2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 12:52:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 12:52:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 12:52:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 12:54:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 12:54:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-23 12:54:23 --> [DEPRECATED] Creation of dynamic property App\Controllers\Principal::$Proyeccion is deprecated in APPPATH\Controllers\Principal.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Principal->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 12:54:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 12:54:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-23 12:54:37 --> [DEPRECATED] Creation of dynamic property App\Controllers\Principal::$Proyeccion is deprecated in APPPATH\Controllers\Principal.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Principal->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 12:54:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 12:54:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 12:54:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-23 12:54:41 --> [DEPRECATED] Creation of dynamic property App\Controllers\Principal::$Proyeccion is deprecated in APPPATH\Controllers\Principal.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Principal->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 12:54:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 12:55:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 12:55:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 12:55:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-23 12:55:12 --> [DEPRECATED] Creation of dynamic property App\Controllers\Principal::$Proyeccion is deprecated in APPPATH\Controllers\Principal.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Principal->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 12:55:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 12:55:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-23 12:55:53 --> [DEPRECATED] Creation of dynamic property App\Controllers\Principal::$Proyeccion is deprecated in APPPATH\Controllers\Principal.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Principal->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 12:55:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-23 12:55:57 --> mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY' in C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `mo...', 0)
+#1 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `mo...')
+#2 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `mo...')
+#3 C:\xampp\htdocs\gfp\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `mo...', Array, false)
+#4 C:\xampp\htdocs\gfp\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\gfp\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\gfp\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\gfp\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\gfp\app\Controllers\Movimiento.php(90): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\gfp\system\CodeIgniter.php(934): App\Controllers\Movimiento->insertar()
+#10 C:\xampp\htdocs\gfp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Movimiento))
+#11 C:\xampp\htdocs\gfp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\gfp\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-06-23 12:55:57 --> Duplicate entry '0' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `movimientos` (`descripcion`, `tipo_movimiento`, `clase_movimiento`, `valor`, `fecha_movimiento`, `usuario_crea`, `fecha_crea`) VALUES (\'Oiuiouo\', \'1\', \'4\', \'1000\', \'2023-06-23T07:55\', \'3\', \'2023-06-23 12:55:57\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `movimientos` (`descripcion`, `tipo_movimiento`, `clase_movimiento`, `valor`, `fecha_movimiento`, `usuario_crea`, `fecha_crea`) VALUES (\'Oiuiouo\', \'1\', \'4\', \'1000\', \'2023-06-23T07:55\', \'3\', \'2023-06-23 12:55:57\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `movimientos` (`descripcion`, `tipo_movimiento`, `clase_movimiento`, `valor`, `fecha_movimiento`, `usuario_crea`, `fecha_crea`) VALUES (\'Oiuiouo\', \'1\', \'4\', \'1000\', \'2023-06-23T07:55\', \'3\', \'2023-06-23 12:55:57\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `movimientos` (`descripcion`, `tipo_movimiento`, `clase_movimiento`, `valor`, `fecha_movimiento`, `usuario_crea`, `fecha_crea`) VALUES (:descripcion:, :tipo_movimiento:, :clase_movimiento:, :valor:, :fecha_movimiento:, :usuario_crea:, :fecha_crea:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Movimiento.php(90): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Movimiento->insertar()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Movimiento))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 12:56:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 12:56:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 12:56:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-23 12:56:17 --> mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY' in C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `mo...', 0)
+#1 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `mo...')
+#2 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `mo...')
+#3 C:\xampp\htdocs\gfp\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `mo...', Array, false)
+#4 C:\xampp\htdocs\gfp\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\gfp\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\gfp\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\gfp\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\gfp\app\Controllers\Movimiento.php(90): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\gfp\system\CodeIgniter.php(934): App\Controllers\Movimiento->insertar()
+#10 C:\xampp\htdocs\gfp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Movimiento))
+#11 C:\xampp\htdocs\gfp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\gfp\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-06-23 12:56:17 --> Duplicate entry '0' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `movimientos` (`descripcion`, `tipo_movimiento`, `clase_movimiento`, `valor`, `fecha_movimiento`, `usuario_crea`, `fecha_crea`) VALUES (\'10000\', \'81\', \'4\', \'12000\', \'2023-06-23T07:56\', \'3\', \'2023-06-23 12:56:17\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `movimientos` (`descripcion`, `tipo_movimiento`, `clase_movimiento`, `valor`, `fecha_movimiento`, `usuario_crea`, `fecha_crea`) VALUES (\'10000\', \'81\', \'4\', \'12000\', \'2023-06-23T07:56\', \'3\', \'2023-06-23 12:56:17\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `movimientos` (`descripcion`, `tipo_movimiento`, `clase_movimiento`, `valor`, `fecha_movimiento`, `usuario_crea`, `fecha_crea`) VALUES (\'10000\', \'81\', \'4\', \'12000\', \'2023-06-23T07:56\', \'3\', \'2023-06-23 12:56:17\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `movimientos` (`descripcion`, `tipo_movimiento`, `clase_movimiento`, `valor`, `fecha_movimiento`, `usuario_crea`, `fecha_crea`) VALUES (:descripcion:, :tipo_movimiento:, :clase_movimiento:, :valor:, :fecha_movimiento:, :usuario_crea:, :fecha_crea:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Movimiento.php(90): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Movimiento->insertar()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Movimiento))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 12:56:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-23 12:56:19 --> mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY' in C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `mo...', 0)
+#1 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `mo...')
+#2 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `mo...')
+#3 C:\xampp\htdocs\gfp\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `mo...', Array, false)
+#4 C:\xampp\htdocs\gfp\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\gfp\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\gfp\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\gfp\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\gfp\app\Controllers\Movimiento.php(78): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\gfp\system\CodeIgniter.php(934): App\Controllers\Movimiento->insertar()
+#10 C:\xampp\htdocs\gfp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Movimiento))
+#11 C:\xampp\htdocs\gfp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\gfp\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-06-23 12:56:19 --> Duplicate entry '0' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `movimientos` (`descripcion`, `tipo_movimiento`, `clase_movimiento`, `valor`, `fecha_movimiento`, `usuario_crea`, `fecha_crea`) VALUES (\'Zapatos\', \'1\', \'3\', \'10000\', \'2023-06-23T07:56\', \'28\', \'2023-06-23 12:56:19\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `movimientos` (`descripcion`, `tipo_movimiento`, `clase_movimiento`, `valor`, `fecha_movimiento`, `usuario_crea`, `fecha_crea`) VALUES (\'Zapatos\', \'1\', \'3\', \'10000\', \'2023-06-23T07:56\', \'28\', \'2023-06-23 12:56:19\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `movimientos` (`descripcion`, `tipo_movimiento`, `clase_movimiento`, `valor`, `fecha_movimiento`, `usuario_crea`, `fecha_crea`) VALUES (\'Zapatos\', \'1\', \'3\', \'10000\', \'2023-06-23T07:56\', \'28\', \'2023-06-23 12:56:19\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `movimientos` (`descripcion`, `tipo_movimiento`, `clase_movimiento`, `valor`, `fecha_movimiento`, `usuario_crea`, `fecha_crea`) VALUES (:descripcion:, :tipo_movimiento:, :clase_movimiento:, :valor:, :fecha_movimiento:, :usuario_crea:, :fecha_crea:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Movimiento.php(78): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Movimiento->insertar()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Movimiento))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 12:56:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 12:56:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-23 12:56:49 --> mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY' in C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `mo...', 0)
+#1 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `mo...')
+#2 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `mo...')
+#3 C:\xampp\htdocs\gfp\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `mo...', Array, false)
+#4 C:\xampp\htdocs\gfp\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\gfp\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\gfp\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\gfp\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\gfp\app\Controllers\Movimiento.php(78): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\gfp\system\CodeIgniter.php(934): App\Controllers\Movimiento->insertar()
+#10 C:\xampp\htdocs\gfp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Movimiento))
+#11 C:\xampp\htdocs\gfp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\gfp\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-06-23 12:56:49 --> Duplicate entry '0' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `movimientos` (`descripcion`, `tipo_movimiento`, `clase_movimiento`, `valor`, `fecha_movimiento`, `usuario_crea`, `fecha_crea`) VALUES (\'Spotify\', \'1\', \'4\', \'1000\', \'2023-06-23T07:56\', \'3\', \'2023-06-23 12:56:49\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `movimientos` (`descripcion`, `tipo_movimiento`, `clase_movimiento`, `valor`, `fecha_movimiento`, `usuario_crea`, `fecha_crea`) VALUES (\'Spotify\', \'1\', \'4\', \'1000\', \'2023-06-23T07:56\', \'3\', \'2023-06-23 12:56:49\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `movimientos` (`descripcion`, `tipo_movimiento`, `clase_movimiento`, `valor`, `fecha_movimiento`, `usuario_crea`, `fecha_crea`) VALUES (\'Spotify\', \'1\', \'4\', \'1000\', \'2023-06-23T07:56\', \'3\', \'2023-06-23 12:56:49\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `movimientos` (`descripcion`, `tipo_movimiento`, `clase_movimiento`, `valor`, `fecha_movimiento`, `usuario_crea`, `fecha_crea`) VALUES (:descripcion:, :tipo_movimiento:, :clase_movimiento:, :valor:, :fecha_movimiento:, :usuario_crea:, :fecha_crea:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Movimiento.php(78): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Movimiento->insertar()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Movimiento))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 12:58:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 12:58:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 12:58:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-23 12:58:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\Principal::$Proyeccion is deprecated in APPPATH\Controllers\Principal.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Principal->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 12:59:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 12:59:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 12:59:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-23 12:59:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\Principal::$Proyeccion is deprecated in APPPATH\Controllers\Principal.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Principal->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 12:59:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 12:59:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 12:59:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-23 12:59:57 --> [DEPRECATED] Creation of dynamic property App\Controllers\Principal::$Proyeccion is deprecated in APPPATH\Controllers\Principal.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Principal->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 13:00:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:00:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:00:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-23 13:00:24 --> [DEPRECATED] Creation of dynamic property App\Controllers\Principal::$Proyeccion is deprecated in APPPATH\Controllers\Principal.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Principal->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 13:00:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-23 13:00:27 --> [DEPRECATED] Creation of dynamic property App\Controllers\Principal::$Proyeccion is deprecated in APPPATH\Controllers\Principal.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Principal->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 13:00:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:00:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:00:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:00:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:00:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-23 13:00:59 --> [DEPRECATED] Creation of dynamic property App\Controllers\Principal::$Proyeccion is deprecated in APPPATH\Controllers\Principal.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Principal->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 13:01:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:01:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:01:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:01:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-23 13:01:12 --> [DEPRECATED] Creation of dynamic property App\Controllers\Principal::$Proyeccion is deprecated in APPPATH\Controllers\Principal.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Principal->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 13:02:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:03:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:03:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:03:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-23 13:03:08 --> [DEPRECATED] Creation of dynamic property App\Controllers\Principal::$Proyeccion is deprecated in APPPATH\Controllers\Principal.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Principal->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 13:03:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:03:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:03:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:03:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-23 13:03:58 --> [DEPRECATED] Creation of dynamic property App\Controllers\Principal::$Proyeccion is deprecated in APPPATH\Controllers\Principal.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Principal->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-23 13:03:58 --> mysqli_sql_exception: Unknown column 'fondo_emergencia.suma_total' in 'field list' in C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `fondo_e...', 0)
+#1 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `fondo_e...')
+#2 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `fondo_e...')
+#3 C:\xampp\htdocs\gfp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `fondo_e...', Array, false)
+#4 C:\xampp\htdocs\gfp\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\gfp\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\gfp\app\Models\EmergenciaModel.php(47): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\gfp\app\Controllers\Principal.php(42): App\Models\EmergenciaModel->grafica_fondo_valor()
+#8 C:\xampp\htdocs\gfp\system\CodeIgniter.php(934): App\Controllers\Principal->index()
+#9 C:\xampp\htdocs\gfp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+#10 C:\xampp\htdocs\gfp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\gfp\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-06-23 13:03:58 --> Unknown column 'fondo_emergencia.suma_total' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `fondo_emergencia`. `suma_total`, `fecha_registro`
+FROM `fondo_emergencia`
+WHERE `estado` = \'A\'
+AND `fondo_emergencia`.`id_usuario` = \'28\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `fondo_emergencia`. `suma_total`, `fecha_registro`
+FROM `fondo_emergencia`
+WHERE `estado` = \'A\'
+AND `fondo_emergencia`.`id_usuario` = \'28\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `fondo_emergencia`. `suma_total`, `fecha_registro`
+FROM `fondo_emergencia`
+WHERE `estado` = \'A\'
+AND `fondo_emergencia`.`id_usuario` = \'28\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `fondo_emergencia`. `suma_total`, `fecha_registro`
+FROM `fondo_emergencia`
+WHERE `estado` = :estado:
+AND `fondo_emergencia`.`id_usuario` = :fondo_emergencia.id_usuario:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\EmergenciaModel.php(47): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Principal.php(42): App\Models\EmergenciaModel->grafica_fondo_valor()
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->index()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 13:04:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-23 13:04:00 --> [DEPRECATED] Creation of dynamic property App\Controllers\Principal::$Proyeccion is deprecated in APPPATH\Controllers\Principal.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Principal->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-23 13:04:00 --> mysqli_sql_exception: Unknown column 'fondo_emergencia.suma_total' in 'field list' in C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `fondo_e...', 0)
+#1 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `fondo_e...')
+#2 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `fondo_e...')
+#3 C:\xampp\htdocs\gfp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `fondo_e...', Array, false)
+#4 C:\xampp\htdocs\gfp\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\gfp\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\gfp\app\Models\EmergenciaModel.php(47): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\gfp\app\Controllers\Principal.php(42): App\Models\EmergenciaModel->grafica_fondo_valor()
+#8 C:\xampp\htdocs\gfp\system\CodeIgniter.php(934): App\Controllers\Principal->index()
+#9 C:\xampp\htdocs\gfp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+#10 C:\xampp\htdocs\gfp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\gfp\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-06-23 13:04:00 --> Unknown column 'fondo_emergencia.suma_total' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `fondo_emergencia`. `suma_total`, `fecha_registro`
+FROM `fondo_emergencia`
+WHERE `estado` = \'A\'
+AND `fondo_emergencia`.`id_usuario` = \'28\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `fondo_emergencia`. `suma_total`, `fecha_registro`
+FROM `fondo_emergencia`
+WHERE `estado` = \'A\'
+AND `fondo_emergencia`.`id_usuario` = \'28\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `fondo_emergencia`. `suma_total`, `fecha_registro`
+FROM `fondo_emergencia`
+WHERE `estado` = \'A\'
+AND `fondo_emergencia`.`id_usuario` = \'28\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `fondo_emergencia`. `suma_total`, `fecha_registro`
+FROM `fondo_emergencia`
+WHERE `estado` = :estado:
+AND `fondo_emergencia`.`id_usuario` = :fondo_emergencia.id_usuario:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\EmergenciaModel.php(47): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Principal.php(42): App\Models\EmergenciaModel->grafica_fondo_valor()
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->index()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 13:04:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:05:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-23 13:05:20 --> [DEPRECATED] Creation of dynamic property App\Controllers\Principal::$Proyeccion is deprecated in APPPATH\Controllers\Principal.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Principal->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-23 13:05:20 --> mysqli_sql_exception: Unknown column 'fondo_emergencia.suma_total' in 'field list' in C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `fondo_e...', 0)
+#1 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `fondo_e...')
+#2 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `fondo_e...')
+#3 C:\xampp\htdocs\gfp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `fondo_e...', Array, false)
+#4 C:\xampp\htdocs\gfp\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\gfp\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\gfp\app\Models\EmergenciaModel.php(47): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\gfp\app\Controllers\Principal.php(42): App\Models\EmergenciaModel->grafica_fondo_valor()
+#8 C:\xampp\htdocs\gfp\system\CodeIgniter.php(934): App\Controllers\Principal->index()
+#9 C:\xampp\htdocs\gfp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+#10 C:\xampp\htdocs\gfp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\gfp\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-06-23 13:05:20 --> Unknown column 'fondo_emergencia.suma_total' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `fondo_emergencia`. `suma_total`, `fecha_registro`
+FROM `fondo_emergencia`
+WHERE `estado` = \'A\'
+AND `fondo_emergencia`.`id_usuario` = \'3\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `fondo_emergencia`. `suma_total`, `fecha_registro`
+FROM `fondo_emergencia`
+WHERE `estado` = \'A\'
+AND `fondo_emergencia`.`id_usuario` = \'3\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `fondo_emergencia`. `suma_total`, `fecha_registro`
+FROM `fondo_emergencia`
+WHERE `estado` = \'A\'
+AND `fondo_emergencia`.`id_usuario` = \'3\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `fondo_emergencia`. `suma_total`, `fecha_registro`
+FROM `fondo_emergencia`
+WHERE `estado` = :estado:
+AND `fondo_emergencia`.`id_usuario` = :fondo_emergencia.id_usuario:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\EmergenciaModel.php(47): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Principal.php(42): App\Models\EmergenciaModel->grafica_fondo_valor()
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->index()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 13:05:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-23 13:05:50 --> [DEPRECATED] Creation of dynamic property App\Controllers\Principal::$Proyeccion is deprecated in APPPATH\Controllers\Principal.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Principal->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-23 13:06:14 --> [DEPRECATED] Creation of dynamic property App\Controllers\Principal::$Proyeccion is deprecated in APPPATH\Controllers\Principal.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Principal->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 13:06:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:06:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-23 13:06:15 --> [DEPRECATED] Creation of dynamic property App\Controllers\Principal::$Proyeccion is deprecated in APPPATH\Controllers\Principal.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Principal->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 13:06:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:06:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:06:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:06:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-23 13:06:39 --> [DEPRECATED] Creation of dynamic property App\Controllers\Principal::$Proyeccion is deprecated in APPPATH\Controllers\Principal.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Principal->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 13:07:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:07:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:07:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-23 13:07:34 --> [DEPRECATED] Creation of dynamic property App\Controllers\Principal::$Proyeccion is deprecated in APPPATH\Controllers\Principal.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Principal->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 13:07:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:07:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:07:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-23 13:07:42 --> [DEPRECATED] Creation of dynamic property App\Controllers\Principal::$Proyeccion is deprecated in APPPATH\Controllers\Principal.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Principal->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 13:07:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:07:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:08:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:08:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:08:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-23 13:08:04 --> [DEPRECATED] Creation of dynamic property App\Controllers\Principal::$Proyeccion is deprecated in APPPATH\Controllers\Principal.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Principal->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 13:08:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:08:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:08:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:08:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:08:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:08:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:08:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:08:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-23 13:08:59 --> [DEPRECATED] Creation of dynamic property App\Controllers\Principal::$Proyeccion is deprecated in APPPATH\Controllers\Principal.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Principal->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 13:09:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:09:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:09:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-23 13:09:18 --> [DEPRECATED] Creation of dynamic property App\Controllers\Principal::$Proyeccion is deprecated in APPPATH\Controllers\Principal.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Principal->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 13:09:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-23 13:09:19 --> Undefined array key "resumen"
+in APPPATH\Views\gfp\perfil\index.php on line 104.
+ 1 APPPATH\Views\gfp\perfil\index.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "resumen"', 'C:\\xampp\\htdocs\\gfp\\app\\Views\\gfp\\perfil\\index.php', 104)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\gfp\\app\\Views\\gfp\\perfil\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('gfp/perfil/index', [], true)
+ 5 APPPATH\Controllers\Perfil.php(41): view('gfp/perfil/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Perfil->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Perfil))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 13:09:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:09:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-23 13:09:25 --> [DEPRECATED] Creation of dynamic property App\Controllers\Principal::$Proyeccion is deprecated in APPPATH\Controllers\Principal.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Principal->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 13:09:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-23 13:09:27 --> Undefined array key "resumen"
+in APPPATH\Views\gfp\perfil\index.php on line 104.
+ 1 APPPATH\Views\gfp\perfil\index.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "resumen"', 'C:\\xampp\\htdocs\\gfp\\app\\Views\\gfp\\perfil\\index.php', 104)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\gfp\\app\\Views\\gfp\\perfil\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('gfp/perfil/index', [], true)
+ 5 APPPATH\Controllers\Perfil.php(41): view('gfp/perfil/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Perfil->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Perfil))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 13:09:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-23 13:09:35 --> [DEPRECATED] Creation of dynamic property App\Controllers\Principal::$Proyeccion is deprecated in APPPATH\Controllers\Principal.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Principal->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 13:09:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:09:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-23 13:09:53 --> Undefined array key "resumen"
+in APPPATH\Views\gfp\perfil\index.php on line 104.
+ 1 APPPATH\Views\gfp\perfil\index.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "resumen"', 'C:\\xampp\\htdocs\\gfp\\app\\Views\\gfp\\perfil\\index.php', 104)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\gfp\\app\\Views\\gfp\\perfil\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('gfp/perfil/index', [], true)
+ 5 APPPATH\Controllers\Perfil.php(41): view('gfp/perfil/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Perfil->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Perfil))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 13:10:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:10:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:10:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:10:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:10:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:10:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:11:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:11:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:11:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:11:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-23 13:11:09 --> [DEPRECATED] Creation of dynamic property App\Controllers\Principal::$Proyeccion is deprecated in APPPATH\Controllers\Principal.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Principal->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 13:11:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-23 13:11:16 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-23 13:11:16 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 13:11:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-23 13:11:27 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-23 13:11:27 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-23 13:11:28 --> Undefined array key "id_saquito"
+in APPPATH\Models\SaquitoModel.php on line 58.
+ 1 APPPATH\Models\SaquitoModel.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_saquito"', 'C:\\xampp\\htdocs\\gfp\\app\\Models\\SaquitoModel.php', 58)
+ 2 APPPATH\Controllers\Proyeccion.php(58): App\Models\SaquitoModel->traerId_saquito()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Proyeccion->Insertar()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proyeccion))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 13:11:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:12:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:12:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:12:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-23 13:12:20 --> Undefined array key "resumen"
+in APPPATH\Views\gfp\perfil\index.php on line 104.
+ 1 APPPATH\Views\gfp\perfil\index.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "resumen"', 'C:\\xampp\\htdocs\\gfp\\app\\Views\\gfp\\perfil\\index.php', 104)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\gfp\\app\\Views\\gfp\\perfil\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('gfp/perfil/index', [], true)
+ 5 APPPATH\Controllers\Perfil.php(41): view('gfp/perfil/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Perfil->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Perfil))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 13:12:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:12:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-23 13:12:40 --> Undefined array key "resumen"
+in APPPATH\Views\gfp\perfil\index.php on line 104.
+ 1 APPPATH\Views\gfp\perfil\index.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "resumen"', 'C:\\xampp\\htdocs\\gfp\\app\\Views\\gfp\\perfil\\index.php', 104)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\gfp\\app\\Views\\gfp\\perfil\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('gfp/perfil/index', [], true)
+ 5 APPPATH\Controllers\Perfil.php(41): view('gfp/perfil/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Perfil->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Perfil))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 13:13:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:13:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:14:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:14:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:15:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:15:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:15:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:15:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:15:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:15:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:15:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:15:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:15:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:15:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:15:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:15:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:16:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-23 13:16:13 --> [DEPRECATED] Creation of dynamic property App\Controllers\Principal::$Proyeccion is deprecated in APPPATH\Controllers\Principal.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Principal->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 13:16:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:16:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:16:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:16:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:16:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:16:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-23 13:16:55 --> [DEPRECATED] Creation of dynamic property App\Controllers\Principal::$Proyeccion is deprecated in APPPATH\Controllers\Principal.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Principal->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 13:16:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-23 13:16:58 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-23 13:16:58 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 13:16:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-23 13:16:58 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-23 13:16:58 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 13:16:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:17:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:17:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:17:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-23 13:17:11 --> [DEPRECATED] Creation of dynamic property App\Controllers\Principal::$Proyeccion is deprecated in APPPATH\Controllers\Principal.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Principal->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 13:17:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:17:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:17:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:17:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:17:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:17:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:17:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:17:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-23 13:17:41 --> [DEPRECATED] Creation of dynamic property App\Controllers\Principal::$Proyeccion is deprecated in APPPATH\Controllers\Principal.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Principal->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 13:17:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-23 13:17:50 --> [DEPRECATED] Creation of dynamic property App\Controllers\Principal::$Proyeccion is deprecated in APPPATH\Controllers\Principal.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Principal->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 13:17:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:18:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:18:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:18:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:18:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:18:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:18:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:18:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:18:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:18:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:18:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-23 13:18:21 --> [DEPRECATED] Creation of dynamic property App\Controllers\Principal::$Proyeccion is deprecated in APPPATH\Controllers\Principal.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Principal->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 13:18:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-23 13:18:34 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$Proyeccion is deprecated in APPPATH\Controllers\Proyeccion.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-06-23 13:18:34 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 13:19:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:19:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:19:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:20:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:20:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:21:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:21:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:21:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:21:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-23 13:21:47 --> [DEPRECATED] Creation of dynamic property App\Controllers\Principal::$Proyeccion is deprecated in APPPATH\Controllers\Principal.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Principal->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 13:21:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:21:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-23 13:21:49 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 13:22:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:22:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:22:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:22:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:22:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:23:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:25:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-23 13:25:25 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 13:25:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:25:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:25:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-23 13:25:32 --> [DEPRECATED] Creation of dynamic property App\Controllers\Principal::$Proyeccion is deprecated in APPPATH\Controllers\Principal.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Principal->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 13:25:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:25:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:25:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:25:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-23 13:25:46 --> [DEPRECATED] Creation of dynamic property App\Controllers\Principal::$Proyeccion is deprecated in APPPATH\Controllers\Principal.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Principal->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 13:25:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-23 13:25:50 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 13:26:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-23 13:26:01 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 13:26:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-23 13:26:01 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 13:26:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:26:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:26:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-23 13:26:11 --> [DEPRECATED] Creation of dynamic property App\Controllers\Principal::$Proyeccion is deprecated in APPPATH\Controllers\Principal.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Principal->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 13:28:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:28:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:28:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:28:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:28:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:28:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-23 13:28:39 --> [DEPRECATED] Creation of dynamic property App\Controllers\Proyeccion::$usuario is deprecated in APPPATH\Controllers\Proyeccion.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Proyeccion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 13:28:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:28:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:28:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:28:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-23 13:28:48 --> [DEPRECATED] Creation of dynamic property App\Controllers\Principal::$Proyeccion is deprecated in APPPATH\Controllers\Principal.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Principal->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 13:29:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-23 13:29:22 --> [DEPRECATED] Creation of dynamic property App\Controllers\Principal::$Proyeccion is deprecated in APPPATH\Controllers\Principal.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Principal->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 13:29:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:29:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:30:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:31:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:31:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-23 13:31:15 --> [DEPRECATED] Creation of dynamic property App\Controllers\Principal::$Proyeccion is deprecated in APPPATH\Controllers\Principal.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Principal->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 13:32:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:32:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:32:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:33:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:34:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:36:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:38:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:38:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:38:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:38:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:38:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:39:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:39:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:39:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:39:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:39:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:39:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:39:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:39:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:39:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:40:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:40:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:40:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:41:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:41:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:41:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:41:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:41:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:41:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:42:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:42:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:42:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:42:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:42:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:42:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:42:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:42:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:42:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:45:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:45:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:45:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:45:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:46:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:46:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:46:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:46:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:46:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:46:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:48:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:48:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:48:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:48:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:48:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:48:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:54:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:57:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:57:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:57:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:57:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:57:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:57:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:57:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:57:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:57:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:58:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:58:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:58:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:58:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:58:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:58:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:58:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:58:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:58:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:58:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 13:58:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:09:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:09:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:09:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:10:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:10:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:10:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:10:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:11:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:11:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:11:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:11:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:11:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:11:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:12:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:12:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:12:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:12:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:12:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:13:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:13:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:13:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:13:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:13:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:13:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:13:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:13:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:14:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:14:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:14:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:14:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:15:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:17:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-23 14:17:39 --> Call to undefined method App\Models\EmergenciaModel::orderDesc
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Models\EmergenciaModel.php(69): CodeIgniter\Model->__call('orderDesc', [...])
+ 2 APPPATH\Controllers\Emergencia.php(28): App\Models\EmergenciaModel->traer_fondo('28')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Emergencia->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Emergencia))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 14:19:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-23 14:19:06 --> Cannot access offset of type string on string
+in APPPATH\Views\gfp\fondo\emergencia.php on line 77.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('gfp/fondo/emergencia', [], true)
+ 4 APPPATH\Controllers\Emergencia.php(31): view('gfp/fondo/emergencia', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Emergencia->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Emergencia))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 14:19:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-23 14:19:42 --> Cannot access offset of type string on string
+in APPPATH\Views\gfp\fondo\emergencia.php on line 77.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('gfp/fondo/emergencia', [], true)
+ 4 APPPATH\Controllers\Emergencia.php(31): view('gfp/fondo/emergencia', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Emergencia->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Emergencia))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 14:19:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:20:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:22:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:22:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:22:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:22:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:22:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:22:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:23:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:24:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:26:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:26:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:26:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:26:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:29:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-23 14:29:35 --> Undefined variable $encabezado
+in APPPATH\Views\gfp\fondo\proyeccion_saquito.php on line 21.
+ 1 APPPATH\Views\gfp\fondo\proyeccion_saquito.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $encabezado', 'C:\\xampp\\htdocs\\gfp\\app\\Views\\gfp\\fondo\\proyeccion_saquito.php', 21)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\gfp\\app\\Views\\gfp\\fondo\\proyeccion_saquito.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('gfp/fondo/proyeccion_saquito', [], true)
+ 5 APPPATH\Controllers\Proyeccion.php(45): view('gfp/fondo/proyeccion_saquito', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Proyeccion->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proyeccion))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 14:31:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-23 14:31:52 --> Undefined array key "id_proyeccion"
+in APPPATH\Views\gfp\fondo\saquito.php on line 57.
+ 1 APPPATH\Views\gfp\fondo\saquito.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_proyeccion"', 'C:\\xampp\\htdocs\\gfp\\app\\Views\\gfp\\fondo\\saquito.php', 57)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\gfp\\app\\Views\\gfp\\fondo\\saquito.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('gfp/fondo/saquito', [], true)
+ 5 APPPATH\Controllers\Saquito.php(31): view('gfp/fondo/saquito', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Saquito->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Saquito))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 14:32:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-23 14:32:10 --> Undefined variable $encabezado
+in APPPATH\Views\gfp\fondo\proyeccion_saquito.php on line 21.
+ 1 APPPATH\Views\gfp\fondo\proyeccion_saquito.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $encabezado', 'C:\\xampp\\htdocs\\gfp\\app\\Views\\gfp\\fondo\\proyeccion_saquito.php', 21)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\gfp\\app\\Views\\gfp\\fondo\\proyeccion_saquito.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('gfp/fondo/proyeccion_saquito', [], true)
+ 5 APPPATH\Controllers\Proyeccion.php(45): view('gfp/fondo/proyeccion_saquito', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Proyeccion->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proyeccion))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 14:32:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-23 14:32:10 --> Undefined variable $encabezado
+in APPPATH\Views\gfp\fondo\proyeccion_saquito.php on line 21.
+ 1 APPPATH\Views\gfp\fondo\proyeccion_saquito.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $encabezado', 'C:\\xampp\\htdocs\\gfp\\app\\Views\\gfp\\fondo\\proyeccion_saquito.php', 21)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\gfp\\app\\Views\\gfp\\fondo\\proyeccion_saquito.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('gfp/fondo/proyeccion_saquito', [], true)
+ 5 APPPATH\Controllers\Proyeccion.php(45): view('gfp/fondo/proyeccion_saquito', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Proyeccion->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proyeccion))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 14:33:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:33:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:33:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:34:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:35:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:36:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-23 14:36:09 --> Undefined array key ""
+in APPPATH\Views\gfp\fondo\saquito.php on line 58.
+ 1 APPPATH\Views\gfp\fondo\saquito.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key ""', 'C:\\xampp\\htdocs\\gfp\\app\\Views\\gfp\\fondo\\saquito.php', 58)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\gfp\\app\\Views\\gfp\\fondo\\saquito.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('gfp/fondo/saquito', [], true)
+ 5 APPPATH\Controllers\Saquito.php(31): view('gfp/fondo/saquito', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Saquito->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Saquito))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 14:37:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:37:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:37:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:38:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:38:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:38:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:38:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:38:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:38:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:38:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-23 14:38:26 --> Call to undefined method App\Models\ParamentrosModel::traer_Datos
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\Proyeccion.php(45): CodeIgniter\Model->__call('traer_Datos', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Proyeccion->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proyeccion))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 14:38:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:39:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:39:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:40:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:40:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:40:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:41:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:41:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:41:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:41:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:46:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:46:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:46:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-23 14:46:05 --> mysqli_sql_exception: Unknown column 'saquito.id_saquito' in 'on clause' in C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `saquito...', 0)
+#1 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `saquito...')
+#2 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `saquito...')
+#3 C:\xampp\htdocs\gfp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `saquito...', Array, false)
+#4 C:\xampp\htdocs\gfp\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\gfp\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\gfp\app\Models\SaquitoModel.php(93): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\gfp\app\Controllers\Saquito.php(93): App\Models\SaquitoModel->traer_proyeccion('92', 'C')
+#8 C:\xampp\htdocs\gfp\system\CodeIgniter.php(934): App\Controllers\Saquito->buscar_proyeccion('92')
+#9 C:\xampp\htdocs\gfp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Saquito))
+#10 C:\xampp\htdocs\gfp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\gfp\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-06-23 14:46:05 --> Unknown column 'saquito.id_saquito' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `saquitos`.*, `proyeccion`.*
+FROM `saquitos`
+JOIN `proyeccion` ON `proyeccion`.`id_proyeccion` = `saquito`.`id_saquito`
+WHERE `proyeccion`.`id_saquito` = \'92\'
+AND `saquitos`.`estado` = \'A\'
+AND `proyeccion`.`estado` = \'A\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `saquitos`.*, `proyeccion`.*
+FROM `saquitos`
+JOIN `proyeccion` ON `proyeccion`.`id_proyeccion` = `saquito`.`id_saquito`
+WHERE `proyeccion`.`id_saquito` = \'92\'
+AND `saquitos`.`estado` = \'A\'
+AND `proyeccion`.`estado` = \'A\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `saquitos`.*, `proyeccion`.*
+FROM `saquitos`
+JOIN `proyeccion` ON `proyeccion`.`id_proyeccion` = `saquito`.`id_saquito`
+WHERE `proyeccion`.`id_saquito` = \'92\'
+AND `saquitos`.`estado` = \'A\'
+AND `proyeccion`.`estado` = \'A\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `saquitos`.*, `proyeccion`.*
+FROM `saquitos`
+JOIN `proyeccion` ON `proyeccion`.`id_proyeccion` = `saquito`.`id_saquito`
+WHERE `proyeccion`.`id_saquito` = :proyeccion.id_saquito:
+AND `saquitos`.`estado` = :saquitos.estado:
+AND `proyeccion`.`estado` = :proyeccion.estado:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\SaquitoModel.php(93): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Saquito.php(93): App\Models\SaquitoModel->traer_proyeccion('92', 'C')
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Saquito->buscar_proyeccion('92')
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Saquito))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 14:46:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:46:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:46:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:46:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:46:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:46:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:46:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:46:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-23 14:46:49 --> mysqli_sql_exception: Unknown column 'saquito.id_saquito' in 'on clause' in C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `saquito...', 0)
+#1 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `saquito...')
+#2 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `saquito...')
+#3 C:\xampp\htdocs\gfp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `saquito...', Array, false)
+#4 C:\xampp\htdocs\gfp\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\gfp\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\gfp\app\Models\SaquitoModel.php(93): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\gfp\app\Controllers\Saquito.php(93): App\Models\SaquitoModel->traer_proyeccion('88', 'C')
+#8 C:\xampp\htdocs\gfp\system\CodeIgniter.php(934): App\Controllers\Saquito->buscar_proyeccion('88')
+#9 C:\xampp\htdocs\gfp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Saquito))
+#10 C:\xampp\htdocs\gfp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\gfp\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-06-23 14:46:49 --> Unknown column 'saquito.id_saquito' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `saquitos`.*, `proyeccion`.*
+FROM `saquitos`
+JOIN `proyeccion` ON `proyeccion`.`id_proyeccion` = `saquito`.`id_saquito`
+WHERE `proyeccion`.`id_saquito` = \'88\'
+AND `saquitos`.`estado` = \'C\'
+AND `proyeccion`.`estado` = \'C\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `saquitos`.*, `proyeccion`.*
+FROM `saquitos`
+JOIN `proyeccion` ON `proyeccion`.`id_proyeccion` = `saquito`.`id_saquito`
+WHERE `proyeccion`.`id_saquito` = \'88\'
+AND `saquitos`.`estado` = \'C\'
+AND `proyeccion`.`estado` = \'C\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `saquitos`.*, `proyeccion`.*
+FROM `saquitos`
+JOIN `proyeccion` ON `proyeccion`.`id_proyeccion` = `saquito`.`id_saquito`
+WHERE `proyeccion`.`id_saquito` = \'88\'
+AND `saquitos`.`estado` = \'C\'
+AND `proyeccion`.`estado` = \'C\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `saquitos`.*, `proyeccion`.*
+FROM `saquitos`
+JOIN `proyeccion` ON `proyeccion`.`id_proyeccion` = `saquito`.`id_saquito`
+WHERE `proyeccion`.`id_saquito` = :proyeccion.id_saquito:
+AND `saquitos`.`estado` = :saquitos.estado:
+AND `proyeccion`.`estado` = :proyeccion.estado:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\SaquitoModel.php(93): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Saquito.php(93): App\Models\SaquitoModel->traer_proyeccion('88', 'C')
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Saquito->buscar_proyeccion('88')
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Saquito))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 14:47:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:47:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:47:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-23 14:47:06 --> mysqli_sql_exception: Unknown column 'saquito.id_saquito' in 'on clause' in C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `saquito...', 0)
+#1 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `saquito...')
+#2 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `saquito...')
+#3 C:\xampp\htdocs\gfp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `saquito...', Array, false)
+#4 C:\xampp\htdocs\gfp\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\gfp\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\gfp\app\Models\SaquitoModel.php(93): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\gfp\app\Controllers\Saquito.php(93): App\Models\SaquitoModel->traer_proyeccion('92', 'C')
+#8 C:\xampp\htdocs\gfp\system\CodeIgniter.php(934): App\Controllers\Saquito->buscar_proyeccion('92')
+#9 C:\xampp\htdocs\gfp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Saquito))
+#10 C:\xampp\htdocs\gfp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\gfp\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-06-23 14:47:06 --> Unknown column 'saquito.id_saquito' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `saquitos`.*, `proyeccion`.*
+FROM `saquitos`
+JOIN `proyeccion` ON `proyeccion`.`id_proyeccion` = `saquito`.`id_saquito`
+WHERE `proyeccion`.`id_saquito` = \'92\'
+AND `saquitos`.`estado` = \'C\'
+AND `proyeccion`.`estado` = \'C\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `saquitos`.*, `proyeccion`.*
+FROM `saquitos`
+JOIN `proyeccion` ON `proyeccion`.`id_proyeccion` = `saquito`.`id_saquito`
+WHERE `proyeccion`.`id_saquito` = \'92\'
+AND `saquitos`.`estado` = \'C\'
+AND `proyeccion`.`estado` = \'C\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `saquitos`.*, `proyeccion`.*
+FROM `saquitos`
+JOIN `proyeccion` ON `proyeccion`.`id_proyeccion` = `saquito`.`id_saquito`
+WHERE `proyeccion`.`id_saquito` = \'92\'
+AND `saquitos`.`estado` = \'C\'
+AND `proyeccion`.`estado` = \'C\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `saquitos`.*, `proyeccion`.*
+FROM `saquitos`
+JOIN `proyeccion` ON `proyeccion`.`id_proyeccion` = `saquito`.`id_saquito`
+WHERE `proyeccion`.`id_saquito` = :proyeccion.id_saquito:
+AND `saquitos`.`estado` = :saquitos.estado:
+AND `proyeccion`.`estado` = :proyeccion.estado:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\SaquitoModel.php(93): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Saquito.php(93): App\Models\SaquitoModel->traer_proyeccion('92', 'C')
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Saquito->buscar_proyeccion('92')
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Saquito))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 14:47:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:47:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:47:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:47:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:47:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-23 14:47:38 --> mysqli_sql_exception: Unknown column 'saquito.id_saquito' in 'on clause' in C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `saquito...', 0)
+#1 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `saquito...')
+#2 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `saquito...')
+#3 C:\xampp\htdocs\gfp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `saquito...', Array, false)
+#4 C:\xampp\htdocs\gfp\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\gfp\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\gfp\app\Models\SaquitoModel.php(93): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\gfp\app\Controllers\Saquito.php(93): App\Models\SaquitoModel->traer_proyeccion('88', 'A')
+#8 C:\xampp\htdocs\gfp\system\CodeIgniter.php(934): App\Controllers\Saquito->buscar_proyeccion('88')
+#9 C:\xampp\htdocs\gfp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Saquito))
+#10 C:\xampp\htdocs\gfp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\gfp\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-06-23 14:47:38 --> Unknown column 'saquito.id_saquito' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `saquitos`.*, `proyeccion`.*
+FROM `saquitos`
+JOIN `proyeccion` ON `proyeccion`.`id_proyeccion` = `saquito`.`id_saquito`
+WHERE `proyeccion`.`id_saquito` = \'88\'
+AND `saquitos`.`estado` = \'A\'
+AND `proyeccion`.`estado` = \'A\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `saquitos`.*, `proyeccion`.*
+FROM `saquitos`
+JOIN `proyeccion` ON `proyeccion`.`id_proyeccion` = `saquito`.`id_saquito`
+WHERE `proyeccion`.`id_saquito` = \'88\'
+AND `saquitos`.`estado` = \'A\'
+AND `proyeccion`.`estado` = \'A\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `saquitos`.*, `proyeccion`.*
+FROM `saquitos`
+JOIN `proyeccion` ON `proyeccion`.`id_proyeccion` = `saquito`.`id_saquito`
+WHERE `proyeccion`.`id_saquito` = \'88\'
+AND `saquitos`.`estado` = \'A\'
+AND `proyeccion`.`estado` = \'A\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `saquitos`.*, `proyeccion`.*
+FROM `saquitos`
+JOIN `proyeccion` ON `proyeccion`.`id_proyeccion` = `saquito`.`id_saquito`
+WHERE `proyeccion`.`id_saquito` = :proyeccion.id_saquito:
+AND `saquitos`.`estado` = :saquitos.estado:
+AND `proyeccion`.`estado` = :proyeccion.estado:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\SaquitoModel.php(93): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Saquito.php(93): App\Models\SaquitoModel->traer_proyeccion('88', 'A')
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Saquito->buscar_proyeccion('88')
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Saquito))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 14:47:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:47:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:47:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:47:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:48:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:48:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:48:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:48:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:48:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-23 14:48:44 --> syntax error, unexpected variable "$routes"
+in APPPATH\Config\Routes.php on line 87.
+ 1 SYSTEMPATH\CodeIgniter.php(802): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH\CodeIgniter.php(449): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-23 14:48:44 --> syntax error, unexpected variable "$routes"
+in APPPATH\Config\Routes.php on line 87.
+ 1 SYSTEMPATH\CodeIgniter.php(802): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH\CodeIgniter.php(449): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-23 14:48:44 --> syntax error, unexpected variable "$routes"
+in APPPATH\Config\Routes.php on line 87.
+ 1 SYSTEMPATH\CodeIgniter.php(802): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH\CodeIgniter.php(449): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-23 14:48:44 --> syntax error, unexpected variable "$routes"
+in APPPATH\Config\Routes.php on line 87.
+ 1 SYSTEMPATH\CodeIgniter.php(802): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH\CodeIgniter.php(449): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-23 14:48:44 --> syntax error, unexpected variable "$routes"
+in APPPATH\Config\Routes.php on line 87.
+ 1 SYSTEMPATH\CodeIgniter.php(802): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH\CodeIgniter.php(449): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-23 14:48:44 --> syntax error, unexpected variable "$routes"
+in APPPATH\Config\Routes.php on line 87.
+ 1 SYSTEMPATH\CodeIgniter.php(802): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH\CodeIgniter.php(449): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-23 14:48:44 --> syntax error, unexpected variable "$routes"
+in APPPATH\Config\Routes.php on line 87.
+ 1 SYSTEMPATH\CodeIgniter.php(802): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH\CodeIgniter.php(449): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-23 14:48:44 --> syntax error, unexpected variable "$routes"
+in APPPATH\Config\Routes.php on line 87.
+ 1 SYSTEMPATH\CodeIgniter.php(802): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH\CodeIgniter.php(449): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-23 14:48:48 --> syntax error, unexpected variable "$routes"
+in APPPATH\Config\Routes.php on line 87.
+ 1 SYSTEMPATH\CodeIgniter.php(802): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH\CodeIgniter.php(449): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-23 14:48:50 --> syntax error, unexpected variable "$routes"
+in APPPATH\Config\Routes.php on line 87.
+ 1 SYSTEMPATH\CodeIgniter.php(802): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH\CodeIgniter.php(449): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 14:48:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:48:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:48:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:48:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:48:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:48:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:48:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-23 14:49:01 --> mysqli_sql_exception: Unknown column 'saquito.id_saquito' in 'on clause' in C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `saquito...', 0)
+#1 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `saquito...')
+#2 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `saquito...')
+#3 C:\xampp\htdocs\gfp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `saquito...', Array, false)
+#4 C:\xampp\htdocs\gfp\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\gfp\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\gfp\app\Models\SaquitoModel.php(93): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\gfp\app\Controllers\Saquito.php(93): App\Models\SaquitoModel->traer_proyeccion('86', 'A')
+#8 C:\xampp\htdocs\gfp\system\CodeIgniter.php(934): App\Controllers\Saquito->buscar_proyeccion('86')
+#9 C:\xampp\htdocs\gfp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Saquito))
+#10 C:\xampp\htdocs\gfp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\gfp\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-06-23 14:49:01 --> Unknown column 'saquito.id_saquito' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `saquitos`.*, `proyeccion`.*
+FROM `saquitos`
+JOIN `proyeccion` ON `proyeccion`.`id_proyeccion` = `saquito`.`id_saquito`
+WHERE `proyeccion`.`id_saquito` = \'86\'
+AND `saquitos`.`estado` = \'A\'
+AND `proyeccion`.`estado` = \'A\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `saquitos`.*, `proyeccion`.*
+FROM `saquitos`
+JOIN `proyeccion` ON `proyeccion`.`id_proyeccion` = `saquito`.`id_saquito`
+WHERE `proyeccion`.`id_saquito` = \'86\'
+AND `saquitos`.`estado` = \'A\'
+AND `proyeccion`.`estado` = \'A\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `saquitos`.*, `proyeccion`.*
+FROM `saquitos`
+JOIN `proyeccion` ON `proyeccion`.`id_proyeccion` = `saquito`.`id_saquito`
+WHERE `proyeccion`.`id_saquito` = \'86\'
+AND `saquitos`.`estado` = \'A\'
+AND `proyeccion`.`estado` = \'A\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `saquitos`.*, `proyeccion`.*
+FROM `saquitos`
+JOIN `proyeccion` ON `proyeccion`.`id_proyeccion` = `saquito`.`id_saquito`
+WHERE `proyeccion`.`id_saquito` = :proyeccion.id_saquito:
+AND `saquitos`.`estado` = :saquitos.estado:
+AND `proyeccion`.`estado` = :proyeccion.estado:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\SaquitoModel.php(93): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Saquito.php(93): App\Models\SaquitoModel->traer_proyeccion('86', 'A')
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Saquito->buscar_proyeccion('86')
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Saquito))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-23 14:49:16 --> mysqli_sql_exception: Unknown column 'saquito.id_saquito' in 'on clause' in C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `saquito...', 0)
+#1 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `saquito...')
+#2 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `saquito...')
+#3 C:\xampp\htdocs\gfp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `saquito...', Array, false)
+#4 C:\xampp\htdocs\gfp\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\gfp\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\gfp\app\Models\SaquitoModel.php(93): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\gfp\app\Controllers\Saquito.php(93): App\Models\SaquitoModel->traer_proyeccion('86', 'A')
+#8 C:\xampp\htdocs\gfp\system\CodeIgniter.php(934): App\Controllers\Saquito->buscar_proyeccion('86')
+#9 C:\xampp\htdocs\gfp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Saquito))
+#10 C:\xampp\htdocs\gfp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\gfp\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-06-23 14:49:16 --> Unknown column 'saquito.id_saquito' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `saquitos`.*, `proyeccion`.*
+FROM `saquitos`
+JOIN `proyeccion` ON `proyeccion`.`id_proyeccion` = `saquito`.`id_saquito`
+WHERE `proyeccion`.`id_saquito` = \'86\'
+AND `saquitos`.`estado` = \'A\'
+AND `proyeccion`.`estado` = \'A\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `saquitos`.*, `proyeccion`.*
+FROM `saquitos`
+JOIN `proyeccion` ON `proyeccion`.`id_proyeccion` = `saquito`.`id_saquito`
+WHERE `proyeccion`.`id_saquito` = \'86\'
+AND `saquitos`.`estado` = \'A\'
+AND `proyeccion`.`estado` = \'A\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `saquitos`.*, `proyeccion`.*
+FROM `saquitos`
+JOIN `proyeccion` ON `proyeccion`.`id_proyeccion` = `saquito`.`id_saquito`
+WHERE `proyeccion`.`id_saquito` = \'86\'
+AND `saquitos`.`estado` = \'A\'
+AND `proyeccion`.`estado` = \'A\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `saquitos`.*, `proyeccion`.*
+FROM `saquitos`
+JOIN `proyeccion` ON `proyeccion`.`id_proyeccion` = `saquito`.`id_saquito`
+WHERE `proyeccion`.`id_saquito` = :proyeccion.id_saquito:
+AND `saquitos`.`estado` = :saquitos.estado:
+AND `proyeccion`.`estado` = :proyeccion.estado:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\SaquitoModel.php(93): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Saquito.php(93): App\Models\SaquitoModel->traer_proyeccion('86', 'A')
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Saquito->buscar_proyeccion('86')
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Saquito))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 14:50:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:50:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:50:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:50:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:50:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:50:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:51:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:51:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:51:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-23 14:51:10 --> mysqli_sql_exception: Unknown column 'saquito.id_saquito' in 'on clause' in C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `saquito...', 0)
+#1 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `saquito...')
+#2 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `saquito...')
+#3 C:\xampp\htdocs\gfp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `saquito...', Array, false)
+#4 C:\xampp\htdocs\gfp\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\gfp\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\gfp\app\Models\SaquitoModel.php(93): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\gfp\app\Controllers\Saquito.php(93): App\Models\SaquitoModel->traer_proyeccion('90', 'C')
+#8 C:\xampp\htdocs\gfp\system\CodeIgniter.php(934): App\Controllers\Saquito->buscar_proyeccion('90')
+#9 C:\xampp\htdocs\gfp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Saquito))
+#10 C:\xampp\htdocs\gfp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\gfp\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-06-23 14:51:10 --> Unknown column 'saquito.id_saquito' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `saquitos`.*, `proyeccion`.*
+FROM `saquitos`
+JOIN `proyeccion` ON `proyeccion`.`id_proyeccion` = `saquito`.`id_saquito`
+WHERE `proyeccion`.`id_saquito` = \'90\'
+AND `saquitos`.`estado` = \'A\'
+AND `proyeccion`.`estado` = \'A\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `saquitos`.*, `proyeccion`.*
+FROM `saquitos`
+JOIN `proyeccion` ON `proyeccion`.`id_proyeccion` = `saquito`.`id_saquito`
+WHERE `proyeccion`.`id_saquito` = \'90\'
+AND `saquitos`.`estado` = \'A\'
+AND `proyeccion`.`estado` = \'A\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `saquitos`.*, `proyeccion`.*
+FROM `saquitos`
+JOIN `proyeccion` ON `proyeccion`.`id_proyeccion` = `saquito`.`id_saquito`
+WHERE `proyeccion`.`id_saquito` = \'90\'
+AND `saquitos`.`estado` = \'A\'
+AND `proyeccion`.`estado` = \'A\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `saquitos`.*, `proyeccion`.*
+FROM `saquitos`
+JOIN `proyeccion` ON `proyeccion`.`id_proyeccion` = `saquito`.`id_saquito`
+WHERE `proyeccion`.`id_saquito` = :proyeccion.id_saquito:
+AND `saquitos`.`estado` = :saquitos.estado:
+AND `proyeccion`.`estado` = :proyeccion.estado:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\SaquitoModel.php(93): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Saquito.php(93): App\Models\SaquitoModel->traer_proyeccion('90', 'C')
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Saquito->buscar_proyeccion('90')
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Saquito))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 14:53:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:53:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:53:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-23 14:53:10 --> mysqli_sql_exception: Unknown column 'saquito.id_saquito' in 'on clause' in C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `saquito...', 0)
+#1 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `saquito...')
+#2 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `saquito...')
+#3 C:\xampp\htdocs\gfp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `saquito...', Array, false)
+#4 C:\xampp\htdocs\gfp\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\gfp\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\gfp\app\Models\SaquitoModel.php(93): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\gfp\app\Controllers\Saquito.php(93): App\Models\SaquitoModel->traer_proyeccion('88', 'C')
+#8 C:\xampp\htdocs\gfp\system\CodeIgniter.php(934): App\Controllers\Saquito->buscar_proyeccion('88')
+#9 C:\xampp\htdocs\gfp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Saquito))
+#10 C:\xampp\htdocs\gfp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\gfp\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-06-23 14:53:10 --> Unknown column 'saquito.id_saquito' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `saquitos`.*, `proyeccion`.*
+FROM `saquitos`
+JOIN `proyeccion` ON `proyeccion`.`id_saquito` = `saquito`.`id_saquito`
+WHERE `proyeccion`.`id_saquito` = \'88\'
+AND `saquitos`.`estado` = \'A\'
+AND `proyeccion`.`estado` = \'A\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `saquitos`.*, `proyeccion`.*
+FROM `saquitos`
+JOIN `proyeccion` ON `proyeccion`.`id_saquito` = `saquito`.`id_saquito`
+WHERE `proyeccion`.`id_saquito` = \'88\'
+AND `saquitos`.`estado` = \'A\'
+AND `proyeccion`.`estado` = \'A\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `saquitos`.*, `proyeccion`.*
+FROM `saquitos`
+JOIN `proyeccion` ON `proyeccion`.`id_saquito` = `saquito`.`id_saquito`
+WHERE `proyeccion`.`id_saquito` = \'88\'
+AND `saquitos`.`estado` = \'A\'
+AND `proyeccion`.`estado` = \'A\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `saquitos`.*, `proyeccion`.*
+FROM `saquitos`
+JOIN `proyeccion` ON `proyeccion`.`id_saquito` = `saquito`.`id_saquito`
+WHERE `proyeccion`.`id_saquito` = :proyeccion.id_saquito:
+AND `saquitos`.`estado` = :saquitos.estado:
+AND `proyeccion`.`estado` = :proyeccion.estado:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\SaquitoModel.php(93): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Saquito.php(93): App\Models\SaquitoModel->traer_proyeccion('88', 'C')
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Saquito->buscar_proyeccion('88')
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Saquito))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 14:54:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:55:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:55:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:55:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:55:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:01:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:01:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:01:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-23 15:01:42 --> mysqli_sql_exception: Unknown column 'saquito.id_saquito' in 'on clause' in C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `saquito...', 0)
+#1 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `saquito...')
+#2 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `saquito...')
+#3 C:\xampp\htdocs\gfp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `saquito...', Array, false)
+#4 C:\xampp\htdocs\gfp\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\gfp\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\gfp\app\Models\SaquitoModel.php(93): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\gfp\app\Controllers\Saquito.php(93): App\Models\SaquitoModel->traer_tp('89', 'C')
+#8 C:\xampp\htdocs\gfp\system\CodeIgniter.php(934): App\Controllers\Saquito->buscar_tp('89')
+#9 C:\xampp\htdocs\gfp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Saquito))
+#10 C:\xampp\htdocs\gfp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\gfp\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-06-23 15:01:42 --> Unknown column 'saquito.id_saquito' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `saquitos`.*, `proyeccion`.*
+FROM `saquitos`
+JOIN `proyeccion` ON `proyeccion`.`id_saquito` = `saquito`.`id_saquito`
+WHERE `proyeccion`.`id_saquito` = \'89\'
+AND `saquitos`.`estado` = \'C\'
+AND `proyeccion`.`estado` = \'A\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `saquitos`.*, `proyeccion`.*
+FROM `saquitos`
+JOIN `proyeccion` ON `proyeccion`.`id_saquito` = `saquito`.`id_saquito`
+WHERE `proyeccion`.`id_saquito` = \'89\'
+AND `saquitos`.`estado` = \'C\'
+AND `proyeccion`.`estado` = \'A\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `saquitos`.*, `proyeccion`.*
+FROM `saquitos`
+JOIN `proyeccion` ON `proyeccion`.`id_saquito` = `saquito`.`id_saquito`
+WHERE `proyeccion`.`id_saquito` = \'89\'
+AND `saquitos`.`estado` = \'C\'
+AND `proyeccion`.`estado` = \'A\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `saquitos`.*, `proyeccion`.*
+FROM `saquitos`
+JOIN `proyeccion` ON `proyeccion`.`id_saquito` = `saquito`.`id_saquito`
+WHERE `proyeccion`.`id_saquito` = :proyeccion.id_saquito:
+AND `saquitos`.`estado` = :saquitos.estado:
+AND `proyeccion`.`estado` = :proyeccion.estado:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\SaquitoModel.php(93): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Saquito.php(93): App\Models\SaquitoModel->traer_tp('89', 'C')
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Saquito->buscar_tp('89')
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Saquito))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 15:02:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:02:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:02:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:02:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:02:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:02:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:04:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:04:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:04:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-23 15:04:13 --> mysqli_sql_exception: Unknown column 'saquito.id_saquito' in 'on clause' in C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `saquito...', 0)
+#1 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `saquito...')
+#2 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `saquito...')
+#3 C:\xampp\htdocs\gfp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `saquito...', Array, false)
+#4 C:\xampp\htdocs\gfp\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\gfp\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\gfp\app\Models\SaquitoModel.php(93): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\gfp\app\Controllers\Saquito.php(93): App\Models\SaquitoModel->traer_tp('86', 'C')
+#8 C:\xampp\htdocs\gfp\system\CodeIgniter.php(934): App\Controllers\Saquito->buscar_tp('86')
+#9 C:\xampp\htdocs\gfp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Saquito))
+#10 C:\xampp\htdocs\gfp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\gfp\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-06-23 15:04:13 --> Unknown column 'saquito.id_saquito' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `saquitos`.*, `proyeccion`.*
+FROM `saquitos`
+JOIN `proyeccion` ON `proyeccion`.`id_saquito` = `saquito`.`id_saquito`
+WHERE `proyeccion`.`id_saquito` = \'86\'
+AND `saquitos`.`estado` = \'C\'
+AND `proyeccion`.`estado` = \'A\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `saquitos`.*, `proyeccion`.*
+FROM `saquitos`
+JOIN `proyeccion` ON `proyeccion`.`id_saquito` = `saquito`.`id_saquito`
+WHERE `proyeccion`.`id_saquito` = \'86\'
+AND `saquitos`.`estado` = \'C\'
+AND `proyeccion`.`estado` = \'A\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `saquitos`.*, `proyeccion`.*
+FROM `saquitos`
+JOIN `proyeccion` ON `proyeccion`.`id_saquito` = `saquito`.`id_saquito`
+WHERE `proyeccion`.`id_saquito` = \'86\'
+AND `saquitos`.`estado` = \'C\'
+AND `proyeccion`.`estado` = \'A\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `saquitos`.*, `proyeccion`.*
+FROM `saquitos`
+JOIN `proyeccion` ON `proyeccion`.`id_saquito` = `saquito`.`id_saquito`
+WHERE `proyeccion`.`id_saquito` = :proyeccion.id_saquito:
+AND `saquitos`.`estado` = :saquitos.estado:
+AND `proyeccion`.`estado` = :proyeccion.estado:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\SaquitoModel.php(93): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Saquito.php(93): App\Models\SaquitoModel->traer_tp('86', 'C')
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Saquito->buscar_tp('86')
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Saquito))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 15:04:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:04:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:04:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:10:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:10:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:10:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:10:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:10:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:10:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:12:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:12:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:12:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:13:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:13:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:13:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:13:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:14:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:14:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:14:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:16:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:16:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:16:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:16:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:16:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:16:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:16:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:16:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:16:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:16:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:16:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:16:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:16:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:16:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:16:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:16:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:16:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:16:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:16:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:16:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:16:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:18:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:18:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:18:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:18:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:18:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:18:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:18:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:22:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-23 15:22:21 --> mysqli_sql_exception: Column 'usuario_crea' in where clause is ambiguous in C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\gfp\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `saquito...', 0)
+#1 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `saquito...')
+#2 C:\xampp\htdocs\gfp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `saquito...')
+#3 C:\xampp\htdocs\gfp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `saquito...', Array, false)
+#4 C:\xampp\htdocs\gfp\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\gfp\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\gfp\app\Models\SaquitoModel.php(96): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\gfp\app\Controllers\Saquito.php(95): App\Models\SaquitoModel->traer_tp('86', 'C')
+#8 C:\xampp\htdocs\gfp\system\CodeIgniter.php(934): App\Controllers\Saquito->buscar_tp('86')
+#9 C:\xampp\htdocs\gfp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Saquito))
+#10 C:\xampp\htdocs\gfp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\gfp\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-06-23 15:22:21 --> Column 'usuario_crea' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `saquitos`.*, `proyeccion`.*
+FROM `saquitos`
+JOIN `proyeccion` ON `proyeccion`.`id_saquito` = `saquitos`.`id_saquito`
+WHERE `proyeccion`.`id_saquito` = \'86\'
+AND `saquitos`.`estado` = \'C\'
+AND `proyeccion`.`estado` = \'E\'
+AND `usuario_crea` = \'31\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `saquitos`.*, `proyeccion`.*
+FROM `saquitos`
+JOIN `proyeccion` ON `proyeccion`.`id_saquito` = `saquitos`.`id_saquito`
+WHERE `proyeccion`.`id_saquito` = \'86\'
+AND `saquitos`.`estado` = \'C\'
+AND `proyeccion`.`estado` = \'E\'
+AND `usuario_crea` = \'31\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `saquitos`.*, `proyeccion`.*
+FROM `saquitos`
+JOIN `proyeccion` ON `proyeccion`.`id_saquito` = `saquitos`.`id_saquito`
+WHERE `proyeccion`.`id_saquito` = \'86\'
+AND `saquitos`.`estado` = \'C\'
+AND `proyeccion`.`estado` = \'E\'
+AND `usuario_crea` = \'31\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `saquitos`.*, `proyeccion`.*
+FROM `saquitos`
+JOIN `proyeccion` ON `proyeccion`.`id_saquito` = `saquitos`.`id_saquito`
+WHERE `proyeccion`.`id_saquito` = :proyeccion.id_saquito:
+AND `saquitos`.`estado` = :saquitos.estado:
+AND `proyeccion`.`estado` = :proyeccion.estado:
+AND `usuario_crea` = :usuario_crea:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\SaquitoModel.php(96): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Saquito.php(95): App\Models\SaquitoModel->traer_tp('86', 'C')
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Saquito->buscar_tp('86')
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Saquito))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 15:22:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:24:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:24:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:24:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:24:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:24:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:24:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:24:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:24:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:24:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:24:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:24:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:26:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:26:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:27:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:27:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:27:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:27:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:27:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:27:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:27:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:27:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:27:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:27:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:27:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:27:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:27:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:27:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:28:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:30:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:31:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:31:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:31:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:31:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:32:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:32:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:32:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:32:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:32:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:32:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:32:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:32:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:32:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:32:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:32:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:32:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:33:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:33:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:33:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:33:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:33:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:33:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:33:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:33:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:33:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:33:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 15:33:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

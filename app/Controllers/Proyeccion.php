@@ -7,6 +7,8 @@ use App\Models\MovimientoModel;
 use App\Models\UsuariosModel;
 use App\Models\SaquitoModel;
 use App\Models\DisponibleModel;
+use App\Models\ParamentrosModel;
+use App\Models\EmergenciaModel;
 
 
 class Proyeccion extends BaseController
@@ -15,14 +17,17 @@ class Proyeccion extends BaseController
     protected $saquito;
     protected $Movimiento;
     protected $disponible;
+    protected $usuario;
+    protected $params;
 
     public function __construct()
     {
         $this->Movimiento = new MovimientoModel();
-        $this->Proyeccion = new ProyeccionModel();
+        $this->proyeccion = new ProyeccionModel();
         $this->usuario = new UsuariosModel();
         $this->saquito = new SaquitoModel();
         $this->disponible = new DisponibleModel();
+        $this->params = new ParamentrosModel();
         
     }
    
@@ -39,6 +44,8 @@ class Proyeccion extends BaseController
         $traer_sqto =   $traer_sqto -> traer_sqto ();
         $traer_proye=   $traer_proy -> traer_proye ();
 
+        $params1 = $this -> params -> traerdsdeta();
+
         echo view("gfp/fondo/proyeccion_saquito", [
             'tituloPagina' => 'Proyeccion',
             'proyeccion' => $proyeccion,
@@ -46,6 +53,7 @@ class Proyeccion extends BaseController
             'misDatos' => $session,
             'traer_sqto' => $traer_sqto,
             'traer_proye' => $traer_proye['valor_cuota'],
+            'encabezado' => $params1,
         ]);
     }
 
@@ -56,15 +64,22 @@ class Proyeccion extends BaseController
         $id_usuario = $session->get('id_usuario');
 
         $id_saquito = $this-> saquito -> traerId_saquito();
+
         $id_disponible = new DisponibleModel();
         $identificador = $id_disponible->traer_id_disponible();
 
-        $this->Proyeccion->save([
+        $emergenciaModel = new EmergenciaModel();
+        $id_emergencia =  $emergenciaModel -> traer_id_emergencia();
+
+
+        
+        $this->proyeccion->save([
             'fecha_cuota' => $this->request->getPost('fecha_cuota'), 
             'valor_cuota' => $this->request->getPost('valor_cuota'), 
             'usuario_crea' => $id_usuario,
             'id_saquito' => $id_saquito,
         ]);
+
         $this->Movimiento->save([
            'tipo_movimiento'=>2,
            'clase_movimiento'=>4,
@@ -76,11 +91,12 @@ class Proyeccion extends BaseController
 
         $this->disponible->update($identificador,[
            
-             'egreso' => $this->request->getPost('egreso'),
+            'egreso' => $this->request->getPost('egreso'),
            'presupuesto_anual' => $this->request->getPost('presupuesto'),
            'id_usuario' => $id_usuario,
 
           ]);
+
         return redirect()->to(base_url('/proyeccion'));
     }
 
@@ -91,7 +107,7 @@ class Proyeccion extends BaseController
         $session = session();
         $idUsuario = $session->id_usuario;
 
-        $proyeccion_ = $this->Proyeccion->traer_Proyeccion($idUsuario);
+        $proyeccion_ = $this->proyeccion->traer_Proyeccion($idUsuario);
         if (!empty($proyeccion_)) {
             array_push($returnData, $proyeccion_);
         }
@@ -114,5 +130,14 @@ class Proyeccion extends BaseController
         // Enviar la respuesta como JSON
         return $this->respond($response);
     }
+    // public function buscar_($id)
+    //   {
+    //       $returnData = array();
+    //       $encabezado_ = $this->encabezado->traer_registro($id, 'A');
+    //       if (!empty($encabezado_)) {
+    //           array_push($returnData, $encabezado_);    
+    //       }
+    //       echo json_encode($returnData);
+    //   }
 
 }

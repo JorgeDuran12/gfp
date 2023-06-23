@@ -42,6 +42,7 @@ class ProyeccionModel extends Model{
 
         $this->select('proyeccion.*, saquitos.descripcion as descripcion');
         $this->join('saquitos', 'saquitos.id_saquito = proyeccion.id_saquito');
+        $this->where('saquitos.estado ','A');
         $this->where('proyeccion.usuario_crea',$id_usuario);
         $data = $this->findAll();
         return $data;

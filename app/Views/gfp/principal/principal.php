@@ -156,7 +156,7 @@ inputPeriodo.value = periodo.getFullYear();
 let array_fecha= []
     for (i = 0; i < grafica_emergencia.length; i++) {
       array_fecha.push(grafica_emergencia[i].fecha_registro) //por cada recorrido hace un push
-        console.log(array_fecha);
+        console.table(array_fecha);
         }
 
 

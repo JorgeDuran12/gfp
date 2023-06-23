@@ -2,26 +2,26 @@
 
 namespace App\Controllers;
 use App\Models\DisponibleModel;
-use App\Models\ProyeccionModel;
 use App\Models\SaquitoModel;
 use App\Models\EmergenciaModel;
 use App\Models\MovimientoModel;
 
+use CodeIgniter\API\ResponseTrait;
+
+
 class Principal extends BaseController
 {
 
-    protected $disponible, $proyeccion, $saquito, $emergencia, $grafica_e, $grafica_d, $movimiento;
+    protected $disponible,  $emergencia, $grafica_e, $grafica_d, $movimiento;
 
     public function __construct()
     {
         $this->disponible = new DisponibleModel();
-        $this->Proyeccion = new ProyeccionModel();
-        $this->saquito = new SaquitoModel();
         $this->emergencia = new EmergenciaModel();
         $this->grafica_e = new EmergenciaModel();
         $this->grafica_d = new EmergenciaModel();
         $this->movimiento = new MovimientoModel();
-
+        
     }
 
 

@@ -75,7 +75,7 @@
 
                 <tr>
                     <td> <?php echo $dato ['fecha_registro'];?></td>
-                    <td> <?php echo $dato ['sum'];?></td>
+                    <td> <?php echo $dato ['suma_total'];?></td>
                 </tr>
 
                 <?php } ?>

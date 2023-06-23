@@ -116,5 +116,13 @@ class ParamentrosModel extends Model{
         return $datos;
     }
 
+    public function traerdsdeta(){
+        $this->select('parametros_det.*');
+        $this->where('id_parametro_enc', 11);
+        $this->where('estado','A');
+        $datos = $this->findAll();  
+        return $datos;
+    }
+
 
 }

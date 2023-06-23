@@ -15,6 +15,15 @@
                         <label for="floatingInput">Fecha de la cuota</label>
                         <input type="date" class="form-control" name="fecha_cuota" id="fecha_cuota"
                             placeholder="Fecha inicial: " required>
+<br>
+                            <select class="form-select valida" name="parametros_enc" id="parametros_enc" aria-label="Floating label select example" required>
+                             
+                                <?php foreach ($encabezado as $data) {?>
+                                <option style="color:black;" value="<?php echo $data["id_parametro_enc"]; ?>">
+                                    <?php echo $data["nombre"];?></option>
+                                <?php } ?>
+                                
+                            </select>
 
                         <label for="floatingInput">Valor de la cuota </label>
                         <input type="number" class="form-control valida" name="valor_cuota" id="valor_cuota"
@@ -233,5 +242,9 @@ if (num3 === 0) {
 //console.log("La suma total es: " + suma);       
 </script>
 
+
+<script>
+    
+</script>
 
 <?= $this->endSection("contenido")?>

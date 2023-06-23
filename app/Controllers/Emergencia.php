@@ -30,7 +30,6 @@ class Emergencia extends BaseController
 
         echo view("gfp/fondo/emergencia", [
             'tituloPagina' => 'Fondo de emergencia',
-            
             'emergencia' => $emergencia,
             'disponibles' => $disponibles,
             'params'=>$parametros,
@@ -51,8 +50,11 @@ class Emergencia extends BaseController
     
         // Obtiene el último registro existente en EmergenciaModel
         $lastRegistro = $this->emergencia->where('id_usuario', $id_usuario)->orderBy('id_fondo-emergencia', 'DESC')->first();
+
+        $uso_fondo = $this->emergencia->where('id_usuario', $id_usuario)->orderBy('id_fondo-emergencia', 'DESC')->first();
     
-        if ($disponible && $this->request->getPost('params') === '24') {
+        if ($disponible && $this->request->getPost('params') === '82') {
+
             $emergencia_valor = $this->request->getPost('emergencia__valor');
             $suma_total = $lastRegistro ? $lastRegistro['suma_total'] + $emergencia_valor : $emergencia_valor;
     
@@ -73,8 +75,23 @@ class Emergencia extends BaseController
     
             $disponibleModel->update($disponible['id_disponible'], ['presupuesto_anual' => $nuevoPresupuesto]);
             $disponibleModel->update($disponible['id_disponible'], ['egreso' => $egreso_total]);
-        } else if ($this->request->getPost('params') === '23') {
-            // Código para el caso de params igual a 23
+
+        } else if ($this->request->getPost('params') === '83') {
+
+            $em_valor = $this->request->getPost('emergencia__valor');
+            $suma_total_resta = $uso_fondo ? $uso_fondo['suma_total'] - $em_valor : $em_valor;
+    
+            // Inserta el nuevo registro en la tabla EmergenciaModel
+            $this->emergencia->insert([
+                'id_parametro_det' => $this->request->getPost('params'),
+                'valor' => $em_valor,
+                'suma_total' => $suma_total_resta,
+                'fecha_registro' => $this->request->getPost('fecha_registro'),
+                'descripcion' => $this->request->getPost('descripcion'),
+                'usuario_crea' => $id_usuario,
+                'id_usuario' => $id_usuario,
+            ]);
+            
         }
     
         return redirect()->to(base_url('/emergencia'));
