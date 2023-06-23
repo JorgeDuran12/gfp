@@ -76,14 +76,6 @@
                 <tr>
                     <td> <?php echo $dato ['fecha_registro'];?></td>
                     <td> <?php echo $dato ['sum'];?></td>
-                    <!-- <td> <php echo $dato ['descripcion'];?></td> -->
-                    <!-- <td>
-                        <a class="btn btn-warning" href="#"
-                            onclick="seleccionafondo(<= $dato['id_fondo-emergencia'];?>)" data-bs-toggle="modal"
-                            data-bs-target="#ActualizarModal" width="16" height="16">
-                            <img class="image" src="<= base_url("img/editar.png") ?>">
-                        </a>
-                    </td> -->
                 </tr>
 
                 <?php } ?>
@@ -94,15 +86,15 @@
     </div>
 
     <!--- Modal Actualizar --->
-
-    <form action="<?php echo base_url('/emergencia/update'); ?>" method="POST" autocomplete="off">
+<!-- 
+    <form action="<php echo base_url('/emergencia/update'); ?>" method="POST" autocomplete="off">
 
         <div class="modal fade" id="ActualizarModal" tabindex="-1" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content" id="movimientos_modal-content">
                     <div class="modal-header">
-                        <img src="<?= base_url("img/gfp.png")?>" alt="" class="w-25 p-3">
+                        <img src="<= base_url("img/gfp.png")?>" alt="" class="w-25 p-3">
                         <h5 class="modal-title" id="exampleModalLabel">Actualizar Registro</h5>
                     </div>
                     <div class="modal-body">
@@ -130,33 +122,17 @@
             </div>
         </div>
 
-    </form>
+    </form> -->
 
 </div>
 </div>
 
 
-<!-- <script>
-function seleccionafondo(id) {
+<script>
 
-    dataURL = "<php echo base_url('buscar_fondo'); ?>" + "/" + id;
 
-    $.ajax({
 
-        type: "POST",
-        url: dataURL,
-        dataType: "json",
-        success: function(rs) {
-            // console.log(rs);
-
-            $("#id").val(id);
-            $("#editar_fecha_registra").val(rs[0]['fecha_registro']);
-            $("#editar_emergencia__valor").val(rs[0]['valor']);
-        }
-    });
-}
-</script> -->
-
+</script>
 
 <script>
 
@@ -180,23 +156,6 @@ textarea.addEventListener('input', function() {
         textarea.value = valor;
     }
 });
-
-
-// $(document).ready(function() {
-//   $('#params').change(function() {
-//     var selectedOption = $(this).val();
-
-//     if (selectedOption === '83') {
-//       $('#descripcion').show();
-//       $('#descripcion').prop('required', true);
-//     } else {
-//         $('#descripcion').prop('required', false);
-//       $('#descripcion').hide();
-//     }
-//   });
-// });
-
-
 
 </script>
 

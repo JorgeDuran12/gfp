@@ -149,8 +149,14 @@ inputPeriodo.value = periodo.getFullYear();
     let array_datos = []; //creamos un array vacio
 
     for (i = 0; i < grafica_emergencia.length; i++) {
-        array_datos.push(grafica_emergencia[i].valor) //por cada recorrido hace un push
+        array_datos.push(grafica_emergencia[i].suma_total) //por cada recorrido hace un push
         // console.log(array_datos);
+        }
+
+let array_fecha= []
+    for (i = 0; i < grafica_emergencia.length; i++) {
+      array_fecha.push(grafica_emergencia[i].fecha_registro) //por cada recorrido hace un push
+        console.log(array_fecha);
         }
 
 
@@ -232,6 +238,7 @@ new Chart(ctx, {
 });
 </script>
 
+
 <script>
     const grafica_movimiento = <?= json_encode($grafica_movi) ?>;
     const array_dat = [];
@@ -248,11 +255,12 @@ new Chart(ctx, {
     const mv = document.getElementById('Movimiento');
 
     new Chart(mv, {
-      type: 'bar',
+      type: 'line',
       data: {
         labels: array_dat,
         datasets: [{
           label: 'Valor: ',  
+          fill: true,
           data: array_label,
           borderWidth: 1,
         }]
@@ -278,23 +286,24 @@ new Chart(ctx, {
             }
           }
         },
-        animation: {
-          onComplete: function (context) {
-            const chartInstance = context.chart;
-            const ctx = chartInstance.ctx;
+        onClick: function (event, chartElement) {
+          const mv = this.chart;
+          const ctx = mv.ctx;
+          const activeElements = mv.getElementsAtEventForMode(event, 'nearest', { intersect: true }, true);
+          if (activeElements.length > 0) {
+            const index = activeElements[0].index;
+            const bar = mv.data.datasets[0].data[index];
+            const fecha = grafica_movimiento[index].fecha_movimiento;
+            const x = activeElements[0].element.x;
+            const y = activeElements[0].element.y;
+
+            ctx.save();
             ctx.font = Chart.helpers.fontString(Chart.defaults.font.size, 'normal', Chart.defaults.font.family);
             ctx.fillStyle = 'white';
             ctx.textAlign = 'center';
             ctx.textBaseline = 'bottom';
-
-            chartInstance.data.datasets.forEach(function (dataset, i) {
-              const meta = chartInstance.getDatasetMeta(i);
-              meta.data.forEach(function (bar, index) {
-                const data = dataset.data[index];
-                const fecha = grafica_movimiento[index].fecha_movimiento;
-                ctx.fillText(fecha, bar.x, bar.y - 5);  
-              });
-            });
+            ctx.fillText(fecha, x, y - 10); // Ajusta la posición de la fecha
+            ctx.restore();
           }
         }
       }

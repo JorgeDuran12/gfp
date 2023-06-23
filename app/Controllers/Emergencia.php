@@ -18,6 +18,7 @@ class Emergencia extends BaseController
         $this->parametros = new ParamentrosModel();
     }
         
+    
     public function index()
     {
         $session = session();
@@ -44,41 +45,36 @@ class Emergencia extends BaseController
         $session = session();
         $id_usuario = $session->get('id_usuario');
     
-        // Inserta el nuevo registro en la tabla EmergenciaModel
-        $this->emergencia->insert([
-            'id_parametro_det' => $this->request->getPost('params'),
-            'valor' => $this->request->getPost('emergencia__valor'),
-            'fecha_registro' => $this->request->getPost('fecha_registro'),
-            'descripcion' => $this->request->getPost('descripcion'),
-            'usuario_crea' => $id_usuario,
-            'id_usuario' => $id_usuario,
-        ]);
-    
         // Obtiene el registro disponible del usuario actual
         $disponibleModel = new DisponibleModel();
         $disponible = $disponibleModel->where('id_usuario', $id_usuario)->first();
     
-        if ($disponible) {
+        // Obtiene el último registro existente en EmergenciaModel
+        $lastRegistro = $this->emergencia->where('id_usuario', $id_usuario)->orderBy('id_fondo-emergencia', 'DESC')->first();
+    
+        if ($disponible && $this->request->getPost('params') === '24') {
+            $emergencia_valor = $this->request->getPost('emergencia__valor');
+            $suma_total = $lastRegistro ? $lastRegistro['suma_total'] + $emergencia_valor : $emergencia_valor;
+    
+            // Inserta el nuevo registro en la tabla EmergenciaModel
+            $this->emergencia->insert([
+                'id_parametro_det' => $this->request->getPost('params'),
+                'valor' => $emergencia_valor,
+                'suma_total' => $suma_total,
+                'fecha_registro' => $this->request->getPost('fecha_registro'),
+                'descripcion' => $this->request->getPost('descripcion'),
+                'usuario_crea' => $id_usuario,
+                'id_usuario' => $id_usuario,
+            ]);
+    
             // Realiza el cálculo y la actualización del campo presupuesto_anual en DisponibleModel
-            $nuevoPresupuesto = $disponible['presupuesto_anual'] - $this->request->getPost('emergencia__valor');
+            $nuevoPresupuesto = $disponible['presupuesto_anual'] - $emergencia_valor;
+            $egreso_total = $disponible['egreso'] + $emergencia_valor;
     
             $disponibleModel->update($disponible['id_disponible'], ['presupuesto_anual' => $nuevoPresupuesto]);
-    
-        } else if ($this->request->getPost('params') === '83') {
-            // Obtiene la sumatoria total de los valores del campo "valor" de la tabla Emergencia
-            $emergenciaModel = new EmergenciaModel();
-            $totalValor = $emergenciaModel->getSumValorByParametroDet('83', $id_usuario);
-    
-            // Obtiene el registro de emergencia relacionado con el usuario actual
-            $emergencia = $emergenciaModel->where('id_usuario', $id_usuario)->first();
-    
-            if ($emergencia) {
-                // Resta el totalValor al valor existente en la tabla Emergencia
-                $nuevoValor = $emergencia['valor'] - $totalValor;
-    
-                // Actualiza el valor en la tabla Emergencia
-                $emergenciaModel->update($emergencia['id_fondo-emergencia'], ['valor' => $nuevoValor]);
-            }   
+            $disponibleModel->update($disponible['id_disponible'], ['egreso' => $egreso_total]);
+        } else if ($this->request->getPost('params') === '23') {
+            // Código para el caso de params igual a 23
         }
     
         return redirect()->to(base_url('/emergencia'));
@@ -86,49 +82,29 @@ class Emergencia extends BaseController
     
     
 
-    public function update()
-    {
-        if ($this->request->getMethod() == "post") {
-            // Es una actualización
-            $this->emergencia->update($this->request->getPost('id'),[ 
-                'fecha_registro' => $this->request->getPost('editar_fecha_registra'),
-                'valor' => $this->request->getPost('editar_emergencia__valor'),
-            ]);
-        }
+    // public function update()
+    // {
+    //     if ($this->request->getMethod() == "post") {
+    //         // Es una actualización
+    //         $this->emergencia->update($this->request->getPost('id'),[ 
+    //             'fecha_registro' => $this->request->getPost('editar_fecha_registra'),
+    //             'valor' => $this->request->getPost('editar_emergencia__valor'),
+    //         ]);
+    //     }
     
-        return redirect()->to(base_url('/emergencia'));
-    }
+    //     return redirect()->to(base_url('/emergencia'));
+    // }
  
     
-    public function buscar_fondo($id_usuario)
-      {
-          $returnData = array();
-          $usuario_ = $this->emergencia->Actualizar_fondo($id_usuario, 'A');
-          if (!empty($usuario_)) {
-              array_push($returnData, $usuario_);    
-          }
-          echo json_encode($returnData);
-      }
+    // public function buscar_fondo($id_usuario)
+    //   {
+    //       $returnData = array();
+    //       $usuario_ = $this->emergencia->Actualizar_fondo($id_usuario, 'A');
+    //       if (!empty($usuario_)) {
+    //           array_push($returnData, $usuario_);    
+    //       }
+    //       echo json_encode($returnData);
+    //   }
 
-
-    //   public function verificar_registro()
-    // {
-    //     // Obtener el ID de usuario desde la sesión
-    //     $session = session();
-    //     $id_usuario = $session->get('id_usuario');
-
-    //     // Realizar la lógica para verificar si el usuario tiene un registro insertado
-    //     $tieneRegistro = $this->emergencia->verificarRegistro($id_usuario);
-
-    //     // Crear un array con la respuesta
-    //     $response = array(
-    //         'tieneRegistro' => $tieneRegistro
-    //     );
-
-    //     // Devolver la respuesta en formato JSON
-    //     return $this->response->setJSON($response);
-    // }
-    
-    
-    
+        
 }

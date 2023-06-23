@@ -33,11 +33,6 @@ class Principal extends BaseController
 
         $id_disponible =  $this -> disponible->traer_id_disponible();
 
-        // $arrayDatos = array();
-        // $datosPresu = $this->disponible->grafica_disponible($id_disponible);
-
-        // $presupuesto = array_push($arrayDatos, $datosPresu);
-
         $grafica_presu = $this->disponible->grafica_disponible($id_disponible);
 
         $grafica_movi =  $this->movimiento -> grafica_movi();
@@ -54,7 +49,6 @@ class Principal extends BaseController
             'presupuestoActual' => $Disponible,
             'graficas_e'=>$grafica,
             'graficas_titulo'=>$grafica_t,
-            // 'grafica_presu'=>$presupuesto,
             'grafica_presu'=>$grafica_presu,
             'grafica_movi'=>$grafica_movi,
         

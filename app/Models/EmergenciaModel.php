@@ -13,7 +13,7 @@ class EmergenciaModel extends Model{
     protected $returnType     = 'array';  /* forma en que se retornan los datos */
     protected $useSoftDeletes = false; /* si hay eliminacion fisica de registro */
 
-    protected $allowedFields = ['fecha_registro','valor','estado','usuario_crea','id_usuario', 'fecha_crea', 'descripcion', 'id_parametro_det']; /* relacion de campos de la tabla */
+    protected $allowedFields = ['fecha_registro','valor','estado','usuario_crea','id_usuario', 'fecha_crea', 'descripcion', 'id_parametro_det', 'suma_total']; /* relacion de campos de la tabla */
 
     protected $useTimestamps = true; /*tipo de tiempo a utilizar */
     protected $createdField  = 'fecha_crea'; /*fecha automatica para la creacion */
@@ -41,7 +41,7 @@ class EmergenciaModel extends Model{
     public function grafica_fondo_valor(){
         $session = session();
         $id_usuario = $session->get('id_usuario');
-        $this->select('fondo_emergencia. valor ');
+        $this->select('fondo_emergencia. suma_total, fecha_registro');
         $this->where('estado','A');
         $this->where('fondo_emergencia.id_usuario',$id_usuario);
         $datos = $this->findAll();
@@ -52,7 +52,7 @@ class EmergenciaModel extends Model{
         public function grafica_fondo_fecha(){
             $session = session();
             $id_usuario = $session->get('id_usuario');
-            $this->select('fondo_emergencia.descripcion');
+            $this->select('fondo_emergencia.descripcion, fecha_registro');
             $this->where('estado','A');
             $this->where('fondo_emergencia.id_usuario',$id_usuario);
             $datos = $this->findAll();
@@ -71,24 +71,24 @@ class EmergenciaModel extends Model{
     }
 
 
-    public function Actualizar_fondo($id, $estado)
-    {
-        $this->select('fondo_emergencia.*');
-        $this->where('estado', $estado);
-        $this->where('id_fondo-emergencia', $id);
-        $datos = $this->first();
-        return $datos;
-    }
+    // public function Actualizar_fondo($id, $estado)
+    // {
+    //     $this->select('fondo_emergencia.*');
+    //     $this->where('estado', $estado);
+    //     $this->where('id_fondo-emergencia', $id);
+    //     $datos = $this->first();
+    //     return $datos;
+    // }
     
 
-    public function verificarRegistro($id_usuario)
-    {
-        $this->select('*');
-        $this->where('id_usuario', $id_usuario);
-        $this->where('estado', 'A');
-        $datos = $this->first();
-        return $datos;
-    }
+    // public function verificarRegistro($id_usuario)
+    // {
+    //     $this->select('*');
+    //     $this->where('id_usuario', $id_usuario);
+    //     $this->where('estado', 'A');
+    //     $datos = $this->first();
+    //     return $datos;
+    // }
 
     public function obtenerDatosInsercion($id_usuario)
     {
@@ -99,16 +99,5 @@ class EmergenciaModel extends Model{
         return $datos;
     }
 
-
-    public function getSumValorByParametroDet($parametroDetId, $usuarioId)
-    {
-        $this ->select('emergencia.*');
-        $this ->where('id_parametro_det', $parametroDetId);
-        $this ->where('id_usuario', $usuarioId);
-        $this ->selectSum('valor');
-        $valor = $this->get()->getRow();
-        return $valor;
-                   
-    }
 
 }
