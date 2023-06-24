@@ -70,6 +70,7 @@ $routes->get('gestion_de_administradores', 'Usuario::index');
 $routes->post('buscar_usuario/(:num)','Usuario::buscar_usuario/$1');
 $routes->post('buscar_rol/(:num)','Rol::buscar_rol/$1');
 $routes->post('buscar_parametro/(:num)','Parametros::buscar_parametro/$1');
+$routes->get('buscar_historial_p/(:num)','Saquito::buscar_historial_p/$1');
 $routes->post('buscar_detalles/(:num)','Parametros::buscar_detalles/$1');
 $routes->post('buscar_Registro/(:num)' , 'Saquito::buscar_Registro/$1');
 $routes->post('buscar_presupuesto/(:num)' , 'Principal::buscar_presupuesto/$1');

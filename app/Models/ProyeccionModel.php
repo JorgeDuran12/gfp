@@ -81,6 +81,15 @@ class ProyeccionModel extends Model{
         return $datos;
     }
 
+        //    funcion para llenar de manara dinamica la tabla de proyeccion 
+
+    function historialProyeccionByIdSaquito($id) {
+        $this->select('proyeccion.*');
+        $this->where('id_saquito', $id);
+        $datos = $this->findAll();
+        return $datos;
+    }
+
    
 }
     

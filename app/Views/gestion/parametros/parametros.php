@@ -281,7 +281,7 @@
 
      //  en estas funcion solo se manipula el detalle 
      function seleccionaencabezado(id, tp) {
-console.log(id,tp);
+       console.log(id,tp);
         crear_detalle( id );
 
 

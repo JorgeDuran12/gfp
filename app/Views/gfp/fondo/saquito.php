@@ -55,9 +55,9 @@
                     <td> <?php if($dato['estado']=="A"){echo "No completado";}else{echo "completado";}?></td>
                     <td>
                     <a class="btn btn-warning" href="#"
-                    onclick="seleccionaSaquito(<?php echo $dato['id_saquito'] . ',' . 2 ?>);"
-                    width="16" height="16">
-                    <img class="image" src="<?= base_url("img/documento.png") ?> " title="Editar">
+                    onclick="seleccionaSaquito(<?php echo $dato['id_saquito'] ?>);"
+                    width="16" height="16" data-bs-toggle="modal" data-bs-target="#parametro_detallle" >
+                    <img class="image" src="<?= base_url("icons/historial.png") ?> " title="Historial">
                     </a>
                     </td>
 
@@ -69,9 +69,46 @@
 </div>
 </div>
 </div>
+</form>
 
+<!-- Modal renderizar registros dinamicos-->
 
+<form autocomplete="off">
 
+        <div class="modal fade" id="parametro_detallle" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <img src="<?= base_url("img/gfp.png")?>" alt="" class="w-25 p-3">
+                            <h3 class="modal-title" id="exampleModalLabel">Historial de saquito </h3>
+                        </div>
+                        <div class="modal-body">
+                                <input hidden id="id" name="id">
+         <div>
+                                   
+  <!-- tabla de  proyeccion -->
+  <table class="table table-bordered" >
+                <thead>
+                    <tr>
+                        <th>fecha de registro</th>
+                        <th>valor</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bodytb">
+
+                    </tbody>
+
+            
+            </table>
+                                     
+            </div>
+                        </div>
+                        
+                    </div>
+
+                </div>
+            </div>
 </form>
 
 <!-- Modal Eliminar-->
@@ -150,12 +187,16 @@
 
 
     <!-- <---------------------div de header y footer------------------->
+    </div>
+
+    </div>
 </div>
 
-</div>
-</div>
+
+
 <!--Funcion para desaparecer el boton de agregar si no hay un valor en presupuesto-->
 <<script>
+
     let btnAgregar = document.getElementById('agregar');
 
     $(document).ready(function(){
@@ -326,55 +367,35 @@
 
         });
     });
-    </script>
-    <script>
-        function seleccionaSaquito(id, tp) {
-console.log(id,tp);
-        ( id );
+</script>
+   
 
-
-                if (tp == 2) {
+<!-- funcion para cargar el la proyeccion de los saquitos dinamicos -->
+<script>
+  function seleccionaSaquito(id) {
+       console.log(id);  
                     var contador = 0 
                   
-                    dataURL = "<?php echo base_url('buscar_tp'); ?>" + "/" + id;
+                    dataURL = "<?php echo base_url('buscar_historial_p'); ?>" + "/" + id;
                     $.ajax({
-                        type: "POST",
+                        type: "get",
                         url: dataURL,
                         dataType: "json",
                         success: function(rs) {
                          console.log(rs);
+                         console.table(rs);
  
-                         let contenido = '';
-                         rs[0].forEach(p => {
-            contador++
-            contenido += `
-            <tr id="util${contador}">
-            <td class="text-center">${proyeccion.valor_cuota}</td>
-            <td class="text-center">${parametro.fecha_cuota}</td>
-            
-            
-                            
-                            </tr>`
-        }); 
-        $('#bodytb').html(contenido);
-        
-                        }
-                
+                    }
+                  }
+                ) 
    
-                   });
-                } else {
-                   $("#tp").val(1);
-                   document.getElementById('exampleModalLabel');
-                   $("#nombre").val('');
-                   $("#btn_guardar").text('Guardar');
-               
-   
-               }
 
-   
-           }
+                        
         
-    </script>
+           }
+
+</script>
+
 
 
 
@@ -383,10 +404,4 @@ console.log(id,tp);
 
 
 
-    <!-- <td>
-    <a class="btn btn-warning" href="#"
-        onclick=" selecionaRegistro(<php echo $dato['id_saquito'] . ',' . 2 ?>);" data-bs-toggle="modal"
-        data-bs-target="#editarModal" width="16" height="16" title="Editar Registro">
-        <img class="image" src="<= base_url("img/editar.png") ?> " title="Editar">
-    </a>
-</td> -->
+ 

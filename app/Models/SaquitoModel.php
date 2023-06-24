@@ -81,22 +81,9 @@ class SaquitoModel extends Model{
             $datos = $this->update($id, ['estado' => $estado]);         
             return $datos;
         }
+ 
+    
 
-        public function traer_tp($id){
-            $session = session();
-            $id_usuario = $session->get('id_usuario');
-
-            $this->select('saquitos.* ,proyeccion.*');
-            $this->join('proyeccion','proyeccion.id_saquito = saquitos.id_saquito');
-            $this->where('proyeccion.id_saquito',$id);
-            $this->where('saquitos.estado', 'C');
-            $this->where('saquitos.usuario_crea', $id_usuario);
-            $this->where('proyeccion.estado', 'A');
-
-            $datos = $this->findAll();
-            var_dump($datos);
-            return $datos;
-        }
 }
 
 

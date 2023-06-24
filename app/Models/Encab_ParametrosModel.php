@@ -49,8 +49,6 @@ class Encab_ParametrosModel extends Model{
         $this->where('parametros_det.id_parametro_enc',$id);
         $this->where('parametros_enc.estado', 'A');
         $this->where('parametros_det.estado', 'A');
-        // $this->where('parametros_det.id_parametro_enc', 'parametros_enc.id_parametro_enc');
-
         $datos = $this->findAll();
         return $datos;
     }

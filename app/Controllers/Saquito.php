@@ -5,18 +5,20 @@ namespace App\Controllers;
 use App\Models\SaquitoModel;
 use App\Models\UsuariosModel;
 use App\Models\DisponibleModel;
-
+use App\Models\ProyeccionModel;
 use CodeIgniter\API\ResponseTrait;
 
 
 class Saquito extends BaseController
 {
-    protected $saquito, $usuario, $disponible;
+    protected $saquito, $usuario, $disponible , $proyeccion;
     use ResponseTrait;
     
     public function __construct()
     
     {
+        
+        $this->proyeccion = new ProyeccionModel();
         $this->usuario = new UsuariosModel();
         $this->saquito = new SaquitoModel();
         $this->disponible = new DisponibleModel();
@@ -24,7 +26,7 @@ class Saquito extends BaseController
     }
    
     public function index()
-    {
+     {
         $session = session();
 
         $saquitos = $this-> saquito-> traer();
@@ -89,18 +91,6 @@ class Saquito extends BaseController
     }
 
 
-     public function buscar_tp($id)
-      {
-        $returnData = array();
-       $saquitow_ = $this->saquito->traer_tp($id, 'C');
-          if (!empty($saquitow_)) {
-               array_push($returnData, $saquitow_);
-               echo ("tal vez ");  
-            }
-            echo json_encode($returnData);
-            echo ("ni madres ");  
-       }
-
     public function completado(){
 
         $saquitoId = $this->saquito->traerId_saquito();
@@ -116,6 +106,19 @@ class Saquito extends BaseController
 
     }
     
+
+    public function buscar_historial_p($id)
+    {
+        $returnData = array();
+        $historial_p = $this->proyeccion->historialProyeccionByIdSaquito($id);
+        if (!empty($historial_p)) {
+            array_push($returnData, $historial_p); 
+            echo json_encode($returnData);   
+        }else{
+            echo("ta vacio");
+        }
+       
+    }
  
 
 
