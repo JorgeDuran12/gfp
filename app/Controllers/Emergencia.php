@@ -53,7 +53,7 @@ class Emergencia extends BaseController
 
         $uso_fondo = $this->emergencia->where('id_usuario', $id_usuario)->orderBy('id_fondo-emergencia', 'DESC')->first();
     
-        if ($disponible && $this->request->getPost('params') === '82') {
+        if ($disponible && $this->request->getPost('params') === '24') {
 
             $emergencia_valor = $this->request->getPost('emergencia__valor');
             $suma_total = $lastRegistro ? $lastRegistro['suma_total'] + $emergencia_valor : $emergencia_valor;
@@ -76,7 +76,7 @@ class Emergencia extends BaseController
             $disponibleModel->update($disponible['id_disponible'], ['presupuesto_anual' => $nuevoPresupuesto]);
             $disponibleModel->update($disponible['id_disponible'], ['egreso' => $egreso_total]);
 
-        } else if ($this->request->getPost('params') === '83') {
+        } else if ($this->request->getPost('params') === '23') {
 
             $em_valor = $this->request->getPost('emergencia__valor');
             $suma_total_resta = $uso_fondo ? $uso_fondo['suma_total'] - $em_valor : $em_valor;

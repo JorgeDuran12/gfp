@@ -94,7 +94,7 @@
         <div class="botondeanti">
             <br>
 
-            <div class="b"> <button href="#" class="btn-guardar" type="Submit">
+            <div class="b"> <button href="#" class="btn-guardar btn_movimiento_vw" type="Submit">
                     <span id="span1g"></span>
                     <span id="span2g"></span>
                     <span id="span3g"></span>
@@ -314,5 +314,26 @@ textarea.addEventListener('input', function() {
 
 
 </script>
+
+
+<script>
+
+    document.addEventListener("DOMContentLoaded", function() {
+        let formulariosEmergencia = document.getElementsByClassName("movimiento");
+
+        for (let i = 0; i < formulariosEmergencia.length; i++) {
+            formulariosEmergencia[i].addEventListener("submit", function() {
+                let botonesEnviar = this.getElementsByClassName("btn_movimiento_vw");
+
+                for (let j = 0; j < botonesEnviar.length; j++) {
+                    botonesEnviar[j].disabled = true;
+                }
+            });
+        }
+    });
+
+    
+</script>
+
 
 <?= $this->endSection("contenido")?>

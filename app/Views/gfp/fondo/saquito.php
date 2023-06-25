@@ -1,4 +1,3 @@
-
 <?= $this->extend("layouts/gfpLayout")?>
 <?= $this->section("contenido")?>
 
@@ -39,12 +38,13 @@
                     <th>Numero cuota</th>
                     <th>cuota</th>
                     <th>estado</th>
-                    <th>Acciones</th> 
+                    <th>Acciones</th>
 
                 </tr>
             </thead>
-            <tbody>
-                <?php foreach ($saquito as $dato) { ?>
+            <tbody id="saquito_tbody">
+
+            <?php foreach ($saquito as $dato) { ?>
                 <tr>
                     <td><?php echo $dato['descripcion'];?></td>
                     <td><?php echo $dato['fecha_inicial'];?></td>
@@ -54,15 +54,16 @@
                     <td> <?php echo $dato['cuota'];?></td>
                     <td> <?php if($dato['estado']=="A"){echo "No completado";}else{echo "completado";}?></td>
                     <td>
-                    <a class="btn btn-warning" href="#"
-                    onclick="seleccionaSaquito(<?php echo $dato['id_saquito'] ?>);"
-                    width="16" height="16" data-bs-toggle="modal" data-bs-target="#parametro_detallle" >
-                    <img class="image" src="<?= base_url("icons/historial.png") ?> " title="Historial">
-                    </a>
+                        <a class="btn btn-warning" href="#"
+                            onclick="seleccionaSaquito(<?php echo $dato['id_saquito'] ?>);" width="16" height="16"
+                            data-bs-toggle="modal" data-bs-target="#parametro_detallle">
+                            <img class="image" src="<?= base_url("icons/historial.png") ?> " title="Historial">
+                        </a>
                     </td>
 
                 </tr>
                 <?php } ?>
+                
             </tbody>
         </table>
     </div>
@@ -75,40 +76,41 @@
 
 <form autocomplete="off">
 
-        <div class="modal fade" id="parametro_detallle" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        <img src="<?= base_url("img/gfp.png")?>" alt="" class="w-25 p-3">
-                            <h3 class="modal-title" id="exampleModalLabel">Historial de saquito </h3>
-                        </div>
-                        <div class="modal-body">
-                                <input hidden id="id" name="id">
-         <div>
-                                   
-  <!-- tabla de  proyeccion -->
-  <table class="table table-bordered" >
-                <thead>
-                    <tr>
-                        <th>fecha de registro</th>
-                        <th>valor</th>
-                        </tr>
-                    </thead>
-                    <tbody id="bodytb">
-
-                    </tbody>
-
-            
-            </table>
-                                     
-            </div>
-                        </div>
-                        
-                    </div>
-
+    <div class="modal fade" id="parametro_detallle" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <img src="<?= base_url("img/gfp.png")?>" alt="" class="w-25 p-3">
+                    <h3 class="modal-title" id="exampleModalLabel">Historial de saquito </h3>
                 </div>
+                <div class="modal-body">
+                    <input hidden id="id" name="id">
+                    <div>
+
+                        <!-- tabla de  proyeccion -->
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>fecha de registro</th>
+                                    <th>valor</th>
+                                </tr>
+                            </thead>
+                            <tbody id="bodytb">
+
+                            </tbody>
+
+
+                        </table>
+
+                    </div>
+                </div>
+
             </div>
+
+        </div>
+    </div>
 </form>
 
 <!-- Modal Eliminar-->
@@ -187,9 +189,9 @@
 
 
     <!-- <---------------------div de header y footer------------------->
-    </div>
+</div>
 
-    </div>
+</div>
 </div>
 
 
@@ -199,34 +201,32 @@
 
     let btnAgregar = document.getElementById('agregar');
 
-    $(document).ready(function(){
-    $.ajax({
-    url:"<?php echo base_url("principal/buscar_presupuesto")?>",
-    type:"get",
-    dataType:"json",
-    success:function(data){
+        $(document).ready(function(){
 
-    if( data.length > 0 ) {
-    btnAGregar.hidden = false;
+            $.ajax({
+                url:"<?php echo base_url("principal/buscar_presupuesto")?>",
+                type:"get",
+                dataType:"json",
+                success:function(data){
 
+                    if( data.length > 0 ) {
+                        btnAGregar.hidden = false;
 
-    } else{
-    btnAGregar.hidden = true;
-    btnAGregar.disabled = true;
+                    } else{
+                        btnAGregar.hidden = true;
+                        btnAGregar.disabled = true;
 
-
-
-
-    }
-    }
-    })
-    })
+                    }   
+                }
+        });
+    });
 
 
 
     </script>
 
     <script>
+
     let btnAGregar = document.getElementById('agregar');
     let pp = document.getElementById('proyeccion');
 
@@ -367,41 +367,32 @@
 
         });
     });
+    </script>
+
+
+    <!-- funcion para cargar el la proyeccion de los saquitos dinamicos -->
+    <script>
+    function seleccionaSaquito(id) {
+        console.log(id);
+        var contador = 0
+
+        dataURL = "<?php echo base_url('buscar_historial_p'); ?>" + "/" + id;
+        $.ajax({
+            type: "get",
+            url: dataURL,
+            dataType: "json",
+            success: function(rs) {
+                console.log(rs);
+                console.table(rs);
+
+            }
+        })
+
+
+
+
+    }
+
 </script>
-   
 
-<!-- funcion para cargar el la proyeccion de los saquitos dinamicos -->
-<script>
-  function seleccionaSaquito(id) {
-       console.log(id);  
-                    var contador = 0 
-                  
-                    dataURL = "<?php echo base_url('buscar_historial_p'); ?>" + "/" + id;
-                    $.ajax({
-                        type: "get",
-                        url: dataURL,
-                        dataType: "json",
-                        success: function(rs) {
-                         console.log(rs);
-                         console.table(rs);
- 
-                    }
-                  }
-                ) 
-   
-
-                        
-        
-           }
-
-</script>
-
-
-
-
-
-    <?= $this->endSection("contenido")?>
-
-
-
- 
+<?= $this->endSection("contenido")?>

@@ -66,9 +66,9 @@ class EmergenciaModel extends Model{
         $this->select('fondo_emergencia.*');
         $this->where('id_usuario', $id);
         $this->where('estado','A');
-        // $this->orderBy('id_fondo-emergencia', 'DESC');
+        $this->orderBy('id_fondo-emergencia', 'DESC');
 
-        $datos = $this->findAll();
+        $datos = $this->first();
         return $datos;
     }
 

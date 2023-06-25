@@ -16,6 +16,7 @@
                         <input type="date" class="form-control" name="fecha_cuota" id="fecha_cuota"
                             placeholder="Fecha inicial: " required>
 <br>
+                            <label for="floatingInput">Prespupuesto</label>
                             <select class="form-select valida" name="parametros_enc" id="parametros_enc" aria-label="Floating label select example" required>
                              
                                 <?php foreach ($encabezado as $data) {?>
@@ -24,7 +25,7 @@
                                 <?php } ?>
                                 
                             </select>
-
+<br>
                         <label for="floatingInput">Valor de la cuota </label>
                         <input type="number" class="form-control valida" name="valor_cuota" id="valor_cuota"
                             placeholder="Valor: " required>
@@ -59,15 +60,13 @@
                         <tbody>
                             <tr>
                                 <td>Cantidad de cuotas</td>
-                                <td><?= $traer_sqto['numero_cuota']?></td>
-                                <td><?= $traer_sqto['valor']?></td>
+                                <td> <?= $traer_sqto['numero_cuota']?> </td>
+                                    <td id="valor12"></td>
                             </tr>
                             <tr>
                                 <td>Cuotas Registrada</td>
                                 <td>
-                                    <div id="cuotas" name="cuotas">
-
-                                    </div>
+                                    <div id="cuotas" name="cuotas"> </div>
                                 </td>
                                 <td>
                                     <div id="num_cuotas" name="num_cuotas"> </div>
@@ -76,20 +75,13 @@
                             <tr>
                                 <td colspan="2">Dinero faltante </td>
                                 <!-- <td>Cuotas restantes</td> -->
-                                <!-- <td>
-                <div id="num_cr">
-
-                </div> -->
+                                <!-- <td> <div id="num_cr"></div> -->
                                 </td>
 
                                 <td>
-                                    <div id="saldo_restante">
-
-                                    </div>
+                                    <div id="saldo_restante"></div>
                                 </td>
-
                             </tr>
-
                         </tbody>
                     </table>
                 </div>
@@ -102,6 +94,7 @@
                 <div id="contenedor">
                     <div id="limite">
                         <div class="table table-striped">
+
                             <table id="miTabla" cellspacing="0">
                                 <thead>
                                     <tr>
@@ -109,21 +102,9 @@
                                         <th>Valor cuota</th>
                                         <th>Saquito</th>
                                         <th>estado</th>
-
-
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <?php foreach ($proyeccion as $dato){ ?>
-                                    <tr>
-                                        <td><?php echo $dato['fecha_cuota'];?></td>
-                                        <td><?php echo $dato['valor_cuota'];?></td>
-                                        <td><?php echo $dato['descripcion'];?></td>
-                                        <td><?php echo $dato['estado'];?></td>
-                                    </tr>
-
-                                    <?php } ?>
-
+                                <tbody id="tablaCuerpo">
                                 </tbody>
                             </table>
                         </div>
@@ -191,15 +172,18 @@ $(document).ready(function() {
 <script>
 
 const suma_cuotas = <?= json_encode($traer_proye) ?>;
-console.log(suma_cuotas)
+console.log(suma_cuotas);
 let suma = 0;
+let conversion = suma;
+
 for (let i = 0; i < suma_cuotas.length; i++) {
     suma = parseFloat(suma) + parseFloat(suma_cuotas[i]['valor_cuota']);
-    document.getElementById('num_cuotas').innerText = suma;
+    conversion = suma.toLocaleString();
+    document.getElementById('num_cuotas').innerText = conversion;
     document.getElementById('cuotas').innerText = suma_cuotas.length;
     //    alert(suma_cuotas)
-
 }
+
 let num1 = <?= $traer_sqto['numero_cuota']?>;
 let num2 = <?= $traer_sqto['valor']?>;
 
@@ -209,8 +193,11 @@ let num2 = <?= $traer_sqto['valor']?>;
 // document.getElementById('num_cr').innerText = resultado1;
 
 resultado2 = num2 - suma;
-console.log(resultado2)
-document.getElementById('saldo_restante').innerText = resultado2;
+
+let decimal_Resultado = parseFloat(resultado2).toLocaleString();
+
+// console.log(resultado2)
+document.getElementById('saldo_restante').innerText = decimal_Resultado;
 
 let num3 = <?= $traer_sqto['valor']?>
 
@@ -233,7 +220,7 @@ if (num3 === 0) {
         dataType: "json",
         success: function(resp) {
             window.location.href = "<?= base_url('mi_saquito') ?>";
-            console.log(resp);
+            // console.log(resp);
         }
     });
 
@@ -243,8 +230,57 @@ if (num3 === 0) {
 </script>
 
 
+
 <script>
-    
+// convertir datos tipo string a tipo numerico con separaciones por coma, registros de las cuotas
+let valorstring = <?= $traer_sqto['valor'] ?>;
+let numeroDecimal = parseFloat(valorstring);
+let valorFormateado = numeroDecimal.toLocaleString();
+document.getElementById("valor12").innerText = valorFormateado;
+</script>
+
+
+<script>
+
+    // Obtener los datos de proyeccion
+    let proyeccion = <?php echo json_encode($proyeccion); ?>;
+    // Obtener referencia al cuerpo de la tabla
+    let tablaCuerpo = document.getElementById("tablaCuerpo");
+
+    // Recorrer los datos de proyeccion y generar las filas de la tabla
+    for (let i = 0; i < proyeccion.length; i++) {
+        // Crear una nueva fila
+        let fila = document.createElement("tr");
+
+        // Crear y agregar celda para la fecha de la cuota
+        let fechaCuota = document.createElement("td");
+        fechaCuota.textContent = proyeccion[i]['fecha_cuota'];
+        fila.appendChild(fechaCuota);
+
+        // Crear y agregar celda para el valor de la cuota
+        let valorCuota = document.createElement("td");
+        valorCuota.id = "valor_cuota_" + i;
+        let valorCuotaString = proyeccion[i]['valor_cuota'];
+        let valorCuotaDecimal = parseFloat(valorCuotaString).toLocaleString();
+        valorCuota.textContent = valorCuotaDecimal;
+        fila.appendChild(valorCuota);
+
+        // Crear y agregar celda para la descripción
+        let descripcion = document.createElement("td");
+        descripcion.textContent = proyeccion[i]['descripcion'];
+        fila.appendChild(descripcion);
+
+        // Crear y agregar celda para el estado
+        let estado = document.createElement("td");
+        estado.textContent = proyeccion[i]['estado'];
+        fila.appendChild(estado);
+
+        // Agregar la fila al cuerpo de la tabla
+        tablaCuerpo.appendChild(fila);
+    }
+
+
+
 </script>
 
 <?= $this->endSection("contenido")?>

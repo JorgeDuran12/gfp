@@ -30,6 +30,7 @@ class Saquito extends BaseController
         $session = session();
 
         $saquitos = $this-> saquito-> traer();
+        
         echo view("gfp/fondo/saquito", [
             'tituloPagina' => 'Mi saquito',
             'saquito'=>$saquitos,

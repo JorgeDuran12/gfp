@@ -64,22 +64,13 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th scope="col">fecha</th>
-                    <th scope="col">valor</th>
-                    <!-- <th scope="col">Descripcion</th> -->
+                    <th scope="col">Monto total</th>
                 </tr>
             </thead>
             <tbody>
-
-                <?php foreach ($emergencia as $dato) { ?>
-
                 <tr>
-                    <td> <?php echo $dato ['fecha_registro'];?></td>
-                    <td> <?php echo $dato ['suma_total'];?></td>
+                    <td> <?php echo $emergencia['suma_total'];?></td>
                 </tr>
-
-                <?php } ?>
-
             </tbody>
         </table>
 
@@ -130,8 +121,11 @@
 
 <script>
 
-
-
+    document.getElementById("formulario_emergencia").addEventListener("submit", function() {
+        // Deshabilitar el botón de envío después de hacer clic
+        document.getElementById("btn_enviar").disabled = true;
+    });
+    
 </script>
 
 <script>
