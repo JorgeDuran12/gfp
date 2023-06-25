@@ -194,7 +194,22 @@
 </div>
 </div>
 
+<script>
 
+// Escuchar el evento 'shown.bs.modal' para el modal
+let miModal = document.getElementById('editarModal');
+miModal.addEventListener('shown.bs.modal', function () {
+  // Obtener el campo de fecha dentro del modal
+  let fechaInput = document.getElementById('fecha_inicial');
+
+  // Obtener la fecha actual en formato AAAA-MM-DD
+  let fechaActual = new Date().toISOString().split('T')[0];
+
+  // Establecer la fecha actual como valor predeterminado en el campo de fecha
+  fechaInput.value = fechaActual;
+});
+
+</script>
 
 <!--Funcion para desaparecer el boton de agregar si no hay un valor en presupuesto-->
 <<script>
@@ -227,7 +242,7 @@
 
     <script>
 
-    let btnAGregar = document.getElementById('agregar');
+let btnAGregar = document.getElementById('agregar');
     let pp = document.getElementById('proyeccion');
 
 
@@ -242,7 +257,8 @@
                 //Si hay saquito que desactive el boton de agregar
                 if (data.length > 0) {
                     btnAGregar.hidden = true
-                    //btnAGregar.disabled = true;                    
+                    //btnAGregar.disabled = true;   
+                    pp.hidden = false;                 
 
                     for (saquito of data[0]) {
 
@@ -273,9 +289,6 @@
 
                 }
 
-                /* ***************************************** */
-
-                /* ************************************** */
 
             }
         })
@@ -403,10 +416,6 @@
    
                    });
                 }
-
-
-
-    
 
 </script>
 

@@ -19,6 +19,7 @@ class Proyeccion extends BaseController
     protected $disponible;
     protected $usuario;
     protected $params;
+    protected $emergencia;
 
     public function __construct()
     {
@@ -28,12 +29,15 @@ class Proyeccion extends BaseController
         $this->saquito = new SaquitoModel();
         $this->disponible = new DisponibleModel();
         $this->params = new ParamentrosModel();
+        $this->emergencia = new EmergenciaModel();
         
     }
    
     public function index()
     {
         $session = session();
+        $id_usuario = $session->get('id_usuario');
+
         $disponibles = $this-> disponible ->datos_ingreso();
 
         $proye = new ProyeccionModel();
@@ -44,7 +48,8 @@ class Proyeccion extends BaseController
         $traer_sqto =   $traer_sqto -> traer_sqto ();
         $traer_proye=   $traer_proy -> traer_proye ();
 
-        $params1 = $this -> params -> traerdsdeta();
+        $params = $this -> params -> traerProyeccion();
+        $proyeccion_enc = $this->emergencia->traer_fondo($id_usuario);
 
         echo view("gfp/fondo/proyeccion_saquito", [
             'tituloPagina' => 'Proyeccion',
@@ -53,9 +58,11 @@ class Proyeccion extends BaseController
             'misDatos' => $session,
             'traer_sqto' => $traer_sqto,
             'traer_proye' => $traer_proye['valor_cuota'],
-            'encabezado' => $params1,
+            'encabezado' => $params,
+            'proyeccion_enc' => $proyeccion_enc,
         ]);
     }
+
 
     public function Insertar()
     {
@@ -67,11 +74,6 @@ class Proyeccion extends BaseController
 
         $id_disponible = new DisponibleModel();
         $identificador = $id_disponible->traer_id_disponible();
-
-        $emergenciaModel = new EmergenciaModel();
-        $id_emergencia =  $emergenciaModel -> traer_id_emergencia();
-
-
         
         $this->proyeccion->save([
             'fecha_cuota' => $this->request->getPost('fecha_cuota'), 
@@ -99,6 +101,8 @@ class Proyeccion extends BaseController
 
         return redirect()->to(base_url('/proyeccion'));
     }
+
+
 
 
     public function buscar_Proyeccion(){
@@ -130,6 +134,8 @@ class Proyeccion extends BaseController
         // Enviar la respuesta como JSON
         return $this->respond($response);
     }
+
+
     // public function buscar_($id)
     //   {
     //       $returnData = array();

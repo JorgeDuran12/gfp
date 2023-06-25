@@ -88,6 +88,7 @@ class Principal extends BaseController
         $idUsuario = $session->id_usuario;
 
         $disponible_ = $this->disponible->traer_disponible($idUsuario);
+        
         if (!empty($disponible_)) {
             array_push($returnData, $disponible_);
         }

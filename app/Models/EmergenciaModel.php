@@ -109,9 +109,6 @@ class EmergenciaModel extends Model{
         return $datos;
     }
 
-
-
-
     public function traer_id_emergencia()
     {
         $session = session();

@@ -30,7 +30,7 @@ class SaquitoModel extends Model{
             $this->select('saquitos.*');
             $this->where('usuario_crea', $id);
             // $this->where('estado', $estado);
-            $datos = $this->findAll();  // nos trae el registro que cumpla con una condicion dada 
+            $datos = $this->first();  // nos trae el registro que cumpla con una condicion dada 
             return $datos;
         }
 

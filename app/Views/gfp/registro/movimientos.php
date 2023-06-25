@@ -148,8 +148,6 @@
                                         <th>TipoMovimiento</th>
                                         <th>Descripcion</th>
 
-
-
                                     </tr>
                                 </thead>
                                 <tbody>

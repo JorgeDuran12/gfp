@@ -85,3 +85,10 @@
         height: 50px;
         border-radius: 5px;
     }
+
+    .tabla_emergencia{
+        color:aqua;
+        width: 200px;
+        display: flex;
+        text-align: center;
+    }

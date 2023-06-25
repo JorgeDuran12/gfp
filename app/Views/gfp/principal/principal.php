@@ -146,31 +146,26 @@ inputPeriodo.value = periodo.getFullYear();
 </script>
 
 <script>
-
+  
 const grafica_emergencia = <?= json_encode($graficas_e) ?>;
 
 if (grafica_emergencia.length === 0) {
   document.getElementById('fondo_gra').innerText = "No hay datos en el fondo de emergencia";
 } else {
+  let array_datos = [];
 
-let array_datos = []; // Creamos un array vacío
+  for (let i = 0; i < grafica_emergencia.length; i++) {
+    array_datos.push(grafica_emergencia[i].suma_total);
+  }
 
-for (let i = 0; i < grafica_emergencia.length; i++) {
-  array_datos.push(grafica_emergencia[i].suma_total); // Por cada recorrido, se agrega el valor al array
-}
+  let array_detalle = [];
 
-let array_detalle = [];
+  // Asegúrate de obtener los datos necesarios y asignarlos correctamente a 'detalle'
+  const detalle = <?= json_encode($graficas_titulo) ?>;
 
-for (let t = 0; t < detalle.length; t++) {
-  array_detalle.push(detalle[t].descripcion); // Por cada recorrido, se agrega el valor al array
-}
-
-  // let array_fecha= []
-
-  //     for (i = 0; i < grafica_emergencia.length; i++) {
-  //       array_fecha.push(grafica_emergencia[i].fecha_registro) //por cada recorrido hace un push
-  //         console.table(array_fecha);
-  //         }
+  for (let t = 0; t < detalle.length; t++) {
+    array_detalle.push(detalle[t].descripcion);
+  }
 
   const ctx1 = document.getElementById('myChart2');
 
@@ -183,7 +178,7 @@ for (let t = 0; t < detalle.length; t++) {
         fill: false,
         data: array_datos,
         borderWidth: .5,
-        backgroundColor: '#FDFD96', // Aquí puedes especificar el color deseado en formato RGBA
+        backgroundColor: '#FDFD96',
         pointBorderColor: '#ffff'
       }]
     },
@@ -211,6 +206,7 @@ for (let t = 0; t < detalle.length; t++) {
     }
   });
 }
+
 
 
 </script>

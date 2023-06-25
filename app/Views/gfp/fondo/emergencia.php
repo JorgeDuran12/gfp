@@ -59,7 +59,7 @@
             <br>
     </form>
 
-    <div style="width:500px;">
+    <div class="tabla_emergencia">
 
         <table class="table">
             <thead>
@@ -69,11 +69,10 @@
             </thead>
             <tbody>
                 <tr>
-                    <td> <?php echo $emergencia['suma_total'];?></td>
+                    <td id="suma_total"></td>
                 </tr>
             </tbody>
         </table>
-
     </div>
 
     <!--- Modal Actualizar --->
@@ -153,5 +152,24 @@ textarea.addEventListener('input', function() {
 
 </script>
 
+<script>
+
+    const suma = parseFloat(<?php echo $emergencia['suma_total'];?>).toLocaleString();
+    document.getElementById('suma_total').innerText = suma;
+
+</script>
+
+<script>
+
+// Obtener el elemento del campo de fecha
+let fechaInput = document.getElementById('fecha_registro');
+
+// Obtener la fecha actual en formato AAAA-MM-DD
+let fechaActual = new Date().toISOString().split('T')[0];
+
+// Establecer la fecha actual como valor predeterminado en el campo de fecha
+fechaInput.value = fechaActual;
+
+</script>
 
 <?= $this->endSection("contenido")?>

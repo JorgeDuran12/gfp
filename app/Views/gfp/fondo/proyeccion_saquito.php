@@ -17,14 +17,19 @@
                             placeholder="Fecha inicial: " required>
 <br>
                             <label for="floatingInput">Prespupuesto</label>
+
                             <select class="form-select valida" name="parametros_enc" id="parametros_enc" aria-label="Floating label select example" required>
-                             
+
                                 <?php foreach ($encabezado as $data) {?>
                                 <option style="color:black;" value="<?php echo $data["id_parametro_enc"]; ?>">
                                     <?php echo $data["nombre"];?></option>
                                 <?php } ?>
-                                
+    
                             </select>
+
+                            <input type="hidden" name="id_parametro_det" id="id_parametro_det" value="">
+
+                            <input type="hidden" class="form-control valida" id="fondo" name="fondo" required>
 <br>
                         <label for="floatingInput">Valor de la cuota </label>
                         <input type="number" class="form-control valida" name="valor_cuota" id="valor_cuota"
@@ -40,9 +45,9 @@
                         <input type="hidden" class="form-control valida" placeholder="presupuesto" id="presupuesto"
                             name="presupuesto" required>
 
-                            <button class="btn btn-success" href="#" class="btn-guardar" type="Submit">
-                                <img class="image" src="<?= base_url("img/Guardar.png") ?>" title="Guardar">
-                            </button>
+                    <button class="btn btn-success" href="#" class="btn-guardar" type="Submit">
+                        <img class="image" src="<?= base_url("img/Guardar.png") ?>" title="Guardar">
+                    </button>
                     </div>
                 </form>
                
@@ -129,22 +134,52 @@
 
 <!-- <---------------------div de header y footer------------------->
 
+<script>
+
+//ID para los campos del select 
+$(document).ready(function() {
+    $('#parametros_enc').change(function() {
+        let selectedValue = $(this).val();
+        $('#id_parametro_det').val(selectedValue);
+    });
+});
+
+    
+// Obtener el elemento del campo de fecha
+let fechaInput = document.getElementById('fecha_cuota');
+
+// Obtener la fecha actual en formato AAAA-MM-DD
+let fechaActual = new Date().toISOString().split('T')[0];
+
+// Establecer la fecha actual como valor predeterminado en el campo de fecha
+fechaInput.value = fechaActual;
+
+
+</script>
+
+
 
 <script>
 
 const egreso = <?= $disponibles['egreso']?>;
 const presu = <?= $disponibles['presupuesto_anual']?>;
+const proyeccion_enc = <?= $proyeccion_enc['suma_total']?>;
+// console.log(proyeccion_enc);
 
 $(document).on('blur', '.valida', function(event) {
 
     let valor_cuota = parseInt(document.getElementById("valor_cuota").value);
     let resultado = presu - valor_cuota;
     let resultado2 = valor_cuota + egreso;
+    let fondo_emergencia =  proyeccion_enc - valor_cuota;
 
+     console.log(fondo_emergencia);
 
     //  console.log("resultado-------"+resultado2);
     document.getElementById("egreso").value = resultado2;
     document.getElementById("presupuesto").value = resultado;
+    document.getElementById("fondo").value = fondo_emergencia;
+
 
 })
 
@@ -172,7 +207,7 @@ $(document).ready(function() {
 <script>
 
 const suma_cuotas = <?= json_encode($traer_proye) ?>;
-console.log(suma_cuotas);
+// console.log(suma_cuotas);
 let suma = 0;
 let conversion = suma;
 
@@ -219,10 +254,15 @@ if (num3 === 0) {
         url: "<?php echo base_url('Saquito/completado'); ?>",
         dataType: "json",
         success: function(resp) {
-            window.location.href = "<?= base_url('mi_saquito') ?>";
+           
             // console.log(resp);
         }
     });
+
+        setTimeout(function() {
+        window.location.href = "<?= base_url('mi_saquito') ?>";
+         }, 2000);
+
 
 }
 
