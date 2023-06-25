@@ -19,7 +19,7 @@
         </div>
         <!-- <--------------trasabilidad---------------------->
         <div class="div__cont">
-
+            <!-- <h2>Presupuesto Anual</h2> -->
             <canvas id="myChart_presu"></canvas>
 
         </div>
@@ -29,16 +29,19 @@
     <div class="principal__cont-2">
 
         <div class="div__cont">
-            <canvas id="myChart1" width=""></canvas>
+        
+          <div id="mychartingreso"></div>
+            <canvas id="MovimientoIgresos"></canvas>
         </div>
 
         <div class="div__cont">
+          <div id="fondo_gra"></div>
             <canvas id="myChart2" width="100"></canvas>
         </div>
 
         <div class="div__cont">
-
-            <canvas id="Movimiento"></canvas>
+            <div id="movi_cont"></div>
+            <canvas id="MovimientoEgresos"></canvas>
 
         </div>
         
@@ -144,59 +147,71 @@ inputPeriodo.value = periodo.getFullYear();
 
 <script>
 
-    const grafica_emergencia = <?= json_encode($graficas_e) ?>;
+const grafica_emergencia = <?= json_encode($graficas_e) ?>;
 
-    let array_datos = []; //creamos un array vacio
+if (grafica_emergencia.length === 0) {
+  document.getElementById('fondo_gra').innerText = "No hay datos en el fondo de emergencia";
+} else {
 
-    for (i = 0; i < grafica_emergencia.length; i++) {
-        array_datos.push(grafica_emergencia[i].suma_total) //por cada recorrido hace un push
-        // console.log(array_datos);
-        }
+let array_datos = []; // Creamos un array vacío
 
-let array_fecha= []
-    for (i = 0; i < grafica_emergencia.length; i++) {
-      array_fecha.push(grafica_emergencia[i].fecha_registro) //por cada recorrido hace un push
-        console.table(array_fecha);
-        }
+for (let i = 0; i < grafica_emergencia.length; i++) {
+  array_datos.push(grafica_emergencia[i].suma_total); // Por cada recorrido, se agrega el valor al array
+}
 
+let array_detalle = [];
 
-    const detalle = <?=json_encode($graficas_titulo) ?>;
-    // console.log(detalle);
-    let array_detalle = [];
+for (let t = 0; t < detalle.length; t++) {
+  array_detalle.push(detalle[t].descripcion); // Por cada recorrido, se agrega el valor al array
+}
 
-    for (t = 0; t < detalle.length; t++) {
-        array_detalle.push(detalle[t].descripcion) //por cada recorrido hace un
-        // console.log(array_detalle);
-    }
+  // let array_fecha= []
 
+  //     for (i = 0; i < grafica_emergencia.length; i++) {
+  //       array_fecha.push(grafica_emergencia[i].fecha_registro) //por cada recorrido hace un push
+  //         console.table(array_fecha);
+  //         }
 
+  const ctx1 = document.getElementById('myChart2');
 
-const ctx1 = document.getElementById('myChart2');
-
-new Chart(ctx1, {
+  new Chart(ctx1, {
     type: 'line',
     data: {
-        labels: array_detalle,
-        datasets: [{
-                label: 'Enero',
-                data: array_datos,
-                borderWidth: 1,
-                borderColor: 'black ',
-                backgroundColor: 'black',
-                tension: 0.1
-
-            },
-
-        ]
+      labels: array_detalle,
+      datasets: [{
+        label: 'Fondo',
+        fill: false,
+        data: array_datos,
+        borderWidth: .5,
+        backgroundColor: '#FDFD96', // Aquí puedes especificar el color deseado en formato RGBA
+        pointBorderColor: '#ffff'
+      }]
     },
     options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
+      plugins: {
+        title: {
+          display: true,
+          text: 'Control del fondo de emergencia',
+          color: 'white'
         }
-    },
-});
+      },
+      scales: {
+        y: {
+          beginAtZero: true,
+          ticks: {
+            color: 'white' 
+          }
+        },
+        x: {
+          ticks: {
+            color: 'white'
+          }
+        }
+      },
+    }
+  });
+}
+
 
 </script>
 
@@ -240,74 +255,119 @@ new Chart(ctx, {
 
 
 <script>
-    const grafica_movimiento = <?= json_encode($grafica_movi) ?>;
+
+ const grafica_egreso = <?= json_encode($grafica_movi) ?>;
     const array_dat = [];
     const array_label = [];
 
-    for (let i = 0; i < grafica_movimiento.length; i++) {
-      array_dat.push(grafica_movimiento[i].descripcion);
+if (grafica_egreso.length === 0) {
+  document.getElementById('movi_cont').innerText = "No hay registros de egresos";
+} else {
+  for (let i = 0; i < grafica_egreso.length; i++) {
+    if (grafica_egreso[i].clase_movimiento === "4") { // Filtrar solo los registros de egresos
+      array_dat.push(grafica_egreso[i].descripcion);
+      array_label.push(grafica_egreso[i].valor);
     }
+  }
 
-    for (let i = 0; i < grafica_movimiento.length; i++) {
-      array_label.push(grafica_movimiento[i].valor);
-    }
+  const mv = document.getElementById('MovimientoEgresos');
 
-    const mv = document.getElementById('Movimiento');
-
-    new Chart(mv, {
-      type: 'line',
-      data: {
-        labels: array_dat,
-        datasets: [{
-          label: 'Valor: ',  
-          fill: true,
-          data: array_label,
-          borderWidth: 1,
-        }]
+  new Chart(mv, {
+    type: 'line',
+    data: {
+    labels: array_dat,
+    datasets: [{
+      label: 'Egreso',
+      fill: false,
+      data: array_label,
+      borderWidth: .5,
+      backgroundColor: 'rgba(255, 0, 0, 0.5)' ,// Aquí puedes especificar el color deseado en formato RGBA
+      pointBorderColor: '#ffff'
+    }]
+  },
+    options: {
+      plugins: {
+        title: {
+          display: true,
+          text: 'Control total de egresos',
+          color: 'white'
+        }
       },
-      options: {
-        plugins: {
-          title: {
-            display: true,
-            text: 'Gastos Diarios',
+      scales: {
+        y: {
+          beginAtZero: true,
+          ticks: {
+            color: 'white' 
+          }
+        },
+        x: {
+          ticks: {
             color: 'white'
           }
-        },
-        scales: {
-          y: {
-            beginAtZero: true,
-            ticks: {
-              color: 'white' 
-            }
-          },
-          x: {
-            ticks: {
-              color: 'white'
-            }
+        }
+      },
+    }
+  });
+}
+
+</script>
+
+<script>
+
+ const grafica_ingreso = <?php echo json_encode($grafica_movi) ?>;
+    const array_dato = [];
+    const array_lab = [];
+
+if (grafica_ingreso.length === 0) {
+  document.getElementById('mychartingreso').innerText = "No hay registros de igresos";
+} else {
+  for (let i = 0; i < grafica_ingreso.length; i++) {
+    if (grafica_ingreso[i].clase_movimiento === "3") { // Filtrar solo los registros de egresos
+      array_dato.push(grafica_ingreso[i].descripcion);
+      array_lab.push(grafica_ingreso[i].valor);
+    }
+  }
+
+  const ctm = document.getElementById('MovimientoIgresos');
+
+  new Chart(ctm, {
+    type: 'line',
+    data: {
+      labels: array_dato,
+      datasets: [{
+        label: 'Ingreso',  
+        fill: false,
+        data: array_lab,
+        borderWidth: .5 ,
+        backgroundColor: '#88DC65',
+        pointBorderColor: '#ffff'
+      }]
+    },
+    options: {
+      plugins: {
+        title: {
+          display: true,
+          text: 'Control total de ingresos',
+          color: 'white'
+        }
+      },
+      scales: {
+        y: {
+          beginAtZero: true,
+          ticks: {
+            color: 'white' 
           }
         },
-        onClick: function (event, chartElement) {
-          const mv = this.chart;
-          const ctx = mv.ctx;
-          const activeElements = mv.getElementsAtEventForMode(event, 'nearest', { intersect: true }, true);
-          if (activeElements.length > 0) {
-            const index = activeElements[0].index;
-            const bar = mv.data.datasets[0].data[index];
-            const fecha = grafica_movimiento[index].fecha_movimiento;
-            const x = activeElements[0].element.x;
-            const y = activeElements[0].element.y;
-
-            ctx.save();
-            ctx.font = Chart.helpers.fontString(Chart.defaults.font.size, 'normal', Chart.defaults.font.family);
-            ctx.fillStyle = 'white';
-            ctx.textAlign = 'center';
-            ctx.textBaseline = 'bottom';
-            ctx.fillText(fecha, x, y - 10); // Ajusta la posición de la fecha
-            ctx.restore();
+        x: {
+          ticks: {
+            color: 'white'
           }
         }
-      }
-    });
-  </script>
+      },
+    }
+  });
+}
+
+</script>
 
 <?= $this->endSection('contenido'); ?>

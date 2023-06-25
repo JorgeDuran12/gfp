@@ -48,7 +48,6 @@ class MovimientoModel extends Model{
         $this->where('estado', 'A');
         $datos = $this->findAll();
         return $datos;
-
     }
 
 
@@ -57,7 +56,7 @@ class MovimientoModel extends Model{
         $session = session();
         $id_usuario = $session->get('id_usuario');
         
-        $this->select('movimientos.valor,fecha_movimiento, descripcion');
+        $this->select('movimientos.valor, clase_movimiento, descripcion');
         $this->where('estado', 'A');
         $this->where('usuario_crea', $id_usuario);
         $datos = $this->findAll();
@@ -66,3 +65,6 @@ class MovimientoModel extends Model{
     
 
 }
+
+
+

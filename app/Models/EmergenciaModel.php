@@ -67,9 +67,17 @@ class EmergenciaModel extends Model{
         $this->where('id_usuario', $id);
         $this->where('estado','A');
         $this->orderBy('id_fondo-emergencia', 'DESC');
-
         $datos = $this->first();
-        return $datos;
+
+        if( empty($datos) ) {
+            // $datos['fecha_registro'] = 0;
+            // $datos['valor'] = 0;
+            // $datos['descripcion'] = 0;
+            $datos['suma_total'] = 0;
+            return $datos;
+        }else {
+            return $datos;
+        }
     }
 
 
