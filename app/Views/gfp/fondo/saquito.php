@@ -382,16 +382,31 @@
             url: dataURL,
             dataType: "json",
             success: function(rs) {
-                console.log(rs);
-                console.table(rs);
+                         console.log(rs);
+ 
+                         let contenido = '';
+                         rs[0].forEach(parametro => {
+            contador++
+            contenido += `
+            <tr id="util${contador}">
+            <td class="text-center">${parametro.fecha_cuota}</td>
+            <td class="text-center">${parametro.valor_cuota}</td>
+           
+            
+                           
+                            </tr>`
+        }); 
+        $('#bodytb').html(contenido);
+        
+                        }
+                
+   
+                   });
+                }
 
-            }
-        })
 
 
-
-
-    }
+    
 
 </script>
 
