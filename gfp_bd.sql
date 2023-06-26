@@ -1589,22 +1589,10 @@ INSERT INTO `usuarios` (`id_usuario`, `usuario`, `nombre`, `apellido`, `pass`, `
 -- Estructura Stand-in para la vista `vw_parametros_det`
 -- (Véase abajo para la vista actual)
 --
-CREATE TABLE `vw_parametros_det` (
-`id_parametro_det` smallint(2)
-,`nombre` varchar(200)
-,`estado` char(1)
-,`fecha_crea` timestamp
-,`id_parametro_enc` smallint(2)
-,`id_usuario_crea` smallint(2)
-);
+CREATE VIEW vw_parametros_det AS SELECT * from parametros_det;
 
--- --------------------------------------------------------
 
---
--- Estructura para la vista `vw_parametros_det
---
--- Indices de la tabla `acciones`
---
+
 ALTER TABLE `acciones`
   ADD PRIMARY KEY (`id_accion`),
   ADD KEY `accion_usuario` (`id_usuario_crea`);

@@ -207,8 +207,6 @@ if (grafica_emergencia.length === 0) {
   });
 }
 
-
-
 </script>
 
 <!-- Script de grafico de presupuesto actual, ingresos y egresos -->
