@@ -80,9 +80,9 @@
         </table>
     </div>
 
-    <!--- Modal Actualizar --->
-<!-- 
-    <form action="<php echo base_url('/emergencia/update'); ?>" method="POST" autocomplete="off">
+   <!--- Modal Actualizar --->
+      <!-- 
+      <form action="<php echo base_url('/emergencia/update'); ?>" method="POST" autocomplete="off">
 
         <div class="modal fade" id="ActualizarModal" tabindex="-1" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
@@ -118,6 +118,11 @@
         </div>
 
     </form> -->
+
+
+
+
+
 
 </div>
 </div>

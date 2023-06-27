@@ -21,15 +21,14 @@
                             <select class="form-select valida" name="parametros_enc" id="parametros_enc" aria-label="Floating label select example" required>
 
                                 <?php foreach ($encabezado as $data) {?>
-                                <option style="color:black;" value="<?php echo $data["id_parametro_enc"]; ?>">
+                                <option style="color:black;" value="<?php echo $data["id_parametro_det"]; ?>">
                                     <?php echo $data["nombre"];?></option>
                                 <?php } ?>
     
                             </select>
-
                             <input type="hidden" name="id_parametro_det" id="id_parametro_det" value="">
 
-                            <input type="hidden" class="form-control valida" id="fondo" name="fondo" required>
+                            <input type="hidden" class="form-control valida" id="suma_total" name="suma_total" required>
 <br>
                         <label for="floatingInput">Valor de la cuota </label>
                         <input type="number" class="form-control valida" name="valor_cuota" id="valor_cuota"
@@ -132,7 +131,54 @@
 </div>
  -->
 
-<!-- <---------------------div de header y footer------------------->
+
+  <!-- funcion para manipular el fondo de emegerncia para registrar saquito -->
+
+<script>
+
+const egreso = <?= $disponibles['egreso']?>;
+const presu = <?= $disponibles['presupuesto_anual']?>;
+const proyeccion_enc = <?= $proyeccion_enc['suma_total']?>;
+// console.log(proyeccion_enc);
+
+$(document).on('blur', '.valida', function(event) {
+
+    let valor_cuota = parseInt(document.getElementById("valor_cuota").value);
+    let tomar_valor = parseInt(document.getElementById("parametros_enc").value);
+
+if (tomar_valor === 35 && valor_cuota) {
+    let fondo_emergencia =  proyeccion_enc - valor_cuota;
+
+
+       document.getElementById("suma_total").value = fondo_emergencia;
+        alert(fondo_emergencia + "se uso el fondo de emergencia");
+        
+        
+        
+    }else if(tomar_valor === 34 && valor_cuota){
+        let resultado = presu - valor_cuota;
+        let resultado2 = valor_cuota + egreso;
+          document.getElementById("egreso").value = resultado2;
+          document.getElementById("presupuesto").value = resultado;
+          alert("se uso el presupuesto actual");
+
+    }
+    
+
+
+
+    
+
+
+
+    //  console.log("resultado-------"+resultado2);
+  
+   
+
+
+})
+
+</script>
 
 <script>
 
@@ -159,31 +205,6 @@ fechaInput.value = fechaActual;
 
 
 
-<script>
-
-const egreso = <?= $disponibles['egreso']?>;
-const presu = <?= $disponibles['presupuesto_anual']?>;
-const proyeccion_enc = <?= $proyeccion_enc['suma_total']?>;
-// console.log(proyeccion_enc);
-
-$(document).on('blur', '.valida', function(event) {
-
-    let valor_cuota = parseInt(document.getElementById("valor_cuota").value);
-    let resultado = presu - valor_cuota;
-    let resultado2 = valor_cuota + egreso;
-    let fondo_emergencia =  proyeccion_enc - valor_cuota;
-
-     console.log(fondo_emergencia);
-
-    //  console.log("resultado-------"+resultado2);
-    document.getElementById("egreso").value = resultado2;
-    document.getElementById("presupuesto").value = resultado;
-    document.getElementById("fondo").value = fondo_emergencia;
-
-
-})
-
-</script>
 
 <script>
 /******* Data - Table ***********/

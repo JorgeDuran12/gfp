@@ -126,4 +126,7 @@ class EmergenciaModel extends Model{
         }
     }
 
+
+
+    
 }
