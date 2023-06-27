@@ -3,15 +3,13 @@
 <?= $this->section("contenido")?>
 
 <div class="titulo">
-    <h1> <img class="img" src="<?= base_url("img/movimiento.png")?>">
-        Movimientos</h1>
+    <h1> <img class="img" src="<?= base_url("img/movimiento.png")?>">Movimientos</h1>
 </div>
 <div class="contenedorMovimiento">
+
     <form method="POST" action="<?php echo base_url('insertar'); ?>" autocomplete="off" class="movimiento">
 
-      <!-- <--------------actualizacion ----------->
-        <!-- esta parte esta oculta en la vista  -->
-        <div class="tx">
+    <div class="tx">
             <input type="hidden" class="form-control valida" placeholder="ingreso" id="ingreso" name="ingreso" required>
             <label for="floatingInput"></label>
         </div>
@@ -56,31 +54,33 @@
             <div class="container overflow-hidden">
                 <div class="row gx-5">
                     <div class="col">
-                        <div class="p-3 border bg-light">
+                        <div class="p-3 border">
 
+                        <label for="floatingInput" style="color:black;">Categoria en: </label>
                         <select class="form-select valida" name="parametros_enc" id="parametros_enc" aria-label="Floating label select example" required>
                              
                                 <?php foreach ($encabezado as $data) {?>
                                 <option style="color:black;" value="<?php echo $data["id_parametro_enc"]; ?>">
                                     <?php echo $data["nombre"];?></option>
-                                <?php } ?>
-                                <option value="otro">otro</option>
+                                    <?php } ?>
+                                    <option style="color:black;" value="otro">Otro</option>
                             </select>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="p-3 border bg-light">
-
+                        <div class="p-3 border">
+                            <label for="floatingInput" style="color:black;">Gasto en: </label>
                             <select class="form-select valida" id="parametros_det" name="parametros_det" aria-label="Floating label select example" required></select>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <textarea class="dc" placeholder="Descripcion" id="descripcion" name="descripcion"  style="display: none;" required></textarea>
-        <br>
-
+        
         <div class="tx">
+
+            <textarea class="texttarea" placeholder="Descripcion" id="descripcion" name="descripcion" required></textarea>
+
             <label for="floatingInput">Valor del Movimiento</label>
             <input type="number" class="form-control valida" placeholder="Valor" id="valor" name="valor" required>
         </div>
@@ -119,6 +119,7 @@
             </div>&nbsp&nbsp&nbsp&nbsp&nbsp
 
         </div>
+        
 </div>
 </form>
 </div>
@@ -221,6 +222,7 @@ $(document).on('blur', '.valida', function(event) {
     document.getElementById("egreso").value = nuevoEgreso;
 
     presupuesto_anual = saldo_anterior + nuevoIngreso - nuevoEgreso;
+    console.log(presupuesto_anual);
 
     document.getElementById("presupuesto").value = presupuesto_anual;
 });
@@ -228,6 +230,7 @@ $(document).on('blur', '.valida', function(event) {
 </script>
 
 <script>
+
 /******* Data - Table ***********/
 $(document).ready(function() {
     $('#miTabla').DataTable({
@@ -246,47 +249,97 @@ $(document).ready(function() {
 
     });
 });
+
 </script>
+
 
 <script>
 
 $(document).ready(function() {
+  // Ocultar los div y la descripción inicialmente
+  $('.dc').hide();
+  $('#descripcion').show();
 
-    $('#parametros_enc').change(function() {
+  // Deshabilitar el atributo 'required' del campo parametros_det al cargar la página
+  $('#parametros_det').removeAttr('required');
 
-        let id_encabezado = $(this).val();
-        let selectParametrosDet = $('#parametros_det');
-        let textareaDescripcion = $('#descripcion');
+  $('#clase_movimiento').change(function() {
+    let claseSeleccionada = $(this).val();
+    let select_enc = $('#parametros_enc');
+    let select_det = $('#parametros_det');
 
-        if (id_encabezado === 'otro') {
-            selectParametrosDet.empty();
-            selectParametrosDet.prop('disabled', true);
-            textareaDescripcion.show();
-        } else {
-            // Realizar la petición AJAX para obtener los registros relacionados al encabezado seleccionado
-            $.ajax({
-                url: '<?= base_url("Params"); ?>' + '/' + id_encabezado,
-                method: 'POST',
-                dataType: 'json',
-                success: function(response) {
-                    selectParametrosDet.empty();
-                    // Agregar los registros al select "parametros_det"
-                    $.each(response, function(id, name) {
-                        selectParametrosDet.append($('<option>').text(name.nombre).val(name.nombre));
-                    });
+    if (claseSeleccionada === '3') {
+      // Si la clase seleccionada es "Ingreso", ocultar los div excepto el campo de descripción
+      $('.dc').hide();
+      $('#descripcion').show();
+      // Deshabilitar los atributos 'required' de los selectores
+      select_enc.prop('required', false);
+      select_det.prop('required', false);
+      // Deshabilitar el select de detalle de parámetros
+      select_det.prop('disabled', true);
+      select_enc.prop('disabled', true);
+    } else {
+      // Si la clase seleccionada no es "Ingreso", mostrar los div
+      $('.dc').show();
+      $('#descripcion').hide();
+      // Habilitar los atributos 'required' de los selectores
+      select_enc.prop('required', true);
+      select_det.prop('required', true);
+      // Habilitar el select de detalle de parámetros
+      select_det.prop('disabled', false);
+      select_enc.prop('disabled', false);
 
-                    selectParametrosDet.show();
-                    selectParametrosDet.prop('disabled', false);
-                    textareaDescripcion.hide();
-                    textareaDescripcion.prop('required', false);
-                },
-                error: function() {
-                    console.log('Error en la solicitud AJAX');
-                }
-            });
-        }
+      // Realizar la petición AJAX para obtener los registros relacionados al encabezado seleccionado por defecto
+      let id_encabezado = select_enc.val();
+      obtenerRegistros(id_encabezado);
+    }
+  });
+
+  $('#parametros_enc').change(function() {
+    let id_encabezado = $(this).val();
+    let selectParametrosDet = $('#parametros_det');
+    let textareaDescripcion = $('#descripcion');
+
+    if (id_encabezado === 'otro') {
+      selectParametrosDet.empty();
+      selectParametrosDet.prop('disabled', true);
+      textareaDescripcion.show();
+      textareaDescripcion.prop('required', true);
+      selectParametrosDet.prop('required', false);
+    } else {
+      obtenerRegistros(id_encabezado);
+      textareaDescripcion.hide();
+      selectParametrosDet.prop('disabled', false);
+      selectParametrosDet.prop('required', true);
+      textareaDescripcion.prop('required', false);
+    }
+  });
+
+  function obtenerRegistros(id_encabezado) {
+    let selectParametrosDet = $('#parametros_det');
+
+    // Realizar la petición AJAX para obtener los registros relacionados al encabezado seleccionado
+    $.ajax({
+      url: '<?= base_url("Params"); ?>' + '/' + id_encabezado,
+      method: 'POST',
+      dataType: 'json',
+      success: function(response) {
+        selectParametrosDet.empty();
+        // Agregar los registros al select "parametros_det"
+        $.each(response, function(id, name) {
+          selectParametrosDet.append($('<option>').text(name.nombre).val(name.nombre).css('color', 'black'));
+        });
+
+        selectParametrosDet.show();
+        selectParametrosDet.prop('disabled', false);
+      },
+      error: function() {
+        console.log('Error en la solicitud AJAX');
+      }
     });
+  }
 });
+
 
 
 // Obtener referencia al textarea
@@ -330,6 +383,21 @@ textarea.addEventListener('input', function() {
         }
     });
 
+
+
+
+
+// Obtiene la referencia al elemento del campo de fecha y hora
+let fechaMovimiento = document.getElementById('fecha_movimiento');
+
+// Crea una nueva fecha y hora actual
+let fechaActual = new Date();
+
+// Formatea la fecha y hora actual en el formato necesario para el campo
+let fechaActualFormateada = fechaActual.toISOString().slice(0, 16);
+
+// Asigna la fecha y hora actual al campo
+fechaMovimiento.value = fechaActualFormateada;
     
 </script>
 

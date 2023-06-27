@@ -110,7 +110,7 @@ class ParamentrosModel extends Model{
 
     public function traerdeta(){
         $this->select('parametros_det.*');
-        $this->where('id_parametro_enc', 10);
+        $this->where('id_parametro_enc', 8);
         $this->where('estado','A');
         $datos = $this->findAll();  
         return $datos;
@@ -118,7 +118,7 @@ class ParamentrosModel extends Model{
   
     public function traerProyeccion(){
         $this->select('parametros_det.*');
-        $this->where('id_parametro_enc', 11);
+        $this->where('id_parametro_enc', 9 );
         $this->where('estado','A');
         $datos = $this->findAll();  
         return $datos;

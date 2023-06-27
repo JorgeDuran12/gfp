@@ -27,7 +27,7 @@ class Encab_ParametrosModel extends Model{
     public function traer_Datos(){
         $this->select('parametros_enc.*');
         $this->where('estado', 'A');
-        $this->whereIn('id_parametro_enc', [7,8,9]);
+        $this->whereIn('id_parametro_enc', [10,6,5,7]);
         $datos = $this->findAll();
         return $datos;
 

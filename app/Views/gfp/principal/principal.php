@@ -152,6 +152,7 @@ const grafica_emergencia = <?= json_encode($graficas_e) ?>;
 if (grafica_emergencia.length === 0) {
   document.getElementById('fondo_gra').innerText = "No hay datos en el fondo de emergencia";
 } else {
+
   let array_datos = [];
 
   for (let i = 0; i < grafica_emergencia.length; i++) {
@@ -164,7 +165,7 @@ if (grafica_emergencia.length === 0) {
   const detalle = <?= json_encode($graficas_titulo) ?>;
 
   for (let t = 0; t < detalle.length; t++) {
-    array_detalle.push(detalle[t].descripcion);
+    array_detalle.push(detalle[t].fecha_registro);
   }
 
   const ctx1 = document.getElementById('myChart2');

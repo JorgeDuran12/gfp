@@ -38,13 +38,22 @@
         text-align: center;
         border-radius: 10px;
     }
+
+    .texttarea{
+        width: 600px;
+        height: 100px;
+        color: black;
+        text-align: center;
+        margin: 17px 1px;
+        border-radius: 10px;
+    }
     
     .movimiento {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 100px auto;
-        height: 100%;
+        margin: 10px auto;
+        height: 90%;
         flex-direction: column;
     }
     
@@ -265,6 +274,12 @@
         transition-delay: 0.75s;
     }
     
-    #parametro_det {
-        color: black;
+    #parametros_det {
+        color:rgb(64, 61, 230);
     }
+
+    #parametros_enc {
+        color:rgb(64, 61, 230);
+    }
+
+

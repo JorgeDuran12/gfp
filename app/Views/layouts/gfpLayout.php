@@ -33,10 +33,10 @@
     <link rel="stylesheet" href="<?= base_url("/css/actividades/actividad.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/saquito/saquito1.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/saquito/progreso_saquito6.css")?>">
-    <link rel="stylesheet" href="<?= base_url("/css/registro/movimiento3.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/css/registro/movimiento9.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/agenda/pagoStyles.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/fullCalendar/fullCalendar.css")?>">
-    <link rel="stylesheet" href="<?= base_url("/css/123/emergencia4.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/css/123/emergencia8.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/123/administrador.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/perfil/perfilStyles1.css")?>">
 

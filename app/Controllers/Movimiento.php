@@ -28,6 +28,7 @@ class Movimiento extends BaseController
 
     }
 
+
     public function index()
     {
       $session = session();
@@ -107,7 +108,6 @@ class Movimiento extends BaseController
         return redirect()->to(base_url('/mis_movimientos'));
     }
     
-
 
         public function calculo(){
             $Movi_model = new MovimientoModel();

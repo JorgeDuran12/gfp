@@ -92,3 +92,9 @@
         display: flex;
         text-align: center;
     }
+
+      
+    .center-label {
+    display: flex;
+    justify-content: center;
+  }

@@ -58,14 +58,20 @@ class Principal extends BaseController
 
     /* metodos */    
 
-    public function agregar_presupuesto() {
-
+    public function agregar_presupuesto()
+    {
         $session = session();
         $idUsuarioGlobal = $session->id_usuario;
-
+    
         $periodo = $this->request->getPost('periodo_input');
         $presupuesto = $this->request->getPost('presupuesto_input');
     
+        $registroExistente = $this->disponible->where('id_usuario', $idUsuarioGlobal)->first();
+
+        $id_dispo=  $this -> disponible->traer_id_disponible();
+
+        if ($registroExistente === null) {
+            // Realizar inserción
             $this->disponible->insert([
                 'periodo' => $periodo,
                 'saldo_anterior' => $presupuesto,
@@ -74,12 +80,24 @@ class Principal extends BaseController
                 'egreso' => 0,
                 'id_usuario' => $idUsuarioGlobal,
             ]);
-
+        } else {
+            // Realizar actualización
+            $this->disponible->update($id_dispo, [
+                'periodo' => $periodo,
+                'saldo_anterior' => $presupuesto,
+                'presupuesto_anual' => $presupuesto,
+                'ingreso' => 0,
+                'egreso' => 0,
+                'id_usuario' => $idUsuarioGlobal,
+            ]);
+        }
+    
         $session->set(['presupuesto' => $presupuesto ]);
-
+    
         return redirect()->to(base_url('/principal'))->with('estadoPresupuesto', 1);
-        
     }
+    
+    
 
     public function buscar_presupuesto(){
         $returnData = array();

@@ -30,7 +30,12 @@
 
             <div class="emergencia_container_form">
 
-                <label for="floatingInput">Metodo de pago</label>
+                            
+                <div class="center-label">
+
+                     <label for="floatingInput">Fondo</label>
+
+                </div>
 
                 <select class="form-select " name="params" id="params" aria-label="Floating label select example"
                     required>
