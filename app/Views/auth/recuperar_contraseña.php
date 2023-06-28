@@ -12,7 +12,7 @@
                     <input required type="email" name="email" id="email" class="form-control">
                     
                     <input type="text" hidden id="id_usuario" name="id_usuario">
-                    
+                    <br>
                     <button id="btn" type="submit" class="btn btn-success" class="recuperarPass_btn">Enviar</button>
                     
                 </form>

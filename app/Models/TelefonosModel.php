@@ -68,7 +68,7 @@ public function traer_telefonos_by_numero( $numero ) {
     $this->select('telefonos.*');
     $this->where('estado','A');
     $this->where('numero',$numero);
-    $this->where('prioridad', '14');
+    $this->where('prioridad', '10');
     $datos = $this->find();  
     return $datos;
 }

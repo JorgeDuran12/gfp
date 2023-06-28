@@ -46,8 +46,8 @@
             </ul>
             
             <ul class="d-flex">
-                <li>CORREO ELECTRONICO PRINCIPAL:</li>
-                <span><?= $DatosPerfil['email']?></span>
+                <li>CORREO ELECTRONICO PRINCIPAL:  </li>
+                <span> <?= $DatosPerfil['email']?></span>
             </ul>
             <!-- Boton editar info basica -->
             <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalContacto" onclick="mostrarDatos()">

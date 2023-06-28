@@ -53,7 +53,7 @@ class EmailsModel extends Model{
       $this->select('emails.*, usuarios.pass');
       $this->join('usuarios', 'emails.id_usuario = usuarios.id_usuario');
       $this->where('email', $email);
-      $this->where('prioridad', 13);
+      $this->where('prioridad', 9);
       $this->where('emails.estado', 'A');
       $datos = $this->first(); 
       // var_dump($datos);

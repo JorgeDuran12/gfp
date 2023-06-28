@@ -37,8 +37,8 @@ class UsuariosModel extends Model{
         $this->join('emails','emails.id_usuario = usuarios.id_usuario');
         $this->join('parametros_det', 'parametros_det.id_parametro_det = usuarios.tipo_documento');
         $this->where('usuarios.estado','A');
-        $this->where('telefonos.prioridad','13');
-        $this->where('emails.prioridad','13');
+        $this->where('telefonos.prioridad','9');
+        $this->where('emails.prioridad','9');
         $this->where('usuarios.id_usuario',$id_usuario);
         $datos = $this->first();  
         return $datos;
@@ -55,8 +55,8 @@ class UsuariosModel extends Model{
         $this->join('emails','emails.id_usuario = usuarios.id_usuario');
         $this->join('parametros_det', 'parametros_det.id_parametro_det = usuarios.tipo_documento');
         // $this->where('usuarios.estado','A');
-        $this->where('telefonos.prioridad','9');
-        $this->where('emails.prioridad','9');
+        $this->where('telefonos.prioridad',9);
+        $this->where('emails.prioridad',9);
         $this->where('usuarios.id_usuario',$id_usuario);
         $datos = $this->find();  
         return $datos[0];

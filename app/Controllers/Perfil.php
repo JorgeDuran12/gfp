@@ -87,10 +87,10 @@ class Perfil extends BaseController
             $telefono = $this->telefono->traer_telefonos_by_numero( $telefonoInput );
             // $this->telefono->where('id_telefono', $telefono[0]['id_telefono'])->delete();
             $this->telefono->update($telefono[0]['id_telefono'], [
-                'prioridad' => '13'
+                'prioridad' => '9'
             ]);
             $this->telefono->update($inputIDPrincipalNumero, [
-                'prioridad' => '14'
+                'prioridad' => '10'
             ]);
             
             return redirect()->to(base_url('/perfil'));
@@ -102,10 +102,10 @@ class Perfil extends BaseController
             $email = $this->email->traer_emails_by_correo( $emailInput );
             // $this->telefono->where('id_telefono', $telefono[0]['id_telefono'])->delete();
             $this->email->update($email[0]['id_email'], [
-                'prioridad' => '13'
+                'prioridad' => '9'
             ]);
             $this->email->update($inputIDPrincipalEmail, [
-                'prioridad' => '14'
+                'prioridad' => '10'
             ]);
             
             return redirect()->to(base_url('/perfil'));
@@ -156,7 +156,7 @@ class Perfil extends BaseController
             //insertar telefono si no existe
             $this->telefono->insert([
                 'numero' => $telOrEmail,
-                'prioridad' => '14', //Secundarios,
+                'prioridad' => '10', //Secundarios,
                 'id_usuario' => $idUsuario,
                 'usuario_crea' => $idUsuario
             ]);
@@ -179,7 +179,7 @@ class Perfil extends BaseController
                 //insertar telefono si no existe
                 $this->email->insert([
                     'email' => $telOrEmail,
-                    'prioridad' => '14', //Secundarios,
+                    'prioridad' => '10', //Secundarios,
                     'id_usuario' => $idUsuario,
                     'usuario_crea' => $idUsuario
                 ]);

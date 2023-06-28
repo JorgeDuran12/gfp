@@ -13,14 +13,14 @@
     <script src="<?= base_url('bootstrap/popper.min.js') ?>"></script>
     <script src="<?= base_url('bootstrap/bootstrap.bundle.min.js') ?>"></script>
     <script src="<?= base_url('js/jquery-3.6.0.js') ?>"></script>
-    
+
 
     <!-- Todos los estilos -->
     <link rel="stylesheet" href="<?= base_url("/css/layouts/authLayout2.css")?>">
-    <link rel="stylesheet" href="<?= base_url("/css/usuarios/loginStyles3.css")?>">
-    <link rel="stylesheet" href="<?= base_url("/css/usuarios/register1.css")?>">
-    <link rel="stylesheet" href="<?= base_url("/css/usuarios/recuperarcontra2.css")?>">
-    <link rel="stylesheet" href="<?= base_url('css/footer/footerStyles3.css') ?>">
+    <link rel="stylesheet" href="<?= base_url("/css/usuarios/loginStyles4.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/css/usuarios/register2.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/css/usuarios/recuperarcontra3.css")?>">
+    <link rel="stylesheet" href="<?= base_url('css/footer/footerStyles5.css') ?>">
 
 
     <!-- <---generadir de pdf con jspdf---------------->

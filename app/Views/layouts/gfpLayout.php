@@ -26,8 +26,8 @@
     <link rel="stylesheet" href="<?= base_url('css/general/globalStyless.css') ?>">
     <link rel="stylesheet" href="<?= base_url('css/navbar/navStyless12.css') ?>">
     <link rel="stylesheet" href="<?= base_url('css/pagina/paginaStyle.css') ?>">
-    <link rel="stylesheet" href="<?= base_url('css/footer/footerStyles3.css') ?>">
-    <link rel="stylesheet" href="<?= base_url("/css/usuarios/recuperarcontra2.css")?>">
+    <link rel="stylesheet" href="<?= base_url('css/footer/footerStyles5.css') ?>">
+    <link rel="stylesheet" href="<?= base_url("/css/usuarios/recuperarcontra3.css")?>">
     <link rel="stylesheet" href="<?= base_url('css/principal/prrincipalStyles1.css') ?>">
     <link rel="stylesheet" href="<?= base_url("/css/agenda/pagoStylees.css")?>">
     <link rel="stylesheet" href="<?= base_url("/css/actividades/actividad.css")?>">

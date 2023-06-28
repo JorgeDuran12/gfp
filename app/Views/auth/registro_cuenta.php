@@ -14,8 +14,11 @@
 
         <div class="title_container">
             <p class="title"> <?= $tituloPagina?> </p>
-            <span class="subtitle"> <strong>Fortalece tu bolsillo, controla tu futuro:
-                    Gestiona tus finanzas hoy</strong> </span>
+            <span class="subtitle"> 
+                <strong>Fortalece tu bolsillo, controla tu futuro:</strong>
+                <br>
+                <strong>Gestiona tus finanzas hoy</strong> 
+            </span>
         </div>
         <!-- <-----------------------valifacion de login super bonito------------------------------->
 

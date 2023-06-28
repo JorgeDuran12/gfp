@@ -188,7 +188,7 @@ class Auth extends BaseController
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
             
             $this->usuario->save([    
-                'usuario' => $this->request->getPost('usuario'),
+                'usuario' => $this->request->getPost('usuario'),    
                 'nombre' => $this->request->getPost('nombre'),
                 'apellido' => $this->request->getPost('apellido'),
                 'tipo_documento' => $this->request->getPost('tipo_documento'),
@@ -209,14 +209,14 @@ class Auth extends BaseController
             $this -> email -> save([
                 'id_usuario' => $id_usuario,
                 'usuario_crea'=> $id_usuario,
-                'prioridad' => 13,
+                'prioridad' => 9,
                 'email' => $this -> request ->getPost('email')
             ]);
 
             $this -> telefono -> save([
                 'id_usuario' => $id_usuario,
                 'usuario_crea'=> $id_usuario,
-                'prioridad' => 13,
+                'prioridad' => 9,
                 'numero' => $this -> request ->getPost('telefono')
             ]);
 
@@ -231,7 +231,7 @@ class Auth extends BaseController
                 'emails' => $this -> request ->getPost('email'),
                 'telefonos' => $this -> request ->getPost('telefono'),
                 'rol' => $datos['id_rol'],
-                'logged_in' => true
+                'logged_in' => true,
             ]);
 
             return redirect()->to('/Principal'); 
