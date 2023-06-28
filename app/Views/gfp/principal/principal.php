@@ -150,7 +150,7 @@ inputPeriodo.value = periodo.getFullYear();
 const grafica_emergencia = <?= json_encode($graficas_e) ?>;
 
 if (grafica_emergencia.length === 0) {
-  document.getElementById('fondo_gra').innerText = "No hay datos en el fondo de emergencia";
+  document.getElementById('fondo_gra').innerText = "Fondo de emergencia";
 } else {
 
   let array_datos = [];
@@ -225,7 +225,7 @@ const ctx = document.getElementById('myChart_presu');
 new Chart(ctx, {
   type: 'doughnut',
   data: {
-    labels: ['Presupuesto Anual', 'Ingreso', 'Egreso'],
+    labels: ['Presupuesto Actual', 'Ingreso', 'Egreso'],
     datasets: [{
       data: [presupuestoAnual, ingreso, egreso],
       borderWidth: 1,
@@ -256,7 +256,7 @@ new Chart(ctx, {
     const array_label = [];
 
 if (grafica_egreso.length === 0) {
-  document.getElementById('movi_cont').innerText = "No hay registros de egresos";
+  document.getElementById('movi_cont').innerText = "Egresos";
 } else {
   for (let i = 0; i < grafica_egreso.length; i++) {
     if (grafica_egreso[i].clase_movimiento === "4") { // Filtrar solo los registros de egresos
@@ -284,7 +284,7 @@ if (grafica_egreso.length === 0) {
       plugins: {
         title: {
           display: true,
-          text: 'Control total de egresos',
+          text: 'Control de egresos',
           color: 'white'
         }
       },
@@ -314,7 +314,7 @@ if (grafica_egreso.length === 0) {
     const array_lab = [];
 
 if (grafica_ingreso.length === 0) {
-  document.getElementById('mychartingreso').innerText = "No hay registros de igresos";
+  document.getElementById('mychartingreso').innerText = "Igresos";
 } else {
   for (let i = 0; i < grafica_ingreso.length; i++) {
     if (grafica_ingreso[i].clase_movimiento === "3") { // Filtrar solo los registros de egresos
@@ -342,7 +342,7 @@ if (grafica_ingreso.length === 0) {
       plugins: {
         title: {
           display: true,
-          text: 'Control total de ingresos',
+          text: 'Control de ingresos',
           color: 'white'
         }
       },
