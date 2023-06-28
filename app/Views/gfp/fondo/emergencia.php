@@ -29,13 +29,13 @@
         <div class="p_emergencia">
 
             <div class="emergencia_container_form">
-
-                            
+            
                 <div class="center-label">
 
-                     <label for="floatingInput">Fondo</label>
+                <label for="floatingInput">Fondo</label>
 
-               
+                </div>
+
 
                 <select class="form-select " name="params" id="params" aria-label="Floating label select example"
                     required>
@@ -48,8 +48,7 @@
 
                 </select>
 
-                </div>
-                
+
                 <br>
                 <div class="form_container__emergencia">
                     <input type="number" class="emergencia__input" name="emergencia__valor" id="emergencia__valor"
