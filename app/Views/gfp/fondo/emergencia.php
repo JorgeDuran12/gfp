@@ -35,7 +35,7 @@
 
                      <label for="floatingInput">Fondo</label>
 
-                </div>
+               
 
                 <select class="form-select " name="params" id="params" aria-label="Floating label select example"
                     required>
@@ -47,6 +47,9 @@
                     <?php } ?>
 
                 </select>
+
+                </div>
+                
                 <br>
                 <div class="form_container__emergencia">
                     <input type="number" class="emergencia__input" name="emergencia__valor" id="emergencia__valor"

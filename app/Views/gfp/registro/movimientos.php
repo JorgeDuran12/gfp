@@ -56,7 +56,7 @@
                     <div class="col">
                         <div class="p-3 border">
 
-                        <label for="floatingInput" style="color:black;">Categoria en: </label>
+                        <label for="floatingInput" class="label_movi">Categoria en: </label>
                         <select class="form-select valida" name="parametros_enc" id="parametros_enc" aria-label="Floating label select example" required>
                              
                                 <?php foreach ($encabezado as $data) {?>
@@ -69,7 +69,7 @@
                     </div>
                     <div class="col">
                         <div class="p-3 border">
-                            <label for="floatingInput" style="color:black;">Gasto en: </label>
+                            <label for="floatingInput" class="label_movi">Gasto en: </label>
                             <select class="form-select valida" id="parametros_det" name="parametros_det" aria-label="Floating label select example" required></select>
                         </div>
                     </div>

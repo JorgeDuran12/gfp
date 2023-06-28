@@ -1,17 +1,22 @@
+.login__container {
+  min-height: 100vh; /* Cambiamos "height" a "min-height" */
+}
+
+.login__form-container {
+  background: #4771a3;
+  min-height: 700px; /* Cambiamos "height" a "min-height" */
+  /* Resto del código... */
+}
+
 .footer__container {
-    height: 10vh;
-    padding: 20px;
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    background: rgb(4, 76, 143);
-}
-
-.footer__cont1 {
-    display: flex;
-    flex-direction: column;
-}
-
-.footer__logo {
-    width: 250px;
+  /* Añadimos posición fija al footer */
+  position: fixed;
+  bottom: 0;    
+  left: 0;
+  right: 0;
+  height: 10vh;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  background: rgb(4, 76, 143);
 }

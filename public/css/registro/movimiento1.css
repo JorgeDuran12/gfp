@@ -68,6 +68,7 @@
     .tx {
         text-align: center;
         width: 600px;
+        margin: 12px;
     }
     
     .image {
@@ -283,3 +284,10 @@
     }
 
 
+.label_movi{
+    margin: 7px;
+}
+
+.dc{
+    margin: 10px;
+}

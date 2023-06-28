@@ -31,10 +31,10 @@ class Perfil extends BaseController
         $idGlobal = $session->id_usuario;
 
         $miPerfil = $this->usuario->traer_usuario_perfil();
-        $misTelefonos = $this->telefono->traer_telefonos_by_id( $idGlobal, '14' );
-        $misEmails = $this->email->traer_emails_by_id( $idGlobal, '14' );
+        $misTelefonos = $this->telefono->traer_telefonos_by_id( $idGlobal, '10' );
+        $misEmails = $this->email->traer_emails_by_id( $idGlobal, '10' );
         $parametrosTipoDoc = $this->parametro->obtener_encabezado_3();
-        $parametrosPrioridad = $this->parametro->obtener_encabezado_6();
+        $parametrosPrioridad = $this->parametro->obtener_encabezado_4();
 
         // var_dump($miPerfil);
 

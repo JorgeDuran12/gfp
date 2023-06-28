@@ -72,10 +72,10 @@ class ParamentrosModel extends Model{
         return $datos;
     }
     
-    public function obtener_encabezado_6(){
+    public function obtener_encabezado_4(){
         $this->select('parametros_det.*');
         $this->where('estado', 'A');
-        $this->where('id_parametro_enc', 6);
+        $this->where('id_parametro_enc', 4);
         $datos = $this->findAll();  //nos trae todos los registros que cumplan con una condicion dada 
         return $datos;
     }
