@@ -99,22 +99,21 @@ class Proyeccion extends BaseController
 
         if($this->request->getPost('id_parametro_det') === '34'){
            $this->disponible->update($identificador,[
-           
             'egreso' => $this->request->getPost('egreso'),
            'presupuesto_anual' => $this->request->getPost('presupuesto'),
            'id_usuario' => $id_usuario,
-
-          ]);  
-        }elseif($this->request->getPost('id_parametro_det') === '35'){
-            
-          $this->emergencia->save([
-           
-            'valor' => $this->request->getPost('valor_cuota'), 
-           'suma_total' => $this->request->getPost('suma_total'),
-           'id_usuario' => $id_usuario,
-           'usuario_crea' => $id_usuario,
-           'descripcion'=>"cuota saquito",
-           'id_parametro_det'=>33,
+        //    intento de arreglo
+        
+    ]);  
+}elseif($this->request->getPost('id_parametro_det') === '35'){
+    $this->emergencia->save([
+        'valor' => $this->request->getPost('valor_cuota'), 
+        'suma_total' => $this->request->getPost('suma_total'),
+        'id_parametro_det'=>33,
+        'usuario_crea' => $id_usuario,
+        'id_usuario' => $id_usuario,
+        'descripcion'=>"cuota saquito",
+        //    intento de arreglo
 
           ]);
         }
