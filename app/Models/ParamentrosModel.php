@@ -118,8 +118,8 @@ class ParamentrosModel extends Model{
   
     public function traerProyeccion(){
         $this->select('parametros_det.*');
-        $this->where('id_parametro_enc', 9 );
         $this->where('estado','A');
+        $this->where('id_parametro_enc', 9 );
         $datos = $this->findAll();  
         return $datos;
     }

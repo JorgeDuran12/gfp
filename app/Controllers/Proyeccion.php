@@ -75,6 +75,11 @@ class Proyeccion extends BaseController
         $id_disponible = new DisponibleModel();
         $identificador = $id_disponible->traer_id_disponible();
         
+        // $id_emergencia = new EmergenciaModel();
+        // $emergencia_id = $id_emergencia->traer_id_emergencia();
+
+        
+        
         $this->proyeccion->save([
             'fecha_cuota' => $this->request->getPost('fecha_cuota'), 
             'valor_cuota' => $this->request->getPost('valor_cuota'), 
@@ -96,6 +101,16 @@ class Proyeccion extends BaseController
             'egreso' => $this->request->getPost('egreso'),
            'presupuesto_anual' => $this->request->getPost('presupuesto'),
            'id_usuario' => $id_usuario,
+
+          ]);
+          $this->emergencia->save([
+           
+            'valor' => $this->request->getPost('valor_cuota'), 
+           'suma_total' => $this->request->getPost('suma_total'),
+           'id_usuario' => $id_usuario,
+           'usuario_crea' => $id_usuario,
+           'descripcion'=>"cuota saquito",
+           'id_parametro_det'=>33,
 
           ]);
 

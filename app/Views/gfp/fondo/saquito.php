@@ -175,7 +175,7 @@
                             <label for="num2">numero de cuotas:</label>
                             <input type="number" class="form-control valida" id="numero_cuota" name="numero_cuota">
                             <br>
-                            <label for="num3">Cuotas</label>
+                            <label for="num3">El valor de las Cuotas sera de:</label>
                             <input type="number" class="form-control" id="cuota" name="cuota">
                         </form>
                     </div>
