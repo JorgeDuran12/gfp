@@ -104,8 +104,8 @@ class Proyeccion extends BaseController
                 'id_usuario' => $id_usuario,
                 //    intento de arreglo
             ]);  
-            
-            }else if($this->request->getPost('id_parametro_det') === '35'){
+
+            }elseif($this->request->getPost('id_parametro_det') === '35'){
                 $this->emergencia->save([
                     'valor' => $this->request->getPost('valor_cuota'), 
                     'suma_total' => $this->request->getPost('suma_total'),
