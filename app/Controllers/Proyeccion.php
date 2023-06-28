@@ -99,7 +99,7 @@ class Proyeccion extends BaseController
 
         if($this->request->getPost('id_parametro_det') === '34'){
                 $this->disponible->update($identificador,[
-                    'egreso' => $this->request->getPost('egreso'),
+                'egreso' => $this->request->getPost('egreso'),
                 'presupuesto_anual' => $this->request->getPost('presupuesto'),
                 'id_usuario' => $id_usuario,
                 //    intento de arreglo
@@ -113,6 +113,7 @@ class Proyeccion extends BaseController
                     'usuario_crea' => $id_usuario,
                     'id_usuario' => $id_usuario,
                     'descripcion'=>"cuota saquito",
+                    'fecha_registro'=> $this->request->getPost('fecha_cuota'),
                     //    intento de arreglo
 
                     ]);

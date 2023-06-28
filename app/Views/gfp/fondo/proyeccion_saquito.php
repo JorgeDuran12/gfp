@@ -136,48 +136,33 @@
 
 <script>
 
-const egreso = <?= $disponibles['egreso']?>;
-const presu = <?= $disponibles['presupuesto_anual']?>;
-const proyeccion_enc = <?= $proyeccion_enc['suma_total']?>;
-// console.log(proyeccion_enc);
-
-$(document).on('blur', '.valida', function(event) {
-
-    let valor_cuota = parseInt(document.getElementById("valor_cuota").value);
-    let tomar_valor = parseInt(document.getElementById("parametros_enc").value);
-
-if (tomar_valor === 35 && valor_cuota) {
-            let fondo_emergencia =  proyeccion_enc - valor_cuota;
-            let condicional = 35          
-       document.getElementById("suma_total").value = fondo_emergencia;
-       document.getElementById("id_parametro_det").value = condicional;
-        alert(fondo_emergencia + "se uso el fondo de emergencia");
-        
-        
-        
-    }else if(tomar_valor === 34 && valor_cuota){
-        let resultado = presu - valor_cuota;
-        let resultado2 = valor_cuota + egreso;
-        let condicional = 34          
-
-          document.getElementById("egreso").value = resultado2;
-          document.getElementById("presupuesto").value = resultado;
-          document.getElementById("id_parametro_det").value = condicional2;
-
-          alert("se uso el presupuesto actual");
-
-    }
-    
-    
-//ID para los campos del select 
 $(document).ready(function() {
-    $('#parametros_enc').change(function() {
-        let selectedValue = $(this).val();
-        $('#id_parametro_det').val(selectedValue);
-    });
+  const egreso = <?= $disponibles['egreso']?>;
+  const presu = <?= $disponibles['presupuesto_anual']?>;
+  const proyeccion_enc = <?= $proyeccion_enc['suma_total']?>;
+  
+  $(document).on('blur', '.valida', function(event) {
+    let valor_cuota = parseInt($("#valor_cuota").val());
+    let tomar_valor = parseInt($("#parametros_enc").val());
+
+    if (tomar_valor === 35 && valor_cuota) {
+      let fondo_emergencia = proyeccion_enc - valor_cuota;
+      let condicional = 35;
+      $("#suma_total").val(fondo_emergencia);
+      $("#id_parametro_det").val(condicional);
+    } else if (tomar_valor === 34 && valor_cuota) {
+      let resultado = presu - valor_cuota;
+      let resultado2 = valor_cuota + egreso;
+      let condicional = 34;
+      $("#egreso").val(resultado2);
+      $("#presupuesto").val(resultado);
+      $("#id_parametro_det").val(condicional);
+    }
+  });
 });
 
-    
+
+
 // Obtener el elemento del campo de fecha
 let fechaInput = document.getElementById('fecha_cuota');
 
@@ -270,11 +255,10 @@ if (num3 === 0) {
         setTimeout(function() {
         window.location.href = "<?= base_url('mi_saquito') ?>";
          }, 2000);
-
-
 }
 
-//console.log("La suma total es: " + suma);       
+//console.log("La suma total es: " + suma);  
+
 </script>
 
 

@@ -63,5 +63,11 @@ class Encab_ParametrosModel extends Model{
     }
 
     
+    public function elimina_parametro($id,$estado){
+        $datos = $this->update($id, ['estado' => $estado]);         
+        return $datos;
+    }
+
+
 }
 

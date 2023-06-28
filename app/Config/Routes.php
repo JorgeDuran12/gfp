@@ -87,7 +87,9 @@ $routes->post('buscar_tp/(:num)','Saquito::buscar_tp/$1');
 
 $routes->get('eliminados_usuario', 'Usuario::eliminados');
 $routes->get('eliminar__usuario', 'Usuario::eliminar__usuario');
+$routes->get('eliminar__parametro', 'Parametros::eliminar__parametro');
 $routes->get('eliminados_rol', 'Rol::eliminados_rol');
+$routes->get('eliminados_parametro', 'Parametros::eliminados_parametro');
 
 
 

@@ -45,8 +45,7 @@
                         </a>
 
                         <a class="btn btn-danger"  href="#" data-href="<?php echo base_url('rol/eliminar__rol'). '/' .$dato['id_rol']. '/' .'E'; ?>"  data-bs-toggle="modal" data-bs-target="#modal-confirma" src="<?php echo base_url(); ?>/icons/borrar.png" width="16" height="16"  title="Elimina Registro"> 
-                                    <img
-                    class="image" src="<?= base_url("img/Eliminar.png") ?> " title="Eliminar">
+                                    <img class="image" src="<?= base_url("img/Eliminar.png") ?> " title="Eliminar">
                                    </a>
 
                     </td>
@@ -130,6 +129,7 @@
 <!-- <---------------------div de header y footer------------------->
 </div>
 <script>
+    
 $('#modal-confirma').on('show.bs.modal', function(e) {
     $(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));
 });

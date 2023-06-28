@@ -21,6 +21,7 @@ class Parametros extends BaseController
         $this->encabezado = new Encab_ParametrosModel();
     }
 
+
     public function index()
     {
         $session = session();
@@ -61,6 +62,7 @@ class Parametros extends BaseController
             return redirect()->to(base_url('/parametros'));
         }
     }
+
 
 public function insertar_detalle($parametro_detalle, $id_parametro_enc){
     $session = session(); 
@@ -108,19 +110,23 @@ public function insertar_detalle($parametro_detalle, $id_parametro_enc){
       }
 
 
-      public function eliminados()
+      public function eliminados_parametro()
       {  
-        $session = session();
-  
-          $usuario = $this->usuario->where('estado', "e")->findAll();   
-          $parametro = $this->parametro->obtener_encabezado_3();   
-          $rol = $this->rol->where('estado', "A")->findAll();  
-          $email = $this->email->where('estado', "A")->findAll();     
-          $telefono = $this->telefono->where('estado', "A")->findAll();    
-          $datos = ['tituloPag' => 'Administrador','usuarios'=>$usuario, 'roles'=>$rol, 'parametros'=>$parametro, 'tituloPagina' => 'Administradores' ,'misDatos' => $session ];
-          echo view("gestion/administrador/admin_eliminados", $datos);
-      }
 
-   
+        $session = session();
+        $encabezado = $this->encabezado->where('estado', "E")->findAll();  
+
+            echo view("gestion/parametros/parametros_eliminados", [
+                'tituloPagina' => 'Parametros Encabezados Eliminados',
+                'encabezado' => $encabezado,
+                'misDatos' => $session,
+            ]);
+        }
+
+
+        public function eliminar__parametro($id,$estado){
+            $usuario_ = $this->encabezado->elimina_parametro($id,$estado);
+            return redirect()->to(base_url('parametros'));
+         }
 }
  
