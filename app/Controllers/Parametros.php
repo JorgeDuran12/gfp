@@ -86,7 +86,6 @@ public function insertar_detalle($parametro_detalle, $id_parametro_enc){
     
 }
 
-
           //<---------------------------------buscar_parametro del model traer_parametro -------------------------------------->
       public function buscar_parametro($id)
       {
@@ -107,6 +106,21 @@ public function insertar_detalle($parametro_detalle, $id_parametro_enc){
           }
           echo json_encode($returnData);
       }
+
+
+      public function eliminados()
+      {  
+        $session = session();
+  
+          $usuario = $this->usuario->where('estado', "e")->findAll();   
+          $parametro = $this->parametro->obtener_encabezado_3();   
+          $rol = $this->rol->where('estado', "A")->findAll();  
+          $email = $this->email->where('estado', "A")->findAll();     
+          $telefono = $this->telefono->where('estado', "A")->findAll();    
+          $datos = ['tituloPag' => 'Administrador','usuarios'=>$usuario, 'roles'=>$rol, 'parametros'=>$parametro, 'tituloPagina' => 'Administradores' ,'misDatos' => $session ];
+          echo view("gestion/administrador/admin_eliminados", $datos);
+      }
+
    
 }
  
