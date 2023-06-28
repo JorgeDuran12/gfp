@@ -147,10 +147,10 @@ $(document).on('blur', '.valida', function(event) {
     let tomar_valor = parseInt(document.getElementById("parametros_enc").value);
 
 if (tomar_valor === 35 && valor_cuota) {
-    let fondo_emergencia =  proyeccion_enc - valor_cuota;
-
-
+            let fondo_emergencia =  proyeccion_enc - valor_cuota;
+            let condicional = 35          
        document.getElementById("suma_total").value = fondo_emergencia;
+       document.getElementById("id_parametro_det").value = condicional;
         alert(fondo_emergencia + "se uso el fondo de emergencia");
         
         
@@ -158,30 +158,17 @@ if (tomar_valor === 35 && valor_cuota) {
     }else if(tomar_valor === 34 && valor_cuota){
         let resultado = presu - valor_cuota;
         let resultado2 = valor_cuota + egreso;
+        let condicional = 34          
+
           document.getElementById("egreso").value = resultado2;
           document.getElementById("presupuesto").value = resultado;
+          document.getElementById("id_parametro_det").value = condicional2;
+
           alert("se uso el presupuesto actual");
 
     }
     
-
-
-
     
-
-
-
-    //  console.log("resultado-------"+resultado2);
-  
-   
-
-
-})
-
-</script>
-
-<script>
-
 //ID para los campos del select 
 $(document).ready(function() {
     $('#parametros_enc').change(function() {
