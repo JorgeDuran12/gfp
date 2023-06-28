@@ -96,13 +96,17 @@ class Proyeccion extends BaseController
 
         ]);
 
-        $this->disponible->update($identificador,[
+
+        if($this->request->getPost('id_parametro_det') === '34'){
+           $this->disponible->update($identificador,[
            
             'egreso' => $this->request->getPost('egreso'),
            'presupuesto_anual' => $this->request->getPost('presupuesto'),
            'id_usuario' => $id_usuario,
 
-          ]);
+          ]);  
+        }elseif($this->request->getPost('id_parametro_det') === '35'){
+            
           $this->emergencia->save([
            
             'valor' => $this->request->getPost('valor_cuota'), 
@@ -113,6 +117,9 @@ class Proyeccion extends BaseController
            'id_parametro_det'=>33,
 
           ]);
+        }
+
+       
 
         return redirect()->to(base_url('/proyeccion'));
     }
