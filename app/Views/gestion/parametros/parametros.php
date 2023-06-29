@@ -12,7 +12,7 @@
     <a href="" onclick="seleccionaparametro(<?php echo 1 . ',' . 1 ?>);" class="btn btn-success regresar_Btn"
         data-bs-toggle="modal" data-bs-target="#parametro_encabezado" id="btn_agr">Agregar</a>
     &nbsp
-    <a href="<?php echo base_url('eliminados_parametro'); ?>" class="btn btn-secondary regresar_Btn">Eliminados</a>
+    <!-- <a href="<?php echo base_url('eliminados_parametro'); ?>" class="btn btn-secondary regresar_Btn">Eliminados</a> -->
     &nbsp
     <a href="<?php echo base_url('/principal'); ?>" class="btn btn-primary regresar_Btn">Regresar</a>
 </div>
@@ -51,13 +51,13 @@
                             <img class="image" src="<?= base_url("img/documento.png") ?> " title="Editar">
                         </a>
                         <!-- eliminar -->
-                        <a class="btn btn-danger" href="#"
+                        <!-- <a class="btn btn-danger" href="#"
                             data-href="<?php echo base_url('Parametros/eliminar__parametro'). '/' .$dato['id_parametro_enc']. '/' .'E'; ?>"
                             data-bs-toggle="modal" data-bs-target="#modal-confirma"
                             src="<?php echo base_url(); ?>/icons/borrar.png" width="16" height="16"
                             title="Elimina Registro">
                             <img class="image" src="<?= base_url("img/Eliminar.png") ?> " title="Eliminar">
-                        </a>
+                        </a> -->
                     </td>
 
 
@@ -130,7 +130,7 @@
                                     <th>Id</th>
                                     <th>Nombre</th>
                                     <th>estado</th>
-                                    <th colspan="2">acciones</th>
+                                    <!-- <th colspan="2">acciones</th> -->
                                 </tr>
                             </thead>
                             <tbody id="bodytb">
@@ -336,16 +336,7 @@ function seleccionaencabezado(id, tp) {
             <td class="text-center">${parametro.nombre}</td>
             <td class="text-center">${parametro.estado}</td>
             
-                            <td class="text-center">
-                                <button class="btn btn-warning" onclick="seleccionausuario(${parametro.id_parametro_det} ${","} ${2});">
-                                    </i><img class="image" src="<?= base_url("img/editar.png") ?>" title="Editar">
-                                </button>
-                            </td>
-                            <td>
-                                <button class="btn btn-danger"  data-href="${window.location.origin}/gpf/public/usuarios/eliminar/${parametro.id_parametro_det}/E" >
-                                    </i><img class="image" src="<?= base_url("img/eliminar.png") ?>"  title="Editar">
-                                </button>
-                            </td>
+                      
                             </tr>`
                 });
                 $('#bodytb').html(contenido);
@@ -379,3 +370,14 @@ $('.close').click(function() {
 </script>
 
 <?= $this->endSection("contenido")?>
+
+<!-- <td class="text-center">
+                                <button class="btn btn-warning" onclick="seleccionausuario(${parametro.id_parametro_det} ${","} ${2});">
+                                    </i><img class="image" src="<?= base_url("img/editar.png") ?>" title="Editar">
+                                </button>
+                            </td>
+                            <td>
+                                <button class="btn btn-danger"  data-href="${window.location.origin}/gpf/public/usuarios/eliminar/${parametro.id_parametro_det}/E" >
+                                    </i><img class="image" src="<?= base_url("img/eliminar.png") ?>"  title="Editar">
+                                </button>
+                            </td> -->
