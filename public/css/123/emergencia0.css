@@ -85,16 +85,15 @@
         height: 50px;
         border-radius: 5px;
     }
-
-    .tabla_emergencia{
-        color:aqua;
+    
+    .tabla_emergencia {
+        color: aqua;
         width: 200px;
         display: flex;
         text-align: center;
     }
-
-      
-.center-label {
-    display: flex;
-    justify-content: center;
-  }
+    
+    .center-label {
+        display: flex;
+        justify-content: center;
+    }

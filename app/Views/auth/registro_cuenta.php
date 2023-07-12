@@ -25,7 +25,7 @@
         <div class="formulario__grupo" id="grupo__nombre">
             <label for="nombre" class="formulario__label">Nombre</label>
             <div class="formulario__grupo-input">
-                <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="santiago" required>
+                <input type="text" class="formulario__input" name="nombre" id="nombre" required>
 
                 <svg xmlns="http://www.w3.org/2000/svg" class="formulario__validacion-estado" width="16" height="16"
                     fill="currentColor" class="bi bi-bookmark-check-fill" viewBox="0 0 16 16">
@@ -40,7 +40,7 @@
         <div class="formulario__grupo" id="grupo__apellido">
             <label for="apellido" class="formulario__label">Apellido</label>
             <div class="formulario__grupo-input">
-                <input type="text" class="formulario__input" name="apellido" id="apellido" placeholder="guerrero"
+                <input type="text" class="formulario__input" name="apellido" id="apellido" 
                     required>
 
                 <svg xmlns="http://www.w3.org/2000/svg" class="formulario__validacion-estado" width="16" height="16"
@@ -56,7 +56,7 @@
         <div class="formulario__grupo " id="grupo__usuario">
             <label for="usuario" class="formulario__label">Usuario</label>
             <div class="formulario__grupo-input">
-                <input type="text" class="formulario__input" name="usuario" id="usuario" placeholder="santo" required>
+                <input type="text" class="formulario__input" name="usuario" id="usuario"  required>
 
                 <svg xmlns="http://www.w3.org/2000/svg" class="formulario__validacion-estado" width="16" height="16"
                     fill="currentColor" class="bi bi-bookmark-check-fill" viewBox="0 0 16 16">
@@ -115,8 +115,8 @@
         <div class="formulario__grupo" id="grupo__documento">
             <label for="email" class="formulario__label">Numero de documento</label>
             <div class="formulario__grupo-input">
-                <input type="number" class="formulario__input" name="documento" id="documento" placeholder="10021023659"
-                required>
+                <input type="number" class="formulario__input" name="documento" id="documento"
+                required >
                 
                 <svg xmlns="http://www.w3.org/2000/svg" class="formulario__validacion-estado" width="16" height="16"
                 fill="currentColor" class="bi bi-bookmark-check-fill" viewBox="0 0 16 16">
@@ -125,7 +125,7 @@
                     </svg>
                     
                 </div>
-                <p class="formulario__input-error">El documento solo puede contener numero y el maximo es de 14 </p>
+                <p class="formulario__input-error">El documento solo puede contener numero y el maximo es de 14 y su minimo de 1 </p>
         </div>
         
         
@@ -166,7 +166,7 @@
         <div class="formulario__grupo" id="grupo__telefono">
             <label for="email" class="formulario__label">Telefono</label>
             <div class="formulario__grupo-input">
-                <input type="number" class="formulario__input" name="telefono" id="telefono" placeholder="3222222"
+                <input type="number" class="formulario__input" name="telefono" id="telefono"
                     required>
         
                 <svg xmlns="http://www.w3.org/2000/svg" class="formulario__validacion-estado" width="16" height="16"

@@ -79,11 +79,20 @@ $(document).ready(function() {
             success: function(response) {
                 // console.log(response);
                 if (response.mensaje === '2') {
-                    $('#mensaje_error').text('El correo o la contraseña son incorrectos')
-                        .show().delay(3000).fadeOut();
+                    Swal.fire({
+                title: 'ERROR!',
+                text: 'el correo o la contraseña son incorrectos',
+                icon: 'error',
+                confirmButtonText: 'Ok'
+            });
                 } else if (response.mensaje === '3') {
-                    $('#mensaje_error').text('La cuenta no existe').show().delay(3000)
-                        .fadeOut();
+                   
+            Swal.fire({
+                title: 'ERROR!',
+                text: 'la cuenta no existe',
+                icon: 'error',
+                confirmButtonText: 'Ok'
+            });
                 } else {
 
                     if (response.id_rol === response.id_rol) {

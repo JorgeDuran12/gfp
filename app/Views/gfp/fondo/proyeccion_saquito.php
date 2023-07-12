@@ -140,23 +140,61 @@ $(document).ready(function() {
   const egreso = <?= $disponibles['egreso']?>;
   const presu = <?= $disponibles['presupuesto_anual']?>;
   const proyeccion_enc = <?= $proyeccion_enc['suma_total']?>;
+
+
+
+
+
+
+
+
   
   $(document).on('blur', '.valida', function(event) {
     let valor_cuota = parseInt($("#valor_cuota").val());
     let tomar_valor = parseInt($("#parametros_enc").val());
+    // resta para evaluacion
+     let num1 = <?= $traer_sqto['numero_cuota']?>;
+     let num2 = <?= $traer_sqto['valor']?>;
+     resultado12 = num2 - suma;
 
     if (tomar_valor === 35 && valor_cuota) {
-      let fondo_emergencia = proyeccion_enc - valor_cuota;
-      let condicional = 35;
+
+        let fondo_emergencia = proyeccion_enc - valor_cuota;
+        let condicional = 35;
+        let evaluador =   resultado12 - valor_cuota;
+        console.log(evaluador);
+if(evaluador < 0){
+    Swal.fire({
+                title: 'error!!',
+                text: 'el dinero que deseas ingresar excede la cantidad necesaria completar el saquito .',
+                icon: 'error',
+                confirmButtonText: 'Cambiar valor'
+
+                
+            });
+            $("#valor_cuota").val("");
+
+}
+ else if (evaluador> 0){
       $("#suma_total").val(fondo_emergencia);
-      $("#id_parametro_det").val(condicional);
+
+        $("#id_parametro_det").val(condicional);
+}            
+      
+
     } else if (tomar_valor === 34 && valor_cuota) {
-      let resultado = presu - valor_cuota;
-      let resultado2 = valor_cuota + egreso;
-      let condicional = 34;
-      $("#egreso").val(resultado2);
-      $("#presupuesto").val(resultado);
-      $("#id_parametro_det").val(condicional);
+
+        let resultado = presu - valor_cuota;
+
+        let resultado2 = valor_cuota + egreso;
+
+        let condicional = 34;
+
+        $("#egreso").val(resultado2);
+
+        $("#presupuesto").val(resultado);
+
+        $("#id_parametro_det").val(condicional);
     }
   });
 });
@@ -221,6 +259,7 @@ let num2 = <?= $traer_sqto['valor']?>;
 // document.getElementById('num_cr').innerText = resultado1;
 
 resultado2 = num2 - suma;
+console.log(resultado2)
 
 let decimal_Resultado = parseFloat(resultado2).toLocaleString();
 
