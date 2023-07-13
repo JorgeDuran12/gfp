@@ -140,6 +140,8 @@ $(document).ready(function() {
   const egreso = <?= $disponibles['egreso']?>;
   const presu = <?= $disponibles['presupuesto_anual']?>;
   const proyeccion_enc = <?= $proyeccion_enc['suma_total']?>;
+  
+
 
 
 
@@ -160,9 +162,23 @@ $(document).ready(function() {
     if (tomar_valor === 35 && valor_cuota) {
 
         let fondo_emergencia = proyeccion_enc - valor_cuota;
+        // console.log(fondo_emergencia);
+        // if (fondo_emergencia = 0 ){
+        //     Swal.fire({
+        //         title: 'error!!',
+        //         text: 'No puede ingresar su cuota si no tiene dinero en fondo de emergencia',
+        //         icon: 'error',
+        //         confirmButtonText: 'Cambiar valor'}
+
+                
+             });
+            
+
+        }
         let condicional = 35;
         let evaluador =   resultado12 - valor_cuota;
         console.log(evaluador);
+        
 if(evaluador < 0){
     Swal.fire({
                 title: 'error!!',
@@ -189,12 +205,32 @@ if(evaluador < 0){
         let resultado2 = valor_cuota + egreso;
 
         let condicional = 34;
+        let vc = resultado12 - valor_cuota;
+        console.log(vc)
+        if(vc < 0){
+            Swal.fire({
+                title: 'error!!',
+                text: 'el dinero que deseas ingresar excede la cantidad necesaria completar el saquito .',
+                icon: 'error',
+                confirmButtonText: 'Cambiar valor'
 
-        $("#egreso").val(resultado2);
+                
+            });
+            $("#valor_cuota").val("");
+
+
+        }
+        else if(vc > 0){
+            $("#egreso").val(resultado2);
 
         $("#presupuesto").val(resultado);
 
         $("#id_parametro_det").val(condicional);
+
+        }
+
+
+        
     }
   });
 });

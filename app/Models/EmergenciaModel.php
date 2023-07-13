@@ -79,7 +79,15 @@ class EmergenciaModel extends Model{
             return $datos;
         }
     }
-
+    public function fondo($id)
+    {
+        $this->select('fondo_emergencia.*');
+        $this->where('id_usuario', $id);
+        $this->where('estado','A');
+        $datos = $this->findAll();
+            
+            return $datos;
+    }
 
     // public function Actualizar_fondo($id, $estado)
     // {
@@ -126,7 +134,7 @@ class EmergenciaModel extends Model{
         }
     }
 
-
+    
 
     
 }

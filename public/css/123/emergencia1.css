@@ -1,0 +1,40 @@
+#descripcion {
+    width: 500px;
+    border-radius: 5px;
+    text-align: center;
+    color: black;
+}
+
+.form_container__emergencia {
+    width: 100%;
+}
+
+#emergencia__valor {
+    width: 500px;
+    height: 40px;
+    border-radius: 5px;
+    color: black;
+    text-align: center;
+}
+
+#params {
+    width: 500px;
+    height: auto;
+    text-align: center;
+}
+
+.ss {
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+.icono_emergencia {
+    width: auto;
+    height: 15px;
+    border-radius: 7px;
+    margin: 5px;
+}
+
+.div_date {
+    margin-left: 16px;
+}

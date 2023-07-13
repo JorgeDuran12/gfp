@@ -26,12 +26,14 @@ class Emergencia extends BaseController
 
         $disponibles = $this-> disponible ->datos_ingreso();
         $emergencia = $this->emergencia->traer_fondo($id);
+        $fondos = $this->emergencia->fondo($id);
         $parametros =  $this->parametros->traerdeta();
 
         echo view("gfp/fondo/emergencia", [
             'tituloPagina' => 'Fondo de emergencia',
             'emergencia' => $emergencia,
             'disponibles' => $disponibles,
+            'fondos' => $fondos,
             'params'=>$parametros,
             'misDatos' => $session,
 
@@ -97,31 +99,5 @@ class Emergencia extends BaseController
         return redirect()->to(base_url('/emergencia'));
     }
     
-    
-
-    // public function update()
-    // {
-    //     if ($this->request->getMethod() == "post") {
-    //         // Es una actualización
-    //         $this->emergencia->update($this->request->getPost('id'),[ 
-    //             'fecha_registro' => $this->request->getPost('editar_fecha_registra'),
-    //             'valor' => $this->request->getPost('editar_emergencia__valor'),
-    //         ]);
-    //     }
-    
-    //     return redirect()->to(base_url('/emergencia'));
-    // }
- 
-    
-    // public function buscar_fondo($id_usuario)
-    //   {
-    //       $returnData = array();
-    //       $usuario_ = $this->emergencia->Actualizar_fondo($id_usuario, 'A');
-    //       if (!empty($usuario_)) {
-    //           array_push($returnData, $usuario_);    
-    //       }
-    //       echo json_encode($returnData);
-    //   }
-
         
 }
