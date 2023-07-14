@@ -234,8 +234,10 @@ inputPeriodo.value = periodo.getFullYear();
               },
               x: {
                 ticks: {
-                  color: 'white'
-                }
+               display:false
+               
+               
+              }
               }
             },
           }
@@ -284,17 +286,23 @@ inputPeriodo.value = periodo.getFullYear();
             }
           },
           scales: {
+            x: {
+           
+              ticks: {
+               display:false
+               
+               
+              }
+              
+            },
             y: {
               beginAtZero: true,
               ticks: {
                 color: 'white' 
               }
             },
-            x: {
-              ticks: {
-                color: 'white'
-              }
-            }
+
+          
           },
         }
       });
@@ -359,7 +367,9 @@ inputPeriodo.value = periodo.getFullYear();
             },
             x: {
               ticks: {
-                color: 'white'
+               display:false
+               
+               
               }
             }
           },
