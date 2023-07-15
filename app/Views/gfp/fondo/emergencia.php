@@ -44,8 +44,11 @@
 
         </div>
 
+        <textarea class="fd_text" placeholder="Descripcion" id="descripcion" name="descripcion" required></textarea>
+        <br>
+        <br>
 
-                <select class="form-select " name="params" id="params" aria-label="Floating label select example"
+                <select class="form-select valida " name="params" id="params" aria-label="Floating label select example"
                     required>
 
                     <?php foreach ($params as $data) {?>
@@ -61,18 +64,17 @@
                 <div class="form_container__emergencia">
                 <label for="floatingInput">Valor</label>
                 <br>
-                    <input type="number" class="emergencia__input" name="emergencia__valor" id="emergencia__valor"
+                    <input type="number" class="emergencia__input valida" name="emergencia__valor" id="emergencia__valor"
                         required>
                 </div>
                 <br>
               
-                <textarea class="fd_text" placeholder="Descripcion" id="descripcion" name="descripcion" required></textarea>
 
             </div>
 
             <br>
 
-            <button class="btn btn-success regresar_Btn" type="submit" id="btn_enviar">Enviar</button>
+            <button class="btn btn-success regresar_Btn" type="submit"   id="btn_enviar">Enviar</button>
             <br>
     </form>
             </div>
@@ -117,6 +119,59 @@
 
 </div>
 
+<!-- 32	Registro de fondo	
+33	Uso del fondo -->
+
+   <!-- valoracion de presupuesto uso de fondo/registro -->
+        <script>
+                 $(document).on('blur', '.valida', function(event) {
+                     const presupuesto_anual = <?= $disponibles['presupuesto_anual']?>;
+                     const suma_total = <?= $emergencia['suma_total']?>;
+                   
+
+                     let valor = parseInt(document.getElementById("emergencia__valor").value);
+                     let parametro = parseInt(document.getElementById("params").value);
+                     
+
+
+                        if (parametro === 32 && valor) {
+                                if( valor > presupuesto_anual ){
+                                    Swal.fire({
+                                        title: 'error!!',
+                                        text: 'no existen fondos en  su presupuesto para realizar esta accion ',
+                                        icon: 'info',
+                                        confirmButtonText: 'cerrar',});
+                                       $("#emergencia__valor").val("");
+                                }
+                                //  else if (valor < presupuesto_anual ){
+                                //      Swal.fire({
+                                //          title: 'guardado',
+                                //          text: 'este movimiento se registro correctamente ',
+                                //          icon: 'success',
+                                //          confirmButtonText: 'cerrar',});
+                                //  };
+
+                        }else if (parametro ===33 && valor) {
+                            if (valor > suma_total ){
+                                Swal.fire({
+                                        title: 'error!!',
+                                        text: 'su fondo de emergencia no cuenta con esos recursos',
+                                        icon: 'info',
+                                        confirmButtonText: 'cerrar',});
+                                       $("#emergencia__valor").val("");
+                            }
+                            
+
+                        };
+                        
+                      
+                   
+
+                 });
+               
+             
+                 
+        </script>
 
 <script>
 
@@ -154,10 +209,11 @@ textarea.addEventListener('input', function() {
 
 <script>
 
-    const suma = parseFloat(<?php echo $emergencia['suma_total'];?>).toLocaleString();
-    document.getElementById('suma_total').innerText = suma;
+//     const suma = parseFloat(<?php echo $emergencia['suma_total'];?>).toLocaleString();
+//     console.log(suma);
+//     document.getElementById('suma_total').innerText = suma;
 
-</script>
+// </script>
 
 <script>
 

@@ -63,16 +63,14 @@ class EmergenciaModel extends Model{
 
     public function traer_fondo($id)
     {
-        $this->select('fondo_emergencia.*');
+        $this->select('fondo_emergencia.suma_total');
         $this->where('id_usuario', $id);
         $this->where('estado','A');
         $this->orderBy('id_fondo-emergencia', 'DESC');
         $datos = $this->first();
 
         if( empty($datos) ) {
-            // $datos['fecha_registro'] = 0;
-            // $datos['valor'] = 0;
-            // $datos['descripcion'] = 0;
+           
             $datos['suma_total'] = 0;
             return $datos;
         }else {
