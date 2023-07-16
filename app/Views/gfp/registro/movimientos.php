@@ -96,7 +96,8 @@
                             required></textarea>
                         <br>
                         <label for="floatingInput">Valor del movimiento</label>
-                        <input type="number" class="form-control valida" placeholder="Valor" id="valor" name="valor"
+                        <input type="text" class="form-control valida" placeholder="Valor" id="valor" name="valor"
+                            onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;"
                             required>
                     </div>
                     <br>
@@ -171,7 +172,7 @@ const saldo_anterior = <?= $disponibles['saldo_anterior']?>;
 const ingreso = <?= $disponibles['ingreso']?>;
 const egreso = <?= $disponibles['egreso']?>;
 const presu = <?= $disponibles['saldo_anterior'];?>;
-const  presupuesto = <?= $disponibles['presupuesto_anual'];?>;
+const presupuesto = <?= $disponibles['presupuesto_anual'];?>;
 
 console.log("saldo" + saldo_anterior);
 console.log("ingreso" + ingreso);
@@ -196,34 +197,35 @@ $(document).on('blur', '.valida', function(event) {
 
     } else {
 
-        if( valor > presupuesto){
+        if (valor > presupuesto) {
             Swal.fire({
-            title: 'error!!',
-            text: 'no existen fondos en  su presupuesto para realizar esta accion ',
-            icon: 'info',
-            confirmButtonText: 'cerrar',});
+                title: 'error!!',
+                text: 'no existen fondos en  su presupuesto para realizar esta accion ',
+                icon: 'info',
+                confirmButtonText: 'cerrar',
+            });
             $("#valor").val("");
 
-        }else{
+        } else {
             // Realizar la resta al saldo anterior y al egreso
             let resultado = saldo_anterior - valor;
-                    let total = presu - valor;
+            let total = presu - valor;
 
-        console.log("El egreso actual es de " + nuevoEgreso + ". El presupuesto anual está en " + total);
+            console.log("El egreso actual es de " + nuevoEgreso + ". El presupuesto anual está en " + total);
 
-        nuevoEgreso += valor;
-        
-        document.getElementById("ingreso").value = nuevoIngreso;
-        document.getElementById("egreso").value = nuevoEgreso;
-        
-        presupuesto_anual = saldo_anterior + nuevoIngreso - nuevoEgreso;
-        console.log(presupuesto_anual);
-        
-        document.getElementById("presupuesto").value = presupuesto_anual;
-    };
+            nuevoEgreso += valor;
+
+            document.getElementById("ingreso").value = nuevoIngreso;
+            document.getElementById("egreso").value = nuevoEgreso;
+
+            presupuesto_anual = saldo_anterior + nuevoIngreso - nuevoEgreso;
+            console.log(presupuesto_anual);
+
+            document.getElementById("presupuesto").value = presupuesto_anual;
+        };
     }
 
-    
+
 });
 </script>
 
@@ -375,12 +377,23 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
-
 </script>
+
+
 
 <script>
 
+const registro = "<?= session()->getFlashdata('movimiento') ?>";
 
+if (registro === '1') {
+    Swal.fire({
+        'title': 'Registro exitoso',
+        'text': '',
+        'icon': 'success',
+        'confirmButtonText': 'Aceptar'
+    })
+}
 </script>
+
 
 <?= $this->endSection("contenido")?>

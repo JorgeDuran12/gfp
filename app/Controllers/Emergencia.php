@@ -96,7 +96,7 @@ class Emergencia extends BaseController
             
         }
     
-        return redirect()->to(base_url('/emergencia'));
+        return redirect()->to(base_url('/emergencia'))->with('emergencia', '1');
     }
     
         

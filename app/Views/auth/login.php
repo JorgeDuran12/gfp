@@ -81,7 +81,7 @@ $(document).ready(function() {
                 if (response.mensaje === '2') {
                     Swal.fire({
                 title: 'ERROR!',
-                text: 'el correo o la contraseña son incorrectos',
+                text: 'El correo o la contraseña son incorrectos',
                 icon: 'error',
                 confirmButtonText: 'Ok'
             });
@@ -89,7 +89,7 @@ $(document).ready(function() {
                    
             Swal.fire({
                 title: 'ERROR!',
-                text: 'la cuenta no existe',
+                text: 'La cuenta no existe',
                 icon: 'error',
                 confirmButtonText: 'Ok'
             });

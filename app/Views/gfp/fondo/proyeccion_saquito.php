@@ -31,8 +31,8 @@
                             <input type="hidden" class="form-control valida" id="suma_total" name="suma_total" required>
 <br>
                         <label for="floatingInput">Valor de la cuota </label>
-                        <input type="number" class="form-control valida" name="valor_cuota" id="valor_cuota"
-                            placeholder="Valor: " required>
+                        <input type="text" class="form-control valida" name="valor_cuota" id="valor_cuota"
+                            placeholder="Valor: " onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;" required>
                     </div>
                     
                      <div class="tx">

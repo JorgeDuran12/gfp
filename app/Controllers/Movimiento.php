@@ -105,7 +105,7 @@ class Movimiento extends BaseController
                 'id_usuario' => $id_usuario,
             ]);
         }
-        return redirect()->to(base_url('/mis_movimientos'));
+        return redirect()->to(base_url("mis_movimientos"))->with('movimiento', '1');
     }
     
 

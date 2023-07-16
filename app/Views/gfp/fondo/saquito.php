@@ -170,13 +170,13 @@
                     <div class="tma">
                         <form id="myForm">
                             <label for="num1">precio del objetivo:</label>
-                            <input type="number" class="form-control valida" id="valor" name="valor">
+                            <input type="text" class="form-control valida" id="valor" name="valor" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;">
                             <br>
                             <label for="num2">numero de cuotas:</label>
-                            <input type="number" class="form-control valida" id="numero_cuota" name="numero_cuota">
+                            <input type="text" class="form-control valida" id="numero_cuota" name="numero_cuota" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;">
                             <br>
                             <label for="num3">El valor de las Cuotas sera de:</label>
-                            <input type="number" class="form-control" id="cuota" name="cuota">
+                            <input type="text" class="form-control" id="cuota" name="cuota" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;">
                         </form>
                     </div>
                     <div class="modal-footer">
