@@ -140,14 +140,6 @@ $(document).ready(function() {
   const egreso = <?= $disponibles['egreso']?>;
   const presu = <?= $disponibles['presupuesto_anual']?>;
   const proyeccion_enc = <?= $proyeccion_enc['suma_total']?>;
-  
-
-
-
-
-
-
-
 
 
   
@@ -162,23 +154,9 @@ $(document).ready(function() {
     if (tomar_valor === 35 && valor_cuota) {
 
         let fondo_emergencia = proyeccion_enc - valor_cuota;
-        // console.log(fondo_emergencia);
-        // if (fondo_emergencia = 0 ){
-        //     Swal.fire({
-        //         title: 'error!!',
-        //         text: 'No puede ingresar su cuota si no tiene dinero en fondo de emergencia',
-        //         icon: 'error',
-        //         confirmButtonText: 'Cambiar valor'}
-
-                
-             });
-            
-
-        }
         let condicional = 35;
         let evaluador =   resultado12 - valor_cuota;
         console.log(evaluador);
-        
 if(evaluador < 0){
     Swal.fire({
                 title: 'error!!',
@@ -195,7 +173,10 @@ if(evaluador < 0){
       $("#suma_total").val(fondo_emergencia);
 
         $("#id_parametro_det").val(condicional);
-}            
+}  
+ for (let fondo_emergencia= 0;  valor_cuota < 0; fondo_emergencia++){
+                 console.log(fondo_emergencia);
+             }          
       
 
     } else if (tomar_valor === 34 && valor_cuota) {
@@ -206,7 +187,7 @@ if(evaluador < 0){
 
         let condicional = 34;
         let vc = resultado12 - valor_cuota;
-        console.log(vc)
+        console.log(vc);
         if(vc < 0){
             Swal.fire({
                 title: 'error!!',
@@ -216,24 +197,42 @@ if(evaluador < 0){
 
                 
             });
-            $("#valor_cuota").val("");
-
+              $("#valor_cuota").val("");
+              
 
         }
-        else if(vc > 0){
+        else if (vc > 0){
             $("#egreso").val(resultado2);
 
-        $("#presupuesto").val(resultado);
+       $("#presupuesto").val(resultado);
 
-        $("#id_parametro_det").val(condicional);
+       $("#id_parametro_det").val(condicional);
+      
 
         }
+       
+           
+//                 if{
+//                 Swal.fire({
+//                 title: 'error!!',
+//                 text: 'no puede guardar la cuota del saquito si no tiene un valor en fondo  de emergencia.',
+//                 icon: 'error',
+//                 confirmButtonText: 'Cambiar valor'
 
+                
+//             });
+//         }
+
+ //} 
 
         
+      
+       
     }
   });
 });
+
+
 
 
 

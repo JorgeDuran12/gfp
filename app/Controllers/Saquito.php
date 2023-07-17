@@ -122,8 +122,24 @@ class Saquito extends BaseController
     }
  
 
+    public function verificar_registro()
+    {
+        // Obtener el ID de usuario desde la sesión
+        $session = session();
+        $id_usuario = $session->get('id_usuario');
 
+        // Realizar la lógica para verificar si el usuario tiene un registro insertado
+        $tieneRegistro = $this->saquito->verificarRegistro($id_usuario);
 
+        // Crear un array con la respuesta
+        $response = array(
+            'tieneRegistro' => $tieneRegistro
+        );
+
+        // Devolver la respuesta en formato JSON
+        return $this->response->setJSON($response);
+    }
+    
 
 
 }

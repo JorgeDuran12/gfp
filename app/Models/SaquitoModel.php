@@ -77,13 +77,22 @@ class SaquitoModel extends Model{
                  return $datos;
              }
         }
+
         public function completar_saquito($id,$estado){
             $datos = $this->update($id, ['estado' => $estado]);         
             return $datos;
         }
  
-    
 
+        public function verificarRegistro($id_usuario)
+        {
+            $this->select('*');
+            $this->where('usuario_crea', $id_usuario);
+            $this->where('estado', 'A');
+            $datos = $this->first();
+            return $datos;
+        }
+    
 }
 
 

@@ -30,6 +30,7 @@ class Principal extends BaseController
         $datos = session();
 
         $Disponible = $this->disponible->traer_disponible($datos->id_usuario);
+        $editar_saldo = $this->disponible->editar_s_anterior();
 
         $id_disponible =  $this -> disponible->traer_id_disponible();
 
@@ -41,6 +42,8 @@ class Principal extends BaseController
         $trasabilidad = $trasabilidad_model->obtener_trasabilidad();
         $grafica =  $this-> grafica_e->grafica_fondo_valor();
         $grafica_t =  $this-> grafica_d->grafica_fondo_fecha();
+
+    
         
         echo view('gfp/principal/principal', [ 
             'tituloPagina' => 'Inicio',
@@ -51,6 +54,7 @@ class Principal extends BaseController
             'graficas_titulo'=>$grafica_t,
             'grafica_presu'=>$grafica_presu,
             'grafica_movi'=>$grafica_movi,
+            'editar_saldo'=>$editar_saldo,
         
         ]);
 
@@ -86,8 +90,8 @@ class Principal extends BaseController
                 'periodo' => $periodo,
                 'saldo_anterior' => $presupuesto,
                 'presupuesto_anual' => $presupuesto,
-                'ingreso' => 0,
-                'egreso' => 0,
+                // 'ingreso' => 0,
+                // 'egreso' => 0,
                 'id_usuario' => $idUsuarioGlobal,
             ]);
         }

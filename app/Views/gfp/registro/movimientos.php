@@ -163,7 +163,6 @@
 </div>
 
 
-
 </div>
 </div>
 
@@ -194,13 +193,18 @@ $(document).on('blur', '.valida', function(event) {
         console.log("El ingreso actual es de " + nuevoIngreso + ". El presupuesto anual está en " + total);
 
         nuevoIngreso += valor;
+        document.getElementById("ingreso").value = nuevoIngreso;
 
+        presupuesto_anual = saldo_anterior + nuevoIngreso - nuevoEgreso;
+        console.log(presupuesto_anual);
+
+        document.getElementById("presupuesto").value = presupuesto_anual;
     } else {
 
         if (valor > presupuesto) {
             Swal.fire({
                 title: 'error!!',
-                text: 'no existen fondos en  su presupuesto para realizar esta accion ',
+                text: 'No existen fondos en  su presupuesto para realizar esta accion ',
                 icon: 'info',
                 confirmButtonText: 'cerrar',
             });
@@ -215,8 +219,8 @@ $(document).on('blur', '.valida', function(event) {
 
             nuevoEgreso += valor;
 
-            document.getElementById("ingreso").value = nuevoIngreso;
             document.getElementById("egreso").value = nuevoEgreso;
+            document.getElementById("ingreso").value = nuevoIngreso;
 
             presupuesto_anual = saldo_anterior + nuevoIngreso - nuevoEgreso;
             console.log(presupuesto_anual);
@@ -382,7 +386,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <script>
-
 const registro = "<?= session()->getFlashdata('movimiento') ?>";
 
 if (registro === '1') {

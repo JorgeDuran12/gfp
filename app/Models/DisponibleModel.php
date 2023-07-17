@@ -101,5 +101,17 @@ class DisponibleModel extends Model{
         return $datos;
     }
     
-
+    public function editar_s_anterior(){
+        $session = session();
+        $id_usuario = $session->get('id_usuario');
+        $this->select('saldo_anterior');
+        $this->where('estado', 'A');
+        $this->where('id_usuario', $id_usuario);
+        
+        if( empty($datos)) {
+            return $datos['saldo_anterior'] = 0;
+        }else {
+            return $datos['saldo_anterior'];
+        }
+    }
 }

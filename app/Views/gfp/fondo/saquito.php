@@ -236,11 +236,9 @@ miModal.addEventListener('shown.bs.modal', function () {
         });
     });
 
+</script>
 
-
-    </script>
-
-    <script>
+<script>
 
 let btnAGregar = document.getElementById('agregar');
     let pp = document.getElementById('proyeccion');
@@ -296,6 +294,26 @@ let btnAGregar = document.getElementById('agregar');
     })
 
 
+    //  <-- inicio-->
+
+    // $(document).ready(function() {
+        
+    //     // Realizar la solicitud AJAX para obtener el estado del registro del usuario
+    //     $.ajax({
+    //       url: '<?php echo base_url('/saquito/verificar_registro'); ?>',
+    //       type: 'GET',
+    //       dataType: 'json',
+    //       success: function(response) {
+    //         if (response.tieneRegistro) {
+                
+    //         }
+    //       },
+    //       error: function(xhr, status, error) {
+    //         console.error(error);
+    //       }
+    //     });
+      
+    //  <-- fin-->
 
 
     // <-- logica para hacer la operaccion-->
@@ -310,15 +328,11 @@ let btnAGregar = document.getElementById('agregar');
         }
     })
 
-
     // <--------------------------llamdo de  formulario para valores de operacion--------------------->
-
-
 
     let numero1 = document.querySelectorAll("#numero_cuota");
     let numero2 = document.querySelectorAll("#valor");
     let resultadoOperacion = parseFloat(numero1) / parseFloat(numero2);
-
 
 
     function selecionaRegistro(id, tp) {
@@ -359,9 +373,11 @@ let btnAGregar = document.getElementById('agregar');
         }
 
     }
+
     </script>
 
     <script>
+
     /******* Data - Table ***********/
     $(document).ready(function() {
         $('#miTabla').DataTable({
@@ -377,11 +393,9 @@ let btnAGregar = document.getElementById('agregar');
             },
             responsive: true
 
-
         });
     });
     </script>
-
 
     <!-- funcion para cargar el la proyeccion de los saquitos dinamicos -->
     <script>
@@ -409,6 +423,7 @@ let btnAGregar = document.getElementById('agregar');
                            
                             </tr>`
         }); 
+
         $('#bodytb').html(contenido);
         
                         }

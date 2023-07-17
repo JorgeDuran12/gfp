@@ -76,7 +76,7 @@ class Movimiento extends BaseController
             if ($parametro_det) {
               
                 // Guardar el parámetro seleccionado en "parametros_det"
-                $this->Movimiento->save([
+                $this->Movimiento->insert([
                   'descripcion' => $parametro_det,
                   'tipo_movimiento' => $this->request->getPost('tipo_movimiento'),
                   'clase_movimiento' => $this->request->getPost('clase_movimiento'),
@@ -88,7 +88,7 @@ class Movimiento extends BaseController
             } elseif ($descripcion) {
 
                 // Guardar la descripción ingresada en "descripcion"
-                $this->Movimiento->save([
+                $this->Movimiento->insert([
                   'descripcion' => $descripcion,
                   'tipo_movimiento' => $this->request->getPost('tipo_movimiento'),
                   'clase_movimiento' => $this->request->getPost('clase_movimiento'),
