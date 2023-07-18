@@ -111,7 +111,7 @@
                         <label for="presupuesto" class="form-label" id="ttulo_editar">La Cantidad digitada sera tu presupuesto inicial
                             inicial</label>
                         <input type="text" required class="form-control" name="presupuesto_input" id="presupuesto_input"
-                            aria-describedby="helpId" placeholder="Ej: 1.000.000">
+                            aria-describedby="helpId" placeholder="Ej: 1.000.000"  onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;">
 
                     </div>
 
