@@ -102,22 +102,23 @@ class DisponibleModel extends Model{
     }
     
     public function editar_s_anterior(){
-        $session = session();
-        $id_usuario = $session->get('id_usuario');
-        $this->select('disponibles.saldo_anterior');
-        $this->where('estado', 'A');
-        $this->where('id_usuario', $id_usuario);
-        $this->orderBy('id_disponible', 'DESC');
+            $session = session();
+            $id_usuario = $session->get('id_usuario');
+            
+            $this->select('disponibles.saldo_anterior');
+            $this->where('estado', 'A');
+            $this->where('id_usuario', $id_usuario);
+            $this->orderBy('id_disponible', 'DESC');
 
-        $datos = $this->first();
+            $datos = $this->first();
 
-        if( empty($datos)) {
-            $datos['saldo_anterior'] = 0;
-          return $datos;
+            if( empty($datos)) {
+                $datos['saldo_anterior'] = 0;
+            return $datos;
 
-        }else {
-            return $datos;        
-    }
+            }else {
+                return $datos;        
+        }
     }
 
     // public function traer_fondo($id)

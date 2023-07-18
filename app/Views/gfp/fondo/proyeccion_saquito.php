@@ -157,26 +157,33 @@ $(document).ready(function() {
         let condicional = 35;
         let evaluador =   resultado12 - valor_cuota;
         console.log(evaluador);
-if(evaluador < 0){
-    Swal.fire({
-                title: 'error!!',
-                text: 'el dinero que deseas ingresar excede la cantidad necesaria completar el saquito .',
-                icon: 'error',
-                confirmButtonText: 'Cambiar valor'
 
-                
-            });
-            $("#valor_cuota").val("");
+        if( fondo_emergencia < valor_cuota){
+            Swal.fire({
+                                title: 'Error!!',
+                                text: 'Su fondo de emergencia no tiene fondo para realizar esta accion.',
+                                icon: 'error',
+                                confirmButtonText: 'Cambiar valor' 
+                            });
+                            $("#valor_cuota").val("");
 
-}
- else if (evaluador> 0){
-      $("#suma_total").val(fondo_emergencia);
+        }else if(evaluador < 0){
+                Swal.fire({
+                                title: 'Error!!',
+                                text: 'El dinero que deseas ingresar excede la cantidad necesaria completar el saquito.',
+                                icon: 'error',
+                                confirmButtonText: 'Cambiar valor' 
+                            });
+                            $("#valor_cuota").val("");
 
-        $("#id_parametro_det").val(condicional);
-}  
- for (let fondo_emergencia= 0;  valor_cuota < 0; fondo_emergencia++){
-                 console.log(fondo_emergencia);
-             }          
+                            }
+            else if (evaluador> 0){
+                $("#suma_total").val(fondo_emergencia);
+
+                $("#id_parametro_det").val(condicional);
+            }  
+
+    
       
 
     } else if (tomar_valor === 34 && valor_cuota) {
@@ -190,8 +197,8 @@ if(evaluador < 0){
         console.log(vc);
         if(vc < 0){
             Swal.fire({
-                title: 'error!!',
-                text: 'el dinero que deseas ingresar excede la cantidad necesaria completar el saquito .',
+                title: 'Error!!',
+                text: 'El dinero que deseas ingresar excede la cantidad necesaria completar el saquito.',
                 icon: 'error',
                 confirmButtonText: 'Cambiar valor'
 
@@ -212,18 +219,7 @@ if(evaluador < 0){
         }
        
            
-//                 if{
-//                 Swal.fire({
-//                 title: 'error!!',
-//                 text: 'no puede guardar la cuota del saquito si no tiene un valor en fondo  de emergencia.',
-//                 icon: 'error',
-//                 confirmButtonText: 'Cambiar valor'
-
-                
-//             });
-//         }
-
- //} 
+           
 
         
       
@@ -331,7 +327,7 @@ if (num3 === 0) {
          }, 2000);
 }
 
-//console.log("La suma total es: " + suma);  
+ 
 
 </script>
 

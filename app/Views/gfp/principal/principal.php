@@ -19,11 +19,10 @@
             <button type="submit" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalAgregar"
                 id="btn-agregarPresupuesto">Ingresar presupuesto</button>
 
-            <a hidden class="btn btn-warning" id="Editar_principal" data-bs-toggle="modal" data-bs-target="#modalActualizar" width="16" height="16"
+            <button hidden class="btn btn-warning" id="Editar_principal" data-bs-toggle="modal" data-bs-target="#modalActualizar" width="16" height="16"
                 title="Editar Registro">
                 <img class="image" src="<?= base_url("img/editar.png") ?>" title="Editar">
-            </a>  
-
+            </button>  
         </div>
 
         <!-- <--------------trasabilidad---------------------->
@@ -48,7 +47,12 @@
                 <tbody>
                     <tr>
                         <td>Saldo anterior</td>
-                        <td><?php echo $dato ['saldo_anterior'];?></td>
+                        <td
+                        
+                        
+                        
+                        
+                        ><?php echo $dato ['saldo_anterior'];?></td>
                     </tr>
                 </tbody>
                 <tbody>
@@ -108,7 +112,7 @@
                 <div class="modal-body">
                     <!-- Formulario -->
                     <div class="mb-3 flex w-100">
-                        <label for="presupuesto" class="form-label" id="ttulo_editar">La Cantidad digitada sera tu presupuesto inicial
+                        <label for="presupuesto" class="form-label" id="ttulo_editar">La cantidad digitada sera tu presupuesto inicial
                             inicial</label>
                         <input type="text" required class="form-control" name="presupuesto_input" id="presupuesto_input"
                             aria-describedby="helpId" placeholder="Ej: 1.000.000"  onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;">
@@ -176,16 +180,18 @@ var bar = new ProgressBar.Circle(presupuestoContainer, {
             document.getElementById("Title_h4").innerText= "Presupuesto inicial:"
             
           } else {
+
+            // notificacion();
+
             circle.setText(`${formattedPresupuesto}`);
             
             document.getElementById("Title_h4").innerText= "Presupuesto actual:"
             document.getElementById("btn-agregarPresupuesto").innerText= "Editar";
-            document.getElementById("ttulo_editar").innerText= "La Cantidad Digitada Reemplazara La Anterior ";
+            document.getElementById("ttulo_editar").innerText= "¡Al realizar este cambio afectara su presupuesto actual!";
             document.getElementById("exampleModalLabel").innerText= "Actualizar Presupuesto";
 
-           
-            document.getElementById("presupuesto_input").value =actualizar_s ;
-            
+            document.getElementById("presupuesto_input").value = actualizar_s ;
+
         }
 
     }
