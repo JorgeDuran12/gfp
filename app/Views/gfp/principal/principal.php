@@ -101,17 +101,17 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Agregar un presupuesto</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Agregar Presupuesto</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
 
                 <div class="modal-body">
                     <!-- Formulario -->
                     <div class="mb-3 flex w-100">
-                        <label for="presupuesto" class="form-label">De cuanto quieres que sea tu presupuesto
+                        <label for="presupuesto" class="form-label" id="ttulo_editar">La Cantidad digitada sera tu presupuesto inicial
                             inicial</label>
                         <input type="text" required class="form-control" name="presupuesto_input" id="presupuesto_input"
-                            aria-describedby="helpId" placeholder="Ej: 1000000">
+                            aria-describedby="helpId" placeholder="Ej: 1.000.000">
 
                     </div>
 
@@ -165,8 +165,10 @@ var bar = new ProgressBar.Circle(presupuestoContainer, {
         circle.path.setAttribute('stroke-width', state.width);
 
         let valorPresupuesto = <?= $presupuestoActual ?>;
+        const actualizar_s = <?= $editar_saldo['saldo_anterior']?>;
 
         let formattedPresupuesto = valorPresupuesto.toLocaleString(); // Formatear con separación de comas
+        // let actualizar_s_a = valorPresupuesto.toLocaleString(); // Formatear con separación de comas
 
         if (valorPresupuesto == 0) {
           
@@ -178,8 +180,12 @@ var bar = new ProgressBar.Circle(presupuestoContainer, {
             
             document.getElementById("Title_h4").innerText= "Presupuesto actual:"
             document.getElementById("btn-agregarPresupuesto").innerText= "Editar";
+            document.getElementById("ttulo_editar").innerText= "La Cantidad Digitada Reemplazara La Anterior ";
+            document.getElementById("exampleModalLabel").innerText= "Actualizar Presupuesto";
 
-
+           
+            document.getElementById("presupuesto_input").value =actualizar_s ;
+            
         }
 
     }
