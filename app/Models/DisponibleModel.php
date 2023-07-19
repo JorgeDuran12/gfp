@@ -94,7 +94,7 @@ class DisponibleModel extends Model{
 
     public function grafica_disponible($id_disponible) 
     {
-        $this->select('disponibles.presupuesto_anual, ingreso, egreso');
+        $this->select('disponibles.presupuesto_anual, ingreso, egreso, saldo_anterior');
         $this->where('estado', 'A');
         $this->where('id_disponible', $id_disponible);
         $datos = $this->first();

@@ -18,7 +18,7 @@
 <div id="contenedor">
     <div id="limite">
         <div class="table-responsive">
-            <table class="table table table-sm table-striped" id="dataTable" width="100%" cellspacing="0">
+            <table  id="miTabla" width="100%" cellspacing="0">
                 <thead>
                     <tr>
                         <th>Id</th>
@@ -27,7 +27,7 @@
 
 
                         <th>estado</th>
-                        <th colspan="2">Acciones</th>
+                        <th>Acciones</th>
                     </tr>
                 </thead>
 
@@ -165,6 +165,18 @@ function seleccionarol(id, tp) {
     }
 
 }
+$(document).ready(function() {
+    $('#miTabla').DataTable({
+        scrollY: '700px',
+        scrollCollapse: true,
+        paging: true,
+        responsive: true,
+
+        "language": {
+            "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Spanish.json"
+        }
+    });
+});
 </script>
 
 

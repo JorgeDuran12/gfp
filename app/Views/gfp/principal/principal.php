@@ -47,25 +47,20 @@
                 <tbody>
                     <tr>
                         <td>Saldo anterior</td>
-                        <td
-                        
-                        
-                        
-                        
-                        ><?php echo $dato ['saldo_anterior'];?></td>
+                        <td id="saldo_anterior">></td>
                     </tr>
                 </tbody>
                 <tbody>
                     <td>Ingreso</td>
-                    <td><?php echo $dato ['ingreso'];?></td>
+                    <td id="ingreso"></td>
                 </tbody>
                 <tbody>
                     <td>Egreso</td>
-                    <td><?php echo $dato ['egreso'];?></td>
+                    <td id="egreso"></td>
                 </tbody>
                 <tbody>
                     <td>Presupuesto Anual</td>
-                    <td><?php echo $dato ['presupuesto_anual'];?></td>
+                    <td id="presupuesto_anual"></td>
 
                 </tbody>
                 <?php } ?>
@@ -110,12 +105,15 @@
                 </div>
 
                 <div class="modal-body">
+
+                    <input hidden type="text" class="data_presu" id="data_presu" name="data_presu">
+
                     <!-- Formulario -->
                     <div class="mb-3 flex w-100">
                         <label for="presupuesto" class="form-label" id="ttulo_editar">La cantidad digitada sera tu presupuesto inicial
                             inicial</label>
-                        <input type="text" required class="form-control" name="presupuesto_input" id="presupuesto_input"
-                            aria-describedby="helpId" placeholder="Ej: 1.000.000"  onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;">
+                        <input type="text" required class="form-control valida" name="presupuesto_input" id="presupuesto_input"
+                            aria-describedby="helpId" placeholder="Ej: 1.000.000"  onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;" >
 
                     </div>
 
@@ -125,7 +123,7 @@
 
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="submit" class="btn btn-primary">Agregar</button>
+                    <button type="submit" class="btn btn-primary" id="actualizar_modal">Agregar</button>
                 </div>
 </form>
 
@@ -137,6 +135,47 @@
 
 </form>
 
+<script>
+
+        // saldo anterior
+        
+        const saldo_anterior = parseFloat(<?php echo $dato ['saldo_anterior'];?>).toLocaleString();
+        document.getElementById('saldo_anterior').innerText = saldo_anterior;
+        // ingreso
+        const ingreso_tabla = parseFloat(<?php echo $dato ['ingreso'];?>).toLocaleString();
+        document.getElementById('ingreso').innerText = ingreso_tabla;
+        // egreso
+        const egreso_tabla = parseFloat(<?php echo $dato ['egreso'];?>).toLocaleString();
+        document.getElementById('egreso').innerText = egreso_tabla;
+        // saldo anterior
+        const presupuesto_anual = parseFloat(<?php echo $dato ['presupuesto_anual'];?>).toLocaleString();
+        document.getElementById('presupuesto_anual').innerText = presupuesto_anual;
+        
+                        
+
+    
+
+</script>
+
+<script>
+    const data_ingreso = parseInt("<?= $data['ingreso']?>");
+    const data_egreso =parseInt( "<?= $data['egreso']?>");
+
+    console.log(data_ingreso);
+    console.log(data_egreso);
+    
+
+$(document).on('blur', '.valida', function(event) {
+    let valor = parseInt(document.getElementById("presupuesto_input").value);
+
+    let suma = valor + data_ingreso - data_egreso;
+    console.log(suma);
+
+    document.getElementById("data_presu").value = suma;
+
+
+});
+</script>
 
 <script>
 //Referencias HTML
@@ -189,6 +228,8 @@ var bar = new ProgressBar.Circle(presupuestoContainer, {
             document.getElementById("btn-agregarPresupuesto").innerText= "Editar";
             document.getElementById("ttulo_editar").innerText= "¡Al realizar este cambio afectara su presupuesto actual!";
             document.getElementById("exampleModalLabel").innerText= "Actualizar Presupuesto";
+
+            document.getElementById("actualizar_modal").innerText= "Actualizar";
 
             document.getElementById("presupuesto_input").value = actualizar_s ;
 
@@ -436,5 +477,6 @@ if (grafica_emergencia.length === 0) {
     });
 }
 </script>
+
 
 <?= $this->endSection('contenido'); ?>

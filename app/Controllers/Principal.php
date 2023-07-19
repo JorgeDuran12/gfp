@@ -28,7 +28,7 @@ class Principal extends BaseController
     public function index(){
 
         $datos = session();
-
+        $data = $this->disponible->datos_ingreso();
         $Disponible = $this->disponible->traer_disponible($datos->id_usuario);
         $editar_saldo = $this->disponible->editar_s_anterior();
 
@@ -55,6 +55,7 @@ class Principal extends BaseController
             'grafica_presu'=>$grafica_presu,
             'grafica_movi'=>$grafica_movi,
             'editar_saldo'=>$editar_saldo,
+            'data'=>$data,
         
         ]);
 
@@ -89,9 +90,7 @@ class Principal extends BaseController
             $this->disponible->update($id_dispo, [
                 'periodo' => $periodo,
                 'saldo_anterior' => $presupuesto,
-                'presupuesto_anual' => $presupuesto,
-                // 'ingreso' => 0,
-                // 'egreso' => 0,
+                'presupuesto_anual' => $this->request->getPost('data_presu'),
                 'id_usuario' => $idUsuarioGlobal,
             ]);
         }

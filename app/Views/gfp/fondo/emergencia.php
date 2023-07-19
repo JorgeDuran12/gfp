@@ -16,7 +16,7 @@
 <div class="container px-4 text-center">
     <div class="row gx-5">
         <div class="col">
-            <div class="p-3 border">
+            <div class="p-3 border" style="border-radius:10px;">
                 <br>
                 <!-- formulario fondo de emergencia -->
                 <form method="POST" action="<?php echo base_url('/emergencia/insertar'); ?>" autocomplete="off"
@@ -86,7 +86,7 @@
     </div>
 
     <div class="col">
-        <div class="p-3 border ">
+        <div class="p-3 border" style="border-radius:10px;">
             <!-- tabla fondo de emergencia -->
             <div class="tabla_emergencia">
 
@@ -94,24 +94,15 @@
                     <thead>
                         <tr>
                             <th scope="col">Fecha</th>
-                            <th scope="col">Monto total</th>
-                            <th scope="col">Descripcion</th>
                             <th scope="col">Valor</th>
+                            <th scope="col">Descripcion</th>
+                            <th scope="col">Monto total</th>
 
 
                         </tr>
                     </thead>
-                    <tbody>
-                        <?php foreach ($fondos as $dato) { ?>
-                        <tr>
-                            <td> <?php echo $dato ['fecha_registro'];?></td>
-                            <td> <?php echo $dato ['suma_total'];?></td>
-                            <td> <?php echo $dato ['descripcion'];?></td>
-                            <td> <?php echo $dato ['valor'];?></td>
+                    <tbody id="tablaCuerpo">
 
-
-                        </tr>
-                        <?php } ?>
                     </tbody>
                 </table>
             </div>
@@ -246,6 +237,53 @@ if (registro === '1') {
         'confirmButtonText': 'Aceptar'
     })
 }
+
+</script>
+
+<script>
+
+    // Obtener los datos de proyeccion
+
+    let proyeccion = <?php echo json_encode($fondos); ?>;
+
+    // console.log(proyeccion);
+    // Obtener referencia al cuerpo de la tabla
+    let tablaCuerpo = document.getElementById("tablaCuerpo");
+
+    // Recorrer los datos de proyeccion y generar las filas de la tabla
+    for (let i = 0; i < proyeccion.length; i++) {
+        // Crear una nueva fila
+        let fila = document.createElement("tr");
+
+        // Crear y agregar celda para la fecha de la cuota
+        let fechaCuota = document.createElement("td");
+        fechaCuota.textContent = proyeccion[i]['fecha_registro'];
+        fila.appendChild(fechaCuota);
+
+        // Crear y agregar celda para el valor de la cuota
+        let valorCuota = document.createElement("td");
+        valorCuota.id = "valor_cuota_" + i;
+        let valorCuotaString = proyeccion[i]['valor'];
+        let valorCuotaDecimal = parseFloat(valorCuotaString).toLocaleString();
+        valorCuota.textContent = valorCuotaDecimal;
+        fila.appendChild(valorCuota);
+
+
+        // Crear y agregar celda para la descripción
+        let descripcion = document.createElement("td");
+        descripcion.textContent = proyeccion[i]['descripcion'];
+        fila.appendChild(descripcion);
+
+
+        let suma_total = document.createElement("td");
+        suma_total.id = "suma_total_" + i;
+        let suma_totalString = proyeccion[i]['suma_total'];
+        let suma_totalDecimal = parseFloat(suma_totalString).toLocaleString();
+        suma_total.textContent = suma_totalDecimal;
+        fila.appendChild(suma_total);
+        // Agregar la fila al cuerpo de la tabla
+        tablaCuerpo.appendChild(fila);
+    }
 
 </script>
 

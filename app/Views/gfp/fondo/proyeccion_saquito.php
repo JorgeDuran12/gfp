@@ -195,7 +195,17 @@ $(document).ready(function() {
         let condicional = 34;
         let vc = resultado12 - valor_cuota;
         console.log(vc);
-        if(vc < 0){
+        if (presu < valor_cuota){
+            Swal.fire({
+                                title: 'Error!!',
+                                text: 'Su presupuesto actual no tiene fondo para realizar esta accion.',
+                                icon: 'error',
+                                confirmButtonText: 'Cambiar valor' 
+                            });
+                            $("#valor_cuota").val("");
+
+        }
+       else  if(vc < 0){
             Swal.fire({
                 title: 'Error!!',
                 text: 'El dinero que deseas ingresar excede la cantidad necesaria completar el saquito.',
@@ -218,18 +228,9 @@ $(document).ready(function() {
 
         }
        
-           
-           
-
-        
-      
-       
     }
   });
 });
-
-
-
 
 
 // Obtener el elemento del campo de fecha
@@ -246,22 +247,18 @@ fechaInput.value = fechaActual;
 
 
 
-
 <script>
 /******* Data - Table ***********/
 $(document).ready(function() {
     $('#miTabla').DataTable({
-        scrollY: '400px',
+        scrollY: '700px',
         scrollCollapse: true,
         paging: true,
-        language: {
-            lengthMenu: 'Display _MENU_ records per page',
-            zeroRecords: 'No se encontro nada - Lo siento',
-            info: 'Mostrando pagina _PAGE_ de _PAGES_',
-            infoEmpty: 'No se encontro el registro',
-            infoFiltered: '(Filtrado de _MAX_ registros totales)',
-        },
-        responsive: true
+        responsive: true,
+
+        "language": {
+            "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Spanish.json"
+        }
     });
 });
 </script>
@@ -380,8 +377,6 @@ document.getElementById("valor12").innerText = valorFormateado;
         // Agregar la fila al cuerpo de la tabla
         tablaCuerpo.appendChild(fila);
     }
-
-
 
 </script>
 

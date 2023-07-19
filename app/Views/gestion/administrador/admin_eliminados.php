@@ -18,7 +18,7 @@
 
       <br>
       <div class="table-responsive">
-        <table class="table  table-sm table-striped" id="dataTable" width="100%" cellspacing="0">
+        <table class="table  table-sm table-striped" id="miTabla" width="100%" cellspacing="0">
           <thead>
           <th>Id</th>
                             <th>Usuario</th>
@@ -78,6 +78,20 @@
 
 </body>
 <script>
+
+
+$(document).ready(function() {
+    $('#miTabla').DataTable({
+        scrollY: '700px',
+        scrollCollapse: true,
+        paging: true,
+        responsive: true,
+
+        "language": {
+            "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Spanish.json"
+        }
+    });
+});
     $('#modal-confirma').on('show.bs.modal', function(e) {
         $(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));
     });
@@ -100,5 +114,7 @@
  
   $('.close').click(function() {$("#modal-confirma").modal("hide");});
 </script>
+
+
 
 <?= $this->endSection("contenido")?>

@@ -18,7 +18,7 @@
 
       <br>
       <div class="table-responsive">
-        <table class="table  table-sm table-striped" id="dataTable" width="100%" cellspacing="0">
+        <table class="table  table-sm table-striped" id="miTabla" width="100%" cellspacing="0">
           <thead>
                             <th>Id rol</th>
                             <th>Nombre</th>
@@ -96,7 +96,22 @@
   };
  
   $('.close').click(function() {$("#modal-confirma").modal("hide");});
-  
+
+
+
+
+  $(document).ready(function() {
+    $('#miTabla').DataTable({
+        scrollY: '700px',
+        scrollCollapse: true,
+        paging: true,
+        responsive: true,
+
+        "language": {
+            "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Spanish.json"
+        }
+    });
+});
 </script>
 
 <?= $this->endSection("contenido")?>

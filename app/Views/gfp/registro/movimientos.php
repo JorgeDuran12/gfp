@@ -240,16 +240,11 @@ $(document).ready(function() {
         scrollY: '700px',
         scrollCollapse: true,
         paging: true,
-        language: {
-            lengthMenu: 'Display _MENU_ records per page',
-            zeroRecords: 'No se encontro nada - Lo siento',
-            info: 'Mostrando pagina _PAGE_ de _PAGES_',
-            infoEmpty: 'No se encontro el registro',
-            infoFiltered: '(Filtrado de _MAX_ registros totales)',
-        },
+        responsive: true,
 
-        responsive: true
-
+        "language": {
+            "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Spanish.json"
+        }
     });
 });
 </script>
