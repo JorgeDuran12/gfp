@@ -139,16 +139,16 @@
 
         // saldo anterior
         
-        const saldo_anterior = parseFloat(<?php echo $dato ['saldo_anterior'];?>).toLocaleString();
+        const saldo_anterior = parseFloat(<?php echo $data ['saldo_anterior'];?>).toLocaleString();
         document.getElementById('saldo_anterior').innerText = saldo_anterior;
         // ingreso
-        const ingreso_tabla = parseFloat(<?php echo $dato ['ingreso'];?>).toLocaleString();
+        const ingreso_tabla = parseFloat(<?php echo $data ['ingreso'];?>).toLocaleString();
         document.getElementById('ingreso').innerText = ingreso_tabla;
         // egreso
-        const egreso_tabla = parseFloat(<?php echo $dato ['egreso'];?>).toLocaleString();
+        const egreso_tabla = parseFloat(<?php echo $data ['egreso'];?>).toLocaleString();
         document.getElementById('egreso').innerText = egreso_tabla;
         // saldo anterior
-        const presupuesto_anual = parseFloat(<?php echo $dato ['presupuesto_anual'];?>).toLocaleString();
+        const presupuesto_anual = parseFloat(<?php echo $data ['presupuesto_anual'];?>).toLocaleString();
         document.getElementById('presupuesto_anual').innerText = presupuesto_anual;
         
                         
